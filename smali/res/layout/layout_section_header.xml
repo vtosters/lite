@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center_vertical" android:id="@id/iv_section_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@id/tv_section_name" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#3d000000" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="4.0" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/edit" android:orderInCategory="0" android:title="@string/edit" />
+    <item android:id="@id/publish_now" android:orderInCategory="2" android:title="@string/publish_now" />
+    <item android:id="@id/toggle_fave" android:orderInCategory="4" android:title="@string/fave_add_title" />
+    <item android:id="@id/toggle_fix" android:orderInCategory="6" android:title="@string/post_fix" />
+    <item android:id="@id/toggle_comments" android:orderInCategory="8" android:title="@string/post_close_comments" />
+    <item android:id="@id/show_original_post" android:orderInCategory="10" android:title="@string/show_original_post" />
+    <item android:id="@id/copy_link" android:orderInCategory="12" android:title="@string/copy_link" />
+    <item android:id="@id/open_in_browser" android:orderInCategory="14" android:title="@string/open_in_browser" />
+    <item android:id="@id/report" android:orderInCategory="16" android:title="@string/report_content" />
+    <item android:id="@id/delete" android:orderInCategory="18" android:title="@string/delete" />
+    <item android:id="@id/add" android:orderInCategory="20" android:title="@string/add" />
+    <item android:id="@id/add_to_album" android:orderInCategory="22" android:title="@string/video_add_to_album" />
+</menu>

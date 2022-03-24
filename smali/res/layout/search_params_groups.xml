@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.vtosters.lite.ui.ConstrainedLinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" app:max_width="400.0dip">
+            <include layout="@layout/discover_search_header" />
+            <TextView android:text="@string/discover_search_sort" style="@style/VKUIFormHeader" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="8.0dip">
+                <include android:id="@id/spinner_sort" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/discover_search_spinner" />
+            </LinearLayout>
+            <TextView android:text="@string/discover_search_community_type" style="@style/VKUIFormHeader" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="8.0dip">
+                <include android:id="@id/spinner_type" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/discover_search_spinner" />
+            </LinearLayout>
+            <TextView android:text="@string/discover_search_country_and_city" style="@style/VKUIFormHeader" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="8.0dip">
+                <include android:id="@id/spinner_country" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/discover_search_spinner" />
+                <Space android:layout_width="8.0dip" android:layout_height="8.0dip" />
+                <TextView android:id="@id/tv_cities" android:layout_width="0.0px" android:layout_height="fill_parent" android:text="@string/discover_search_city" android:layout_weight="1.0" style="@style/VKUIFormButton" />
+            </LinearLayout>
+            <com.vk.common.view.settings.SettingsCheckBoxView android:id="@id/cb_safe_search" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+            <com.vk.common.view.settings.SettingsCheckBoxView android:id="@id/cb_only_future" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+            <Space android:layout_width="1.0px" android:layout_height="56.0dip" />
+        </com.vtosters.lite.ui.ConstrainedLinearLayout>
+    </ScrollView>
+    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_apply_params" android:background="@drawable/picker_btn_blue" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/discover_search_show_result" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/cl_root_container" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/vk_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.vk.core.view.FixAppBarLayoutBehavior" style="@style/VKAppBar">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_scrollFlags="enterAlways" app:navigationContentDescription="@string/accessibility_toolbar_back" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme" />
+    </android.support.design.widget.AppBarLayout>
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/paginated_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:enableItemAnimations="true" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

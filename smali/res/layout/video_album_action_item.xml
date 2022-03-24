@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:background="@drawable/highlight" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatCheckBox android:textStyle="normal" android:gravity="center_vertical" android:id="@id/checkbox" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_centerVertical="true" android:paddingStart="12.0dip" android:layout_marginStart="12.0dip" style="@style/TextStyle" />
+    <android.support.v7.widget.AppCompatTextView android:textSize="16.0dip" android:textStyle="normal" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:paddingStart="4.0dip" android:paddingEnd="12.0dip" android:layout_marginEnd="32.0dip" android:layout_toEndOf="@id/checkbox" style="@style/TextStyle" />
+    <android.support.v7.widget.AppCompatImageView android:id="@id/privacy_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_lock_16" android:tint="@color/light_gray" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginStart="-32.0dip" android:layout_toEndOf="@id/title" />
+</RelativeLayout>

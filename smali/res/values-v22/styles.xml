@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light" />
+    <style name="BaseDarkStyle" parent="@style/BaseDarkTheme">
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:actionModeBackground">?accent</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeBackground">?accent</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_back_24</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitEmptyButtonStyle">@style/VKUIButton.Primary.Small</item>
+        <item name="appkitErrorButtonStyle">@style/VKUIButton.Secondary.Small</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="attach_left_right_padding">0.0dip</item>
+        <item name="ic_attach_checkin">@drawable/ic_attachment_checkin</item>
+        <item name="ic_attach_document">@drawable/ic_attachment_document</item>
+        <item name="ic_attach_link">@drawable/ic_attachment_link</item>
+        <item name="ic_attach_note">@drawable/ic_attachment_note</item>
+        <item name="ic_attach_poll">@drawable/ic_attachment_poll</item>
+        <item name="ic_attach_post">@drawable/ic_attachment_post</item>
+        <item name="is_messages_snippet">false</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="BaseStyle" parent="@style/BaseTheme">
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:actionModeBackground">?accent</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeBackground">?accent</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_back_24</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitEmptyButtonStyle">@style/VKUIButton.Primary.Small</item>
+        <item name="appkitErrorButtonStyle">@style/VKUIButton.Secondary.Small</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="attach_left_right_padding">0.0dip</item>
+        <item name="ic_attach_checkin">@drawable/ic_attachment_checkin</item>
+        <item name="ic_attach_document">@drawable/ic_attachment_document</item>
+        <item name="ic_attach_link">@drawable/ic_attachment_link</item>
+        <item name="ic_attach_note">@drawable/ic_attachment_note</item>
+        <item name="ic_attach_poll">@drawable/ic_attachment_poll</item>
+        <item name="ic_attach_post">@drawable/ic_attachment_post</item>
+        <item name="is_messages_snippet">false</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="VkIm.Theme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">?background_content</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/vkim_fastscroll_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@drawable/vkim_fastscroll_track</item>
+        <item name="android:actionModeStyle">@style/VkIm.ActionMode</item>
+        <item name="android:colorPrimary">?im_accent</item>
+        <item name="android:colorPrimaryDark">?im_accent_dark</item>
+        <item name="android:colorAccent">?im_accent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">?im_app_background_navbar</item>
+        <item name="android:windowLightStatusBar">?im_app_background_statusbar_light</item>
+        <item name="android:windowLightNavigationBar">?im_app_background_navbar_light</item>
+        <item name="actionBarTheme">@style/VkIm.Theme.Legacy.ActionBar</item>
+        <item name="actionModeStyle">@style/VkIm.ActionMode</item>
+        <item name="colorAccent">?im_accent</item>
+        <item name="colorPrimary">?im_accent</item>
+        <item name="colorPrimaryDark">?im_accent_dark</item>
+        <item name="photo_gallery_accent_color">?im_app_icon</item>
+        <item name="photo_gallery_background_color">?background_content</item>
+        <item name="photo_gallery_text_color">?text_primary</item>
+        <item name="photo_gallery_text_color_inv">@color/white</item>
+        <item name="preferenceTheme">@style/VkIm.Theme.Preference</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_accent_border</item>
+        <item name="tabBarTheme">@style/VkIm.Theme.Legacy.TabBar</item>
+        <item name="toolbarIconsColor">?im_accent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Base.V22.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat">
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:editTextBackground</item>
+    </style>
+    <style name="Base.V22.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light">
+        <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:editTextBackground</item>
+    </style>
+</resources>

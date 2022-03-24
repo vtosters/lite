@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="right" android:id="@id/close_btn" android:background="@drawable/highlight" android:clickable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip">
+            <View android:layout_gravity="center" android:id="@id/close_btn_img" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.vk.imageloader.view.VKImageView android:layout_gravity="center_horizontal" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="16.0dip" android:contentDescription="@null" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/music_list_item_title_color" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:lineSpacingExtra="3.0dip" android:fontFamily="@string/font_family_medium" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/music_playlist_empty_text" android:gravity="center_horizontal" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="20.0dip" android:lineSpacingExtra="4.0dip" />
+            <TextView android:id="@id/button_more" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="24.0dip" android:text="@string/music_pause_alert_more" style="@style/BlueButton" />
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="24.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0dip" android:textColor="#ff8c8d8f" android:id="@id/info_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/edit_name_req_processing" />
+        <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/info_new_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="TextView" />
+        <TextView android:id="@id/info_cancel_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel_request" android:fontFamily="@string/font_family_medium" style="@style/secondary_button" />
+    </LinearLayout>
+</LinearLayout>

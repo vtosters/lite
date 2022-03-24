@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center" android:id="@id/logo_background" android:background="@drawable/bg_place" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginTop="2.0dip" />
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/community_logo" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+</FrameLayout>

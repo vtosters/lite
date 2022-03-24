@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_container" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="16.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv_money_transfer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_money_transfer_84" android:tint="?accent" />
+        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/money_transfer_send_money_to_friend_desc_title" style="@style/VKUIText.Title1" />
+        <TextView android:textColor="?text_muted" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="4.0dip" android:text="@string/money_transfer_send_money_to_friend_desc_subtitle" android:fontFamily="@string/fontRobotoRegular" style="@style/VKUIText" />
+        <TextView android:textSize="14.0sp" android:textColor="?accent" android:gravity="center" android:id="@id/tv_read_more" android:background="@drawable/highlight" android:layout_width="110.0dip" android:layout_height="30.0dip" android:text="@string/money_transfer_read_more" android:fontFamily="@string/fontRobotoMedium" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_friends_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.vk.core.view.PhotoStripView android:id="@id/friends_photos" android:layout_width="wrap_content" android:layout_height="28.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="8.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="?text_subhead" android:gravity="center" android:id="@id/friends_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@string/fontRobotoRegular" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:id="@id/btn_send" android:layout_width="@dimen/money_transfer_btn_width" android:layout_height="44.0dip" android:layout_marginBottom="56.0dip" android:text="@string/money_transfer_send_money_to_friend" style="@style/primary_button" />
+</LinearLayout>

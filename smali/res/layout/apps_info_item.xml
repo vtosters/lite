@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/game_padding_lr0" android:paddingRight="@dimen/game_padding_lr0" android:paddingBottom="24.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/friends_block" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:weightSum="1.0">
+        <TextView android:textSize="15.0sp" android:textColor="@color/subhead_gray" android:id="@id/text_playing_friends" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Играет 8 Ваших друзей" android:singleLine="true" android:layout_weight="1.0" android:fontFamily="@string/font_family_regular" />
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/image3" android:paddingRight="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" app:placeholderImage="@drawable/placeholder_user_28" />
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/image2" android:paddingRight="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" app:placeholderImage="@drawable/placeholder_user_28" />
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/image1" android:paddingRight="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" app:placeholderImage="@drawable/placeholder_user_28" />
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/image0" android:paddingRight="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" app:placeholderImage="@drawable/placeholder_user_28" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="@drawable/apps_info_playing_friends" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:textSize="15.0sp" android:textColor="#ff212121" android:id="@id/description" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="7.0sp" android:fontFamily="@string/font_family_regular" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/text_blue" android:id="@id/text_expand" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/post_show_full" android:fontFamily="@string/font_family_regular" />
+    <com.vtosters.lite.ui.widget.GameScreenshotsRecyclerView android:id="@id/recycle" android:layout_width="fill_parent" android:layout_height="256.0dip" android:layout_marginTop="12.0dip" />
+</LinearLayout>

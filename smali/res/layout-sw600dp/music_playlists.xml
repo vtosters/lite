@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewAnimator android:id="@id/content_animator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <include layout="@layout/music_page" />
+    </ViewAnimator>
+    <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" style="@style/Toolbar">
+        <ImageView android:layout_gravity="center_vertical" android:tint="?accent" android:id="@id/back_btn" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/ic_back_24" style="@style/ActionButton.White" />
+        <Spinner android:layout_gravity="start|center" android:tint="?accent" android:id="@id/spinner_nav" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:popupBackground="@color/white" android:layout_marginStart="16.0dip" style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar" />
+    </FrameLayout>
+</merge>

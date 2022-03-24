@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/textView" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@string/font_family_medium" android:paddingStart="36.0dip" android:paddingEnd="36.0dip" />
+    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress" android:visibility="invisible" android:layout_width="28.0dip" android:layout_height="28.0dip" app:matProg_barColor="@color/white" app:matProg_barWidth="2.0dip" app:matProg_progressIndeterminate="true" />
+</merge>

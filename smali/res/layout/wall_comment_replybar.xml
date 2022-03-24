@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.common.view.disableable.DisableableFrameLayout android:layout_width="fill_parent" android:layout_height="36.0dip" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/photo" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="48.0dip" app:placeholderImage="@drawable/placeholder_user_72" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff848e99" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/comment" android:includeFontPadding="false" android:contentDescription="@string/accessibility_add_comment" android:layout_marginStart="82.0dip" />
+</com.vk.common.view.disableable.DisableableFrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginLeft="@dimen/gifts_padding" android:layout_marginRight="@dimen/gifts_all_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="18.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/action" android:layout_centerVertical="true" />
+    <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="?accent" android:ellipsize="end" android:gravity="center" android:id="@id/action" android:background="@drawable/rounded_list_selector" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginLeft="@dimen/gifts_padding" android:layout_marginTop="1.0dip" android:text="@string/show_all_gifts" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="true" app:typeface="Medium" />
+</RelativeLayout>

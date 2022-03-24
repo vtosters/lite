@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/vtad">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtldads" android:key="__dbg_no_ads" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtldgads" android:key="adsgroup" android:summary="@string/vtldgadssummary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtldca" android:key="__dbg_no_slider_ads" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtldas" android:key="adsstories" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlfilters">
+        <Preference android:enabled="false" android:title="@string/vtlhtmf" android:summary="@string/vtlhtmfsummary" />
+        <EditTextPreference android:title="@string/vtlownfilter" android:key="spamfilters" android:defaultValue="" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlsfilter" android:key="default_ad_list" android:summary="@string/vtlsfiltersummary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlsfiltershort" android:key="shortlinkfilter" android:summary="@string/vtlsfiltershortsummary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlsfilterrefs" android:key="refsfilter" android:summary="@string/vtlsfilterrefssummary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlrecommend">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlrecommendfriend" android:key="friendsrecomm" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlrecommendauthor" android:key="authorsrecomm" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlrecommendfriendpost" android:key="postsrecomm" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlrecommendmark" android:key="captions" android:summary="@string/vtlrecommendmarksummary" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlfeedwork">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlfeedreload" android:key="feedautoupdate" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlfeedcache" android:key="feedcache" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

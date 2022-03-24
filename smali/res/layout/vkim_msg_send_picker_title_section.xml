@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="?im_accent" android:layout_gravity="center_vertical" android:id="@id/vkim_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" android:fontFamily="@font/roboto_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/vkim_search_btn" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_search_24" android:tint="?im_accent" android:contentDescription="@string/search" android:layout_marginEnd="16.0dip" />
+</LinearLayout>

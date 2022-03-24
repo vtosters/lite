@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.OverlayLinearLayout android:orientation="horizontal" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight_post_6dp" app:padOverlay="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKSnippetImageView android:id="@id/image" android:background="@drawable/podcast_placeholder_48_snippet" android:layout_width="112.0dip" android:layout_height="112.0dip" app:actualImageScaleType="centerCrop" />
+    <FrameLayout android:id="@id/info" android:background="@drawable/attach_podcast_right" android:layout_width="fill_parent" android:layout_height="112.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/title" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="2.0dip" android:fontFamily="@string/font_family_medium" android:paddingStart="12.0dip" android:paddingEnd="44.0dip" />
+            <com.vk.core.widget.FluidHorizontalLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:gravity="center_vertical" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="16.0dip" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="2.0dip" android:paddingStart="12.0dip" android:letterSpacing="0.01" app:vk_layout_isFluid="true" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:gravity="center_vertical" android:id="@id/description_count" android:layout_width="wrap_content" android:layout_height="16.0dip" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="2.0dip" android:letterSpacing="0.01" />
+                <ImageView android:id="@id/description_icon" android:layout_width="12.0dip" android:layout_height="14.0dip" android:src="@drawable/ic_headphones_12" android:scaleType="center" android:tint="@color/caption_gray" android:layout_marginStart="4.0dip" android:layout_marginEnd="44.0dip" />
+            </com.vk.core.widget.FluidHorizontalLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="end" android:id="@id/favorite" android:background="@drawable/highlight_circle" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_favorite_selectable_24" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/attach_podcast_remove_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_attach_36" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="64.0dip" android:weightSum="1.0" android:paddingStart="0.0dip" android:paddingEnd="12.0dip">
+            <ImageButton android:id="@id/play_pause" android:background="@null" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/podcast_snippet_play_pause" android:minWidth="50.0dip" />
+            <SeekBar android:id="@id/seekbar" android:background="@null" android:padding="0.0dip" android:clickable="false" android:layout_width="0.0dip" android:layout_height="2.0dip" android:progressDrawable="@drawable/podcast_snippet_seekbar" android:minHeight="2.0dip" android:thumb="@null" android:thumbOffset="0.0dip" android:layout_weight="1.0" />
+            <ImageView android:id="@id/explicit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_explicit_16" android:tint="@color/caption_gray" android:layout_marginEnd="3.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/caption_gray" android:gravity="center" android:id="@id/time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        </LinearLayout>
+    </FrameLayout>
+</com.vtosters.lite.ui.OverlayLinearLayout>

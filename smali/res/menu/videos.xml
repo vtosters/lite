@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_add_24" android:id="@id/add" android:title="@string/add" android:showAsAction="always"  app:showAsAction="always">
+        <menu>
+            <item android:icon="@drawable/ic_camera_24" android:id="@id/add_new_video" android:title="@string/add_video_new" app:menuTint="@color/leftmenu_icon" />
+            <item android:icon="@drawable/ic_gallery_24" android:id="@id/add_existed" android:title="@string/add_video_existing" app:menuTint="@color/leftmenu_icon" />
+            <item android:icon="@drawable/ic_link_24" android:id="@id/add_link" android:title="@string/video_add_link" app:menuTint="@color/leftmenu_icon" />
+            <item android:icon="@drawable/ic_create_folder_24" android:id="@id/add_album" android:title="@string/create_album" app:menuTint="@color/leftmenu_icon" />
+        </menu>
+    </item>
+</menu>

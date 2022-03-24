@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="24.0dip" android:width="24.0dip" />
+            <solid android:color="?photo_gallery_accent_color" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <size android:height="24.0dip" android:width="24.0dip" />
+            <stroke android:width="2.0dip" android:color="?photo_gallery_text_color_inv" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/iv_parent" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:roundedCornerRadius="8.0dip" />
+    <View android:layout_gravity="bottom" android:id="@id/gradient_corners" android:background="@drawable/bottom_corners_rect8" android:layout_width="fill_parent" android:layout_height="70.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_info_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="9.0dip" android:layout_marginRight="12.0dip" android:shadowColor="#28000000" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="8.0" android:lineSpacingExtra="3.0sp" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="start|bottom|center" android:id="@id/tv_parent_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="6.0dip" android:maxLines="2" android:shadowColor="#28000000" android:shadowDx="0.0" android:shadowDy="2.0" android:shadowRadius="8.0" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/font_family_medium" />
+</merge>

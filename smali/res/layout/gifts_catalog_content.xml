@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.ui.RecursiveSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.ui.layout.ExpandableBarLayout android:id="@id/expandable" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <FrameLayout android:id="@id/content_wrap" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:id="@id/empty" layout="@layout/appkit_empty" />
+        </FrameLayout>
+        <TextView android:textSize="16.0dip" android:textColor="#ff6a6f75" android:gravity="center" android:id="@id/balance" android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    </com.vtosters.lite.ui.layout.ExpandableBarLayout>
+</com.vk.core.ui.RecursiveSwipeRefreshLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/liveEndViewBack" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" app:actualImageScaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:id="@id/liveEndViewLinear" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/liveEndViewContainer1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/liveEndViewTopLinearHolder" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.vk.imageloader.view.VKCircleImageView android:id="@id/liveEndUserImage" android:layout_width="64.0dip" android:layout_height="64.0dip" />
+                <com.vtosters.lite.ui.LinkedTextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/liveEndUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="2" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+                <TextView android:textSize="16.0sp" android:textColor="#b7ffffff" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/liveEndText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_video_ended" android:maxLines="1" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+                <com.vtosters.lite.live.views.addbutton.AddButtonView android:id="@id/liveEndAddButton" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.Button.Colored" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/liveEndViewContainer2" android:background="@drawable/bg_live_recommended_body" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.4">
+            <View android:id="@id/liveEndDelimiter" android:background="#18ffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/liveEndWatchNext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="18.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/live_watch_next" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:fontFamily="@string/font_family_medium" />
+            <com.vtosters.lite.live.views.recommended.RecommendedView android:id="@id/liveEndRecommended" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="56.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.vtosters.lite.live.views.addbutton.AddImgButtonView android:layout_gravity="center|right|top" android:id="@id/liveEndAddImgButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="48.0dip" />
+</merge>

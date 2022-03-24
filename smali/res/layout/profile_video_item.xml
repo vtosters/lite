@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/photo" android:layout_width="200.0dip" android:layout_height="112.0dip" app:placeholderImage="@drawable/profile_counter_thumb" app:roundedCornerRadius="2.0dip" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/attach_duration" android:background="@drawable/bg_doc_label" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="4.0dip" android:text="TextView" android:singleLine="true" android:drawableLeft="@drawable/ic_doc_play" android:drawablePadding="4.0dip" android:layout_alignRight="@id/photo" android:layout_alignBottom="@id/photo" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Video title" android:singleLine="true" android:layout_below="@id/photo" android:layout_alignLeft="@id/photo" android:layout_alignRight="@id/photo" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.FrescoImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/vkim_accessibility_video" app:vkim_scaleType="center_crop" />
+    <com.vk.im.ui.views.msg.upload.UploadProgressView android:layout_gravity="center" android:id="@id/upload" android:importantForAccessibility="no" style="@style/VkIm.MsgPart.UploadIndicator.Default" />
+    <com.vk.core.widget.AutoFitTextView android:textAppearance="@style/VkIm.MsgPart.Label.TextContrast" android:gravity="center_vertical" android:layout_gravity="center|left|top" android:id="@id/label" android:background="@drawable/vkim_bg_video_mosaic_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:lines="1" android:importantForAccessibility="noHideDescendants" app:maxTextSize="12.0sp" app:minTextSize="8.0sp" />
+</FrameLayout>

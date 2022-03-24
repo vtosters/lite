@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/buttons_layout" android:layout_width="wrap_content" android:layout_height="133.0dip" android:layout_marginBottom="-66.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/replay_layout" android:background="@drawable/picker_white_ripple_bounded_2dp" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_narrative_button" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_replay_36" android:scaleType="center" android:tint="@color/black" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:maxWidth="90.0dip" android:text="@string/narrative_replay" android:textAllCaps="true" android:fontFamily="@font/roboto_medium" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/back_to_story_layout" android:background="@drawable/picker_white_ripple_bounded_2dp" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="48.0dip">
+            <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_narrative_button" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_back_36" android:scaleType="center" android:tint="@color/black" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:maxWidth="90.0dip" android:text="@string/narrative_back_to_stories" android:textAllCaps="true" android:fontFamily="@font/roboto_medium" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/dark_view" android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/more_narratives" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/more_narratives_text" android:background="@drawable/bg_narrative_more" android:layout_width="fill_parent" android:layout_height="52.0dip" android:text="@string/narrative_more" android:singleLine="true" android:fontFamily="@font/roboto_medium" />
+        <com.vk.narratives.views.NarrativeRecyclerPaginatedView android:id="@id/more_narratives_list" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

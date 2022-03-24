@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.common.view.disableable.DisableableLinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:id="@id/attcah_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/comment_deleted" />
+    <Button android:id="@id/comment_restore_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:minHeight="35.0dip" android:text="@string/comment_restore" android:singleLine="true" style="@style/secondary_button" />
+    <Button android:id="@id/comment_report_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:minHeight="35.0dip" android:text="@string/report_content" android:singleLine="true" style="@style/secondary_button" />
+    <Button android:id="@id/comment_block_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:minHeight="35.0dip" android:text="@string/block_user_long" android:singleLine="true" style="@style/secondary_button" />
+</com.vk.common.view.disableable.DisableableLinearLayout>

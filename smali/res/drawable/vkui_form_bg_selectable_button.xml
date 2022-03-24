@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_selected="true" android:state_pressed="true">
+        <nine-patch android:src="@drawable/bg_field_blue_pressed" />
+    </item>
+    <item android:state_enabled="true" android:state_selected="true">
+        <nine-patch android:src="@drawable/bg_field_blue" />
+    </item>
+    <item android:state_enabled="true" android:state_selected="true">
+        <nine-patch android:src="@drawable/bg_field_pressed" />
+    </item>
+    <item android:state_enabled="true">
+        <nine-patch android:src="@drawable/bg_field" />
+    </item>
+    <item android:state_enabled="false">
+        <nine-patch android:src="@drawable/bg_field_disabled" />
+    </item>
+</selector>

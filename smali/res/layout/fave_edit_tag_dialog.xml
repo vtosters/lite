@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_gravity="center" android:background="@drawable/fave_rounded_white_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="20.0sp" android:textColor="?text_muted" android:id="@id/tag_edit_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:fontFamily="@string/font_family_medium" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <EditText android:id="@id/tag_edittext" android:background="@drawable/fave_edittext_rounded_blue_bg" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip" android:maxLength="50" android:inputType="textCapSentences" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintTop_toBottomOf="@id/tag_edit_title" />
+    <TextView android:textSize="16.0sp" android:id="@id/tags_save" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip" android:text="@string/fave_tags_save_title" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintTop_toBottomOf="@id/tag_edittext" style="@style/VKUIButton.Primary" />
+    <Space android:layout_width="fill_parent" android:layout_height="16.0dip" app:layout_constraintTop_toBottomOf="@id/tags_save" />
+</android.support.constraint.ConstraintLayout>

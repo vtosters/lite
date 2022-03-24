@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/iv_image_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="centerCrop" />
+    <com.vk.media.player.video.view.SimpleVideoView android:id="@id/vv_video_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vk.video.view.VideoFastSeekView android:id="@id/story_fast_seek_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/back_gradient" android:background="@drawable/scrim_left_40percent" android:visibility="invisible" android:layout_width="88.0dip" android:layout_height="fill_parent" />
+    <View android:id="@id/gesture_handler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/pb_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@style/Base.Widget.AppCompat.ProgressBar" />
+    <include layout="@layout/layout_error_story_view" />
+    <View android:layout_gravity="top" android:id="@id/top_gradient" android:background="@drawable/scrim_top_16percent" android:layout_width="fill_parent" android:layout_height="112.0dip" />
+    <View android:layout_gravity="bottom" android:id="@id/bottom_gradient" android:background="@drawable/scrim_bottom_16percent" android:layout_width="fill_parent" android:layout_height="112.0dip" />
+    <com.vk.stories.view.StoryProgressView android:id="@id/vrpv_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_header" android:background="#01000000" android:paddingTop="14.0dip" android:layout_width="fill_parent" android:layout_height="100.0dip" android:paddingStart="8.0dip" android:paddingEnd="4.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/owner_container" android:background="@drawable/picker_white_ripple_bounded_2dp" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_weight="1.0">
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginEnd="12.0dip" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="8.0dip">
+                <TextView android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:drawablePadding="2.0dip" android:fontFamily="@string/font_family_medium" />
+                <TextView android:textSize="12.0dip" android:textColor="#ccffffff" android:ellipsize="end" android:id="@id/tv_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="12.0dip" android:textColor="@color/white" android:layout_gravity="top" android:id="@id/iv_story_view_video_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="12:00" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" app:fontFamily="@font/roboto_medium" />
+        <ImageView android:layout_gravity="top" android:id="@id/iv_try_mask" android:background="@drawable/picker_white_ripple_unbounded" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_stories_viewer_mask_48" />
+        <ImageView android:layout_gravity="top" android:id="@id/iv_follow_unfollow" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+        <ImageView android:layout_gravity="top" android:id="@id/iv_close" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_stories_viewer_close_48" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/story_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip">
+        <com.vk.stories.views.StoryRepliesAndViewsView android:layout_gravity="bottom" android:id="@id/story_replies_viewers" android:layout_width="wrap_content" android:layout_height="64.0dip" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/fl_uploading_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="64.0dip">
+            <com.vk.stories.view.StoryUploadProgressView android:layout_gravity="center_vertical" android:id="@id/pv_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/tv_upload_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/story_sending_video" android:maxLines="1" android:shadowColor="#1e000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="8.0" android:fontFamily="@string/font_family_medium" android:layout_marginStart="12.0dip" android:layout_marginEnd="16.0dip" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/fl_upload_failure" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="64.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/story_sending_failure" android:singleLine="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff74a2d6" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tv_upload_retry" android:background="@drawable/picker_white_ripple_unbounded" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/story_retry" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/send_message_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_ad_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-6.0dip" android:src="@drawable/ic_stories_viewer_ad_arrow_32" />
+            <FrameLayout android:id="@id/send_message_wrap" android:background="@drawable/stories_button_bg" android:layout_width="fill_parent" android:layout_height="64.0dip" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="center" android:id="@id/tv_send_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_replies_comment" android:singleLine="true" android:shadowColor="#1e000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="8.0" android:fontFamily="@string/font_family_regular" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/story_view_show_comments" android:background="@drawable/stories_button_bg" android:layout_width="48.0dip" android:layout_height="64.0dip">
+            <ImageView android:layout_width="48.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_comment_24" android:scaleType="center" />
+            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:id="@id/story_view_show_comments_digit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-6.0dip" android:layout_marginRight="16.0dip" android:text="1" app:fontFamily="@font/roboto_medium" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="bottom" android:id="@id/iv_story_send_message_admin" android:background="@drawable/stories_button_bg" android:layout_width="48.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_message_24" android:scaleType="center" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/iv_story_sharing" android:background="@drawable/stories_button_bg" android:layout_width="48.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_stories_viewer_share_24" android:scaleType="center" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/iv_story_actions" android:background="@drawable/stories_button_bg" android:layout_width="48.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_stories_viewer_more_24" android:scaleType="center" />
+    </LinearLayout>
+    <com.vk.stories.StoryParentView android:layout_gravity="end" android:id="@id/story_parent_view" android:layout_width="66.0dip" android:layout_height="128.0dip" android:layout_marginTop="66.0dip" android:layout_marginEnd="12.0dip" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_deleted" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_stories_viewer_deleted_72dp" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/stories_author_deleted_story" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_private" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_stories_viewer_private_72dp" />
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/stories_author_access_denied" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <ViewStub android:layout_gravity="center" android:id="@id/narrative_cover" android:layout="@layout/story_narrative_cover" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <FrameLayout android:id="@id/fl_touch_lock" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

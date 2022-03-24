@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/liveRecommendedTop" android:background="@color/live_recommended_element_back" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/liveRecommendedImg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="centerCrop" app:overlayImage="@drawable/gift_item_selector" />
+    <View android:layout_gravity="bottom" android:background="@drawable/scrim_bottom" android:layout_width="fill_parent" android:layout_height="100.0dip" android:alpha="0.9" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom|center" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="10.0dip">
+        <com.vtosters.lite.live.widgets.timeprogress.CircularTimeBar android:id="@id/liveRecommendedTimeBar" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginBottom="20.0dip" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginRight="4.0dip">
+            <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_spectators_recommendations" />
+            <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/liveRecommendedViews" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="21.0dip" android:text="" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="32.0dip">
+            <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@id/liveRecommendedName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="" android:maxLines="2" android:includeFontPadding="false" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+                <FrameLayout android:layout_gravity="bottom" android:id="@id/liveRecommendedVerified" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginBottom="2.0dip" android:alpha="0.8" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

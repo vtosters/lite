@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="17.5dip" android:paddingRight="17.5dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ff858585" android:paddingTop="19.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/votes_balance_label" android:textAllCaps="true" />
+    <TextView android:textSize="17.0dip" android:textStyle="bold" android:textColor="#ff0f0f0f" android:id="@id/balance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ff858585" android:id="@id/votes_required_label" android:paddingTop="19.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/votes_summary_label" android:textAllCaps="true" />
+    <TextView android:textSize="17.0dip" android:textStyle="bold" android:textColor="#ff0f0f0f" android:id="@id/required" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ff858585" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/votes_buy" android:textAllCaps="true" />
+</LinearLayout>

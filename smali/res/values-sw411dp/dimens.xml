@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="msg_bubble_max_width">340.0dip</dimen>
+    <dimen name="vkim_dialogs_title_text_size">28.0dip</dimen>
+    <dimen name="vkim_header_title_max_width">230.0dip</dimen>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <layer-list>
+            <item>
+                <nine-patch android:src="@drawable/bg_field_disabled" />
+            </item>
+            <item android:right="12.0dip">
+                <bitmap android:gravity="center|right" android:src="@drawable/ic_field_arrow_down_disabled_16dp" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_enabled="true">
+        <layer-list>
+            <item>
+                <nine-patch android:src="@drawable/bg_field" />
+            </item>
+            <item android:right="12.0dip">
+                <bitmap android:gravity="center|right" android:src="@drawable/ic_field_arrow_down_16dp" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

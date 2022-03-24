@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.ui.RecursiveSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content_wrap" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:paddingTop="219.0dip" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/map_wrap" android:background="#ffe9e5dc" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/empty" layout="@layout/appkit_empty" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff909499" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/text_maps_not_available" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="72.0dip" android:text="@string/maps_not_available" />
+    </FrameLayout>
+</com.vk.core.ui.RecursiveSwipeRefreshLayout>

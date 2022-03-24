@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" style="@style/SignUpTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/avatar_container" android:background="@drawable/btn_circle_avatar" android:layout_width="65.0dip" android:layout_height="65.0dip" android:layout_marginTop="32.0dip">
+        <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center" android:id="@id/avatar" android:layout_width="63.0dip" android:layout_height="63.0dip" />
+    </FrameLayout>
+    <TextView android:gravity="center" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" />
+    <EditText android:id="@id/password" android:layout_marginTop="28.0dip" android:hint="@string/sign_up_login_password_hint" android:inputType="textPassword" style="@style/SignUpTheme.EditTextStyle.Outline" />
+    <TextView android:id="@id/forget_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/sign_up_login_forget_password" style="@style/SignUpTheme.TextStyle.Action" />
+    <TextView android:id="@id/not_my_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/sign_up_login_not_my_account" style="@style/SignUpTheme.TextStyle.Action" />
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.vk.im.signup.widgets.LoadingButton android:id="@id/login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/sign_up_login_enter" style="@style/SignUpTheme.Button" />
+</LinearLayout>

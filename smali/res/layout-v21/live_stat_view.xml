@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/live_viewers_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/live_viewers_error_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="64.0dip">
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:text="@string/general_error_description" />
+        <Button android:id="@id/live_viewers_reload" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/refresh" style="@style/VKUIButton.Primary" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/live_viewers_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="64.0dip" android:progressTint="@color/black" />
+</merge>

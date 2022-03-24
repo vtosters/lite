@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatImageView android:gravity="center" android:layout_gravity="top" android:id="@id/poll_select_photo_iv" android:background="@drawable/poll_select_photo_bg" android:layout_width="@dimen/poll_bg_width" android:layout_height="@dimen/poll_bg_height" android:layout_marginBottom="48.0dip" android:src="@drawable/ic_camera_32" android:tint="#ff528bcc" android:paddingStart="26.0dip" android:paddingEnd="26.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

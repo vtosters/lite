@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/UserSmallRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.im.ui.views.avatars.AvatarView android:id="@id/photo" style="@style/UserSmallPhoto" />
+    <CheckBox android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+    <TextView android:id="@id/title" android:layout_toStartOf="@id/check" style="@style/UserSmallTitle" />
+</RelativeLayout>

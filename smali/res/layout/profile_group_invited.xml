@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/profile_group_invited" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="12.0dip" android:layout_marginStart="16.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="76.0dip" android:layout_marginEnd="16.0dip">
+        <com.vtosters.lite.ui.LinkedTextView android:textColor="@color/black" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" style="@style/VKUIText.New.Subhead1" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:id="@id/accept" android:layout_width="wrap_content" android:layout_height="32.0dip" android:text="@string/group_inv_accept" android:singleLine="true" android:layout_marginEnd="8.0dip" style="@style/VKUIButton.Primary.Rounded" />
+            <TextView android:ellipsize="end" android:id="@id/reject" android:layout_width="wrap_content" android:layout_height="32.0dip" android:text="@string/group_inv_decline" android:singleLine="true" style="@style/VKUIButton.Secondary.Rounded" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

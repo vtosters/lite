@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/rounded_list_selector" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="top" android:id="@id/photo" android:layout_width="72.0dip" android:layout_height="72.0dip" app:placeholderImage="@drawable/placeholder_user_72" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip">
+        <com.vk.core.widget.FluidHorizontalLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="10.0dip" android:fontFamily="@string/font_family_medium" app:vk_layout_isFluid="true" />
+            <View android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginTop="-2.0dip" android:layout_marginStart="4.0dip" />
+        </com.vk.core.widget.FluidHorizontalLayout>
+        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:singleLine="true" />
+        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/subtitle2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:singleLine="true" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff8c8d8f" android:ellipsize="end" android:id="@id/user_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="2" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+            <com.vk.core.view.PhotoStripView android:layout_gravity="center_vertical" android:id="@id/users" android:layout_width="wrap_content" android:layout_height="24.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="?text_tertiary" android:layout_gravity="center_vertical" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="8.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <TextView android:layout_gravity="center" android:id="@id/positive" android:paddingBottom="7.0dip" android:text="@string/friends_add" android:contentDescription="@string/accessibility_add_friend" style="@style/primary_button" />
+            <TextView android:layout_gravity="center" android:id="@id/negative" android:paddingBottom="7.0dip" android:text="@string/friends_decline" android:layout_marginStart="8.0dip" style="@style/secondary_button" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="0.0dip" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

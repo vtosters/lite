@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView android:id="@id/lg_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/lg_progress" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_progressIndeterminate="true" />
+    <TextView android:gravity="center" android:id="@id/lg_empty_gallery_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:text="@string/photo_gallery_empty" style="@style/VKUIText.Headline" />
+</merge>

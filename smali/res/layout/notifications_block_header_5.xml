@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@android:id/content" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="76.0dip" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKImageView android:id="@android:id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/muted_black" android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" android:layout_marginStart="60.0dip" android:layout_marginEnd="48.0dip" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/subhead_gray" android:id="@android:id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:lineSpacingExtra="2.0dip" android:layout_marginStart="60.0dip" android:layout_marginEnd="48.0dip" />
+    <ImageView android:layout_gravity="end" android:id="@android:id/closeButton" android:layout_width="24.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_dismiss_light_24" android:scaleType="center" android:contentDescription="@string/close" />
+</FrameLayout>

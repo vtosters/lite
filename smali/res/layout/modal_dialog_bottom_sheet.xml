@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinator" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/touch_outside" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:importantForAccessibility="no" />
+    <FrameLayout android:layout_gravity="center|top" android:id="@id/design_bottom_sheet" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" app:layout_behavior="com.vk.core.ui.VkBottomSheetBehavior">
+        <FrameLayout android:layout_gravity="top" android:id="@id/fl_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="67.0dip" />
+        <FrameLayout android:layout_gravity="top" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginTop="16.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip">
+            <ImageView android:layout_gravity="start|center" android:id="@id/ivClose" android:background="?selectableItemBackgroundBorderless" android:padding="12.0dip" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_cancel_24" android:tint="?icon_secondary" />
+            <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/llTitleContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip">
+                <TextView android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKUIText.Title1" />
+                <TextView android:textColor="@color/subhead_gray" android:id="@id/tvSubtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKUIText.New.Subhead1" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="end|center" android:id="@id/ivEndIcon" android:background="@drawable/vkui_ripple_circle_highlight" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_write_24" android:scaleType="centerInside" />
+        </FrameLayout>
+        <View android:layout_gravity="top" android:id="@id/header_shadow" android:background="@drawable/bg_toolbar_shadow_light" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/button_container" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/modal_button_container_shadow" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/button_background" android:background="?tabbar_background" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+            <Button android:textSize="16.0sp" android:id="@id/positive_button" android:layout_width="fill_parent" android:layout_height="44.0dip" style="@style/VKUIButton.Primary" />
+        </FrameLayout>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

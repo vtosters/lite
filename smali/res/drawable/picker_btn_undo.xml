@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <bitmap android:src="@drawable/picker_ic_undo_shadow_disabled_48dp" />
+    </item>
+    <item android:state_enabled="true">
+        <bitmap android:src="@drawable/picker_ic_undo_shadow_48dp" />
+    </item>
+</selector>

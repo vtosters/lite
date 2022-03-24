@@ -1,0 +1,97 @@
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+import java.util.zip.ZipInputStream
+
+plugins {
+    id 'com.android.application'
+    id 'net.nemerosa.versioning' version '2.15.1'
+}
+
+versionFile {
+    File moduleDir = projectDir
+    file = new File(moduleDir.getAbsolutePath() + "/src/main/assets/version.properties")
+}
+
+
+task exportDex {
+    doLast {
+        try {
+            File moduleDir = projectDir
+            ZipInputStream inputStream = new ZipInputStream(new FileInputStream(moduleDir.getAbsolutePath() + "/build/outputs/apk/debug/app-debug.apk"))
+            ZipFile file = new ZipFile(moduleDir.getAbsolutePath() + "/build/outputs/apk/debug/app-debug.apk");
+            ZipEntry entry
+            while ((entry = inputStream.nextEntry) != null) {
+                if (entry.getName().equals("classes.dex")) {
+                    print('classes.dex found!')
+
+                    FileOutputStream output = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "classes6.dex"))
+
+                    byte[] buffer = new byte[1024]
+                    int len = 0
+                    while ((len = inputStream.read(buffer)) > 0) {
+                        output.write(buffer, 0, len)
+                    }
+                    output.close()
+                }
+                if (entry.getName().equals("classes2.dex")) {
+                    print('\nclasses2.dex found!')
+
+                    FileOutputStream output = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "classes8.dex"))
+
+                    byte[] buffer = new byte[1024]
+                    int len = 0
+                    while ((len = inputStream.read(buffer)) > 0) {
+                        output.write(buffer, 0, len)
+                    }
+                    output.close()
+                }
+            }
+
+            for (ZipEntry e : Collections.list(file.entries())) {
+                if (e.getName().endsWith("assets/version.properties")) {
+                    var is = file.getInputStream(e)
+                    FileOutputStream output = new FileOutputStream(new File(moduleDir.getAbsoluteFile(), "version.properties"))
+
+                    byte[] buffer = new byte[1024]
+                    int len = 0
+                    while ((len = is.read(buffer)) > 0) {
+                        output.write(buffer, 0, len)
+                    }
+                    output.close()
+
+                    print('\nversion.properties found!')
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace()
+        }
+    }
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion '32.0.0'
+
+    defaultConfig {
+        applicationId "ru.vtosters.lite.utils.lite"
+        minSdkVersion 19
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    implementation 'androidx.preference:preference:1.1.1'
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_post_side_padding">-32.0dip</dimen>
+    <dimen name="gift_min_size">128.0dip</dimen>
+    <dimen name="post_side_padding">32.0dip</dimen>
+    <dimen name="post_side_padding_btn">16.0dip</dimen>
+    <dimen name="post_side_padding_info">56.0dip</dimen>
+    <dimen name="post_side_padding_menu">20.0dip</dimen>
+    <dimen name="post_side_padding_negative">-32.0dip</dimen>
+    <dimen name="small_post_side_padding">28.0dip</dimen>
+    <dimen name="widget_post_side_padding_medium">28.0dip</dimen>
+    <dimen name="widget_post_side_padding_small">24.0dip</dimen>
+</resources>

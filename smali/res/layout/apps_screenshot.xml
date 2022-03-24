@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.imageloader.view.VKImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="256.0dip" app:actualImageScaleType="centerCrop" app:placeholderImage="@drawable/screenshot_placeholder"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

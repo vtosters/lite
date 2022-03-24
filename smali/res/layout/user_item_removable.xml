@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/UserSmallRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+    <ImageButton android:id="@id/action" android:background="@drawable/rounded_list_selector" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_cancel_24" android:tint="@color/light_gray" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    <TextView android:textColor="?text_muted" android:id="@id/title" android:layout_toStartOf="@id/action" style="@style/UserSmallTitle" />
+    <ImageView style="@style/Online.Small" />
+</RelativeLayout>

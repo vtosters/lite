@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <ripple android:color="?separator_alpha">
+            <item>
+                <shape>
+                    <solid android:color="?button_commerce_background" />
+                    <corners android:radius="@dimen/vkui_button_corner_radius" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="?button_commerce_background_disabled" />
+            <corners android:radius="@dimen/vkui_button_corner_radius" />
+        </shape>
+    </item>
+</selector>

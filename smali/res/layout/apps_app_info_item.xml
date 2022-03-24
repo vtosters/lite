@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/ivAppIcon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginBottom="12.0dip" app:roundedCornerRadius="8.0dip" />
+    <TextView android:textColor="@color/black" android:id="@id/tvAppName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" android:fontFamily="@string/font_family_regular" style="@style/VKUIText.Title2" />
+</LinearLayout>

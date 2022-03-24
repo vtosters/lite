@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:background="@drawable/rounded_list_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:layout_marginStart="@dimen/small_photo_size" android:layout_marginEnd="40.0dip">
+        <com.vtosters.lite.ui.BadooTextView android:textSize="16.0dip" android:textColor="?text_muted" android:ellipsize="marquee" android:id="@id/title" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:singleLine="true" android:drawablePadding="10.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|center" android:id="@id/options" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_card_actions" android:scaleType="center" android:layout_marginEnd="@dimen/post_side_padding_menu" />
+</FrameLayout>

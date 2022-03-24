@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.widget.MessageTimeAnchorView android:padding="0.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.ui.widget.MessageFloatingDateView2 android:id="@id/msg_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.vtosters.lite.ui.widget.MessageTimeAnchorView>

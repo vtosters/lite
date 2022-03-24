@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.attachpicker.widget.LocalImageView android:layout_gravity="center_vertical" android:id="@id/tiv_album_image" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="8.0dip" android:scaleType="centerCrop" />
+    <View android:layout_gravity="center_vertical" android:layout_width="1.0px" android:layout_height="48.0dip" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:gravity="bottom|center|left" android:id="@id/tv_title" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:gravity="center|left|top" android:id="@id/tv_photos_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

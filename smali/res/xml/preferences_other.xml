@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/vtsystem">
+        <Preference android:title="@string/firebasefix" android:key="firebasefix" android:summary="@string/firebasefixsum" />
+        <Preference android:title="@string/clearcache" android:key="clearcache" android:summary="@string/clearcachesum" />
+        <Preference android:title="@string/copytokenbtn" android:key="tokencopy" />
+        <Preference android:title="@string/applicationrestart" android:key="applicationrestart" />
+        <Preference android:title="@string/killappbtn" android:key="applicationstop" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtverify">
+        <Preference android:enabled="false" android:title="@string/vtverifyinfo" android:summary="@string/vtverifyinfosum" />
+        <Preference android:persistent="false" android:title="@string/getvtverify" android:summary="vtosters.app/donate">
+            <intent android:action="android.intent.action.VIEW" android:data="https://vtosters.app/donate" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/showvtverify" android:key="VT_Verification" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/showvtfire" android:key="VT_Fire" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="32.0dip" android:maxWidth="500.0dip">
+        <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/liveErrorText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+        <android.support.v7.widget.AppCompatButton android:textColor="@color/live_error_button_text" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/liveErrorButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="3.0dip" android:text="?appkitRetryButtonText" style="?appkitErrorButtonStyle" />
+    </LinearLayout>
+</merge>

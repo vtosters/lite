@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/ic_online_composite_background_20" android:tint="?background_content" />
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/ic_online_composite_foreground_20" android:tint="@color/green" />
+    </item>
+</layer-list>

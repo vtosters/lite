@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vk="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/RegistrationCardBlock">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <FrameLayout android:id="@id/signup_photo_wrap" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.vtosters.lite.ui.RoundedImageView2 android:id="@id/signup_photo" android:background="@drawable/circle_image_signup_bg" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="80.0dip" android:layout_height="80.0dip" android:scaleType="centerCrop" vk:cornerRadius="40.0dip" />
+                    <TextView android:textSize="12.0dip" android:textColor="?accent" android:gravity="center" android:layout_gravity="center" android:id="@id/signup_photo_holder" android:padding="0.0dip" android:layout_width="80.0dip" android:layout_height="wrap_content" android:text="@string/signup_photo" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+                </FrameLayout>
+                <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <EditText android:id="@id/signup_first_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_first_name" android:maxLength="50" android:inputType="textPersonName|textCapWords" style="@style/EditTextStandard" />
+                    <EditText android:id="@id/signup_last_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_last_name" android:maxLength="50" android:inputType="textPersonName|textCapWords" style="@style/EditTextStandard" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:gravity="center_vertical" android:id="@id/signup_profile_text2" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/signup_profile_select_gender" />
+            <RadioGroup android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="-6.0dip" android:layout_marginRight="-6.0dip" android:weightSum="2.0">
+                <RadioButton android:id="@id/signup_gender_male" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/signup_male" android:layout_weight="1.0" style="@style/RegistrationRadioButton" />
+                <RadioButton android:id="@id/signup_gender_female" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/signup_female" android:layout_weight="1.0" style="@style/RegistrationRadioButton" />
+            </RadioGroup>
+            <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:gravity="center_vertical" android:id="@id/signup_bdate_text" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="8.0dip" android:text="@string/signup_bdate" />
+            <com.vtosters.lite.ui.OverlayTextView android:id="@id/edit_bdate_chooser" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-16.0dip" android:layout_marginRight="-16.0dip" android:hint="@string/signup_bdate_format_hint" android:drawableRight="@drawable/ic_dropdown_arrow" vk:overlay="@drawable/highlight" vk:padAsBackground="true" style="@style/CardTextEdit" />
+            <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

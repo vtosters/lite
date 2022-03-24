@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.FullWidthLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="62.0dip" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.core.view.VkRatingView android:id="@id/attach_rating" android:layout_width="51.0dip" android:layout_height="10.0dip" android:layout_marginEnd="8.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginBottom="14.0dip" android:layout_weight="1.0" android:layout_marginEnd="12.0dip">
+        <TextView android:textColor="?text_muted" android:ellipsize="end" android:id="@id/attach_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:maxLines="2" android:fontFamily="@font/roboto_medium" style="@style/VKUIText.New.Text" />
+        <TextView android:textColor="?text_secondary" android:gravity="center_vertical" android:id="@id/attach_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginEnd="8.0dip" style="@style/VKUIText.New.Subhead1" />
+    </LinearLayout>
+    <com.vtosters.lite.ui.widget.AdsButton android:textSize="14.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/attach_subtitle" android:layout_width="wrap_content" android:layout_height="30.0dip" android:maxLines="1" style="@style/outline_button" />
+</com.vtosters.lite.ui.FullWidthLinearLayout>

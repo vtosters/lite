@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox android:theme="@style/CheckBoxTheme" android:textSize="16.0sp" android:textStyle="normal" android:textColor="@color/black" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/scope" android:layout_width="fill_parent" android:layout_height="48.0dip" android:maxLines="1" android:fontFamily="sans-serif" android:paddingStart="12.0dip" android:layout_marginStart="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

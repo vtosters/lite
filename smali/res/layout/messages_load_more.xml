@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/load_more_view" android:paddingRight="@dimen/message_time" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="?accent" android:gravity="center" android:layout_gravity="center" android:id="@id/load_more_btn" android:background="@drawable/bg_msg_btn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="10.0dip" android:minHeight="42.0dip" android:text="@string/load_more" android:fontFamily="@string/font_family_medium" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/load_more_progress" android:layout_width="30.0dip" android:layout_height="30.0dip" />
+</FrameLayout>

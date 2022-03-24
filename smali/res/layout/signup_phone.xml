@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/RegistrationCardBlock">
+            <Spinner android:id="@id/signup_phone_countries" android:layout_width="fill_parent" android:layout_height="wrap_content" android:dropDownWidth="fill_parent" android:dropDownVerticalOffset="-4.0dip" style="@style/EditTextStandard" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/signup_phone_number_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:enabled="false" android:id="@id/signup_phone_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:minWidth="48.0dip" android:inputType="phone" style="@style/EditTextStandard" />
+                <com.vtosters.lite.ui.XEditText android:id="@id/signup_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_phone_hint" android:inputType="phone" style="@style/EditTextStandard" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:gravity="start" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:text="@string/signup_enter_number" style="@style/RegistrationTextInfo" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/terms_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" style="@style/RegistrationCardBlock">
+            <com.vtosters.lite.ui.LinkedCheckBox android:textSize="16.0sp" android:id="@id/terms" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:lineSpacingExtra="1.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox" />
+        </FrameLayout>
+        <TextView android:textColor="?accent" android:id="@id/auth_forgot" android:background="@drawable/link_drawable" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:text="@string/forgot_phone" android:fontFamily="@string/font_family_medium" style="@style/RegistrationTextInfo" />
+    </LinearLayout>
+</ScrollView>

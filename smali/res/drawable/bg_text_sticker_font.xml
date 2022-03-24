@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:enterFadeDuration="300" android:exitFadeDuration="300"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:left="12.0dip" android:top="10.0dip" android:right="12.0dip" android:bottom="10.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:radius="14.0dip" />
+                    <solid android:color="#30ffffff" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/bg_text_font_border" />
+        </layer-list>
+    </item>
+    <item android:drawable="@drawable/bg_text_font_border" />
+</selector>

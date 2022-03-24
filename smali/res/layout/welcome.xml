@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:padding="16.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/sync_text" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/welcome_sync1" android:background="@drawable/highlight" android:padding="7.0dip" android:focusable="true" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/welcome_sync_opt1" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="17.0dip" android:textColor="@color/main_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_all" />
+                    <TextView android:textColor="#55000000" android:id="@id/textView4" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_all_summary" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/welcome_sync2" android:background="@drawable/highlight" android:padding="7.0dip" android:focusable="true" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/welcome_sync_opt2" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/linearLayout5" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="17.0dip" android:textColor="@color/main_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_existing" />
+                    <TextView android:textColor="#55000000" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_existing_summary" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/welcome_sync3" android:background="@drawable/highlight" android:padding="7.0dip" android:focusable="true" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/welcome_sync_opt3" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="17.0dip" android:textColor="@color/main_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_off" />
+                    <TextView android:textColor="#55000000" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sync_off_summary" />
+                </LinearLayout>
+            </LinearLayout>
+            <CheckBox android:textSize="17.0dip" android:textColor="#ff000000" android:id="@id/sync_big_pictures" android:paddingLeft="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="7.0dip" android:checked="false" android:text="@string/contacts_sync_hq_photos" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_report_reasons">
+        <item>Spam</item>
+        <item>Harassment</item>
+        <item>Adult content</item>
+        <item>Fraud</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="ad_report_reasons_api">
+        <item>spam</item>
+        <item>insult</item>
+        <item>porn</item>
+        <item>fraud</item>
+        <item>other</item>
+    </string-array>
+    <string-array name="address_will_be_opened">
+        <item>Opens on Monday</item>
+        <item>Opens on Tuesday</item>
+        <item>Opens on Wednesday</item>
+        <item>Opens on Thursday</item>
+        <item>Opens on Friday</item>
+        <item>Opens on Saturday</item>
+        <item>Opens on Sunday</item>
+    </string-array>
+    <string-array name="album_displayable_privacy_options">
+        <item>All users</item>
+        <item>Friends only</item>
+        <item>Friends and friends of friends</item>
+        <item>Only me</item>
+    </string-array>
+    <string-array name="album_privacy_options">
+        <item>All users</item>
+        <item>Friends only</item>
+        <item>Friends and friends of friends</item>
+        <item>Only me</item>
+        <item>Advanced settings</item>
+    </string-array>
+    <string-array name="app_report_types">
+        <item>Application not working</item>
+        <item>Malicious application</item>
+        <item>Intrusive advertising</item>
+        <item>Fraud or deceit</item>
+    </string-array>
+    <string-array name="audio_player_type">
+        <item>standard</item>
+        <item>exo</item>
+        <item>exoCached</item>
+    </string-array>
+    <string-array name="community_types">
+        <item>Events</item>
+        <item>Groups</item>
+        <item>Pages</item>
+    </string-array>
+    <string-array name="date_ago_hrs">
+        <item>an hour ago</item>
+        <item>two hours ago</item>
+        <item>three hours ago</item>
+    </string-array>
+    <string-array name="dnd_options">
+        <item>1 hour</item>
+        <item>24 hours</item>
+        <item>7 days</item>
+        <item>Forever</item>
+    </string-array>
+    <string-array name="edit_bdate_visibility">
+        <item>Show in profile</item>
+        <item>Show only day &amp; month</item>
+        <item>"Don't show in profile"</item>
+    </string-array>
+    <string-array name="fave_tabs">
+        <item>People</item>
+        <item>Posts</item>
+        <item>Links</item>
+        <item>Articles</item>
+        <item>Podcasts</item>
+        <item>Photos</item>
+        <item>Videos</item>
+        <item>@string/goods</item>
+    </string-array>
+    <string-array name="group_audios_options_descriptions">
+        <item></item>
+        <item>Open access means that all community members are allowed to add new audio files.</item>
+        <item>Limited access means that only editors and admins can add new audio files.</item>
+    </string-array>
+    <string-array name="group_ban_duration_options">
+        <item>Forever</item>
+        <item>A year</item>
+        <item>A month</item>
+        <item>A week</item>
+        <item>A day</item>
+        <item>An hour</item>
+    </string-array>
+    <string-array name="group_ban_reasons">
+        <item>Other</item>
+        <item>Spam</item>
+        <item>Harassment</item>
+        <item>Strong language</item>
+        <item>Irrelevant messages</item>
+    </string-array>
+    <string-array name="group_board_options_descriptions">
+        <item></item>
+        <item>Open access means that all community members are allowed to start new topics.</item>
+        <item>Limited access means that only editors and admins can start new topics.</item>
+    </string-array>
+    <string-array name="group_docs_options_descriptions">
+        <item></item>
+        <item>Open access means that all community members are allowed to add new documents.</item>
+        <item>Limited access means that only editors and admins can add new documents.</item>
+    </string-array>
+    <string-array name="group_photos_options_descriptions">
+        <item></item>
+        <item>Open access means that all community members are allowed to create new albums.</item>
+        <item>Limited access means that only editors and admins can create new albums.</item>
+    </string-array>
+    <string-array name="group_service_options">
+        <item>Disabled</item>
+        <item>Open</item>
+        <item>Limited</item>
+    </string-array>
+    <string-array name="group_videos_options_descriptions">
+        <item></item>
+        <item>Open access means that all community members are allowed to add new videos.</item>
+        <item>Limited access means that only editors and admins can add new videos.</item>
+    </string-array>
+    <string-array name="group_wall_options">
+        <item>Disabled</item>
+        <item>Open</item>
+        <item>Limited</item>
+        <item>Restricted</item>
+    </string-array>
+    <string-array name="group_wall_options_descriptions">
+        <item></item>
+        <item>With an open wall all community members are allowed to write posts and leave comments.</item>
+        <item>A limited wall only supports post on behalf of the community, but all members can leave comments.</item>
+        <item>A restricted wall only supports posts on behalf of the community and comments are disabled.</item>
+    </string-array>
+    <string-array name="group_wiki_options_descriptions">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="leftmenu">
+        <item>@string/newsfeed</item>
+        <item>@string/not_notifications</item>
+        <item>@string/messages</item>
+        <item>@string/friends</item>
+        <item>@string/menu_groups</item>
+        <item>@string/photos</item>
+        <item>@string/videos</item>
+        <item>@string/music</item>
+        <item>@string/games</item>
+        <item>@string/fave_title</item>
+        <item>@string/search</item>
+        <item>@string/menu_settings</item>
+    </string-array>
+    <string-array name="libverify_block_notification_names">
+        <item>@string/block_for_one_day_text</item>
+        <item>@string/block_for_one_hour_text</item>
+        <item>@string/block_for_one_minute_text</item>
+    </string-array>
+    <string-array name="libverify_block_notification_values">
+        <item>86400</item>
+        <item>3600</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="like_menu">
+        <item>Unlike</item>
+        <item>Share with friends</item>
+    </string-array>
+    <string-array name="months_full">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="months_short">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string-array name="newsfeed_settings_feed_type">
+        <item>New</item>
+        <item>Interesting at the top</item>
+    </string-array>
+    <string-array name="newsfeed_settings_feed_type_v">
+        <item>recent</item>
+        <item>top</item>
+    </string-array>
+    <string-array name="ntf_accepted_f">
+        <item>accepted your friend request</item>
+    </string-array>
+    <string-array name="ntf_accepted_m">
+        <item>accepted your friend request</item>
+    </string-array>
+    <string-array name="ntf_accepted_x">
+        <item>accepted your friend request</item>
+    </string-array>
+    <string-array name="ntf_follow_f">
+        <item>started following you</item>
+    </string-array>
+    <string-array name="ntf_follow_m">
+        <item>started following you</item>
+    </string-array>
+    <string-array name="ntf_follow_x">
+        <item>started following you</item>
+    </string-array>
+    <string-array name="ntf_like_f">
+        <item>liked a post</item>
+        <item>liked a photo</item>
+        <item>liked a video</item>
+        <item>liked a comment</item>
+    </string-array>
+    <string-array name="ntf_like_m">
+        <item>liked a post</item>
+        <item>liked a photo</item>
+        <item>liked a video</item>
+        <item>liked a comment</item>
+    </string-array>
+    <string-array name="ntf_like_x">
+        <item>liked a post</item>
+        <item>liked a photo</item>
+        <item>liked a video</item>
+        <item>liked a comment</item>
+    </string-array>
+    <string-array name="ntf_rt_f">
+        <item>shared a post</item>
+        <item>shared a photo</item>
+        <item>shared a video</item>
+        <item>shared a comment</item>
+    </string-array>
+    <string-array name="ntf_rt_m">
+        <item>shared a post</item>
+        <item>shared a photo</item>
+        <item>shared a video</item>
+        <item>shared a comment</item>
+    </string-array>
+    <string-array name="ntf_rt_x">
+        <item>shared a post</item>
+        <item>shared a photo</item>
+        <item>shared a video</item>
+        <item>shared a comment</item>
+    </string-array>
+    <string-array name="on_off">
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+    <string-array name="personal_life_options">
+        <item>Family and children</item>
+        <item>Career and money</item>
+        <item>Entertainment and leisure</item>
+        <item>Science and research</item>
+        <item>Improving the world</item>
+        <item>Personal development</item>
+        <item>Beauty and art</item>
+        <item>Fame and influence</item>
+    </string-array>
+    <string-array name="personal_people_options">
+        <item>Intellect and creativity</item>
+        <item>Kindness and honesty</item>
+        <item>Health and beauty</item>
+        <item>Wealth and power</item>
+        <item>Courage and persistence</item>
+        <item>Humor and love for life</item>
+    </string-array>
+    <string-array name="personal_politics_options">
+        <item>Communist</item>
+        <item>Socialist</item>
+        <item>Centrist</item>
+        <item>Liberal</item>
+        <item>Conservative</item>
+        <item>Monarchist</item>
+        <item>Ultraconservative</item>
+        <item>Apathetic</item>
+        <item>Libertarian</item>
+    </string-array>
+    <string-array name="personal_views_options">
+        <item>Very negative</item>
+        <item>Negative</item>
+        <item>Compromisable</item>
+        <item>Neutral</item>
+        <item>Positive</item>
+    </string-array>
+    <string-array name="photo_menu">
+        <item>Take a photo</item>
+        <item>Choose from album</item>
+    </string-array>
+    <string-array name="photo_menu2">
+        <item>Take a photo</item>
+        <item>Choose from gallery</item>
+        <item>Remove photo</item>
+    </string-array>
+    <string-array name="photo_menu3">
+        <item>Choose from gallery</item>
+        <item>Remove photo</item>
+    </string-array>
+    <string-array name="poll_months_short">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string-array name="post_options">
+        <item>Friends only</item>
+        <item>Export to Twitter</item>
+        <item>Export to Facebook</item>
+    </string-array>
+    <string-array name="public_types">
+        <item>Place or small business</item>
+        <item>Company, organization, or website</item>
+        <item>Famous person or group of people</item>
+        <item>Product or work of art</item>
+        <item>Page type…</item>
+    </string-array>
+    <string-array name="replies_options">
+        <item>Like</item>
+        <item>Reply</item>
+    </string-array>
+    <string-array name="report_types">
+        <item>Spam</item>
+        <item>Harassment</item>
+        <item>Adult content</item>
+        <item>Drug advocacy</item>
+        <item>Child pornography</item>
+        <item>Extremism/Violence</item>
+        <item>Encouraging suicide</item>
+    </string-array>
+    <string-array name="sett_dnd_options">
+        <item>1 hour</item>
+        <item>8 hours</item>
+        <item>24 hours</item>
+    </string-array>
+    <string-array name="sett_font_size_options">
+        <item>Smallest</item>
+        <item>More smaller</item>
+        <item>Smaller</item>
+        <item>Normal</item>
+        <item>Larger</item>
+        <item>More larger</item>
+        <item>Largest</item>
+    </string-array>
+    <string-array name="sett_font_size_values">
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="sett_friends_order">
+        <item>By first name</item>
+        <item>By last name</item>
+        <item>By popularity</item>
+    </string-array>
+    <string-array name="sett_friends_order_v">
+        <item>firstname</item>
+        <item>lastname</item>
+        <item>hints</item>
+    </string-array>
+    <string-array name="sett_gif_autoplay_entries">
+        <item>Always</item>
+        <item>Via Wi-Fi only</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="sett_gif_autoplay_entry_values">
+        <item>always</item>
+        <item>wifi</item>
+        <item>disabled</item>
+    </string-array>
+    <string-array name="sett_img_cache_location">
+        <item>Device memory</item>
+        <item>SD card</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_options">
+        <item>Name and text</item>
+        <item>Only name</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_values">
+        <item>name_and_text</item>
+        <item>name_only</item>
+    </string-array>
+    <string-array name="sett_posts_default_items">
+        <item>@string/wall_all_posts</item>
+        <item>@string/wall_my_posts</item>
+    </string-array>
+    <string-array name="sett_update_interval_items">
+        <item>30 seconds</item>
+        <item>45 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>3 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>One hour</item>
+        <item>Two hours</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="short_time">
+        <item> sec</item>
+        <item> min</item>
+        <item> h</item>
+        <item> day</item>
+        <item> w</item>
+        <item> m</item>
+        <item> y</item>
+    </string-array>
+    <array name="stats_linear">
+        <item>#ff74a2d6</item>
+        <item>#ffcc6faa</item>
+        <item>#ff63b9ba</item>
+        <item>#ff4bb34b</item>
+        <item>#ffff8c00</item>
+        <item>#ffdfe6ed</item>
+    </array>
+    <array name="stats_pie_double">
+        <item>#ff74a2d6</item>
+        <item>#ffa8d4f7</item>
+    </array>
+    <array name="stats_pie_single">
+        <item>#ff74a2d6</item>
+        <item>#ffff8c00</item>
+        <item>#fffc4b48</item>
+        <item>#ff63b9ba</item>
+        <item>#ff4bb34b</item>
+        <item>#ffdfe6ed</item>
+    </array>
+    <integer-array name="video_duration_sec">
+        <item>0</item>
+        <item>-300</item>
+        <item>1200</item>
+    </integer-array>
+    <string-array name="video_search_date">
+        <item>Любое время</item>
+        <item>За сутки</item>
+        <item>За неделю</item>
+        <item>В этом месяце</item>
+        <item>За год</item>
+    </string-array>
+    <string-array name="video_search_date_options">
+        <item>Any time</item>
+        <item>Last 24 hours</item>
+        <item>Last month</item>
+        <item>Last year</item>
+    </string-array>
+    <string-array name="video_search_duration">
+        <item>Any length</item>
+        <item>Short (less than 5 minutes)</item>
+        <item>Long (more than 20 minutes)</item>
+    </string-array>
+    <string-array name="video_search_length">
+        <item>Any length</item>
+        <item>Short</item>
+        <item>Long</item>
+    </string-array>
+    <string-array name="video_search_quality">
+        <item>Any quality</item>
+        <item>Only HD</item>
+    </string-array>
+    <string-array name="video_search_sort">
+        <item>По дате</item>
+        <item>По длительности</item>
+        <item>По релевантности</item>
+    </string-array>
+    <string-array name="video_search_sort_options">
+        <item>By relevance</item>
+        <item>By date</item>
+        <item>By duration</item>
+    </string-array>
+    <integer-array name="video_upload_date_sec">
+        <item>0</item>
+        <item>86400</item>
+        <item>604800</item>
+        <item>2592000</item>
+        <item>31536000</item>
+    </integer-array>
+    <string-array name="vkim_last_seen_female_hours_ago">
+        <item>last seen one hour ago</item>
+        <item>last seen two hours ago</item>
+        <item>last seen three hours ago</item>
+    </string-array>
+    <string-array name="vkim_last_seen_male_hours_ago">
+        <item>last seen one hour ago</item>
+        <item>last seen two hours ago</item>
+        <item>last seen three hours ago</item>
+    </string-array>
+    <string-array name="vkim_months_full_dep">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="vkim_months_full_nom">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="vkim_months_short">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string-array name="wall_attach_options">
+        <item>Audio</item>
+        <item>Video</item>
+        <item>Document</item>
+    </string-array>
+    <string-array name="animations">
+        <item>Slide</item>
+        <item>System</item>
+        <item>System task</item>
+        <item>AndroidX</item>
+        <item>Fade</item>
+    </string-array>
+    <string-array name="animations_values">
+        <item>slide</item>
+        <item>system</item>
+        <item>system_task</item>
+        <item>frag_enter</item>
+        <item>frag_fade</item>
+    </string-array>
+    <string-array name="language">
+        <item>System</item>
+        <item>English</item>
+        <item>Russian</item>
+        <item>Ukraininan</item>
+    </string-array>
+    <string-array name="lang_value">
+        <item>system</item>
+        <item>en</item>
+        <item>ru</item>
+        <item>uk</item>
+    </string-array>
+    <string-array name="start">
+        <item>Newsfeed</item>
+        <item>Dialogs</item>
+        <item>Menu</item>
+        <item>Profile</item>
+        <item>Documents</item>
+        <item>Lives</item>
+        <item>Birthdays</item>
+        <item>Groups</item>
+        <item>Music</item>
+        <item>Friends</item>
+        <item>Photos</item>
+        <item>Videos</item>
+        <item>Settings</item>
+        <item>Apps</item>
+        <item>Discover</item>
+        <item>Notifications</item>
+        <item>Money Transfer</item>
+        <item>Games</item>
+        <item>Bookmarks</item>
+    </string-array>
+    <string-array name="start_value">
+        <item>newsfeed</item>
+        <item>messenger</item>
+        <item>menu</item>
+        <item>profile</item>
+        <item>docs</item>
+        <item>lives</item>
+        <item>brtd</item>
+        <item>groups</item>
+        <item>music</item>
+        <item>friends</item>
+        <item>photos</item>
+        <item>videos</item>
+        <item>settings</item>
+        <item>apps</item>
+        <item>discover</item>
+        <item>notifications</item>
+        <item>money</item>
+        <item>games</item>
+        <item>liked</item>
+    </string-array>
+    <string-array name="proxy">
+        <item>No Proxy</item>
+        <item>xtrafrancyz</item>
+        <item>zaborona.help</item>
+        <item>Custom HTTP</item>
+        <item>Custom HTTPS</item>
+        <item>Custom SOCKS</item>
+    </string-array>
+    <string-array name="proxy_value">
+        <item>noproxy</item>
+        <item>xtrafrancyz</item>
+        <item>zaborona</item>
+        <item>http</item>
+        <item>https</item>
+        <item>socks</item>
+    </string-array>
+</resources>

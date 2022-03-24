@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="17.0dip" android:paddingEnd="17.0dip" style="@style/SignUpTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:id="@id/country_name" android:background="@drawable/bg_outine_rounded_top_selector" android:padding="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="35.0dip" android:drawableEnd="@drawable/ic_chevron_16" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/phone_container" android:background="@drawable/bg_outline_rounded_bottom_blue" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="-1.0dip">
+        <TextView android:gravity="center" android:id="@id/country_code" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+        <View android:background="#26000000" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <EditText android:gravity="center_vertical" android:id="@id/phone" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/sign_up_phone_hint" android:lines="1" android:maxLength="@integer/sign_up_max_phone_length" android:inputType="number" android:layout_marginStart="12.0dip" android:importantForAutofill="no" />
+    </LinearLayout>
+    <TextView android:id="@id/error_text_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/SignUpTheme.TextStyle.Error" />
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.vk.im.signup.widgets.LoadingButton android:layout_gravity="center" android:id="@id/continue_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/sign_up_start_continue" style="@style/SignUpTheme.Button" />
+</LinearLayout>

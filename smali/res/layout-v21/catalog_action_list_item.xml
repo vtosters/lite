@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="48.0dip" android:foreground="@drawable/highlight_radius_4"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@string/fontRobotoRegular" android:textSize="13.0sp" android:textColor="?accent" android:ellipsize="end" android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="8.0dip" android:lineSpacingExtra="3.0sp" android:letterSpacing="0.01" />
+</FrameLayout>

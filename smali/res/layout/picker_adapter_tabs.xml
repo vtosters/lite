@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vk.attachpicker.widget.TabImageView android:layout_gravity="center_horizontal" android:id="@id/iv_icon" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="8.0dip" android:scaleType="centerInside" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/attach_badge" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="17.0dip" android:layout_marginTop="17.0dip" android:src="@drawable/ic_attach_new_tab_badge" />
+    <com.vk.attachpicker.widget.TabTextView android:textSize="12.0sp" android:textColor="@color/picker_tab_text_normal" android:layout_gravity="bottom|center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
+</merge>

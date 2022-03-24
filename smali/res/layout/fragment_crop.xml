@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.crop.CropImageView android:id="@id/crop_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:civ_circleCrop="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/done_button" android:background="@drawable/img_picker_btn_primary" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/img_picker_crop_done" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ic_cancel_black" app:title="@string/avp_crop_photo_title" app:titleTextColor="@color/black" />
+</FrameLayout>

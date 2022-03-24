@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/MessageRoot.Out">
+    <include layout="@layout/message_state_block" />
+    <com.vtosters.lite.ui.MessageLinearLayout style="@style/MessageWrap.Out">
+        <com.vtosters.lite.ui.CorrectlyMeasuringTextView style="@style/MessageText" />
+        <com.vtosters.lite.ui.FlowLayout style="@style/MessageFlow" />
+    </com.vtosters.lite.ui.MessageLinearLayout>
+    <TextView style="@style/MessageTime.Out" />
+</LinearLayout>

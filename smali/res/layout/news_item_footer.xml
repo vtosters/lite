@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/post_divider" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="7.5dip" android:layout_marginStart="@dimen/post_side_padding" android:layout_marginEnd="@dimen/post_side_padding" />
+    <include android:layout_width="fill_parent" android:layout_height="48.0dip" layout="@layout/likes_panel" />
+    <View android:id="@id/bottom_divider" android:background="?separator_alpha" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginBottom="8.5dip" />
+</LinearLayout>

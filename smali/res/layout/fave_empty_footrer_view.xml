@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vtosters.lite.ui.LinkedTextView android:textSize="16.0sp" android:textColor="?text_secondary" android:textColorHighlight="#802b587a" android:textColorLink="#ff2b587a" android:gravity="center_horizontal" android:id="@id/tv_empty_list_title" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/font_family_regular" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="?accent" android:id="@id/tv_empty_list_button" android:background="@drawable/highlight_radius_4" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/att_doc_thumb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="250.0dip" app:actualImageScaleType="fitCenter" />
+    <View android:layout_gravity="center" android:id="@id/background" android:background="@drawable/bg_gif_label" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <ImageView android:layout_gravity="center" android:id="@id/play" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_play_24" android:scaleType="center" />
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chats_error" android:tint="?accent" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="40.0dip" android:layout_height="40.0dip" android:max="100" android:progress="67" android:indeterminate="false" android:indeterminateOnly="false" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/white" android:ellipsize="marquee" android:layout_gravity="end|bottom|center" android:id="@id/att_doc_title" android:background="@drawable/bg_doc_label" android:paddingLeft="6.0dip" android:paddingTop="3.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:singleLine="true" android:drawablePadding="6.0dip" android:fontFamily="@string/font_family_medium" />
+</FrameLayout>

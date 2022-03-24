@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="4.0dip" android:src="@drawable/shadow_bottom_panel" android:scaleType="fitXY" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/player_view_content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <com.vk.music.view.ThumbsImageView android:id="@id/player_view_albumart" android:layout_width="56.0dip" android:layout_height="56.0dip" app:backgroundImage="@color/music_placeholder_bg" app:tiv_placeholder_resource="@drawable/ic_song_24" />
+        <ImageView android:id="@id/player_view_button" android:background="@drawable/highlight_circle" android:clickable="true" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_audio_panel_pause" android:scaleType="center" android:layout_alignParentRight="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="1.0dip" android:layout_toLeftOf="@id/player_view_button" android:layout_toRightOf="@id/player_view_albumart">
+            <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="marquee" android:id="@id/player_view_title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Only" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+            <TextView android:textSize="12.0dip" android:textColor="#ff8a8a8a" android:ellipsize="marquee" android:id="@id/player_view_artist" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sunrise Avenue" android:singleLine="true" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/player_view_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/drawer_player_progress" android:layout_toRightOf="@id/player_view_albumart" android:layout_alignParentRight="true" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+    </RelativeLayout>
+</LinearLayout>

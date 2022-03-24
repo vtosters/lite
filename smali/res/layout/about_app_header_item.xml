@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="196.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="104.0dip" android:layout_height="104.0dip" android:src="@drawable/icon_vk_104" android:scaleType="centerInside" />
+        <com.vtosters.lite.ui.BadooTextView android:textColor="?text_subhead" android:layout_gravity="center_horizontal" android:id="@id/version_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    </LinearLayout>
+</FrameLayout>

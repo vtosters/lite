@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.XFrameLayout android:orientation="vertical" android:id="@id/x_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/small_player_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/player_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/smallPlayerShadow" android:background="@drawable/bg_bottom_navigation_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+        <com.vk.music.view.SmallPlayerView android:id="@id/smallPlayer" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="64.0dip" />
+    </LinearLayout>
+</com.vtosters.lite.ui.XFrameLayout>

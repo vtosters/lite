@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/pinned_msg_show" android:title="@string/vkim_dialog_option_pinned_msg_show" app:showAsAction="never" />
+    <item android:id="@id/pinned_msg_hide" android:title="@string/vkim_dialog_option_pinned_msg_hide" app:showAsAction="never" />
+    <item android:id="@id/pinned_msg_detach" android:title="@string/vkim_dialog_option_pinned_msg_detach" app:showAsAction="never" />
+</menu>

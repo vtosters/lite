@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/music_playlists_button" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <TextView android:textSize="16.0dip" android:textStyle="normal" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/music_title_playlists" android:fontFamily="@string/font_family_medium" style="@style/TextStyle" />
+        <TextView android:textSize="16.0dip" android:textStyle="normal" android:textColor="@color/music_playlist_counter_text" android:layout_gravity="center_vertical" android:id="@id/music_playlists_counter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:freezesText="true" android:fontFamily="sans-serif" style="@style/TextStyle" />
+    </LinearLayout>
+    <View android:background="@color/music_divider_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="7.5dip" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

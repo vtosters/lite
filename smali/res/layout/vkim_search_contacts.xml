@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/im_appbar" android:background="?background_content" android:layout_height="?actionBarSize" style="?im_appbar_collapsing_style">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll">
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/VkIm.Toolbar.Style" />
+            <com.vk.core.view.ModernSearchView android:id="@id/vkim_search" android:background="?background_content" android:visibility="gone" android:layout_height="fill_parent" style="?im_toolbar_search_style" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:id="@id/vkim_list_container" android:background="?background_highlighted" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <android.support.v4.widget.NestedScrollView android:id="@id/vkim_empty_container" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.vk.im.ui.views.EmptyViewForList android:layout_gravity="center" android:id="@id/vkim_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" app:icon_size="@dimen/vkim_search_empty_icon_size" app:text="@string/vkim_msg_search_empty" app:text_color="@color/subhead_gray" app:text_size="16.0sp" />
+    </android.support.v4.widget.NestedScrollView>
+    <View android:id="@id/vkim_search_shadow" app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
+</android.support.design.widget.CoordinatorLayout>

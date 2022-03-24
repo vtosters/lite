@@ -1,0 +1,93 @@
+/* vkui.css V2 by iTaysonLab */
+/* Generic VKUI */
+/* additional fixes for various VKUI */
+.Tooltip__content {
+    background-color: %accent% !important;
+}
+
+body[scheme=bright_light] {
+    --accent: %accent% !important;
+    --action_sheet_action_foreground: %accent% !important;
+    --attach_picker_tab_active_background: %accent% !important;
+    --attach_picker_tab_active_text: %accent% !important;
+    --button_muted_foreground: %accent% !important;
+    --button_outline_border: %accent% !important;
+    --button_outline_foreground: %accent% !important;
+    --button_primary_background: %accent% !important;
+    --button_secondary_foreground: %accent% !important;
+    --button_tertiary_foreground: %accent% !important;
+    --cell_button_foreground: %accent% !important;
+    --control_foreground: %accent% !important;
+    --counter_primary_background: %accent% !important;
+    --header_alternate_tab_active_indicator: %accent% !important;
+    --header_tab_active_indicator: %accent% !important;
+    --header_tint: %accent% !important;
+    --header_tint_alternate: %accent% !important;
+    --im_attach_tint: %accent% !important;
+    --im_reply_sender_text: %accent% !important;
+    --im_reply_separator: %accent% !important;
+    --im_text_name: %accent% !important;
+    --landing_login_button_background: %accent% !important;
+    --landing_primary_button_background: %accent% !important;
+    --landing_tertiary_button_foreground: %accent% !important;
+    --landing_text_title: %accent% !important;
+    --landing_secondary_button_foreground: %accent% !important;
+    --link_alternate: %accent% !important;
+    --loader_track_value_fill: %accent% !important;
+    --feed_recommended_friend_promo_background: %accent% !important;
+    --tabbar_active_icon: %accent% !important;
+    --tabbar_tablet_active_icon: %accent% !important;
+    --text_link: %accent% !important;
+    --text_name: %accent% !important;
+    --writebar_icon: %accent% !important;
+    --dynamic_blue: %accent% !important;
+    /* backgrounds */
+    --background_content: %background_page% !important;
+    --background_page: %background_page% !important;
+    --content_tint_background: %background_page% !important;
+    --loader_background: %background_page% !important;
+    --header_background: %background_page% !important;
+    --header_background_before_blur: %background_page% !important;
+    --header_background_before_blur_alternate: %background_page% !important;
+    --header_alternate_background: %background_page% !important;
+}
+
+
+
+body[scheme=space_gray] {
+    --accent: %accent% !important;
+    --tabbar_tablet_active_icon: %accent% !important;
+    --text_link: %accent% !important;
+    --text_link_hightlighted_background: %accent% !important;
+    --dynamic_blue: %accent% !important;
+}
+
+/* фиксы статей */
+.article {
+    background-color: %background_content% !important;
+    color: %text_primary% !important;
+}
+
+.articleView__content {
+    background-color: %background_page% !important;
+}
+
+.articleView__footer {
+    background-color: %background_page% !important;
+    color: %text_primary% !important;
+}
+
+h1, h2, h3 {
+    color: %text_primary% !important;
+}
+
+.articleView__header {
+    background-color: %background_content% !important;
+    color: %text_primary% !important;
+}
+
+/* кол-во посмотров и поделившихся */
+.articleView__content_misc_block {
+    background-color: %background_content% !important;
+    color: %text_primary% !important;
+}

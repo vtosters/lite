@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/gray_A40" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="top" android:id="@id/divider" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/ic_tag_24" android:tint="@color/blue_200_muted" android:layout_marginStart="16.0dip" />
+    <com.vk.fave.views.FaveTagViewGroup android:layout_gravity="center_vertical" android:id="@id/ft_tag_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="52.0dip" android:layout_marginEnd="8.0dip" app:separatorTextColor="@color/gray_300" app:separatorWidth="6.0dip" app:tagBackground="@drawable/highlight_radius_4" app:tagFontFamily="@string/font_family_regular" app:tagHorizontalPadding="2.0dip" app:tagTextColor="?accent" app:tagTextSize="15.0sp" app:tagVerticalPadding="3.5dip" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/SignUpTheme" android:orientation="vertical" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/toolbar_back" android:background="@drawable/vkui_ripple_circle_highlight" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back_24" android:tint="@color/signup_blue" />
+        <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/toolbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SignUpTheme.TextStyle.Header3" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fragment_container" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:gravity="center_vertical" android:id="@id/text" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="8.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="32.0dip" android:text="@string/sponsored_post_in_group" android:drawablePadding="6.0dip" android:drawableStart="@drawable/marked_as_ads"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

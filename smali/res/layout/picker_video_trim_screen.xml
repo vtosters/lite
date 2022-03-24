@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/picker_editor_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/fl_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="156.0dip" android:transformPivotX="0.0dip" android:transformPivotY="0.0dip">
+        <com.vk.media.player.video.view.SystemVideoView android:layout_gravity="center" android:id="@id/vv_video" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.vk.imageloader.view.VKImageView android:id="@id/iv_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:actualImageScaleType="fitCenter" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/picker_ic_gallery_video_play_56" />
+        <View android:id="@id/click_handler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_close_btn_container" android:layout_width="56.0dip" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_close" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="56.0dip" android:layout_height="wrap_content" android:src="@drawable/picker_ic_close_circle_card_56" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_trim_panel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="156.0dip">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="108.0dip" android:layout_marginBottom="@dimen/picker_bottom_button_height">
+            <com.vk.attachpicker.videotrim.VideoTimelineView android:id="@id/vtv_timeline" android:layout_width="fill_parent" android:layout_height="104.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff909499" android:layout_gravity="bottom|center|left" android:id="@id/tv_left_offset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="8.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff909499" android:layout_gravity="bottom|center|right" android:id="@id/tv_right_offset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" />
+        </FrameLayout>
+        <com.vk.attachpicker.widget.AnimatableTextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_attach" android:background="@drawable/picker_btn_white" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height" android:text="@string/picker_done" android:textAllCaps="true" />
+        <View android:layout_gravity="bottom" android:background="@color/picker_grey_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginBottom="@dimen/picker_bottom_button_height" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:id="@id/view_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginBottom="156.0dip" />
+</FrameLayout>

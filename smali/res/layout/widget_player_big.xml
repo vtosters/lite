@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_widget_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ff384554" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/w_player_cover" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <FrameLayout android:id="@id/w_player_p_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="25.0dip" android:layout_alignParentTop="true">
+            <ImageView android:layout_gravity="bottom|center|clip_vertical" android:id="@id/w_player_placeholder" android:layout_width="320.0dip" android:layout_height="200.0dip" android:src="@drawable/aplayer_cover_placeholder" android:scaleType="centerCrop" android:tint="#ff4d5b6b" />
+        </FrameLayout>
+        <ImageView android:layout_width="fill_parent" android:layout_height="224.0dip" android:src="@drawable/scrim_bottom" android:scaleType="fitXY" android:layout_alignParentBottom="true" android:alpha="0.5" />
+        <LinearLayout android:gravity="center" android:id="@id/w_player_btns" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/w_player_shuffle" android:background="@drawable/highlight_icon" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_shuffle_24" android:scaleType="center" />
+            <ImageView android:id="@id/w_player_prev" android:background="@drawable/highlight" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_skip_previous_48" android:scaleType="center" android:tint="?header_text" android:layout_weight="1.0" />
+            <ImageView android:id="@id/w_player_play_pause" android:background="@drawable/highlight" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_play_48" android:scaleType="center" android:tint="?header_text" android:layout_weight="1.0" />
+            <ImageView android:id="@id/w_player_next" android:background="@drawable/highlight" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_skip_next_48" android:scaleType="center" android:tint="?header_text" android:layout_weight="1.0" />
+            <ImageView android:id="@id/w_player_repeat" android:background="@drawable/highlight_icon" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_repeat_24" android:scaleType="center" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/w_player_clickbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/w_player_btns" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <TextView android:textSize="16.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/w_player_inactive_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="32.0dip" android:text="@string/audio_widget_inactive" />
+        </FrameLayout>
+        <TextView android:textSize="16.0dip" android:textColor="#ffffffff" android:id="@id/w_player_artist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="" android:layout_above="@id/w_player_btns" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="24.0dip" android:textColor="#ffffffff" android:ellipsize="marquee" android:gravity="left" android:id="@id/w_player_title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="" android:singleLine="true" android:layout_above="@id/w_player_artist" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</FrameLayout>

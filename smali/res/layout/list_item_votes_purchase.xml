@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="17.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17.0dip" android:textColor="#ff111111" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="title" android:layout_toLeftOf="@id/action" android:layout_centerVertical="true" />
+        <TextView android:gravity="center" android:id="@id/action" android:background="@drawable/btn_light_blue_flat" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:minWidth="95.0dip" android:text="subtitle" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/BlueButton" />
+    </RelativeLayout>
+</FrameLayout>

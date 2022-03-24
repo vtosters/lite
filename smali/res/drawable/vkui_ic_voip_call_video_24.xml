@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/vkui_ic_voip_call_video_24_disabled" />
+    <item android:drawable="@drawable/ic_videocam_24" />
+</selector>

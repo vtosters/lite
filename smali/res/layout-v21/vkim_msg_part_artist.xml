@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.im.ui.views.msg.MsgPartSnippetView android:layout_width="wrap_content" android:layout_height="wrap_content" app:vkim_snippet_buttonText="@string/vkim_msg_list_playlist_button" app:vkim_snippet_descriptionText="@string/vkim_msg_list_artist_desc" app:vkim_snippet_imagePlaceholder="@drawable/ic_placeholder_artist_80" style="@style/VkIm.MsgPart.Snippet"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

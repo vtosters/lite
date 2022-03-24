@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.media.player.video.view.VideoTextureView android:layout_gravity="center" android:id="@id/video_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.exoplayer2.ui.VKSubtitleView android:id="@id/video_subtitles" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.vk.media.player.video.view.PreviewImageView android:layout_gravity="center" android:id="@id/video_cover" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <view android:layout_gravity="center" android:id="@id/video_scrim_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" class="com.vtosters.lite.ui.ScrimInsetsView" />
+    <view android:layout_gravity="center" android:id="@id/video_fast_seek_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.vk.video.view.VideoFastSeekView" />
+    <com.vtosters.lite.ui.movie.PlayButton android:layout_gravity="center" android:id="@id/play_button" android:background="@drawable/highlight_video_play" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_shadow_96" android:scaleType="center" android:alpha="0.0" />
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:layout_gravity="center" android:id="@id/progress_view" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" app:mpb_indeterminateTint="@color/white" app:mpb_progressStyle="circular" />
+    <com.vk.video.view.VideoSeekView android:layout_gravity="bottom" android:id="@id/video_seek_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="48.0dip" android:alpha="0.0" />
+    <com.vk.video.view.VideoEndView android:gravity="center" android:layout_gravity="center" android:id="@id/video_end_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="110.0dip" android:alpha="0.0" />
+    <com.vtosters.lite.ui.widget.VideoErrorView android:layout_gravity="center" android:id="@id/video_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0" />
+</merge>

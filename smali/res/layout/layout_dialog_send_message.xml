@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#99000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/click_handler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+        <com.vk.attachpicker.widget.BackPressEditText android:textSize="15.0sp" android:textColor="@color/white" android:textColorHint="#99ffffff" android:gravity="start|center" android:layout_gravity="center_vertical" android:id="@id/et_send_message" android:background="@drawable/bg_stories_viewer_button" android:paddingLeft="20.0dip" android:paddingTop="23.0dip" android:paddingRight="20.0dip" android:paddingBottom="23.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/stories_replies_comment" android:ems="10" android:singleLine="true" android:shadowColor="#1e000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="8.0" android:layout_weight="1.0" android:inputType="textCapSentences" android:imeOptions="actionSend" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/send_container" android:background="@drawable/story_send_message_bg" android:layout_width="48.0dip" android:layout_height="64.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_send_24" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

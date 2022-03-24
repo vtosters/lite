@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/audio_play_pause_icon" android:layout_width="32.0dip" android:layout_height="72.0dip" android:layout_marginRight="16.0dip" android:tint="?accent" />
+        <ProgressBar android:layout_gravity="center|left" android:id="@id/audio_progress_bar" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="16.0dip" android:max="100" android:progress="500" android:progressDrawable="@drawable/circular" android:rotation="-90.0" style="?android:progressBarStyleHorizontal" />
+    </FrameLayout>
+    <include layout="@layout/audio_list_item_common" />
+</LinearLayout>

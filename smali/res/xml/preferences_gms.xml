@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="О GMS">
+        <Preference android:enabled="false" android:title="Что такое GMS?" android:summary="GMS - Google Mobile Services, необходимый компонент для нормальной работы приложений. Все уведомления, вход в игры, Google Play и прочие функции устройства используют этот компонент" />
+        <Preference android:enabled="false" android:title="Зачем мне нужен GMS для VTosters?" android:summary="GMS необходим для работы уведомлений, для работы музыки и ещё очень многих компонентов приложения" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Как скачать?">
+        <Preference android:enabled="false" android:title="Что тогда делать?" android:summary="Вам необходимо скачать MicroG." />
+        <Preference android:enabled="false" android:title="Что такое MicroG?" android:summary="Это открытая альтернатива сервисам GMS с возможностью установить на устройство без GMS" />
+        <Preference android:persistent="false" android:title="Официальный сайт MicroG">
+            <intent android:action="android.intent.action.VIEW" android:data="https://microg.org/download.html" />
+        </Preference>
+        <Preference android:persistent="false" android:title="Скачать MicroG">
+            <intent android:action="android.intent.action.VIEW" android:data="https://microg.org" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Что делать дальше?">
+        <Preference android:enabled="false" android:title="Что делать после установки MicroG?" android:summary="Обновите регистрацию Firebase в прочих настройках" />
+    </PreferenceCategory>
+</PreferenceScreen>

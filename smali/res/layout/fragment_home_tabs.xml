@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+            <ImageButton android:id="@id/story" android:background="@drawable/highlight_icon_white_unbounded" android:layout_width="?actionBarSize" android:layout_height="?actionBarSize" android:tint="?header_text" android:src="@drawable/ic_story_28" android:contentDescription="@string/accessibility_open_stories_camera" android:layout_marginStart="0.0dip" android:layout_marginEnd="4.0dip" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.vtosters.lite.ui.widget.VKTabLayout android:id="@id/tabs" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="?header_tab_active_indicator" app:tabIndicatorHeight="2.5dip" app:tabSelectedTextColor="?header_tab_active_text" app:tabTextColor="?header_tab_inactive_text" />
+                <FrameLayout android:layout_gravity="end" android:id="@id/settings_button_container" android:layout_width="52.0dip" android:layout_height="fill_parent">
+                    <ImageButton android:id="@id/settings_button" android:background="@drawable/highlight_icon_white_unbounded" android:layout_width="52.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_params_24" android:tint="?header_text" android:contentDescription="@string/accessibility_newsfeed_settings" android:alpha="0.6" android:paddingStart="0.0dip" android:paddingEnd="4.0dip" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+    <include android:id="@id/appkit_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" app:layout_behavior="@string/toolbar_behavior_scrolling" layout="@layout/appkit_tabs" />
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

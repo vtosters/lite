@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/photo_wrap" android:background="@drawable/bg_gift_card" android:padding="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKOverlayImageView android:id="@id/photo" android:layout_width="wrap_content" android:layout_height="wrap_content" app:actualImageScaleType="centerInside" app:overlay="@drawable/gift_item_selector" app:viewAspectRatio="1.0" />
+    </FrameLayout>
+    <com.vtosters.lite.ui.BadooTextView android:textSize="12.0dip" android:textColor="?accent" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="18.0dip" android:singleLine="true" android:layout_below="@id/photo_wrap" android:layout_alignLeft="@id/photo_wrap" android:layout_alignRight="@id/photo_wrap" />
+</RelativeLayout>

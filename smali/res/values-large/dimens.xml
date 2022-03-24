@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_post_side_padding">-24.0dip</dimen>
+    <dimen name="abc_config_prefDialogWidth">440.0dip</dimen>
+    <item type="dimen" name="abc_dialog_fixed_height_major">60.000004%</item>
+    <item type="dimen" name="abc_dialog_fixed_height_minor">90.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_major">60.000004%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_minor">90.0%</item>
+    <item type="dimen" name="abc_dialog_min_width_major">55.000008%</item>
+    <item type="dimen" name="abc_dialog_min_width_minor">79.99999%</item>
+    <dimen name="game_padding_lr0">16.0dip</dimen>
+    <dimen name="game_padding_lr8">24.0dip</dimen>
+    <dimen name="game_page_margin">10.0dip</dimen>
+    <dimen name="game_page_maxWidth">800.0dip</dimen>
+    <dimen name="game_page_pgMargin">16.0dip</dimen>
+    <dimen name="game_show_all_padding">48.0dip</dimen>
+    <item type="dimen" name="gift_category_min_size">@dimen/gift_min_size</item>
+    <dimen name="gift_min_size">104.0dip</dimen>
+    <dimen name="good_description_padding_bottom">19.0dip</dimen>
+    <dimen name="good_description_padding_top">8.0dip</dimen>
+    <dimen name="left_menu_size">84.0dip</dimen>
+    <dimen name="navigation_spinner_popup_yoffset">-56.0dip</dimen>
+    <dimen name="newsfeed_newpost_bottom_panel_height">56.0dip</dimen>
+    <dimen name="picker_emoji_size">86.0dip</dimen>
+    <dimen name="picker_graffiti_size">200.0dip</dimen>
+    <dimen name="picker_item_long_size_image">145.0dip</dimen>
+    <dimen name="picker_item_size_image">130.0dip</dimen>
+    <dimen name="picker_item_size_image_small">114.0dip</dimen>
+    <dimen name="picker_sticker_size">150.0dip</dimen>
+    <dimen name="post_attach_thumbs_height">720.0dip</dimen>
+    <dimen name="post_side_padding">24.0dip</dimen>
+    <dimen name="post_side_padding_btn">8.0dip</dimen>
+    <dimen name="post_side_padding_info">48.0dip</dimen>
+    <dimen name="post_side_padding_menu">12.0dip</dimen>
+    <dimen name="post_side_padding_negative">-24.0dip</dimen>
+    <dimen name="registration_login_max_width">320.0dip</dimen>
+    <dimen name="small_post_side_padding">20.0dip</dimen>
+    <dimen name="sticker_list_holder_height">258.0dip</dimen>
+    <dimen name="sticker_suggest_size">80.0dip</dimen>
+    <dimen name="stickers_tabs_padding">24.0dip</dimen>
+    <dimen name="widget_post_side_padding_medium">20.0dip</dimen>
+    <dimen name="widget_post_side_padding_small">16.0dip</dimen>
+    <dimen name="mask_list_item_size">86.0dip</dimen>
+</resources>

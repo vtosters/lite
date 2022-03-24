@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/bg_sharing_action_shadow" android:layout_width="@dimen/sharing_action_image_size" android:layout_height="@dimen/sharing_action_image_size" android:layout_marginTop="8.0dip" android:scaleType="center" android:tint="@color/cool_grey" android:contentDescription="@string/cd_share_action_icon" />
+    <TextView android:textSize="12.0dip" android:textColor="@color/dark_grey" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="@dimen/sharing_action_width" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="70.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="6.0dip" android:text="@string/sharing_action_button_label3" android:maxLines="2" android:includeFontPadding="false" />
+</merge>

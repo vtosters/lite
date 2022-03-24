@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.TintTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:drawableRight="@drawable/ic_spinner_arrow" android:drawablePadding="10.0dip" app:theme="?actionBarTheme" style="@style/ToolbarTitle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

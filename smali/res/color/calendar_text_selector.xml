@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_selected="true" android:color="@color/calendar_text_selected" />
+    <item android:state_pressed="true" android:color="@color/calendar_text_selected" />
+    <item android:color="@color/calendar_text_inactive" app:tsquare_state_current_month="false" />
+    <item android:color="@color/calendar_text_highlighted" app:tsquare_state_highlighted="true" />
+    <item android:color="@color/calendar_active_month_bg" app:tsquare_state_today="true" />
+    <item android:color="@color/calendar_text_unselectable" app:tsquare_state_selectable="false" />
+    <item android:color="@color/calendar_text_active" />
+</selector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/black_alpha60" />
+            <corners android:topRightRadius="6.0dip" android:bottomRightRadius="6.0dip" />
+            <size android:height="@dimen/video_catalog_album_small_content_item_height" android:width="40.0dip" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/ic_play_next_24" />
+    </item>
+</layer-list>

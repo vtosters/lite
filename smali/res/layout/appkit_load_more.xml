@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="76.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/load_more_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="22.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/load_more_error" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="76.0dip">
+        <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:layout_gravity="center_vertical" android:id="@id/error_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="?appkitDefaultErrorText" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/error_retry" android:background="?android:selectableItemBackground" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="?appkitRetryButtonText" android:textAllCaps="true" />
+    </LinearLayout>
+</FrameLayout>

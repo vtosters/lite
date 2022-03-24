@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.LinkedTextView android:textSize="15.0dip" android:textColor="@color/main_text" android:textColorHighlight="#802b587a" android:textColorLink="#ff2b587a" android:linksClickable="false" android:id="@id/post_view" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="@dimen/good_description_padding_bottom" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="@dimen/good_description_padding_bottom" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

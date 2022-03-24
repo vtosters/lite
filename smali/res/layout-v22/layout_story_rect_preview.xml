@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/iv_story_image" android:layout_width="fill_parent" android:layout_height="fill_parent" app:placeholderImage="@color/discover_stories_placeholder" app:placeholderImageScaleType="fitCenter" app:roundedCornerRadius="2.0dip" />
+    <View android:layout_gravity="bottom" android:id="@id/gradient" android:background="@drawable/scrim_bottom_opaque" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginBottom="2.0dip" />
+    <View android:layout_gravity="bottom" android:id="@id/gradient_corners" android:background="@drawable/bottom_corners_rect" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="left" android:layout_gravity="bottom" android:id="@id/tv_first_name" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:hyphenationFrequency="normal" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="left" android:layout_gravity="bottom" android:id="@id/tv_second_name" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:hyphenationFrequency="normal" />
+    <View android:id="@id/click_handler" android:background="@drawable/picker_white_ripple_bounded_2dp" android:layout_width="@dimen/story_card_rect_width" android:layout_height="fill_parent" />
+</merge>

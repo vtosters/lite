@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/mention_select_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.vk.core.ui.VkBottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/newsfeed_newpost_shade_shadow_height">
+        <android.support.v7.widget.RecyclerView android:id="@id/mention_select_recycler" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <View android:id="@id/mention_select_shadow" android:background="@drawable/bg_footer_posting" android:layout_width="fill_parent" android:layout_height="@dimen/newsfeed_newpost_shade_shadow_height" />
+</FrameLayout>

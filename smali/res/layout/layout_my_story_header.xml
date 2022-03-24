@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:gravity="start" android:id="@id/send_text" android:paddingTop="15.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/story_publication" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/story_upload_author_layout" android:background="@drawable/picker_white_ripple_bounded" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/author_photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/author_title" android:text="@string/my_story" style="@style/UserSmallTitle" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:ellipsize="marquee" android:id="@id/author_subtitle" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/my_story_desc" android:lineSpacingExtra="2.0dip" android:layout_marginEnd="16.0dip" />
+        </LinearLayout>
+        <CheckBox android:layout_gravity="top" android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_parent" android:background="@drawable/picker_white_ripple_bounded" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/parent_photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/parent_title" android:layout_toLeftOf="@id/check" style="@style/UserSmallTitle" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:ellipsize="marquee" android:id="@id/parent_subtitle" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:lineSpacingExtra="2.0dip" />
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatCheckBox android:enabled="false" android:layout_gravity="top" android:id="@id/parent_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:checked="true" app:buttonTint="@color/light_gray" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+    </LinearLayout>
+    <View android:id="@id/header_divider" android:background="#1e000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:gravity="start|center" android:id="@id/tv_send_with_message" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/send_with_message" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff909499" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="72.0dip" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginRight="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="?accent" android:gravity="center" android:layout_gravity="center|left" android:id="@id/writebar_cancel" android:background="@drawable/highlight_icon" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/cancel" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="16.0sp" android:textColor="#ffabafb3" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/writebar_slide_to_cancel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:text="@string/audio_message_slide_to_cancel" android:drawableLeft="@drawable/ic_audio_messages_chevron_left_24" />
+    <LinearLayout android:gravity="center|right" android:layout_gravity="right" android:orientation="horizontal" android:id="@id/writebar_duration_area" android:paddingRight="@dimen/voice_rec_duration_padding" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <View android:layout_gravity="center_vertical" android:id="@id/writebar_record_dot" android:background="@drawable/red_dot" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginTop="1.0dip" />
+        <TextView android:textSize="18.0sp" android:textColor="#ffabafb3" android:layout_gravity="center_vertical" android:id="@id/writebar_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:text="0:00" />
+    </LinearLayout>
+</FrameLayout>

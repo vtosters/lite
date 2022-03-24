@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/product_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:roundedCornerRadius="4.0dip" />
+    <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/product_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:lines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_medium" app:layout_constraintTop_toBottomOf="@id/product_image_view" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:ellipsize="end" android:id="@id/product_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:lines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintTop_toBottomOf="@id/product_title" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/liveSpectatorsViewersIcon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/ic_live_spectators" />
+    <TextView android:textSize="12.0dip" android:textColor="@color/white" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/liveSpectatorsViewers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginRight="8.0dip" android:text="222" android:maxLines="1" android:includeFontPadding="false" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:breakStrategy="simple" />
+</merge>

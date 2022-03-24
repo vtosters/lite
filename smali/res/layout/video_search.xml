@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vtosters.lite.ui.layout.ExpandableBarLayout android:id="@id/expandable" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <FrameLayout android:id="@id/appkit_loader_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/loading" layout="@layout/appkit_loading" />
+            <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
+            <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <com.vtosters.lite.ui.ForegroundRelativeLayout android:id="@id/search_bar" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="56.0dip" app:foreground="@drawable/highlight">
+            <TextView android:textSize="16.0dip" android:textColor="#ff6a6f75" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/extended_search_padding" android:text="@string/search_params" android:layout_toLeftOf="@id/search_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/search_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/extended_search_padding" android:src="@drawable/ic_search_params_expand" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </com.vtosters.lite.ui.ForegroundRelativeLayout>
+        <FrameLayout android:background="?tabbar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/video_search_ext_params" />
+        </FrameLayout>
+    </com.vtosters.lite.ui.layout.ExpandableBarLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/notification_root" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/cover" android:background="#80384554" android:layout_width="@android:dimen/notification_large_icon_width" android:layout_height="@android:dimen/notification_large_icon_height" android:src="@drawable/aplayer_cover_placeholder" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingTop="2.0dip" android:paddingRight="8.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Custom title" android:singleLine="true" />
+        <TextView android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" android:ellipsize="marquee" android:id="@id/content" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Content!!!!1one" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/playpause" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pause_24" android:scaleType="center" style="?android:borderlessButtonStyle" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/next" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_next_24" android:scaleType="center" style="?android:borderlessButtonStyle" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/stop" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_temp_close" android:scaleType="centerCrop" android:alpha="0.3" style="?android:borderlessButtonStyle" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <inset android:insetTop="17.0dip" android:insetBottom="17.0dip">
+            <shape>
+                <solid android:color="#1f000000" />
+                <size android:height="1.0dip" />
+                <corners android:topLeftRadius="0.6dip" android:topRightRadius="0.6dip" android:bottomLeftRadius="0.6dip" android:bottomRightRadius="0.6dip" />
+            </shape>
+        </inset>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <inset android:insetTop="17.0dip" android:insetBottom="17.0dip">
+                <shape>
+                    <solid android:color="#99000000" />
+                    <size android:height="1.0dip" />
+                    <corners android:topLeftRadius="0.6dip" android:topRightRadius="0.6dip" android:bottomLeftRadius="0.6dip" android:bottomRightRadius="0.6dip" />
+                </shape>
+            </inset>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <inset android:insetTop="16.0dip" android:insetBottom="16.0dip">
+                <shape>
+                    <solid android:color="#ff000000" />
+                    <corners android:topLeftRadius="1.5999756dip" android:topRightRadius="1.5999756dip" android:bottomLeftRadius="1.5999756dip" android:bottomRightRadius="1.5999756dip" />
+                    <size android:height="3.0dip" />
+                </shape>
+            </inset>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_alignParentTop="true" />
+    <RelativeLayout android:background="?tabbar_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="8.0dip">
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/positive_button" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginBottom="12.0dip" android:text="@string/done" android:maxLines="1" android:layout_alignParentBottom="true" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" style="@style/BlueButton" />
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/negative_button" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginBottom="12.0dip" android:text="@string/cancel" android:maxLines="1" android:layout_alignParentBottom="true" android:layout_marginEnd="8.0dip" android:layout_toStartOf="@id/positive_button" style="@style/MaterialTransparentButton" />
+    </RelativeLayout>
+</merge>

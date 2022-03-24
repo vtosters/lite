@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_image" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="4.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="15.0sp" android:textColor="@color/muted_black" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/subhead_gray" android:id="@id/tv_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_close" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close_small" android:scaleType="centerInside" android:tint="@color/light_blue_gray" />
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?selectableItemBackground" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/app_image" android:layout_width="94.0dip" android:layout_height="94.0dip" app:placeholderImage="@drawable/placeholder_game_112" app:roundedCornerRadius="18.0dip" />
+    <TextView android:textSize="12.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@id/app_badge" android:background="@drawable/app_item_badge" android:layout_width="@dimen/app_item_badge" android:layout_height="@dimen/app_item_badge" android:text="NEW" android:layout_alignTop="@id/app_image" android:fontFamily="@string/font_family_medium" android:layout_alignEnd="@id/app_image" />
+    <TextView android:gravity="top" android:id="@id/app_name" android:paddingTop="7.0dip" android:layout_width="94.0dip" android:layout_height="wrap_content" android:minHeight="64.0dip" android:maxLines="2" android:lines="2" android:layout_below="@id/app_image" android:fontFamily="@string/font_family_regular" style="@style/GameText.Title" />
+</RelativeLayout>

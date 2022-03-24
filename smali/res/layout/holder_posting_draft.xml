@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/posting_draft_layout" android:background="?content_tint_background" android:layout_width="fill_parent" android:layout_height="64.0dip" android:foreground="@drawable/highlight_post"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/newsfeed_draft_title" android:singleLine="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="56.0dip" />
+    <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/newsfeed_draft_subtitle" android:singleLine="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="56.0dip" />
+    <android.support.v7.widget.AppCompatImageView android:layout_gravity="end|center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_write_24" android:scaleType="center" android:tint="?icon_secondary" android:layout_marginEnd="4.0dip" />
+</FrameLayout>

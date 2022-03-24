@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.profile.ui.cover.LiveCoverRatioLayout android:layout_width="fill_parent" android:layout_height="400.0dip" android:layout_marginBottom="8.0dip">
+        <com.vk.profile.ui.cover.CoverViewPager android:id="@id/cover" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/info_content_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="bottom" android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.vk.common.view.TextViewEllipsizeEnd android:textSize="20.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/profile_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/white_alpha60" android:ellipsize="marquee" android:id="@id/profile_last_seen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff8c8d8f" android:ellipsize="marquee" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" />
+                </LinearLayout>
+                <com.vk.imageloader.view.VKCircleImageView android:id="@id/profile_photo" android:layout_width="88.0dip" android:layout_height="88.0dip" android:layout_marginTop="16.0dip" android:layout_marginEnd="16.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/profile_buttons_wrap" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="8.0dip">
+                <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/profile_btn1" android:layout_width="0.0dip" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" style="@style/VKUIButton.Outline.White" />
+                <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/profile_btn2" android:layout_width="0.0dip" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" style="@style/VKUIButton.White" />
+                <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/profile_btn3" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" style="@style/secondary_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.vk.profile.ui.cover.LiveCoverRatioLayout>
+</merge>

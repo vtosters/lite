@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="bottom" android:background="#b8000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.im.ui.views.avatars.AvatarView android:layout_gravity="center_vertical" android:id="@id/vkim_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="12.0dip" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/vkim_name_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="52.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/vkim_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:fontFamily="@string/fontRobotoMedium" />
+            <TextView android:textSize="12.0sp" android:textColor="#a3ffffff" android:ellipsize="end" android:id="@id/vkim_date" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:fontFamily="@string/fontRobotoMedium" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="end|center" android:id="@id/vkim_share_btn" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_share_outline_24" android:layout_marginEnd="4.0dip" />
+    </FrameLayout>
+</FrameLayout>

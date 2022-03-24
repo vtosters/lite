@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="24.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0dip" android:textColor="?text_primary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Album Title" />
+    <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Over 9000 photos" />
+    <com.vtosters.lite.ui.LinkedTextView android:textSize="14.0dip" android:textColor="@color/gray" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Description" />
+</LinearLayout>

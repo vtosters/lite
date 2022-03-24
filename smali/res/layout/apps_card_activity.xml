@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.widget.SlidingUpPanelLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/closable_sliding_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:SUPBgAll="@bool/game_page_bgAll" app:SUPOverlay="true" app:SUPPanelHeight="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:paddingTop="?android:actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.vtosters.lite.ui.widget.GameCardPager android:id="@id/pager" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:maxItemWidth="@dimen/game_page_maxWidth" app:minPadding="@dimen/game_page_minPadding" app:pgMargin="@dimen/game_page_pgMargin" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/header_block" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:alpha="0.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/apps_card_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:actionBarSize">
+            <TextView android:textSize="16.0dip" android:textColor="@android:color/white" android:id="@id/page_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_game" android:fontFamily="@string/font_family_medium" />
+            <com.vtosters.lite.ui.widget.PageIndicator android:id="@id/game_page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+        </LinearLayout>
+        <ImageButton android:background="@drawable/highlight" android:layout_width="?android:actionBarSize" android:layout_height="?android:actionBarSize" android:src="@drawable/ic_temp_close" android:onClick="finish" />
+        <ImageButton android:layout_gravity="right" android:id="@id/open_action_menu" android:background="@drawable/highlight" android:visibility="gone" android:layout_width="?android:actionBarSize" android:layout_height="?android:actionBarSize" android:src="@drawable/ic_games_actions" android:onClick="openActionMenu" />
+    </FrameLayout>
+</com.vtosters.lite.ui.widget.SlidingUpPanelLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/video_content_wrap" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:layout_gravity="center" android:id="@id/video_display" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vtosters.lite.ui.CircularProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="70.0dip" android:layout_height="70.0dip" />
+</FrameLayout>

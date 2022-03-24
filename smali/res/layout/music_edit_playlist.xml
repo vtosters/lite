@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" style="@style/Toolbar">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/close_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/picker_ic_close_24" style="@style/ActionButton.White" />
+        <TextView android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="64.0dip" android:layout_marginRight="16.0dip" android:text="@string/music_title_new_playlist" style="@style/title_text" />
+    </FrameLayout>
+    <ViewAnimator android:id="@id/content_animator" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyle" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:id="@id/list" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:layout_gravity="bottom" android:id="@id/save_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/music_save_button_label" android:fontFamily="@string/font_family_medium" style="@style/Button" />
+        </LinearLayout>
+    </ViewAnimator>
+</merge>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/sett_app" android:key="app">
+        <com.vtosters.lite.ui.SummaryListPreference android:textColor="?text_secondary" android:entries="@array/sett_friends_order" android:title="@string/sett_flist_sort" android:key="friendsOrderNew" android:defaultValue="firstname" android:dialogTitle="@string/sett_flist_sort" android:entryValues="@array/sett_friends_order_v" />
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/sett_font_size_options" android:title="@string/sett_font_size" android:key="fontSize" android:defaultValue="0" android:dialogTitle="@string/sett_font_size" android:entryValues="@array/sett_font_size_values" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_send_by_enter" android:key="sendByEnter" android:summary="@string/sett_send_by_enter_summary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_chrome_custom_tabs" android:key="useChromeCustomTabs" android:summary="@string/sett_chrome_custom_tabs_summary" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sett_media" android:key="multimedia">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_compress_photos" android:key="compressPhotos" android:defaultValue="true" app:singleLine="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_compress_videos" android:key="compressVideos" android:defaultValue="true" app:singleLine="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_save_processed_image" android:key="saveProcessedImage" android:defaultValue="true" app:singleLine="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_show_music_suggestion_notification" android:key="showMusicSuggestNotification" android:defaultValue="true" app:singleLine="false" />
+        <ListPreference android:entries="@array/sett_gif_autoplay_entries" android:title="@string/sett_gif_autoplay_title" android:key="gif_autoplay" android:summary="%s" android:defaultValue="always" android:entryValues="@array/sett_gif_autoplay_entry_values" />
+        <ListPreference android:entries="@array/sett_gif_autoplay_entries" android:title="@string/sett_video_autoplay_title" android:key="video_autoplay" android:summary="%s" android:defaultValue="always" android:entryValues="@array/sett_gif_autoplay_entry_values" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sett_cache" android:key="cache">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_enable_audio_cache" android:key="enableAudioCache" android:defaultValue="true" />
+        <com.vtosters.lite.ui.SummaryListPreference android:title="@string/sett_cache_location" android:key="audioCacheLocation" android:defaultValue="" android:dialogTitle="@string/sett_cache_location" />
+        <Preference android:title="@string/cache_my_music" android:key="downloadAudio" />
+        <Preference android:title="@string/sett_clear_audio_cache" android:key="clearAudioCache" android:summary="" />
+        <Preference android:title="@string/sett_clear_img_cache" android:key="clearImageCache" android:summary="" />
+        <Preference android:title="@string/sett_clear_messages_cache" android:key="clearMessagesCache" android:summary="" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+</PreferenceScreen>

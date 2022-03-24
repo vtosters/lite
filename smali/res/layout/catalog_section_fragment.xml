@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.lists.RecyclerPaginatedView android:id="@id/paginated_list" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:enableItemAnimations="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

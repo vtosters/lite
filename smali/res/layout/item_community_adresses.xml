@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxLines="2" android:fontFamily="sans-serif-medium" style="@style/VKUIText.Title2" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+        <TextView android:textColor="?text_primary" android:id="@id/address" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/VKUIText.New.Caption1" />
+        <TextView android:textColor="@color/subhead_gray" android:id="@id/distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" style="@style/VKUIText.New.Caption1" />
+    </LinearLayout>
+    <TextView android:textColor="?text_primary" android:id="@id/metro" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:lineSpacingExtra="3.0sp" style="@style/VKUIText.New.Caption1" />
+    <TextView android:textColor="@color/subhead_gray" android:id="@id/work_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" style="@style/VKUIText.New.Caption1" />
+</LinearLayout>

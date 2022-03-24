@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.ui.RecursiveSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content_wrap" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:paddingBottom="48.0dip" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:id="@id/empty" android:paddingBottom="48.0dip" layout="@layout/appkit_empty" />
+        </FrameLayout>
+        <com.vtosters.lite.ui.WriteBar android:id="@id/commentBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <include android:id="@id/writeButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/good_write_button_holder" />
+        <View android:id="@id/writeButtonShadow" android:background="@drawable/bottom_shadow_comments" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_above="@id/writeButton" />
+        <View android:id="@id/commentBarShadow" android:background="@drawable/bottom_shadow_comments" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_above="@id/commentBar" />
+    </RelativeLayout>
+</com.vk.core.ui.RecursiveSwipeRefreshLayout>

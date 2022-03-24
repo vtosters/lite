@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/counter_container" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:minWidth="@dimen/bottom_navigation_counter_height_outer" android:minHeight="@dimen/bottom_navigation_counter_height_outer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_horizontal" android:id="@id/dot" android:background="@drawable/bottom_navigation_dot_corner" android:layout_width="@dimen/bottom_navigation_dot_height" android:layout_height="@dimen/bottom_navigation_dot_height" />
+    <TextView android:textSize="12.0dip" android:textColor="#fffafafa" android:gravity="center" android:layout_gravity="center" android:id="@id/counter" android:background="@drawable/bottom_navigation_counter_bg" android:paddingLeft="@dimen/bottom_navigation_counter_padding" android:paddingRight="@dimen/bottom_navigation_counter_padding" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:minWidth="@dimen/bottom_navigation_counter_height_outer" android:minHeight="@dimen/bottom_navigation_counter_height_outer" android:text="56" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/vkim_ic_msg_reply" android:id="@id/action_reply" android:title="@string/vkim_msg_action_reply" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" />
+    <item android:icon="@drawable/vkim_ic_msg_delete" android:id="@id/action_delete" android:title="@string/vkim_msg_action_delete" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" />
+    <item android:icon="@drawable/vkim_ic_msg_forward" android:id="@id/action_forward" android:title="@string/vkim_msg_action_forward" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" />
+    <item android:icon="@drawable/vkim_ic_msg_copy" android:id="@id/action_copy" android:title="@string/vkim_msg_action_copy" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" />
+    <item android:icon="@drawable/vkim_ic_msg_spam_24dp" android:id="@id/action_spam" android:title="@string/vkim_msg_action_spam" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" />
+</menu>

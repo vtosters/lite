@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="176.0sp" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/bg_contacts_permissions_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vk.im.ui.views.avatars.StackAvatarView android:layout_gravity="center_horizontal" android:id="@id/vkim_avatars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" app:vkim_drawingOrder="usual" app:vkim_extraColor="?im_app_icon_secondary" app:vkim_iconOffset="-8.0dip" app:vkim_iconSize="32.0dip" app:vkim_strokeColor="?background_content" app:vkim_strokeWidth="2.0dip" app:vkim_useExtraView="true" />
+    <TextView android:textSize="14.0sp" android:textColor="?im_item_foreground_caption" android:gravity="center" android:id="@id/vkim_new_users_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="68.0dip" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:background="@drawable/bg_contacts_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="?im_accent_dark" android:gravity="center" android:id="@id/vkim_content" android:layout_width="wrap_content" android:layout_height="36.0sp" android:fontFamily="@string/fontRobotoMedium" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end" android:id="@id/vkim_close_btn" android:padding="12.0dip" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/ic_cancel_20" android:tint="?im_app_icon_secondary" android:layout_marginEnd="0.0dip" />
+</FrameLayout>

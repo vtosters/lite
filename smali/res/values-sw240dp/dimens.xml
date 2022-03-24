@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vkim_dialogs_title_text_size">22.0dip</dimen>
+    <dimen name="vkim_header_title_max_width">40.0dip</dimen>
+    <dimen name="vkim_article_blocked_bottom_margin">32.0dip</dimen>
+    <dimen name="vkim_article_blocked_ic_margin">32.0dip</dimen>
+    <dimen name="vkim_article_blocked_ic_size">64.0dip</dimen>
+    <dimen name="vkim_article_blocked_title_margin">104.0dip</dimen>
+    <dimen name="vkim_article_blocked_title_side_margin">16.0dip</dimen>
+    <dimen name="vkim_article_blocked_title_size">14.0sp</dimen>
+</resources>

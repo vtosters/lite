@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.common.view.disableable.DisableableFrameLayout android:id="@id/load_more_comments" android:background="@drawable/highlight" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="36.0dip" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/arrow" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_down_16" android:scaleType="center" android:tint="?button_secondary_foreground" android:alpha="0.4" android:layout_marginStart="48.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="?button_secondary_foreground" android:layout_gravity="center_vertical" android:id="@id/loadmore_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/comments_show_next" android:fontFamily="@string/font_family_medium" android:layout_marginStart="82.0dip" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/loadmore_progress" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginBottom="1.0dip" />
+</com.vk.common.view.disableable.DisableableFrameLayout>

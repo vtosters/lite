@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/map_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+    <include layout="@layout/toolbar" />
+    <FrameLayout android:id="@id/recycler_frame" android:background="@drawable/bg_modern_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="-4.0dip">
+        <android.support.v7.widget.RecyclerView android:id="@id/addresses_recycler" android:paddingTop="8.0dip" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/list_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/hide_icon" android:background="@drawable/highlight_circle" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginStart="4.0dip" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/muted_black_old" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/all_addresses" android:fontFamily="sans-serif-medium" android:layout_marginStart="72.0dip" />
+            </FrameLayout>
+            <View android:background="@drawable/bg_bottom_shadow" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+    </FrameLayout>
+    <com.vk.profile.ui.community.adresses.FullAddressView android:id="@id/full_address" android:background="@drawable/bg_modern_list" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/community_address_full" />
+    <com.vk.lists.DefaultErrorView android:id="@id/error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</android.support.design.widget.CoordinatorLayout>

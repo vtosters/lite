@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewAnimator android:id="@id/content_animator" android:paddingTop="?actionBarSize" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/music_page" />
+    </ViewAnimator>
+    <LinearLayout android:orientation="horizontal" android:background="?accent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" style="@style/Toolbar">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_24" android:contentDescription="@string/music_talkback_go_back" android:layout_marginStart="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ActionButton.White" />
+        <android.support.constraint.ConstraintLayout android:id="@id/toolbar_header" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="12.0dip" android:layout_marginEnd="40.0dip">
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/user_logo" android:layout_width="40.0dip" android:layout_height="40.0dip" app:backgroundImage="@color/music_placeholder_bg" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/placeholder_user_40" />
+            <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@string/font_family_medium" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toTopOf="@id/subtitle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/user_logo" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
+            <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/subtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@string/font_family_medium" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/user_logo" app:layout_constraintTop_toBottomOf="@id/title" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</FrameLayout>

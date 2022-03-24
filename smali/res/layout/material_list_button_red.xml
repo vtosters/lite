@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@id/logout" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:text="@string/log_out" style="@style/MaterialListButtonRed"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

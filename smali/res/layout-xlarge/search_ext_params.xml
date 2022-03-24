@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/search_extended" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="32.0dip" android:paddingTop="8.0dip" android:paddingRight="32.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_weight="1.0">
+            <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="#ff6a6f75" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/region" app:typeface="Medium" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <Spinner android:gravity="center|left" android:id="@id/country_spinner" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:layout_weight="1.0" style="@style/Widget.AppCompat.Spinner" />
+                <Button android:enabled="false" android:textSize="16.0dip" android:gravity="center|left" android:id="@id/city_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:text="@string/edit_choose_city" android:singleLine="true" android:layout_weight="1.0" style="@style/Widget.AppCompat.Spinner" />
+            </LinearLayout>
+            <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="#ff6a6f75" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:text="@string/age" app:typeface="Medium" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <Spinner android:gravity="center|left" android:id="@id/age_from" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:minWidth="40.0dip" style="@style/Widget.AppCompat.Spinner" />
+                <View android:layout_gravity="center_vertical" android:background="#ff909499" android:layout_width="10.0dip" android:layout_height="1.0dip" android:layout_marginRight="8.0dip" />
+                <Spinner android:gravity="center|left" android:id="@id/age_to" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="40.0dip" style="@style/Widget.AppCompat.Spinner" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+            <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="#ff6a6f75" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/gender" app:typeface="Medium" />
+            <RadioGroup android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <RadioButton android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/gender_any" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:checked="true" android:text="@string/gender_any" android:singleLine="true" style="@style/Widget.AppCompat.CompoundButton.RadioButton" />
+                <RadioButton android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/gender_male" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:text="@string/signup_male" android:singleLine="true" style="@style/Widget.AppCompat.CompoundButton.RadioButton" />
+                <RadioButton android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/gender_female" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/signup_female" android:singleLine="true" style="@style/Widget.AppCompat.CompoundButton.RadioButton" />
+            </RadioGroup>
+            <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="#ff6a6f75" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:text="@string/profile_relation" app:typeface="Medium" />
+            <Spinner android:gravity="center|left" android:id="@id/relation_spinner" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_weight="1.0" style="@style/Widget.AppCompat.Spinner" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

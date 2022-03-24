@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="emoji_size_in_sprite">48</integer>
+    <integer name="s1dip">1</integer>
+    <integer name="s2dip">3</integer>
+</resources>

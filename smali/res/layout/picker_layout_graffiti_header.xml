@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="76.0dip">
+        <com.vk.attachpicker.widget.MaxWidthFrameLayout android:layout_gravity="center" android:id="@id/fl_new_graffiti" android:background="@drawable/picker_btn_blue_round" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="16.0dip">
+            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="44.0dip">
+                <View android:layout_gravity="center_vertical" android:background="@drawable/picker_ic_add_16" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="8.0dip" />
+                <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/picker_new_graffiti" android:fontFamily="@string/font_family_medium" />
+            </LinearLayout>
+        </com.vk.attachpicker.widget.MaxWidthFrameLayout>
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:textColor="#ff909499" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="72.0dip" android:text="@string/picker_graffiti_history_desc" />
+</LinearLayout>

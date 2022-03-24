@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SurfaceView android:id="@id/voip_camera_surface" android:layout_width="1.0px" android:layout_height="1.0px" />
+    <com.vk.imageloader.view.VKImageView android:id="@id/iv_peer_big_blurred_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/fl_render_container_big" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/big_touch_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="center|top" android:id="@id/fl_peer_photo_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <com.vk.imageloader.view.VKCircleImageView android:id="@id/iv_peer_photo_minimized" android:background="@drawable/ic_user_260" android:layout_width="56.0dip" android:layout_height="56.0dip" />
+            <ImageView android:background="@drawable/black_round_overlay" android:layout_width="56.0dip" android:layout_height="56.0dip" />
+            <ImageView android:layout_gravity="bottom|center|right" android:id="@id/iv_audio_call" android:background="@drawable/gray_oval" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_audio_call_16" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="center" android:id="@id/fl_peer_photo" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:layout_gravity="center" android:id="@id/peer_photo_bg_circle_one" android:background="@drawable/white_oval" android:layout_width="260.0dip" android:layout_height="260.0dip" android:alpha="0.2" />
+            <View android:layout_gravity="center" android:id="@id/peer_photo_bg_circle_two" android:background="@drawable/white_oval" android:layout_width="260.0dip" android:layout_height="260.0dip" android:alpha="0.2" />
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center" android:id="@id/iv_peer_photo" android:background="@drawable/ic_user_260" android:layout_width="260.0dip" android:layout_height="260.0dip" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="right" android:id="@id/fl_render_container_thumb" android:layout_width="72.0dip" android:layout_height="108.0dip" android:layout_marginTop="80.0dip" android:layout_marginRight="16.0dip">
+            <ImageView android:id="@id/iv_thumb_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/iv_thumb_preview_flip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ImageView android:layout_gravity="bottom|center" android:id="@id/iv_switch_camera" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_switch_camera_36" />
+            <View android:id="@id/thumb_touch_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_scrims" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:layout_gravity="top" android:id="@id/scrim_top" android:background="@drawable/scrim_top" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.3" android:alpha="0.64" />
+            <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.3" />
+            <View android:layout_gravity="bottom" android:id="@id/scrim_bottom" android:background="@drawable/scrim_bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.3" android:alpha="0.48" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/masks_wrap_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/screen_overlay" android:background="#19000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="bottom|center" android:id="@id/fl_mask_container" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="126.0dip">
+            <ImageView android:id="@id/btn_masks" android:background="@drawable/voip_button_shield" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="center" app:srcCompat="@drawable/ic_smile_calls_24" />
+            <View android:layout_gravity="center|right|top" android:id="@id/view_new_masks_badge" android:background="@drawable/bg_masks_new_badge" android:visibility="gone" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_margin="9.0dip" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/fl_controls" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/fl_top_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip">
+                    <ImageView android:layout_gravity="center|top" android:id="@id/iv_vk_logo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:src="@drawable/ic_logo_48" />
+                    <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:ellipsize="middle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_peer_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:maxLines="2" android:shadowColor="#1e000000" android:shadowRadius="12.0" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:shadowColor="#1e000000" android:shadowRadius="12.0" android:alpha="0.8" />
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_recording_timer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip">
+                        <View android:layout_gravity="center" android:id="@id/recording_dot" android:background="@drawable/recording_oval" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="6.0dip" />
+                        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_recording_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#1e000000" android:shadowRadius="12.0" android:alpha="0.8" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_shield" android:background="@drawable/voip_button_shield" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/ic_shield_24" android:scaleType="center" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="right" android:id="@id/btn_cam" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="8.0dip" app:srcCompat="@drawable/ic_cam_48" />
+                <ImageView android:id="@id/btn_back" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/ic_picture_in_picture_48" android:scaleType="center" />
+            </FrameLayout>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/ll_bottom_buttons" android:layout_width="wrap_content" android:layout_height="86.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:id="@id/btn_loudspeaker" android:visibility="visible" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_margin="8.0dip" android:scaleType="center" app:srcCompat="@drawable/ic_sound_36" />
+                <ImageButton android:id="@id/btn_decline_ongoing" android:background="@drawable/voip_button_decline" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginLeft="46.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="46.0dip" android:layout_marginBottom="6.0dip" app:srcCompat="@drawable/ic_reject_call_44" />
+                <ImageView android:id="@id/btn_disable_mic" android:visibility="visible" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_margin="8.0dip" android:scaleType="center" app:srcCompat="@drawable/ic_voice_36" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.vk.attachpicker.widget.MaxWidthFrameLayout android:layout_gravity="bottom|center" android:id="@id/fl_answer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="144.0dip">
+            <FrameLayout android:id="@id/fl_answer_audio" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.vk.voip.VoipTextButton android:id="@id/btn_accept_audio" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_accept" app:btnLabelText="@string/voip_accept" app:iconSrc="@drawable/ic_phone_36" />
+                <com.vk.voip.VoipTextButton android:layout_gravity="right" android:id="@id/btn_decline_call" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_decline" app:btnLabelText="@string/voip_decline" app:iconSrc="@drawable/ic_cancel_36" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/fl_answer_video" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.vk.voip.VoipTextButton android:id="@id/btn_accept_video_call" android:layout_width="120.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_accept" app:btnLabelText="@string/voip_reply_with_video" app:iconSrc="@drawable/ic_videocam_36" />
+                <com.vk.voip.VoipTextButton android:layout_gravity="center_horizontal" android:id="@id/btn_accept_audio_call" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" app:background="@drawable/voip_button_cancel" app:btnLabelText="@string/voip_reply_with_audio" app:btnSmall="true" app:iconSrc="@drawable/ic_phone_32" />
+                <com.vk.voip.VoipTextButton android:layout_gravity="right" android:id="@id/btn_decline_video_call" android:layout_width="120.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_decline" app:btnLabelText="@string/voip_decline_call" app:iconSrc="@drawable/ic_cancel_36" />
+            </FrameLayout>
+        </com.vk.attachpicker.widget.MaxWidthFrameLayout>
+        <com.vk.attachpicker.widget.MaxWidthFrameLayout android:layout_gravity="bottom|center" android:id="@id/fl_video_request_actions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="144.0dip">
+            <com.vk.voip.VoipTextButton android:id="@id/btn_accept_video_request" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_accept" app:btnLabelText="@string/voip_turn_cam_on" app:iconSrc="@drawable/ic_videocam_36" />
+            <com.vk.voip.VoipTextButton android:layout_gravity="right" android:id="@id/btn_decline_video_request" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_cancel" app:btnLabelText="@string/voip_keep_cam_off" app:iconSrc="@drawable/ic_cancel_36" />
+        </com.vk.attachpicker.widget.MaxWidthFrameLayout>
+        <com.vk.attachpicker.widget.MaxWidthFrameLayout android:layout_gravity="bottom|center" android:id="@id/fl_message_recording_actinos" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="144.0dip">
+            <com.vk.voip.VoipTextButton android:id="@id/btn_send_audio_message" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_send" app:btnLabelText="@string/voip_send_audio_message" app:iconSrc="@drawable/ic_send_36" app:inactiveBackground="@drawable/voip_button_cancel" />
+            <com.vk.voip.VoipTextButton android:layout_gravity="right" android:id="@id/btn_cancel_recording" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_cancel" app:btnLabelText="@string/voip_cancel_audio_message" app:iconSrc="@drawable/ic_cancel_36" />
+        </com.vk.attachpicker.widget.MaxWidthFrameLayout>
+        <com.vk.attachpicker.widget.MaxWidthFrameLayout android:layout_gravity="bottom|center" android:id="@id/fl_callback_actions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="144.0dip">
+            <com.vk.voip.VoipTextButton android:id="@id/btn_callback" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_accept" app:btnLabelText="@string/voip_recall" app:iconSrc="@drawable/ic_phone_36" />
+            <com.vk.voip.VoipTextButton android:id="@id/btn_callback_video" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_accept" app:btnLabelText="@string/voip_recall" app:iconSrc="@drawable/ic_videocam_36" />
+            <com.vk.voip.VoipTextButton android:layout_gravity="right" android:id="@id/btn_cancel" android:layout_width="152.0dip" android:layout_height="wrap_content" app:background="@drawable/voip_button_cancel" app:btnLabelText="@string/voip_close" app:iconSrc="@drawable/ic_cancel_call_back_36" />
+        </com.vk.attachpicker.widget.MaxWidthFrameLayout>
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:layout_gravity="bottom|center" android:id="@id/tv_peer_name_minimized" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="23.0dip" android:singleLine="true" android:shadowColor="#3d000000" android:shadowRadius="12.0" android:fontFamily="sans-serif" />
+        <TextView android:textSize="11.0sp" android:textStyle="normal" android:textColor="#ffffffff" android:ellipsize="middle" android:layout_gravity="bottom|center" android:id="@id/tv_subtitle_minimized" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="9.0dip" android:singleLine="true" android:shadowColor="#3d000000" android:shadowRadius="12.0" android:lineSpacingExtra="3.0sp" android:alpha="0.8" android:fontFamily="sans-serif-medium" />
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/iv_progress_minimized" android:layout_width="30.0dip" android:layout_height="10.0dip" android:layout_marginBottom="9.0dip" />
+        <ImageView android:layout_gravity="bottom|center|left" android:id="@id/iv_fullscreen_minimized" android:background="@drawable/highlight_circle_white" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_full_screen_48" android:scaleType="center" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/iv_drop_call_minimized" android:background="@drawable/highlight_circle_white" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_reject_call_48" android:scaleType="center" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_notification" android:background="@drawable/voip_notification_bg" android:paddingLeft="20.0dip" android:paddingTop="11.0dip" android:paddingRight="20.0dip" android:paddingBottom="12.0dip" android:layout_width="214.0dip" android:layout_height="wrap_content" android:lineSpacingExtra="1.0dip" />
+    </FrameLayout>
+</merge>

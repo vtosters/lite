@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?tabbar_background" />
+            <corners android:radius="4.0dip" />
+            <stroke android:width="0.5dip" android:color="#2e000000" />
+        </shape>
+    </item>
+</layer-list>

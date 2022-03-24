@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.widget.Space android:id="@id/space" android:layout_width="12.0dip" android:layout_height="0.0dip" />
+    <TextView android:textSize="12.0dip" android:textColor="#ccffffff" android:gravity="end" android:id="@id/time1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.5dip" android:maxLines="1" />
+    <android.support.v7.widget.AppCompatSeekBar android:id="@id/seek_bar" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxHeight="3.0dip" android:progressDrawable="@drawable/progress_video" android:minHeight="3.0dip" android:thumb="@drawable/ic_video_progress_thumb_24" android:layout_weight="1.0" />
+    <TextView android:textSize="12.0dip" android:textColor="#ccffffff" android:gravity="start" android:id="@id/time2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.5dip" android:maxLines="1" />
+    <android.support.v7.widget.AppCompatImageView android:id="@id/settings" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_settings_24" android:scaleType="center" android:layout_marginStart="2.0dip" />
+    <android.support.v7.widget.AppCompatImageView android:id="@id/resize" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_video_fill_24" android:scaleType="center" />
+    <android.support.v7.widget.AppCompatImageView android:id="@id/fullscreen" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_fullscreen_24" android:scaleType="center" />
+</merge>

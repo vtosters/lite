@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/appkit_toolbar" />
+    <android.support.design.widget.CoordinatorLayout android:id="@id/appkit_loader_content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/loading" layout="@layout/appkit_loading" />
+        <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
+        <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/ic_ab_write" app:layout_behavior="com.vtosters.lite.ui.widget.ScrollAwareFABBehavior" />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
