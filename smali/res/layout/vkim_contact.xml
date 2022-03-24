@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.vk.im.ui.components.contact.vc.UserProfileView android:id="@id/im_user_profile" android:background="@drawable/vkim_bg_contact_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:vkim_collapse_avatarMarginTop="8.0dip" app:vkim_collapse_avatarSize="40.0dip" app:vkim_collapse_nameMarginTop="7.0dip" app:vkim_collapse_nameTextSize="16.0sp" app:vkim_collapse_statusTextSize="13.0sp" app:vkim_expand_avatarMarginTop="34.0dip" app:vkim_expand_avatarSize="96.0dip" app:vkim_expand_nameMarginTop="11.0dip" app:vkim_expand_nameTextSize="20.0sp" app:vkim_expand_statusTextSize="15.0sp" />
+            <LinearLayout android:orientation="vertical" android:id="@id/im_phone_number_container" android:background="@drawable/vkim_ripple_dark" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/vkim_contact_phone" style="@style/VkIm.Contact.ItemHeader" />
+                <TextView android:textColor="?im_accent" android:id="@id/im_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VkIm.Contact.Item" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/im_page_link_container" android:background="@drawable/vkim_ripple_dark" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/vkim_contact_page" style="@style/VkIm.Contact.ItemHeader" />
+                <TextView android:textColor="?im_accent" android:id="@id/im_page_link" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VkIm.Contact.Item" />
+            </LinearLayout>
+            <View android:id="@id/im_info_divider" android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" />
+            <TextView android:textColor="?im_accent" android:id="@id/im_share_contact" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_contact_share_contact" style="@style/VkIm.Contact.Item.Clickable" />
+            <View android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="?text_primary" android:background="@drawable/vkim_ripple_light" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/vkim_contact_notifications" android:layout_weight="1.0" style="@style/VkIm.Contact.Item" />
+                <Switch android:id="@id/im_notification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_marginEnd="16.0dip" />
+            </LinearLayout>
+            <TextView android:textColor="?text_primary" android:id="@id/im_show_attaches" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_contact_show_attachments" style="@style/VkIm.Contact.Item.Clickable" />
+            <View android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" />
+            <TextView android:textColor="?destructive" android:id="@id/im_clear_history" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_contact_clear_history" style="@style/VkIm.Contact.Item.Clickable" />
+            <TextView android:textColor="?destructive" android:id="@id/im_block" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_contact_block_user" style="@style/VkIm.Contact.Item.Clickable" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/im_back" android:background="@drawable/vkim_ripple_dark_borderless" android:padding="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/vkim_ic_back_24" android:tint="?accent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/im_edit" android:background="@drawable/vkim_ripple_dark_borderless" android:padding="12.0dip" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_edit_28" android:tint="?accent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/im_progress_container" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?im_accent" app:matProg_progressIndeterminate="true" />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

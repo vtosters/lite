@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatImageView android:layout_gravity="end|center" android:id="@id/attachpicker_holder_check_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_done_24" android:tint="?accent" android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

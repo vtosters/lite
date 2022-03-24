@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item android:icon="?im_ic_voip_call" android:id="@id/call" android:visible="false" android:title="@string/vkim_msg_header_menu_call" app:iconTint="?header_tint" app:showAsAction="always" />
+        <item android:icon="?im_ic_voip_call_video" android:id="@id/call_video" android:visible="false" android:title="@string/vkim_msg_header_menu_call" app:iconTint="?header_tint" app:showAsAction="always" />
+        <item android:icon="@drawable/vkim_ic_more_vertical_24" android:id="@id/more" android:visible="false" android:title="@string/vkim_toolbar_more_options" app:iconTint="?header_tint" app:showAsAction="always" />
+    </group>
+</menu>

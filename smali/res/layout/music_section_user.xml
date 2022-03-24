@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/music_selectable_bg" android:layout_width="74.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@android:id/icon" android:layout_width="66.0dip" android:layout_height="66.0dip" app:backgroundImage="@color/music_placeholder_bg" app:placeholderImage="@drawable/placeholder_user_large" />
+    <TextView android:textSize="12.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="2" style="@style/TextStyle.ListItem" />
+</LinearLayout>

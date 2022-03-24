@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="?dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0dip" android:id="@id/add_friend_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_friend_explain_f" />
+    <EditText android:id="@id/add_friend_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/add_friend_msg" android:ems="10">
+        <requestFocus />
+    </EditText>
+</LinearLayout>

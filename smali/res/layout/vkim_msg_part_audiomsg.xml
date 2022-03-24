@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="4.0dip" android:paddingTop="6.0dip" android:paddingRight="4.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/vkim_accessibility_audiomsg"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <com.vk.im.ui.views.WaveFormView android:id="@id/waveform" android:layout_width="fill_parent" android:layout_height="26.0dip" android:layout_marginLeft="52.0dip" app:vkim_amplifyThreshold="0.5" app:vkim_barWidth="2.0dip" app:vkim_indeterminate="false" app:vkim_primaryColor="?accent" app:vkim_secondaryColor="#ffbacde3" app:vkim_spaceWidth="1.0dip" />
+    <TextView android:textAppearance="@style/VkIm.MsgPart.AudioMsg.Duration" android:id="@id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52.0dip" android:layout_marginTop="25.0dip" android:lines="1" android:importantForAccessibility="noHideDescendants" />
+    <TextView android:textAppearance="@style/VkIm.MsgPart.Time.TextSimple" android:layout_gravity="right" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:lines="1" android:importantForAccessibility="noHideDescendants" />
+</FrameLayout>

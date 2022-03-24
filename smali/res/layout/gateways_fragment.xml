@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="enterAlways|scroll">
+            <include android:layout_gravity="center_vertical" android:id="@id/search_view" android:layout_width="0.0px" android:layout_height="?actionBarSize" android:layout_weight="1.0" layout="@layout/toolbar_modern_search_view" />
+            <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="4.0dip">
+                <ImageView android:id="@id/iv_friends_search" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_friend_add_24" android:scaleType="centerInside" />
+                <include android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_marginEnd="4.0dip" android:layout_alignParentEnd="true" layout="@layout/request_counter" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:enableItemAnimations="true" app:layout_behavior="@string/toolbar_behavior_scrolling" />
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

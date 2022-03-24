@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/bg_stories_viewer_disabled_button" />
+    <item>
+        <ripple android:color="#40ffffff"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:id="@android:id/mask" android:left="4.0dip" android:top="12.0dip" android:right="4.0dip" android:bottom="12.0dip">
+                <shape android:shape="rectangle">
+                    <solid android:color="#ff000000" />
+                    <corners android:radius="20.0dip" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/stories_viewer_blue_button" />
+        </ripple>
+    </item>
+</selector>

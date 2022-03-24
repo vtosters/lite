@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/bg_panel_ptt" android:layout_width="wrap_content" android:layout_height="100.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="top" android:id="@id/ptt_send" android:background="@drawable/highlight_icon" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/ic_msg_panel_send" android:scaleType="center" android:tint="?header_text" android:contentDescription="@null" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/ptt_record" android:background="@drawable/highlight_icon" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/ic_play_24" android:scaleType="center" android:tint="?header_text" android:contentDescription="@null" />
+</FrameLayout>

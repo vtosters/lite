@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/picker_white_ripple_bounded" android:paddingLeft="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center|left|top" android:background="@drawable/bg_fave_article" android:layout_width="88.0dip" android:layout_height="116.0dip" android:layout_marginTop="16.0dip">
+        <com.vk.imageloader.view.VKImageView android:id="@id/iv_article_image" android:layout_width="fill_parent" android:layout_height="fill_parent" app:placeholderImage="@drawable/transparent" app:roundedCornerRadius="4.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_state_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:tint="@color/light_gray" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="100.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="40.0dip">
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/muted_black" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/tv_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/caption_gray" android:id="@id/tv_author" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/caption_gray" android:id="@id/tv_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/iv_options" android:layout_width="36.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_more_vertical_24" android:scaleType="centerInside" android:tint="@color/light_gray" />
+</FrameLayout>

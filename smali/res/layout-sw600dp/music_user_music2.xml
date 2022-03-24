@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" style="@style/Toolbar">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/back_btn" android:tint="?accent" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/ic_back_24" android:contentDescription="@string/music_talkback_go_back" style="@style/ActionButton.White" />
+        <ImageView android:layout_gravity="center|right" android:id="@id/search_btn" android:tint="?accent" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/ic_menu_search" style="@style/ActionButton.White" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="48.0dip">
+            <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@string/font_family_medium" />
+            <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@string/font_family_medium" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

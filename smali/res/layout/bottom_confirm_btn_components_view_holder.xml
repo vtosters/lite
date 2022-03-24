@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.core.view.BottomConfirmButton android:id="@id/bottom_confirm_btn" android:layout_width="fill_parent" android:layout_height="48.0dip" app:bcb_anim_duration="100" app:bcb_cancel_bg_color="?background_content" app:bcb_cancel_text="Отмена" app:bcb_cancel_text_color="?accent" app:bcb_divider="@color/black_alpha12" app:bcb_send_bg_color="?accent" app:bcb_send_text="Отправить" app:bcb_send_text_color="@color/white" app:bcb_text_all_caps="false" />
+</FrameLayout>

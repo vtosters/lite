@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/vp_pager" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="32.0dip" android:layout_marginBottom="48.0dip" />
+    <FrameLayout android:layout_gravity="top" android:id="@id/fl_tabs_outer_container" android:background="@drawable/scrim_top_16percent" android:layout_width="fill_parent" android:layout_height="112.0dip">
+        <View android:background="@drawable/bg_stickers_sections_toolbar" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_margin="8.0dip" />
+        <com.vk.attachpicker.stickers.StickersTabStripContainer android:id="@id/fl_tabs_container" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_margin="8.0dip" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:id="@id/view_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginBottom="48.0dip" />
+    <com.vk.attachpicker.widget.EditorBottomPanel android:layout_gravity="bottom" android:id="@id/ebp_sticker" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="48.0dip" app:ebp_title="@string/picker_sticker_full" />
+</merge>

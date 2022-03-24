@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.BadooTextView android:textSize="16.0dip" android:id="@id/send" android:paddingLeft="@dimen/gifts_padding" android:paddingRight="@dimen/gifts_padding" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="16.0dip" app:typeface="Medium" style="@style/primary_button"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

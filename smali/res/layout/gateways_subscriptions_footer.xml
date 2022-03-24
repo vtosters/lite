@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="16.0sp" android:textColor="?control_foreground" android:ellipsize="end" android:gravity="center_vertical" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/gateways_subscriptions_show_more" android:maxLines="1" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

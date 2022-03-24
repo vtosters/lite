@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/vkim_state_extra_container" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/vkim_state_extra_line" android:background="?im_accent" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_marginStart="16.0dip" />
+    <com.vk.im.ui.views.FrescoImageView android:id="@id/vkim_state_extra_preview" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginStart="6.0dip" app:vkim_cornerRadius="6.0dip" app:vkim_scaleType="center_crop" />
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="8.0dip">
+        <TextView android:textSize="12.0sp" android:textColor="?accent" android:ellipsize="end" android:id="@id/vkim_state_extra_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/roboto_medium" />
+        <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/vkim_state_extra_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="end|center" android:id="@id/vkim_state_extra_detach_btn" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_cancel_20" android:tint="@color/caption_gray" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+</LinearLayout>

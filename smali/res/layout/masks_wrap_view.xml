@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center|top" android:id="@id/masks_wrap_author" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginTop="84.0dip">
+        <View android:background="@drawable/bg_stories_masks_author" android:layout_width="44.0dip" android:layout_height="44.0dip" />
+        <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center|left" android:id="@id/masks_wrap_author_image" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="10.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_gravity="center|left" android:id="@id/masks_wrap_author_name" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginLeft="42.0dip" android:singleLine="true" android:shadowColor="#99000000" android:shadowDy="2.0" android:shadowRadius="8.0" />
+    </FrameLayout>
+    <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center|top" android:id="@id/masks_wrap_action_text" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="134.0dip" android:shadowColor="#99000000" android:shadowDy="2.0" android:shadowRadius="8.0" android:textAllCaps="true" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/masks_wrap_progress" android:background="@drawable/bg_mask_load_progress" android:padding="2.0dip" android:visibility="gone" android:layout_width="68.0dip" android:layout_height="68.0dip" android:layout_marginBottom="96.0dip" android:foreground="@drawable/highlight_circle_white">
+        <com.vtosters.lite.ui.CircularProgressView android:layout_gravity="center" android:id="@id/masks_wrap_progress_circular" android:layout_width="64.0dip" android:layout_height="64.0dip" app:cpv_animAutostart="true" app:cpv_animSwoopDuration="0" app:cpv_color="#ffffffff" app:cpv_indeterminate="false" app:cpv_maxProgress="1.0" app:cpv_thickness="2.5dip" />
+        <ImageView android:layout_gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close_shadow_48" android:tint="#ffffffff" />
+    </FrameLayout>
+    <com.vk.stories.masks.MasksView android:layout_gravity="bottom" android:id="@id/masks_wrap_masks_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="260.0dip" />
+</merge>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/dnr">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_pm" android:key="read_pm" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_cnv" android:key="read_conversations" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_bot" android:key="read_bot" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/dnw">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_pm" android:key="write_pm" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_cnv" android:key="write_conversations" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_bot" android:key="write_bot" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/online_vtl">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Отправка статуса онлайн" android:key="offline" android:summary="Отключение онлайна позволит вам оставаться в офлайне" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/offline_vtl">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Принудительный офлайн" android:key="setoffline" android:summary="Работает только при отключении отправки статуса онлайн\nОтправляет мгновенно в офлайн после отправки сообщений и прочих методов апи которые отправляют в онлайн\n\nМожет выглядеть как ненастоящий уход из сети" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/stories_vtl">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/dns" android:key="dns" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/privacy_vtl">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlawayphp" android:key="awayphp" android:summary="Слежка за пользователем для персонализации рекламы. Также проверка ссылок на блэклист от ВКонтакте и антивирус" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Бенчмарк апи" android:key="benchmark" android:summary="Тестирование скорости отправки запросов. Бесполезная функция для всех, кроме разработчиков ВКонтакте" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

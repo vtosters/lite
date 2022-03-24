@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/exo_prev" style="@style/ExoMediaButton.Previous" />
+        <ImageButton android:id="@id/exo_rew" style="@style/ExoMediaButton.Rewind" />
+        <ImageButton android:id="@id/exo_shuffle" style="@style/ExoMediaButton.Shuffle" />
+        <ImageButton android:id="@id/exo_repeat_toggle" style="@style/ExoMediaButton" />
+        <ImageButton android:id="@id/exo_play" style="@style/ExoMediaButton.Play" />
+        <ImageButton android:id="@id/exo_pause" style="@style/ExoMediaButton.Pause" />
+        <ImageButton android:id="@id/exo_ffwd" style="@style/ExoMediaButton.FastForward" />
+        <ImageButton android:id="@id/exo_next" style="@style/ExoMediaButton.Next" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffbebebe" android:id="@id/exo_position" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <com.google.android.exoplayer2.ui.DefaultTimeBar android:id="@id/exo_progress" android:layout_width="0.0dip" android:layout_height="26.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffbebebe" android:id="@id/exo_duration" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

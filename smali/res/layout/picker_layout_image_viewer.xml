@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_container" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/picker_viewer_bottom_padding">
+        <com.vk.attachpicker.widget.VkViewPager android:id="@id/vp_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.vk.attachpicker.widget.ClippingView android:id="@id/cv_animating_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vk.attachpicker.widget.ViewerToolbar android:id="@id/fl_action_bar" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.vk.attachpicker.widget.EditButton android:layout_gravity="bottom|center" android:id="@id/eb_edit_button" android:background="@drawable/picker_bg_gallery_edit" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginBottom="56.0dip" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_bottom_button" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <View android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+        <com.vk.attachpicker.widget.AttachCounterView android:layout_gravity="bottom" android:id="@id/acv_bottom_panel_counter" android:layout_width="fill_parent" android:layout_height="@dimen/picker_viewer_bottom_padding" />
+    </FrameLayout>
+</merge>

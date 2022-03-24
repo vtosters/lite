@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <View android:layout_gravity="start" android:id="@id/left_anchor" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_margin="8.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44.0dip" android:maxLines="1" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="84.0dip" />
+        <View android:layout_gravity="end" android:id="@id/right_anchor" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_margin="8.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="?control_foreground" android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/spinner" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fontFamily="@string/font_family_medium" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    </FrameLayout>
+    <com.db.chart.view.LineChartView android:id="@id/chart" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="216.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/checkboxesLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:paddingStart="22.0dip" android:paddingEnd="16.0dip" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="exo_controls_fastforward">@drawable/exo_icon_fastforward</item>
+    <item type="drawable" name="exo_controls_next">@drawable/exo_icon_next</item>
+    <item type="drawable" name="exo_controls_pause">@drawable/exo_icon_pause</item>
+    <item type="drawable" name="exo_controls_play">@drawable/exo_icon_play</item>
+    <item type="drawable" name="exo_controls_previous">@drawable/exo_icon_previous</item>
+    <item type="drawable" name="exo_controls_rewind">@drawable/exo_icon_rewind</item>
+    <item type="drawable" name="exo_notification_fastforward">@drawable/exo_icon_fastforward</item>
+    <item type="drawable" name="exo_notification_next">@drawable/exo_icon_next</item>
+    <item type="drawable" name="exo_notification_pause">@drawable/exo_icon_pause</item>
+    <item type="drawable" name="exo_notification_play">@drawable/exo_icon_play</item>
+    <item type="drawable" name="exo_notification_previous">@drawable/exo_icon_previous</item>
+    <item type="drawable" name="exo_notification_rewind">@drawable/exo_icon_rewind</item>
+    <item type="drawable" name="exo_notification_stop">@drawable/exo_icon_stop</item>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
+</resources>

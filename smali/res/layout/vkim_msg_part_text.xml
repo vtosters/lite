@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.im.ui.views.msg.MsgPartTextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:lineSpacingExtra="2.0sp" android:fontFamily="@string/fontRobotoRegular" app:vkim_timeSpaceX="8.0dip" app:vkim_timeSpaceY="4.0dip" app:vkim_timeText="" app:vkim_timeTextAppearance="@style/VkIm.MsgPart.Time.TextSimple"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

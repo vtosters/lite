@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@id/toolbar" style="@style/VkIm.Toolbar.Style.LargeWithBack"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

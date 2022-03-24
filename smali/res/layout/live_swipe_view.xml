@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.live.views.liveswipe.LiveViewPager android:id="@id/liveSwipePager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vtosters.lite.live.views.recommended.RecommendedBottomView android:layout_gravity="bottom" android:id="@id/liveSwipeRecommended" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

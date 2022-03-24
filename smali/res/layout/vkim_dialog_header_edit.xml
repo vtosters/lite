@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@id/toolbar" app:navigationIcon="@drawable/vkim_ic_cancel_theme_tinted" app:title="@string/vkim_msg_edit_title" app:titleTextColor="?im_app_toolbar_foreground" style="@style/VkIm.Toolbar.Style.LargeWithBack"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

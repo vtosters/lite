@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vkim_progress" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

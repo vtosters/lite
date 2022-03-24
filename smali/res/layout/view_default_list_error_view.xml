@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/load_more_error" android:layout_width="fill_parent" android:layout_height="@dimen/footer_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/error_text" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:text="@string/liblists_err_text" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" style="@style/VKUIText.Text" />
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/error_button" android:layout_width="wrap_content" android:layout_height="32.0dip" android:text="@string/liblists_retry" android:includeFontPadding="false" style="@style/tertiary_button" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/UserSmallRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+    <CheckBox android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+    <TextView android:textColor="?text_muted" android:id="@id/title" android:layout_toStartOf="@id/check" style="@style/UserSmallTitle" />
+    <ImageView style="@style/Online.Small" />
+</RelativeLayout>

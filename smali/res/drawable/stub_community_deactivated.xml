@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#ffe6edf4" />
+            <size android:height="80.0dip" android:width="80.0dip" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:left="16.0dip" android:top="26.0dip" android:right="16.0dip" android:bottom="10.0dip">
+        <bitmap android:src="@drawable/ic_custom_avatar_banned" android:tint="?placeholder_icon_foreground_secondary" />
+    </item>
+</layer-list>

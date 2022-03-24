@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:layout_gravity="center_vertical" android:id="@id/caption_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:fontFamily="@string/font_family_medium" style="@style/TextStyle.SingleLine" />
+    <TextView android:layout_gravity="center|right" android:id="@id/caption_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@string/font_family_medium" style="@style/TextButton.Blue" />
+</FrameLayout>

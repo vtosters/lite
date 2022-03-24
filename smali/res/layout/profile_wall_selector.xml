@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/profile_wall_selector" android:background="@drawable/profile_selector_bar" android:paddingLeft="@dimen/post_side_padding_btn" android:paddingRight="@dimen/post_side_padding_btn" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/post_side_padding_menu" android:layout_marginEnd="48.0dip">
+        <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:gravity="center" android:id="@id/profile_wall_all_posts" android:background="@drawable/profile_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/wall_all_posts" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:gravity="center" android:id="@id/profile_wall_owner_posts" android:background="@drawable/profile_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/wall_owners_posts" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/post_side_padding_menu">
+        <ImageView android:id="@id/profile_wall_post_btn" android:background="@drawable/highlight_icon" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_search_24" android:scaleType="center" android:tint="@color/light_gray" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/profile_wall_progress" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vk="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:background="?background_content" android:orientation="vertical" android:id="@id/scrollable_content" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip">
+        <include android:id="@id/edit_info_box" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/profile_edit_info" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:id="@id/photo_wrap" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip">
+                        <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:placeholderImage="@drawable/placeholder_user_72" />
+                        <TextView android:textSize="12.0dip" android:textColor="?accent" android:gravity="center" android:id="@id/photo_placeholder" android:background="@drawable/bg_profile_edit_photo" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/add_photo" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+                    </FrameLayout>
+                    <EditText android:id="@id/edit_first_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_first_name" android:maxLength="32" android:layout_toRightOf="@id/photo_wrap" android:inputType="textPersonName|textCapWords" style="@style/CardTextEdit" />
+                    <EditText android:id="@id/edit_last_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_last_name" android:maxLength="32" android:layout_toRightOf="@id/photo_wrap" android:layout_below="@id/edit_first_name" android:inputType="textPersonName|textCapWords" style="@style/CardTextEdit" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:gravity="center_vertical" android:id="@id/unnecessary_redundant_gender_label" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/your_gender" android:layout_below="@id/edit_last_name" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/gender_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/unnecessary_redundant_gender_label">
+                        <RadioButton android:textSize="16.0dip" android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/signup_gender_male" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/signup_male" android:drawableLeft="@android:color/transparent" android:drawablePadding="10.0dip" android:layout_weight="1.0" />
+                        <RadioButton android:textSize="16.0dip" android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/signup_gender_female" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/signup_female" android:drawableLeft="@android:color/transparent" android:drawablePadding="10.0dip" android:layout_weight="1.0" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/edit_birth_date" android:layout_weight="1.0" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.OverlayTextView android:id="@id/edit_bdate_chooser" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="date" android:drawableRight="@drawable/ic_dropdown_arrow" app:overlay="@drawable/highlight" app:padAsBackground="true" style="@style/CardTextEdit" />
+                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/edit_bdate_visibility" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" app:padAsBackground="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_relation" android:layout_weight="1.0" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/edit_relation" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" />
+                <View android:id="@id/edit_relation_divider" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <LinearLayout android:gravity="center_vertical" android:id="@id/edit_relation_partner" android:background="@drawable/highlight" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.vk.imageloader.view.VKCircleImageView android:id="@id/edit_relation_partner_photo" android:layout_width="48.0dip" android:layout_height="48.0dip" app:placeholderImage="@drawable/placeholder_user_48" />
+                    <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/edit_relation_partner_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="TextView" android:singleLine="true" android:layout_weight="1.0" />
+                    <ImageView android:id="@id/edit_relation_partner_remove" android:background="@drawable/highlight" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_list_remove" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_city" android:layout_weight="1.0" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/edit_country" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" app:padAsBackground="true" />
+                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.vtosters.lite.ui.OverlayTextView android:textColor="#ff000000" android:textColorHint="?text_secondary" android:id="@id/edit_city" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/edit_choose_city" android:drawableRight="@drawable/ic_dropdown_arrow" app:overlay="@drawable/highlight" app:padAsBackground="true" style="@style/CardTextEdit" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

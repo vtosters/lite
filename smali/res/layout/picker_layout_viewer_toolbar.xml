@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/ll_back" android:background="@drawable/picker_btn_actionbar_gradient" android:layout_width="56.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_back_24" android:tint="@color/picker_dark_icon" />
+    <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:gravity="center|left" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/PickerGradientActionBarTitleStyle" />
+        <FrameLayout android:id="@id/fl_video_progress" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="8.0dip">
+            <com.vk.attachpicker.widget.VkSeekBar android:layout_gravity="center" android:id="@id/vsb_video_progress" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff909499" android:layout_gravity="center_vertical" android:id="@id/tv_current_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginBottom="8.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff909499" android:layout_gravity="center|right" android:id="@id/tv_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" />
+        </FrameLayout>
+    </FrameLayout>
+    <ImageButton android:layout_gravity="center|right" android:id="@id/button_check" android:background="@drawable/picker_btn_actionbar_gradient" android:layout_width="56.0dip" android:layout_height="fill_parent" android:src="@drawable/picker_bg_gallery_check" android:tint="@color/picker_dark_icon" />
+</merge>

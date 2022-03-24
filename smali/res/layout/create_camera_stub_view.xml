@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="right" android:id="@id/top_right_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_stories_viewer_close_48" />
+    <ImageView android:layout_gravity="left" android:id="@id/top_left_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_settings_stories_48" />
+    <TextView android:id="@id/create_camera_sharing_text" android:visibility="gone" android:layout_marginTop="10.0dip" android:layout_marginStart="56.0dip" style="@style/StorySharingText" />
+    <com.vk.cameraui.widgets.ShutterButton android:layout_gravity="bottom|center" android:id="@id/shutter" android:layout_width="fill_parent" android:layout_height="132.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" />
+    <com.vk.cameraui.widgets.TabsRecycler android:layout_gravity="bottom|center" android:id="@id/tabs" android:layout_width="4000.0dip" android:layout_height="128.0dip" />
+    <FrameLayout android:layout_gravity="bottom|center|left" android:id="@id/left_holder" android:clipChildren="false" android:clipToPadding="false" android:layout_width="128.0dip" android:layout_height="48.0dip" android:layout_marginBottom="61.0dip">
+        <FrameLayout android:layout_gravity="left" android:id="@id/photos_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/picker_white_ripple_unbounded">
+            <View android:layout_gravity="center" android:id="@id/photos_button_roll" android:background="@drawable/ic_camera_roll_20" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+            <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/photos_button_thumb" android:layout_width="32.0dip" android:layout_height="32.0dip" app:placeholderImage="@color/camera_roll_thumbnail_placeholder" app:roundedCornerRadius="2.0dip" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="left" android:id="@id/flash_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/picker_white_ripple_unbounded" android:src="@drawable/ic_flash_off_48" />
+        <ImageView android:layout_gravity="left" android:id="@id/switch_button_live" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/picker_white_ripple_unbounded" android:src="@drawable/switch_camera" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom|center|right" android:id="@id/right_holder" android:clipChildren="false" android:clipToPadding="false" android:layout_width="128.0dip" android:layout_height="48.0dip" android:layout_marginBottom="61.0dip">
+        <FrameLayout android:layout_gravity="right" android:id="@id/masks_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/picker_white_ripple_unbounded">
+            <ImageView android:id="@id/masks_button_image" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_mask_off_live_48" />
+            <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/masks_button_new_badge" android:background="@drawable/bg_masks_new_badge_big" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginTop="-11.0dip" android:minWidth="18.0dip" android:text="2" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="-11.0dip" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="right" android:id="@id/switch_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/picker_white_ripple_unbounded" android:src="@drawable/switch_camera" />
+    </FrameLayout>
+    <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/loader" android:background="#24000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/camera_ui_processing_now" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:alpha="0.0" />
+    <FrameLayout android:id="@id/camera_permission_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vk.cameraui.widgets.VideoRecordingTimerView android:textSize="16.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center|top" android:id="@id/recording_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:singleLine="true" android:includeFontPadding="false" android:shadowColor="@color/black_alpha12" android:shadowDy="2.0" android:shadowRadius="8.0" app:fontFamily="@font/roboto_medium" />
+</merge>

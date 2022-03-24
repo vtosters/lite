@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionBarGrayTheme">
+        <item name="android:textColorPrimary">@color/attach_title</item>
+        <item name="android:textColorSecondary">@color/attach_title</item>
+        <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
+        <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
+        <item name="android:colorAccent">@color/attach_title</item>
+        <item name="colorAccent">@color/attach_title</item>
+        <item name="colorPrimary">#fffafafa</item>
+    </style>
+    <style name="ActionBarSpinner" parent="@android:style/Widget.Material.Spinner" />
+    <style name="ActionBarSubtitleStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle.Inverse">
+        <item name="android:textColor">#80ffffff</item>
+    </style>
+    <style name="ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">?header_text</item>
+        <item name="android:textColorSecondary">?header_tint</item>
+        <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
+        <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="android:colorAccent">#ffffffff</item>
+        <item name="colorAccent">#ffffffff</item>
+        <item name="colorPrimary">@color/toolbar_blue_background</item>
+        <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
+        <item name="titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+    </style>
+    <style name="ActionBarTheme.ItemsFull" parent="@style/ActionBarTheme">
+        <item name="android:actionBarItemBackground">@drawable/actionbar_item_bg</item>
+    </style>
+    <style name="ActionBarTheme.Milk" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/toolbar_milk_textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/toolbar_milk_textColorSecondary</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="android:colorAccent">?accent</item>
+        <item name="colorAccent">?accent</item>
+        <item name="colorPrimary">@color/toolbar_milk_background</item>
+        <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
+        <item name="titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
+    </style>
+    <style name="ActionBarTheme.White" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/toolbar_white_textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/toolbar_white_textColorSecondary</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="android:colorAccent">?accent</item>
+        <item name="colorAccent">?accent</item>
+        <item name="colorPrimary">@color/toolbar_white_background</item>
+        <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
+        <item name="titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="ActionBarTitleStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat" parent="@android:style/TextAppearance.Material" />
+    <style name="Base.TextAppearance.AppCompat.Body1" parent="@android:style/TextAppearance.Material.Body1" />
+    <style name="Base.TextAppearance.AppCompat.Body2" parent="@android:style/TextAppearance.Material.Body2" />
+    <style name="Base.TextAppearance.AppCompat.Button" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="Base.TextAppearance.AppCompat.Caption" parent="@android:style/TextAppearance.Material.Caption" />
+    <style name="Base.TextAppearance.AppCompat.Display1" parent="@android:style/TextAppearance.Material.Display1" />
+    <style name="Base.TextAppearance.AppCompat.Display2" parent="@android:style/TextAppearance.Material.Display2" />
+    <style name="Base.TextAppearance.AppCompat.Display3" parent="@android:style/TextAppearance.Material.Display3" />
+    <style name="Base.TextAppearance.AppCompat.Display4" parent="@android:style/TextAppearance.Material.Display4" />
+    <style name="Base.TextAppearance.AppCompat.Headline" parent="@android:style/TextAppearance.Material.Headline" />
+    <style name="Base.TextAppearance.AppCompat.Inverse" parent="@android:style/TextAppearance.Material.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Large" parent="@android:style/TextAppearance.Material.Large" />
+    <style name="Base.TextAppearance.AppCompat.Large.Inverse" parent="@android:style/TextAppearance.Material.Large.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Medium" parent="@android:style/TextAppearance.Material.Medium" />
+    <style name="Base.TextAppearance.AppCompat.Medium.Inverse" parent="@android:style/TextAppearance.Material.Medium.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Menu" parent="@android:style/TextAppearance.Material.Menu" />
+    <style name="Base.TextAppearance.AppCompat.SearchResult.Subtitle" parent="@android:style/TextAppearance.Material.SearchResult.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.SearchResult.Title" parent="@android:style/TextAppearance.Material.SearchResult.Title" />
+    <style name="Base.TextAppearance.AppCompat.Small" parent="@android:style/TextAppearance.Material.Small" />
+    <style name="Base.TextAppearance.AppCompat.Small.Inverse" parent="@android:style/TextAppearance.Material.Small.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Subhead" parent="@android:style/TextAppearance.Material.Subhead" />
+    <style name="Base.TextAppearance.AppCompat.Title" parent="@android:style/TextAppearance.Material.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionMode.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionMode.Title" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Button" parent="@android:style/TextAppearance.Material.Widget.Button" />
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Header" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/abc_text_size_menu_header_material</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:fontFamily">@string/abc_font_family_title_material</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Large" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Large" />
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Small" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Switch" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="@android:style/TextAppearance.Material.Widget.TextView.SpinnerItem" />
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Dialog" parent="@style/Base.V21.Theme.AppCompat.Dialog" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light" />
+    <style name="Base.Theme.AppCompat.Light.Dialog" parent="@style/Base.V21.Theme.AppCompat.Light.Dialog" />
+    <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V21.ThemeOverlay.AppCompat.Dialog" />
+    <style name="Base.Widget.AppCompat.ActionBar.TabText" parent="@android:style/Widget.Material.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.ActionBar.TabView" parent="@android:style/Widget.Material.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.ActionButton" parent="@android:style/Widget.Material.ActionButton" />
+    <style name="Base.Widget.AppCompat.ActionButton.CloseMode" parent="@android:style/Widget.Material.ActionButton.CloseMode">
+        <item name="android:minWidth">56.0dip</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ActionButton.Overflow" parent="@android:style/Widget.Material.ActionButton.Overflow" />
+    <style name="Base.Widget.AppCompat.AutoCompleteTextView" parent="@android:style/Widget.Material.AutoCompleteTextView">
+        <item name="android:background">?editTextBackground</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Button" parent="@android:style/Widget.Material.Button" />
+    <style name="Base.Widget.AppCompat.Button.Borderless" parent="@android:style/Widget.Material.Button.Borderless" />
+    <style name="Base.Widget.AppCompat.Button.Borderless.Colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Button.Small" parent="@android:style/Widget.Material.Button.Small" />
+    <style name="Base.Widget.AppCompat.ButtonBar" parent="@android:style/Widget.Material.ButtonBar" />
+    <style name="Base.Widget.AppCompat.CompoundButton.CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox" />
+    <style name="Base.Widget.AppCompat.CompoundButton.RadioButton" parent="@android:style/Widget.Material.CompoundButton.RadioButton" />
+    <style name="Base.Widget.AppCompat.DropDownItem.Spinner" parent="@android:style/Widget.Material.DropDownItem.Spinner" />
+    <style name="Base.Widget.AppCompat.EditText" parent="@android:style/Widget.Material.EditText">
+        <item name="android:background">?editTextBackground</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ImageButton" parent="@android:style/Widget.Material.ImageButton" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText" parent="@android:style/Widget.Material.Light.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText.Inverse" parent="@android:style/Widget.Material.Light.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabView" parent="@android:style/Widget.Material.Light.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu" parent="@android:style/Widget.Material.Light.PopupMenu" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.Light.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ListPopupWindow" parent="@android:style/Widget.Material.ListPopupWindow" />
+    <style name="Base.Widget.AppCompat.ListView" parent="@android:style/Widget.Material.ListView" />
+    <style name="Base.Widget.AppCompat.ListView.DropDown" parent="@android:style/Widget.Material.ListView.DropDown" />
+    <style name="Base.Widget.AppCompat.ListView.Menu" parent="@style/Base.Widget.AppCompat.ListView" />
+    <style name="Base.Widget.AppCompat.PopupMenu" parent="@android:style/Widget.Material.PopupMenu" />
+    <style name="Base.Widget.AppCompat.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ProgressBar" parent="@android:style/Widget.Material.ProgressBar" />
+    <style name="Base.Widget.AppCompat.ProgressBar.Horizontal" parent="@android:style/Widget.Material.ProgressBar.Horizontal" />
+    <style name="Base.Widget.AppCompat.RatingBar" parent="@android:style/Widget.Material.RatingBar" />
+    <style name="Base.Widget.AppCompat.SeekBar" parent="@android:style/Widget.Material.SeekBar" />
+    <style name="Base.Widget.AppCompat.Spinner" parent="@android:style/Widget.Material.Spinner" />
+    <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="@android:style/Widget.Material.TextView.SpinnerItem" />
+    <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="@android:style/Widget.Material.Toolbar.Button.Navigation" />
+    <style name="Base.Widget.Design.AppBarLayout" parent="@style/Base.V21.Widget.Design.AppBarLayout" />
+    <style name="BaseDarkStyle" parent="@style/BaseDarkTheme">
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:actionModeBackground">?accent</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeBackground">?accent</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_back_24</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitEmptyButtonStyle">@style/VKUIButton.Primary.Small</item>
+        <item name="appkitErrorButtonStyle">@style/VKUIButton.Secondary.Small</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="attach_left_right_padding">0.0dip</item>
+        <item name="ic_attach_checkin">@drawable/ic_attachment_checkin</item>
+        <item name="ic_attach_document">@drawable/ic_attachment_document</item>
+        <item name="ic_attach_link">@drawable/ic_attachment_link</item>
+        <item name="ic_attach_note">@drawable/ic_attachment_note</item>
+        <item name="ic_attach_poll">@drawable/ic_attachment_poll</item>
+        <item name="ic_attach_post">@drawable/ic_attachment_post</item>
+        <item name="is_messages_snippet">false</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="BaseDarkTheme" parent="@style/Vk.Theme.client_dark_generated">
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SolidSeekBar</item>
+        <item name="android:alertDialogTheme">@style/MaterialDialogTheme.Dark</item>
+        <item name="android:colorControlHighlight">#33999999</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="BaseStyle" parent="@style/BaseTheme">
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:actionModeBackground">?accent</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeBackground">?accent</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_back_24</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitEmptyButtonStyle">@style/VKUIButton.Primary.Small</item>
+        <item name="appkitErrorButtonStyle">@style/VKUIButton.Secondary.Small</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="attach_left_right_padding">0.0dip</item>
+        <item name="ic_attach_checkin">@drawable/ic_attachment_checkin</item>
+        <item name="ic_attach_document">@drawable/ic_attachment_document</item>
+        <item name="ic_attach_link">@drawable/ic_attachment_link</item>
+        <item name="ic_attach_note">@drawable/ic_attachment_note</item>
+        <item name="ic_attach_poll">@drawable/ic_attachment_poll</item>
+        <item name="ic_attach_post">@drawable/ic_attachment_post</item>
+        <item name="is_messages_snippet">false</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="BaseStyle.Dark" parent="@style/BaseStyle">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorPrimary">@color/white</item>
+        <item name="android:colorPrimaryDark">@color/white</item>
+        <item name="android:colorAccent">@color/white</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="BaseStyle.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:actionModeBackground">?accent</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeBackground">?accent</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitEmptyButtonStyle">@style/VKUIButton.Primary.Small</item>
+        <item name="appkitErrorButtonStyle">@style/VKUIButton.Secondary.Small</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="attach_left_right_padding">0.0dip</item>
+        <item name="colorAccent">?accent</item>
+        <item name="colorPrimary">?accent</item>
+        <item name="colorPrimaryDark">?accent</item>
+        <item name="ic_attach_checkin">@drawable/ic_attachment_checkin</item>
+        <item name="ic_attach_document">@drawable/ic_attachment_document</item>
+        <item name="ic_attach_link">@drawable/ic_attachment_link</item>
+        <item name="ic_attach_note">@drawable/ic_attachment_note</item>
+        <item name="ic_attach_poll">@drawable/ic_attachment_poll</item>
+        <item name="ic_attach_post">@drawable/ic_attachment_post</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
+        <item name="statusBarColorBack">@color/toolbar_blueDialog_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_blueDialog_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="BaseStyle.Dialog.MilkToolbar" parent="@style/BaseStyle.Dialog">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_milk_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_borderless_shadow_light</item>
+        <item name="shadowBottomBorder">@drawable/bg_toolbar_shadow_light</item>
+        <item name="shadowTop">@drawable/bg_toolbar_inner_shadow_light</item>
+        <item name="statusBarColorBack">@color/toolbar_milk_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_milk_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_milk_border</item>
+        <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
+    </style>
+    <style name="BaseStyle.MilkToolbar" parent="@style/BaseStyle">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_milk_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_borderless_shadow_light</item>
+        <item name="shadowBottomBorder">@drawable/bg_toolbar_shadow_light</item>
+        <item name="shadowTop">@drawable/bg_toolbar_inner_shadow_light</item>
+        <item name="statusBarColorBack">@color/toolbar_milk_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_milk_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_milk_border</item>
+        <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
+    </style>
+    <style name="BaseStyle.Registration" parent="@style/BaseStyle">
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:textColorSecondary">#ff909499</item>
+        <item name="android:windowBackground">@drawable/registration_window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">@bool/registrationIsFloating</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.ItemsFull</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.ItemsFull</item>
+    </style>
+    <style name="BaseStyle.StatusBar" parent="@style/BaseStyle">
+        <item name="android:statusBarColor">#ff3b5f87</item>
+    </style>
+    <style name="BaseStyle.Validation" parent="@style/BaseStyle">
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:textColorSecondary">#ff909499</item>
+        <item name="android:windowBackground">@drawable/registration_window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">@bool/registrationIsFloating</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.ItemsFull</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.ItemsFull</item>
+    </style>
+    <style name="BaseStyle.WhiteToolbar" parent="@style/BaseStyle">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_white_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_white_searchViewTextColorHint</item>
+        <item name="statusBarColorBack">@color/toolbar_white_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_white_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_white_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="BaseStyleNoTitle" parent="@android:style/Theme.Material.Light">
+        <item name="android:buttonStyle">@android:style/Widget.Holo.Button</item>
+        <item name="android:seekBarStyle">@style/SolidSeekBar</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:alertDialogTheme">@style/MaterialDialogTheme</item>
+        <item name="android:colorPrimary">?accent</item>
+        <item name="android:colorPrimaryDark">@color/status_bar_bg</item>
+        <item name="android:colorAccent">@color/status_bar_bg</item>
+    </style>
+    <style name="BaseTheme" parent="@style/Vk.Theme.client_light_generated">
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:seekBarStyle">@style/SolidSeekBar</item>
+        <item name="android:alertDialogTheme">@style/MaterialDialogTheme</item>
+        <item name="android:colorControlHighlight">#33999999</item>
+        <item name="android:statusBarColor">@color/clear</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="BottomSheetTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowAnimationStyle">@style/BottomSheet.AnimationStyle</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+    <style name="FullScreenBottomSheetTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowAnimationStyle">@style/BottomSheet.AnimationStyle</item>
+        <item name="bottomSheetStyle">@style/FullScreenBottomSheet</item>
+    </style>
+    <style name="FullScreenDialogDialog" parent="@style/Base.Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="GradientActionBarSubtitleStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle.Inverse">
+        <item name="android:textColor">#b0ffffff</item>
+        <item name="android:shadowColor">#26000000</item>
+        <item name="android:shadowDy">@integer/s1dip</item>
+        <item name="android:shadowRadius">@integer/s2dip</item>
+    </style>
+    <style name="GradientActionBarTitleStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#26000000</item>
+        <item name="android:shadowDy">@integer/s1dip</item>
+        <item name="android:shadowRadius">@integer/s2dip</item>
+    </style>
+    <style name="LiveVideoFullScreenDialog" parent="@style/VideoFullScreenDialog">
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+    <style name="NewLabel">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/fave_mark_new_rounded_bg</item>
+        <item name="android:paddingTop">0.5dip</item>
+        <item name="android:paddingBottom">0.5dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/fave_mark_new</item>
+        <item name="android:paddingStart">5.5dip</item>
+        <item name="android:paddingEnd">5.5dip</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="PickerFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="PickerFullScreenNoStatusDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowElevation">0.0px</item>
+    </style>
+    <style name="PickerImageEditorActivity" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="colorAccent">@color/picker_blue</item>
+        <item name="colorPrimary">@color/picker_blue</item>
+        <item name="colorPrimaryDark">@color/picker_blue</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="Platform.AppCompat" parent="@style/Platform.V21.AppCompat" />
+    <style name="Platform.AppCompat.Light" parent="@style/Platform.V21.AppCompat.Light" />
+    <style name="Platform.ThemeOverlay.AppCompat" parent="">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+    </style>
+    <style name="Platform.ThemeOverlay.AppCompat.Dark" parent="@style/Platform.ThemeOverlay.AppCompat" />
+    <style name="Platform.ThemeOverlay.AppCompat.Light" parent="@style/Platform.ThemeOverlay.AppCompat" />
+    <style name="ProgressBar" parent="@android:style/Widget.Material.ProgressBar">
+        <item name="android:indeterminateTint">?accent</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+    </style>
+    <style name="StoryActivityTheme" parent="@style/BaseStyle">
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/white</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:colorPrimaryDark">@color/not_placeholder_color</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+    </style>
+    <style name="StoryBottomSheetDialog" parent="@style/StoryFullscreenActivityTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.Material.Notification" />
+    <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Info.Media" parent="@style/TextAppearance.Compat.Notification.Info">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Media" parent="@style/TextAppearance.Compat.Notification">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time" />
+    <style name="TextAppearance.Compat.Notification.Time.Media" parent="@style/TextAppearance.Compat.Notification.Time">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title" />
+    <style name="TextAppearance.Compat.Notification.Title.Media" parent="@style/TextAppearance.Compat.Notification.Title">
+        <item name="android:textColor">@color/primary_text_default_material_dark</item>
+    </style>
+    <style name="Theme.App.Transparent" parent="@style/Base.Theme.App.Transparent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="TooltipFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="TransparentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:alertDialogTheme">@style/MaterialDialogTheme</item>
+        <item name="android:colorPrimary">?accent</item>
+        <item name="android:colorPrimaryDark">#44000000</item>
+        <item name="android:colorAccent">#44000000</item>
+    </style>
+    <style name="VKAppBar" parent="@style/Widget.Design.AppBarLayout">
+        <item name="android:id">@id/app_bar_layout</item>
+        <item name="android:elevation">0.0dip</item>
+        <item name="elevation">0.0dip</item>
+    </style>
+    <style name="VKUIButton.Primary.Small.Flat" parent="@style/VKUIButton.Primary.Small">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="VKUIButton.Secondary.Small.Flat" parent="@style/VKUIButton.Secondary.Small">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="VideoBottomSheetDialog" parent="@style/BaseStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="VideoFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="colorAccent">#ffffffff</item>
+    </style>
+    <style name="VideoPlayerTheme" parent="@style/Theme.AppKit">
+        <item name="android:textColorSecondary">#ccffffff</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="colorAccent">#ffffffff</item>
+    </style>
+    <style name="VideoPlayerTranslucentStyle" parent="@style/TranslucentStyle">
+        <item name="android:textColorSecondary">#ccffffff</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="colorAccent">#ffffffff</item>
+    </style>
+    <style name="VkIm.Dialog.Progress" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorAccent">?im_accent</item>
+    </style>
+    <style name="VkIm.Theme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">?background_content</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/vkim_fastscroll_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@drawable/vkim_fastscroll_track</item>
+        <item name="android:actionModeStyle">@style/VkIm.ActionMode</item>
+        <item name="android:colorPrimary">?im_accent</item>
+        <item name="android:colorPrimaryDark">?im_accent_dark</item>
+        <item name="android:colorAccent">?im_accent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">?im_app_background_navbar</item>
+        <item name="actionBarTheme">@style/VkIm.Theme.Legacy.ActionBar</item>
+        <item name="actionModeStyle">@style/VkIm.ActionMode</item>
+        <item name="colorAccent">?im_accent</item>
+        <item name="colorPrimary">?im_accent</item>
+        <item name="colorPrimaryDark">?im_accent_dark</item>
+        <item name="photo_gallery_accent_color">?im_app_icon</item>
+        <item name="photo_gallery_background_color">?background_content</item>
+        <item name="photo_gallery_text_color">?text_primary</item>
+        <item name="photo_gallery_text_color_inv">@color/white</item>
+        <item name="preferenceTheme">@style/VkIm.Theme.Preference</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_accent_border</item>
+        <item name="tabBarTheme">@style/VkIm.Theme.Legacy.TabBar</item>
+        <item name="toolbarIconsColor">?im_accent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="VkIm.Theme.Legacy.ActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">?im_app_toolbar_foreground</item>
+        <item name="android:textColorSecondary">?im_app_toolbar_foreground</item>
+        <item name="android:selectableItemBackground">@drawable/vkim_ripple_light</item>
+        <item name="android:actionBarItemBackground">@drawable/vkim_ripple_light_borderless</item>
+        <item name="android:titleTextAppearance">@style/VkIm.ToolbarTitle</item>
+        <item name="android:colorAccent">?im_accent</item>
+        <item name="colorAccent">?im_accent</item>
+        <item name="colorPrimary">?header_background</item>
+        <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
+        <item name="titleTextAppearance">@style/VkIm.ToolbarTitle</item>
+        <item name="toolbarIconsColor">?im_app_toolbar_foreground</item>
+    </style>
+    <style name="VkIm.Toolbar.Secondary" parent="@style/VkIm.Toolbar">
+        <item name="android:textColorPrimary">?im_app_toolbar_foreground</item>
+        <item name="android:background">?header_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/vkim_toolbar_height</item>
+        <item name="android:elevation">0.0dip</item>
+        <item name="contentInsetEnd">8.0dip</item>
+        <item name="contentInsetEndWithActions">0.0dip</item>
+        <item name="contentInsetStart">8.0dip</item>
+        <item name="contentInsetStartWithNavigation">8.0dip</item>
+        <item name="elevation">0.0dip</item>
+        <item name="logo">@null</item>
+        <item name="navigationContentDescription">@string/vkim_accessibility_toolbar_back_exit</item>
+        <item name="navigationIcon">@drawable/vkim_ic_back_theme_tinted</item>
+        <item name="popupTheme">@style/VkIm.Toolbar.PopupTheme</item>
+        <item name="theme">@style/VkIm.Toolbar.Theme</item>
+        <item name="titleMarginStart">0.0dip</item>
+        <item name="titleTextStyle">@style/VkIm.Toolbar.Secondary.Title</item>
+    </style>
+    <style name="VkIm.Toolbar.Style" parent="@style/VkIm.Toolbar">
+        <item name="android:textColorPrimary">?header_text</item>
+        <item name="android:background">?header_background</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:elevation">0.0dip</item>
+        <item name="elevation">0.0dip</item>
+        <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
+        <item name="popupTheme">@style/VkIm.Toolbar.PopupTheme</item>
+        <item name="theme">@style/VkIm.Toolbar.Theme</item>
+        <item name="titleTextColor">?header_text</item>
+    </style>
+    <style name="WhiteTheme" parent="@style/AttachTransparentTheme">
+        <item name="android:colorPrimary">@color/white</item>
+        <item name="android:colorPrimaryDark">@color/white</item>
+        <item name="android:colorAccent">@color/attach_title</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="actionBarTheme">@style/WhiteThemeActionBar</item>
+        <item name="colorAccent">@color/attach_title</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionContainer" parent="">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionText" parent="">
+        <item name="android:textAppearance">?android:textAppearanceButton</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+    </style>
+    <style name="Widget.Design.BottomSheet.Modal" parent="@android:style/Widget">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="android:elevation">@dimen/design_bottom_sheet_modal_elevation</item>
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_peekHeight">auto</item>
+        <item name="behavior_skipCollapsed">false</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Large" />
+    <style name="Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Small" />
+    <style name="Base.V21.Theme.AppCompat" parent="@style/Base.V7.Theme.AppCompat">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="actionBarDivider">?android:actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionButtonStyle">?android:actionButtonStyle</item>
+        <item name="actionModeBackground">?android:actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="actionOverflowButtonStyle">?android:actionOverflowButtonStyle</item>
+        <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+        <item name="buttonStyle">?android:buttonStyle</item>
+        <item name="buttonStyleSmall">?android:buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:checkedTextViewStyle</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+        <item name="dividerVertical">?android:dividerVertical</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:editTextColor</item>
+        <item name="homeAsUpIndicator">?android:homeAsUpIndicator</item>
+        <item name="listChoiceBackgroundIndicator">?android:listChoiceBackgroundIndicator</item>
+        <item name="listPreferredItemHeightSmall">?android:listPreferredItemHeightSmall</item>
+        <item name="radioButtonStyle">?android:radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:ratingBarStyle</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="spinnerStyle">?android:spinnerStyle</item>
+        <item name="textAppearanceLargePopupMenu">?android:textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:textAppearanceSmallPopupMenu</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Dialog" parent="@style/Base.V7.Theme.AppCompat.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Light" parent="@style/Base.V7.Theme.AppCompat.Light">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="actionBarDivider">?android:actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionButtonStyle">?android:actionButtonStyle</item>
+        <item name="actionModeBackground">?android:actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="actionOverflowButtonStyle">?android:actionOverflowButtonStyle</item>
+        <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+        <item name="buttonStyle">?android:buttonStyle</item>
+        <item name="buttonStyleSmall">?android:buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:checkedTextViewStyle</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+        <item name="dividerVertical">?android:dividerVertical</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:editTextColor</item>
+        <item name="homeAsUpIndicator">?android:homeAsUpIndicator</item>
+        <item name="listChoiceBackgroundIndicator">?android:listChoiceBackgroundIndicator</item>
+        <item name="listPreferredItemHeightSmall">?android:listPreferredItemHeightSmall</item>
+        <item name="radioButtonStyle">?android:radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:ratingBarStyle</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="spinnerStyle">?android:spinnerStyle</item>
+        <item name="textAppearanceLargePopupMenu">?android:textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:textAppearanceSmallPopupMenu</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Light.Dialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V7.ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.Widget.Design.AppBarLayout" parent="@style/Base.V14.Widget.Design.AppBarLayout">
+        <item name="android:stateListAnimator">@animator/design_appbar_state_list_animator</item>
+    </style>
+    <style name="BaseActionBarStyle" parent="@style/Widget.AppCompat.ActionBar.Solid" />
+    <style name="BaseStyle.WhiteAccent" parent="@style/BaseStyle">
+        <item name="android:colorControlHighlight">#aaffffff</item>
+        <item name="android:colorAccent">#ffffffff</item>
+    </style>
+    <style name="BottomSheet.AnimationStyle" parent="@style/BottomSheet">
+        <item name="android:windowEnterAnimation">@anim/bottom_sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_sheet_slide_out</item>
+    </style>
+    <style name="ButtonStyle" parent="@android:style/Widget.Material.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="MaterialDialogTheme" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/mtrl_dlg_bg</item>
+        <item name="android:colorAccent">?accent</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/MD.Button.Borderless.Dialog</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/MD.Button.Borderless.Dialog</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/MD.Button.Borderless.Dialog</item>
+        <item name="dialogBg">?tabbar_background</item>
+    </style>
+    <style name="MediumBold">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Platform.V21.AppCompat" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+    <style name="Platform.V21.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+    <style name="SolidSeekBar" parent="@android:style/Widget.Material.SeekBar">
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+        <item name="android:splitTrack">false</item>
+    </style>
+    <style name="TextStickerDialogForLolipop" parent="@style/PickerFullScreenDialog">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">#4d000000</item>
+    </style>
+    <style name="VkIm.Toolbar.TitleText.Large" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="MaterialDialogTheme.Dark" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/mtrl_dlg_bg</item>
+        <item name="android:colorAccent">?accent</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/MD.Button.Borderless.Dialog</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/MD.Button.Borderless.Dialog</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/MD.Button.Borderless.Dialog</item>
+        <item name="dialogBg">?tabbar_background</item>
+    </style>
+    <style name="MD.Button.Borderless" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="MD.Button.Borderless.Dialog" parent="@style/MD.Button.Borderless">
+        <item name="android:minWidth">64.0dp</item>
+        <item name="android:minHeight">48.0dp</item>
+    </style>
+</resources>

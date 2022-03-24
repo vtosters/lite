@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/fl_center_view_container" android:layout_width="wrap_content" android:layout_height="@dimen/picker_bottom_button_height" android:layout_marginLeft="64.0dip" android:layout_marginRight="64.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="@color/picker_dark_icon" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@string/font_family_medium" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="start|bottom|center" android:id="@id/iv_cancel" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="@dimen/picker_bottom_button_height" android:layout_height="@dimen/picker_bottom_button_height" android:src="@drawable/picker_ic_close_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/iv_apply" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="@dimen/picker_bottom_button_height" android:layout_height="@dimen/picker_bottom_button_height" android:src="@drawable/ic_done_24" android:scaleType="centerInside" android:tint="?accent" />
+    <View android:id="@id/divider" android:background="@color/picker_grey_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+</merge>

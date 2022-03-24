@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@id/tags_editor_constraint_layout" android:background="@color/background_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/tags_editor_appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/VKAppBar">
+        <include layout="@layout/appkit_toolbar" />
+    </android.support.design.widget.AppBarLayout>
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/tags_editor_list" android:background="?background_content" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" app:enableItemAnimations="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tags_editor_appbar" app:layout_constraintVertical_bias="0.0" />
+    <com.vk.core.view.AppBarShadowView android:id="@id/tags_app_bar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

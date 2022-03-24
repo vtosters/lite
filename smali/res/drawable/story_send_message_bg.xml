@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:enterFadeDuration="300" android:exitFadeDuration="300"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/bg_stories_viewer_disabled_button" />
+    <item android:drawable="@drawable/stories_viewer_blue_button" />
+</selector>

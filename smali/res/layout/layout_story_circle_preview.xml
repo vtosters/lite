@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/click_handler" android:background="@drawable/highlight_radius_4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/fl_story_preview_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/story_preview_top_space">
+        <com.vk.stories.view.StoryCircleImageView android:layout_gravity="center_horizontal" android:id="@id/iv_story_image" android:layout_width="@dimen/story_preview_image_size" android:layout_height="@dimen/story_preview_image_size" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_my_story_bg" android:background="@drawable/btn_my_story_circle_padding_4" android:layout_width="@dimen/story_preview_image_size" android:layout_height="@dimen/story_preview_image_size" android:src="@drawable/ic_story_28" android:scaleType="centerInside" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center|right|top" android:id="@id/tv_replies_new_count" android:background="@drawable/bg_replies_new_count_badge" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="22.0dip" android:minHeight="22.0dip" android:fontFamily="@string/font_family_medium" />
+        <com.vtosters.lite.live.widgets.LiveShine android:layout_gravity="bottom|center|right" android:id="@id/fl_story_live_shine" android:visibility="visible" android:layout_width="32.0dip" android:layout_height="20.0dip" android:layout_margin="2.0dip" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/story_text_size" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_gravity="center|top" android:id="@id/tv_first_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/story_author_title_top_space" android:maxLines="1" android:fontFamily="@string/font_family_medium" />
+</merge>

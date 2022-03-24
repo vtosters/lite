@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center|right" android:id="@id/content" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/voice_rec_button_margin" android:layout_marginRight="@dimen/voice_rec_button_margin">
+        <View android:layout_gravity="center" android:id="@id/wave_shadow_view" android:background="@drawable/bg_voice_message" android:layout_width="@dimen/voice_rec_shadow_size" android:layout_height="@dimen/voice_rec_shadow_size" />
+        <com.vtosters.lite.ui.widget.WaveRecordCircleView android:layout_gravity="center" android:id="@id/wave_record_circle_view" android:layout_width="@dimen/voice_rec_button_size" android:layout_height="@dimen/voice_rec_button_size" />
+        <ImageView android:layout_gravity="center" android:id="@id/button_send" android:background="@drawable/highlight_circle_white" android:clickable="true" android:layout_width="@dimen/voice_rec_button_size" android:layout_height="@dimen/voice_rec_button_size" android:src="@drawable/ic_send_28" android:scaleType="center" android:soundEffectsEnabled="false" android:contentDescription="@null" />
+        <ImageView android:layout_gravity="center" android:id="@id/button_rec" android:background="@drawable/highlight_circle_white" android:clickable="true" android:layout_width="@dimen/voice_rec_button_size" android:layout_height="@dimen/voice_rec_button_size" android:src="@drawable/ic_voice_24" android:scaleType="center" android:soundEffectsEnabled="false" android:contentDescription="@null" />
+        <ImageView android:layout_gravity="center" android:id="@id/button_cancel" android:background="@drawable/highlight_circle_white" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/voice_rec_button_size" android:layout_height="@dimen/voice_rec_button_size" android:src="@drawable/ic_cancel_24" android:scaleType="center" android:soundEffectsEnabled="false" android:contentDescription="@null" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/button_dismiss_area" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/music_block_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:fontFamily="@string/font_family_medium" style="@style/TextStyle.HeaderSecondary" />
+        <TextView android:layout_gravity="center|right" android:id="@id/music_show_all_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_button_show_all" android:fontFamily="@string/font_family_medium" style="@style/TextButton.Blue" />
+    </FrameLayout>
+    <me.grishka.appkit.views.UsableRecyclerView android:orientation="horizontal" android:id="@id/list" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="195.0dip" android:layout_marginBottom="8.0dip" />
+    <View android:id="@id/bottom_divider" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginBottom="7.5dip" android:alpha="0.12" />
+</LinearLayout>

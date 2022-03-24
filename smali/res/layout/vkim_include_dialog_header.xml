@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_header_container" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/dialog_header_info_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/dialog_header_actions_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/dialog_header_edit_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/attach_background" android:layout_width="96.0dip" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true">
+        <TextView android:textSize="24.0dip" android:textColor="#ccffffff" android:gravity="center" android:id="@id/attach_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="25" android:singleLine="true" />
+        <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attach_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TextView" android:singleLine="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <ImageView android:id="@id/attach_remove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.5dip" android:layout_marginRight="-8.5dip" android:src="@drawable/ic_deattach_28" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

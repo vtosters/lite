@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.LoadMoreCommentsView android:id="@id/load_more_comments" android:background="@drawable/highlight" android:paddingBottom="0.5dip" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="48.5dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="?control_foreground" android:gravity="center" android:layout_gravity="center" android:id="@id/loadmore_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:fontFamily="@string/font_family_medium" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/loadmore_progress" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginBottom="1.0dip" />
+</com.vtosters.lite.LoadMoreCommentsView>

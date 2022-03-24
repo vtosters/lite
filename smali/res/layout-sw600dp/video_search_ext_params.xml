@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/search_extended" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="32.0dip" android:paddingTop="8.0dip" android:paddingRight="32.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_weight="1.0">
+            <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="#ff6a6f75" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/video_search_duration" app:typeface="Medium" />
+            <Spinner android:gravity="center|left" android:id="@id/duration_spinner" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_weight="1.0" style="@style/Widget.AppCompat.Spinner" />
+            <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="#ff6a6f75" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/video_search_sort" app:typeface="Medium" />
+            <Spinner android:gravity="center|left" android:id="@id/sort_spinner" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_weight="1.0" style="@style/Widget.AppCompat.Spinner" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+            <CheckBox android:textSize="14.0dip" android:textColor="?text_primary" android:gravity="center|left" android:id="@id/hd_only" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/video_hd_only" android:singleLine="true" />
+            <CheckBox android:textSize="14.0dip" android:textColor="?text_primary" android:gravity="center|left" android:id="@id/safe_search" android:layout_width="fill_parent" android:layout_height="40.0dip" android:checked="true" android:text="@string/sett_safe_search" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

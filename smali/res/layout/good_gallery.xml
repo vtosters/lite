@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.widget.GoodGalleryContainer android:id="@id/goodGalleryContainer" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/pager" android:background="@color/image_placeholder" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="bottom" android:background="@drawable/market_gallery_gradient" android:layout_width="fill_parent" android:layout_height="72.0dip" android:alpha="0.03" />
+    <com.vtosters.lite.ui.widget.PageIndicator android:layout_gravity="bottom|center" android:id="@id/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" app:PIColorNormal="#fff6f6f6" app:PIColorSelect="@android:color/white" app:PINormalDot="@drawable/ic_stickers_dot" app:PISelectedDot="@drawable/ic_stickers_dot_selected" app:PIShadowColor="#28000000" app:PIShadowRadius="1.0dip" app:PIShadowX="0.0dip" app:PIShadowY="1.0dip" app:PIType="circle" app:PIVerticalPadding="6.0dip" />
+</com.vtosters.lite.ui.widget.GoodGalleryContainer>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/achievements_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:actualImageScaleType="centerCrop" app:roundedCornerRadius="@dimen/games_sticker_achievements_banner_corner_radius" />
+    <ImageView android:layout_gravity="end" android:id="@id/level_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="14.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_my_achievements" android:fontFamily="@string/fontRobotoMedium" />
+        <TextView android:textSize="15.0sp" android:textColor="#b8ffffff" android:id="@id/unlocked_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:fontFamily="@string/fontRobotoRegular" />
+        <TextView android:textSize="15.0sp" android:id="@id/details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:minHeight="36.0dip" android:text="@string/games_achievements_details" android:fontFamily="@string/fontRobotoMedium" style="@style/VKUIButton.White.BigRadius" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/attach_appbar_layout" android:background="?background_page" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:titleTextColor="?text_muted" />
+        <View android:id="@id/attachpicker_documents_toolbar_shadow" android:background="@drawable/picker_bg_attach_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/attachpicker_documents_holder_document_layout" layout="@layout/holder_add_document" />
+        <com.vtosters.lite.ui.widget.VKTabLayout android:id="@id/attachpicker_documents_tab_layout" android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="?accent" app:tabSelectedTextColor="?accent" app:tabTextColor="@color/azure_100_muted" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@id/attachpicker_documents_view_pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/attach_recycler_view" android:background="?background_content" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.attachpicker.widget.AttachCounterView android:layout_gravity="bottom" android:id="@id/attach_counter_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_viewer_bottom_padding" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/attachpicker_documents_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <include android:id="@id/attachpicker_documents_error" android:visibility="gone" layout="@layout/appkit_error" />
+    <com.vk.core.view.AppBarShadowView style="@style/PostingAppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

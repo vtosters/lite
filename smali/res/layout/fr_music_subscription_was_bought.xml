@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0dip" android:textColor="?text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="24.0dip" android:text="@string/music_subs_success_1" android:lineSpacingExtra="4.0dip" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff70757b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="16.0dip" android:text="@string/music_subs_success_2" android:lineSpacingExtra="2.0dip" />
+    <View android:background="#1e000000" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" />
+    <LinearLayout android:gravity="center" android:id="@id/button" android:background="@drawable/highlight" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="?accent" android:gravity="center" android:id="@id/button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_subs_success_3" android:drawableLeft="@drawable/ic_music_promo_boom_ic_24" android:drawablePadding="12.0dip" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+</LinearLayout>

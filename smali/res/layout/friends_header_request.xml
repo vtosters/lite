@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="@color/text_game_gray" android:id="@id/title" android:paddingLeft="@dimen/friends_header_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff8c8d8f" android:gravity="center" android:id="@id/counter" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:maxLines="1" android:fontFamily="@string/font_family_medium" />
+    <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textSize="14.0dip" android:textColor="?accent" android:id="@id/action" android:background="@drawable/highlight" android:paddingLeft="@dimen/friends_header_padding" android:paddingTop="@dimen/friends_header_top_padding" android:paddingRight="@dimen/friends_header_padding" android:paddingBottom="@dimen/friends_header_top_padding" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/show_all" />
+</LinearLayout>

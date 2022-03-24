@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/notification_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cover" android:background="#ff384554" android:layout_width="130.0dip" android:layout_height="130.0dip" android:src="@drawable/aplayer_cover_placeholder" />
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="130.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="81.0dip" android:layout_marginEnd="40.0dip">
+            <TextView android:textAppearance="@android:style/TextAppearance.Material.Notification.Title" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="Custom title" android:singleLine="true" />
+            <TextView android:textAppearance="@android:style/TextAppearance.Material.Notification.Line2" android:ellipsize="marquee" android:id="@id/content" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="Content!!!!1one" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="bottom" android:id="@id/action_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:src="@null" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <ImageView android:id="@id/prev" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_previous_36" android:scaleType="center" android:tint="#99000000" android:layout_weight="1.0" style="?android:borderlessButtonStyle" />
+            <ImageView android:id="@id/playpause" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_play_36" android:scaleType="center" android:tint="#99000000" android:layout_weight="1.0" style="?android:borderlessButtonStyle" />
+            <ImageView android:id="@id/next" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_next_36" android:scaleType="center" android:tint="#99000000" android:layout_weight="1.0" style="?android:borderlessButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/stop" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="-40.0dip" android:src="@drawable/ic_temp_close" android:scaleType="centerCrop" android:tint="#99000000" android:alpha="0.3" style="?android:borderlessButtonStyle" />
+</LinearLayout>

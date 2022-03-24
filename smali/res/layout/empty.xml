@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.EmptyView android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="#ffa3a3a3" android:gravity="center" android:id="@id/empty_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:text="@string/empty_list" />
+    <TextView android:textSize="22.0dip" android:textStyle="italic" android:textColor="@color/btn_link" android:id="@id/empty_button" android:background="@drawable/bg_btn_link" android:paddingLeft="10.0dip" android:paddingTop="3.0dip" android:paddingRight="10.0dip" android:paddingBottom="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/err_try_again" />
+</com.vtosters.lite.ui.EmptyView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_market_28" android:id="@id/menu_cart" android:title="@string/market_cart" app:showAsAction="always" />
+    <item android:id="@id/menu_fave_add_or_remove" android:title="" app:menuTint="?toolbarIconsColor" />
+    <item android:id="@id/copy_link" android:title="@string/copy_link" app:menuTint="?toolbarIconsColor" />
+    <item android:id="@id/report" android:title="@string/report_content" app:menuTint="?toolbarIconsColor" />
+</menu>

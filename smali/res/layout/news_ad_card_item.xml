@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKSnippetImageView android:id="@id/content_photo" android:layout_width="@dimen/post_ad_block_item_size" android:layout_height="@dimen/post_ad_block_item_size" android:contentDescription="@null" />
+    <FrameLayout android:background="@drawable/attach_fb_bottom_4dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/highlight_post_4dp_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:singleLine="true" android:fontFamily="@font/roboto_medium" android:layout_marginStart="@dimen/post_ad_block_item_padding" android:layout_marginEnd="@dimen/post_ad_block_item_padding" />
+            <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="4.0dip" android:singleLine="true" android:fontFamily="@font/roboto_regular" android:layout_marginStart="@dimen/post_ad_block_item_padding" android:layout_marginEnd="@dimen/post_ad_block_item_padding" />
+            <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:paddingLeft="@dimen/post_ad_block_item_padding" android:paddingTop="8.0dip" android:paddingRight="@dimen/post_ad_block_item_padding" android:paddingBottom="@dimen/post_ad_block_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vk.core.view.VkRatingView android:id="@id/attach_rating" android:visibility="invisible" android:layout_width="51.0dip" android:layout_height="10.0dip" />
+                <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:gravity="center_vertical" android:id="@id/attach_title" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:ellipsize="end" android:gravity="center" android:id="@id/attach_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/outline_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

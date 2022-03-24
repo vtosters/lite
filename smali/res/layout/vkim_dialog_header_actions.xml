@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar android:id="@id/toolbar" app:contentInsetEnd="0.0dip" app:contentInsetStart="0.0dip" app:contentInsetStartWithNavigation="0.0dip" app:navigationContentDescription="@string/vkim_accessibility_toolbar_back_exit" app:titleMarginStart="0.0dip" app:titleTextColor="?im_app_toolbar_foreground" style="@style/VkIm.Toolbar.Style"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

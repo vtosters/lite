@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/mask_tab_bg" android:layout_width="56.0dip" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/view_selected_bg" android:background="@drawable/bg_stories_replied_card_active" android:layout_width="56.0dip" android:layout_height="56.0dip" />
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/iv_image" android:layout_width="44.0dip" android:layout_height="44.0dip" app:actualImageScaleType="fitCenter" app:placeholderImage="@drawable/ic_stories_masks_placeholder_mask" />
+    <View android:layout_gravity="center" android:id="@id/view_unsupported" android:background="@drawable/ic_stories_masks_unsupported" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="18.0dip" android:layout_marginTop="18.0dip" />
+    <View android:layout_gravity="center" android:id="@id/view_intrigue" android:background="@drawable/ic_stories_masks_intrigue" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="12.0dip" />
+    <View android:layout_gravity="center|right|top" android:id="@id/view_new" android:background="@drawable/bg_masks_new_badge" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_margin="4.0dip" />
+</FrameLayout>

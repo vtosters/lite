@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/group_info">
+        <Preference android:persistent="false" android:title="@string/phone_number" android:key="phone" />
+        <Preference android:persistent="false" android:title="@string/email" android:key="email" />
+        <Preference android:persistent="false" android:title="@string/change_password" android:key="changePassword" />
+        <Preference android:persistent="false" android:title="@string/page_address" android:key="domain" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sett_posts">
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/sett_posts_default_items" android:title="@string/sett_posts_default" android:key="onlyMyPosts" android:entryValues="@array/on_off" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:persistent="false" android:title="@string/sett_enable_comments" android:key="enableComments" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/community_comments_settings_block_title">
+        <Preference android:title="@string/community_comments_settings_title_new" android:key="community_comments" android:summary="" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sett_other">
+        <Preference android:title="@string/sett_sync" android:key="sync" android:summary="" />
+        <Preference android:title="@string/sett_news_banned" android:key="newsBanned" android:summary="@string/sett_news_banned_summary" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+</PreferenceScreen>

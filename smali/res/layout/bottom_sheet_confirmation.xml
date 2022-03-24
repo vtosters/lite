@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_card_elevation8_cropped_full" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons_container" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="24.0dip">
+        <TextView android:textSize="16.0sp" android:id="@id/dismiss_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5" style="@style/secondary_button" />
+        <View android:id="@id/buttons_divider" android:layout_width="12.0dip" android:layout_height="0.0dip" />
+        <TextView android:textSize="16.0sp" android:id="@id/action_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5" style="@style/primary_button" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/bottom_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

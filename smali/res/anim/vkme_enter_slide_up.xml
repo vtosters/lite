@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:interpolator="@anim/vkme_enter_interpolator" android:duration="200" android:shareInterpolator="true" android:fillBefore="true" android:fillAfter="true" android:fillEnabled="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:fromYDelta="3.9999962%" android:toYDelta="0.0%" />
+    <scale android:pivotX="50.0%" android:fromXScale="96.0%" android:toXScale="100.0%" android:fromYScale="96.0%" android:toYScale="100.0%" />
+    <alpha android:fromAlpha="0.0" android:toAlpha="1.0" />
+</set>

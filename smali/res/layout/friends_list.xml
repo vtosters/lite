@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.ui.RecursiveSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/content_wrap" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.vtosters.lite.ui.recyclerview.FastScroller android:layout_gravity="right" android:id="@id/fast_scroller" android:layout_width="22.0dip" android:layout_height="fill_parent" android:layout_marginTop="48.0dip" android:layout_marginBottom="16.0dip" app:fsHandle="@drawable/fastscroller_section_indicator" app:fsTrackColor="#ffb6b6b6" app:fsTrackWidth="1.0dip" />
+        <TextView android:textSize="48.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center|right|top" android:id="@id/section_title_popup" android:background="@drawable/fastscroller_popup" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="72.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="22.0dip" android:minWidth="72.0dip" />
+        <include android:id="@id/empty" layout="@layout/appkit_empty" />
+    </FrameLayout>
+</com.vk.core.ui.RecursiveSwipeRefreshLayout>

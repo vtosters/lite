@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/posting_attachments_root_layout" android:background="@color/picker_semi_transparent_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/posting_attachments_bottom_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</android.support.design.widget.CoordinatorLayout>

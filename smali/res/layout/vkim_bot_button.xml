@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/vkui_bg_button_white" android:layout_width="fill_parent" android:layout_height="@dimen/vkim_bot_button_min_height" android:layout_margin="@dimen/vkim_bot_button_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:ellipsize="end" android:layout_gravity="center" android:id="@id/vkim_bot_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:singleLine="true" android:includeFontPadding="false" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.live.views.chat.LiveRecycleView android:layout_gravity="bottom" android:id="@id/liveChatRecycle" android:focusable="false" android:focusableInTouchMode="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.0dip" android:overScrollMode="never" android:requiresFadingEdge="vertical" />
+    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/liveChatNewComments" android:background="@drawable/bg_live_new_messages" android:layout_width="wrap_content" android:layout_height="28.0dip" android:layout_margin="16.0dip" android:foreground="?selectableItemBackground">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/ic_arrow_newmessage" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/live_new_messages_text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="13.0dip" android:text="@string/unread_messages" android:fontFamily="@string/font_family_medium" />
+    </FrameLayout>
+</merge>

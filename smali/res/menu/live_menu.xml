@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/liveVideoMenuSaveToMyVideos" android:checked="false" android:title="@string/video_add_to_added" />
+    <item android:id="@id/liveVideoMenuRemoveFromMyVideos" android:checked="false" android:title="@string/video_remove_from_added" />
+    <item android:id="@id/liveVideoMenuReport" android:checked="false" android:title="@string/report_content" />
+    <item android:id="@id/liveVideoMenuRepost" android:checked="false" android:title="@string/live_video_menu_share" />
+    <item android:id="@id/liveVideoMenuBlockNotifications" android:checked="false" android:title="@string/live_video_menu_block_notifications" />
+    <item android:id="@id/liveVideoMenuUnBlockNotifications" android:checked="false" android:title="@string/live_video_menu_unblock_notifications" />
+    <item android:id="@id/liveVideoMenuAddBan" android:checked="false" android:title="@string/live_hide_from_recommendations" />
+    <item android:id="@id/liveVideoMenuRemoveBan" android:checked="false" android:title="@string/live_unhide_from_recommendations" />
+    <item android:id="@id/liveVideoMenuCopy" android:checked="false" android:title="@string/copy_link" />
+</menu>

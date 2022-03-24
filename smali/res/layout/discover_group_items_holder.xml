@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/discover_hashtags_bg" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0dip" android:textColor="@color/gray" android:gravity="center_vertical" android:id="@id/text" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="32.0dip" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    <Space android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <android.support.v7.widget.RecyclerView android:id="@id/recycle" android:background="@android:color/white" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="102.0dip" />
+</LinearLayout>

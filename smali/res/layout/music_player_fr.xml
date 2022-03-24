@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/mike_gradient" android:background="@drawable/audio_player_gradient" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:background="?background_content" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/close" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="@dimen/music_player_top_height" android:contentDescription="@string/music_talkback_roll_down_player" />
+        <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/music_player_top_height" />
+        <LinearLayout android:layout_gravity="bottom" android:id="@id/shadow" android:background="@drawable/shadow_bottom_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/music_player_bottom_height" />
+        <ImageButton android:layout_gravity="bottom" android:id="@id/shuffle" android:background="@drawable/music_player_selected_btn_1_bg" android:layout_width="@dimen/music_player_bottom_height" android:layout_height="@dimen/music_player_bottom_height" android:src="@drawable/ic_shuffle_24" android:contentDescription="@string/music_talkback_shuffle_enable" />
+        <ImageButton android:layout_gravity="bottom|center|right" android:id="@id/repeat" android:background="@drawable/music_player_selected_btn_1_bg" android:layout_width="@dimen/music_player_bottom_height" android:layout_height="@dimen/music_player_bottom_height" android:src="@drawable/ic_repeat_24" android:contentDescription="@string/music_talkback_repeat_one" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/dots" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:animateLayoutChanges="true">
+            <View android:id="@id/dot1" android:background="@drawable/music_ic_dot" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginRight="8.0dip" />
+            <View android:id="@id/dot2" android:background="@drawable/music_ic_dot" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginRight="7.0dip" />
+            <View android:id="@id/dot3" android:background="@drawable/ic_playlist_dot_10" android:layout_width="9.0dip" android:layout_height="8.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

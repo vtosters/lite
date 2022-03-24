@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ic_cancel_black" app:title="@string/avp_pick_photo_title" app:titleTextColor="@color/black" />
+    <com.vk.photogallery.PhotoGalleryView android:id="@id/gallery_view" android:background="?tabbar_background" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" app:itemPadding="3.0dip" app:mediaType="photo" />
+</FrameLayout>

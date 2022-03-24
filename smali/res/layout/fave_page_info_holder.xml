@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:background="@drawable/rounded_list_selector" android:paddingBottom="8.0dip" android:layout_width="80.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/page_info_photo" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" android:layout_alignParentTop="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/page_info_state" android:layout_width="18.0dip" android:layout_height="18.0dip" app:layout_constraintBottom_toBottomOf="@id/page_info_photo" app:layout_constraintEnd_toEndOf="@id/page_info_photo" />
+    <TextView android:textSize="12.0sp" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center" android:id="@id/page_info_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:lines="1" android:fontFamily="@string/font_family_regular" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" app:layout_constraintTop_toBottomOf="@id/page_info_photo" />
+</android.support.constraint.ConstraintLayout>

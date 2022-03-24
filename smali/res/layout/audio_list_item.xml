@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/audio_play_icon" android:layout_width="16.0dip" android:layout_height="18.0dip" android:layout_marginRight="16.0dip" />
+    <include layout="@layout/audio_list_item_common" />
+</LinearLayout>

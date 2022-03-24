@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/apps_top_padding_white_8" android:layout_width="fill_parent" android:layout_height="8.0dip" android:minHeight="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

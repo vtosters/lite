@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="3.0dip" android:outlineProvider="bounds">
+        <android.support.v7.widget.Toolbar android:theme="?actionBarTheme" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="?actionBarPopupTheme" style="?actionBarTheme" />
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:theme="?actionBarTheme" android:layout_gravity="bottom" android:id="@id/horizontal_progress_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="10000" android:progress="0" app:mpb_progressStyle="horizontal" app:mpb_showProgressBackground="false" app:mpb_useIntrinsicPadding="false" style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/appkit_loader_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/loading" layout="@layout/appkit_loading" />
+        <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
+        <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" package="com.vtosters.lite" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.vtosters.lite.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.vtosters.lite.permission.ACCESS_DATA"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="com.vk.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vk.usersstore.permission.LOAD"/>
+    <permission android:name="com.vtosters.lite.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.permission.ACCESS_DATA" android:protectionLevel="signature"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.QUICKBOOT_POWERON"/>
+    <permission android:name="com.vtosters.lite.usersstore.permission.SAVE" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.usersstore.permission.LOAD" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <application android:allowBackup="false" android:debuggable="false" android:hardwareAccelerated="true" android:icon="@mipmap/vt_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.vtosters.lite.VKApplication" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="true" android:roundIcon="@mipmap/vt_launcher_round" android:supportsRtl="true" android:theme="@style/BaseStyle">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBlTHhNGPj7ktPWrUo_d4YJs_Sn_zsISZg"/>
+        <meta-data android:name="com.google.android.geo.API_SECRET" android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk="/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
+        <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
+        <meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/cornflower_blue"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.vtosters.lite.MainActivity" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name="ru.vtosters.lite.f0x1d.LogWriterService" />
+        <activity-alias android:enabled="true" android:icon="@mipmap/vt_launcher" android:label="VTLite" android:name=".VTIconDefault" android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:icon="@mipmap/mp_launcher" android:label="@string/app_name_orig" android:name=".VTIconVK" android:targetActivity="com.vtosters.lite.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.FragmentWrapperActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:launchMode="singleTask" android:name="com.vtosters.lite.fragments.messages.chat.ChatActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/attach_photo" android:name="com.vtosters.lite.ImagePickerActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/auth" android:name="com.vtosters.lite.AuthActivity" android:theme="@style/BaseStyle.Registration.Blue" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.RepostActivity" android:theme="@style/TransparentTheme"/>
+        <activity android:label="" android:name="com.vk.sharing.PortraitSharingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.App.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|screenSize" android:label="" android:name="com.vk.sharing.SharingActivity" android:theme="@style/Theme.App.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.GameCardActivity" android:theme="@style/BaseStyle.NoActionBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.TabletDialogActivity" android:theme="@style/BaseStyle.PopupIfTablet"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.FragmentDialogActivity" android:theme="@style/BaseStyle.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.vtosters.lite.LinkRedirActivity" android:theme="@style/TranslucentStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="vklink"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vk.com" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vkontakte.ru" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="new.vk.com" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vk.com" android:pathPattern="/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vkontakte.ru" android:pathPattern="/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="new.vk.com" android:pathPattern="/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vk.me" android:pathPattern="/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vk.me" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vk.cc" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="vk.cc" android:pathPattern="/.*" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:pathPattern="/.*" android:scheme="vkontakte"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:pathPattern="/.*" android:scheme="vk"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.sendmsg"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.profile"/>
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.voipcall"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="m.vk.com" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="m.vk.com" android:pathPattern="/restore" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="m.vk.com" android:pathPattern="/restore" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.PostPhotoActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/message" android:name="com.vtosters.lite.ValidationActivity" android:theme="@style/BaseStyle.Validation"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/live" android:name="com.vtosters.lite.live.LivePlayerActivity" android:theme="@style/LivePlayerActivityTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/video" android:name="com.vk.video.VideoActivity" android:theme="@style/VideoPlayerTranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/video" android:name="com.vtosters.lite.activities.YouTubeVideoPlayerActivity" android:theme="@style/VideoPlayerTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/video" android:name="com.vtosters.lite.activities.VideoEmbedPlayerActivity" android:screenOrientation="sensorLandscape" android:theme="@style/VideoPlayerTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.vtosters.lite.SendActivity" android:theme="@style/TranslucentStyle">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="com.vtosters.lite.directshare.ImDirectShareService"/>
+        </activity>
+        <activity android:label="" android:name="com.vtosters.lite.VideoUploadDialog" android:theme="@style/Theme.App.Transparent.DialogHolder"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.WelcomeActivity" android:theme="@style/TransparentTheme">
+            <intent-filter>
+                <action android:name="com.vtosters.lite.SYNC_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.CaptchaActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.ConfirmationActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/suggest_friends" android:name="com.vtosters.lite.SuggestionsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/report_content" android:name="com.vtosters.lite.ReportContentActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.NotificationActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/auth" android:name="com.vtosters.lite.SDKAuthActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.vkontakte.android.action.SDK_AUTH"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.vtosters.lite.sdk.SDKInviteActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/friends" android:name="com.vtosters.lite.sdk.SDKFriendPickerActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.vk.voip.VoipCallActivity" android:screenOrientation="portrait" android:taskAffinity="com.vtosters.lite.voip"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/registration" android:name="com.vtosters.lite.activities.SignupActivity" android:theme="@style/BaseStyle.Registration" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/app_name" android:name="com.vk.music.AudioPlayerActivity" android:theme="@style/BaseStyle.PopupIfTablet"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/change_password" android:name="com.vtosters.lite.ChangePasswordActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.BillingActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/wall" android:name="com.vtosters.lite.TestActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="test" android:scheme="vkontakte"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="confirmation" android:name="com.vtosters.lite.ConfirmActionActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.AttachActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.PhotoVideoAttachActivity" android:theme="@style/PickerPhotoVideoActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.PhotoEditorActivity" android:theme="@style/PickerImageEditorActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.GraffitiActivity" android:screenOrientation="portrait" android:theme="@style/PickerGraffitiActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.vk.stories.CreateStoryActivity" android:screenOrientation="portrait" android:theme="@style/StoryFullscreenActivityTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stories.ShareStoryActivity" android:screenOrientation="portrait" android:theme="@style/StoryActivityTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stories.StoryViewActivity" android:screenOrientation="portrait" android:theme="@style/StoryFullscreenActivityTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stories.StorySettingsActivity" android:screenOrientation="portrait" android:theme="@style/StoryActivityTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stories.StoryPrivacySettingsActivity" android:screenOrientation="portrait" android:theme="@style/StoryActivityTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vk.music.attach.AttachMusicActivity" android:theme="@style/BaseStyle.StatusBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation" android:excludeFromRecents="true" android:label="" android:name="com.vtosters.lite.fragments.messages.chat_invite.accept.ChatInviteActivity" android:theme="@style/VkIm.Theme.ChatInvite" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.vk.pushes.PushOpenActivity" android:theme="@style/PushOpenTheme"/>
+        <activity android:name="ru.ok.android.sdk.OkAuthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="ok1258261760" android:scheme="okauth"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vk.newsfeed.posting.attachments.PostingAttachActivity" android:theme="@style/PostingAttachScreenTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.profile.ui.details.ProfileDetailsActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
+        <service android:exported="false" android:name="com.vtosters.lite.sync.online.VkOnlineService"/>
+        <service android:exported="false" android:name="com.vtosters.lite.sync.im.VkImSyncService"/>
+        <service android:name="com.vtosters.lite.audio.player.PlayerService"/>
+        <service android:exported="true" android:name="com.vtosters.lite.AccountAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <service android:exported="true" android:name="com.vtosters.lite.ContactsSyncAdapterService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_contacts"/>
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts_custom_type"/>
+        </service>
+        <service android:name="com.vk.sharing.SharingService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.vk.pushes.FirebasePushService" android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.vk.pushes.VkFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.vtosters.lite.directshare.ImDirectShareService" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.vk.voip.VoipService"/>
+        <receiver android:name="com.vtosters.lite.audio.player.MediaButtonEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/widget_player" android:name="com.vtosters.lite.PlayerWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_player_provider"/>
+        </receiver>
+        <receiver android:label="@string/widget_player_big" android:name="com.vtosters.lite.PlayerBigWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_player_big_provider"/>
+        </receiver>
+        <receiver android:name="com.vtosters.lite.LoadingBroadcastReceiver">
+            <intent-filter>
+                <action android:enabled="true" android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <action android:enabled="true" android:name="com.vtosters.lite.UPLOAD_RETRY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.vtosters.lite.BirthdayBroadcastReceiver"/>
+        <receiver android:name="com.vtosters.lite.DebugBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data android:host="777777" android:scheme="android_secret_code"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="true" android:name="com.vtosters.lite.PackageAddedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.vk.pushes.NotificationActionsReceiver"/>
+        <receiver android:name="com.vk.pushes.NotificationDeleteReceiver"/>
+        <receiver android:name="com.vk.voip.VoipActionsReceiver"/>
+        <receiver android:exported="true" android:name="com.vtosters.lite.im.bridge.broadcasts.ImBroadcastReceiver" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
+        <provider android:authorities="com.vtosters.lite.providers.audio" android:exported="true" android:name="com.vtosters.lite.audio.contentprovider.AudioContentProvider"/>
+        <provider android:authorities="com.vtosters.lite.providers.im" android:exported="true" android:name="com.vtosters.lite.im.bridge.contentprovider.ImContentProvider" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
+        <provider android:authorities="ru.vtosters.lite.provider.VKFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="ru.vtosters.lite.provider.VKFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="android.max_aspect" android:value="3.0"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:resource="@dimen/app_defaultsize_w"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:resource="@dimen/app_defaultsize_h"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:resource="@dimen/app_minimumsize_w"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:resource="@dimen/app_minimumsize_h"/>
+        <meta-data android:name="optimization_key" android:value="lONMnJymOutPww6aDtTpqGS77DtnW6hlwIrhgDPTGGyu+UvR7aR+nf8V4tSiVPyOZXgsTxne0umX209UUetCDGLXYcoMZLz/mNX4osYj/ACdI+6N7zFlO9+4L4vWJhlL59TKmQ3LDPyrd+InYdPl/WYwPBCBeeSMOPXVpUWEQsMH301NstEjSBZv+O0QzeuQS9/Jy94iop4kyFEtDkslfk6DyFEqeBLMA+D34UUhhsjwrwLC9FDtKJFTgSvfWbL0yT8GyNrUlsBlyRFsMUs6VvrMVJ9pft1rFEnn78jsaD8HrAWaIeq+DBjZ1KRokb2OI7U/XP14lbYMpLo4LgvfeQ=="/>
+        <meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true"/>
+        <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
+        <service android:name="com.vk.audio.AudioMessagePlayerService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vk.avatarpicker.AvatarPickerActivity" android:theme="@style/AvatarPickerStyle"/>
+        <receiver android:name="receivers.TimeSyncRequestedReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.vk.instantjobs.services.JobsBackgroundService" android:stopWithTask="false"/>
+        <service android:enabled="true" android:exported="false" android:name="com.vk.instantjobs.services.JobsForegroundService" android:stopWithTask="false"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.vk.instantjobs.receivers.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="false" android:name="com.vk.instantjobs.receivers.InstantJobCancelReceiver">
+            <intent-filter>
+                <action android:name="com.vk.instantjobs.receivers.ACTION_CANCEL"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.vtosters.lite.UsersContentProvider" android:exported="true" android:name="com.vk.usersstore.UsersContentProvider" android:readPermission="com.vk.usersstore.permission.LOAD" android:writePermission="com.vk.usersstore.permission.SAVE"/>
+        <activity android:name="com.vk.api.sdk.ui.VKWebViewAuthActivity" android:theme="@style/VK.Transparent"/>
+        <activity android:name="com.vk.api.sdk.ui.VKCaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.vk.api.sdk.ui.VKConfirmationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.vtosters.lite.VKInitProvider" android:exported="false" android:name="com.vk.api.sdk.internal.VKInitProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.vtosters.lite.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <service android:exported="false" android:name="ru.mail.libverify.gcm.GcmMessageHandlerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="ru.mail.libverify.gcm.GcmInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="ru.mail.libverify.gcm.GcmRegisterService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="ru.mail.libverify.gcm.GcmMessageDeliverService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="true" android:name="ru.mail.libverify.sms.SmsRetrieverReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.sms.SmsRetrieverService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="false" android:exported="true" android:name="ru.mail.libverify.sms.IncomingSmsReceiver" android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="true" android:name="ru.mail.libverify.sms.IncomingCallReceiver" android:permission="android.permission.READ_PHONE_STATE">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.sms.SmsHandlingService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="ru.mail.sms.SmsHandlingService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="ru.mail.libverify.ipc.IpcMessageService" android:permission="android.permission.INTERNET">
+            <intent-filter>
+                <action android:name="ru.mail.libverify.ipc.IpcMessageService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="ru.mail.libverify.ipc.IpcNotificationService" android:permission="android.permission.INTERNET">
+            <intent-filter>
+                <action android:name="ru.mail.libverify.ipc.IpcNotificationService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.notifications.NotificationService">
+            <intent-filter>
+                <action android:name="ru.mail.notifications.NotificationService"/>
+            </intent-filter>
+        </service>
+        <activity android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="ru.mail.libverify.notifications.SettingsActivity" android:noHistory="true" android:taskAffinity="ru.mail.libverify.notifications.SettingsActivity" android:theme="@style/libverify.Theme.Settings"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="ru.mail.libverify.notifications.SmsCodeNotificationActivity" android:noHistory="true" android:taskAffinity="ru.mail.libverify.notifications.SmsCodeNotificationActivity" android:theme="@style/libverify.Theme.Custom.Popup" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="ru.mail.libverify.notifications.SmsDialogsActivity" android:taskAffinity="ru.mail.libverify.notifications.SmsDialogsActivity" android:theme="@style/libverify.Theme.Settings"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="ru.mail.libverify.notifications.SmsMessagesActivity" android:parentActivityName="ru.mail.libverify.notifications.SmsDialogsActivity" android:taskAffinity="ru.mail.libverify.notifications.SmsDialogsActivity" android:theme="@style/libverify.Theme.Settings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".notifications.SmsDialogsActivity"/>
+        </activity>
+        <receiver android:name="ru.mail.libverify.utils.NetworkStateReceiver"/>
+        <receiver android:name="ru.mail.libverify.utils.network.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ru.mail.libverify.utils.ScreenStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.utils.VerificationService"/>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.utils.VerificationJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.utils.network.NetworkCheckService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:label="PackageStateReceiver:184" android:name="ru.mail.libverify.utils.PackageStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_MY_PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="ru.mail.libverify.utils.PackageStateReceiver"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:label="VerificationCheckService" android:name="ru.mail.libverify.fetcher.FetcherService"/>
+        <service android:enabled="true" android:exported="false" android:label="VerificationCheckService" android:name="ru.mail.libverify.fetcher.FetcherJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.utils.SettingsCheckService"/>
+        <service android:enabled="true" android:exported="false" android:name="ru.mail.libverify.utils.SettingsCheckJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:enabled="false" android:name="ru.mail.libverify.utils.SystemRestartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ru.mail.libverify.utils.AlarmReceiver"/>
+        <receiver android:enabled="false" android:name="ru.mail.libverify.utils.BatteryLevelReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="ru.mail.libverify.utils.permissions.ShadowActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.vtosters.lite.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="android.test.runner"/>
+        <activity android:label="@string/vtlproxy" android:launchMode="singleTop" android:name="ru.vtosters.lite.ui.fragments.ProxySettingsFragment" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="@string/vtlmusic" android:launchMode="singleTop" android:name="ru.vtosters.lite.ui.fragments.MusicFragment" android:windowSoftInputMode="adjustPan"/>
+        <service android:name="com.aefyr.tsg.g2.TelegramStickersService"/>
+    </application>
+</manifest>

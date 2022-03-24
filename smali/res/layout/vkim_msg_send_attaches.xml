@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView android:id="@id/vkim_attaches" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="88.0dip" android:overScrollMode="never" android:paddingStart="8.0dip" android:paddingEnd="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

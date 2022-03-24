@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/liveGiftsHolder" android:background="@drawable/bg_live_gifts_plate" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.vtosters.lite.live.views.gifts.LiveBottomSheetBehavior">
+        <View android:background="@drawable/bg_live_recommended_shadow" android:layout_width="fill_parent" android:layout_height="7.0dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="7.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/gifts" android:fontFamily="@string/font_family_medium" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/cool_grey" android:gravity="right" android:layout_gravity="center|right" android:id="@id/liveGiftsBalance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:text="" android:alpha="0.0" />
+        </FrameLayout>
+        <android.support.v7.widget.RecyclerView android:layout_gravity="bottom" android:id="@id/liveGiftsRecycle" android:paddingLeft="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="63.0dip" android:layout_marginBottom="48.0dip" android:dividerHeight="0.0dip" />
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:layout_gravity="center" android:id="@id/liveGiftsProgress" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" app:mpb_indeterminateTint="@color/white" app:mpb_progressStyle="circular" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/liveGiftsSendButt" android:background="@color/live_gift_send_button" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:foreground="@drawable/picker_white_ripple_bounded" android:layout_weight="1.0" android:elevation="10.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@color/live_gift_send_button_inactive" android:layout_gravity="center" android:id="@id/liveGiftsSendTextCancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/liveGiftsSendTextSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_gift" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    </FrameLayout>
+</merge>

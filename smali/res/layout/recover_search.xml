@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+            <include android:id="@id/search" layout="@layout/toolbar_modern_search_view" />
+        </android.support.design.widget.AppBarLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.vk.search.view.SearchRecyclerPaginatedView android:id="@id/rv_search" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ll_bottom_parameters_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:id="@id/bottom_navigation_shadow" android:background="@drawable/bg_bottom_navigation_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+                <FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_search_params_24" android:scaleType="centerInside" android:tint="#ff528bcc" />
+                    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:layout_marginRight="56.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="#ff2c2d2e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/discover_search_parameters" android:fontFamily="@string/font_family_medium" />
+                        <TextView android:textSize="14.0sp" android:textColor="#ff909499" android:id="@id/tv_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="center|right" android:id="@id/iv_close" android:background="@drawable/highlight_unlimited" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_cancel_24" android:scaleType="centerInside" android:tint="#ffaaaeb3" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+</FrameLayout>

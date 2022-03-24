@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/photo" android:layout_width="fill_parent" android:layout_height="wrap_content" app:actualImageScaleType="centerCrop" />
+        <TextView android:textSize="16.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/photo_label" android:background="#30000000" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/photo" android:layout_alignTop="@id/photo" android:layout_alignRight="@id/photo" android:layout_alignBottom="@id/photo" android:fontFamily="@string/font_family_medium" />
+    </RelativeLayout>
+    <TextView android:textSize="15.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:singleLine="true" android:drawableLeft="@drawable/ic_snapper_preview" android:drawablePadding="12.0dip" android:fontFamily="@string/font_family_medium" />
+</LinearLayout>

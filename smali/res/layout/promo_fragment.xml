@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:layout_gravity="bottom|center" android:id="@id/pager" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vtosters.lite.ui.widget.PageIndicator android:layout_gravity="bottom|center" android:id="@id/page_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/music_promo_page_indicator_height" android:layout_marginBottom="14.0dip" app:PIColorNormal="#99ffffff" app:PIColorSelect="@android:color/white" app:PIRadiusBig="4.0dip" app:PIRadiusNormal="3.0dip" app:PIStepInner="16.0dip" app:PIType="circle" />
+</FrameLayout>

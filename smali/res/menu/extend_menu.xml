@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_user_24" android:id="@id/menu_friends" android:title="@string/friends" />
+    <item android:icon="@drawable/ic_users_24" android:id="@id/menu_groups" android:title="@string/menu_groups" />
+    <item android:icon="@drawable/ic_camera_24" android:id="@id/menu_photos" android:title="@string/photos" />
+    <item android:icon="@drawable/ic_music_24" android:id="@id/menu_audios" android:title="@string/music" />
+    <item android:icon="@drawable/ic_video_24" android:id="@id/menu_videos" android:title="@string/videos" />
+    <item android:icon="@drawable/ic_live_24" android:id="@id/menu_lives" android:title="@string/sett_live" />
+    <item android:icon="@drawable/ic_podcast_24" android:id="@id/menu_podcasts" android:title="@string/podcasts" />
+    <item android:icon="@drawable/ic_games_24" android:id="@id/menu_games" android:title="@string/games" />
+    <item android:icon="@drawable/ic_favorite_24" android:id="@id/menu_fave" android:title="@string/fave_title" />
+    <item android:icon="@drawable/ic_menu_like_24" android:id="@id/menu_feed_likes" android:title="@string/sett_likes" />
+    <item android:icon="@drawable/ic_document_24" android:id="@id/menu_documents" android:title="@string/docs" />
+    <item android:icon="@drawable/ic_money_transfer_24" android:id="@id/menu_payments" android:title="@string/money_transfer_money_transfers" />
+    <item android:icon="@drawable/ic_help_24" android:id="@id/menu_support" android:title="@string/help" />
+    <item android:icon="@drawable/ic_dropdown_24" android:id="@id/menu_show_more" android:title="@string/menu_more" />
+    <item android:icon="@drawable/ic_money_circle_24" android:id="@id/menu_vk_pay" android:title="@string/vk_pay" />
+</menu>

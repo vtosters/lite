@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" app:title="@string/vkim_settings_account_edit_screen_name" style="@style/VkIm.Toolbar.Secondary" />
+    <com.pnikosis.materialishprogress.ProgressWheel android:id="@id/progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_centerInParent="true" app:matProg_barColor="?im_accent" app:matProg_progressIndeterminate="true" />
+    <com.vk.im.ui.views.ContentErrorView android:layout_gravity="center" android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:vkim_buttonText="@string/vkim_retry" style="@style/VkIm.ContentErrorView" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:layout_below="@id/toolbar">
+        <EditText android:id="@id/screen_name_value" android:background="@drawable/bg_settings_edittext_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:hint="@string/vkim_hint_screen_name" style="@style/VkIm.Settings.EditTextArea.SingleLine" />
+        <TextView android:id="@id/screen_name_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:includeFontPadding="false" />
+        <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:id="@id/screen_name_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/toolbar_shadow" android:layout_below="@id/toolbar" android:contentDescription="@null" />
+</RelativeLayout>

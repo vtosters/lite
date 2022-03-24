@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/floating_placeholder_square_image" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:scaleType="centerCrop" android:layout_marginStart="12.0dip" app:roundedCornerRadius="4.0dip" />
+    <com.vk.imageloader.view.VKImageView android:id="@id/floating_placeholder_circle_image" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:scaleType="center" android:layout_marginStart="12.0dip" app:roundAsCircle="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/floating_placeholder_text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="11.0dip" android:layout_marginStart="64.0dip" android:layout_marginEnd="48.0dip">
+        <TextView android:textSize="@dimen/newsfeed_floating_placeholder_text_size" android:ellipsize="end" android:id="@id/floating_placeholder_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxLines="2" android:lineSpacingExtra="3.0dip" android:fontFamily="sans-serif" />
+        <TextView android:textSize="14.0dip" android:ellipsize="end" android:id="@id/floating_placeholder_action_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:lineSpacingExtra="4.0sp" android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+    <View android:layout_gravity="end" android:id="@id/floating_placeholder_close_background" android:background="@drawable/bg_close_floating_placeholder" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:layout_marginEnd="12.0dip" />
+    <ImageView android:layout_gravity="end" android:id="@id/floating_placeholder_close_button" android:layout_width="@dimen/newsfeed_floating_placeholder_close_image_size" android:layout_height="@dimen/newsfeed_floating_placeholder_close_image_size" android:foreground="@drawable/highlight_circle_white" android:src="@drawable/ic_close_16" android:scaleType="center" />
+</merge>

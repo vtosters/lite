@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/picker_image_editor_bottom_panel">
+        <ImageView android:id="@id/iv_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.vk.crop.CropImageView android:id="@id/cv_crop" android:layout_width="fill_parent" android:layout_height="fill_parent" app:civ_circleCrop="false" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ll_bottom_panel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_bottom_panel">
+        <FrameLayout android:id="@id/fl_controls_panel" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_actions_height">
+            <TextView android:textSize="14.0sp" android:textColor="@color/picker_dark_icon" android:gravity="center" android:id="@id/tv_rotation" android:layout_width="fill_parent" android:layout_height="28.0dip" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_aspect_ratio" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/picker_ic_aspect_ratio_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+                <com.vk.crop.widget.AdjusterView android:layout_gravity="center|top" android:id="@id/av_adjuster" android:paddingTop="28.0dip" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_rotate" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/picker_ic_rotate_left_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/rl_bottom_bar" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height">
+            <TextView android:textSize="15.0sp" android:textColor="@color/picker_dark_icon" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="64.0dip" android:layout_marginRight="64.0dip" android:text="@string/picker_crop_full" android:fontFamily="@string/font_family_medium" />
+            <FrameLayout android:id="@id/fl_reset" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="64.0dip" android:layout_marginRight="64.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="?accent" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_reset" android:background="@drawable/picker_white_ripple_unbounded" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/picker_reset" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+            </FrameLayout>
+            <ImageView android:layout_gravity="start" android:id="@id/iv_cancel" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="@dimen/picker_bottom_button_height" android:layout_height="fill_parent" android:src="@drawable/picker_ic_close_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            <ImageView android:layout_gravity="end" android:id="@id/iv_done" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="@dimen/picker_bottom_button_height" android:layout_height="fill_parent" android:src="@drawable/ic_done_24" android:scaleType="centerInside" android:tint="?accent" />
+            <View android:background="@color/picker_grey_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

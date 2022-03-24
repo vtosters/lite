@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/post_divider" android:background="#26000000" android:layout_width="wrap_content" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginRight="@dimen/post_side_padding" />
+    <TextView android:textSize="16.0dip" android:textColor="?accent" android:gravity="center" android:id="@android:id/button1" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:fontFamily="@string/font_family_medium" />
+</LinearLayout>

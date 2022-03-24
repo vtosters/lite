@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="?im_app_background_secondary" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:background="@drawable/vkim_section_shadow" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+</FrameLayout>

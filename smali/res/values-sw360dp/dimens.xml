@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="msg_bubble_max_width">320.0dip</dimen>
+    <dimen name="msg_content_max_height">320.0dip</dimen>
+    <dimen name="music_action_button_text_size">13.0dip</dimen>
+    <dimen name="sticker_suggest_size">72.0dip</dimen>
+    <dimen name="vkim_dialogs_title_text_size">25.0dip</dimen>
+    <dimen name="vkim_header_title_max_width">180.0dip</dimen>
+    <dimen name="voice_rec_button_height">216.0dip</dimen>
+    <dimen name="voice_rec_button_margin">-6.0dip</dimen>
+    <dimen name="voice_rec_button_shift_x">20.0dip</dimen>
+    <dimen name="voice_rec_button_shift_y_vert">85.0dip</dimen>
+    <dimen name="voice_rec_button_size">80.0dip</dimen>
+    <dimen name="voice_rec_button_width">104.0dip</dimen>
+    <dimen name="voice_rec_duration_padding">55.0dip</dimen>
+    <dimen name="voice_rec_min_wave_radius">25.0dip</dimen>
+    <dimen name="voice_rec_shadow_size">104.0dip</dimen>
+    <dimen name="vkim_article_blocked_ic_size">72.0dip</dimen>
+    <dimen name="vkim_article_blocked_title_margin">112.0dip</dimen>
+    <dimen name="vkim_article_blocked_title_size">16.0sp</dimen>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/edit" android:title="@string/edit" android:showAsAction="never" />
+    <item android:id="@id/delete" android:title="@string/delete" android:showAsAction="never" />
+    <item android:id="@id/save" android:title="@string/save" android:showAsAction="never" />
+    <item android:id="@id/copy_link" android:title="@string/copy_link" android:showAsAction="never" />
+    <item android:id="@id/send_to_friend" android:title="@string/send_to_friend" android:showAsAction="never" />
+    <item android:id="@id/save_to_album" android:title="@string/save_to_album" android:showAsAction="never" />
+    <item android:id="@id/go_to_album" android:title="@string/photo_go_to_album" android:showAsAction="never" />
+    <item android:id="@id/report" android:title="@string/report_content" android:showAsAction="never" />
+</menu>

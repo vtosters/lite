@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/MessageRoot.Out"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/message_state_block" />
+    <com.vtosters.lite.ui.MessageRelativeLayout style="@style/MessageWrap.Out">
+        <LinearLayout android:gravity="center" android:id="@id/msg_attachments_wrapper" android:background="@drawable/gift_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/msg_text" android:layout_alignRight="@id/msg_text">
+            <com.vtosters.lite.ui.FlowLayout android:id="@id/msg_attachments" android:layout_width="@dimen/gift_size_in_message" android:layout_height="@dimen/gift_size_in_message" />
+        </LinearLayout>
+        <TextView android:textSize="14.0dip" android:textColor="#ff9e8f72" android:gravity="center" android:id="@id/ext_gift_text" android:layout_width="wrap_content" android:layout_height="44.0dip" android:drawableLeft="@drawable/ic_chat_att_gift" android:drawablePadding="8.0dip" android:layout_below="@id/msg_attachments_wrapper" android:layout_centerHorizontal="true" />
+        <com.vtosters.lite.ui.CorrectlyMeasuringTextView android:textColor="#ff7a6c50" android:gravity="center" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:paddingBottom="10.0dip" android:layout_marginBottom="-2.0dip" android:maxWidth="@dimen/gift_message_max_width" android:minWidth="@dimen/gift_message_min_width" android:layout_below="@id/ext_gift_text" style="@style/MessageText" />
+    </com.vtosters.lite.ui.MessageRelativeLayout>
+    <TextView style="@style/MessageTime.Out" />
+</LinearLayout>

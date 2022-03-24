@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/appkit_toolbar" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/filter_block" android:background="#fff7f7f7" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.vk.core.view.NavigationSpinner android:id="@id/spinner" android:background="@drawable/highlight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="8.0dip" android:dropDownWidth="wrap_content" />
+            <ImageButton android:layout_gravity="right" android:id="@id/buttonPriceSettings" android:background="@drawable/highlight" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/is_sort_settings_24" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/filter_block">
+            <FrameLayout android:id="@id/filter_price" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="16.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/filter_price_badge" android:background="@drawable/highlight_filter_badge" android:paddingLeft="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="32.0dip">
+                    <TextView android:textSize="14.0dip" android:textColor="#ff51647a" android:id="@id/price_filter_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageButton android:id="@id/filter_price_close" android:background="@drawable/highlight_circle" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_close_filter" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@id/appkit_loader_content" android:background="@color/cards_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/filter_block">
+                <include android:id="@id/loading" layout="@layout/appkit_loading" />
+                <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
+                <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/filter_block_shadow" android:background="@drawable/bg_search_expand_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/filter_block" />
+    </RelativeLayout>
+</LinearLayout>

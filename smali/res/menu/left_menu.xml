@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_newsfeed_24" android:id="@id/menu_newsfeed" android:title="@string/newsfeed" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_notification_24" android:id="@id/menu_feedback" android:title="@string/not_notifications" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_message_24" android:id="@id/menu_messages" android:title="@string/messages" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_search_24" android:id="@id/menu_search" android:title="@string/search" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_user_24" android:id="@id/menu_friends" android:title="@string/friends" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_users_24" android:id="@id/menu_groups" android:title="@string/menu_groups" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_camera_24" android:id="@id/menu_photos" android:title="@string/photos" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_music_24" android:id="@id/menu_audios" android:title="@string/music" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_video_24" android:id="@id/menu_videos" android:title="@string/videos" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_live_filter_24dp" android:id="@id/menu_lives" android:title="@string/sett_live" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_podcast_24" android:id="@id/menu_podcasts" android:title="@string/podcasts" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_games_24" android:id="@id/menu_games" android:title="@string/games" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_favorite_24" android:id="@id/menu_fave" android:title="@string/fave_title" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_menu_like_24" android:id="@id/menu_feed_likes" android:title="@string/sett_likes" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_document_24" android:id="@id/menu_documents" android:title="@string/docs" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_money_transfer_24" android:id="@id/menu_payments" android:title="@string/money_transfer_money_transfers" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_help_24" android:id="@id/menu_support" android:title="@string/help" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_money_circle_24" android:id="@id/menu_vk_pay" android:title="@string/vk_pay" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_services_24" android:id="@id/menu_vk_apps" android:title="@string/menu_apps" app:menuTint="@color/leftmenu_icon" />
+    <item android:icon="@drawable/ic_settings_24" android:id="@id/menu_settings" android:title="@string/menu_settings" app:menuTint="@color/leftmenu_icon" />
+</menu>

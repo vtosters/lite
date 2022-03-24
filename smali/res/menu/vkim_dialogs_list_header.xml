@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_add_24" android:id="@id/im_dialogs_create" android:title="@string/vkim_accessibility_create_dialog" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_search_24" android:id="@id/im_dialogs_search" android:title="@string/search" android:showAsAction="always" app:iconTint="?im_app_icon_toolbar" app:showAsAction="always" />
+</menu>

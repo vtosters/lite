@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/container" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.stories.views.ShareStoryPaginatedView android:id="@id/list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="48.0dip" android:layout_marginBottom="48.0dip" />
+    <View android:layout_gravity="top" android:background="@drawable/picker_bg_attach_toolbar" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginTop="56.0dip" />
+    <View android:layout_gravity="bottom" android:background="@drawable/bg_stories_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginBottom="48.0dip" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_send" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip">
+            <TextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/btn_send" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/send" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+            <TextView android:textSize="14.0dip" android:textColor="?accent" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_counter" android:background="@drawable/picker_bg_white_circle" android:layout_width="22.0dip" android:layout_height="22.0dip" android:singleLine="true" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:layout_marginStart="8.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/author_picker_layout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="56.0dip">
+        <LinearLayout android:orientation="vertical" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="#1e000000" android:layout_width="wrap_content" android:layout_height="0.5dip" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:ellipsize="end" android:gravity="start" android:background="?tabbar_background" android:paddingTop="15.0dip" android:paddingBottom="14.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/story_author" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+            <android.support.v7.widget.RecyclerView android:id="@id/author_list" android:background="?tabbar_background" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="4.0dip" />
+        </LinearLayout>
+        <View android:background="@drawable/story_authors_picker_shadow" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+        <View android:id="@id/touch_detector" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="56.0dip" android:elevation="0.0dip" layout="@layout/toolbar_white" />
+    <LinearLayout android:layout_gravity="start|center|top" android:orientation="horizontal" android:id="@id/selected_author_layout" android:background="@drawable/rounded_list_selector" android:padding="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginBottom="9.0dip" android:layout_marginStart="55.0dip" android:layout_marginEnd="9.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="#ff5a5d61" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/selected_author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_stories_arrow_down" android:scaleType="center" android:layout_marginStart="6.0dip" />
+    </LinearLayout>
+</FrameLayout>

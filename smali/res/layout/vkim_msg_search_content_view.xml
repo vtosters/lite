@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/vkim_background_view" style="?im_search_bg_style" />
+    <com.vk.core.ui.AppBarLayoutWithDrawingOrderCallback android:id="@id/vkim_search_container" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <FrameLayout android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="enterAlways|scroll">
+            <com.vk.core.view.ModernSearchView android:id="@id/vkim_search" style="?im_toolbar_search_style" />
+        </FrameLayout>
+        <android.support.design.widget.TabLayout android:id="@id/vkim_tabs" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="48.0dip" app:layout_scrollFlags="snap" app:tabIndicatorColor="?header_tab_active_indicator" app:tabMode="fixed" app:tabSelectedTextColor="?header_tab_active_text" app:tabTextAppearance="@style/VkIm.Toolbar.Title" app:tabTextColor="?header_tab_inactive_text" />
+    </com.vk.core.ui.AppBarLayoutWithDrawingOrderCallback>
+    <android.support.v4.view.ViewPager android:id="@id/vkim_viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <View android:id="@id/shadow" app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
+</android.support.design.widget.CoordinatorLayout>

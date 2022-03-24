@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ampm_label_size">21.0sp</dimen>
+    <dimen name="ampm_left_padding">7.0dip</dimen>
+    <dimen name="footer_height">48.0dip</dimen>
+    <dimen name="header_height">96.0dip</dimen>
+    <dimen name="time_label_size">64.0sp</dimen>
+    <dimen name="vkim_header_title_max_width">460.0dip</dimen>
+    <dimen name="vkim_toolbar_height">56.0dip</dimen>
+    <dimen name="left_side_width">315.0dip</dimen>
+    <dimen name="time_label_right_padding">16.0sp</dimen>
+</resources>

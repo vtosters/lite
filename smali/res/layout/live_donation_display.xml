@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/supCommDisplayTop" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/bg_live_supermsg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:maxWidth="450.0dip" android:minWidth="150.0dip">
+        <com.vtosters.lite.live.base.MaskableFrameLayout android:id="@id/liveDonationMaskable" android:background="@drawable/mask_live_supermsg_avatar" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginLeft="22.0dip" android:layout_marginTop="21.0dip">
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center|left" android:id="@id/liveDonationUserImage" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerCrop" />
+        </com.vtosters.lite.live.base.MaskableFrameLayout>
+        <com.vtosters.lite.live.views.addbutton.AddDonationButtonView android:id="@id/liveDonationAdd" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="58.0dip" android:layout_marginTop="51.0dip" android:scaleType="centerCrop" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="left" android:id="@id/liveDonationUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="95.0dip" android:layout_marginTop="31.0dip" android:layout_marginRight="78.0dip" android:text="My nama " android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+        <ImageView android:id="@id/liveDonationSuperLight" android:visibility="visible" android:layout_width="8.0dip" android:layout_height="14.0dip" android:layout_marginLeft="95.0dip" android:layout_marginTop="52.0dip" android:src="@drawable/ic_live_supermsg" />
+        <TextView android:textSize="14.0sp" android:textColor="?accent" android:ellipsize="end" android:gravity="left" android:id="@id/liveDonationSuperText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="95.0dip" android:layout_marginTop="49.0dip" android:layout_marginRight="50.0dip" android:layout_marginBottom="24.0dip" android:text="   Super tyext Super tyext Super tyext Super tyext Super tyext" android:maxLines="5" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="left" android:id="@id/liveDonationGiftText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="95.0dip" android:layout_marginTop="49.0dip" android:layout_marginRight="76.0dip" android:layout_marginBottom="16.0dip" android:text="" android:singleLine="true" />
+    </FrameLayout>
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center|right|top" android:id="@id/liveDonationGift" android:layout_width="98.0dip" android:layout_height="98.0dip" android:scaleType="fitCenter" />
+    <FrameLayout android:layout_gravity="bottom|center|right" android:id="@id/liveDonationComboFactorHolder" android:background="@drawable/bg_live_multiplier_badge" android:layout_width="48.0dip" android:layout_height="48.0dip">
+        <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_vertical" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/ic_multiplier_8" android:tint="?accent" />
+            <TextView android:textSize="16.0dip" android:textColor="?accent" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/liveDonationComboFactor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="3" android:includeFontPadding="false" android:fontFamily="sans-serif-black" />
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

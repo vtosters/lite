@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/special_block" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@android:id/text1" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="360.0dip" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/gray" android:ellipsize="end" android:id="@android:id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="360.0dip" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="4.0dip" />
+    <TextView android:id="@android:id/button1" android:paddingLeft="6.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/music_section_special2_play" android:drawableLeft="@drawable/ic_play_24" android:drawablePadding="6.0dip" android:fontFamily="@string/font_family_medium" style="@style/VKUIButton.Primary" />
+</LinearLayout>

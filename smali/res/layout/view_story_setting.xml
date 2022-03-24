@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="90.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_stories" />
+        <TextView android:textSize="14.0sp" android:textColor="#89000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_stories_desc" />
+    </LinearLayout>
+    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/switch_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/bottom_navigation_shadow" android:background="@drawable/bg_bottom_navigation_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+    <FrameLayout android:id="@id/fl_bottom_panel" android:layout_width="fill_parent" android:layout_height="@dimen/ui_kit_bottom_panel">
+        <ImageView android:layout_gravity="start|center" android:id="@id/back" android:background="@drawable/highlight" android:layout_width="64.0dip" android:layout_height="@dimen/ui_kit_bottom_panel" android:src="@drawable/ic_back_24" android:scaleType="center" android:layout_marginStart="4.0dip" />
+        <ImageView android:layout_gravity="start|center" android:id="@id/forward" android:background="@drawable/highlight" android:layout_width="64.0dip" android:layout_height="@dimen/ui_kit_bottom_panel" android:src="@drawable/ic_forward_24" android:scaleType="center" android:layout_marginStart="68.0dip" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/reply" android:background="@drawable/highlight" android:layout_width="@dimen/ui_kit_bottom_panel" android:layout_height="@dimen/ui_kit_bottom_panel" android:src="@drawable/ic_share_outline_24" android:scaleType="center" android:layout_marginEnd="4.0dip" />
+    </FrameLayout>
+</merge>

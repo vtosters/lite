@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.avatars.AvatarView android:layout_gravity="center_horizontal" android:id="@id/im_avatar" android:layout_width="96.0dip" android:layout_height="96.0dip" android:layout_marginTop="34.0dip" />
+    <com.vk.core.widget.FluidHorizontalLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <TextView android:textSize="20.0sp" android:textStyle="normal" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/im_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:includeFontPadding="false" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/font_family_medium" app:vk_layout_isFluid="true" />
+        <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/im_verified" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/vkim_ic_verified" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@null" android:translationY="0.0sp" android:layout_marginStart="4.0dip" />
+    </com.vk.core.widget.FluidHorizontalLayout>
+    <TextView android:textSize="15.0sp" android:textColor="#ff909499" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/im_last_seen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:lines="1" android:lineSpacingExtra="5.0sp" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+</LinearLayout>

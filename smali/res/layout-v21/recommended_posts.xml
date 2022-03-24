@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.ui.OverlayTextView android:textSize="14.0sp" android:textColor="?button_primary_foreground" android:gravity="center" android:layout_gravity="center|top" android:id="@android:id/button1" android:background="@drawable/bg_panel_new_posts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="36.0dip" android:fontFamily="@string/font_family_medium" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:elevation="6.0dip" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/highlight" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_search_24" android:tint="?button_outline_foreground" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="?text_muted" android:ellipsize="end" android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="13.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="center" android:id="@id/caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/card_view" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginTop="-10.0dip" card_view:cardBackgroundColor="?background_content" card_view:cardCornerRadius="2.0dip" card_view:cardElevation="1.0dip" card_view:cardUseCompatPadding="true" card_view:contentPadding="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vkim_progress" android:layout_width="40.0dip" android:layout_height="40.0dip" card_view:matProg_barColor="?im_accent_dark" card_view:matProg_progressIndeterminate="true" />
+</android.support.v7.widget.CardView>

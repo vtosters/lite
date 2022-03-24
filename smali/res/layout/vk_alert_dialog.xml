@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/fragment_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AlertDialogLayout android:gravity="start|center|top" android:orientation="vertical" android:id="@id/parentPanel" android:paddingTop="22.0dip" android:paddingBottom="44.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <include layout="@layout/vk_alert_dialog_title" />
+        <FrameLayout android:id="@id/contentPanel" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="24.0dip" android:minHeight="0.0dip" android:layout_weight="1.0">
+            <View android:layout_gravity="top" android:id="@id/scrollIndicatorUp" android:background="?colorControlHighlight" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <android.support.v4.widget.NestedScrollView android:id="@id/scrollView" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <android.widget.Space android:id="@id/textSpacerNoTitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/abc_dialog_padding_top_material" />
+                    <TextView android:textColor="?text_subhead" android:id="@android:id/message" android:paddingLeft="?dialogPreferredPadding" android:paddingRight="?dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="6.0sp" style="@style/VKUIText.Subhead" />
+                    <android.widget.Space android:id="@id/textSpacerNoButtons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/abc_dialog_padding_top_material" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+            <View android:layout_gravity="bottom" android:id="@id/scrollIndicatorDown" android:background="?colorControlHighlight" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/customPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="0.0dip">
+            <FrameLayout android:id="@id/custom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <include layout="@layout/vk_alert_dialog_button_bar" />
+    </android.support.v7.widget.AlertDialogLayout>
+</com.vk.core.view.FitSystemWindowsFrameLayout>

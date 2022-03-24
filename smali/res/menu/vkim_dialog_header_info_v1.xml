@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@id/call" android:title="@string/vkim_msg_header_menu_call" />
+        <item android:id="@id/attaches" android:title="@string/vkim_msg_header_menu_attaches" />
+        <item android:id="@id/pinned_msg_show" android:title="@string/vkim_dialog_option_pinned_msg_show" />
+        <item android:id="@id/pinned_msg_hide" android:title="@string/vkim_dialog_option_pinned_msg_hide" />
+        <item android:id="@id/pinned_msg_detach" android:title="@string/vkim_dialog_option_pinned_msg_detach" />
+        <item android:id="@id/messages_receive_enable" android:title="@string/vkim_msg_header_menu_msg_receive_enable" />
+        <item android:id="@id/message_receive_disable" android:title="@string/vkim_msg_header_menu_msg_receive_disable" />
+        <item android:id="@id/notifications_enable" android:title="@string/vkim_msg_header_menu_notifications_enable" />
+        <item android:id="@id/notifications_disable" android:title="@string/vkim_msg_header_menu_notifications_disable" />
+        <item android:id="@id/chat_settings" android:title="@string/vkim_msg_header_menu_chat_settings" />
+        <item android:id="@id/clear_history" android:title="@string/vkim_msg_header_menu_clear_history" />
+        <item android:id="@id/leave_chat" android:title="@string/vkim_msg_header_menu_leave_chat" />
+        <item android:id="@id/return_to_chat" android:title="@string/vkim_msg_header_menu_return_to_chat" />
+    </group>
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vkim_dialogs_title_text_size">24.0dip</dimen>
+    <dimen name="vkim_header_title_max_width">140.0dip</dimen>
+    <dimen name="vkim_list_empty_icon_size">120.0dip</dimen>
+</resources>

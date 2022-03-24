@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/VKAppBar">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/attach_gallery_close_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_close_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/close" android:layout_marginStart="4.0dip" />
+            <android.support.v7.widget.AppCompatSpinner android:id="@id/attach_gallery_album_spinner" android:background="@null" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="60.0dip" />
+            <TextView android:textSize="20.0sp" android:textColor="?text_muted" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/attach_gallery_title_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/newsfeed_newpost_tab_gallery" android:singleLine="true" android:fontFamily="sans-serif-medium" android:layout_marginStart="64.0dip" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/attach_gallery_recycler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.newsfeed.posting.attachments.gallery.CancelableAttachCounterView android:layout_gravity="bottom" android:id="@id/attach_gallery_counter_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_viewer_bottom_padding" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/attach_gallery_no_images_layout" android:background="?background_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <include layout="@layout/picker_attach_gallery_header" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/subhead_gray" android:gravity="center_horizontal" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginBottom="16.0dip" android:text="@string/newsfeed_newpost_no_images" android:lineSpacingMultiplier="1.1" />
+        <TextView android:textSize="16.0sp" android:id="@id/attach_gallery_take_photo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newsfeed_newpost_take_photo" android:singleLine="true" style="@style/VKUIButton.Primary" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/attach_gallery_permission_layout" android:paddingTop="26.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize" />
+    <com.vk.attachpicker.widget.ContextProgressView android:layout_gravity="center_horizontal" android:id="@id/attach_gallery_progress_view" android:visibility="visible" android:layout_width="@dimen/picker_gallery_loading_progress" android:layout_height="@dimen/picker_gallery_loading_progress" android:layout_marginTop="128.0dip" />
+    <com.vk.core.view.AppBarShadowView style="@style/PostingAppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

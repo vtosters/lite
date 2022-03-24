@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.common.view.OverlayFrameLayout android:orientation="horizontal" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="8.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight_post" app:padOverlay="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="114.0dip" android:layout_height="fill_parent">
+        <com.vk.imageloader.view.VKSnippetImageView android:id="@id/snippet_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_link_state" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_margin="12.0dip" android:src="@drawable/ic_linked_24" android:scaleType="centerInside" android:tint="#ffbfc8d2" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/info" android:background="@drawable/attach_fb_right" android:paddingLeft="12.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="80.0dip" android:layout_marginStart="114.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/attach_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="35.0dip" />
+        <LinearLayout android:id="@id/attach_subtitle_wrap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="35.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/attach_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <com.vtosters.lite.ui.RatingView android:id="@id/attach_rating" android:layout_width="88.0dip" android:layout_height="19.0dip" android:paddingStart="7.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/attach_review_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:paddingStart="7.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_amp" style="@style/AmpSmallIconStyle" />
+            <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/attach_subsubtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:gravity="center" android:id="@id/attach_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:maxLines="1" style="@style/outline_button" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|center|top" android:id="@id/attach_snippet_small_remove_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-16.0dip" android:src="@drawable/ic_close_attach_36" android:contentDescription="@string/delete" android:layout_marginEnd="@dimen/post_side_padding_negative" />
+    <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/snippet_toggle_fave" android:background="@drawable/highlight_circle_white" android:visibility="visible" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/fave_start_button" android:scaleType="center" android:tint="?icon_secondary" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/snippet_actions" android:background="@drawable/highlight_unlimited" android:visibility="visible" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_24" android:scaleType="center" android:tint="@color/black_opacity_15" />
+    </LinearLayout>
+</com.vk.common.view.OverlayFrameLayout>

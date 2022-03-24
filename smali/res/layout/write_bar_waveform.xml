@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginRight="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/writebar_remove" android:background="@drawable/highlight_icon" android:padding="8.0dip" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginLeft="6.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="2.0dip" android:src="@drawable/ic_cancel_24" android:scaleType="center" android:tint="#ffabafb3" android:contentDescription="@string/cancel" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_write_bar_waveform" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="6.0dip">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/writebar_play" android:background="@drawable/highlight_circle_white" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_24" android:scaleType="center" android:contentDescription="@null" />
+            <ImageView android:id="@id/writebar_pause" android:background="@drawable/highlight_circle_white" android:padding="4.0dip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pause_24" android:scaleType="center" android:contentDescription="@null" />
+        </FrameLayout>
+        <com.vtosters.lite.ui.widget.WaveformView android:id="@id/writebar_waveform" android:layout_width="0.0dip" android:layout_height="24.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="0.0dip" android:layout_weight="1.0" app:primaryColor="@color/white" app:progressColor="#ffcdd3da" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/writebar_waveform_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="1.0dip" />
+    </LinearLayout>
+</LinearLayout>

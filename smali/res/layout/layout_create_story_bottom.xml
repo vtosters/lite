@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom" android:id="@id/fl_bottom_buttons_panel" android:background="#01000000" android:paddingTop="4.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="116.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.vk.stories.view.NoOverlappingRenderingFrameLayout android:layout_gravity="center|left" android:id="@id/iv_gallery_thumbnail_container" android:layout_width="0.0px" android:layout_height="48.0dip" android:layout_marginLeft="12.0dip" android:layout_weight="1.0">
+            <View android:layout_gravity="center" android:id="@id/gallery_camera_roll" android:background="@drawable/ic_camera_roll_20" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+            <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/iv_gallery_thumbnail" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="32.0dip" android:layout_height="32.0dip" app:placeholderImage="@color/camera_roll_thumbnail_placeholder" app:roundedCornerRadius="2.0dip" />
+        </com.vk.stories.view.NoOverlappingRenderingFrameLayout>
+        <FrameLayout android:layout_gravity="center|left" android:layout_width="0.0px" android:layout_height="48.0dip" android:layout_weight="1.0">
+            <com.vk.stories.view.NoOverlappingRenderingImageView android:layout_gravity="center" android:id="@id/iv_flash" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_flash_off_48" />
+        </FrameLayout>
+        <Space android:layout_width="0.0px" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_weight="1.0" />
+        <FrameLayout android:layout_gravity="center|right" android:layout_width="0.0px" android:layout_height="48.0dip" android:layout_weight="1.0">
+            <com.vk.stories.view.NoOverlappingRenderingImageView android:layout_gravity="center" android:id="@id/iv_switch_camera" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_camera_switch_48" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="center|right" android:id="@id/fl_mask_button_container" android:layout_width="0.0px" android:layout_height="48.0dip" android:layout_marginRight="12.0dip" android:layout_weight="1.0">
+            <com.vk.stories.view.NoOverlappingRenderingImageView android:layout_gravity="center" android:id="@id/iv_mask_panel_switch" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_mask_off_48" />
+            <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_new_masks_badge" android:background="@drawable/bg_masks_new_badge_big" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginTop="-11.0dip" android:minWidth="18.0dip" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="-11.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.vk.stories.view.ShutterButton android:layout_gravity="center" android:id="@id/shutter_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

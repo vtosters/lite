@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <layer-list>
+                    <item android:top="46.0dip">
+                        <shape>
+                            <solid android:color="?accent" />
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+    <item android:drawable="@drawable/highlight" />
+</layer-list>

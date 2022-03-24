@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:theme="@style/AppTheme.ActionBarTheme" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:titleTextColor="@color/music_text_primary_inverse">
+        <TextView android:theme="@style/AppTheme.ActionBarTheme" android:textSize="20.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/playlist_collapsed_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" app:fontFamily="@font/roboto_medium" />
+    </android.support.v7.widget.Toolbar>
+    <com.vk.music.playlist.modern.PlaylistRecyclerPaginationView android:id="@id/music_playlist_content_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:enableItemAnimations="true" />
+</LinearLayout>

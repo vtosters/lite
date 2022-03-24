@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/picker_white_ripple_bounded" android:paddingLeft="@dimen/small_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatRadioButton android:textSize="16.0sp" android:textColor="?text_muted" android:id="@id/rb_action" android:paddingLeft="12.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

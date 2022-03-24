@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/RegistrationCardBlock">
+            <TextView android:textSize="18.0dip" android:textColor="?text_primary" android:gravity="center" android:id="@id/signup_code_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" />
+            <EditText android:gravity="center" android:id="@id/signup_edit_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_code_hint" android:inputType="textFilter" style="@style/EditTextStandard" />
+        </LinearLayout>
+        <TextView android:id="@id/signup_text_info_1" android:paddingBottom="12.0dip" android:text="@string/signup_code_explain" style="@style/RegistrationTextInfo" />
+        <TextView android:id="@id/signup_text_info_2" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" style="@style/RegistrationTextInfo" />
+        <TextView android:textColor="?accent" android:layout_gravity="center_horizontal" android:id="@id/signup_call_me" android:background="@drawable/link_drawable" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:text="@string/signup_code_call_btn" android:fontFamily="@string/font_family_medium" style="@style/RegistrationTextInfo" />
+    </LinearLayout>
+</ScrollView>

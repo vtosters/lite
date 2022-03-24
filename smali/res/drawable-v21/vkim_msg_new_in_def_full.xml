@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nine-patch android:src="@drawable/vkim_bg_msg_in_def_full" android:tint="?im_history_incoming_background" android:tintMode="src_in"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

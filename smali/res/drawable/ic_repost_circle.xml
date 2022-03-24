@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/cool_grey" />
+        </shape>
+    </item>
+    <item android:left="10.0dip" android:top="10.0dip" android:right="10.0dip" android:bottom="10.0dip">
+        <bitmap android:src="@drawable/ic_repost_24" android:tint="@color/white" />
+    </item>
+</layer-list>

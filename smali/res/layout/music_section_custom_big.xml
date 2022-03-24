@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:background="@drawable/music_selectable_bg" android:layout_width="74.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/icon" android:layout_width="66.0dip" android:layout_height="66.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <ImageView android:id="@id/iv_verified" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/ic_verified_border_20" app:layout_constraintBottom_toBottomOf="@id/icon" app:layout_constraintEnd_toEndOf="@id/icon" />
+    <TextView android:textSize="12.0dip" android:textStyle="normal" android:textColor="@color/muted_black" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="2" android:includeFontPadding="false" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/icon" />
+</android.support.constraint.ConstraintLayout>

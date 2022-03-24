@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/first_image" android:top="0.0dip" android:bottom="800.0dip">
+        <bitmap android:gravity="fill" android:src="@drawable/scrim_bottom" android:alpha="0.9" />
+    </item>
+    <item android:id="@id/second_image" android:top="200.0dip">
+        <shape android:shape="rectangle">
+            <solid android:color="#e5000000" />
+        </shape>
+    </item>
+</layer-list>

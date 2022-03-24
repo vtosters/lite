@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="4.0dip" android:src="@drawable/shadow_bottom_panel" android:scaleType="fitXY" />
+    <ProgressBar android:id="@id/player_view_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="-2.0dip" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/drawer_player_progress" android:layout_toRightOf="@id/player_view_albumart" android:layout_alignParentRight="true" android:transformPivotX="0.0dip" android:transformPivotY="0.0dip" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/player_view_content" android:background="#ff415061" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <ImageView android:id="@id/player_view_button" android:background="@drawable/highlight_circle" android:clickable="true" android:layout_width="84.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_audio_panel_pause" android:scaleType="center" android:layout_alignParentLeft="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="1.0dip" android:layout_toRightOf="@id/player_view_button">
+            <TextView android:textSize="16.0dip" android:textColor="#deebf0f5" android:ellipsize="marquee" android:id="@id/player_view_title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Only" android:singleLine="true" />
+            <TextView android:textSize="14.0dip" android:textColor="#85ebf0f5" android:ellipsize="marquee" android:id="@id/player_view_artist" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sunrise Avenue" android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

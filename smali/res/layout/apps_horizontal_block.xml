@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/block_title_layout" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="fill_parent" android:layout_height="48.0dip" android:weightSum="1.0">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/block_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="12.0dip" android:id="@id/block_button" android:background="@drawable/btn_material_blue_touch_zone" android:paddingLeft="18.0dip" android:paddingTop="0.0dip" android:paddingRight="18.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginRight="@dimen/touch_zone_ext_" android:minWidth="59.0dip" android:minHeight="44.0dip" android:text="@string/games_all" android:layout_alignParentRight="true" style="@style/MaterialBlueButton" />
+    </LinearLayout>
+    <com.vtosters.lite.ui.widget.HorizontalRecyclerView android:id="@id/recycle" android:paddingLeft="@dimen/game_padding_lr8" android:paddingRight="@dimen/game_padding_lr8" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="180.0dip" app:itemBetterWidth="160.0dip" app:itemInvariableWidth="16.0dip" app:itemOriginHeight="180.0dip" app:itemOriginWidth="128.0dip" />
+</LinearLayout>

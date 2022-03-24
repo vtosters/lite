@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/audio_info_wrap" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/audio_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:text="Title" android:singleLine="true" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/gray" android:ellipsize="end" android:id="@id/audio_artist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Artist" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:id="@id/audio_saved_icon" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="6.0dip" android:src="@drawable/ic_music_cached_12" android:tint="?accent" />
+    <TextView android:textSize="13.0dip" android:textColor="@color/gray" android:gravity="center" android:id="@id/audio_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="1:23" android:singleLine="true" />
+</merge>

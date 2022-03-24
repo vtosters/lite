@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nine-patch android:src="@drawable/vkim_msg_in_def_full_tail_sel" android:tint="?im_bubble_incoming_highlighted"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

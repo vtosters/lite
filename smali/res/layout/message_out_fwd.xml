@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/MessageRoot.Out"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/message_state_block" />
+    <com.vtosters.lite.ui.MessageRelativeLayout style="@style/MessageWrap.Out.Fwd">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/message_fwd_include" />
+    </com.vtosters.lite.ui.MessageRelativeLayout>
+    <TextView style="@style/MessageTime.Out" />
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="preferences_debug"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:enabled="false" android:title="Внимание!" android:summary="Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках, что бы не было проблем с работой приложения!" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Показывать пункт дебага в настройках" android:key="devmenu" android:defaultValue="false" />
+      <PreferenceCategory android:title="Experimental">
+        <EditTextPreference android:title="Изменение версии вк" android:key="vkversion" android:summary="Требуется перезапуск" android:defaultValue="" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlusevkui" android:key="usevkui" android:summary="Редактирование страницы?" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Статистика страницы" android:key="unlockstats" android:summary="Вкшники вроде перестали отдавать инфу" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Шрифт VK Sans" android:key="vksans" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="VK Me MSG mode" android:key="vkme_msg" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Фикс некоторых покрасок Monet" android:key="color_grishka" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="VK Me theme" android:key="vkim_msg" android:defaultValue="false" />
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/language" android:title="Язык приложения" android:key="lang_value" android:defaultValue="system" android:dialogTitle="Выберите язык приложения" android:entryValues="@array/lang_value" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Функции для разработчиков">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Режим разработчика" android:key="dev" android:summary="Форсирование аккаунта разработчика/тестера/работника и форсирование версии debug/deploy. Нужно только для расширенного дебагинга" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="SSL Pinning" android:key="ssl" android:summary="Проверка сертификата HTTPS. Отключение позволит смотреть и редактировать трафик через Charles и прочие программы" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Тёмная тема" android:key="darkmode" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="isMusicRestricted" android:key="isMusicRestricted" android:summary="Вкшные ограничения на музыку. Фактически ничего не ограничивает, ибо всё вырезано" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="hasMusicSubscription" android:key="hasMusicSubscription" android:summary="Подписка на музыку" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Вернуть старые пункты в about" android:key="oldabout" android:defaultValue="false" />
+        <EditTextPreference android:title="SSFS Domain" android:key="ssfscustom" android:defaultValue="https://sf.vknext.ru" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Домены" android:key="domains">
+        <Preference android:enabled="false" android:title="Изменение ссылок доменов" android:summary="Вся логика смены доменов переехала во вкладку с прокси" />
+        <EditTextPreference android:title="Домен API" android:key="apiHost" android:defaultValue="api.vk.com" />
+        <EditTextPreference android:title="Домен OAuth" android:key="oauthHost" android:defaultValue="oauth.vk.com" />
+        <EditTextPreference android:title="VK UI host uri" android:key="vkUiHostUri" android:defaultValue="static.vk.com" />
+        <EditTextPreference android:title="VK UI SPA uri" android:key="spaUri" android:defaultValue="vk.com/spa" />
+        <EditTextPreference android:title="away.php domain" android:key="awayPhpDomain" android:defaultValue="m.vk.com" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Логирование" android:key="logging">
+        <Preference android:title="Запись логов в файл" android:key="__dbg_log_to_file" android:summary="Запись логов приложения. Работает до полной остановки приложения" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Логирование API" android:key="__dbg_api" android:summary="Возможность логгирования Api при записи логов" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Показывать ошибки API" android:key="__dbg_api_errors" android:summary="Отображать ошибки api с помощью тоста" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Моментальная отправка статы" android:key="__dbg_force_send" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Дебаг WebView" android:key="__dbg_webview" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Визуализация view_post_time" android:key="__dbg_view_post_time_overlay" android:summary="Подсвечивать посты при регистрации события view_post_time" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Разрешить брекпоинты" android:key="__dbg_allow_requests_breakpoints" android:summary="Разрешить брекпоинты запросов через Proxy (Charles)" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Применять дырки" android:key="__dbg_apply_spaces" android:summary="Применять дырки для сообщений после long poll history." android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Включить MemLeak detect" android:key="__dbg_mem_leak" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Кэш" android:key="cache">
+        <Preference android:title="Очистить хэш 2ФА" android:key="clearTrustedHash" />
+        <Preference android:title="Очистить кэш WebView" android:key="clearWebViewCache" />
+        <Preference android:title="Очистить видео кэш" android:key="clearVideoCache" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Системные" android:key="system">
+        <EditTextPreference android:title="Language override" android:key="__dbg_lang_override" />
+        <Preference android:title="Завершить процесс" android:key="__dbg_terminate" />
+        <Preference android:title="Обновить регистрацию Firebase" android:key="__dbg_re_register_firebase" />
+        <Preference android:title="Скопировать push token" android:key="__dbg_copy_firebase_token" />
+        <Preference android:title="Обновить Google Now" android:key="reRegisterGoogleNow" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Тесты" android:key="tests">
+        <Preference android:title="Тест уведомления о ДР" android:key="__dbg_test_bday" />
+        <Preference android:title="Тест ошибки need_validation" android:key="__dbg_test_validation" />
+        <Preference android:title="Тест ошибки captcha" android:key="__dbg_test_captcha" />
+        <Preference android:title="Тест ошибки системы" android:key="__dbg_test_crash" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Тестовая реклама" android:key="__dbg_demo_ads" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Демо карусель карточек" android:key="__dbg_demo_pretty_cards" android:defaultValue="false" />
+        <EditTextPreference android:title="VK UI Uri (для теста)" android:key="testSPAUri" android:defaultValue="static.vk.com/demo" />
+        <Preference android:title="Тест VK UI" android:key="__dbg_test_vk_ui" />
+    </PreferenceCategory>
+    <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    <PreferenceCategory android:title="Официальный прокси вк">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Force VK Proxy features" android:key="proxyvk" android:summary="Вкшные костыли для своего прокси" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Прокси" android:key="__dbg_proxy_enable" android:summary="Не работает" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Прочее" android:key="others" />
+    <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+</PreferenceScreen>

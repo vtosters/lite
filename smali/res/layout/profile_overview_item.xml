@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center|left|top" android:id="@id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/subhead_gray" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:text="9000 friends" android:maxLines="3" android:layout_weight="1.0" android:lineSpacingExtra="2.0dip" />
+    <com.vk.core.view.PhotoStripView android:layout_gravity="center_vertical" android:id="@id/photos" android:layout_width="wrap_content" android:layout_height="28.0dip" />
+</LinearLayout>

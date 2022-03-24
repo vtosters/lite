@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="96.0dip" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/attach_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:actualImageScaleType="centerCrop" fresco:roundedCornerRadius="2.0dip" />
+    <ProgressBar android:id="@id/attach_progress" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="false" android:indeterminateOnly="false" android:layout_centerVertical="true" />
+    <TextView android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attach_error" android:background="#50000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/error" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/attach_remove" android:paddingLeft="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.5dip" android:layout_marginRight="-8.5dip" android:src="@drawable/ic_deattach_28" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attach_video_duration" android:background="@drawable/bg_doc_label" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:text="3:11" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:fontFamily="@string/font_family_medium" />
+</RelativeLayout>

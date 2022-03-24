@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_report_reasons">
+        <item>Спам</item>
+        <item>Образа</item>
+        <item>Матеріал для дорослих</item>
+        <item>Шахрайство</item>
+        <item>Інше</item>
+    </string-array>
+    <string-array name="address_will_be_opened">
+        <item>Відкриється у понеділок</item>
+        <item>Відкриється у вівторок</item>
+        <item>Відкриється у середу</item>
+        <item>Відкриється у четвер</item>
+        <item>Відкриється у п‘ятницю</item>
+        <item>Відкриється у суботу</item>
+        <item>Відкриється у неділю</item>
+    </string-array>
+    <string-array name="album_displayable_privacy_options">
+        <item>Всі користувачі</item>
+        <item>Тільки друзі</item>
+        <item>Друзі друзів</item>
+        <item>Тільки я</item>
+    </string-array>
+    <string-array name="album_privacy_options">
+        <item>Всі користувачі</item>
+        <item>Тільки друзі</item>
+        <item>Друзі друзів</item>
+        <item>Тільки я</item>
+        <item>Розширені налаштування</item>
+    </string-array>
+    <string-array name="app_report_types">
+        <item>Додаток не працює</item>
+        <item>Шкідливий додаток</item>
+        <item>"Нав'язлива реклама"</item>
+        <item>Обман або введення в оману</item>
+    </string-array>
+    <string-array name="community_types">
+        <item>Зустрічі</item>
+        <item>Спільноти</item>
+        <item>Сторінки</item>
+    </string-array>
+    <string-array name="date_ago_hrs">
+        <item>годину тому</item>
+        <item>дві години тому</item>
+        <item>три години тому</item>
+    </string-array>
+    <string-array name="dnd_options">
+        <item>1 годину</item>
+        <item>24 години</item>
+        <item>7 днів</item>
+        <item>Назавжди</item>
+    </string-array>
+    <string-array name="edit_bdate_visibility">
+        <item>Показувати в профілі</item>
+        <item>Показувати лише день і місяць</item>
+        <item>Не показувати в профілі</item>
+    </string-array>
+    <string-array name="fave_tabs">
+        <item>Люди</item>
+        <item>Записи</item>
+        <item>Посилання</item>
+        <item>Статті</item>
+        <item>Фотографии</item>
+        <item>Видео</item>
+        <item>@string/goods</item>
+        <item>@string/goods</item>
+    </string-array>
+    <string-array name="group_audios_options_descriptions">
+        <item></item>
+        <item>При відкритому доступі додавати нові аудіозаписи можуть всі учасники спільноти.</item>
+        <item>При обмеженому доступі додавати нові аудіозаписи можуть тільки редактори і адміністратори спільноти.</item>
+    </string-array>
+    <string-array name="group_ban_duration_options">
+        <item>Назавжди</item>
+        <item>На рік</item>
+        <item>На місяц</item>
+        <item>На тиждень</item>
+        <item>На день</item>
+        <item>На годину</item>
+    </string-array>
+    <string-array name="group_ban_reasons">
+        <item>Інше</item>
+        <item>Спам</item>
+        <item>Образа учасників</item>
+        <item>Нецензурні вирази</item>
+        <item>Повідомлення не по темі</item>
+    </string-array>
+    <string-array name="group_board_options_descriptions">
+        <item></item>
+        <item>При відкритому доступі створювати нові теми можуть всі учасники спільноти.</item>
+        <item>При обмеженому доступі створювати нові теми можуть тільки редактори і адміністратори спільноти.</item>
+    </string-array>
+    <string-array name="group_docs_options_descriptions">
+        <item></item>
+        <item>При відкритому доступі додавати нові документи можуть всі учасники спільноти.</item>
+        <item>При обмеженому доступі додавати нові документи можуть тільки редактори і адміністратори спільноти.</item>
+    </string-array>
+    <string-array name="group_photos_options_descriptions">
+        <item></item>
+        <item>При відкритому доступі створювати нові альбоми можуть всі учасники спільноти.</item>
+        <item>При обмеженому доступі створювати нові альбоми можуть тільки редактори і адміністратори спільноти.</item>
+    </string-array>
+    <string-array name="group_service_options">
+        <item>Вимкнені</item>
+        <item>Відкриті</item>
+        <item>Обмежені</item>
+    </string-array>
+    <string-array name="group_videos_options_descriptions">
+        <item></item>
+        <item>При відкритому доступі додавати нові відеозаписи можуть всі учасники спільноти.</item>
+        <item>При обмеженому доступі додавати нові відеозаписи можуть тільки редактори і адміністратори спільноти.</item>
+    </string-array>
+    <string-array name="group_wall_options">
+        <item>Вимкнена</item>
+        <item>Відкрита</item>
+        <item>Обмежена</item>
+        <item>Закрита</item>
+    </string-array>
+    <string-array name="group_wall_options_descriptions">
+        <item></item>
+        <item>На відкритій стіні можуть писати повідомлення і залишати коментарі всі учасники спільноти.</item>
+        <item>На обмеженій стіні можна писати тільки від імені спільнот, коментувати записи можуть всі учасники.</item>
+        <item>На закритій стіні можна писати тільки від імені спільноти, коментарі відключені.</item>
+    </string-array>
+    <string-array name="group_wiki_options_descriptions">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="like_menu">
+        <item>Не подобається</item>
+        <item>Розповісти друзям</item>
+    </string-array>
+    <string-array name="months_full">
+        <item>січня</item>
+        <item>лютого</item>
+        <item>березня</item>
+        <item>квітня</item>
+        <item>травня</item>
+        <item>червня</item>
+        <item>липня</item>
+        <item>серпня</item>
+        <item>вересня</item>
+        <item>жовтня</item>
+        <item>листопада</item>
+        <item>грудня</item>
+    </string-array>
+    <string-array name="months_short">
+        <item>січ</item>
+        <item>лют</item>
+        <item>бер</item>
+        <item>кві</item>
+        <item>тра</item>
+        <item>чер</item>
+        <item>лип</item>
+        <item>сер</item>
+        <item>вер</item>
+        <item>жов</item>
+        <item>лис</item>
+        <item>гру</item>
+    </string-array>
+    <string-array name="newsfeed_settings_feed_type">
+        <item>За часом публікації</item>
+        <item>Спочатку цікаві</item>
+    </string-array>
+    <string-array name="ntf_accepted_f">
+        <item>прийняла Вашу заявку в друзі</item>
+    </string-array>
+    <string-array name="ntf_accepted_m">
+        <item>прийняв Вашу заявку в друзі</item>
+    </string-array>
+    <string-array name="ntf_accepted_x">
+        <item>прийняли Вашу заявку в друзі</item>
+    </string-array>
+    <string-array name="ntf_follow_f">
+        <item>підписалася на Ваші оновлення</item>
+    </string-array>
+    <string-array name="ntf_follow_m">
+        <item>підписався на Ваші оновлення</item>
+    </string-array>
+    <string-array name="ntf_follow_x">
+        <item>підписалися на Ваші поновлення</item>
+    </string-array>
+    <string-array name="ntf_like_f">
+        <item>оцінила запис</item>
+        <item>оцінила фотографію</item>
+        <item>оцінила відеозапис</item>
+        <item>оцінила коментар</item>
+    </string-array>
+    <string-array name="ntf_like_m">
+        <item>оцінив запис</item>
+        <item>оцінив фотографію</item>
+        <item>оцінив відеозапис</item>
+        <item>оцінив коментар</item>
+    </string-array>
+    <string-array name="ntf_like_x">
+        <item>оцінили запис</item>
+        <item>оцінили фотографію</item>
+        <item>оцінили відеозапис</item>
+        <item>оцінили коментар</item>
+    </string-array>
+    <string-array name="ntf_rt_f">
+        <item>поділилась записом</item>
+        <item>поділилась фотографією</item>
+        <item>поділилась відеозаписом</item>
+        <item>поділилась коментарем</item>
+    </string-array>
+    <string-array name="ntf_rt_m">
+        <item>поділився записом</item>
+        <item>поділився фотографією</item>
+        <item>поділився відеозаписом</item>
+        <item>поділився коментарем</item>
+    </string-array>
+    <string-array name="ntf_rt_x">
+        <item>поділились записом</item>
+        <item>поділились фотографією</item>
+        <item>поділились видеозаписом</item>
+        <item>поділились коментарем</item>
+    </string-array>
+    <string-array name="personal_life_options">
+        <item>"Сім'я та діти"</item>
+        <item>"Кар'єра та гроші"</item>
+        <item>Розваги та відпочинок</item>
+        <item>Наука та дослідження</item>
+        <item>Вдосконалення світу</item>
+        <item>Саморозвиток</item>
+        <item>Краса та мистецтво</item>
+        <item>Слава та вплив</item>
+    </string-array>
+    <string-array name="personal_people_options">
+        <item>Розум та креативність</item>
+        <item>Доброта та чесність</item>
+        <item>"Краса та здоров'я"</item>
+        <item>Влада та багатство</item>
+        <item>Сміливість та завзятість</item>
+        <item>Гумор та життєлюбство</item>
+    </string-array>
+    <string-array name="personal_politics_options">
+        <item>Комуністичні</item>
+        <item>Соціалістичні</item>
+        <item>Помірні</item>
+        <item>Ліберальні</item>
+        <item>Консервативні</item>
+        <item>Монархічні</item>
+        <item>Ультраконсервативні</item>
+        <item>Індиферентні</item>
+        <item>Лібертаріанські</item>
+    </string-array>
+    <string-array name="personal_views_options">
+        <item>Різко негативне</item>
+        <item>Негативне</item>
+        <item>Компромісне</item>
+        <item>Нейтральне</item>
+        <item>Позитивне</item>
+    </string-array>
+    <string-array name="photo_menu">
+        <item>Зробити знімок</item>
+        <item>Завантажити з телефону</item>
+    </string-array>
+    <string-array name="photo_menu2">
+        <item>Зробити знімок</item>
+        <item>Завантажити з телефону</item>
+        <item>Не прикріплювати</item>
+    </string-array>
+    <string-array name="photo_menu3">
+        <item>Завантажити з телефону</item>
+        <item>Не прикріплювати</item>
+    </string-array>
+    <string-array name="poll_months_short">
+        <item>січ</item>
+        <item>лют</item>
+        <item>бер</item>
+        <item>кві</item>
+        <item>тра</item>
+        <item>чер</item>
+        <item>лип</item>
+        <item>сер</item>
+        <item>вер</item>
+        <item>жов</item>
+        <item>лис</item>
+        <item>гру</item>
+    </string-array>
+    <string-array name="post_options">
+        <item>Тільки для друзів</item>
+        <item>Експорт в Twitter</item>
+        <item>Експорт в Facebook</item>
+    </string-array>
+    <string-array name="public_types">
+        <item>Місце або невелика компанія</item>
+        <item>Компанія, організація або веб-сайт</item>
+        <item>Відома особистість або колектив</item>
+        <item>Виріб або продукція</item>
+        <item>Тип сторінки…</item>
+    </string-array>
+    <string-array name="replies_options">
+        <item>Мені подобається</item>
+        <item>Відповісти</item>
+    </string-array>
+    <string-array name="report_types">
+        <item>Спам</item>
+        <item>Образа</item>
+        <item>Матеріал для дорослих</item>
+        <item>Пропаганда наркотиків</item>
+        <item>Дитяча порнографія</item>
+        <item>Екстремізм/Насильство</item>
+        <item>Заклик до суїциду</item>
+    </string-array>
+    <string-array name="sett_dnd_options">
+        <item>1 година</item>
+        <item>8 годин</item>
+        <item>24 години</item>
+    </string-array>
+    <string-array name="sett_font_size_options">
+        <item>Найменший</item>
+        <item>Ще меньше</item>
+        <item>Малий</item>
+        <item>Звичайний</item>
+        <item>Великий</item>
+        <item>Ще великий</item>
+        <item>Найбiльший</item>
+    </string-array>
+    <string-array name="sett_friends_order">
+        <item>За іменем</item>
+        <item>За прізвищем</item>
+        <item>За популярністю</item>
+    </string-array>
+    <string-array name="sett_gif_autoplay_entries">
+        <item>Завжди</item>
+        <item>Лише через Wi-Fi</item>
+        <item>Ніколи</item>
+    </string-array>
+    <string-array name="sett_img_cache_location">
+        <item>Память пристрою</item>
+        <item>SD-карта</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_options">
+        <item>"Ім'я та текст"</item>
+        <item>"Лише ім'я"</item>
+    </string-array>
+    <string-array name="sett_update_interval_items">
+        <item>30 секунд</item>
+        <item>45 секунд</item>
+        <item>1 хвилина</item>
+        <item>2 хвилини</item>
+        <item>3 хвилини</item>
+        <item>5 хвилин</item>
+        <item>10 хвилин</item>
+        <item>15 хвилин</item>
+        <item>30 хвилин</item>
+        <item>1 година</item>
+        <item>2 години</item>
+        <item>Відключити</item>
+    </string-array>
+    <string-array name="short_time">
+        <item> сек</item>
+        <item> хв</item>
+        <item> год</item>
+        <item> дн</item>
+        <item> тиж</item>
+        <item> міс</item>
+        <item> рік</item>
+    </string-array>
+    <string-array name="video_search_date_options">
+        <item>За будь-який час</item>
+        <item>За останні 24 години</item>
+        <item>За останній місяць</item>
+        <item>За останній рік</item>
+    </string-array>
+    <string-array name="video_search_length">
+        <item>Будь-яка тривалість</item>
+        <item>Короткі</item>
+        <item>Довгі</item>
+    </string-array>
+    <string-array name="video_search_quality">
+        <item>Будь-яка якість</item>
+        <item>Тільки HD</item>
+    </string-array>
+    <string-array name="video_search_sort_options">
+        <item>За релевантністю</item>
+        <item>За датою</item>
+        <item>За тривалістю</item>
+    </string-array>
+    <string-array name="vkim_last_seen_female_hours_ago">
+        <item>була у мережі годину тому</item>
+        <item>була у мережі дві години тому</item>
+        <item>була у мережі три години тому</item>
+    </string-array>
+    <string-array name="vkim_last_seen_male_hours_ago">
+        <item>був у мережі годину тому</item>
+        <item>був у мережі дві години тому</item>
+        <item>був у мережі три години тому</item>
+    </string-array>
+    <string-array name="vkim_months_full_dep">
+        <item>січня</item>
+        <item>лютого</item>
+        <item>березня</item>
+        <item>квітня</item>
+        <item>травня</item>
+        <item>червня</item>
+        <item>липня</item>
+        <item>серпня</item>
+        <item>вересня</item>
+        <item>жовтня</item>
+        <item>листопада</item>
+        <item>грудня</item>
+    </string-array>
+    <string-array name="vkim_months_full_nom">
+        <item>січень</item>
+        <item>лютий</item>
+        <item>березень</item>
+        <item>квітень</item>
+        <item>травень</item>
+        <item>червень</item>
+        <item>липень</item>
+        <item>серпень</item>
+        <item>вересень</item>
+        <item>жовтень</item>
+        <item>листопад</item>
+        <item>грудень</item>
+    </string-array>
+    <string-array name="vkim_months_short">
+        <item>січ</item>
+        <item>лют</item>
+        <item>бер</item>
+        <item>кві</item>
+        <item>тра</item>
+        <item>чер</item>
+        <item>лип</item>
+        <item>сер</item>
+        <item>вер</item>
+        <item>жов</item>
+        <item>лис</item>
+        <item>гру</item>
+    </string-array>
+    <string-array name="wall_attach_options">
+        <item>Аудіозапис</item>
+        <item>Відеозапис</item>
+        <item>Документ</item>
+    </string-array>
+    <string-array name="language">
+        <item>Системна</item>
+        <item>Англійська</item>
+        <item>Російська</item>
+        <item>Українська</item>
+    </string-array>
+</resources>

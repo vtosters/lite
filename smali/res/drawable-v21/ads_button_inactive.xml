@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="#3dffffff"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#3dffffff" />
+            <corners android:radius="@dimen/vkui_button_corner_big_radius" />
+        </shape>
+    </item>
+</ripple>

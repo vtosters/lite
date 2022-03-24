@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="VKX">
+        <Preference android:enabled="false" android:title="Зачем?" android:summary="Интеграция позволит использовать возможности VK X прямиком в VTosters Lite\n\nКроме воспроизведения, в клиенте будет работать и кеш из плеера" />
+        <Preference android:persistent="false" android:title="Скачать VKX">
+            <intent android:action="android.intent.action.VIEW" android:data="https://vkx.app" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Интеграция с VK X" android:key="libvkx_integration" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Прочее">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Исправление музыкального раздела" android:key="gcmfix" android:summary="Актуально если музыкальный раздел не работает (не отображается музыка или вместо музыки написано Слушайте в официальном приложении ВКонтакте) или же отсутствует компонент GMS" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+</PreferenceScreen>

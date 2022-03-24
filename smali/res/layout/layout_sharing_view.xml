@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/sharing_touch_outside" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:importantForAccessibility="no" />
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/sharing_bottom_sheet" android:background="?tabbar_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <ImageButton android:layout_gravity="start|center" android:id="@id/sharing_back_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:tint="@color/cool_grey" android:contentDescription="@string/back" android:layout_marginStart="4.0dip" app:srcCompat="@drawable/ic_back_24" style="@style/Widget.AppCompat.ActionButton" />
+                <ViewAnimator android:id="@id/sharing_header_animator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:measureAllChildren="false" android:layout_marginStart="16.0dip">
+                    <include layout="@layout/layout_sharing_header_common" />
+                    <include layout="@layout/layout_sharing_header_search" />
+                </ViewAnimator>
+            </FrameLayout>
+            <View android:id="@id/sharing_header_divider" android:background="@color/black_alpha12" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="104.0dip" android:layout_marginBottom="8.0dip">
+                <android.support.v7.widget.RecyclerView android:orientation="horizontal" android:id="@id/targets_recycler" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                <ViewAnimator android:id="@id/content_animator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:measureAllChildren="false">
+                    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/cool_grey" android:gravity="center" android:id="@id/empty_text" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_messages" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:textSize="16.0dip" android:textColor="@color/cool_grey" android:gravity="center" android:id="@id/error_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/err_text" android:includeFontPadding="false" />
+                        <TextView android:textSize="16.0dip" android:id="@id/retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/err_try_again" android:includeFontPadding="false" style="@style/MaterialGrayButton" />
+                    </LinearLayout>
+                </ViewAnimator>
+            </FrameLayout>
+            <ViewAnimator android:id="@id/sharing_footer_animator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureAllChildren="false">
+                <include layout="@layout/layout_sharing_footer_actions" />
+                <include layout="@layout/layout_sharing_footer_send" />
+                <include layout="@layout/layout_sharing_footer_cancel" />
+                <include layout="@layout/layout_sharing_footer_pick" />
+            </ViewAnimator>
+            <ViewAnimator android:id="@id/sharing_settings_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.vk.common.view.settings.SettingsSwitchView android:id="@id/sharing_setting_friends_only" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/newpost_friends_only" />
+                    <com.vk.common.view.settings.SettingsSwitchView android:id="@id/sharing_setting_facebook_export" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/newpost_export_fb" />
+                    <com.vk.common.view.settings.SettingsSwitchView android:id="@id/sharing_setting_twitter_export" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/newpost_export_twitter" />
+                    <com.vk.common.view.settings.SettingsSwitchView android:id="@id/sharing_setting_comments" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_comments_closing" />
+                    <com.vk.common.view.settings.SettingsSwitchView android:id="@id/sharing_setting_notifications" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_disable_notifications" />
+                </LinearLayout>
+            </ViewAnimator>
+        </LinearLayout>
+    </FrameLayout>
+</merge>

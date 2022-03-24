@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/video_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_alignParentTop="true"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <include layout="@layout/video_player_bottom" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/video_content_wrap" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/video_display" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</FrameLayout>

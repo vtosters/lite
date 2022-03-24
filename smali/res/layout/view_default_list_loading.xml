@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/load_more_error" android:layout_width="fill_parent" android:layout_height="@dimen/footer_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/load_more_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="22.0dip" android:indeterminate="true" />
+</FrameLayout>

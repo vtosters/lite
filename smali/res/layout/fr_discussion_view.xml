@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/commentBar">
+        <ProgressBar android:id="@id/bigProgress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="16.0dip" android:textColor="#80000000" android:gravity="center" android:id="@id/createHint" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/create_topic_explain" android:layout_above="@id/commentBar" android:layout_centerInParent="true" />
+    <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/commentBar" />
+    <com.vtosters.lite.ui.WriteBar android:id="@id/commentBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <View android:id="@id/commentBarShadow" android:background="@drawable/bottom_shadow_comments" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_above="@id/commentBar" />
+    <com.vtosters.lite.ui.PaginationView android:id="@id/paginationView" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" />
+</RelativeLayout>

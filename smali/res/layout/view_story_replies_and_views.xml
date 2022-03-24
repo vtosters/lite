@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/viewers_replies_wrap" android:background="@drawable/stories_button_bg" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/replies_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#1e000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="8.0" android:drawableStart="@drawable/ic_stories_viewer_replies_24" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/views_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#1e000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="8.0" android:drawableStart="@drawable/ic_stories_viewer_views_24" android:fontFamily="@string/font_family_medium" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <View android:layout_gravity="end|center|top" android:id="@id/new_replies_badge" android:background="@drawable/ic_stories_viewer_replies_badge_20" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="8.0dip" android:layout_marginEnd="2.0dip" />
+</merge>

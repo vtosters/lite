@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="?text_muted" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gateways_subscriptions" android:maxLines="1" android:fontFamily="@string/font_family_medium" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding" />
+    <View android:id="@id/divider" android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+</FrameLayout>

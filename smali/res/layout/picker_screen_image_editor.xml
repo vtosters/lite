@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.attachpicker.widget.FiltersFrameLayout android:id="@id/fl_main_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/picker_image_editor_bottom_panel" android:transformPivotX="0.0dip" android:transformPivotY="0.0dip">
+        <com.vk.attachpicker.widget.ContextProgressView android:layout_gravity="center" android:id="@id/cpv_progress" android:layout_width="56.0dip" android:layout_height="56.0dip" />
+        <com.vk.attachpicker.widget.AspectRatioFrameLayout android:layout_gravity="center" android:id="@id/fl_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:transformPivotX="0.0dip" android:transformPivotY="0.0dip">
+            <com.vk.attachpicker.widget.LocalImageView android:id="@id/iv_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/fl_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/fl_editor_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <com.vk.attachpicker.widget.FiltersViewPager android:id="@id/vp_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <com.vk.attachpicker.drawing.DrawingView android:id="@id/dv_drawing" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <com.vk.attachpicker.stickers.StickersDrawingView android:id="@id/fl_stickers_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:layout_gravity="center|top" android:id="@id/tv_filter_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:shadowColor="#ff000000" android:shadowDy="3.0" android:shadowRadius="4.0" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/picker_dark_icon" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/tv_tooltip" android:background="@drawable/picker_bg_tip_no_tail" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </FrameLayout>
+        </com.vk.attachpicker.widget.AspectRatioFrameLayout>
+    </com.vk.attachpicker.widget.FiltersFrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_actions_panel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_bottom_panel">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_actions" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_actions_height">
+            <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_sticker" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_smiles_24" app:eav_title="@string/picker_sticker" />
+            <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_text" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_text_24" app:eav_title="@string/picker_text" />
+            <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_drawing" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_drawing_24" app:eav_title="@string/picker_drawing" />
+            <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_crop" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_crop_rotate_24" app:eav_title="@string/picker_crop" />
+            <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_auto" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_magic_24" app:eav_title="@string/picker_auto" />
+        </LinearLayout>
+        <com.vk.attachpicker.widget.AnimatableTextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="center" android:id="@id/tv_attach" android:background="@drawable/picker_btn_white" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height" android:layout_marginTop="@dimen/picker_image_editor_actions_height" android:text="@string/picker_done" android:textAllCaps="true" />
+        <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="@dimen/picker_image_editor_actions_height" />
+        <FrameLayout android:id="@id/fl_delete_area" android:background="#ddffffff" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/picker_bottom_button_height">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_delete_icon" android:layout_width="96.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_delete_zone" />
+            <ImageView android:layout_gravity="center" android:id="@id/iv_delete_icon_hover" android:layout_width="96.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_delete_zone_hover" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_auto_panel" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_bottom_panel">
+        <TextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="bottom|center" android:layout_gravity="center_horizontal" android:id="@id/tv_auto_value" android:layout_width="100.0dip" android:layout_height="32.0dip" android:includeFontPadding="false" />
+        <com.vk.attachpicker.widget.VkSeekBar android:layout_gravity="center_horizontal" android:id="@id/vsb_auto_value" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" />
+        <com.vk.attachpicker.widget.EditorBottomPanel android:layout_gravity="bottom" android:id="@id/ebp_auto" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height" app:ebp_title="@string/picker_auto_full" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_drawing_panel" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_bottom_panel">
+        <com.vk.attachpicker.widget.ColorSelectorView android:layout_gravity="center_horizontal" android:id="@id/ccv_drawing_color_selector" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_actions_height" app:whiteBorder="false" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/ll_drawing_controls" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height">
+            <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center|left" android:id="@id/iv_drawing_cancel" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_close_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center|left" android:id="@id/iv_drawing_width" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_stroke_width_shadow_48" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center" android:id="@id/iv_drawing_undo" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_btn_undo" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center|right" android:id="@id/iv_drawing_eraser" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_graffiti_eraser_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center|right" android:id="@id/iv_drawing_done" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_done_24" android:scaleType="centerInside" android:tint="@color/picker_dark_icon" />
+            </FrameLayout>
+        </LinearLayout>
+        <View android:layout_gravity="bottom" android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginBottom="@dimen/picker_bottom_button_height" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_close_btn_container" android:layout_width="56.0dip" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_close" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="56.0dip" android:layout_height="wrap_content" android:src="@drawable/picker_ic_close_circle_card_56" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:id="@id/view_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginBottom="@dimen/picker_image_editor_bottom_panel" />
+    <FrameLayout android:id="@id/fl_stickers_keyboard" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

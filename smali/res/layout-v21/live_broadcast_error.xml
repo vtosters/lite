@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="32.0dip">
+        <TextView android:textSize="24.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/broadcastErrorText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_broadcast_error_title" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/broadcast_error_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/live_broadcast_error_message" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatButton android:textColor="@color/black" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/broadcast_error_retry_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="64.0dip" android:text="@string/live_broadcast_error_retry" android:backgroundTint="@color/white" style="?appkitErrorButtonStyle" />
+    <android.support.v7.widget.AppCompatButton android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/broadcast_error_cancel_button" android:background="@drawable/bg_live_comment_ripple" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:text="@string/live_broadcast_error_finish" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:background="?tabbar_background" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.newsfeed.UsableRecyclerPaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme">
+        <TextView android:id="@id/custom_action_bar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/ActionBarTitleStyle" />
+    </android.support.v7.widget.Toolbar>
+    <View android:id="@id/loader_overlay_statusbar_bg" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="0.0dip" app:theme="?actionBarTheme" />
+</FrameLayout>

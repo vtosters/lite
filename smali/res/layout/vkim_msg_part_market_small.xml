@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.im.ui.views.msg.MsgPartIconTwoRowView android:layout_width="wrap_content" android:layout_height="wrap_content" app:vkim_icon="@drawable/vkim_ic_attach_link" style="@style/VkIm.MsgPart.IconTwoRow.Default"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

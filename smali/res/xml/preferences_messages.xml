@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/vtlinterfacemsg">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlcalls" android:key="calls" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlmsgtails" android:key="msgtails" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlmsgflat" android:key="msgflat" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlvoice" android:key="voice" android:summary="@string/vtlvoicesummary" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/interfaceemoji">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/alteremoji" android:key="alteremoji" android:summary="@string/alteremojisum" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/systememoji" android:key="systememoji" android:summary="@string/systememojisum" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/BGStickers" android:summary="@string/BGStickerssum" android:key="isBGStickersEnabled" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/convUsersOnline" android:key="convUsersOnline" android:summary="@string/convUsersOnlinesum" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

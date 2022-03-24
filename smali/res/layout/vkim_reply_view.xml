@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/line" android:layout_width="2.0dip" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@null" app:vk_layout_isAdjust="true" />
+    <com.vk.im.ui.views.FrescoImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_marginStart="6.0dip" app:vk_layout_isAdjust="true" app:vkim_scaleType="center_crop" />
+    <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip">
+        <com.vk.im.ui.views.FixTextView android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:includeFontPadding="false" />
+        <com.vk.im.ui.views.FixTextView android:ellipsize="end" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="1" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+</merge>

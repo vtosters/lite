@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:enabled="false" android:title="@string/proxyimpinfo" android:summary="@string/proxyimpinfosum" />
+    <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/proxy" android:title="@string/useproxy" android:key="proxy" android:defaultValue="noproxy" android:dialogTitle="@string/useproxysum" android:entryValues="@array/proxy_value" />
+    <PreferenceCategory android:title="@string/proxyadvsettings">
+        <Preference android:enabled="false" android:title="@string/useproxyinfo" android:summary="@string/useproxyinfosum" />
+        <EditTextPreference android:title="@string/proxyapi" android:key="proxyapi" android:defaultValue="" />
+        <EditTextPreference android:title="@string/proxyoauth" android:key="proxyoauth" android:defaultValue="" />
+        <EditTextPreference android:title="@string/proxystatic" android:key="proxystatic" android:defaultValue="" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/proxyhttp">
+        <EditTextPreference android:title="@string/proxydomain" android:key="proxyHostHTTP" android:defaultValue="" />
+        <EditTextPreference android:title="@string/proxyport" android:key="proxyPortHTTP" android:defaultValue="" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/proxyhttps">
+        <EditTextPreference android:title="@string/proxydomain" android:key="proxyHostHTTPS" android:defaultValue="" />
+        <EditTextPreference android:title="@string/proxyport" android:key="proxyPortHTTPS" android:defaultValue="" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/proxysocks">
+        <EditTextPreference android:title="@string/proxydomain" android:key="proxyHostSocks" android:defaultValue="" />
+        <EditTextPreference android:title="@string/proxyport" android:key="proxyPortSocks" android:defaultValue="" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/proxyowners">
+        <Preference android:persistent="false" android:title="xtrafrancyz" android:summary="@string/proxyownersxtr">
+            <intent android:action="android.intent.action.VIEW" android:data="https://xtrafrancyz.net/unblock-vk" />
+        </Preference>
+        <Preference android:persistent="false" android:title="@string/proxydonate">
+            <intent android:action="android.intent.action.VIEW" android:data="https://xtrafrancyz.net/donate" />
+        </Preference>
+        <Preference android:persistent="false" android:title="@string/proxyownersxtrsources">
+            <intent android:action="android.intent.action.VIEW" android:data="https://github.com/xtrafrancyz/vk-proxy" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+        <Preference android:persistent="false" android:title="zaborona" android:summary="@string/proxyownerszbr">
+            <intent android:action="android.intent.action.VIEW" android:data="https://zaborona.help" />
+        </Preference>
+        <Preference android:persistent="false" android:title="@string/proxydonate">
+            <intent android:action="android.intent.action.VIEW" android:data="https://zaborona.help/donate.html" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

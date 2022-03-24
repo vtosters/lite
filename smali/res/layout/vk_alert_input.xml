@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="?text_primary" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/VKUIText.Title1" />
+    <TextView android:textColor="?text_subhead" android:gravity="center_horizontal" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/VKUIText.New.Subhead2" />
+    <EditText android:textColor="?text_primary" android:id="@id/input_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="16.0dip" android:maxLines="3" android:minLines="2" style="@style/VKUIEditText" />
+    <TextView android:textSize="16.0sp" android:id="@id/positive_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:includeFontPadding="false" style="@style/primary_button" />
+</LinearLayout>
