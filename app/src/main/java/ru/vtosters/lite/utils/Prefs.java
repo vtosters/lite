@@ -564,7 +564,7 @@ public class Prefs {
         if (!string.isEmpty()) {
             return string;
         }
-        return "https://sf.vknext.ru";
+        return "https://vtsf.vknext.net";
     }
 
     public static String VKVersion() {
