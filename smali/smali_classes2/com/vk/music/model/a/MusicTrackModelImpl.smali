@@ -222,8 +222,6 @@
     .line 386
     invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
-    invoke-static {p1}, Lru/vtosters/lite/downloaders/MusicDownloader;->DownloadTrack(Lcom/vk/dto/music/MusicTrack;)V
-
     return-void
 
     iget-object p3, p0, Lcom/vk/music/model/a/MusicTrackModelImpl;->i:Lcom/vk/music/utils/BoomHelper;
