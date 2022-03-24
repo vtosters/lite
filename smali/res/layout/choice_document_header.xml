@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="?accent" android:gravity="center_vertical" android:id="@id/load_from_gallery" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/add_doc_photo" android:drawablePadding="16.0dip" />
+    <TextView android:textSize="16.0dip" android:textColor="?accent" android:gravity="center_vertical" android:id="@id/load_from_storage" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/add_doc_file" android:drawablePadding="16.0dip" />
+</LinearLayout>

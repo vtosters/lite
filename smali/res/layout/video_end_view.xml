@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="16.0dip" android:layout_height="wrap_content" />
+    <com.vtosters.lite.ui.movie.PlayButton android:id="@id/video_end_replay" android:background="@drawable/highlight_video_play" android:focusable="true" android:clickable="true" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_replay_36" android:scaleType="center" />
+    <Space android:layout_width="16.0dip" android:layout_height="wrap_content" />
+    <com.vtosters.lite.ui.movie.PlayButton android:id="@id/video_end_like" android:background="@drawable/highlight_video_play" android:focusable="true" android:clickable="true" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_like_outline_36" android:scaleType="center" />
+    <Space android:id="@id/video_like_space" android:layout_width="16.0dip" android:layout_height="wrap_content" />
+    <com.vtosters.lite.ui.movie.PlayButton android:id="@id/video_end_add" android:background="@drawable/highlight_video_play" android:focusable="true" android:clickable="true" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_check_36" android:scaleType="center" />
+    <Space android:id="@id/video_add_space" android:layout_width="16.0dip" android:layout_height="wrap_content" />
+</merge>

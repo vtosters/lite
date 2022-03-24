@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <com.vtosters.lite.ui.BadooTextView android:textSize="16.0dip" android:textColor="@color/sharing_blue_btn_text" android:gravity="center" android:id="@id/sharing_pick_button" android:background="@drawable/sharing_blue_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/sharing_pick_button_label" android:includeFontPadding="false" android:textAllCaps="true" app:typeface="Medium"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

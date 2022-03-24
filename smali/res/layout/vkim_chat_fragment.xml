@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:background="?im_app_background_chat" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/dialog_header_container_stub" android:layout="@layout/vkim_include_dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <FrameLayout android:id="@id/messages_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/divider" android:layout_below="@id/dialog_header_container" />
+    <ViewStub android:id="@id/banner_container_stub" android:layout="@layout/vkim_banner_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_header_container" />
+    <View android:id="@id/shadow" android:layout_below="@id/dialog_header_container" android:contentDescription="@null" style="?im_toolbar_shadow_style_thick" />
+    <ViewStub android:id="@id/mentions_container_stub" android:layout="@layout/vkim_mentions_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/divider" android:layout_below="@id/dialog_header_container" />
+    <View android:id="@id/divider" android:background="?separator_alternate" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_above="@id/write_area" />
+    <FrameLayout android:id="@id/write_area" android:background="?background_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <ViewStub android:id="@id/dialog_actions_stub" android:layout="@layout/vkim_dialog_actions_vc_by_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/dialog_header_container" />
+</RelativeLayout>

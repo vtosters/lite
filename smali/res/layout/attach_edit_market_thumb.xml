@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="96.0dip" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/attach_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:actualImageScaleType="centerCrop" fresco:roundedCornerRadius="2.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/market_attach_edit_thumb" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@id/attach_title" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:id="@id/attach_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <ImageView android:id="@id/attach_remove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.5dip" android:layout_marginRight="-8.5dip" android:src="@drawable/ic_deattach_28" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

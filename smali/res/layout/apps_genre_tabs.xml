@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.widget.SubPagerOfList android:id="@id/pager" android:paddingLeft="@dimen/game_padding_lr0" android:paddingRight="@dimen/game_padding_lr0" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vtosters.lite.ui.widget.PagerSlidingTabStrip android:textSize="14.0dip" android:textColor="?accent" android:gravity="center_vertical" android:layout_gravity="top" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="48.0dip" android:minHeight="48.0dip" app:dividerColor="@android:color/transparent" app:indicatorColor="?accent" app:indicatorHeight="2.0dip" app:tabBackground="@drawable/highlight" app:textAllCaps="true" app:underlineColor="#ffd8d8d8" app:underlineHeight="0.5dip" />
+</com.vtosters.lite.ui.widget.SubPagerOfList>

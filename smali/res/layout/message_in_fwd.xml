@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.widget.MessageInTimeLinearLayout style="@style/MessageRoot.In"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKImageView style="@style/MessageSenderPhoto" />
+    <com.vtosters.lite.ui.MessageRelativeLayout style="@style/MessageWrap.In.Fwd">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/message_fwd_include" />
+    </com.vtosters.lite.ui.MessageRelativeLayout>
+    <TextView style="@style/MessageTime.In" />
+</com.vtosters.lite.ui.widget.MessageInTimeLinearLayout>

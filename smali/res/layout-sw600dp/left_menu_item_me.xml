@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/padder" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <TextView android:textSize="16.0dip" android:textColor="#ffe6ecf2" android:ellipsize="end" android:id="@id/flist_item_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="16.0dip" android:text="Pavel Durov" android:singleLine="true" android:layout_below="@id/flist_item_photo" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="14.0dip" android:textColor="#ffa1aab3" android:ellipsize="end" android:id="@id/status" android:paddingBottom="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Wow status" android:singleLine="true" android:layout_below="@id/flist_item_text" android:layout_alignLeft="@id/flist_item_text" android:layout_alignRight="@id/flist_item_text" />
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/flist_item_photo" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginLeft="22.0dip" android:layout_marginTop="16.0dip" android:layout_below="@id/padder" android:transformPivotX="0.0dip" android:transformPivotY="0.0dip" app:actualImageScaleType="centerCrop" app:placeholderImage="@drawable/placeholder_user_72" />
+</RelativeLayout>

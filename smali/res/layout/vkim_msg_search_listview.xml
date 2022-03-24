@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/vkim_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.vk.im.ui.views.EmptyViewForList android:layout_gravity="center" android:id="@id/vkim_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:icon="@drawable/placeholder_not_found_56" app:icon_size="@dimen/vkim_search_empty_icon_size" app:text="@string/vkim_msg_search_empty" app:text_color="@color/subhead_gray" app:text_size="16.0sp" />
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.v7.widget.RecyclerView android:id="@id/vkim_recycler_view" android:paddingTop="6.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vkim_progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
+</FrameLayout>

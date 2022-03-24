@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:id="@id/im_appbar" style="?im_appbar_collapsing_style"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="enterAlways|scroll|snap">
+        <TextView android:textSize="13.0sp" android:textColor="?im_app_toolbar_foreground" android:gravity="start|center" android:id="@id/vkim_dialogs_refresh_status" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="1.0dip" android:alpha="0.4" android:layout_marginStart="61.0dip" />
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginTop="16.0dip" app:contentInsetStart="4.0dip" style="@style/VkIm.Toolbar.Style">
+            <ImageView android:id="@id/vkim_open_camera_btn" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_camera_outline_28_new" android:tint="?header_tint" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/vkim_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_dialogs_header_title" android:layout_marginStart="12.0dip" style="@style/VkIm.Toolbar.AppIm.Title" />
+        </android.support.v7.widget.Toolbar>
+    </FrameLayout>
+</android.support.design.widget.AppBarLayout>

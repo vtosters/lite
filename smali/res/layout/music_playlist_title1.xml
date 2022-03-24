@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="?text_primary" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/music_playlists_filter_label_all" android:maxLines="1" android:drawablePadding="10.0dip" android:paddingEnd="20.0dip" android:layout_marginStart="64.0dip" android:layout_marginEnd="48.0dip" style="@style/title_text"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

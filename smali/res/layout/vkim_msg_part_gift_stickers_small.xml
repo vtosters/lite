@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.FrescoImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="176.0dip" android:maxHeight="176.0dip" android:minWidth="96.0dip" android:minHeight="176.0dip" android:contentDescription="@string/vkim_accessibility_gift_stickers" app:vkim_scaleType="fit_start" />
+    <TextView android:textAppearance="@style/VkIm.MsgPart.Time.TextContrast" android:layout_gravity="bottom|center|right" android:id="@id/time" android:background="?im_msg_part_time_contrast_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:lines="1" android:importantForAccessibility="no" />
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="#ffbbc3cc" />
+            <corners android:radius="@dimen/vkui_button_corner_radius_16dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#ffbbc3cc" />
+            <corners android:radius="@dimen/vkui_button_corner_radius_16dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/background_blue" />
+            <corners android:radius="@dimen/vkui_button_corner_radius_16dp" />
+        </shape>
+    </item>
+</selector>

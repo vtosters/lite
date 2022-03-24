@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.layout.SwipeLayout android:id="@id/live_video_swipe_layout" android:background="@color/black" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.live.views.liveswipe.LiveSwipeView android:id="@id/drag_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.vtosters.lite.ui.layout.SwipeLayout>

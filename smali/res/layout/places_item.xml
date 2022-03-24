@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/UserSmallRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_marginRight="12.0dip" app:placeholderImage="@drawable/ic_place_48" style="@style/UserSmallPhoto" />
+    <TextView android:id="@id/title" android:layout_marginTop="2.0dip" android:layout_toLeftOf="@id/info" style="@style/UserMediumTitle" />
+    <TextView android:id="@id/subtitle" android:layout_marginTop="0.5dip" android:layout_toLeftOf="@id/info" style="@style/UserMediumSubtitle" />
+    <com.vtosters.lite.ui.BadooTextView android:textSize="12.0dip" android:textColor="#ff909499" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:drawableRight="@drawable/ic_user_16" android:drawablePadding="2.0dip" android:layout_alignBottom="@id/subtitle" android:layout_alignParentRight="true" app:textViewTint="#ffabafb3" />
+</RelativeLayout>

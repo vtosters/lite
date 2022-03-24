@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/im_appbar" android:layout_height="?actionBarSize" style="?im_appbar_collapsing_style">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll">
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/VkIm.Toolbar.Style" />
+            <com.vk.core.view.ModernSearchView android:id="@id/vkim_search" android:background="?background_content" android:visibility="gone" android:layout_height="?actionBarSize" style="?im_toolbar_search_style" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:id="@id/vkim_list_container" android:paddingBottom="@dimen/vkim_confirm_btn_height" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <View app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
+    <View android:id="@id/vkim_search_shadow" android:visibility="gone" app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
+    <com.vk.core.view.BottomConfirmButton android:layout_gravity="bottom" android:id="@id/vkim_confirm_btn" android:layout_width="fill_parent" android:layout_height="48.0dip" app:bcb_cancel_bg_color="?background_content" app:bcb_cancel_text="@string/vkim_contacts_invite_btn" app:bcb_cancel_text_color="?im_accent" app:bcb_divider="@color/gray_50" app:bcb_send_bg_color="?background_content" app:bcb_send_text="@string/vkim_contacts_invite_btn" app:bcb_send_text_color="?im_accent" app:bcb_text_all_caps="false" />
+    <View android:layout_gravity="bottom" android:background="?im_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/vkim_confirm_btn_height" />
+</android.support.design.widget.CoordinatorLayout>

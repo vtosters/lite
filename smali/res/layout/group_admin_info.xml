@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vk="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/edit_name_header" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/group_title" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/group_title" android:singleLine="true" style="@style/CardTextEdit" />
+                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <EditText android:id="@id/group_descr" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="12.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/group_description" style="@style/CardTextEdit" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_address" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="#ffb8b8b8" android:background="@null" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="http://vk.com/" style="@style/CardTextEdit" />
+                <EditText android:id="@id/group_address" android:background="@null" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="megagroup" android:singleLine="true" style="@style/CardTextEdit" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_topic" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/group_category" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight" />
+                <View android:id="@id/group_categoty_divider" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/group_subcategory" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/group_website_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/group_website_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_site" style="@style/CardsSectionHeader" />
+            <EditText android:id="@id/group_website" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" style="@style/CardTextEdit" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/group_access_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/group_access_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_access" style="@style/CardsSectionHeader" />
+            <com.vtosters.lite.ui.CompoundRadioGroup android:orientation="vertical" android:id="@id/group_access_radiogroup" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/access_open" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
+                    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_open" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_open" android:layout_toRightOf="@android:id/checkbox" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_open" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_open_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_open" />
+                </com.vtosters.lite.ui.CheckableRelativeLayout>
+                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/access_closed" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
+                    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_closed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_closed" android:layout_toRightOf="@android:id/checkbox" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_closed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_closed_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_closed" />
+                </com.vtosters.lite.ui.CheckableRelativeLayout>
+                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/access_private" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
+                    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_private" android:layout_toRightOf="@android:id/checkbox" />
+                    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_private_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title" />
+                </com.vtosters.lite.ui.CheckableRelativeLayout>
+            </com.vtosters.lite.ui.CompoundRadioGroup>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/group_time_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_event_time" style="@style/CardsSectionHeader" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0dip" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/group_start_time" android:singleLine="true" android:layout_weight="1.0" />
+                    <Button android:id="@id/btn_start_date" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="Button" style="?android:spinnerStyle" />
+                    <TextView android:textSize="17.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/date_at" />
+                    <Button android:id="@id/btn_start_time" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="Button" style="?android:spinnerStyle" />
+                    <ImageView android:padding="10.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_list_remove" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/group_end_time_wrap" android:background="@drawable/bg_post_comments_btm" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0dip" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/group_end_time" android:singleLine="true" android:layout_weight="1.0" />
+                    <Button android:id="@id/btn_end_date" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="Button" style="?android:spinnerStyle" />
+                    <TextView android:textSize="17.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/date_at" />
+                    <Button android:id="@id/btn_end_time" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="Button" style="?android:spinnerStyle" />
+                    <ImageView android:id="@id/group_remove_end_time" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_list_remove" />
+                </LinearLayout>
+                <com.vtosters.lite.ui.OverlayTextView android:textColor="#ff388dc7" android:gravity="center" android:orientation="horizontal" android:id="@id/group_add_end_time" android:paddingTop="12.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_set_end_time" vk:overlay="@drawable/highlight" vk:padAsBackground="true" style="@style/CardTextEdit" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/group_place_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_event_location" style="@style/CardsSectionHeader" />
+            <com.vtosters.lite.ui.OverlayTextView android:textSize="16.0dip" android:gravity="center|left" android:id="@id/group_place" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minHeight="48.0dip" android:hint="@string/group_location_placeholder" android:drawablePadding="16.0dip" vk:overlay="@drawable/highlight" vk:padAsBackground="true" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

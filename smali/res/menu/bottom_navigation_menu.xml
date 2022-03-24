@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_newsfeed_outline_28" android:enabled="true" android:id="@id/tab_news" android:title="@string/newsfeed" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_menu_search_outline_28" android:enabled="true" android:id="@id/tab_discover" android:title="@string/search" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_menu_message_outline_28" android:enabled="true" android:id="@id/tab_messages" android:title="@string/messages" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_menu_notification_outline_28" android:enabled="true" android:id="@id/tab_feedback" android:title="@string/not_notifications" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_menu_more_outline_28" android:enabled="true" android:id="@id/tab_menu" android:title="@string/menu" app:showAsAction="ifRoom" />
+</menu>

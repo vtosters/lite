@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/banner_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialog_header_container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/pinned_msg_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/pinned_msg_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/vkim_bg_card_elevation2_shadow" android:scaleType="fitXY" android:contentDescription="@null" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/bar_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/vkim_bg_card_elevation2_shadow" android:scaleType="fitXY" android:contentDescription="@null" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/common_holder_frame_layout" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="8.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/attach_icon" android:layout_width="@dimen/post_attach_common_icon_size" android:layout_height="@dimen/post_attach_common_icon_size" android:scaleType="centerInside" android:tint="?attach_picker_tab_inactive_icon" />
+    <FrameLayout android:id="@id/attach_error_view" android:visibility="gone" android:layout_width="@dimen/post_attach_common_icon_size" android:layout_height="@dimen/post_attach_common_icon_size">
+        <ImageView android:layout_gravity="center" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_replay_36" />
+    </FrameLayout>
+    <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/attach_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attachment" android:maxLines="1" android:fontFamily="@string/font_family_medium" android:layout_marginStart="@dimen/post_attach_common_text_left_space" />
+    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:id="@id/attach_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="21.0sp" android:text="@string/attach_link" android:maxLines="1" android:layout_marginStart="@dimen/post_attach_common_text_left_space" />
+    <ImageView android:layout_gravity="end|center" android:id="@id/attach_common_remove_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/picker_ic_close_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/delete" />
+</FrameLayout>

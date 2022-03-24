@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/post_side_padding" android:paddingTop="12.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@android:id/text1" android:paddingRight="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/gray" android:ellipsize="end" android:id="@android:id/text2" android:paddingTop="21.0dip" android:paddingRight="48.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lines="2" />
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="right" android:id="@android:id/icon" android:layout_width="40.0dip" android:layout_height="40.0dip" app:placeholderImage="@drawable/placeholder_group_72" app:roundedCornerRadius="20.0dip" />
+</FrameLayout>

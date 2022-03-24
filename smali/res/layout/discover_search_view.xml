@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.AppBarLayout android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+            <include android:id="@id/search" layout="@layout/toolbar_modern_search_view" />
+            <com.vtosters.lite.ui.widget.VKTabLayout android:layout_gravity="center_horizontal" android:id="@id/tabs" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="44.0dip" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="?header_tab_active_indicator" app:tabMode="scrollable" app:tabPaddingBottom="4.0dip" app:tabSelectedTextColor="?header_tab_active_text" app:tabTextColor="?header_tab_inactive_text" />
+        </android.support.design.widget.AppBarLayout>
+        <com.vk.core.view.VKViewPager android:id="@id/viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+</FrameLayout>

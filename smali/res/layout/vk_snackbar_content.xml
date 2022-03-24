@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/sn_content" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/black" android:id="@id/tv_message" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" android:lineSpacingExtra="1.0sp" android:fontFamily="@font/roboto_regular" style="@style/VKUIText.Text" />
+    <TextView android:textSize="14.0sp" android:textColor="?accent" android:gravity="center_vertical" android:id="@id/btn_action" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="30.0dip" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+</merge>

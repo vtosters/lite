@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/coordinator" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/touch_outside" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:importantForAccessibility="no" />
+    <RelativeLayout android:layout_gravity="center|top" android:id="@id/design_bottom_sheet" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.vk.core.ui.VkBottomSheetBehavior" style="?bottomSheetStyle">
+        <View android:id="@id/header_background" android:background="?tabbar_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="3.0dip" android:outlineProvider="bounds" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" app:titleTextAppearance="@style/ToolbarTitle" style="?actionBarTheme"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <View android:id="@id/header_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginTop="54.0dip" android:rotation="180.0" />
+        <FrameLayout android:id="@id/fl_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

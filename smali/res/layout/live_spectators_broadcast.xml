@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip">
+        <com.vtosters.lite.live.base.MaskableFrameLayout android:id="@id/liveSpectatorsMaskable" android:layout_width="40.0dip" android:layout_height="40.0dip">
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center" android:id="@id/liveSpectatorsImage" android:background="@drawable/highlight_circle_white" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+            <FrameLayout android:layout_gravity="center" android:background="@drawable/bg_live_avatar_pink" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+        </com.vtosters.lite.live.base.MaskableFrameLayout>
+        <View android:layout_gravity="bottom|center|right" android:id="@id/liveSpectatorsVerified" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="4.0dip" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/liveSpectatorsContainer2" android:background="@drawable/bg_live_spectators_rounded" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginLeft="56.0dip">
+        <ImageView android:id="@id/liveSpectatorsTimeIcon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="6.0dip" android:src="@drawable/ic_time_24" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/white" android:ellipsize="end" android:id="@id/liveSpectatorsTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="28.0dip" android:text="12:22" android:maxLines="1" android:includeFontPadding="false" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+        <View android:background="?tabbar_background" android:layout_width="0.5dip" android:layout_height="16.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:alpha="0.2" />
+        <ImageView android:id="@id/liveSpectatorsViewersIcon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_live_spectators" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/white" android:ellipsize="end" android:id="@id/liveSpectatorsViewers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginRight="6.0dip" android:minWidth="12.0dip" android:text="12" android:maxLines="1" android:includeFontPadding="false" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+    </LinearLayout>
+</merge>

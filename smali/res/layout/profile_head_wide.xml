@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:id="@id/profile_head" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/profile_photo" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginLeft="@dimen/post_side_padding" />
+    <LinearLayout android:gravity="bottom" android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.common.view.TextViewEllipsizeEnd android:textSize="24.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/profile_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="User Name" android:maxLines="2" />
+        <TextView android:textSize="15.0dip" android:textColor="#ff8c8d8f" android:ellipsize="marquee" android:id="@id/profile_last_seen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="last seen 32 mar 2012" android:singleLine="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/profile_buttons_wrap" android:paddingLeft="8.0dip" android:paddingTop="22.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-8.0dip" android:layout_marginRight="-8.0dip" android:layout_marginBottom="-10.0dip">
+            <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/profile_btn1" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginRight="8.0dip" android:text="@string/write_a_message" android:singleLine="true" style="@style/primary_button" />
+            <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/profile_btn2" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginRight="8.0dip" android:text="Wow1" android:singleLine="true" style="@style/primary_button" />
+            <TextView android:textSize="15.0sp" android:ellipsize="end" android:id="@id/profile_btn3" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginRight="8.0dip" android:text="Wow2" android:singleLine="true" style="@style/secondary_button" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

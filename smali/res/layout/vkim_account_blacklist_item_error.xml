@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.ContentErrorView android:layout_gravity="center" android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" app:vkim_buttonText="@string/vkim_retry" style="@style/VkIm.ContentErrorView" />
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/fragment_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout android:id="@id/main_content" android:fitsSystemWindows="@bool/picker_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <View android:id="@id/click_handler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.vk.attachpicker.widget.ContentViewPager android:id="@id/pager" android:fitsSystemWindows="@bool/picker_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.vk.core.ui.VkBottomSheetBehavior" />
+        <FrameLayout android:id="@id/fl_tabs_container" android:background="?tabbar_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/picker_tab_panel_height">
+            <android.support.v7.widget.RecyclerView android:layout_gravity="center_horizontal" android:id="@id/rv_tabs" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            <View android:id="@id/tabs_overlay" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.vk.attachpicker.widget.ToolbarContainer android:layout_gravity="bottom" android:id="@id/tc_toolbar_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_bottom_button" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <View android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+            <com.vk.attachpicker.widget.AttachCounterView android:layout_gravity="bottom" android:id="@id/acv_bottom_panel_counter" android:layout_width="fill_parent" android:layout_height="@dimen/picker_viewer_bottom_padding" />
+            <TextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_bottom_panel_cancel" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="@dimen/picker_viewer_bottom_padding" android:text="@string/picker_cancel" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</com.vk.core.view.FitSystemWindowsFrameLayout>

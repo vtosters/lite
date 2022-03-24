@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="16.0dip" android:textColor="@color/black" android:textColorHint="@color/live_donation_grey" android:gravity="left" android:id="@id/daFieldInput" android:background="@android:color/transparent" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="" android:maxLines="1" android:includeFontPadding="false" android:imeOptions="actionDone|flagNoExtractUi" />
+    <View android:background="@color/live_donation_grey_delimiter" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="8.0dip" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/live_donation_grey" android:id="@id/daFieldHint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="28.0dip" android:text="xxxxx" />
+</merge>

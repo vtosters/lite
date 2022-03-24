@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/cl_root_container" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/vk_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.vk.core.view.FixAppBarLayoutBehavior" style="@style/VKAppBar">
+        <include android:id="@id/search" android:layout_width="fill_parent" android:layout_height="52.0dip" layout="@layout/toolbar_modern_search_view" />
+        <android.support.design.widget.TabLayout android:id="@id/tabs" android:layout_width="wrap_content" android:layout_height="48.0dip" app:tabGravity="fill" app:tabIndicatorColor="@color/white" app:tabMaxWidth="0.0dip" app:tabMode="scrollable" app:tabSelectedTextColor="@color/white" app:tabTextColor="@color/white_alpha60" style="@style/CatalogTabLayout" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toBottomOf="@id/vk_app_bar" />
+    <com.vk.catalog.core.ui.view.CatalogLoadingAndErrorView android:layout_gravity="center_vertical" android:id="@id/loading_and_error_view" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toBottomOf="@id/vk_app_bar" />
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/search_view" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:enableItemAnimations="true" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toBottomOf="@id/vk_app_bar" />
+    <com.vk.catalog.core.ui.view.CatalogSearchParametersView android:layout_gravity="bottom" android:id="@id/search_parameters_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow_view" style="@style/AppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

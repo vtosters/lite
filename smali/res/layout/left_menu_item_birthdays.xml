@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/leftmenu_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_menu_birthdays" />
+    <com.vtosters.lite.ui.LinkedTextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/leftmenu_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:text="bla bla bla birthdays bla bla bla" android:layout_toRightOf="@id/leftmenu_icon" android:lineSpacingExtra="4.0dip" />
+    <com.vk.core.view.PhotoStripView android:id="@id/leftmenu_photo_strip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:layout_below="@id/leftmenu_text" android:layout_alignLeft="@id/leftmenu_text" />
+</RelativeLayout>

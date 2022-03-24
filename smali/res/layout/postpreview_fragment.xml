@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="?accent" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="enterAlways|scroll">
+            <ImageView android:layout_gravity="start|center" android:id="@id/postpreview_close_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close_shadow_small_48" android:scaleType="center" android:layout_marginStart="4.0dip" />
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_logo_36" />
+            <com.vk.imageloader.view.VKImageView android:layout_gravity="end|center" android:id="@id/postpreview_user_avatar" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginEnd="14.0dip" app:roundAsCircle="true" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView android:id="@id/postpreview_content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:background="@color/background_blue" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <com.vk.imageloader.view.VKImageView android:layout_gravity="center_vertical" android:id="@id/postpreview_app_avatar_image" android:layout_width="@dimen/newsfeed_post_preview_app_avatar_size" android:layout_height="@dimen/newsfeed_post_preview_app_avatar_size" app:roundAsCircle="true" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/medium_blue_gray" android:layout_gravity="center_vertical" android:id="@id/postpreview_app_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" android:layout_marginStart="60.0dip" />
+            </FrameLayout>
+            <android.support.v7.widget.RecyclerView android:id="@id/postpreview_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:enabled="false" android:textSize="16.0sp" android:gravity="center" android:id="@id/postpreview_publish_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_margin="12.0dip" android:text="@string/publish_suggested" android:singleLine="true" android:fontFamily="sans-serif-medium" style="@style/VKUIButton.Primary" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include android:id="@id/postpreview_progressbar" android:visibility="gone" layout="@layout/view_default_loading" />
+    <com.vk.lists.DefaultErrorView android:id="@id/postpreview_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.gms.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:id="@id/create" android:paddingTop="8.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/title" android:background="@android:color/transparent" android:paddingLeft="16.0dip" android:paddingTop="17.0dip" android:paddingRight="16.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/title" android:inputType="textNoSuggestions" />
+                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <EditText android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/subtitle" android:background="@android:color/transparent" android:paddingLeft="16.0dip" android:paddingTop="17.0dip" android:paddingRight="16.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/address" android:inputType="textNoSuggestions" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/fl_permission_stub_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

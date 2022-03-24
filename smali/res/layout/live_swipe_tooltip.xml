@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/black_alpha60" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.stickers.views.animation.VKAnimationView android:layout_gravity="center" android:id="@id/swipe_tooltip_animated" android:clipChildren="false" android:clipToPadding="false" android:layout_width="250.0dip" android:layout_height="250.0dip" android:layout_marginTop="-40.0dip" android:layout_marginBottom="-80.0dip" android:scaleType="fitCenter" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/swipe_tooltip_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="36.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="36.0dip" android:text="@string/live_swipe_tooltip" android:shadowColor="#52000000" android:shadowDy="0.0" android:shadowRadius="6.0" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_scrollFlags="enterAlways|scroll|snap" app:navigationIcon="@drawable/vkim_ic_back_theme_tinted" style="@style/VkIm.Toolbar.Style" />
+        <android.support.design.widget.TabLayout android:id="@id/vkim_tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabMode="scrollable" style="@style/VkIm.TabLayout" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@id/vkim_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

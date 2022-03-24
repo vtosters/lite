@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="36.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_vertical" android:background="?im_history_divider_separator" android:layout_width="0.0dip" android:layout_height="0.5dip" android:layout_weight="1.0" android:translationY="1.0dip" />
+    <TextView android:textSize="13.0sp" android:textColor="?im_history_divider_foreground" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_msg_list_unread" android:singleLine="true" android:fontFamily="@string/fontRobotoMedium" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+    <View android:layout_gravity="center_vertical" android:background="?im_history_divider_separator" android:layout_width="0.0dip" android:layout_height="0.5dip" android:layout_weight="1.0" android:translationY="1.0dip" />
+</LinearLayout>

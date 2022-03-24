@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/bg_picker_round_corners" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <android.support.v7.widget.RecyclerView android:id="@id/vkim_picker_list" android:background="?background_content" android:paddingBottom="8.0dip" android:fitsSystemWindows="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+</LinearLayout>

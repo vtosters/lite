@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/poll_bg_view_holder_width" android:layout_height="@dimen/poll_bg_view_holder_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/poll_background_iv" android:layout_width="@dimen/poll_bg_width" android:layout_height="@dimen/poll_bg_height" app:placeholderImage="@drawable/attach_poll_background_placeholder_gray" app:roundedCornerRadius="4.0dip" />
+    <View android:layout_gravity="center_horizontal" android:id="@id/poll_background_click_handler" android:background="@drawable/poll_view_with_background_selector_radius_4" android:layout_width="@dimen/poll_bg_width" android:layout_height="@dimen/poll_bg_height" />
+    <ProgressBar android:layout_gravity="center|top" android:id="@id/poll_upload_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="40.0dip" android:indeterminate="false" android:indeterminateOnly="false" />
+    <android.support.v7.widget.AppCompatCheckBox android:layout_gravity="bottom|center" android:id="@id/poll_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" style="@android:style/Widget.CompoundButton.RadioButton" />
+</FrameLayout>

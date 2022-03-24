@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.music.view.CommunityImageView android:id="@id/community_image" android:layout_width="@dimen/music_community_image" android:layout_height="@dimen/music_community_image" app:placeholderImage="@color/music_placeholder_bg" app:roundAsCircle="true" />
+    <TextView android:textSize="12.0dip" android:textStyle="normal" android:ellipsize="end" android:gravity="center" android:id="@id/community_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="2" android:lines="2" android:fontFamily="sans-serif" style="@style/TextStyle" />
+</LinearLayout>

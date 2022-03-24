@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.view.ViewPager android:id="@id/pager" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="1000.0dip" />
+    <com.vtosters.lite.ui.widget.ViewPagerInfinite android:id="@id/banners" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/stickers_banner_size" app:nextPeriodSec="3" app:pageMargin="@dimen/game_page_margin" />
+    <FrameLayout android:id="@id/fl_notification_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/banners">
+        <com.vk.common.view.UserNotificationView android:id="@id/notification" android:layout_width="fill_parent" android:layout_height="@dimen/stickers_notifications_size" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/tabs_wrap" android:background="?tabbar_background" android:paddingLeft="@dimen/stickers_tabs_padding" android:paddingRight="@dimen/stickers_tabs_padding" android:layout_width="fill_parent" android:layout_height="@dimen/stickers_tabs_size" android:layout_below="@id/fl_notification_container">
+        <com.vtosters.lite.ui.widget.PagerSlidingTabStrip android:textSize="14.0sp" android:textColor="?accent" android:gravity="center_horizontal" android:layout_gravity="center|top" android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="@dimen/stickers_tabs_size" android:minHeight="48.0dip" app:dividerColor="@android:color/transparent" app:horizontalTabPadding="8.0dip" app:indicatorColor="?accent" app:indicatorHeight="2.0dip" app:scrollOffset="0.0dip" app:shouldExpand="false" app:tabBackground="@drawable/highlight" app:tabPaddingLeftRight="12.0dip" app:textAllCaps="true" app:underlineColor="#ffd8d8d8" app:underlineHeight="0.5dip" />
+    </FrameLayout>
+    <View android:id="@id/top_navigation_shadow" android:background="@drawable/bg_toolbar_shadow_dark" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+</RelativeLayout>

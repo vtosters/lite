@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/interfacenewsfeed">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/altnewsfeed" android:key="newfeed" android:summary="@string/altnewsfeedsum" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/showstories" android:key="stories" android:summary="@string/showstoriessum" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacenewsfeedswipe" android:key="swipe" android:summary="@string/interfacenewsfeedswipesum" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/interfaceglobal">
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/start" android:title="@string/interfacestartfr" android:key="start_value" android:defaultValue="newsfeed" android:dialogTitle="@string/interfacestartfrsum" android:entryValues="@array/start_value" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfaceglobaldates" android:key="fulltime" android:summary="@string/interfaceglobaldatessum" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfaceglobalnum" android:key="shortinfo" android:summary="@string/interfaceglobalnumsum" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfaceglobalpost" android:key="shortpost" android:summary="@string/interfaceglobalpostsum" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/interfacevideo">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacevideoext" android:key="isEnableExternalOpening" android:summary="@string/interfacevideoextsum" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacevideorec" android:key="__dbg_disable_video_feed" android:summary="@string/interfacevideorecsum" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/menucutter" android:key="showmenu" android:summary="@string/menucuttersum" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/docknumbers" android:key="dockcounter" android:summary="@string/docknumberssum" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

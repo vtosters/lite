@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/liveTextureHolder" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.vk.media.player.video.view.VideoTextureView android:id="@id/liveTexture" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.vk.media.player.video.view.PreviewImageView android:id="@id/liveViewBack" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <View android:layout_gravity="top" android:id="@id/liveViewFadeUp" android:background="@drawable/scrim_top" android:layout_width="fill_parent" android:layout_height="90.0dip" android:alpha="0.5" />
+    <View android:layout_gravity="bottom" android:id="@id/liveViewFadeBottom" android:background="@drawable/bg_live_fade_bottom" android:layout_width="fill_parent" android:layout_height="1000.0dip" android:layout_marginTop="200.0dip" android:layout_marginBottom="-800.0dip" android:alpha="1.0" />
+    <FrameLayout android:id="@id/liveViewMainHolder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vtosters.lite.live.views.error.ErrorView android:id="@id/liveViewError" android:background="@color/live_error_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:layout_gravity="center" android:id="@id/liveViewProgress" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" app:mpb_indeterminateTint="@color/white" app:mpb_progressStyle="circular" />
+    <LinearLayout android:gravity="center|right" android:id="@id/liveViewTopHolder" android:layout_width="fill_parent" android:layout_height="56.0dip" android:alpha="1.0">
+        <ImageButton android:id="@id/liveViewClose" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_live_close" android:layout_weight="0.0" />
+    </LinearLayout>
+</merge>

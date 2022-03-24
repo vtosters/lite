@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/mi_delete_own_playlist" android:title="@string/music_menu_playlist_delete" />
+    <item android:id="@id/mi_toggle_follow" android:title="@string/music_menu_playlist_follow" />
+    <item android:id="@id/mi_play_next" android:title="@string/music_menu_playlist_play_next" />
+    <item android:id="@id/mi_go_to_artists" android:title="@string/music_menu_playlist_go_to_artist" />
+    <item android:id="@id/mi_download" android:title="@string/music_menu_playlist_download" />
+    <item android:id="@id/mi_share" android:title="@string/music_menu_playlist_share" />
+    <item android:id="@id/mi_copy_link" android:title="@string/copy_link" />
+</menu>

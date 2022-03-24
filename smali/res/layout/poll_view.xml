@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/poll_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:roundedCornerRadius="8.0dip" />
+    <android.support.v7.widget.AppCompatImageView android:layout_gravity="end|center|top" android:id="@id/poll_actions" android:background="@drawable/highlight_unlimited" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_24" android:scaleType="center" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="160.0dip">
+            <com.vk.core.widget.AdaptiveSizeTextView android:textSize="20.0sp" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/poll_title" android:textColor="?text_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:maxLines="3" android:textAlignment="center" android:layout_marginStart="28.0dip" android:layout_marginEnd="28.0dip" app:fontFamily="@font/roboto_bold" />
+            <TextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/poll_author_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:singleLine="true" android:textAlignment="center" android:paddingStart="2.0dip" android:paddingEnd="2.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+            <TextView android:textSize="14.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/poll_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" android:textAlignment="center" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/options_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:textSize="14.0sp" android:layout_gravity="center" android:id="@id/poll_multiple_vote_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/poll_vote" android:singleLine="true" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/VKUIButton.Primary" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/poll_results" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip">
+                <com.vk.core.view.PhotoStripView android:id="@id/photo_strip_view" android:layout_width="wrap_content" android:layout_height="24.0dip" />
+                <TextView android:textSize="14.0sp" android:ellipsize="end" android:id="@id/votes_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_regular" android:layout_marginStart="8.0dip" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/multiple_progress" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

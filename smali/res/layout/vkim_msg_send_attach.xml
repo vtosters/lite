@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="112.0dip" android:layout_height="88.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.FrescoImageView android:id="@id/vkim_image" android:layout_width="96.0dip" android:layout_height="72.0dip" android:layout_margin="8.0dip" android:contentDescription="@null" android:layout_marginEnd="0.0dip" app:vkim_cornerRadius="4.0dip" app:vkim_scaleType="center_crop" />
+    <ImageView android:layout_gravity="end" android:id="@id/vkim_attach_remove" android:padding="6.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_deattach_28" android:translationX="6.0dip" android:translationY="-6.0dip" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/vkim_attach_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="16.0dip" android:src="@drawable/ic_document_outline_28" android:scaleType="center" android:tint="?header_text" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="28.0dip" android:layout_marginTop="44.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip">
+        <TextView android:textSize="12.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/vkim_attach_title" android:layout_width="fill_parent" android:layout_height="0.0dip" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/vkim_attach_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+    </LinearLayout>
+</FrameLayout>

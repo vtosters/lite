@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/bg_card_elevation8_cropped_fill" android:tint="?modal_card_background" />
+    </item>
+    <item>
+        <nine-patch android:src="@drawable/bg_card_elevation8_cropped_shadow" />
+    </item>
+    <item>
+        <inset android:inset="8.0dip">
+            <shape>
+                <stroke android:width="0.5dip" android:color="?modal_card_border" />
+                <corners android:radius="12.0dip" />
+            </shape>
+        </inset>
+    </item>
+</layer-list>

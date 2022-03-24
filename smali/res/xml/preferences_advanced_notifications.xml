@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vtosters.lite.ui.RingtonePreference android:title="@string/sett_notify_sound" android:key="notifyRingtone" android:defaultValue="content://settings/system/notification_sound" app:ringtoneType="notification" app:showDefault="true" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_notify_vibrate" android:key="notifyVibrate" android:defaultValue="true" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_notify_led" android:key="notifyLED" android:defaultValue="true" />
+    <com.vtosters.lite.ui.ColorPreference android:title="@string/sett_led_color" android:key="notifyLedColor" android:defaultValue="-1" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_heads_up_notifications" android:key="notifyHeadsUp" android:defaultValue="false" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/sett_shortcut_badger" android:key="notifyShortcutBadge" android:defaultValue="true" />
+    <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+</PreferenceScreen>

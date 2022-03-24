@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fit_container" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/web_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pb_loading" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminate="true" />
+        <com.vk.lists.DefaultErrorView android:id="@id/error_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_header_container" android:layout_width="fill_parent" android:layout_height="@dimen/article_top_panel">
+        <include android:layout_width="fill_parent" android:layout_height="@dimen/article_top_panel" layout="@layout/appkit_toolbar" />
+        <FrameLayout android:id="@id/fl_longread_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/article_top_panel">
+            <ImageView android:layout_gravity="center|left" android:id="@id/iv_longread_back" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_24" android:scaleType="centerInside" />
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center" android:id="@id/iv_longread_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+            <TextView android:textSize="14.0sp" android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/tv_longread_subscribe" android:background="@drawable/picker_white_ripple_unbounded" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:fontFamily="@string/font_family_medium" />
+        </FrameLayout>
+    </FrameLayout>
+    <View android:id="@id/top_navigation_shadow" android:background="@drawable/bg_toolbar_shadow_dark" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginTop="@dimen/article_top_panel" />
+    <View android:layout_gravity="bottom" android:id="@id/bottom_navigation_shadow" android:background="@drawable/bg_bottom_navigation_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_marginBottom="@dimen/article_bottom_panel" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/fl_bottom_panel" android:layout_width="fill_parent" android:layout_height="@dimen/article_bottom_panel">
+        <ImageView android:id="@id/iv_reply" android:layout_width="@dimen/article_bottom_panel" android:layout_height="fill_parent" android:src="@drawable/ic_share_outline_24" android:scaleType="center" android:contentDescription="@string/share" android:layout_marginStart="4.0dip" />
+        <ImageView android:id="@id/iv_favourite" android:layout_width="@dimen/article_bottom_panel" android:layout_height="fill_parent" android:src="@drawable/ic_favorite_24" android:scaleType="center" android:contentDescription="@string/favorites_add" android:layout_marginStart="8.0dip" />
+        <ImageView android:id="@id/options_btn" android:layout_width="36.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_games_actions" android:scaleType="center" android:contentDescription="@string/more" android:layout_marginStart="8.0dip" />
+        <TextView android:textSize="14.0sp" android:gravity="end|center" android:id="@id/tv_view_count" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+    <android.support.v4.widget.Space android:id="@id/view_day_mode_anchor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0px" />
+</FrameLayout>

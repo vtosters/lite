@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/highlight_circle" android:left="8.0dip" android:top="8.0dip" android:right="8.0dip" android:bottom="8.0dip" />
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <inset android:insetLeft="8.0dip" android:insetRight="8.0dip" android:insetTop="8.0dip" android:insetBottom="8.0dip">
+                    <shape>
+                        <corners android:radius="20.0dip" />
+                        <solid android:color="#1f5a8fcc" />
+                    </shape>
+                </inset>
+            </item>
+            <item android:state_selected="false">
+                <shape>
+                    <solid android:color="@color/transparent" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

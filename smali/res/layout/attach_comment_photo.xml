@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/picture" android:layout_width="120.0dip" android:layout_height="80.0dip" android:layout_marginBottom="8.0dip" android:contentDescription="@string/photo" android:layout_marginEnd="4.0dip" app:actualImageScaleType="centerCrop" app:overlayImage="@drawable/scrim_bottom_16percent" app:placeholderImage="@color/placeholder_background" app:roundedCornerRadius="4.0dip" />
+</FrameLayout>

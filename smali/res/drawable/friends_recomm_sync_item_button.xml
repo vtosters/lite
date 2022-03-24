@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" />
+    <corners android:topLeftRadius="@dimen/vkui_button_corner_big_radius" android:topRightRadius="@dimen/vkui_button_corner_big_radius" android:bottomLeftRadius="@dimen/vkui_button_corner_big_radius" android:bottomRightRadius="@dimen/vkui_button_corner_big_radius" />
+</shape>

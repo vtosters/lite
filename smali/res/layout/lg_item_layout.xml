@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/lg_image" android:layout_width="fill_parent" android:layout_height="wrap_content" app:actualImageScaleType="centerCrop" app:viewAspectRatio="1.0" />
+    <FrameLayout android:layout_gravity="end" android:id="@id/lg_counter_container" android:layout_width="40.0dip" android:layout_height="40.0dip">
+        <TextView android:textSize="15.0dip" android:textColor="?photo_gallery_text_color_inv" android:gravity="center" android:layout_gravity="center" android:id="@id/lg_counter" android:background="@drawable/bg_white_circle" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="8.0dip" android:fontFamily="@string/fontRobotoMedium" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="start|bottom|center" android:id="@id/lg_video_marker" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_video_24" android:layout_marginStart="4.0dip" />
+</FrameLayout>

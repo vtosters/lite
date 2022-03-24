@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="1.0dip">
+        <bitmap android:src="@drawable/vk_pay_badge_14" />
+    </item>
+</layer-list>

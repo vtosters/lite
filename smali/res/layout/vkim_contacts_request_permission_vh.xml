@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="132.0sp" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/bg_contacts_permissions_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="14.0sp" android:textColor="?im_item_foreground_caption" android:gravity="center" android:id="@id/vkim_contacts_sync_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/vkim_contact_request_permission_label" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:background="@drawable/bg_contacts_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+        <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center_vertical" android:id="@id/vkim_progress" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginEnd="12.0dip" app:matProg_barColor="?im_accent_dark" app:matProg_barWidth="1.0dip" app:matProg_progressIndeterminate="true" />
+        <TextView android:textSize="15.0sp" android:textColor="?im_accent_dark" android:gravity="center" android:id="@id/vkim_content" android:layout_width="wrap_content" android:layout_height="36.0sp" android:text="@string/vkim_contacts_allow_contacts_permission" android:fontFamily="@string/fontRobotoMedium" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end" android:id="@id/vkim_close_btn" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/lg_close_drawable" />
+</FrameLayout>

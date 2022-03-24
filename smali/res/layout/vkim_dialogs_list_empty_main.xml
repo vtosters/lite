@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.EmptyViewForList android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" app:icon_size="@dimen/vkim_list_empty_icon_size" app:text="@string/vkim_dialogs_list_empty" app:text_color="@color/subhead_gray" app:text_size="16.0sp" />
+    <com.vk.im.ui.views.msg.MsgRequestCountLabelView android:layout_gravity="top" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" style="@style/VkIm.MsgRequest.LabelCount" />
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/send_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:orientation="horizontal" android:id="@id/vkim_state_extra_container_stub" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout="@layout/vkim_msg_send_extra" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+        <ViewStub android:id="@id/vkim_attaches_stub" android:visibility="gone" android:clipToPadding="false" android:layout="@layout/vkim_msg_send_attaches" android:layout_width="fill_parent" android:layout_height="88.0dip" android:overScrollMode="never" android:paddingStart="8.0dip" android:paddingEnd="0.0dip" />
+        <View android:id="@id/vkim_state_extra_divider" android:background="#ffe6e8eb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="52.0dip">
+                <com.vk.im.ui.views.RichEditText android:textSize="16.0sp" android:textColor="?text_primary" android:textColorHint="#ffaaaeb3" android:gravity="center_vertical" android:id="@id/writebar_edit" android:background="@null" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="110.0dip" android:minHeight="48.0dip" android:hint="@string/vkim_write_bar_hint" android:maxLines="4" android:ems="10" android:inputType="textCapSentences|textMultiLine" android:paddingStart="16.0dip" />
+                <LinearLayout android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:id="@id/vkim_gallery" android:src="@drawable/ic_media_outline_28" style="@style/VkIm.MsgSend.AttachBtn" />
+                    <ImageView android:id="@id/vkim_camera" android:src="@drawable/ic_camera_outline_28" style="@style/VkIm.MsgSend.AttachBtn" />
+                    <ImageView android:id="@id/vkim_stickers_btn" android:src="@drawable/ic_smile_outline_28" style="@style/VkIm.MsgSend.AttachBtn" />
+                    <ImageView android:id="@id/vkim_new_attach_btn" android:src="@drawable/ic_add_circle_outline_28" style="@style/VkIm.MsgSend.AttachBtn" />
+                    <ImageView android:id="@id/vkim_bot_btn" android:visibility="gone" android:src="@drawable/ic_keyboard_bots_outline_28" style="@style/VkIm.MsgSend.AttachBtn" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="end|bottom|center" android:background="@drawable/bg_im_send_btn" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginBottom="6.0dip" android:layout_marginEnd="13.0dip">
+                <ImageView android:id="@id/vkim_send_btn" android:padding="18.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_send_btn" android:scaleType="fitCenter" />
+                <ImageView android:id="@id/vkim_voice_btn" android:padding="18.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_voice_btn" android:scaleType="center" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <ViewStub android:id="@id/msg_request_container" android:layout="@layout/vkim_msg_send_msg_request" android:inflatedId="@id/msg_request_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/msg_send_disabled_stub" android:layout="@layout/vkim_msg_send_disabled" android:inflatedId="@id/vkim_msg_send_disabled" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0dip" android:id="@id/poll_picker_create_btn" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="12.0dip" android:text="@string/poll_create_btn_title" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIButton.Primary" />
+        <android.support.v7.widget.AppCompatImageView android:id="@id/poll_picker_image" android:background="@drawable/poll_picker_bg" android:layout_width="84.0dip" android:layout_height="112.0dip" android:layout_marginTop="36.0dip" android:src="@drawable/bg_poll_bg_thumb" android:tint="@color/black" app:layout_constraintEnd_toEndOf="@id/poll_picker_create_btn" app:layout_constraintStart_toStartOf="@id/poll_picker_create_btn" app:layout_constraintTop_toBottomOf="@id/poll_picker_create_btn" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/medium_blue_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/poll_picker_description" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="@id/poll_picker_image" app:layout_constraintStart_toStartOf="@id/poll_picker_image" app:layout_constraintTop_toBottomOf="@id/poll_picker_image" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

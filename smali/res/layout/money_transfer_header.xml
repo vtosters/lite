@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="@dimen/money_transfer_btn_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:id="@id/fl_send_money" android:layout_width="0.0dip" android:layout_height="44.0dip" android:text="@string/money_transfer_send" android:layout_weight="0.5" style="@style/primary_button" />
+    <View android:id="@id/fl_divider" android:layout_width="12.0dip" android:layout_height="0.0dip" />
+    <TextView android:textSize="16.0sp" android:id="@id/fl_request_money" android:layout_width="0.0dip" android:layout_height="44.0dip" android:text="@string/money_transfer_request" android:layout_weight="0.5" style="@style/secondary_button" />
+    <TextView android:textSize="16.0sp" android:id="@id/fl_request_money_chat" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="44.0dip" android:text="@string/money_transfer_send_request" android:layout_weight="0.5" style="@style/primary_button" />
+</LinearLayout>

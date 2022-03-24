@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/cards_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider" android:showDividers="middle">
+            <EditText android:gravity="top" android:id="@id/title" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="12.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/create_album_title" style="@style/CardTextEdit" />
+            <EditText android:gravity="top" android:id="@id/description" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="12.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/create_album_description" android:minLines="3" style="@style/CardTextEdit" />
+            <LinearLayout android:orientation="vertical" android:id="@id/album_privacy" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="16.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/create_album_privacy" />
+                <TextView android:textSize="14.0dip" android:textColor="#89000000" android:id="@id/album_privacy_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/privacy_all" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/album_privacy_comment" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="16.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/create_album_privacy_comments" />
+                <TextView android:textSize="14.0dip" android:textColor="#89000000" android:id="@id/album_privacy_comment_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/privacy_all" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/photo_album_community_privacy_wrap" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:textSize="16.0dip" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/photo_album_community_privacy" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="@string/photo_album_community_privacy" android:drawableLeft="@android:color/transparent" android:drawablePadding="16.0dip" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/photo_album_community_privacy_comment_wrap" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:textSize="16.0dip" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/photo_album_community_privacy_comment" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="@string/photo_album_community_privacy_comment" android:drawableLeft="@android:color/transparent" android:drawablePadding="16.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

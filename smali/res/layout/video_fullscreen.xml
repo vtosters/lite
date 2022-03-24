@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/fragment_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vtosters.lite.ui.layout.SwipeLayout android:id="@id/swipe_layout" android:fitsSystemWindows="false" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/drag_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.vk.video.view.VideoView android:layout_gravity="center" android:id="@id/video_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.vk.video.view.VideoToolbarView android:id="@id/toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.vk.video.view.VideoBottomPanelView android:layout_gravity="bottom" android:id="@id/bottom_panel" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0" />
+        <com.vtosters.lite.ui.widget.VideoPlayerAdsPanel android:layout_gravity="bottom" android:id="@id/ads_panel" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.vtosters.lite.ui.layout.SwipeLayout>
+</com.vk.core.view.FitSystemWindowsFrameLayout>

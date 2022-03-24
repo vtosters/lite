@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip">
+            <com.vk.music.view.ThumbsImageView android:id="@id/playlist_image" android:layout_width="@dimen/music_playlist_image_big" android:layout_height="@dimen/music_playlist_image_big" app:backgroundImage="@color/music_placeholder_bg" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" app:roundedCornerRadius="@dimen/music_image_rounding_corners" app:tiv_placeholder_resource="@drawable/ic_playlist_48" />
+        </FrameLayout>
+        <android.support.v7.widget.AppCompatEditText android:textSize="20.0dip" android:textColorHint="@color/music_text_hint" android:id="@id/playlist_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:minHeight="60.0dip" android:hint="@string/music_hint_playlist_title" android:maxLines="1" android:maxLength="128" android:layout_weight="1.0" android:inputType="textCapSentences" android:fontFamily="@string/font_family_medium" app:backgroundTint="@color/music_input_tint" style="@style/TextStyle" />
+    </LinearLayout>
+    <EditText android:textSize="16.0dip" android:textColorHint="@color/music_text_hint" android:id="@id/playlist_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:minHeight="56.0dip" android:hint="@string/music_hint_playlist_description" android:maxLines="4" android:maxLength="1024" android:inputType="textCapSentences|textMultiLine" android:fontFamily="@string/sans_serif" app:backgroundTint="@color/music_input_tint" style="@style/TextStyle" />
+</LinearLayout>

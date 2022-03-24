@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="?selectableItemBackground" android:paddingLeft="@dimen/newsfeed_new_photos_space" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/newsfeed_new_photos_space"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKImageView android:id="@id/new_photos_suggest_photo_back_image" android:layout_width="@dimen/newsfeed_new_photos_image_size" android:layout_height="@dimen/newsfeed_new_photos_image_size" android:layout_marginBottom="@dimen/newsfeed_new_photos_image_space" fresco:actualImageScaleType="centerCrop" fresco:roundedCornerRadius="4.0dip" />
+        <com.vk.imageloader.view.VKImageView android:id="@id/new_photos_suggest_photo_front_image" android:layout_width="@dimen/newsfeed_new_photos_image_size" android:layout_height="@dimen/newsfeed_new_photos_image_size" android:layout_marginLeft="@dimen/newsfeed_new_photos_image_space" android:layout_marginTop="@dimen/newsfeed_new_photos_image_space" android:layout_marginStart="@dimen/newsfeed_new_photos_image_space" fresco:actualImageScaleType="centerCrop" fresco:roundedCornerRadius="4.0dip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_weight="1.0" android:layout_marginStart="12.0dip">
+        <TextView android:textSize="15.0dip" android:ellipsize="end" android:id="@id/new_photos_suggest_holder_amount_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif-medium" style="@style/VKUIText" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/gray_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="8.0dip" android:text="@string/newsfeed_new_photos_share_it" />
+        <TextView android:textSize="14.0dip" android:id="@id/new_photos_suggest_holder_share_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newsfeed_new_photos_share" android:fontFamily="sans-serif-medium" style="@style/VKUIButton.Primary" />
+    </LinearLayout>
+    <ImageView android:id="@id/new_photos_suggest_close_image" android:background="?selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close_small" android:scaleType="center" />
+</LinearLayout>

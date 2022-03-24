@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/banned_container" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/header_with_logo" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/info_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/placeholder_ban_160" />
+            <TextView android:textColor="@color/subhead_gray" android:gravity="center" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKUIText.Subhead" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:id="@id/button_banned_big" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:maxWidth="100.0dip" android:text="@string/banned_restore_account" style="@style/MaterialBlueButton" />
+        <TextView android:textColor="?accent" android:gravity="center" android:id="@id/button_support" android:background="@drawable/highlight" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/banned_contact_support" android:fontFamily="@string/font_family_medium" style="@style/VKUIText.Subhead" />
+        <TextView android:textColor="?accent" android:gravity="center" android:id="@id/button_logout" android:background="@drawable/highlight" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/log_out" android:fontFamily="@string/font_family_medium" style="@style/VKUIText.Subhead" />
+    </LinearLayout>
+    <ScrollView android:id="@id/scroll_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

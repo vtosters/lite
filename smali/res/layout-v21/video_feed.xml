@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/fragment_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vtosters.lite.ui.layout.SwipeLayout android:id="@id/swipe_layout" android:fitsSystemWindows="false" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.vk.common.view.SwipeableRecyclerView android:id="@id/drag_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+        <View android:layout_gravity="top" android:id="@id/scrim" android:background="@drawable/scrim_top" android:layout_width="fill_parent" android:layout_height="72.0dip" android:alpha="0.78" />
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_alignParentTop="true"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <com.vtosters.lite.ui.OverlayTextView android:textSize="14.0dip" android:textColor="#b7ffffff" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/more_video" android:background="@drawable/bg_panel_more_videos" android:paddingLeft="15.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginBottom="12.0dip" android:text="@string/video_more_videos_title" android:fontFamily="@string/font_family_medium" android:elevation="6.0dip" app:src="@drawable/ic_down_16" />
+        <com.vk.video.view.VideoNextView android:layout_gravity="bottom|center" android:id="@id/video_next" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginBottom="4.0dip" />
+    </com.vtosters.lite.ui.layout.SwipeLayout>
+</com.vk.core.view.FitSystemWindowsFrameLayout>

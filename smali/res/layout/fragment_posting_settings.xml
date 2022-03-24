@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:background="?background_page" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+            <android.support.v7.widget.AppCompatImageView android:layout_gravity="start|center" android:id="@id/posting_settings_close_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_close_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/close" android:layout_marginStart="4.0dip" />
+            <TextView android:textSize="20.0sp" android:textColor="?text_muted" android:ellipsize="end" android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/posting_settings_title" android:singleLine="true" android:fontFamily="sans-serif-medium" android:layout_marginStart="64.0dip" android:layout_marginEnd="64.0dip" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/posting_settings_switch_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_posting_settings" android:translationY="-1.0dip" android:showDividers="beginning|end" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_facebook" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/newpost_export_fb" />
+        <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_twitter" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/newpost_export_twitter" />
+        <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_ad" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_this_ad" />
+        <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_comments_closing" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_comments_closing" />
+        <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_disable_notifications" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_disable_notifications" />
+    </LinearLayout>
+    <com.vk.core.view.AppBarShadowView style="@style/PostingAppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

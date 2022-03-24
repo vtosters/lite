@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0dip" android:layout_gravity="start|center" android:id="@id/option_name" android:textColor="?text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginBottom="9.0dip" android:fontFamily="@string/font_family_regular" android:layout_marginStart="12.0dip" android:layout_marginEnd="76.0dip" />
+    <android.support.v7.widget.AppCompatCheckBox android:layout_gravity="end|center" android:id="@id/multiple_choice_checkbox" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="7.0dip" />
+    <TextView android:textSize="14.0dip" android:layout_gravity="end|center" android:id="@id/results" android:textColor="?text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginBottom="9.0dip" android:drawablePadding="4.0dip" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="12.0dip" />
+    <ProgressBar android:layout_gravity="end|center" android:id="@id/progress" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginEnd="12.0dip" />
+</merge>

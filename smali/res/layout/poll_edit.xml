@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar" />
+    <ScrollView android:background="@color/cards_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/poll_edit_scroll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:paddingLeft="@dimen/poll_edit_padding" android:paddingTop="10.0dip" android:paddingRight="@dimen/poll_edit_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:layout_marginBottom="6.0dip">
+                <EditText android:textSize="16.0dip" android:textColor="?text_primary" android:textColorHint="#ff909499" android:gravity="center_vertical" android:id="@id/poll_question" android:background="@android:color/transparent" android:paddingLeft="16.0dip" android:paddingTop="17.0dip" android:paddingRight="16.0dip" android:paddingBottom="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:hint="@string/poll_question_placeholder" android:inputType="textCapSentences|textMultiLine" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/poll_options_container" android:paddingLeft="@dimen/poll_edit_padding" android:paddingRight="@dimen/poll_edit_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:animateLayoutChanges="true">
+                <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="?accent" android:paddingLeft="16.0dip" android:paddingTop="13.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/poll_options_header" app:typeface="Medium" />
+                <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="?accent" android:gravity="center_vertical" android:id="@id/poll_option_add" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/poll_add_option" android:textAllCaps="true" app:typeface="Medium" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/poll_anonym_wrap" android:paddingLeft="@dimen/poll_edit_padding" android:paddingRight="@dimen/poll_edit_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip">
+                <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="?accent" android:id="@id/poll_anonym_header" android:paddingLeft="16.0dip" android:paddingTop="13.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/poll_settings" app:typeface="Medium" />
+                <Switch android:textSize="16.0dip" android:textColor="#ff212121" android:ellipsize="end" android:id="@id/poll_anonym_switch" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="18.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/poll_anonym" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

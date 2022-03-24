@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/attach_counter_title_text_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/picker_attach_button" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/picker_blue" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_counter" android:background="@drawable/picker_bg_white_circle" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="8.0dip" android:singleLine="true" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+</merge>

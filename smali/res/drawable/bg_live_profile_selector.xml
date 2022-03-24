@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap android:gravity="center|right" android:src="@drawable/ic_field_arrow_down_16dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

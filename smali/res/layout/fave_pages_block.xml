@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="152.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:gravity="center" android:id="@id/pages_title" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="8.0dip" android:text="@string/fave_pages_block_title" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v7.widget.RecyclerView android:id="@id/pages_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" app:layout_constraintTop_toBottomOf="@id/pages_title" />
+</android.support.constraint.ConstraintLayout>

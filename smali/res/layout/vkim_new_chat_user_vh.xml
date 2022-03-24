@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.avatars.AvatarView android:id="@id/vkim_avatar" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_centerVertical="false" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/vkim_avatar" android:layout_centerVertical="true">
+        <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:ellipsize="marquee" android:id="@id/vkim_username" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:id="@id/vkim_subtitle" android:paddingTop="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:id="@id/online" android:layout_width="12.0dip" android:layout_height="16.0dip" android:layout_alignRight="@id/vkim_avatar" android:layout_alignBottom="@id/vkim_avatar" android:contentDescription="@null" />
+</RelativeLayout>

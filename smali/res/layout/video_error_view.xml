@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="130.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:maxWidth="480.0dip" android:text="?appkitDefaultErrorText" android:layout_centerHorizontal="true" android:lineSpacingExtra="4.0dip" />
+    <Button android:gravity="center" android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry" android:layout_below="@id/text" android:layout_centerHorizontal="true" style="?appkitErrorButtonStyle" />
+</RelativeLayout>

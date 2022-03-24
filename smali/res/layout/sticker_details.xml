@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:background="?tabbar_background" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKHorizontalParallaxImageView android:id="@id/iv_parallax_bg" android:background="#ffe9ecf0" android:layout_width="fill_parent" android:layout_height="202.0dip" />
+        <com.vtosters.lite.ui.widget.ViewPagerInfinite android:id="@id/pager" android:paddingTop="2.0dip" android:paddingBottom="25.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="202.0dip" app:nextPeriodSec="3" />
+        <view android:gravity="center|top" android:id="@id/pager_dots_wrap" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginBottom="4.0dip" android:layout_alignBottom="@id/pager" class="com.vtosters.lite.fragments.stickers.StickersDetailsFragment$PagerDotsView" />
+        <com.vtosters.lite.ui.BadooTextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/sticker_btn_wrap" android:layout_below="@id/pager" android:layout_alignParentLeft="true" app:typeface="Medium" />
+        <TextView android:textSize="13.0dip" android:textColor="#ff828385" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" android:layout_below="@id/title" android:layout_alignLeft="@id/title" android:layout_alignRight="@id/title" />
+        <FrameLayout android:id="@id/sticker_btn_wrap" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="14.0dip" android:layout_below="@id/pager" android:layout_alignParentRight="true">
+            <com.vtosters.lite.ui.BadooTextView android:id="@id/sticker_button" app:typeface="Medium" style="@style/VKUIButton.Green" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/sticker_progress" android:layout_width="20.0dip" android:layout_height="20.0dip" android:max="100" android:indeterminate="false" android:indeterminateOnly="false" />
+            <com.vtosters.lite.ui.BadooTextView android:enabled="false" android:textColor="@color/light_blue_gray" android:layout_gravity="center" android:id="@id/sticker_ok" app:typeface="Medium" style="@style/VKUIButton.Label" />
+            <ImageView android:layout_gravity="center" android:id="@id/sticker_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chats_error" />
+        </FrameLayout>
+        <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:id="@id/info" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="11.0dip" android:layout_below="@id/subtitle" android:lineSpacingExtra="1.5dip" />
+    </RelativeLayout>
+</ScrollView>

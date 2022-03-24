@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="4.0dip">
+                <nine-patch android:src="@drawable/bg_games_card" />
+            </item>
+            <item android:left="4.0dip" android:top="4.0dip" android:right="4.0dip" android:bottom="8.0dip">
+                <shape>
+                    <solid android:color="#33999999" />
+                    <corners android:topLeftRadius="3.0dip" android:topRightRadius="3.0dip" android:bottomLeftRadius="2.0dip" android:bottomRightRadius="2.0dip" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="false">
+        <inset android:insetLeft="2.0dip" android:insetRight="2.0dip" android:insetTop="2.0dip" android:insetBottom="4.0dip">
+            <nine-patch android:src="@drawable/bg_games_card" />
+        </inset>
+    </item>
+</selector>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_done_theme_tinted" android:id="@id/create_new_chat" android:title="@string/vkim_accessibility_done" app:iconTint="?header_text" android:showAsAction="always" app:showAsAction="always" />
+</menu>

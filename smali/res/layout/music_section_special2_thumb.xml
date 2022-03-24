@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/music_recommended_album_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@android:id/icon" android:layout_width="@dimen/music_section_special2_thump_size" android:layout_height="@dimen/music_section_special2_thump_size" app:backgroundImage="@color/music_placeholder_bg" app:placeholderImage="@drawable/ic_music_note_72" app:roundedCornerRadius="2.0dip" />
+</FrameLayout>

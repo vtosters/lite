@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:visibility="invisible" android:scrollbars="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="true" android:overScrollMode="never" />
+    <com.vk.im.ui.views.msg.MsgStickyDateView android:textSize="13.0sp" android:textColor="?text_primary" android:layout_gravity="center|top" android:id="@id/msg_list_sticky_date" android:background="@drawable/vkim_bg_date_badge" android:backgroundTint="?tabbar_background" android:paddingTop="9.0dip" android:paddingBottom="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:singleLine="true" android:fontFamily="@string/fontRobotoMedium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
+    <com.vk.im.ui.views.EmptyViewForList android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:icon_size="@dimen/vkim_list_empty_icon_size" app:text_color="@color/subhead_gray" app:text_size="16.0sp" />
+    <FrameLayout android:layout_gravity="bottom|center|right" android:id="@id/stb_holder" android:layout_width="64.0dip" android:layout_height="64.0dip">
+        <com.vk.im.ui.views.ScrollToBottomView android:id="@id/stb" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">48.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14.0dip</dimen>
+    <dimen name="navigation_spinner_popup_yoffset">-40.0dip</dimen>
+    <dimen name="picker_toolbar_height">48.0dip</dimen>
+    <dimen name="picker_top_offset">160.0dip</dimen>
+    <dimen name="selected_date_day_size">100.0dip</dimen>
+    <dimen name="selected_date_month_size">30.0dip</dimen>
+    <dimen name="selected_date_year_size">30.0dip</dimen>
+    <dimen name="vkim_toolbar_height">48.0dip</dimen>
+    <dimen name="abc_action_bar_progress_bar_size">32.0dip</dimen>
+    <dimen name="dialog_height">200.0dip</dimen>
+    <dimen name="expanded_map_height">112.0dip</dimen>
+    <dimen name="left_side_width">250.0dip</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="@drawable/rounded_list_selector" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+    <com.vtosters.lite.ui.BadooTextView android:textSize="16.0dip" android:textColor="?text_muted" android:ellipsize="marquee" android:id="@id/title" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:singleLine="true" android:drawablePadding="10.0dip" android:layout_toRightOf="@id/photo" android:layout_alignParentTop="false" android:layout_alignWithParentIfMissing="false" />
+    <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_toRightOf="@id/photo" android:layout_below="@id/title" android:layout_alignWithParentIfMissing="true" />
+</RelativeLayout>

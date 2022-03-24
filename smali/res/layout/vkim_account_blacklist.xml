@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" app:title="@string/vkim_settings_black_list" style="@style/VkIm.Toolbar.Secondary" />
+    <com.pnikosis.materialishprogress.ProgressWheel android:id="@id/progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="56.0dip" android:layout_centerInParent="true" app:matProg_barColor="?im_accent" app:matProg_progressIndeterminate="true" />
+    <com.vk.im.ui.views.ContentErrorView android:layout_gravity="center" android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:vkim_buttonText="@string/vkim_retry" style="@style/VkIm.ContentErrorView" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/pull_to_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/subhead_gray" android:layout_gravity="center" android:id="@id/empty" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_settings_black_list_empty" android:includeFontPadding="false" />
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/toolbar_shadow" android:layout_below="@id/toolbar" android:contentDescription="@null" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <FrameLayout android:id="@id/content_container" android:background="?im_app_background_chat" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header_container" />
+    <ImageView android:id="@id/shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/toolbar_shadow" android:layout_below="@id/header_container" android:contentDescription="@null" />
+</RelativeLayout>

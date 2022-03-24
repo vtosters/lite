@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="?actionBarTheme" android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_box" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="16.0dip" android:textColor="?android:textColorPrimary" android:textColorHint="?searchViewTextColorHint" android:id="@id/query" android:background="@null" android:paddingLeft="20.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/search" android:singleLine="true" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:textCursorDrawable="?searchViewCursorDrawable" />
+    <com.vtosters.lite.ui.HorizontalSquareImageView android:id="@id/clear" android:background="@drawable/highlight_unlimited" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_cancel_24" android:scaleType="centerInside" />
+    <com.vtosters.lite.ui.HorizontalSquareImageView android:id="@id/voice" android:background="@drawable/highlight_unlimited" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_search_mic" android:scaleType="centerInside" />
+</LinearLayout>

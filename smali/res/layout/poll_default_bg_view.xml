@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/poll_bg_view_holder_width" android:layout_height="@dimen/poll_bg_view_holder_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatImageView android:gravity="center" android:layout_gravity="top" android:id="@id/poll_backgorund_iv" android:background="@drawable/gray_border_bg_radius_4" android:layout_width="@dimen/poll_bg_width" android:layout_height="@dimen/poll_bg_height" />
+    <View android:layout_gravity="center_horizontal" android:id="@id/poll_background_click_handler" android:background="@drawable/poll_view_no_background_selector_radius_4" android:layout_width="@dimen/poll_bg_width" android:layout_height="@dimen/poll_bg_height" />
+    <android.support.v7.widget.AppCompatCheckBox android:layout_gravity="bottom|center" android:id="@id/poll_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" style="@android:style/Widget.CompoundButton.RadioButton" />
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight_radius_4" android:layout_width="@dimen/story_card_width" android:layout_height="@dimen/story_card_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/story_new_item_click_handler" android:background="@drawable/highlight_radius_4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" />
+    <android.support.v7.widget.AppCompatImageView android:layout_gravity="center_horizontal" android:background="@drawable/white_oval" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginTop="16.0dip" android:src="@drawable/ic_add_24" android:scaleType="center" android:tint="?text_placeholder" />
+    <TextView android:textSize="@dimen/story_text_size" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="center" android:layout_gravity="center|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/story_author_title_top_space" android:text="@string/story" android:maxLines="1" />
+</FrameLayout>

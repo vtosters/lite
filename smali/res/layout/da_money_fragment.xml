@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <WebView android:id="@id/daViewMoneyWebView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/toolbar" layout="@layout/appkit_toolbar" />
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:theme="?actionBarTheme" android:layout_gravity="bottom" android:id="@id/daMoneyViewProgress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="10000" android:progress="0" app:mpb_progressStyle="horizontal" app:mpb_showProgressBackground="false" app:mpb_useIntrinsicPadding="false" style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding" />
+    </FrameLayout>
+    <com.vtosters.lite.live.views.error.ErrorView android:layout_gravity="center" android:id="@id/daMoneyViewError" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="32.0dip" />
+</FrameLayout>

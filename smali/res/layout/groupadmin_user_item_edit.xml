@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/UserMediumRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserMediumPhoto" />
+    <ImageView android:id="@id/action" android:src="@drawable/ic_ab_write" android:tint="#ffabafb3" style="@style/UserMediumAction" />
+    <TextView android:id="@id/title" style="@style/UserMediumTitle" />
+    <TextView android:id="@id/subtitle" style="@style/UserMediumSubtitle" />
+    <ImageView style="@style/Online.Medium" />
+</RelativeLayout>

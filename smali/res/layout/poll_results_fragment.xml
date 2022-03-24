@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:orientation="vertical" android:id="@id/appkit_poll_view_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/poll_result_appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/VKAppBar">
+        <include layout="@layout/appkit_toolbar" />
+    </android.support.design.widget.AppBarLayout>
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/poll_result_list" android:background="?background_page" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/poll_result_appbar" app:layout_constraintStart_toStartOf="@id/poll_result_appbar" app:layout_constraintTop_toBottomOf="@id/poll_result_appbar" />
+    <com.vk.poll.views.PollFilterBottomView android:id="@id/poll_filter_bottom_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" />
+    <com.vk.core.view.AppBarShadowView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

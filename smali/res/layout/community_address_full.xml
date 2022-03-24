@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:background="@drawable/bg_modern_list" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="10.0dip" style="@style/VKUIText.Title1" />
+    <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/ic_place" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" />
+                <TextView android:textColorHighlight="?accent" android:id="@id/address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:textIsSelectable="true" android:layout_marginStart="56.0dip" android:layout_marginEnd="16.0dip" style="@style/VKUIText.New.Text" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/metro_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/metro_drawable" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" />
+                <TextView android:id="@id/metro" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="56.0dip" android:layout_marginEnd="16.0dip" style="@style/VKUIText.New.Text" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/phone_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/ic_phone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" />
+                <TextView android:textColor="?accent" android:id="@id/phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="56.0dip" android:layout_marginEnd="16.0dip" style="@style/VKUIText.New.Text" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/ic_recent" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" />
+                <TextView android:textColor="@color/subhead_gray" android:id="@id/recent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="56.0dip" android:layout_marginEnd="16.0dip" style="@style/VKUIText.New.Text" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/time_table" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:paddingStart="56.0dip" android:paddingEnd="16.0dip" />
+            <TextView android:textSize="16.0sp" android:id="@id/create_a_route" android:paddingTop="13.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:text="@string/create_a_route" android:includeFontPadding="false" android:fontFamily="sans-serif-medium" style="@style/VKUIButton.Primary.Big" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</merge>

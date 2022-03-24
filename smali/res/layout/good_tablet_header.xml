@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vtosters.lite.ui.widget.GridView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/goodGalleryContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/good_gallery" />
+        <LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+            <FrameLayout android:id="@id/groupBlock" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <com.vk.imageloader.view.VKImageView android:layout_gravity="center_vertical" android:id="@id/groupIcon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="24.0dip" app:placeholderImage="@drawable/group_placeholder" app:roundedCornerRadius="20.0dip" />
+                <TextView android:textSize="15.0dip" android:textColor="@color/name" android:ellipsize="end" android:id="@id/groupName" android:paddingLeft="76.0dip" android:paddingTop="9.0dip" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" android:lines="1" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+                <TextView android:textSize="14.0dip" android:textColor="@color/gray" android:ellipsize="end" android:id="@id/groupCategory" android:paddingLeft="76.0dip" android:paddingTop="30.0dip" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:singleLine="true" />
+            </FrameLayout>
+            <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="22.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="14.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="22.0dip" android:paddingTop="8.0dip" android:paddingRight="22.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="18.0dip" android:textColor="?text_primary" android:id="@id/goodName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+                <TextView android:textSize="18.0dip" android:textColor="?text_primary" android:id="@id/goodPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@string/font_family_medium" />
+            </LinearLayout>
+            <TextView android:layout_gravity="bottom" android:id="@android:id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:layout_marginRight="22.0dip" android:layout_marginBottom="8.0dip" android:minHeight="36.0dip" android:text="@string/write_to_the_good_owner" style="@style/MaterialBlueButton" />
+            <FrameLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/arrowBlock" android:background="@drawable/highlight" android:paddingLeft="22.0dip" android:paddingRight="22.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:layout_gravity="center_vertical" android:id="@android:id/text1" android:paddingRight="24.0dip" android:paddingBottom="19.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/good_ext_info_title" android:singleLine="true" />
+                <TextView android:textSize="14.0dip" android:textColor="@color/gray" android:layout_gravity="center_vertical" android:id="@android:id/text2" android:paddingTop="21.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <View android:layout_gravity="center|right" android:id="@android:id/icon" android:background="@drawable/ic_chevron_right_12" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.vtosters.lite.ui.widget.GridView>
+    <TextView android:textSize="14.0dip" android:textColor="@color/gray" android:ellipsize="end" android:id="@id/extText" android:paddingLeft="32.0dip" android:paddingTop="19.0dip" android:paddingRight="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" />
+</LinearLayout>

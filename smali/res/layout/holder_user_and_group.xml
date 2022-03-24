@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="start|center" android:id="@id/holder_user_and_group_avatar_image" android:layout_width="@dimen/small_photo_size" android:layout_height="@dimen/small_photo_size" android:layout_marginStart="16.0dip" app:placeholderImage="@drawable/ic_placeholder_group_72" app:roundAsCircle="true" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff2c2d2e" android:ellipsize="marquee" android:layout_gravity="start|center" android:id="@id/holder_user_and_group_name_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="76.0dip" />
+</FrameLayout>

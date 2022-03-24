@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/attach" android:paddingTop="@dimen/newsfeed_single_photo_top_space" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.newsfeed.FrescoImageView android:layout_gravity="center" android:id="@id/photo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

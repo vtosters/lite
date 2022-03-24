@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/rounded_list_selector" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:visibility="visible" android:layout_width="@dimen/small_photo_size" android:layout_height="@dimen/small_photo_size" android:scaleType="centerCrop" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" app:placeholderImage="@drawable/placeholder_user_48" actualImageScaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/photo">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" />
+        <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_fragment_profile_subtitle" />
+    </LinearLayout>
+    <ImageView android:id="@id/online" android:tag="48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_online_mobile_composite_20_xml" android:layout_alignRight="@id/photo" android:layout_alignBottom="@id/photo" />
+</RelativeLayout>

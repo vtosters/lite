@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="76.0dip">
+        <ImageView android:id="@id/qr" android:layout_width="128.0dip" android:layout_height="128.0dip" />
+        <TextView android:textColor="?text_primary" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:maxLines="3" android:lineSpacingExtra="0.0sp" style="@style/VKUIText.Title1" />
+        <TextView android:textColor="?text_subhead" android:gravity="center_horizontal" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/point_camera_at_qr" style="@style/VKUIText.New.Subhead2" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="?button_tertiary_foreground" android:layout_gravity="bottom" android:id="@id/positive_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="32.0dip" android:text="@string/done" style="@style/secondary_button" />
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/UserSmallRoot"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+    <Button android:id="@id/action" android:layout_height="32.0dip" android:text="@string/invite" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/secondary_button" />
+    <TextView android:id="@id/title" android:layout_toLeftOf="@id/action" style="@style/UserSmallTitle" />
+    <ImageView style="@style/Online.Small" />
+</RelativeLayout>

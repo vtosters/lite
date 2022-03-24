@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/profile_post_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/profile_vertical_divider" android:showDividers="middle" android:dividerPadding="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/profile_add_post" android:background="@drawable/highlight" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_write_24" android:tint="?accent" android:layout_marginEnd="8.0dip" />
+        <TextView android:textSize="13.0dip" android:textColor="?accent" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/profile_add_post_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/post" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/profile_add_photo" android:background="@drawable/highlight" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_camera_24" android:tint="?accent" android:layout_marginEnd="8.0dip" />
+        <TextView android:textSize="13.0dip" android:textColor="?accent" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/picker_photo" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/profile_create_story" android:background="@drawable/highlight" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_story_24" android:tint="?accent" android:layout_marginEnd="8.0dip" />
+        <TextView android:textSize="13.0dip" android:textColor="?accent" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/story" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+</LinearLayout>

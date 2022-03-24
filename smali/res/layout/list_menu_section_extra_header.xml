@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/left_header" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="@color/medium_blue_gray" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="start" android:id="@id/title" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip" android:text="Friends" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/sky_300" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/button" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip" android:text="@string/show_all" android:fontFamily="@string/font_family_medium" />
+</FrameLayout>

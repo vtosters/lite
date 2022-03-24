@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.OverlayLinearLayout android:orientation="horizontal" android:id="@id/money_attach_container" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight_post" vk:padOverlay="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:vk="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKSnippetImageView android:id="@id/snippet_image" android:layout_width="80.0dip" android:layout_height="80.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/video_single_info" android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/post_side_padding_btn" android:minHeight="60.0dip">
+        <com.vtosters.lite.ui.BadooTextView android:textSize="14.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/attach_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" vk:typeface="Medium" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff909499" android:ellipsize="end" android:id="@id/attach_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:gravity="center" android:id="@id/attach_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="1" style="@style/outline_button" />
+    </LinearLayout>
+</com.vtosters.lite.ui.OverlayLinearLayout>

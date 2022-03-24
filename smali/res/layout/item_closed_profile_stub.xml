@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="6.0dip" android:paddingBottom="16.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_lock_24" android:tint="@color/gray_300" android:contentDescription="@null" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/gray_600" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.5dip" android:minHeight="20.0dip" android:text="@string/this_profile_is_closed" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" android:layout_marginStart="40.0dip" />
+    <TextView android:textSize="13.0dip" android:textColor="@color/gray_400" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:includeFontPadding="false" android:lineSpacingExtra="1.0dip" android:layout_marginStart="40.0dip" />
+</FrameLayout>

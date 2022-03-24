@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="8.0dip" android:src="@drawable/picker_bg_attach_toolbar" android:scaleType="fitXY" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/subhead_gray" android:gravity="center" android:layout_gravity="center" android:id="@id/poll_results_votes_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:layout_marginBottom="19.0dip" android:fontFamily="@string/font_family_regular" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+</FrameLayout>

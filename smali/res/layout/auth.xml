@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.XFrameLayout android:orientation="vertical" android:id="@id/auth" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+        <com.vtosters.lite.ui.ConstrainedLinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/auth_root" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:paddingBottom="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="@integer/login_weightSum" app:max_width="@dimen/registration_login_max_width">
+            <Space android:id="@id/space1" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="@integer/login_space1_weight" />
+            <ImageView android:id="@id/auth_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:src="@drawable/login_logo" android:alpha="0.9" />
+            <Space android:id="@id/space2" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="@integer/login_space2_weight" />
+            <EditText android:id="@id/auth_login" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginBottom="8.0dip" android:hint="@string/mail_or_login" android:inputType="textEmailAddress" android:imeOptions="flagNoExtractUi" style="@style/EditTextStandard.Blue" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:baselineAligned="false" android:weightSum="1.0" style="@style/EditTextStandard.Blue">
+                <EditText android:id="@id/auth_pass" android:background="@null" android:padding="0.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/password" android:layout_weight="1.0" android:inputType="textPassword" android:imeOptions="flagNoExtractUi" style="@style/EditTextStandard.Blue" />
+                <TextView android:textSize="14.0dip" android:textColor="@color/forgot_pass" android:gravity="center" android:id="@id/auth_forgot" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:text="@string/forgot_pass_button" android:fontFamily="@string/font_family_medium" />
+            </LinearLayout>
+            <Button android:textSize="16.0dip" android:gravity="center" android:id="@id/auth_login_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:minHeight="48.0dip" android:text="@string/log_in" android:singleLine="true" android:fontFamily="@string/font_family_medium" style="@style/LoginButton" />
+            <Space android:id="@id/space3" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="@integer/login_space3_weight" />
+            <LinearLayout android:gravity="center" android:id="@id/auth_fb_btn" android:background="@drawable/highlight_white_registration" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" style="@style/FacebookLogin">
+                <TextView android:textSize="16.0dip" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center" android:id="@id/fb_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vtlproxy" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+            </LinearLayout>
+        </com.vtosters.lite.ui.ConstrainedLinearLayout>
+    </ScrollView>
+</com.vtosters.lite.ui.XFrameLayout>

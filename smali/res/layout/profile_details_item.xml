@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="Title" android:singleLine="true" />
+    <com.vtosters.lite.ui.LinkedTextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="64.0dip" android:layout_below="@id/title" android:layout_alignParentLeft="true" android:lineSpacingExtra="5.0dip" />
+    <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="64.0dip" android:text="Subtitle" android:layout_below="@id/content" android:layout_alignParentLeft="true" android:lineSpacingExtra="3.0dip" />
+    <TextView android:textSize="14.0dip" android:textColorLink="@color/link" android:autoLink="email|phone" android:linksClickable="true" android:id="@id/contact" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="+79990001112" android:maxLines="2" android:layout_toLeftOf="@id/photo" android:layout_below="@id/subtitle" android:lineSpacingExtra="3.0dip" />
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_alignParentRight="true" />
+</RelativeLayout>

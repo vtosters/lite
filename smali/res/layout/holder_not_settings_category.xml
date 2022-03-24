@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="@dimen/standard_list_item_padding" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="@dimen/standard_list_item_padding" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textColor="?text_muted" android:id="@id/tv_category_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:layout_gravity="center_vertical" android:id="@id/tv_category_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <Space android:layout_width="2.0dip" android:layout_height="1.0dip" />
+            <View android:layout_gravity="bottom" android:id="@id/muted" android:background="@drawable/ic_not_push_muted_badge_16" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

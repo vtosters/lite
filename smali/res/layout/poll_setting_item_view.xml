@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatCheckBox android:layout_gravity="center_vertical" android:id="@id/poll_option_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <android.support.v7.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="@color/poll_setting_btn_text" android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/poll_option_tv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fontFamily="@string/font_family_regular" />
+</merge>

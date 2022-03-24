@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.attachpicker.widget.ContextProgressView android:layout_gravity="center_horizontal" android:id="@id/cpv_progress" android:layout_width="@dimen/picker_gallery_loading_progress" android:layout_height="@dimen/picker_gallery_loading_progress" android:layout_marginTop="128.0dip" />
+    <com.vk.attachpicker.widget.GalleryRecyclerView android:id="@id/rv_gallery" android:visibility="invisible" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/fl_permission_stub_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

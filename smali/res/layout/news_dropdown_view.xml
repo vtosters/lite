@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bottom_divider_bg" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckedTextView android:textSize="16.0dip" android:textColor="@color/news_spinner_text" android:gravity="center_vertical" android:id="@android:id/text1" android:background="@drawable/highlight" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:drawablePadding="12.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <FrameLayout android:id="@id/wrapper" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="52.0dip" android:paddingEnd="16.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:gravity="center_vertical" android:id="@android:id/text2" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginEnd="56.0dip" />
+        <android.support.v7.widget.SwitchCompat android:gravity="center_vertical" android:layout_gravity="end" android:id="@android:id/checkbox" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="48.0dip" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/attach_background" android:layout_width="96.0dip" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/attach_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+        <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attach_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="TextView" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="12.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attach_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TextView" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+    </LinearLayout>
+    <ImageView android:id="@id/attach_remove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.5dip" android:layout_marginRight="-8.5dip" android:src="@drawable/ic_deattach_28" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

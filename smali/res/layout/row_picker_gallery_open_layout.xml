@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:orientation="vertical" android:layout_width="50.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@android:id/icon" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:roundedCornerRadius="6.0dip" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivGalleryPhoto" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_attach_tab_photo_32" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="2.0dip" android:text="@string/notification_open_gallery" />
+    </LinearLayout>
+</FrameLayout>

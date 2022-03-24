@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/wall_view_nlikesw" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/wall_view_like_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="13.5dip" android:layout_marginStart="@dimen/post_side_padding" android:layout_marginEnd="@dimen/post_side_padding">
+        <com.vk.core.view.PhotoStripView android:id="@id/wall_view_like_photos" android:layout_width="wrap_content" android:layout_height="28.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:id="@id/wall_view_like_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/likes_panel" />
+</LinearLayout>

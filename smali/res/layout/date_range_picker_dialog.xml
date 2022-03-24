@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.squareup.timessquare.CalendarPickerView android:scrollbarStyle="outsideOverlay" android:id="@id/calendar_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" app:tsquare_dayBackground="@drawable/date_picker_day" app:tsquare_dayTextColor="@color/white" app:tsquare_dividerColor="@color/transparent" app:tsquare_titleTextColor="@color/muted_black"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</FrameLayout>

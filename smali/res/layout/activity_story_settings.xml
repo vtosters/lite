@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/toolbar_white" />
+    <ScrollView android:id="@id/ll_stories_scroll_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="56.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="14.0dip" android:text="Сохранение" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_save_stories" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_stories" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/subhead_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save_stories_desc" />
+                    </LinearLayout>
+                    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/switch_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#1e000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <LinearLayout android:orientation="vertical" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:id="@id/ll_stories_privacy_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="14.0dip" android:text="@string/privacy_settings" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_stories_privacy_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_broadcast_group_cancomment" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_live_comments_title" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/subhead_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_live_comments_text" />
+                    </LinearLayout>
+                    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/ll_broadcast_group_cancomment_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip">
+                <TextView android:textSize="13.0sp" android:textColor="@color/caption_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="14.0dip" android:text="Общие" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_hidden_from_stories" android:background="@drawable/bg_settings_separator" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" android:layout_weight="1.0">
+                    <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hidden_from_stories" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/subhead_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hidden_from_stories_desc" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_publish_broadcast_post" android:background="@drawable/bg_settings_separator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_publish_wall_title" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/subhead_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_publish_wall_text" />
+                    </LinearLayout>
+                    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/ll_publish_broadcast_post_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_publish_story_live" android:background="@drawable/bg_settings_separator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_publish_story_title" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/subhead_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_publish_story_text" />
+                    </LinearLayout>
+                    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/ll_publish_story_live_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_animation_overlay" android:background="@drawable/bg_settings_separator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sticker_settings_animation_title" />
+                    </LinearLayout>
+                    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/switch_animations" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/ll_save_hd_quality" android:background="@drawable/bg_settings_separator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?selectableItemBackground">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stories_settings_hd_quality" />
+                    </LinearLayout>
+                    <android.support.v7.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/switch_save_hd_quality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+                <TextView android:textSize="16.0sp" android:textColor="#ff212121" android:gravity="center|left" android:id="@id/tv_clear_masks_cache" android:background="@drawable/picker_white_ripple_bounded" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/masks_clear_cache" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/ll_stories_progress" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+    <android.support.v7.widget.AppCompatButton android:gravity="center" android:layout_gravity="center" android:id="@id/ll_stories_reload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="@string/refresh" style="@style/VKUIButton.Primary.Small" />
+</FrameLayout>

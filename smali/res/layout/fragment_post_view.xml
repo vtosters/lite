@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/appkit_toolbar" />
+    <com.vk.common.widget.BottomSwipePaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="end|bottom|center" android:id="@id/jump_to_end" android:background="@drawable/vkim_ic_scroll_to_bottom_48dp" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/vkim_scroll_to_bottom_highlight" android:contentDescription="@string/accessibility_scroll_to_bottom_comments" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+        <android.support.design.widget.CoordinatorLayout android:id="@id/comments_mentions_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/top_navigation_shadow" android:background="@drawable/bg_toolbar_shadow_dark" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+        <View android:layout_gravity="bottom" android:id="@id/bottom_navigation_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    </com.vk.common.widget.BottomSwipePaginatedView>
+</LinearLayout>

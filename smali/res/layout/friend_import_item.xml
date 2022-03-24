@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.ForegroundRelativeLayout android:paddingLeft="13.0dip" android:paddingTop="8.0dip" android:paddingRight="13.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:foreground="@drawable/rounded_list_selector"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="12.0dip" />
+    <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_toRightOf="@id/icon" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff909499" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.5dip" android:layout_toRightOf="@id/icon" android:layout_below="@id/title" />
+</com.vtosters.lite.ui.ForegroundRelativeLayout>

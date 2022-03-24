@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/picker_blue_pressed"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="10000.0dip" />
+            <solid android:color="?accent" />
+        </shape>
+    </item>
+</ripple>

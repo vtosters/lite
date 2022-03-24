@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/liveRecommendedBacker" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/liveRecommendedHolder" android:background="@drawable/bg_live_recommended_bottom" android:clickable="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.vtosters.lite.live.views.gifts.LiveBottomSheetBehavior">
+        <View android:background="@drawable/bg_live_recommended_shadow" android:layout_width="fill_parent" android:layout_height="7.0dip" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="7.0dip" android:text="@string/recommendations" android:fontFamily="@string/font_family_medium" />
+        <com.vtosters.lite.live.views.recommended.RecommendedView android:id="@id/liveRecommendedView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="55.0dip" />
+    </FrameLayout>
+</merge>

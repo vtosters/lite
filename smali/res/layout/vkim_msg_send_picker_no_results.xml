@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="120.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="?im_item_foreground_caption" android:gravity="center" android:layout_gravity="center" android:id="@id/vkim_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_picker_no_results" android:maxLines="2" android:paddingStart="32.0dip" android:paddingEnd="32.0dip" />
+</FrameLayout>

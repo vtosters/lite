@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:background="@color/picker_tab_panel_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:title="@string/newsfeed_newpost_mention" app:titleTextColor="@color/attach_title" />
+        <android.support.design.widget.TabLayout android:id="@id/attach_mention_tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/attach_title" app:tabSelectedTextColor="@color/attach_title" app:tabTextColor="@color/light_gray" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager android:id="@id/attach_mention_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView style="@style/PostingAppBarShadow" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.core.view.StaticMapView android:id="@id/map" android:background="@color/vkim_msg_part_placeholder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/msg_bubble_max_width" android:maxHeight="@dimen/msg_content_max_height" android:minWidth="128.0dip" android:minHeight="128.0dip" android:contentDescription="@string/vkim_accessibility_map" app:smv_aspectRadio="2.0" />
+    <ImageView android:layout_gravity="center" android:layout_width="22.0dip" android:layout_height="36.0dip" android:src="@drawable/vkim_ic_map_pin" android:contentDescription="@null" android:translationY="-18.0dip" />
+    <TextView android:textAppearance="@style/VkIm.MsgPart.Time.TextContrast" android:layout_gravity="bottom|center|right" android:id="@id/time" android:background="?im_msg_part_time_contrast_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:lines="1" android:importantForAccessibility="no" />
+</FrameLayout>

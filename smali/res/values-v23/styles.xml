@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Menu" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Menu" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.Inverse" parent="@android:style/TextAppearance.Material.Widget.Button.Inverse" />
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light" />
+    <style name="Base.Widget.AppCompat.Button.Borderless.Colored" parent="@android:style/Widget.Material.Button.Borderless.Colored" />
+    <style name="Base.Widget.AppCompat.Button.Colored" parent="@android:style/Widget.Material.Button.Colored" />
+    <style name="Base.Widget.AppCompat.RatingBar.Indicator" parent="@android:style/Widget.Material.RatingBar.Indicator" />
+    <style name="Base.Widget.AppCompat.RatingBar.Small" parent="@android:style/Widget.Material.RatingBar.Small" />
+    <style name="Base.Widget.AppCompat.Spinner.Underlined" parent="@android:style/Widget.Material.Spinner.Underlined" />
+    <style name="BaseStyle.Dialog.MilkToolbar" parent="@style/BaseStyle.Dialog">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_milk_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_borderless_shadow_light</item>
+        <item name="shadowBottomBorder">@drawable/bg_toolbar_shadow_light</item>
+        <item name="shadowTop">@drawable/bg_toolbar_inner_shadow_light</item>
+        <item name="statusBarColorBack">@color/toolbar_milk_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_milk_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_milk_border</item>
+        <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
+    </style>
+    <style name="BaseStyle.MilkToolbar" parent="@style/BaseStyle">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.Milk</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_milk_searchViewTextColorHint</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_borderless_shadow_light</item>
+        <item name="shadowBottomBorder">@drawable/bg_toolbar_shadow_light</item>
+        <item name="shadowTop">@drawable/bg_toolbar_inner_shadow_light</item>
+        <item name="statusBarColorBack">@color/toolbar_milk_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_milk_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_milk_border</item>
+        <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
+    </style>
+    <style name="BaseStyle.WhiteToolbar" parent="@style/BaseStyle">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_white_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_white_searchViewTextColorHint</item>
+        <item name="statusBarColorBack">@color/toolbar_white_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_white_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_white_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="CardView" parent="@style/Base.CardView">
+        <item name="cardBackgroundColor">?android:colorBackgroundFloating</item>
+    </style>
+    <style name="Base.V23.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat">
+        <item name="actionBarItemBackground">?android:actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:actionMenuTextColor</item>
+        <item name="controlBackground">@drawable/abc_control_background_material</item>
+        <item name="ratingBarStyleIndicator">?android:ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:ratingBarStyleSmall</item>
+    </style>
+    <style name="Base.V23.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light">
+        <item name="actionBarItemBackground">?android:actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:actionMenuTextColor</item>
+        <item name="controlBackground">@drawable/abc_control_background_material</item>
+        <item name="ratingBarStyleIndicator">?android:ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:ratingBarStyleSmall</item>
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.TabLayout android:id="@id/feed_likes_tablayout" android:layout_width="fill_parent" app:tabBackground="?background_content" android:layout_height="@dimen/feed_likes_filter_height" android:layout_weight="1.0" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tabGravity="fill" app:tabIndicatorColor="?accent" app:tabMaxWidth="0.0dip" app:tabMode="scrollable" app:tabSelectedTextColor="?accent" app:tabTextAppearance="@style/FeedLikesTabStyle" app:tabTextColor="?text_primary" />
+</merge>

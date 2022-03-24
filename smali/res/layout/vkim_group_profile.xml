@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/im_contact_header" layout="@layout/vkim_contact_header" />
+    <com.vk.im.ui.views.buttons.TextImageButton android:id="@id/im_message" android:background="@drawable/vkim_ripple_dark_borderless" android:focusable="true" android:clickable="true" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:src="@drawable/ic_message_28_outline" android:text="@string/vkim_contact_message" app:layout_constraintEnd_toStartOf="@id/im_share" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/im_contact_header" />
+    <com.vk.im.ui.views.buttons.TextImageButton android:id="@id/im_share" android:background="@drawable/vkim_ripple_dark_borderless" android:focusable="true" android:clickable="true" android:layout_width="100.0dip" android:layout_height="wrap_content" android:src="@drawable/ic_share_outline_24" android:text="@string/vkim_contact_share" app:layout_constraintBottom_toBottomOf="@id/im_message" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@id/im_message" app:layout_constraintTop_toTopOf="@id/im_message" />
+    <Space android:id="@id/bottom_space" android:layout_width="0.0dip" android:layout_height="8.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/im_message" />
+</merge>

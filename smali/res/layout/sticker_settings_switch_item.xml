@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="14.0dip" android:paddingRight="13.0dip" android:paddingBottom="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sticker_settings_autosuggest_title" android:layout_toLeftOf="@id/checkbox" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="14.0dip" android:textColor="#8a000000" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/sticker_settings_autosuggest_subtitle" android:layout_toLeftOf="@id/checkbox" android:layout_below="@id/title" android:layout_alignParentLeft="true" android:lineSpacingExtra="3.0dip" />
+    <android.support.v7.widget.SwitchCompat android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

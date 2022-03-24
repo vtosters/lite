@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#ffb4bfcc" />
+            <size android:height="250.0dip" android:width="375.0dip" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/placeholder_group_128" android:left="123.0dip" android:top="61.0dip" android:right="123.0dip" android:bottom="61.0dip" />
+</layer-list>

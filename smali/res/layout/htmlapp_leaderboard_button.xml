@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:background="@drawable/picker_btn_blue" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:singleLine="true" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+</FrameLayout>

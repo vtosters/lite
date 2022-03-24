@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vtosters.lite.ui.OverlayLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight_post" app:padOverlay="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:paddingTop="8.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:foregroundGravity="center" android:paddingStart="8.0dip" android:paddingEnd="8.0dip">
+        <com.vk.newsfeed.FrescoImageView android:layout_gravity="center_horizontal" android:id="@id/snippet_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="end|center|top" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_alignTop="@id/snippet_image" android:layout_marginEnd="8.0dip" android:layout_alignEnd="@id/snippet_image">
+            <ImageView android:layout_gravity="top" android:id="@id/snippet_toggle_fave" android:background="@drawable/highlight_circle_white" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="4.0dip" android:src="@drawable/fave_start_button" android:scaleType="center" android:layout_marginEnd="4.0dip" />
+            <ImageView android:layout_gravity="end|center|top" android:id="@id/snippet_actions" android:background="@drawable/highlight_unlimited" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_24" android:scaleType="center" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/iv_snippet_status" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_linked_24" android:tint="@color/fave_snippet_dark_gray" android:layout_centerInParent="true" />
+        <TextView android:layout_gravity="start|center|top" android:id="@id/tv_new_label" android:visibility="gone" android:layout_marginTop="4.0dip" android:layout_alignTop="@id/snippet_image" android:layout_marginStart="-2.0dip" android:layout_alignStart="@id/snippet_image" style="@style/NewLabel" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/info" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding">
+        <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/attach_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="@string/font_family_medium" android:layout_toStartOf="@id/attach_button" android:layout_alignParentStart="true" />
+        <LinearLayout android:id="@id/attach_subtitle_wrap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/attach_title" android:layout_toStartOf="@id/attach_button" android:layout_alignParentStart="true">
+            <TextView android:textSize="14.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/attach_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <com.vtosters.lite.ui.RatingView android:id="@id/attach_rating" android:layout_width="88.0dip" android:layout_height="19.0dip" android:paddingStart="7.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/attach_review_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:paddingStart="7.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/attach_subtitle_wrap" android:layout_toStartOf="@id/attach_button" android:layout_alignParentStart="true">
+            <ImageView android:id="@id/iv_amp" style="@style/AmpSmallIconStyle" />
+            <TextView android:textSize="13.0sp" android:textColor="#87000205" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/attach_subsubtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:gravity="center" android:id="@id/attach_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:layout_marginStart="5.0dip" android:layout_marginEnd="4.0dip" android:layout_alignParentStart="true" style="@style/outline_button" />
+    </RelativeLayout>
+</com.vtosters.lite.ui.OverlayLinearLayout>

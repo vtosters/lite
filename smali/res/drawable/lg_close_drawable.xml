@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="24.0dip" android:width="24.0dip">
+        <shape android:shape="oval">
+            <solid android:color="#17001c3d" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="16.0dip" android:width="16.0dip">
+        <bitmap android:src="@drawable/ic_cancel_20" android:tint="#ff818c99" />
+    </item>
+</layer-list>

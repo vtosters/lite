@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="16.0dip" android:textColor="?text_primary" android:textColorHint="?text_secondary" android:id="@id/domain_input" android:background="@drawable/domain_text_field" android:layout_width="fill_parent" android:layout_height="48.0dip" android:hint="@string/page_address" android:singleLine="true" android:maxLength="32" android:inputType="textFilter" />
+        <TextView android:textSize="12.0dip" android:id="@id/domain_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="Status" />
+        <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/domain_explain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/domain_explain" />
+        <TextView android:textSize="14.0dip" android:textColor="?accent" android:id="@id/domain_current_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="http://vk.com/durov" />
+    </LinearLayout>
+</ScrollView>

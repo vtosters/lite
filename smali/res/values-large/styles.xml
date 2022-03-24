@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.Dialog.FixedSize" />
+    <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize" />
+    <style name="BaseStyle.PopupIfTablet" parent="@style/BaseStyle.Dialog" />
+    <style name="PostingAttachScreenTheme" parent="@style/BaseStyle.PopupIfTablet" />
+    <style name="RegistrationCardBlock" parent="@style/RegistrationCardBlockBase">
+        <item name="android:paddingLeft">32.0dip</item>
+        <item name="android:paddingTop">16.0dip</item>
+        <item name="android:paddingRight">32.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_marginLeft">32.0dip</item>
+        <item name="android:layout_marginTop">8.0dip</item>
+        <item name="android:layout_marginRight">32.0dip</item>
+    </style>
+</resources>

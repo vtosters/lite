@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView android:id="@id/recycler_items" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="2.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="376.0dip" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

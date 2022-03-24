@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@drawable/bg_modern_list" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/muted_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="18.0dip" android:text="@string/open_app" android:fontFamily="sans-serif-medium" style="@style/VKUIText.Title1" />
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:paddingBottom="16.0dip" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

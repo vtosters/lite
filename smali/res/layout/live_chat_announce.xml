@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/liveAnnounceUserPic" android:layout_width="34.0dip" android:layout_height="34.0dip" android:scaleType="centerCrop" />
+    <com.vtosters.lite.ui.LinkedTextView android:textSize="14.0dip" android:textColor="#ffffffff" android:gravity="left" android:id="@id/liveAnnounceText" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="42.0dip" android:layout_marginTop="1.0dip" android:includeFontPadding="false" android:shadowColor="#52000000" android:shadowDy="0.0" android:shadowRadius="6.0" android:alpha="0.7" />
+</merge>
