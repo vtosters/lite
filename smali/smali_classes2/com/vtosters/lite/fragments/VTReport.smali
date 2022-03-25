@@ -1,6 +1,6 @@
-.class public Lcom/vtosters/lite/fragments/VTFAQ;
+.class public Lcom/vtosters/lite/fragments/VTReport;
 .super Ljava/lang/Object;
-.source "VTFAQ.java"
+.source "VTReport.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 216
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/VTFAQ;->a:Lcom/vtosters/lite/fragments/SettingsListFragment$b;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/VTReport;->a:Lcom/vtosters/lite/fragments/SettingsListFragment$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,7 +39,7 @@
     .locals 2
 
     .line 220
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/VTFAQ;->a:Lcom/vtosters/lite/fragments/SettingsListFragment$b;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/VTReport;->a:Lcom/vtosters/lite/fragments/SettingsListFragment$b;
 
     iget-object v0, v0, Lcom/vtosters/lite/fragments/SettingsListFragment$b;->a:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    const-string v1, "https://t.me/s/vtosters_faq"
+    const-string v1, "https://github.com/vtosters/lite/issues"
 
     invoke-static {v0, v1}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;)V
 
