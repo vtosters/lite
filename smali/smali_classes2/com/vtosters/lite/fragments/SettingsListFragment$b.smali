@@ -1041,10 +1041,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-
-
-
-   .line 216
+    .line 216
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
     const v6, 0x7f080395
