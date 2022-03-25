@@ -623,7 +623,7 @@ public class Prefs {
     }
 
     public static boolean proxy() {
-        return ru.vtosters.lite.utils.Helper.GetPreferences().getString("proxy", "").equals("xtrafrancyz");
+        return ru.vtosters.lite.utils.Helper.GetPreferences().getString("proxy", "").equals("apiproxy");
     }
 
     public static boolean authors_rec(String str) {

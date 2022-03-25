@@ -2,7 +2,6 @@ package ru.vtosters.lite.dnr;
 
 import ru.vtosters.lite.utils.Prefs;
 
-// Настройки Донецкой Народной Республики
 public class DNRPrefs {
     public static boolean getStoriesRead() {
         return Prefs.BooleanFalse("read_s");

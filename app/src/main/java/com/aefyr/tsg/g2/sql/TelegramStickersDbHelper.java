@@ -94,7 +94,6 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper {
             e.printStackTrace();
             max = 0;
         }
-        Log.d("sova", "Found last index: " + max);
         return max + 1;
     }
 

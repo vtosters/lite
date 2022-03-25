@@ -380,7 +380,7 @@
 
     const-string v1, "libverify_support"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 

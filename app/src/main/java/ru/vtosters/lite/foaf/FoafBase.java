@@ -1,5 +1,7 @@
 package ru.vtosters.lite.foaf;
 
+import static ru.vtosters.lite.utils.Proxy.getApiCom;
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -51,7 +53,7 @@ public class FoafBase {
         StringBuilder sb;
         if (Prefs.proxy()) {
             sb = new StringBuilder();
-            str = "https://vk-api-proxy.xtrafrancyz.net/_/vk.com/foaf.php?id=";
+            str = "https://" + getApiCom() + "/_/vk.com/foaf.php?id=";
         } else {
             sb = new StringBuilder();
             str = "https://vk.com/foaf.php?id=";

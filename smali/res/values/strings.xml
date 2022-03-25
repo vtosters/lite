@@ -4255,7 +4255,6 @@ Does not affect vk.cc links"</string>
     <string name="proxyownersxtrsources">Proxy server sources</string>
     <string name="proxyimpinfosum">Don\'t use proxy if VK is available in your country\n\nYou need to restart the application to apply proxy settings</string>
     <string name="useproxyinfo">Information about using a proxy</string>
-    <string name="useproxyinfosum">By default a proxy from xtrafrancyz is used, but you can use third-party proxies\n\nEnter domains without http/https\n\nIf there are no links, the proxy from xtrafrancyz is used by default</string>
     <string name="interfacenewsfeed">Feed</string>
     <string name="interfaceemoji">Emoji and stickers</string>
     <string name="interfacestartfr">Default start fragment</string>
