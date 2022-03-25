@@ -20,7 +20,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="isMusicRestricted" android:key="isMusicRestricted" android:summary="Вкшные ограничения на музыку. Фактически ничего не ограничивает, ибо всё вырезано" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="hasMusicSubscription" android:key="hasMusicSubscription" android:summary="Подписка на музыку" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Вернуть старые пункты в about" android:key="oldabout" android:defaultValue="false" />
-        <EditTextPreference android:title="SSFS Domain" android:key="ssfscustom" android:defaultValue="https://sf.vknext.ru" />
+        <EditTextPreference android:title="SSFS Domain" android:key="ssfscustom" android:defaultValue="https://vtsf.vknext.net" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="Домены" android:key="domains">
