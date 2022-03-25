@@ -3,8 +3,13 @@
 ### Компиляция
 Требуется установленная **Java** >11 версии
 
+Требуется установленная **Android Studio**
+
 Скрипты для сборки лежат в папке **scripts**
 
-Linux/Unix: ```./build.sh```
+Скрипт компиляции для Linux/Unix: ```./build.sh```
 
-Windows: ```./build.bat```
+Скрипт компиляции для Windows: ```./build.bat```
+
+![](https://media.discordapp.net/attachments/762063967979175946/956927341450391562/unknown.png)
+
