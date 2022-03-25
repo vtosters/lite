@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <Preference android:enabled="false" android:title="@string/proxyimpinfo" android:summary="@string/proxyimpinfosum" />
-    <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/proxy" android:title="@string/useproxy" android:key="proxy" android:defaultValue="noproxy" android:dialogTitle="@string/useproxysum" android:entryValues="@array/proxy_value" />
+    <PreferenceCategory android:title="2фа вход">
+         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="libverify support" android:key="libverify" android:summary="Включение может пофиксить 2фа вход" android:defaultValue="false" />
+         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlproxy">
+        <Preference android:enabled="false" android:title="@string/proxyimpinfo" android:summary="@string/proxyimpinfosum" />
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/proxy" android:title="@string/useproxy" android:key="proxy" android:defaultValue="noproxy" android:dialogTitle="@string/useproxysum" android:entryValues="@array/proxy_value" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference android:title="@string/proxyapi" android:key="proxyapi" android:defaultValue="" />
         <EditTextPreference android:title="@string/proxyoauth" android:key="proxyoauth" android:defaultValue="" />

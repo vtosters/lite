@@ -182,6 +182,10 @@ public class Prefs {
         return BooleanTrue("dns");
     }
 
+    public static boolean libverify() {
+        return BooleanFalse("libverify");
+    }
+
     public static boolean dnt() {
         return BooleanTrue("dnt");
     }

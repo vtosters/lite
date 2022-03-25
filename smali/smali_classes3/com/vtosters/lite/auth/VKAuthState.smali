@@ -380,7 +380,9 @@
 
     const-string v1, "libverify_support"
 
-    const/4 v2, 0x0
+    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->libverify()Z
+
+    move-result v2
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
