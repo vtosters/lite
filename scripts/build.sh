@@ -7,6 +7,8 @@ UNDERLINE='\033[4m'
 
 echo -e "${BOLD}${UNDERLINE}Сборка dex..${NC}\n"
 cd ../
+rm ../smali/assets/version.properties
+rm ../lite/app/src/main/assets/version.properties
 ./gradlew versionFile
 ./gradlew assembleDebug
 if [ $? -eq 0 ]; then
@@ -76,7 +78,6 @@ echo -e "${BOLD}VTosters Lite успешно собран! APK находитс�
 cd ../smali
 rm classes6.dex
 rm classes8.dex
-rm ../assets/version.properties
 
 echo -n "Желаете установить VTosters через adb? (y/n) "
 read -n 1 prompt
