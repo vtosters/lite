@@ -1,4 +1,4 @@
-#!/bin/bash
+œ#!/bin/bash
 RED='\033[31m'
 GREEN='\033[92m'
 NC='\033[0m'
@@ -76,6 +76,7 @@ echo -e "${BOLD}VTosters Lite успешно собран! APK находитс�
 cd ../smali
 rm classes6.dex
 rm classes8.dex
+rm ../assets/version.properties
 
 echo -n "Желаете установить VTosters через adb? (y/n) "
 read -n 1 prompt
