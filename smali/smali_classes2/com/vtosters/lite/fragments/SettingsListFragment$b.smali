@@ -1041,7 +1041,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 216
+
+
+
+   .line 216
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
     const v6, 0x7f080395
@@ -1061,6 +1064,36 @@
     new-instance v9, Lcom/vtosters/lite/fragments/VTFAQ;
 
     invoke-direct {v9, p0}, Lcom/vtosters/lite/fragments/VTFAQ;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment$b;)V
+
+    invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;)V
+
+    invoke-static {v4, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
+
+    const v6, 0x7f0803e3
+
+    const v7, 0x7f040022
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Сообщить о баге"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    new-instance v9, Lcom/vtosters/lite/fragments/VTReport;
+
+    invoke-direct {v9, p0}, Lcom/vtosters/lite/fragments/VTReport;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment$b;)V
 
     invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;)V
 
