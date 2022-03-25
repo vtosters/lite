@@ -15,6 +15,7 @@ echo.
 echo %ESC%[1;4mBuild dex...%ESC%[0m
 echo.
 call gradlew clean
+del app\src\main\assets\version.properties
 call gradlew versionFile
 call gradlew assembleDebug
 if "%ERRORLEVEL%" == "0" (
