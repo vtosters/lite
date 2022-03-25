@@ -43,64 +43,45 @@ public class Proxy {
     }
 
     public static String getApiCom() {
-        if (!Prefs.proxy()) {
+        String string = Helper.GetPreferences().getString("proxyapi", "");
+        if (!Prefs.proxy() & string.isEmpty()) {
             return "api.vk.com";
         }
-        String string = Helper.GetPreferences().getString("proxyapi", "");
-        if (!string.isEmpty()) {
-            return string;
-        }
-        return "vk-api-proxy.xtrafrancyz.net";
+        return string;
     }
 
     public static String getAwayPhpCom() {
-        if (!Prefs.proxy()) {
+        String string = Helper.GetPreferences().getString("proxyapi", "");
+        if (!Prefs.proxy() & string.isEmpty()) {
             return "m.vk.com";
         }
-        String string = Helper.GetPreferences().getString("proxyapi", "");
-        if (!string.isEmpty()) {
-            return string;
-        }
-        return "vk-api-proxy.xtrafrancyz.net";
+        return string;
     }
 
     public static String getOauthCom() {
-        if (!Prefs.proxy()) {
+        String string = Helper.GetPreferences().getString("proxyoauth", "");
+        if (!Prefs.proxy() & string.isEmpty()) {
             return "oauth.vk.com";
         }
-        String string = Helper.GetPreferences().getString("proxyoauth", "");
-        if (!string.isEmpty()) {
-            return string;
-        }
-        return "vk-oauth-proxy.xtrafrancyz.net";
+        return string;
     }
 
     public static String getStaticCom() {
-        if (!ru.vtosters.lite.utils.Prefs.proxy()) {
+        String string = Helper.GetPreferences().getString("proxystatic", "");
+        if (!Prefs.proxy() & string.isEmpty()) {
             return "static.vk.com";
         }
-        String string = Helper.GetPreferences().getString("proxystatic", "");
-        if (!string.isEmpty()) {
-            return string;
-        }
-        return "vk-static-proxy.xtrafrancyz.net";
+        return string;
     }
 
     public static String staticFix(String str) {
         String str2;
-        String str3;
-        if (!Prefs.proxy()) {
+        String string = Helper.GetPreferences().getString("proxystatic", "");
+        if (!Prefs.proxy() & string.isEmpty()) {
             return str;
         }
-        String string = Helper.GetPreferences().getString("proxystatic", "");
-        if (string.isEmpty()) {
-            str3 = "static.vk.com";
-            str2 = "vk-static-proxy.xtrafrancyz.net";
-        } else {
-            str3 = "static.vk.com";
-            str2 = string;
-        }
-        return str.replace(str2, str3);
+        str2 = string;
+        return str.replace(str2, "static.vk.com");
     }
 
     public static String GetConnector(String str) {

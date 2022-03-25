@@ -628,7 +628,7 @@
     </string-array>
     <string-array name="proxy">
         <item>No Proxy</item>
-        <item>xtrafrancyz</item>
+        <item>API Proxy</item>
         <item>zaborona.help</item>
         <item>Custom HTTP</item>
         <item>Custom HTTPS</item>
@@ -636,7 +636,7 @@
     </string-array>
     <string-array name="proxy_value">
         <item>noproxy</item>
-        <item>xtrafrancyz</item>
+        <item>apiproxy</item>
         <item>zaborona</item>
         <item>http</item>
         <item>https</item>

@@ -204,7 +204,6 @@
         <item name="text_secondary">@android:color/system_accent2_700</item>
         <item name="background_content">@android:color/system_neutral1_10</item>
         <item name="background_page">@android:color/system_neutral1_50</item>
-
         <item name="android:windowLightStatusBar">true</item>
         <item name="action_sheet_action_foreground">@android:color/system_accent1_900</item>
         <item name="action_sheet_separator">@color/black_alpha12</item>
@@ -397,9 +396,8 @@
         <item name="accent">@android:color/system_accent1_500</item>
         <item name="text_primary">@android:color/system_accent1_900</item>
         <item name="text_secondary">@android:color/system_accent2_700</item>
-        <item name="background_content">@android:color/system_neutral1_10</item>
+        <item name="background_content">@*android:color/system_neutral1_10</item>
         <item name="background_page">@android:color/system_neutral1_50</item>
-
         <item name="android:windowLightStatusBar">true</item>
         <item name="action_sheet_action_foreground">?accent</item>
         <item name="action_sheet_separator">@color/black_alpha12</item>

@@ -4131,7 +4131,6 @@
     <string name="proxyownersxtrsources">Исходный код прокси сервера</string>
     <string name="proxyimpinfosum">Не используйте прокси если ВК не заблокирован в вашей стране\n\nДля применения изменений необходимо перезапустить приложение</string>
     <string name="useproxyinfo">Информация об использовании прокси</string>
-    <string name="useproxyinfosum">По умолчанию используется прокси-сервер от xtrafrancyz, но вы можете использовать сторонние прокси-серверы\n\nВводите домены без http/https\n\nЕсли ссылок нет, по умолчанию используется прокси-сервер от xtrafrancyz</string>
     <string name="interfacenewsfeed">Лента</string>
     <string name="interfaceemoji">Эмодзи и стикеры</string>
     <string name="interfacestartfr">Стандартный стартовый фрагмент</string>

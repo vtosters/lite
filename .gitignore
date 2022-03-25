@@ -21,13 +21,6 @@ local.properties
 /smali/VTLite.apk.idsig
 .idea/gradle.xml
 .idea/compiler.xml
-apksigner.jar
-apktool_2.6.0.jar
-debug.jks
-smali/VTLite_signed.apk.idsig
-local.properties
-gradle.properties
-smali/lib/armeabi-v7a/liblite.so
 smali/assets/version.properties
 app/src/main/assets/version.properties
 smali/build/resources.zip
