@@ -324,6 +324,18 @@
 
     move-result-object v2
 
+    # Log json
+
+    const-string v0, "BlockJson"
+
+    invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    # end log
+
     const-string v0, "json.getString(ServerKeys.ID)"
 
     invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
@@ -359,9 +371,13 @@
     const-string v0, "total_count"
 
     .line 29
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    # Адский костыль, лучше пока не трогать и сделать вид что всё нормально
 
-    move-result v5
+    # invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    # move-result v5
+
+    const/4 v5, 0x0
 
     const-string v0, "next_from"
 
