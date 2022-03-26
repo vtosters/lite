@@ -156,8 +156,6 @@
     .line 16
     :cond_2
     :goto_0
-    return-object p1
-
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "Missing values for keyframe."
