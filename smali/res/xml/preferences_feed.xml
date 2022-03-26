@@ -14,6 +14,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlsfilter" android:key="default_ad_list" android:summary="@string/vtlsfiltersummary" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlsfiltershort" android:key="shortlinkfilter" android:summary="@string/vtlsfiltershortsummary" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlsfilterrefs" android:key="refsfilter" android:summary="@string/vtlsfilterrefssummary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Я устал читать одинаковые новости" android:key="shitposting" android:summary="Фильтр очистки постов с РФ и действиями связанными на Украине" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
