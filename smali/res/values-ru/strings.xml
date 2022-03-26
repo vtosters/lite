@@ -4235,4 +4235,5 @@
     <string name="vtloffline2">Принудительно отправлять офлайн запросы</string>
     <string name="benchapi">Бенчмарк апи</string>
     <string name="opencommit">Открыть коммит</string>
+    <string name="newvideo">Новый видео каталог (test)</string>
 </resources>
