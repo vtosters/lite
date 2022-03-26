@@ -47,7 +47,9 @@
     .line 28
     invoke-direct {p0}, Lcom/vk/api/sdk/internal/ApiCommand;-><init>()V
 
-    iput p1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
+    const v0, 0x1
+
+    iput v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
@@ -226,19 +228,8 @@
 
     move-result-object v1
 
-    const-string v2, "start_message_id"
 
     .line 49
-    iget v3, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
-
-    move-result-object v1
-
     const-string v2, "filter"
 
     .line 50
@@ -297,7 +288,7 @@
 
     move-result-object v0
 
-    const-string v1, "5.93"
+    const-string v1, "5.121"
 
     .line 56
     invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->c(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
