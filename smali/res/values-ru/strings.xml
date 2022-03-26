@@ -4230,4 +4230,9 @@
     <string name="act_pm">Для личных сообщений</string>
     <string name="act_cnv">Для бесед</string>
     <string name="act_bot">Для ботов/групп</string>
+
+    <string name="vtloffline">Отправка статуса онлайн</string>
+    <string name="vtloffline2">Принудительно отправлять офлайн запросы</string>
+    <string name="benchapi">Бенчмарк апи</string>
+    <string name="opencommit">Открыть коммит</string>
 </resources>
