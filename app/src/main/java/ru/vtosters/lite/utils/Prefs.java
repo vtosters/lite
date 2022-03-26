@@ -166,6 +166,10 @@ public class Prefs {
         return BooleanFalse("default_ad_list");
     }
 
+    public static boolean shitposting() {
+        return BooleanFalse("shitposting");
+    }
+
     public static boolean dev() {
         return BooleanFalse("dev");
     }
@@ -508,6 +512,7 @@ public class Prefs {
         ReferalsPut();
         StandardFilterPut();
         ShortLinkPut();
+        IDontWantToReadIt();
         String string = Helper.GetPreferences().getString("spamfilters", "");
         if (!string.isEmpty()) {
             mFilters.addAll(Arrays.asList(string.split(", ")));
@@ -556,6 +561,25 @@ public class Prefs {
         if (BooleanTrue("default_ad_list")) {
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Helper.GetContext().getAssets().open("StandartFilter.txt")));
+                while (true) {
+                    String readLine = bufferedReader.readLine();
+                    if (readLine != null) {
+                        mFilters.add(readLine);
+                    } else {
+                        bufferedReader.close();
+                        return;
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void IDontWantToReadIt() {
+        if (BooleanTrue("shitposting")) {
+            try {
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Helper.GetContext().getAssets().open("IDontWantToReadIt.txt")));
                 while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {
