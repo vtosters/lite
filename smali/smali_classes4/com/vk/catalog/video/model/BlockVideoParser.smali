@@ -69,7 +69,9 @@
 .end method
 
 .method private final a(Lorg/json/JSONObject;)Lcom/vk/catalog/core/model/Block;
-    .locals 4
+    .locals 5
+
+    move-object v4, p1
 
     const-string v0, "action"
 
@@ -77,13 +79,6 @@
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
-
-    const-string v1, "extra"
-
-    .line 26
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v1
 
     const-string v2, "type"
 
@@ -161,7 +156,7 @@
 
     const-string v2, "owner_id"
 
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v4, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
