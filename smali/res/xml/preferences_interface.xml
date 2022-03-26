@@ -2,7 +2,7 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/interfacenewsfeed">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/altnewsfeed" android:key="newfeed" android:summary="@string/altnewsfeedsum" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/altnewsfeed" android:key="newfeed" android:summary="@string/altnewsfeedsum" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/showstories" android:key="stories" android:summary="@string/showstoriessum" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacenewsfeedswipe" android:key="swipe" android:summary="@string/interfacenewsfeedswipesum" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
@@ -17,7 +17,7 @@
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacevideoext" android:key="isEnableExternalOpening" android:summary="@string/interfacevideoextsum" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacevideorec" android:key="__dbg_disable_video_feed" android:summary="@string/interfacevideorecsum" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Новый видео каталог" android:key="newvideo" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Новый видео каталог" android:key="newvideo" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">

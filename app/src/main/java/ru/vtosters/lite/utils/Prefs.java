@@ -330,7 +330,7 @@ public class Prefs {
     }
 
     public static boolean newfeed() {
-        return BooleanFalse("newfeed");
+        return BooleanTrue("newfeed");
     }
 
     public static boolean offline() {
@@ -456,7 +456,7 @@ public class Prefs {
     }
 
     public static boolean newvideo() {
-        return BooleanFalse("newvideo");
+        return BooleanTrue("newvideo");
     }
 
     public static String widgetads() {
