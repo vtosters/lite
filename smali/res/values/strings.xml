@@ -4354,4 +4354,9 @@ Does not affect vk.cc links"</string>
     <string name="act_pm">For Private messages</string>
     <string name="act_cnv">For Conversations</string>
     <string name="act_bot">For Bots/Groups</string>
+
+    <string name="vtloffline">Send online status</string>
+    <string name="vtloffline2">Force offline requests</string>
+    <string name="benchapi">Benchmark api</string>
+    <string name="opencommit">Open commit</string>
 </resources>

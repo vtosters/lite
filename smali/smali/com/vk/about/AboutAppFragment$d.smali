@@ -238,6 +238,59 @@
     goto/16 :goto_0
 
     :cond_7
+
+
+    const v0, 0x15
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_15
+
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->a:Lcom/vk/common/links/LinkProcessor$a;
+
+    iget-object p1, p0, Lcom/vk/about/AboutAppFragment$d;->a:Lcom/vk/about/AboutAppFragment;
+
+    invoke-virtual {p1}, Lcom/vk/about/AboutAppFragment;->p()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object p1
+
+    if-nez p1, :cond_16
+
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
+
+    :cond_16
+    const-string v0, "activity!!"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    move-object v2, p1
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getCommitLink()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x4
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+
+    goto/16 :goto_0
+
+    :cond_15
+
+
+
     const v0, 0x12
 
     .line 51

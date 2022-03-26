@@ -234,10 +234,14 @@ public class Prefs {
     }
 
     public static String getBuildNumber() {
-        return Prefs.loadAssetTextAsString(Helper.GetContext(), "version.properties");
+        return Prefs.getBuild(Helper.GetContext(), "version.properties");
     }
 
-    public static String loadAssetTextAsString(Context context, String name) {
+    public static String getCommitLink() {
+        return "https://github.com/vtosters/lite/commit/" + Prefs.getBuild(Helper.GetContext(), "version.properties");
+    }
+
+    public static String getBuild(Context context, String name) {
         try {
             Scanner scanner = new Scanner(context.getAssets().open(name));
             while (scanner.hasNextLine()) {
@@ -592,6 +596,7 @@ public class Prefs {
         list.clear();
         list.add(new Items1());
         if (!oldabout()) {
+            list.add(new Items(21, R.string.opencommit));
             list.add(new Items(8, R.string.tgchannel));
             list.add(new Items(9, R.string.tgchat));
             list.add(new Items(16, R.string.vtfaq));
