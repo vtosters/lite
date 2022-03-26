@@ -153,6 +153,10 @@
 
     move-result p2
 
+    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->newvideo()Z
+
+    move-result p2
+
     if-eqz p2, :cond_0
 
     .line 895

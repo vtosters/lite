@@ -5596,7 +5596,9 @@
 
     move-result v0
 
-    const v0, 0x0
+    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->newvideo()Z
+
+    move-result v0
 
     if-eqz v0, :cond_7b
 
