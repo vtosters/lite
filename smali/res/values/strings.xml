@@ -4359,5 +4359,4 @@ Does not affect vk.cc links"</string>
     <string name="vtloffline2">Force offline requests</string>
     <string name="benchapi">Benchmark api</string>
     <string name="opencommit">Open commit</string>
-    <string name="newvideo">New video catalog (test)</string>
 </resources>
