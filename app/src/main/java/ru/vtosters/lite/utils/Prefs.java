@@ -455,6 +455,10 @@ public class Prefs {
         return BooleanTrue("voice");
     }
 
+    public static boolean newvideo() {
+        return BooleanFalse("newvideo");
+    }
+
     public static String widgetads() {
         return ads() ? "null" : "app_widget";
     }
