@@ -4,7 +4,7 @@
     <FrameLayout android:id="@id/fl_user_container" android:layout_width="fill_parent" android:layout_height="48.0dip">
         <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ll_user_container_inner" android:layout_width="wrap_content" android:layout_height="fill_parent">
             <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" />
-            <TextView android:textSize="14.0sp" android:textColor="?text_primary" android:layout_gravity="center_vertical" android:id="@id/tv_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:singleLine="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#8a000000" android:layout_gravity="center_vertical" android:id="@id/tv_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:singleLine="true" />
         </LinearLayout>
         <View android:layout_gravity="bottom" android:background="#1e000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
     </FrameLayout>
