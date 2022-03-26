@@ -126,7 +126,7 @@
     <style name="AttachPicker.Header" parent="@style/AttachPicker" />
     <style name="AttachPicker.Header.TextView" parent="@style/AttachPicker.Header">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">?accent</item>
+        <item name="android:textColor">@color/accent_blue</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:singleLine">true</item>
         <item name="android:textAllCaps">true</item>
