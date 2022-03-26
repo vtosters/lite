@@ -26,6 +26,7 @@
 Разработано командой [VTosters](https//t.me/vtosters)
 
 [gdlbo](https//t.me/gdlbo) - разрабочик
+
 [toxyxd](https//t.me/toxyxd) - разработчик 
 
 И не только...
