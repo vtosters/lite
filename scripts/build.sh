@@ -1,4 +1,4 @@
-œ#!/bin/bash
+#!/bin/bash
 RED='\033[31m'
 GREEN='\033[92m'
 NC='\033[0m'
