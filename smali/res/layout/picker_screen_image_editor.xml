@@ -23,7 +23,7 @@
             <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_crop" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_crop_rotate_24" app:eav_title="@string/picker_crop" />
             <com.vk.attachpicker.widget.EditorActionView android:id="@id/eav_auto" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" app:eav_icon="@drawable/picker_ic_magic_24" app:eav_title="@string/picker_auto" />
         </LinearLayout>
-        <com.vk.attachpicker.widget.AnimatableTextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="center" android:id="@id/tv_attach" android:background="@drawable/picker_btn_white" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height" android:layout_marginTop="@dimen/picker_image_editor_actions_height" android:text="@string/picker_done" android:textAllCaps="true" />
+        <com.vk.attachpicker.widget.AnimatableTextView android:textSize="16.0sp" android:textColor="@color/accent_blue" android:gravity="center" android:id="@id/tv_attach" android:background="@drawable/picker_btn_white" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height" android:layout_marginTop="@dimen/picker_image_editor_actions_height" android:text="@string/picker_done" android:textAllCaps="true" />
         <View android:background="#ffe0e0e0" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="@dimen/picker_image_editor_actions_height" />
         <FrameLayout android:id="@id/fl_delete_area" android:background="#ddffffff" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/picker_bottom_button_height">
             <ImageView android:layout_gravity="center" android:id="@id/iv_delete_icon" android:layout_width="96.0dip" android:layout_height="48.0dip" android:src="@drawable/picker_ic_delete_zone" />
@@ -31,7 +31,7 @@
         </FrameLayout>
     </FrameLayout>
     <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_auto_panel" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_image_editor_bottom_panel">
-        <TextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="bottom|center" android:layout_gravity="center_horizontal" android:id="@id/tv_auto_value" android:layout_width="100.0dip" android:layout_height="32.0dip" android:includeFontPadding="false" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/accent_blue" android:gravity="bottom|center" android:layout_gravity="center_horizontal" android:id="@id/tv_auto_value" android:layout_width="100.0dip" android:layout_height="32.0dip" android:includeFontPadding="false" />
         <com.vk.attachpicker.widget.VkSeekBar android:layout_gravity="center_horizontal" android:id="@id/vsb_auto_value" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" />
         <com.vk.attachpicker.widget.EditorBottomPanel android:layout_gravity="bottom" android:id="@id/ebp_auto" android:layout_width="fill_parent" android:layout_height="@dimen/picker_bottom_button_height" app:ebp_title="@string/picker_auto_full" />
     </FrameLayout>
