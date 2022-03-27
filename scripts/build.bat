@@ -89,7 +89,7 @@ del assets\version.properties
 echo.
 echo %ESC%[1;4mSign apk...%ESC%[0m
 echo.
-call java -jar ../scripts/apksigner.jar sign --ks debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android VTLite.apk
+call java -jar ../scripts/apksigner.jar sign --ks ../scripts/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android VTLite.apk
 del VTLite.apk
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
