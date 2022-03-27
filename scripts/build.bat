@@ -75,7 +75,7 @@ echo.
 echo %ESC%[1;4mBuild apk...%ESC%[0m
 echo.
 cd smali\
-call java -jar ../scripts/apktool.jar b . -o VTLite.apk --use-aapt2 -p ../scripts/framework/
+call java -jar ../scripts/apktool.jar b . -o ../smali/VTLite.apk --use-aapt2 -p ../scripts/framework/
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
@@ -90,7 +90,6 @@ echo.
 echo %ESC%[1;4mSign apk...%ESC%[0m
 echo.
 call java -jar ../scripts/apksigner.jar sign --ks ../scripts/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android VTLite.apk
-del VTLite.apk
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
@@ -122,7 +121,7 @@ GOTO startinstall
 echo.
 echo %ESC%[1;4mInstall apk...%ESC%[0m
 echo.
-call adb install VTLite_signed.apk
+call adb install VTLite.apk
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
