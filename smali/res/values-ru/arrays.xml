@@ -467,8 +467,8 @@
     </string-array>
     <string-array name="proxy">
         <item>Без прокси</item>
-        <item>Проксирование API</item>
         <item>zaborona.help</item>
+        <item>Сторонний прокси для API</item>
         <item>Сторонний HTTP</item>
         <item>Сторонний HTTPS</item>
         <item>Сторонний SOCKS</item>
