@@ -234,11 +234,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0601b2
+    # const v1, 0x7f0601b2
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    # invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
-    move-result-object v0
+    # move-result-object v0
 
     .line 121
     new-instance v1, Lcom/vk/core/d/RecoloredDrawable;
@@ -253,7 +253,11 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/core/d/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getAccentColor()I
+
+    move-result v0
+
+    invoke-direct {v1, v2, v0}, Lcom/vk/core/d/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     .line 122
     iget-object v0, v9, Lcom/vtosters/lite/ui/a/NewsSpinnerAdapter$a;->b:Landroid/widget/CheckedTextView;
