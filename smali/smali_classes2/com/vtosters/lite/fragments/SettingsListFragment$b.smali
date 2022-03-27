@@ -853,7 +853,7 @@
 
         move-result-object v8
 
-        const-class v9, Lru/vtosters/lite/ui BEB;
+        const-class v9, Lru/vtosters/lite/ui/fragments/dockbar/DockBarEditFragment;
 
         invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 

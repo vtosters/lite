@@ -66,7 +66,7 @@
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <application android:allowBackup="false" android:debuggable="false" android:hardwareAccelerated="true" android:icon="@mipmap/vt_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.vtosters.lite.VKApplication" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="true" android:roundIcon="@mipmap/vt_launcher_round" android:supportsRtl="true" android:theme="@style/BaseStyle">
+    <application android:allowBackup="false" android:debuggable="true" android:hardwareAccelerated="true" android:icon="@mipmap/vt_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.vtosters.lite.VKApplication" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="true" android:roundIcon="@mipmap/vt_launcher_round" android:supportsRtl="true" android:theme="@style/BaseStyle">
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBlTHhNGPj7ktPWrUo_d4YJs_Sn_zsISZg"/>
         <meta-data android:name="com.google.android.geo.API_SECRET" android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk="/>
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
