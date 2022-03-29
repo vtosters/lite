@@ -587,6 +587,12 @@
 .method public static e()Landroid/content/SharedPreferences;
     .locals 3
 
+    invoke-static {}, Lru/vtosters/lite/utils/AccountManager;->getCurrentAccount()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
+
     .line 184
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
