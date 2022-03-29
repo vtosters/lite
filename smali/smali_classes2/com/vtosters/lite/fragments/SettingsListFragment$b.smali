@@ -124,6 +124,35 @@
 
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
+    const v6, 0x7f08063e
+
+    iget-object v7, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$b;->a:Lcom/vtosters/lite/fragments/SettingsListFragment;
+
+    invoke-static {v7}, Lcom/vtosters/lite/fragments/SettingsListFragment;->a(Lcom/vtosters/lite/fragments/SettingsListFragment;)I
+
+    move-result v7
+
+    # const v8, 0x7f110fef
+
+    # invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    # move-result-object v8
+
+    const-string v8, "Мультиаккаунт"
+
+    const-class v9, Lru/vtosters/lite/ui/fragments/AccountsFragment;
+
+    invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
+
+    invoke-static {v4, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+
+    new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
+
     const v6, 0x7f0802d3
 
     iget-object v7, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$b;->a:Lcom/vtosters/lite/fragments/SettingsListFragment;
