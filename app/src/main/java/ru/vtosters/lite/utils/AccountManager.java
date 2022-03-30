@@ -31,4 +31,29 @@ public class AccountManager {
         }
         return "err";
     }
+    public static String getAvalibleAcc(){
+        int intg = 0;
+        while (true) {
+            if (getName(Integer.toString(intg)) != "err") {
+                intg++;
+            }
+            else {
+                break;
+            }
+        };
+        return Integer.toString(intg);
+    }
+
+    public static int getAvalibleAccInt(){
+        int intg = 0;
+        while (true) {
+            if (getName(Integer.toString(intg)) != "err") {
+                intg++;
+            }
+            else {
+                break;
+            }
+        };
+        return intg;
+    }
 }
