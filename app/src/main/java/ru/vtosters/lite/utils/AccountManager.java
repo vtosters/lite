@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.content.Context.MODE_PRIVATE;
+import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.SharedPreferences;
 
@@ -11,6 +12,15 @@ public class AccountManager {
     public static SharedPreferences getCurrentAccount() {
         String Value = ru.vtosters.lite.utils.Helper.GetPreferences().getString("account", "");
         return Helper.GetContext().getSharedPreferences("pref_account_manager" + Value, MODE_PRIVATE);
+    }
+
+    public static void MigrateToNewType() {
+        SharedPreferences OldPrefs = Helper.GetContext().getSharedPreferences("pref_account_manager", MODE_PRIVATE);
+        String OldPrefsValue = OldPrefs.getString("key_vk_account", "");
+        SharedPreferences NewPrefs = GetContext().getSharedPreferences("pref_account_manager0", MODE_PRIVATE);
+        SharedPreferences.Editor editor = NewPrefs.edit();
+        editor.putString("key_vk_account", OldPrefsValue);
+        editor.commit();
     }
 
     public static String getCurrentAccountName() {
@@ -31,26 +41,25 @@ public class AccountManager {
         }
         return "err";
     }
-    public static String getAvalibleAcc(){
+
+    public static String getAvalibleAcc() {
         int intg = 0;
         while (true) {
             if (getName(Integer.toString(intg)) != "err") {
                 intg++;
-            }
-            else {
+            } else {
                 break;
             }
         };
         return Integer.toString(intg);
     }
 
-    public static int getAvalibleAccInt(){
+    public static int getAvalibleAccInt() {
         int intg = 0;
         while (true) {
             if (getName(Integer.toString(intg)) != "err") {
                 intg++;
-            }
-            else {
+            } else {
                 break;
             }
         };
