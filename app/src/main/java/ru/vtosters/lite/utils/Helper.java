@@ -1,16 +1,11 @@
 package ru.vtosters.lite.utils;
 
-import static android.content.Context.ACTIVITY_SERVICE;
-
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
@@ -22,7 +17,6 @@ import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import java.lang.reflect.Method;
-import java.util.List;
 
 public class Helper {
     public static int GetUserId() {
@@ -69,8 +63,12 @@ public class Helper {
         return extendedUserProfile.a;
     }
 
-    public static void restarting() {
-        GetContext().startActivity(Intent.makeRestartActivityTask(GetContext().getPackageManager().getLaunchIntentForPackage(GetContext().getPackageName()).getComponent()));
+    public static void restarting(){
+        Context ctx = GetContext();
+        PackageManager pm = ctx.getPackageManager();
+        Intent intent = pm.getLaunchIntentForPackage(ctx.getPackageName());
+        Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
+        ctx.startActivity(mainIntent);
         Runtime.getRuntime().exit(0);
     }
 
