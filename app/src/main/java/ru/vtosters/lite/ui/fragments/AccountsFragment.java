@@ -1,13 +1,20 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Helper.GetContext;
 import static ru.vtosters.lite.utils.Helper.GetPreferences;
 import static ru.vtosters.lite.utils.Helper.getUserLastName;
 
 import android.os.Bundle;
+import android.support.v7.preference.Preference;
 
 import com.vk.audio.AudioMessageUtils;
+import com.vk.auth.api.VKAccount;
 import com.vk.core.f.FileUtils;
+import com.vk.core.util.AppContextHolder;
+import com.vk.core.util.ToastUtils;
 import com.vk.imageloader.VKImageLoader;
+import com.vk.pushes.PushSubscriber;
+import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
 
@@ -40,7 +47,12 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
             ImEngineProvider.a().h();
             AudioMessageUtils.j();
             FileUtils.l();
-            //Helper.restarting(); TODO Implement a soft restart for activities and fragments or hard restart after applying changes
+            VKAccount b = VKAccountManager.b();
+            PushSubscriber.a.a(b.b(), b.c());
+            AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+            AccountsFragment.this.aB().postDelayed(() -> {
+                PushSubscriber.a.a(true);
+            }, 1000);
             return true;
         });
     }
