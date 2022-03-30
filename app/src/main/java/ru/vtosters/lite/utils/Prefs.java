@@ -707,7 +707,7 @@ public class Prefs {
         setupFilters();
         fixGapps();
         setProxy();
-
+        AccountManager.MigrateToNewType();
         registerActivities(application);
     }
 
