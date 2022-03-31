@@ -216,6 +216,7 @@
     <string name="auth_2fa_sms">Enter the code sent via SMS to&lt;br>the phone number &lt;b>%s&lt;/b>.</string>
     <string name="auth_alt">Any trouble receiving codes?</string>
     <string name="auth_code_hint">Enter code</string>
+    <string name="auth_error">An error occurred while logging in. Check your credentials and try again.</string>
     <string name="auth_error_network">Unable to log in due to problems with a network. Please check your connection and try again.</string>
     <string name="auth_error_title">Authorization error</string>
     <string name="auth_out_of_tries">Too many login attempts. Please try again later.</string>
@@ -281,6 +282,9 @@ You can block user from his profile page."</string>
     <string name="captcha_hint">Please enter the code from the picture</string>
     <string name="caption">Caption</string>
     <string name="career">Career</string>
+    <string name="catalog_button_show_all">Show all</string>
+    <string name="catalog_search_parameters">Parameters</string>
+    <string name="catalog_talkback_empty">Control button</string>
     <string name="category">Category: %s</string>
     <string name="cd_share_action_icon">Sharing Action icon</string>
     <string name="change_password">Change password</string>
@@ -431,6 +435,18 @@ You can block user from his profile page."</string>
     <string name="community_profile_photos">Logo pictures</string>
     <string name="community_subscribers_formatted">%s followers</string>
     <string name="completing_purchase">Completing purchase...</string>
+    <string name="components_actions_popup">Context menu</string>
+    <string name="components_base">Base</string>
+    <string name="components_bottom_confirm_btn">Lower button</string>
+    <string name="components_buttons">Buttons</string>
+    <string name="components_dialogs">Dialogs</string>
+    <string name="components_input_fields">Input fields</string>
+    <string name="components_intro_promo">Intro/Promo</string>
+    <string name="components_loaders">Loaders</string>
+    <string name="components_snackbar">Snackbar</string>
+    <string name="components_text">Text</string>
+    <string name="components_title">VK UI components</string>
+    <string name="components_tooltips">Tooltips</string>
     <string name="confirm">Please confirm</string>
     <string name="confirm_action_title">Confirm action</string>
     <string name="confirm_block_user">Are you sure you want to block %s?</string>
@@ -1974,6 +1990,7 @@ Please try again later"</string>
     <string name="newsfeed_new_photos_you_have">You have %d new photos</string>
     <string name="newsfeed_newpost_attach_documents_from_device">From device</string>
     <string name="newsfeed_newpost_attach_documents_from_gallery">From gallery</string>
+    <string name="newsfeed_newpost_attachment_adding_forbidden">Adding attachments is forbidden</string>
     <string name="newsfeed_newpost_author">"Post's author"</string>
     <string name="newsfeed_newpost_for_all">Everyone</string>
     <string name="newsfeed_newpost_for_friends">Friends only</string>
@@ -2368,6 +2385,8 @@ in group chats"</string>
     <string name="poll_result_country_title">Country</string>
     <string name="poll_result_filer_country_and_city">Country and city</string>
     <string name="poll_result_filter_age">Age</string>
+    <string name="poll_result_filter_age_18_plus">18+</string>
+    <string name="poll_result_filter_age_36_plus">36+</string>
     <string name="poll_result_filter_age_any">Any</string>
     <string name="poll_result_filter_gender_any">Any</string>
     <string name="poll_result_filter_gender_female">Female</string>
@@ -3298,6 +3317,14 @@ photo"</string>
     <string name="video_albums">Albums</string>
     <string name="video_already_added">This video has already been added to your page</string>
     <string name="video_author">Added by:</string>
+    <string name="video_catalog_filters">Filters</string>
+    <string name="video_catalog_filters_date">Upload date</string>
+    <string name="video_catalog_filters_high_quality">High quality only</string>
+    <string name="video_catalog_filters_length">Length</string>
+    <string name="video_catalog_filters_safe">Safe search</string>
+    <string name="video_catalog_filters_show_results">Show results</string>
+    <string name="video_catalog_filters_sort">Sort</string>
+    <string name="video_catalog_profile_page_title">Video</string>
     <string name="video_confirm_remove">Confirm video removal</string>
     <string name="video_empty_title">Untitled</string>
     <string name="video_err_decode">Your device can not play this video. Try selecting lower quality.</string>
@@ -3305,10 +3332,12 @@ photo"</string>
     <string name="video_err_network">There are some problems with your network connection.</string>
     <string name="video_fast_seek_tooltip">Tap here twice to rewind</string>
     <string name="video_hd_only">High quality</string>
+    <string name="video_high_quality">High quality</string>
     <string name="video_live">Live</string>
     <string name="video_live_subscribed">Stream notifications enabled</string>
     <string name="video_live_unsubscribed">Stream notifications disabled</string>
     <string name="video_live_upcoming">Soon</string>
+    <string name="video_long">Long</string>
     <string name="video_more_videos_title">See also</string>
     <string name="video_next">Next video</string>
     <string name="video_not_supported_flv">This video format is no longer supported. Please try watching it in the full website version</string>
@@ -3344,8 +3373,10 @@ photo"</string>
     <string name="video_saving">Saving video</string>
     <string name="video_search_date">By date</string>
     <string name="video_search_duration">By duration</string>
+    <string name="video_search_hint">Search videos…</string>
     <string name="video_search_sort">Sort</string>
     <string name="video_select_quality">Select quality</string>
+    <string name="video_short">Short</string>
     <string name="video_title">Video</string>
     <string name="video_upload_ok">Uploaded a video</string>
     <string name="video_upload_ok_long">Video uploaded successfully</string>
@@ -4117,37 +4148,6 @@ with video"</string>
     <string name="yesterday_at">yesterday at</string>
     <string name="your_balance">Your balance: </string>
     <string name="your_gender">Your gender:</string>
-
-    <string name="video_high_quality">High quality</string>
-    <string name="video_long">Long</string>
-    <string name="video_catalog_filters">Filters</string>
-    <string name="video_catalog_filters_date">Upload date</string>
-    <string name="video_catalog_filters_high_quality">High quality only</string>
-    <string name="video_catalog_filters_length">Length</string>
-    <string name="video_catalog_filters_safe">Safe search</string>
-    <string name="video_catalog_filters_show_results">Show results</string>
-    <string name="video_catalog_filters_sort">Sort</string>
-    <string name="video_catalog_profile_page_title">Video</string>
-    <string name="auth_error">An error occurred while logging in. Check your credentials and try again.</string>
-    <string name="components_actions_popup">Context menu</string>
-    <string name="components_base">Base</string>
-    <string name="components_bottom_confirm_btn">Lower button</string>
-    <string name="components_buttons">Buttons</string>
-    <string name="components_dialogs">Dialogs</string>
-    <string name="components_input_fields">Input fields</string>
-    <string name="components_intro_promo">Intro/Promo</string>
-    <string name="components_loaders">Loaders</string>
-    <string name="components_snackbar">Snackbar</string>
-    <string name="components_text">Text</string>
-    <string name="components_title">VK UI components</string>
-    <string name="components_tooltips">Tooltips</string>
-    <string name="catalog_button_show_all">Show all</string>
-    <string name="catalog_search_parameters">Parameters</string>
-    <string name="catalog_talkback_empty">Control button</string>
-    <string name="newsfeed_newpost_attachment_adding_forbidden">Adding attachments is forbidden</string>
-    <string name="video_search_hint">Search videos…</string>
-    <string name="video_short">Short</string>
-
     <string name="vtlfeed">Feed</string>
     <string name="vtlinterface">Interface</string>
     <string name="vtlmusic">Music</string>
@@ -4157,7 +4157,6 @@ with video"</string>
     <string name="vtltgs">Telegram Stickers</string>
     <string name="vtlthemes">Appearance</string>
     <string name="vtlmessages">Messages</string>
-    <string name="vtlota">Updates</string>
     <string name="vkconnect">VK ID</string>
     <string name="bugs">Bugtracker</string>
     <string name="promocode">Activate promocode</string>
@@ -4180,7 +4179,7 @@ Example: #sponsored, Free gift cards, #PROMO
 Filters are case-sensitive!"</string>
     <string name="vtlownfilter">Custom filter</string>
     <string name="vtlsfilter">Standard adblock filter</string>
-	<string name="vtlsfiltersummary">Blocks posts with common tags, such as #ad, #pr and so on</string>
+    <string name="vtlsfiltersummary">Blocks posts with common tags, such as #ad, #pr and so on</string>
     <string name="vtlusevkui">Use VKUI</string>
     <string name="vtlawayphp">Disable away.php redirect</string>
     <string name="vtlinterfacemsg">Interface</string>
@@ -4198,8 +4197,9 @@ Does not affect vk.cc links"</string>
     <string name="vtlrecommend">Recommendations</string>
     <string name="vtlrecommendfriend">Friends recommendations</string>
     <string name="vtlrecommendauthor">Authors recommendations</string>
-    <string name="vtlrecommendfriendpost">Recommended friends\' posts</string>
-    <string name="vtlrecommendmarksummary">Posts like &quot;You may be interested&quot;</string>
+    <string name="vtlrecommendfriendpost">"Recommended friends' posts"</string>
+    <string name="BGStickers">Sticker outlines</string>
+    <string name="vtlrecommendmarksummary">Posts like You may be interested</string>
     <string name="vtlfeedwork">Other</string>
     <string name="vtlfeedreload">Automatic feed update</string>
     <string name="vtlfeedcache">Cache feed posts</string>
@@ -4207,6 +4207,7 @@ Does not affect vk.cc links"</string>
     <string name="vtlmsgtails">Message tails</string>
     <string name="vtlmsgflat">Flat Messages</string>
     <string name="vtlupdmsg">Update</string>
+    <string name="BGStickerssum">You need to clear the application cache after toggling this option</string>
     <string name="app_name_orig">VK</string>
     <string name="addinf">Additional information</string>
     <string name="copyid">Copy ID</string>
@@ -4216,98 +4217,135 @@ Does not affect vk.cc links"</string>
     <string name="vticonsummary">The original name and icon of VK</string>
     <string name="copytokenbtn">Copy your access token</string>
     <string name="killappbtn">Kill the app process</string>
-    <string name="altnewsfeed">Alternative design of newsfeed</string>
     <string name="experts">Experts</string>
-    <string name="poll_result_filter_age_18_plus">18+</string>
-    <string name="poll_result_filter_age_36_plus">36+</string>
-    <string name="showstories">Show stories</string>
-    <string name="firebasefix">Update Firebase registration</string>
-    <string name="clearcache">Clear all cache</string>
+    <string name="DNT_OFF">Disable Do Not Type</string>
+    <string name="DNT_ON">Enable Do Not Type</string>
+    <string name="accounts">Accounts</string>
+    <string name="act_bot">For Bots/Groups</string>
+    <string name="act_cnv">For Conversations</string>
+    <string name="act_pm">For Private messages</string>
+    <string name="alteremoji">Alternative type of emoji menu</string>
+    <string name="alteremojisum">Alrernative selection of emojis and stickers in the miniature menu</string>
+    <string name="altnewsfeed">Alternative design of newsfeed</string>
+    <string name="altnewsfeedsum">Design with new tabs in the feed, as well as replacing default search with an improved one (in the bottom menu)</string>
     <string name="applicationrestart">Restart application</string>
-    <string name="vtverify">VTosters verifications</string>
-    <string name="showvtverify">Show verifications</string>
-    <string name="showvtfire">Show special verifications</string>
-    <string name="vtverifyinfo">What are VTosters verifications?</string>
-    <string name="getvtverify">Get verification on your profile</string>
-    <string name="vtverifyinfosum">This is our gratitude for the support of the project</string>
-    <string name="firebasefixsum">Correction of receiving notifications after installing GMS or after restoring the backup of the application</string>
+    <string name="benchapi">Benchmark api</string>
+    <string name="benchapisummary">Testing the speed of sending requests. Useless function for everyone except VKontakte developers</string>
+    <string name="cachecleaned">Cache cleared</string>
+    <string name="clearcache">Clear all cache</string>
     <string name="clearcachesum">Clears app cache (except for feed cache)</string>
-    <string name="vtsystem">Internal settings</string>
-    <string name="BGStickers">Sticker outlines</string>
-    <string name="BGStickerssum">You need to clear the application cache after toggling this option</string>
-    <string name="vkuiinj">VKUI theming</string>
-    <string name="proxyimpinfo">Warning!</string>
-    <string name="proxyadvsettings">Advanced proxy settings</string>
-    <string name="useproxy">Proxy variant</string>
-    <string name="useproxysum">Select the proxy variant</string>
-    <string name="proxyapi">API Domain</string>
-    <string name="proxyoauth">OAuth Domain</string>
-    <string name="proxystatic">Static Domain</string>
-    <string name="proxydomain">Domain</string>
-    <string name="proxyport">Port</string>
-    <string name="proxyhttp">HTTP Proxy</string>
-    <string name="proxyhttps">HTTPS Proxy</string>
-    <string name="proxysocks">Socks Proxy</string>
-    <string name="proxydonate">Donate</string>
-    <string name="proxyowners">Proxy owners</string>
-    <string name="proxyownerszbr">zaborona site</string>
-    <string name="proxyownersxtr">xtrafrancyz site</string>
-    <string name="proxyownersxtrsources">Proxy server sources</string>
-    <string name="proxyimpinfosum">Don\'t use proxy if VK is available in your country\n\nYou need to restart the application to apply proxy settings</string>
-    <string name="useproxyinfo">Information about using a proxy</string>
-    <string name="interfacenewsfeed">Feed</string>
+    <string name="convUsersOnline">Fix showing online in conversations</string>
+    <string name="convUsersOnlinesum">"Fix showing other users online in conversations (only needed if you have hidden your online one)
+
+Warning! It can cause long downloads of user lists if there are a lot of users in the conversation"</string>
+    <string name="copybtn">Copied!</string>
+    <string name="ctypedirect">Direct</string>
+    <string name="ctypedisabled">Not set</string>
+    <string name="ctypesocks">Socks</string>
+    <string name="dnr">Do not read</string>
+    <string name="dns">Send status of viewing stories</string>
+    <string name="dnw">Do not write</string>
+    <string name="docknumbers">Counters in dockbar</string>
+    <string name="docknumberssum">"Disabling doesn't work in the tablet interface"</string>
+    <string name="fcmtokenfixed">Notifications have been restored!</string>
+    <string name="fcmtokenget">FCM token received</string>
+    <string name="fcmtokenrem">FCM token deleted</string>
+    <string name="firebasefix">Update Firebase registration</string>
+    <string name="firebasefixsum">Correction of receiving notifications after installing GMS or after restoring the backup of the application</string>
+    <string name="foafdate">"
+Days from the date of registration:"</string>
+    <string name="foaferr">Issues when loading data!</string>
+    <string name="foafid">Profile ID:</string>
+    <string name="foafregdate">"
+Registration date:"</string>
+    <string name="getvtverify">Get verification on your profile</string>
+    <string name="iconapplying">Applying changes</string>
     <string name="interfaceemoji">Emoji and stickers</string>
+    <string name="interfaceglobal">Global features</string>
+    <string name="interfaceglobaldates">Date rounding</string>
+    <string name="interfaceglobaldatessum">"Date rounding of posts and users
+
+01 Jan 1970 00:00:00 -> 1 Jan 00:00"</string>
+    <string name="interfaceglobalnum">Round up numbers</string>
+    <string name="interfaceglobalnumsum">"Round up the numbers of views, comments, likes and reposts
+
+10000 -> 10k"</string>
+    <string name="interfaceglobalpost">Shorten posts</string>
+    <string name="interfaceglobalpostsum">"Shorten the text in posts
+
+Expand text..."</string>
+    <string name="interfacenewsfeed">Feed</string>
+    <string name="interfacenewsfeedswipe">Side camera in the news</string>
+    <string name="interfacenewsfeedswipesum">Works only with the default newsfeed design</string>
     <string name="interfacestartfr">Default start fragment</string>
     <string name="interfacestartfrsum">Select start fragment</string>
-    <string name="interfaceglobal">Global features</string>
     <string name="interfacevideo">Video</string>
     <string name="interfacevideoext">Use external video player</string>
     <string name="interfacevideoextsum">Use an external video player to play videos</string>
     <string name="interfacevideorec">Disable recommended videos</string>
     <string name="interfacevideorecsum">Disable video recommendations at the bottom of the video player with video recommendations</string>
-    <string name="interfaceglobaldates">Date rounding</string>
-    <string name="interfaceglobaldatessum">Date rounding of posts and users\n\n01 Jan 1970 00:00:00 -> 1 Jan 00:00</string>
-    <string name="interfaceglobalnum">Round up numbers</string>
-    <string name="interfaceglobalnumsum">Round up the numbers of views, comments, likes and reposts\n\n10000 -> 10k</string>
-    <string name="interfaceglobalpost">Shorten posts</string>
-    <string name="interfaceglobalpostsum">Shorten the text in posts\n\nExpand text...</string>
-    <string name="interfacenewsfeedswipe">Side camera in the news</string>
-    <string name="interfacenewsfeedswipesum">Works only with the default newsfeed design</string>
-    <string name="showstoriessum">Show stories at the top of the feed</string>
-    <string name="altnewsfeedsum">Design with new tabs in the feed, as well as replacing default search with an improved one (in the bottom menu)</string>
     <string name="menucutter">Disable menu shortening</string>
     <string name="menucuttersum">Removes the shortening of items in the application section menu</string>
-    <string name="docknumbers">Counters in dockbar</string>
-    <string name="docknumberssum">Disabling doesn\'t work in the tablet interface</string>
-    <string name="systememoji">Use system emojis</string>
-    <string name="systememojisum">Your system emojis - 😀😁🤑🥵👍</string>
-    <string name="alteremoji">Alternative type of emoji menu</string>
-    <string name="alteremojisum">Alrernative selection of emojis and stickers in the miniature menu</string>
-    <string name="convUsersOnline">Fix showing online in conversations</string>
-    <string name="convUsersOnlinesum">Fix showing other users online in conversations (only needed if you have hidden your online one)\n\nWarning! It can cause long downloads of user lists if there are a lot of users in the conversation</string>
-    <string name="otawarning">Warning!</string>
-    <string name="otaok">OK</string>
-    <string name="otacheckonstart">Enable updates at start</string>
+    <string name="newacc">Add new account</string>
+    <string name="newvideo">New video catalog</string>
+    <string name="offline_vtl">Offline</string>
+    <string name="online_vtl">Online</string>
+    <string name="opencommit">Open commit</string>
     <string name="otabranch">Select update branch</string>
+    <string name="otacheckonstart">Enable updates at start</string>
     <string name="otacheckupd">Check for updates</string>
     <string name="otaerr">Check your internet connection and try again</string>
-    <string name="otaretry">Try again</string>
     <string name="otanoupd">No updates found</string>
+    <string name="otaok">OK</string>
+    <string name="otaretry">Try again</string>
     <string name="otaupd">Update</string>
     <string name="otaupdavalible">Update available!</string>
     <string name="otaupdchanges">Changelog</string>
-    <string name="otawarnwait">Please don\'t close the app until the end of the update download</string>
-    <string name="iconapplying">Applying changes</string>
-    <string name="copybtn">Copied!</string>
-    <string name="tokenwarning">Don\'t give this token to anyone if you don\'t know what to do!</string>
-    <string name="cachecleaned">Cache cleared</string>
-    <string name="fcmtokenrem">FCM token deleted</string>
-    <string name="fcmtokenget">FCM token received</string>
-    <string name="fcmtokenfixed">Notifications have been restored!</string>
-    <string name="stickerscount">stickers</string>
-    <string name="stickersconnection">Choose the connection method!</string>
-    <string name="stickersproxy1">Configure the IP proxy!</string>
+    <string name="otawarning">Warning!</string>
+    <string name="otawarnwait">"Please don't close the app until the end of the update download"</string>
+    <string name="privacy_vtl">Privacy</string>
+    <string name="proxyadvsettings">Advanced proxy settings</string>
+    <string name="proxyapi">API Domain</string>
+    <string name="proxydomain">Domain</string>
+    <string name="proxydonate">Donate</string>
+    <string name="proxyhttp">HTTP Proxy</string>
+    <string name="proxyhttps">HTTPS Proxy</string>
+    <string name="proxyimpinfo">Warning!</string>
+    <string name="proxyimpinfosum">"Don't use proxy if VK is available in your country
+
+You need to restart the application to apply proxy settings"</string>
+    <string name="proxyoauth">OAuth Domain</string>
+    <string name="proxyowners">Proxy owners</string>
+    <string name="proxyownersxtr">xtrafrancyz site</string>
+    <string name="proxyownersxtrsources">Proxy server sources</string>
+    <string name="proxyownerszbr">zaborona site</string>
+    <string name="proxyport">Port</string>
+    <string name="proxysocks">Socks Proxy</string>
+    <string name="proxystatic">Static Domain</string>
+    <string name="reportbug">Report a bug</string>
+    <string name="restartapp">Please, restart app</string>
+    <string name="savedmsg">Saved messages</string>
+    <string name="selectacc">Select account</string>
+    <string name="shitposting">The same type of news</string>
+    <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine</string>
+    <string name="showstories">Show stories</string>
+    <string name="showstoriessum">Show stories at the top of the feed</string>
+    <string name="showvtfire">Show special verifications</string>
+    <string name="showvtverify">Show verifications</string>
+    <string name="sprefsctype">Connection type</string>
+    <string name="sprefsdelkey">Delete the Telegram bot key</string>
+    <string name="sprefsdelkey2">The key was deleted successfully</string>
+    <string name="sprefsnetwork">Network</string>
+    <string name="sprefsstickers">Stickers</string>
+    <string name="ssocks">Socks Settings</string>
+    <string name="ssocksauth">Authorization</string>
+    <string name="ssockshost">Host</string>
+    <string name="ssockslogin">Login</string>
+    <string name="ssockspass">Password</string>
+    <string name="ssocksport">Port</string>
+    <string name="ssockswport">Invalid port</string>
     <string name="stickersapi1">Checking API key</string>
+    <string name="stickersapi10">2. Copy the bot token that the bot will send you and paste it into the application</string>
     <string name="stickersapi2">Invalid Bot API key</string>
     <string name="stickersapi3">Error checking the key!</string>
     <string name="stickersapi4">Try again</string>
@@ -4315,59 +4353,406 @@ Does not affect vk.cc links"</string>
     <string name="stickersapi6">Get it using the bot @BotFather</string>
     <string name="stickersapi7">More details</string>
     <string name="stickersapi8">Instructions for obtaining a key</string>
-    <string name="stickersapi9">1. Create a bot at @BotFather (Telegram)\n</string>
-    <string name="stickersapi10">2. Copy the bot token that the bot will send you and paste it into the application</string>
+    <string name="stickersapi9">"1. Create a bot at @BotFather (Telegram)
+"</string>
+    <string name="stickersconnection">Choose the connection method!</string>
+    <string name="stickerscount">stickers</string>
     <string name="stickershelp1">Enter the URL or the sticker pack ID</string>
     <string name="stickershelp2">The link must be in the format https://t.me/addstickers/\"ID\"</string>
-    <string name="sprefsstickers">Stickers</string>
-    <string name="sprefsdelkey">Delete the Telegram bot key</string>
-    <string name="sprefsdelkey2">The key was deleted successfully</string>
-    <string name="sprefsctype">Connection type</string>
-    <string name="ctypedirect">Direct</string>
-    <string name="ctypesocks">Socks</string>
-    <string name="ctypedisabled">Not set</string>
-    <string name="sprefsnetwork">Network</string>
-    <string name="ssocks">Socks Settings</string>
-    <string name="ssockshost">Host</string>
-    <string name="ssocksport">Port</string>
-    <string name="ssockswport">Invalid port</string>
-    <string name="ssocksauth">Authorization</string>
-    <string name="ssockslogin">Login</string>
-    <string name="ssockspass">Password</string>
-    <string name="foafid">Profile ID:</string>
-    <string name="foafregdate">\nRegistration date:</string>
-    <string name="foafdate">\nDays from the date of registration:</string>
-    <string name="foaferr">Issues when loading data!</string>
-    <string name="savedmsg">Saved messages</string>
-    <string name="DNR_ON">Enable Do Not Read</string>
-    <string name="DNR_OFF">Disable Do Not Read</string>
-    <string name="DNT_ON">Enable Do Not Type</string>
-    <string name="DNT_OFF">Disable Do Not Type</string>
-    <string name="online_vtl">Online</string>
-    <string name="offline_vtl">Offline</string>
-    <string name="dnr">Do not read</string>
-    <string name="dnw">Do not write</string>
-    <string name="dns">Send status of viewing stories</string>
-    <string name="privacy_vtl">Privacy</string>
+    <string name="stickersproxy1">Configure the IP proxy!</string>
     <string name="stories_vtl">Stories</string>
-    <string name="act_pm">For Private messages</string>
-    <string name="act_cnv">For Conversations</string>
-    <string name="act_bot">For Bots/Groups</string>
+    <string name="systememoji">Use system emojis</string>
+    <string name="systememojisum">Your system emojis - 😀😁🤑🥵👍</string>
+    <string name="tokenwarning">"Don't give this token to anyone if you don't know what to do!"</string>
+    <string name="useproxy">Proxy variant</string>
+    <string name="useproxyinfo">Information about using a proxy</string>
+    <string name="useproxysum">Select the proxy variant</string>
+    <string name="vkuiinj">VKUI theming</string>
+    <string name="vtlawayphpsummary">Tracking the user to personalize ads. Also checking links to the blacklist from VKontakte and antivirus</string>
     <string name="vtloffline">Send online status</string>
     <string name="vtloffline2">Force offline requests</string>
-    <string name="benchapi">Benchmark api</string>
-    <string name="opencommit">Open commit</string>
-    <string name="accounts">Accounts</string>
-    <string name="newacc">Add new account</string>
-    <string name="selectacc">Select account</string>
-    <string name="restartapp">Please, restart app</string>
-    <string name="reportbut">Report a bug</string>
-    <string name="newvideo">New video catalog</string>
-    <string name="shitposting">The same type of news</string>
-    <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine</string>
-    <string name="vtlofflinesummary">Disabling online will allow you to stay offline</string>
-    <string name="vtloffline2summary">Works only when online status sending is disabled\sends instantly offline after sending messages and other api methods that are sent online\n\nMay look like a fake leaving the online</string>
-    <string name="vtlawayphpsummary">Tracking the user to personalize ads. Also checking links to the blacklist from VKontakte and antivirus</string>
-    <string name="benchapisummary">Testing the speed of sending requests. Useless function for everyone except VKontakte developers</string>
+    <string name="vtloffline2summary">"Works only when online status sending is disabledsends instantly offline after sending messages and other api methods that are sent online
 
+May look like a fake leaving the online"</string>
+    <string name="vtlofflinesummary">Disabling online will allow you to stay offline</string>
+    <string name="vtsystem">Internal settings</string>
+    <string name="vtverify">VTosters verifications</string>
+    <string name="vtverifyinfo">What are VTosters verifications?</string>
+    <string name="vtverifyinfosum">This is our gratitude for the support of the project</string>
+    <string name="vtlota">Updates</string>
+    <string name="DNR_ON">Enable Do Not Read</string>
+    <string name="DNR_OFF">Disable Do Not Read</string>
+    <item type="string" name="APKTOOL_DUMMY_10be" />
+    <item type="string" name="APKTOOL_DUMMY_10bf" />
+    <item type="string" name="APKTOOL_DUMMY_10c0" />
+    <item type="string" name="APKTOOL_DUMMY_10c1" />
+    <item type="string" name="APKTOOL_DUMMY_10c2" />
+    <item type="string" name="APKTOOL_DUMMY_10c3" />
+    <item type="string" name="APKTOOL_DUMMY_10c4" />
+    <item type="string" name="APKTOOL_DUMMY_10c5" />
+    <item type="string" name="APKTOOL_DUMMY_10c6" />
+    <item type="string" name="APKTOOL_DUMMY_10c7" />
+    <item type="string" name="APKTOOL_DUMMY_10c8" />
+    <item type="string" name="APKTOOL_DUMMY_10c9" />
+    <item type="string" name="APKTOOL_DUMMY_10ca" />
+    <item type="string" name="APKTOOL_DUMMY_10cb" />
+    <item type="string" name="APKTOOL_DUMMY_10cc" />
+    <item type="string" name="APKTOOL_DUMMY_10cd" />
+    <item type="string" name="APKTOOL_DUMMY_10ce" />
+    <item type="string" name="APKTOOL_DUMMY_10cf" />
+    <item type="string" name="APKTOOL_DUMMY_10d0" />
+    <item type="string" name="APKTOOL_DUMMY_10d1" />
+    <item type="string" name="APKTOOL_DUMMY_10d2" />
+    <item type="string" name="APKTOOL_DUMMY_10d3" />
+    <item type="string" name="APKTOOL_DUMMY_10d4" />
+    <item type="string" name="APKTOOL_DUMMY_10d5" />
+    <item type="string" name="APKTOOL_DUMMY_10d6" />
+    <item type="string" name="APKTOOL_DUMMY_10d7" />
+    <item type="string" name="APKTOOL_DUMMY_10d8" />
+    <item type="string" name="APKTOOL_DUMMY_10d9" />
+    <item type="string" name="APKTOOL_DUMMY_10da" />
+    <item type="string" name="APKTOOL_DUMMY_10db" />
+    <item type="string" name="APKTOOL_DUMMY_10dc" />
+    <item type="string" name="APKTOOL_DUMMY_10dd" />
+    <item type="string" name="APKTOOL_DUMMY_10de" />
+    <item type="string" name="APKTOOL_DUMMY_10df" />
+    <item type="string" name="APKTOOL_DUMMY_10e0" />
+    <item type="string" name="APKTOOL_DUMMY_10e1" />
+    <item type="string" name="APKTOOL_DUMMY_10e2" />
+    <item type="string" name="APKTOOL_DUMMY_10e3" />
+    <item type="string" name="APKTOOL_DUMMY_10e4" />
+    <item type="string" name="APKTOOL_DUMMY_10e5" />
+    <item type="string" name="APKTOOL_DUMMY_10e6" />
+    <item type="string" name="APKTOOL_DUMMY_10e7" />
+    <item type="string" name="APKTOOL_DUMMY_10e8" />
+    <item type="string" name="APKTOOL_DUMMY_10e9" />
+    <item type="string" name="APKTOOL_DUMMY_10ea" />
+    <item type="string" name="APKTOOL_DUMMY_10eb" />
+    <item type="string" name="APKTOOL_DUMMY_10ec" />
+    <item type="string" name="APKTOOL_DUMMY_10ed" />
+    <item type="string" name="APKTOOL_DUMMY_10ee" />
+    <item type="string" name="APKTOOL_DUMMY_10ef" />
+    <item type="string" name="APKTOOL_DUMMY_10f0" />
+    <item type="string" name="APKTOOL_DUMMY_10f1" />
+    <item type="string" name="APKTOOL_DUMMY_10f2" />
+    <item type="string" name="APKTOOL_DUMMY_10f3" />
+    <item type="string" name="APKTOOL_DUMMY_10f4" />
+    <item type="string" name="APKTOOL_DUMMY_10f5" />
+    <item type="string" name="APKTOOL_DUMMY_10f6" />
+    <item type="string" name="APKTOOL_DUMMY_10f7" />
+    <item type="string" name="APKTOOL_DUMMY_10f8" />
+    <item type="string" name="APKTOOL_DUMMY_10f9" />
+    <item type="string" name="APKTOOL_DUMMY_10fa" />
+    <item type="string" name="APKTOOL_DUMMY_10fb" />
+    <item type="string" name="APKTOOL_DUMMY_10fc" />
+    <item type="string" name="APKTOOL_DUMMY_10fd" />
+    <item type="string" name="APKTOOL_DUMMY_10fe" />
+    <item type="string" name="APKTOOL_DUMMY_10ff" />
+    <item type="string" name="APKTOOL_DUMMY_1100" />
+    <item type="string" name="APKTOOL_DUMMY_1101" />
+    <item type="string" name="APKTOOL_DUMMY_1102" />
+    <item type="string" name="APKTOOL_DUMMY_1103" />
+    <item type="string" name="APKTOOL_DUMMY_1104" />
+    <item type="string" name="APKTOOL_DUMMY_1105" />
+    <item type="string" name="APKTOOL_DUMMY_1106" />
+    <item type="string" name="APKTOOL_DUMMY_1107" />
+    <item type="string" name="APKTOOL_DUMMY_1108" />
+    <item type="string" name="APKTOOL_DUMMY_1109" />
+    <item type="string" name="APKTOOL_DUMMY_110a" />
+    <item type="string" name="APKTOOL_DUMMY_110b" />
+    <item type="string" name="APKTOOL_DUMMY_110c" />
+    <item type="string" name="APKTOOL_DUMMY_110d" />
+    <item type="string" name="APKTOOL_DUMMY_110e" />
+    <item type="string" name="APKTOOL_DUMMY_110f" />
+    <item type="string" name="APKTOOL_DUMMY_1110" />
+    <item type="string" name="APKTOOL_DUMMY_1111" />
+    <item type="string" name="APKTOOL_DUMMY_1112" />
+    <item type="string" name="APKTOOL_DUMMY_1113" />
+    <item type="string" name="APKTOOL_DUMMY_1114" />
+    <item type="string" name="APKTOOL_DUMMY_1115" />
+    <item type="string" name="APKTOOL_DUMMY_1116" />
+    <item type="string" name="APKTOOL_DUMMY_1117" />
+    <item type="string" name="APKTOOL_DUMMY_1118" />
+    <item type="string" name="APKTOOL_DUMMY_1119" />
+    <item type="string" name="APKTOOL_DUMMY_111a" />
+    <item type="string" name="APKTOOL_DUMMY_111b" />
+    <item type="string" name="APKTOOL_DUMMY_111c" />
+    <item type="string" name="APKTOOL_DUMMY_111d" />
+    <item type="string" name="APKTOOL_DUMMY_111e" />
+    <item type="string" name="APKTOOL_DUMMY_111f" />
+    <item type="string" name="APKTOOL_DUMMY_1120" />
+    <item type="string" name="APKTOOL_DUMMY_1121" />
+    <item type="string" name="APKTOOL_DUMMY_1122" />
+    <item type="string" name="APKTOOL_DUMMY_1123" />
+    <item type="string" name="APKTOOL_DUMMY_1124" />
+    <item type="string" name="APKTOOL_DUMMY_1125" />
+    <item type="string" name="APKTOOL_DUMMY_1126" />
+    <item type="string" name="APKTOOL_DUMMY_1127" />
+    <item type="string" name="APKTOOL_DUMMY_1128" />
+    <item type="string" name="APKTOOL_DUMMY_1129" />
+    <item type="string" name="APKTOOL_DUMMY_112a" />
+    <item type="string" name="APKTOOL_DUMMY_112b" />
+    <item type="string" name="APKTOOL_DUMMY_112c" />
+    <item type="string" name="APKTOOL_DUMMY_112d" />
+    <item type="string" name="APKTOOL_DUMMY_112e" />
+    <item type="string" name="APKTOOL_DUMMY_112f" />
+    <item type="string" name="APKTOOL_DUMMY_1130" />
+    <item type="string" name="APKTOOL_DUMMY_1131" />
+    <item type="string" name="APKTOOL_DUMMY_1132" />
+    <item type="string" name="APKTOOL_DUMMY_1133" />
+    <item type="string" name="APKTOOL_DUMMY_1134" />
+    <item type="string" name="APKTOOL_DUMMY_1135" />
+    <item type="string" name="APKTOOL_DUMMY_1136" />
+    <item type="string" name="APKTOOL_DUMMY_1137" />
+    <item type="string" name="APKTOOL_DUMMY_1138" />
+    <item type="string" name="APKTOOL_DUMMY_1139" />
+    <item type="string" name="APKTOOL_DUMMY_113a" />
+    <item type="string" name="APKTOOL_DUMMY_113b" />
+    <item type="string" name="APKTOOL_DUMMY_113c" />
+    <item type="string" name="APKTOOL_DUMMY_113d" />
+    <item type="string" name="APKTOOL_DUMMY_113e" />
+    <item type="string" name="APKTOOL_DUMMY_113f" />
+    <item type="string" name="APKTOOL_DUMMY_1140" />
+    <item type="string" name="APKTOOL_DUMMY_1141" />
+    <item type="string" name="APKTOOL_DUMMY_1142" />
+    <item type="string" name="APKTOOL_DUMMY_1143" />
+    <item type="string" name="APKTOOL_DUMMY_1144" />
+    <item type="string" name="APKTOOL_DUMMY_1145" />
+    <item type="string" name="APKTOOL_DUMMY_1146" />
+    <item type="string" name="APKTOOL_DUMMY_1147" />
+    <item type="string" name="APKTOOL_DUMMY_1148" />
+    <item type="string" name="APKTOOL_DUMMY_1149" />
+    <item type="string" name="APKTOOL_DUMMY_114a" />
+    <item type="string" name="APKTOOL_DUMMY_114b" />
+    <item type="string" name="APKTOOL_DUMMY_114c" />
+    <item type="string" name="APKTOOL_DUMMY_114d" />
+    <item type="string" name="APKTOOL_DUMMY_114e" />
+    <item type="string" name="APKTOOL_DUMMY_114f" />
+    <item type="string" name="APKTOOL_DUMMY_1150" />
+    <item type="string" name="APKTOOL_DUMMY_1151" />
+    <item type="string" name="APKTOOL_DUMMY_1152" />
+    <item type="string" name="APKTOOL_DUMMY_1153" />
+    <item type="string" name="APKTOOL_DUMMY_1154" />
+    <item type="string" name="APKTOOL_DUMMY_1155" />
+    <item type="string" name="APKTOOL_DUMMY_1156" />
+    <item type="string" name="APKTOOL_DUMMY_1157" />
+    <item type="string" name="APKTOOL_DUMMY_1158" />
+    <item type="string" name="APKTOOL_DUMMY_1159" />
+    <item type="string" name="APKTOOL_DUMMY_115a" />
+    <item type="string" name="APKTOOL_DUMMY_115b" />
+    <item type="string" name="APKTOOL_DUMMY_115c" />
+    <item type="string" name="APKTOOL_DUMMY_115d" />
+    <item type="string" name="APKTOOL_DUMMY_115e" />
+    <item type="string" name="APKTOOL_DUMMY_115f" />
+    <item type="string" name="APKTOOL_DUMMY_1160" />
+    <item type="string" name="APKTOOL_DUMMY_1161" />
+    <item type="string" name="APKTOOL_DUMMY_1162" />
+    <item type="string" name="APKTOOL_DUMMY_1163" />
+    <item type="string" name="APKTOOL_DUMMY_1164" />
+    <item type="string" name="APKTOOL_DUMMY_1165" />
+    <item type="string" name="APKTOOL_DUMMY_1166" />
+    <item type="string" name="APKTOOL_DUMMY_1167" />
+    <item type="string" name="APKTOOL_DUMMY_1168" />
+    <item type="string" name="APKTOOL_DUMMY_1169" />
+    <item type="string" name="APKTOOL_DUMMY_116a" />
+    <item type="string" name="APKTOOL_DUMMY_116b" />
+    <item type="string" name="APKTOOL_DUMMY_116c" />
+    <item type="string" name="APKTOOL_DUMMY_116d" />
+    <item type="string" name="APKTOOL_DUMMY_116e" />
+    <item type="string" name="APKTOOL_DUMMY_116f" />
+    <item type="string" name="APKTOOL_DUMMY_1170" />
+    <item type="string" name="APKTOOL_DUMMY_1171" />
+    <item type="string" name="APKTOOL_DUMMY_1172" />
+    <item type="string" name="APKTOOL_DUMMY_1173" />
+    <item type="string" name="APKTOOL_DUMMY_1174" />
+    <item type="string" name="APKTOOL_DUMMY_1175" />
+    <item type="string" name="APKTOOL_DUMMY_1176" />
+    <item type="string" name="APKTOOL_DUMMY_1177" />
+    <item type="string" name="APKTOOL_DUMMY_1178" />
+    <item type="string" name="APKTOOL_DUMMY_1179" />
+    <item type="string" name="APKTOOL_DUMMY_117a" />
+    <item type="string" name="APKTOOL_DUMMY_117b" />
+    <item type="string" name="APKTOOL_DUMMY_117c" />
+    <item type="string" name="APKTOOL_DUMMY_117d" />
+    <item type="string" name="APKTOOL_DUMMY_117e" />
+    <item type="string" name="APKTOOL_DUMMY_117f" />
+    <item type="string" name="APKTOOL_DUMMY_1180" />
+    <item type="string" name="APKTOOL_DUMMY_1181" />
+    <item type="string" name="APKTOOL_DUMMY_1182" />
+    <item type="string" name="APKTOOL_DUMMY_1183" />
+    <item type="string" name="APKTOOL_DUMMY_1184" />
+    <item type="string" name="APKTOOL_DUMMY_1185" />
+    <item type="string" name="APKTOOL_DUMMY_1186" />
+    <item type="string" name="APKTOOL_DUMMY_1187" />
+    <item type="string" name="APKTOOL_DUMMY_1188" />
+    <item type="string" name="APKTOOL_DUMMY_1189" />
+    <item type="string" name="APKTOOL_DUMMY_118a" />
+    <item type="string" name="APKTOOL_DUMMY_118b" />
+    <item type="string" name="APKTOOL_DUMMY_118c" />
+    <item type="string" name="APKTOOL_DUMMY_118d" />
+    <item type="string" name="APKTOOL_DUMMY_118e" />
+    <item type="string" name="APKTOOL_DUMMY_118f" />
+    <item type="string" name="APKTOOL_DUMMY_1190" />
+    <item type="string" name="APKTOOL_DUMMY_1191" />
+    <item type="string" name="APKTOOL_DUMMY_1192" />
+    <item type="string" name="APKTOOL_DUMMY_1193" />
+    <item type="string" name="APKTOOL_DUMMY_1194" />
+    <item type="string" name="APKTOOL_DUMMY_1195" />
+    <item type="string" name="APKTOOL_DUMMY_1196" />
+    <item type="string" name="APKTOOL_DUMMY_1197" />
+    <item type="string" name="APKTOOL_DUMMY_1198" />
+    <item type="string" name="APKTOOL_DUMMY_1199" />
+    <item type="string" name="APKTOOL_DUMMY_119a" />
+    <item type="string" name="APKTOOL_DUMMY_119b" />
+    <item type="string" name="APKTOOL_DUMMY_119c" />
+    <item type="string" name="APKTOOL_DUMMY_119d" />
+    <item type="string" name="APKTOOL_DUMMY_119e" />
+    <item type="string" name="APKTOOL_DUMMY_119f" />
+    <item type="string" name="APKTOOL_DUMMY_11a0" />
+    <item type="string" name="APKTOOL_DUMMY_11a1" />
+    <item type="string" name="APKTOOL_DUMMY_11a2" />
+    <item type="string" name="APKTOOL_DUMMY_11a3" />
+    <item type="string" name="APKTOOL_DUMMY_11a4" />
+    <item type="string" name="APKTOOL_DUMMY_11a5" />
+    <item type="string" name="APKTOOL_DUMMY_11a6" />
+    <item type="string" name="APKTOOL_DUMMY_11a7" />
+    <item type="string" name="APKTOOL_DUMMY_11a8" />
+    <item type="string" name="APKTOOL_DUMMY_11a9" />
+    <item type="string" name="APKTOOL_DUMMY_11aa" />
+    <item type="string" name="APKTOOL_DUMMY_11ab" />
+    <item type="string" name="APKTOOL_DUMMY_11ac" />
+    <item type="string" name="APKTOOL_DUMMY_11ad" />
+    <item type="string" name="APKTOOL_DUMMY_11ae" />
+    <item type="string" name="APKTOOL_DUMMY_11af" />
+    <item type="string" name="APKTOOL_DUMMY_11b0" />
+    <item type="string" name="APKTOOL_DUMMY_11b1" />
+    <item type="string" name="APKTOOL_DUMMY_11b2" />
+    <item type="string" name="APKTOOL_DUMMY_11b3" />
+    <item type="string" name="APKTOOL_DUMMY_11b4" />
+    <item type="string" name="APKTOOL_DUMMY_11b5" />
+    <item type="string" name="APKTOOL_DUMMY_11b6" />
+    <item type="string" name="APKTOOL_DUMMY_11b7" />
+    <item type="string" name="APKTOOL_DUMMY_11b8" />
+    <item type="string" name="APKTOOL_DUMMY_11b9" />
+    <item type="string" name="APKTOOL_DUMMY_11ba" />
+    <item type="string" name="APKTOOL_DUMMY_11bb" />
+    <item type="string" name="APKTOOL_DUMMY_11bc" />
+    <item type="string" name="APKTOOL_DUMMY_11bd" />
+    <item type="string" name="APKTOOL_DUMMY_11be" />
+    <item type="string" name="APKTOOL_DUMMY_11bf" />
+    <item type="string" name="APKTOOL_DUMMY_11c0" />
+    <item type="string" name="APKTOOL_DUMMY_11c1" />
+    <item type="string" name="APKTOOL_DUMMY_11c2" />
+    <item type="string" name="APKTOOL_DUMMY_11c3" />
+    <item type="string" name="APKTOOL_DUMMY_11c4" />
+    <item type="string" name="APKTOOL_DUMMY_11c5" />
+    <item type="string" name="APKTOOL_DUMMY_11c6" />
+    <item type="string" name="APKTOOL_DUMMY_11c7" />
+    <item type="string" name="APKTOOL_DUMMY_11c8" />
+    <item type="string" name="APKTOOL_DUMMY_11c9" />
+    <item type="string" name="APKTOOL_DUMMY_11ca" />
+    <item type="string" name="APKTOOL_DUMMY_11cb" />
+    <item type="string" name="APKTOOL_DUMMY_11cc" />
+    <item type="string" name="APKTOOL_DUMMY_11cd" />
+    <item type="string" name="APKTOOL_DUMMY_11ce" />
+    <item type="string" name="APKTOOL_DUMMY_11cf" />
+    <item type="string" name="APKTOOL_DUMMY_11d0" />
+    <item type="string" name="APKTOOL_DUMMY_11d1" />
+    <item type="string" name="APKTOOL_DUMMY_11d2" />
+    <item type="string" name="APKTOOL_DUMMY_11d3" />
+    <item type="string" name="APKTOOL_DUMMY_11d4" />
+    <item type="string" name="APKTOOL_DUMMY_11d5" />
+    <item type="string" name="APKTOOL_DUMMY_11d6" />
+    <item type="string" name="APKTOOL_DUMMY_11d7" />
+    <item type="string" name="APKTOOL_DUMMY_11d8" />
+    <item type="string" name="APKTOOL_DUMMY_11d9" />
+    <item type="string" name="APKTOOL_DUMMY_11da" />
+    <item type="string" name="APKTOOL_DUMMY_11db" />
+    <item type="string" name="APKTOOL_DUMMY_11dc" />
+    <item type="string" name="APKTOOL_DUMMY_11dd" />
+    <item type="string" name="APKTOOL_DUMMY_11de" />
+    <item type="string" name="APKTOOL_DUMMY_11df" />
+    <item type="string" name="APKTOOL_DUMMY_11e0" />
+    <item type="string" name="APKTOOL_DUMMY_11e1" />
+    <item type="string" name="APKTOOL_DUMMY_11e2" />
+    <item type="string" name="APKTOOL_DUMMY_11e3" />
+    <item type="string" name="APKTOOL_DUMMY_11e4" />
+    <item type="string" name="APKTOOL_DUMMY_11e5" />
+    <item type="string" name="APKTOOL_DUMMY_11e6" />
+    <item type="string" name="APKTOOL_DUMMY_11e7" />
+    <item type="string" name="APKTOOL_DUMMY_11e8" />
+    <item type="string" name="APKTOOL_DUMMY_11e9" />
+    <item type="string" name="APKTOOL_DUMMY_11ea" />
+    <item type="string" name="APKTOOL_DUMMY_11eb" />
+    <item type="string" name="APKTOOL_DUMMY_11ec" />
+    <item type="string" name="APKTOOL_DUMMY_11ed" />
+    <item type="string" name="APKTOOL_DUMMY_11ee" />
+    <item type="string" name="APKTOOL_DUMMY_11ef" />
+    <item type="string" name="APKTOOL_DUMMY_11f0" />
+    <item type="string" name="APKTOOL_DUMMY_11f1" />
+    <item type="string" name="APKTOOL_DUMMY_11f2" />
+    <item type="string" name="APKTOOL_DUMMY_11f3" />
+    <item type="string" name="APKTOOL_DUMMY_11f4" />
+    <item type="string" name="APKTOOL_DUMMY_11f5" />
+    <item type="string" name="APKTOOL_DUMMY_11f6" />
+    <item type="string" name="APKTOOL_DUMMY_11f7" />
+    <item type="string" name="APKTOOL_DUMMY_11f8" />
+    <item type="string" name="APKTOOL_DUMMY_11f9" />
+    <item type="string" name="APKTOOL_DUMMY_11fa" />
+    <item type="string" name="APKTOOL_DUMMY_11fb" />
+    <item type="string" name="APKTOOL_DUMMY_11fc" />
+    <item type="string" name="APKTOOL_DUMMY_11fd" />
+    <item type="string" name="APKTOOL_DUMMY_11fe" />
+    <item type="string" name="APKTOOL_DUMMY_11ff" />
+    <item type="string" name="APKTOOL_DUMMY_1200" />
+    <item type="string" name="APKTOOL_DUMMY_1201" />
+    <item type="string" name="APKTOOL_DUMMY_1202" />
+    <item type="string" name="APKTOOL_DUMMY_1203" />
+    <item type="string" name="APKTOOL_DUMMY_1204" />
+    <item type="string" name="APKTOOL_DUMMY_1205" />
+    <item type="string" name="APKTOOL_DUMMY_1206" />
+    <item type="string" name="APKTOOL_DUMMY_1207" />
+    <item type="string" name="APKTOOL_DUMMY_1208" />
+    <item type="string" name="APKTOOL_DUMMY_1209" />
+    <item type="string" name="APKTOOL_DUMMY_120a" />
+    <item type="string" name="APKTOOL_DUMMY_120b" />
+    <item type="string" name="APKTOOL_DUMMY_120c" />
+    <item type="string" name="APKTOOL_DUMMY_120d" />
+    <item type="string" name="APKTOOL_DUMMY_120e" />
+    <item type="string" name="APKTOOL_DUMMY_120f" />
+    <item type="string" name="APKTOOL_DUMMY_1210" />
+    <item type="string" name="APKTOOL_DUMMY_1211" />
+    <item type="string" name="APKTOOL_DUMMY_1212" />
+    <item type="string" name="APKTOOL_DUMMY_1213" />
+    <item type="string" name="APKTOOL_DUMMY_1214" />
+    <item type="string" name="APKTOOL_DUMMY_1215" />
+    <item type="string" name="APKTOOL_DUMMY_1216" />
+    <item type="string" name="APKTOOL_DUMMY_1217" />
+    <item type="string" name="APKTOOL_DUMMY_1218" />
+    <item type="string" name="APKTOOL_DUMMY_1219" />
+    <item type="string" name="APKTOOL_DUMMY_121a" />
+    <item type="string" name="APKTOOL_DUMMY_121b" />
+    <item type="string" name="APKTOOL_DUMMY_121c" />
+    <item type="string" name="APKTOOL_DUMMY_121d" />
+    <item type="string" name="APKTOOL_DUMMY_121e" />
+    <item type="string" name="APKTOOL_DUMMY_121f" />
+    <item type="string" name="APKTOOL_DUMMY_1220" />
+    <item type="string" name="APKTOOL_DUMMY_1221" />
+    <item type="string" name="APKTOOL_DUMMY_1222" />
+    <item type="string" name="APKTOOL_DUMMY_1223" />
+    <item type="string" name="APKTOOL_DUMMY_1224" />
+    <item type="string" name="APKTOOL_DUMMY_1225" />
+    <item type="string" name="APKTOOL_DUMMY_1226" />
+    <item type="string" name="APKTOOL_DUMMY_1227" />
+    <item type="string" name="APKTOOL_DUMMY_1228" />
+    <item type="string" name="APKTOOL_DUMMY_1229" />
+    <item type="string" name="APKTOOL_DUMMY_122a" />
+    <item type="string" name="APKTOOL_DUMMY_122b" />
+    <item type="string" name="APKTOOL_DUMMY_122c" />
+    <item type="string" name="APKTOOL_DUMMY_122d" />
+    <item type="string" name="APKTOOL_DUMMY_122e" />
+    <item type="string" name="APKTOOL_DUMMY_122f" />
+    <item type="string" name="APKTOOL_DUMMY_1230" />
+    <item type="string" name="APKTOOL_DUMMY_1231" />
+    <item type="string" name="APKTOOL_DUMMY_1232" />
 </resources>
