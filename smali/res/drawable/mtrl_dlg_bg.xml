@@ -2,7 +2,7 @@
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
     android:inset="16dp">
     <shape>
-        <solid android:color="?attr/dialogBg" />
+        <solid android:color="?dialogBg" />
         <corners android:radius="8dp" />
     </shape>
 </inset>

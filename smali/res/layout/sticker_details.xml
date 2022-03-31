@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:layout_width="fill_parent" android:background="?tabbar_background" android:layout_height="wrap_content">
+    <RelativeLayout android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <com.vk.imageloader.view.VKHorizontalParallaxImageView android:id="@id/iv_parallax_bg" android:background="#ffe9ecf0" android:layout_width="fill_parent" android:layout_height="202.0dip" />
         <com.vtosters.lite.ui.widget.ViewPagerInfinite android:id="@id/pager" android:paddingTop="2.0dip" android:paddingBottom="25.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="202.0dip" app:nextPeriodSec="3" />
         <view android:gravity="center|top" android:id="@id/pager_dots_wrap" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginBottom="4.0dip" android:layout_alignBottom="@id/pager" class="com.vtosters.lite.fragments.stickers.StickersDetailsFragment$PagerDotsView" />

@@ -1709,6 +1709,7 @@
     <public type="attr" name="yesNoPreferenceStyle" id="0x7f040610" />
     <public type="attr" name="zOrderOnTop" id="0x7f040611" />
     <public type="attr" name="tabbar_fix" id="0x7f040612" />
+    <public type="attr" name="dialogBg" id="0x7f040613" />
     <public type="bool" name="abc_action_bar_embed_tabs" id="0x7f050000" />
     <public type="bool" name="abc_allow_stacked_button_bar" id="0x7f050001" />
     <public type="bool" name="abc_config_actionMenuItemAllCaps" id="0x7f050002" />
@@ -3742,6 +3743,7 @@
     <public type="drawable" name="vkim_msg_out_def_top_tail_sel_t" id="0x7f0808e9" />
     <public type="drawable" name="vkim_msg_out_gift_full_t" id="0x7f0808ea" />
     <public type="drawable" name="vkim_msg_out_gift_full_tail_t" id="0x7f0808eb" />
+    <public type="drawable" name="mtrl_dlg_bg" id="0x7f0808ec" />
     <public type="drawable" name="$avd_hide_password__0" id="0x7f080000" />
     <public type="drawable" name="$avd_hide_password__1" id="0x7f080001" />
     <public type="drawable" name="$avd_hide_password__2" id="0x7f080002" />
@@ -8594,7 +8596,6 @@
     <public type="id" name="youtube" id="0x7f0a0cdd" />
     <public type="id" name="zhukov" id="0x7f0a0cde" />
     <public type="id" name="zoom" id="0x7f0a0cdf" />
-    <public type="id" name="download_video" id="0x7f0a0ce8" />
     <public type="id" name="choose_btn" id="0x7f0a0ce0" />
     <public type="id" name="remove_btn" id="0x7f0a0ce1" />
     <public type="id" name="author" id="0x7f0a0ce2" />
@@ -8603,6 +8604,8 @@
     <public type="id" name="msgupdate" id="0x7f0a0ce5" />
     <public type="id" name="btnfoaf" id="0x7f0a0ce6" />
     <public type="id" name="btncopyid" id="0x7f0a0ce7" />
+    <public type="id" name="download_video" id="0x7f0a0ce8" />
+    <public type="id" name="savedmsg" id="0x7f0a0ce9" />
     <public type="integer" name="abc_config_activityDefaultDur" id="0x7f0b0000" />
     <public type="integer" name="abc_config_activityShortDur" id="0x7f0b0001" />
     <public type="integer" name="angle_rtl_180" id="0x7f0b0002" />
@@ -12595,6 +12598,8 @@
     <public type="string" name="poll_result_country_title" id="0x7f110914" />
     <public type="string" name="poll_result_filer_country_and_city" id="0x7f110915" />
     <public type="string" name="poll_result_filter_age" id="0x7f110916" />
+    <public type="string" name="poll_result_filter_age_18_plus" id="0x7f110917" />
+    <public type="string" name="poll_result_filter_age_36_plus" id="0x7f110918" />
     <public type="string" name="poll_result_filter_age_any" id="0x7f110919" />
     <public type="string" name="poll_result_filter_gender_any" id="0x7f11091a" />
     <public type="string" name="poll_result_filter_gender_female" id="0x7f11091b" />
@@ -14385,6 +14390,7 @@
     <public type="string" name="vtlrecommendfriend" id="0x7f111015" />
     <public type="string" name="vtlrecommendauthor" id="0x7f111016" />
     <public type="string" name="vtlrecommendfriendpost" id="0x7f111017" />
+    <public type="string" name="BGStickers" id="0x7f111018" />
     <public type="string" name="vtlrecommendmarksummary" id="0x7f111019" />
     <public type="string" name="vtlfeedwork" id="0x7f11101a" />
     <public type="string" name="vtlfeedreload" id="0x7f11101b" />
@@ -14393,6 +14399,7 @@
     <public type="string" name="vtlmsgtails" id="0x7f11101e" />
     <public type="string" name="vtlmsgflat" id="0x7f11101f" />
     <public type="string" name="vtlupdmsg" id="0x7f111020" />
+    <public type="string" name="BGStickerssum" id="0x7f111021" />
     <public type="string" name="app_name_orig" id="0x7f111022" />
     <public type="string" name="addinf" id="0x7f111023" />
     <public type="string" name="copyid" id="0x7f111024" />
@@ -14403,13 +14410,530 @@
     <public type="string" name="copytokenbtn" id="0x7f111029" />
     <public type="string" name="killappbtn" id="0x7f11102a" />
     <public type="string" name="experts" id="0x7f11102b" />
-    <public type="string" name="scree_nsize" id="0x7f110a34" />
-    <public type="string" name="empty_text" id="0x7f11027f" />
-    <public type="string" name="poll_result_filter_age_18_plus" id="0x7f110917" />
-    <public type="string" name="poll_result_filter_age_36_plus" id="0x7f110918" />
+    <public type="string" name="DNT_OFF" id="0x7f11102c" />
+    <public type="string" name="DNT_ON" id="0x7f11102d" />
+    <public type="string" name="accounts" id="0x7f11102e" />
+    <public type="string" name="act_bot" id="0x7f11102f" />
+    <public type="string" name="act_cnv" id="0x7f111030" />
+    <public type="string" name="act_pm" id="0x7f111031" />
+    <public type="string" name="alteremoji" id="0x7f111032" />
+    <public type="string" name="alteremojisum" id="0x7f111033" />
+    <public type="string" name="altnewsfeed" id="0x7f111034" />
+    <public type="string" name="altnewsfeedsum" id="0x7f111035" />
+    <public type="string" name="applicationrestart" id="0x7f111036" />
+    <public type="string" name="benchapi" id="0x7f111037" />
+    <public type="string" name="benchapisummary" id="0x7f111038" />
+    <public type="string" name="cachecleaned" id="0x7f111039" />
+    <public type="string" name="clearcache" id="0x7f11103a" />
+    <public type="string" name="clearcachesum" id="0x7f11103b" />
+    <public type="string" name="convUsersOnline" id="0x7f11103c" />
+    <public type="string" name="convUsersOnlinesum" id="0x7f11103d" />
+    <public type="string" name="copybtn" id="0x7f11103e" />
+    <public type="string" name="ctypedirect" id="0x7f11103f" />
+    <public type="string" name="ctypedisabled" id="0x7f111040" />
+    <public type="string" name="ctypesocks" id="0x7f111041" />
+    <public type="string" name="dnr" id="0x7f111042" />
+    <public type="string" name="dns" id="0x7f111043" />
+    <public type="string" name="dnw" id="0x7f111044" />
+    <public type="string" name="docknumbers" id="0x7f111045" />
+    <public type="string" name="docknumberssum" id="0x7f111046" />
+    <public type="string" name="fcmtokenfixed" id="0x7f111047" />
+    <public type="string" name="fcmtokenget" id="0x7f111048" />
+    <public type="string" name="fcmtokenrem" id="0x7f111049" />
+    <public type="string" name="firebasefix" id="0x7f11104a" />
+    <public type="string" name="firebasefixsum" id="0x7f11104b" />
+    <public type="string" name="foafdate" id="0x7f11104c" />
+    <public type="string" name="foaferr" id="0x7f11104d" />
+    <public type="string" name="foafid" id="0x7f11104e" />
+    <public type="string" name="foafregdate" id="0x7f11104f" />
+    <public type="string" name="getvtverify" id="0x7f111050" />
+    <public type="string" name="iconapplying" id="0x7f111051" />
+    <public type="string" name="interfaceemoji" id="0x7f111052" />
+    <public type="string" name="interfaceglobal" id="0x7f111053" />
+    <public type="string" name="interfaceglobaldates" id="0x7f111054" />
+    <public type="string" name="interfaceglobaldatessum" id="0x7f111055" />
+    <public type="string" name="interfaceglobalnum" id="0x7f111056" />
+    <public type="string" name="interfaceglobalnumsum" id="0x7f111057" />
+    <public type="string" name="interfaceglobalpost" id="0x7f111058" />
+    <public type="string" name="interfaceglobalpostsum" id="0x7f111059" />
+    <public type="string" name="interfacenewsfeed" id="0x7f11105a" />
+    <public type="string" name="interfacenewsfeedswipe" id="0x7f11105b" />
+    <public type="string" name="interfacenewsfeedswipesum" id="0x7f11105c" />
+    <public type="string" name="interfacestartfr" id="0x7f11105d" />
+    <public type="string" name="interfacestartfrsum" id="0x7f11105e" />
+    <public type="string" name="interfacevideo" id="0x7f11105f" />
+    <public type="string" name="interfacevideoext" id="0x7f111060" />
+    <public type="string" name="interfacevideoextsum" id="0x7f111061" />
+    <public type="string" name="interfacevideorec" id="0x7f111062" />
+    <public type="string" name="interfacevideorecsum" id="0x7f111063" />
+    <public type="string" name="menucutter" id="0x7f111064" />
+    <public type="string" name="menucuttersum" id="0x7f111065" />
+    <public type="string" name="newacc" id="0x7f111066" />
+    <public type="string" name="newvideo" id="0x7f111067" />
+    <public type="string" name="offline_vtl" id="0x7f111068" />
+    <public type="string" name="online_vtl" id="0x7f111069" />
+    <public type="string" name="opencommit" id="0x7f11106a" />
+    <public type="string" name="otabranch" id="0x7f11106b" />
+    <public type="string" name="otacheckonstart" id="0x7f11106c" />
+    <public type="string" name="otacheckupd" id="0x7f11106d" />
+    <public type="string" name="otaerr" id="0x7f11106e" />
+    <public type="string" name="otanoupd" id="0x7f11106f" />
+    <public type="string" name="otaok" id="0x7f111070" />
+    <public type="string" name="otaretry" id="0x7f111071" />
+    <public type="string" name="otaupd" id="0x7f111072" />
+    <public type="string" name="otaupdavalible" id="0x7f111073" />
+    <public type="string" name="otaupdchanges" id="0x7f111074" />
+    <public type="string" name="otawarning" id="0x7f111075" />
+    <public type="string" name="otawarnwait" id="0x7f111076" />
+    <public type="string" name="privacy_vtl" id="0x7f111077" />
+    <public type="string" name="proxyadvsettings" id="0x7f111078" />
+    <public type="string" name="proxyapi" id="0x7f111079" />
+    <public type="string" name="proxydomain" id="0x7f11107a" />
+    <public type="string" name="proxydonate" id="0x7f11107b" />
+    <public type="string" name="proxyhttp" id="0x7f11107c" />
+    <public type="string" name="proxyhttps" id="0x7f11107d" />
+    <public type="string" name="proxyimpinfo" id="0x7f11107e" />
+    <public type="string" name="proxyimpinfosum" id="0x7f11107f" />
+    <public type="string" name="proxyoauth" id="0x7f111080" />
+    <public type="string" name="proxyowners" id="0x7f111081" />
+    <public type="string" name="proxyownersxtr" id="0x7f111082" />
+    <public type="string" name="proxyownersxtrsources" id="0x7f111083" />
+    <public type="string" name="proxyownerszbr" id="0x7f111084" />
+    <public type="string" name="proxyport" id="0x7f111085" />
+    <public type="string" name="proxysocks" id="0x7f111086" />
+    <public type="string" name="proxystatic" id="0x7f111087" />
+    <public type="string" name="reportbug" id="0x7f111088" />
+    <public type="string" name="restartapp" id="0x7f111089" />
+    <public type="string" name="savedmsg" id="0x7f11108a" />
+    <public type="string" name="selectacc" id="0x7f11108b" />
+    <public type="string" name="shitposting" id="0x7f11108c" />
+    <public type="string" name="shitpostingsummary" id="0x7f11108d" />
+    <public type="string" name="showstories" id="0x7f11108e" />
+    <public type="string" name="showstoriessum" id="0x7f11108f" />
+    <public type="string" name="showvtfire" id="0x7f111090" />
+    <public type="string" name="showvtverify" id="0x7f111091" />
+    <public type="string" name="sprefsctype" id="0x7f111092" />
+    <public type="string" name="sprefsdelkey" id="0x7f111093" />
+    <public type="string" name="sprefsdelkey2" id="0x7f111094" />
+    <public type="string" name="sprefsnetwork" id="0x7f111095" />
+    <public type="string" name="sprefsstickers" id="0x7f111096" />
+    <public type="string" name="ssocks" id="0x7f111097" />
+    <public type="string" name="ssocksauth" id="0x7f111098" />
+    <public type="string" name="ssockshost" id="0x7f111099" />
+    <public type="string" name="ssockslogin" id="0x7f11109a" />
+    <public type="string" name="ssockspass" id="0x7f11109b" />
+    <public type="string" name="ssocksport" id="0x7f11109c" />
+    <public type="string" name="ssockswport" id="0x7f11109d" />
+    <public type="string" name="stickersapi1" id="0x7f11109e" />
+    <public type="string" name="stickersapi10" id="0x7f11109f" />
+    <public type="string" name="stickersapi2" id="0x7f1110a0" />
+    <public type="string" name="stickersapi3" id="0x7f1110a1" />
+    <public type="string" name="stickersapi4" id="0x7f1110a2" />
+    <public type="string" name="stickersapi5" id="0x7f1110a3" />
+    <public type="string" name="stickersapi6" id="0x7f1110a4" />
+    <public type="string" name="stickersapi7" id="0x7f1110a5" />
+    <public type="string" name="stickersapi8" id="0x7f1110a6" />
+    <public type="string" name="stickersapi9" id="0x7f1110a7" />
+    <public type="string" name="stickersconnection" id="0x7f1110a8" />
+    <public type="string" name="stickerscount" id="0x7f1110a9" />
+    <public type="string" name="stickershelp1" id="0x7f1110aa" />
+    <public type="string" name="stickershelp2" id="0x7f1110ab" />
+    <public type="string" name="stickersproxy1" id="0x7f1110ac" />
+    <public type="string" name="stories_vtl" id="0x7f1110ad" />
+    <public type="string" name="systememoji" id="0x7f1110ae" />
+    <public type="string" name="systememojisum" id="0x7f1110af" />
+    <public type="string" name="tokenwarning" id="0x7f1110b0" />
+    <public type="string" name="useproxy" id="0x7f1110b1" />
+    <public type="string" name="useproxyinfo" id="0x7f1110b2" />
+    <public type="string" name="useproxysum" id="0x7f1110b3" />
+    <public type="string" name="vkuiinj" id="0x7f1110b4" />
+    <public type="string" name="vtlawayphpsummary" id="0x7f1110b5" />
+    <public type="string" name="vtloffline" id="0x7f1110b6" />
+    <public type="string" name="vtloffline2" id="0x7f1110b7" />
+    <public type="string" name="vtloffline2summary" id="0x7f1110b8" />
+    <public type="string" name="vtlofflinesummary" id="0x7f1110b9" />
+    <public type="string" name="vtsystem" id="0x7f1110ba" />
+    <public type="string" name="vtverify" id="0x7f1110bb" />
+    <public type="string" name="vtverifyinfo" id="0x7f1110bc" />
+    <public type="string" name="vtverifyinfosum" id="0x7f1110bd" />
     <public type="string" name="vtlota" id="0x7f111233" />
     <public type="string" name="DNR_ON" id="0x7f111234" />
     <public type="string" name="DNR_OFF" id="0x7f111235" />
+    <public type="string" name="APKTOOL_DUMMY_10be" id="0x7f1110be" />
+    <public type="string" name="APKTOOL_DUMMY_10bf" id="0x7f1110bf" />
+    <public type="string" name="APKTOOL_DUMMY_10c0" id="0x7f1110c0" />
+    <public type="string" name="APKTOOL_DUMMY_10c1" id="0x7f1110c1" />
+    <public type="string" name="APKTOOL_DUMMY_10c2" id="0x7f1110c2" />
+    <public type="string" name="APKTOOL_DUMMY_10c3" id="0x7f1110c3" />
+    <public type="string" name="APKTOOL_DUMMY_10c4" id="0x7f1110c4" />
+    <public type="string" name="APKTOOL_DUMMY_10c5" id="0x7f1110c5" />
+    <public type="string" name="APKTOOL_DUMMY_10c6" id="0x7f1110c6" />
+    <public type="string" name="APKTOOL_DUMMY_10c7" id="0x7f1110c7" />
+    <public type="string" name="APKTOOL_DUMMY_10c8" id="0x7f1110c8" />
+    <public type="string" name="APKTOOL_DUMMY_10c9" id="0x7f1110c9" />
+    <public type="string" name="APKTOOL_DUMMY_10ca" id="0x7f1110ca" />
+    <public type="string" name="APKTOOL_DUMMY_10cb" id="0x7f1110cb" />
+    <public type="string" name="APKTOOL_DUMMY_10cc" id="0x7f1110cc" />
+    <public type="string" name="APKTOOL_DUMMY_10cd" id="0x7f1110cd" />
+    <public type="string" name="APKTOOL_DUMMY_10ce" id="0x7f1110ce" />
+    <public type="string" name="APKTOOL_DUMMY_10cf" id="0x7f1110cf" />
+    <public type="string" name="APKTOOL_DUMMY_10d0" id="0x7f1110d0" />
+    <public type="string" name="APKTOOL_DUMMY_10d1" id="0x7f1110d1" />
+    <public type="string" name="APKTOOL_DUMMY_10d2" id="0x7f1110d2" />
+    <public type="string" name="APKTOOL_DUMMY_10d3" id="0x7f1110d3" />
+    <public type="string" name="APKTOOL_DUMMY_10d4" id="0x7f1110d4" />
+    <public type="string" name="APKTOOL_DUMMY_10d5" id="0x7f1110d5" />
+    <public type="string" name="APKTOOL_DUMMY_10d6" id="0x7f1110d6" />
+    <public type="string" name="APKTOOL_DUMMY_10d7" id="0x7f1110d7" />
+    <public type="string" name="APKTOOL_DUMMY_10d8" id="0x7f1110d8" />
+    <public type="string" name="APKTOOL_DUMMY_10d9" id="0x7f1110d9" />
+    <public type="string" name="APKTOOL_DUMMY_10da" id="0x7f1110da" />
+    <public type="string" name="APKTOOL_DUMMY_10db" id="0x7f1110db" />
+    <public type="string" name="APKTOOL_DUMMY_10dc" id="0x7f1110dc" />
+    <public type="string" name="APKTOOL_DUMMY_10dd" id="0x7f1110dd" />
+    <public type="string" name="APKTOOL_DUMMY_10de" id="0x7f1110de" />
+    <public type="string" name="APKTOOL_DUMMY_10df" id="0x7f1110df" />
+    <public type="string" name="APKTOOL_DUMMY_10e0" id="0x7f1110e0" />
+    <public type="string" name="APKTOOL_DUMMY_10e1" id="0x7f1110e1" />
+    <public type="string" name="APKTOOL_DUMMY_10e2" id="0x7f1110e2" />
+    <public type="string" name="APKTOOL_DUMMY_10e3" id="0x7f1110e3" />
+    <public type="string" name="APKTOOL_DUMMY_10e4" id="0x7f1110e4" />
+    <public type="string" name="APKTOOL_DUMMY_10e5" id="0x7f1110e5" />
+    <public type="string" name="APKTOOL_DUMMY_10e6" id="0x7f1110e6" />
+    <public type="string" name="APKTOOL_DUMMY_10e7" id="0x7f1110e7" />
+    <public type="string" name="APKTOOL_DUMMY_10e8" id="0x7f1110e8" />
+    <public type="string" name="APKTOOL_DUMMY_10e9" id="0x7f1110e9" />
+    <public type="string" name="APKTOOL_DUMMY_10ea" id="0x7f1110ea" />
+    <public type="string" name="APKTOOL_DUMMY_10eb" id="0x7f1110eb" />
+    <public type="string" name="APKTOOL_DUMMY_10ec" id="0x7f1110ec" />
+    <public type="string" name="APKTOOL_DUMMY_10ed" id="0x7f1110ed" />
+    <public type="string" name="APKTOOL_DUMMY_10ee" id="0x7f1110ee" />
+    <public type="string" name="APKTOOL_DUMMY_10ef" id="0x7f1110ef" />
+    <public type="string" name="APKTOOL_DUMMY_10f0" id="0x7f1110f0" />
+    <public type="string" name="APKTOOL_DUMMY_10f1" id="0x7f1110f1" />
+    <public type="string" name="APKTOOL_DUMMY_10f2" id="0x7f1110f2" />
+    <public type="string" name="APKTOOL_DUMMY_10f3" id="0x7f1110f3" />
+    <public type="string" name="APKTOOL_DUMMY_10f4" id="0x7f1110f4" />
+    <public type="string" name="APKTOOL_DUMMY_10f5" id="0x7f1110f5" />
+    <public type="string" name="APKTOOL_DUMMY_10f6" id="0x7f1110f6" />
+    <public type="string" name="APKTOOL_DUMMY_10f7" id="0x7f1110f7" />
+    <public type="string" name="APKTOOL_DUMMY_10f8" id="0x7f1110f8" />
+    <public type="string" name="APKTOOL_DUMMY_10f9" id="0x7f1110f9" />
+    <public type="string" name="APKTOOL_DUMMY_10fa" id="0x7f1110fa" />
+    <public type="string" name="APKTOOL_DUMMY_10fb" id="0x7f1110fb" />
+    <public type="string" name="APKTOOL_DUMMY_10fc" id="0x7f1110fc" />
+    <public type="string" name="APKTOOL_DUMMY_10fd" id="0x7f1110fd" />
+    <public type="string" name="APKTOOL_DUMMY_10fe" id="0x7f1110fe" />
+    <public type="string" name="APKTOOL_DUMMY_10ff" id="0x7f1110ff" />
+    <public type="string" name="APKTOOL_DUMMY_1100" id="0x7f111100" />
+    <public type="string" name="APKTOOL_DUMMY_1101" id="0x7f111101" />
+    <public type="string" name="APKTOOL_DUMMY_1102" id="0x7f111102" />
+    <public type="string" name="APKTOOL_DUMMY_1103" id="0x7f111103" />
+    <public type="string" name="APKTOOL_DUMMY_1104" id="0x7f111104" />
+    <public type="string" name="APKTOOL_DUMMY_1105" id="0x7f111105" />
+    <public type="string" name="APKTOOL_DUMMY_1106" id="0x7f111106" />
+    <public type="string" name="APKTOOL_DUMMY_1107" id="0x7f111107" />
+    <public type="string" name="APKTOOL_DUMMY_1108" id="0x7f111108" />
+    <public type="string" name="APKTOOL_DUMMY_1109" id="0x7f111109" />
+    <public type="string" name="APKTOOL_DUMMY_110a" id="0x7f11110a" />
+    <public type="string" name="APKTOOL_DUMMY_110b" id="0x7f11110b" />
+    <public type="string" name="APKTOOL_DUMMY_110c" id="0x7f11110c" />
+    <public type="string" name="APKTOOL_DUMMY_110d" id="0x7f11110d" />
+    <public type="string" name="APKTOOL_DUMMY_110e" id="0x7f11110e" />
+    <public type="string" name="APKTOOL_DUMMY_110f" id="0x7f11110f" />
+    <public type="string" name="APKTOOL_DUMMY_1110" id="0x7f111110" />
+    <public type="string" name="APKTOOL_DUMMY_1111" id="0x7f111111" />
+    <public type="string" name="APKTOOL_DUMMY_1112" id="0x7f111112" />
+    <public type="string" name="APKTOOL_DUMMY_1113" id="0x7f111113" />
+    <public type="string" name="APKTOOL_DUMMY_1114" id="0x7f111114" />
+    <public type="string" name="APKTOOL_DUMMY_1115" id="0x7f111115" />
+    <public type="string" name="APKTOOL_DUMMY_1116" id="0x7f111116" />
+    <public type="string" name="APKTOOL_DUMMY_1117" id="0x7f111117" />
+    <public type="string" name="APKTOOL_DUMMY_1118" id="0x7f111118" />
+    <public type="string" name="APKTOOL_DUMMY_1119" id="0x7f111119" />
+    <public type="string" name="APKTOOL_DUMMY_111a" id="0x7f11111a" />
+    <public type="string" name="APKTOOL_DUMMY_111b" id="0x7f11111b" />
+    <public type="string" name="APKTOOL_DUMMY_111c" id="0x7f11111c" />
+    <public type="string" name="APKTOOL_DUMMY_111d" id="0x7f11111d" />
+    <public type="string" name="APKTOOL_DUMMY_111e" id="0x7f11111e" />
+    <public type="string" name="APKTOOL_DUMMY_111f" id="0x7f11111f" />
+    <public type="string" name="APKTOOL_DUMMY_1120" id="0x7f111120" />
+    <public type="string" name="APKTOOL_DUMMY_1121" id="0x7f111121" />
+    <public type="string" name="APKTOOL_DUMMY_1122" id="0x7f111122" />
+    <public type="string" name="APKTOOL_DUMMY_1123" id="0x7f111123" />
+    <public type="string" name="APKTOOL_DUMMY_1124" id="0x7f111124" />
+    <public type="string" name="APKTOOL_DUMMY_1125" id="0x7f111125" />
+    <public type="string" name="APKTOOL_DUMMY_1126" id="0x7f111126" />
+    <public type="string" name="APKTOOL_DUMMY_1127" id="0x7f111127" />
+    <public type="string" name="APKTOOL_DUMMY_1128" id="0x7f111128" />
+    <public type="string" name="APKTOOL_DUMMY_1129" id="0x7f111129" />
+    <public type="string" name="APKTOOL_DUMMY_112a" id="0x7f11112a" />
+    <public type="string" name="APKTOOL_DUMMY_112b" id="0x7f11112b" />
+    <public type="string" name="APKTOOL_DUMMY_112c" id="0x7f11112c" />
+    <public type="string" name="APKTOOL_DUMMY_112d" id="0x7f11112d" />
+    <public type="string" name="APKTOOL_DUMMY_112e" id="0x7f11112e" />
+    <public type="string" name="APKTOOL_DUMMY_112f" id="0x7f11112f" />
+    <public type="string" name="APKTOOL_DUMMY_1130" id="0x7f111130" />
+    <public type="string" name="APKTOOL_DUMMY_1131" id="0x7f111131" />
+    <public type="string" name="APKTOOL_DUMMY_1132" id="0x7f111132" />
+    <public type="string" name="APKTOOL_DUMMY_1133" id="0x7f111133" />
+    <public type="string" name="APKTOOL_DUMMY_1134" id="0x7f111134" />
+    <public type="string" name="APKTOOL_DUMMY_1135" id="0x7f111135" />
+    <public type="string" name="APKTOOL_DUMMY_1136" id="0x7f111136" />
+    <public type="string" name="APKTOOL_DUMMY_1137" id="0x7f111137" />
+    <public type="string" name="APKTOOL_DUMMY_1138" id="0x7f111138" />
+    <public type="string" name="APKTOOL_DUMMY_1139" id="0x7f111139" />
+    <public type="string" name="APKTOOL_DUMMY_113a" id="0x7f11113a" />
+    <public type="string" name="APKTOOL_DUMMY_113b" id="0x7f11113b" />
+    <public type="string" name="APKTOOL_DUMMY_113c" id="0x7f11113c" />
+    <public type="string" name="APKTOOL_DUMMY_113d" id="0x7f11113d" />
+    <public type="string" name="APKTOOL_DUMMY_113e" id="0x7f11113e" />
+    <public type="string" name="APKTOOL_DUMMY_113f" id="0x7f11113f" />
+    <public type="string" name="APKTOOL_DUMMY_1140" id="0x7f111140" />
+    <public type="string" name="APKTOOL_DUMMY_1141" id="0x7f111141" />
+    <public type="string" name="APKTOOL_DUMMY_1142" id="0x7f111142" />
+    <public type="string" name="APKTOOL_DUMMY_1143" id="0x7f111143" />
+    <public type="string" name="APKTOOL_DUMMY_1144" id="0x7f111144" />
+    <public type="string" name="APKTOOL_DUMMY_1145" id="0x7f111145" />
+    <public type="string" name="APKTOOL_DUMMY_1146" id="0x7f111146" />
+    <public type="string" name="APKTOOL_DUMMY_1147" id="0x7f111147" />
+    <public type="string" name="APKTOOL_DUMMY_1148" id="0x7f111148" />
+    <public type="string" name="APKTOOL_DUMMY_1149" id="0x7f111149" />
+    <public type="string" name="APKTOOL_DUMMY_114a" id="0x7f11114a" />
+    <public type="string" name="APKTOOL_DUMMY_114b" id="0x7f11114b" />
+    <public type="string" name="APKTOOL_DUMMY_114c" id="0x7f11114c" />
+    <public type="string" name="APKTOOL_DUMMY_114d" id="0x7f11114d" />
+    <public type="string" name="APKTOOL_DUMMY_114e" id="0x7f11114e" />
+    <public type="string" name="APKTOOL_DUMMY_114f" id="0x7f11114f" />
+    <public type="string" name="APKTOOL_DUMMY_1150" id="0x7f111150" />
+    <public type="string" name="APKTOOL_DUMMY_1151" id="0x7f111151" />
+    <public type="string" name="APKTOOL_DUMMY_1152" id="0x7f111152" />
+    <public type="string" name="APKTOOL_DUMMY_1153" id="0x7f111153" />
+    <public type="string" name="APKTOOL_DUMMY_1154" id="0x7f111154" />
+    <public type="string" name="APKTOOL_DUMMY_1155" id="0x7f111155" />
+    <public type="string" name="APKTOOL_DUMMY_1156" id="0x7f111156" />
+    <public type="string" name="APKTOOL_DUMMY_1157" id="0x7f111157" />
+    <public type="string" name="APKTOOL_DUMMY_1158" id="0x7f111158" />
+    <public type="string" name="APKTOOL_DUMMY_1159" id="0x7f111159" />
+    <public type="string" name="APKTOOL_DUMMY_115a" id="0x7f11115a" />
+    <public type="string" name="APKTOOL_DUMMY_115b" id="0x7f11115b" />
+    <public type="string" name="APKTOOL_DUMMY_115c" id="0x7f11115c" />
+    <public type="string" name="APKTOOL_DUMMY_115d" id="0x7f11115d" />
+    <public type="string" name="APKTOOL_DUMMY_115e" id="0x7f11115e" />
+    <public type="string" name="APKTOOL_DUMMY_115f" id="0x7f11115f" />
+    <public type="string" name="APKTOOL_DUMMY_1160" id="0x7f111160" />
+    <public type="string" name="APKTOOL_DUMMY_1161" id="0x7f111161" />
+    <public type="string" name="APKTOOL_DUMMY_1162" id="0x7f111162" />
+    <public type="string" name="APKTOOL_DUMMY_1163" id="0x7f111163" />
+    <public type="string" name="APKTOOL_DUMMY_1164" id="0x7f111164" />
+    <public type="string" name="APKTOOL_DUMMY_1165" id="0x7f111165" />
+    <public type="string" name="APKTOOL_DUMMY_1166" id="0x7f111166" />
+    <public type="string" name="APKTOOL_DUMMY_1167" id="0x7f111167" />
+    <public type="string" name="APKTOOL_DUMMY_1168" id="0x7f111168" />
+    <public type="string" name="APKTOOL_DUMMY_1169" id="0x7f111169" />
+    <public type="string" name="APKTOOL_DUMMY_116a" id="0x7f11116a" />
+    <public type="string" name="APKTOOL_DUMMY_116b" id="0x7f11116b" />
+    <public type="string" name="APKTOOL_DUMMY_116c" id="0x7f11116c" />
+    <public type="string" name="APKTOOL_DUMMY_116d" id="0x7f11116d" />
+    <public type="string" name="APKTOOL_DUMMY_116e" id="0x7f11116e" />
+    <public type="string" name="APKTOOL_DUMMY_116f" id="0x7f11116f" />
+    <public type="string" name="APKTOOL_DUMMY_1170" id="0x7f111170" />
+    <public type="string" name="APKTOOL_DUMMY_1171" id="0x7f111171" />
+    <public type="string" name="APKTOOL_DUMMY_1172" id="0x7f111172" />
+    <public type="string" name="APKTOOL_DUMMY_1173" id="0x7f111173" />
+    <public type="string" name="APKTOOL_DUMMY_1174" id="0x7f111174" />
+    <public type="string" name="APKTOOL_DUMMY_1175" id="0x7f111175" />
+    <public type="string" name="APKTOOL_DUMMY_1176" id="0x7f111176" />
+    <public type="string" name="APKTOOL_DUMMY_1177" id="0x7f111177" />
+    <public type="string" name="APKTOOL_DUMMY_1178" id="0x7f111178" />
+    <public type="string" name="APKTOOL_DUMMY_1179" id="0x7f111179" />
+    <public type="string" name="APKTOOL_DUMMY_117a" id="0x7f11117a" />
+    <public type="string" name="APKTOOL_DUMMY_117b" id="0x7f11117b" />
+    <public type="string" name="APKTOOL_DUMMY_117c" id="0x7f11117c" />
+    <public type="string" name="APKTOOL_DUMMY_117d" id="0x7f11117d" />
+    <public type="string" name="APKTOOL_DUMMY_117e" id="0x7f11117e" />
+    <public type="string" name="APKTOOL_DUMMY_117f" id="0x7f11117f" />
+    <public type="string" name="APKTOOL_DUMMY_1180" id="0x7f111180" />
+    <public type="string" name="APKTOOL_DUMMY_1181" id="0x7f111181" />
+    <public type="string" name="APKTOOL_DUMMY_1182" id="0x7f111182" />
+    <public type="string" name="APKTOOL_DUMMY_1183" id="0x7f111183" />
+    <public type="string" name="APKTOOL_DUMMY_1184" id="0x7f111184" />
+    <public type="string" name="APKTOOL_DUMMY_1185" id="0x7f111185" />
+    <public type="string" name="APKTOOL_DUMMY_1186" id="0x7f111186" />
+    <public type="string" name="APKTOOL_DUMMY_1187" id="0x7f111187" />
+    <public type="string" name="APKTOOL_DUMMY_1188" id="0x7f111188" />
+    <public type="string" name="APKTOOL_DUMMY_1189" id="0x7f111189" />
+    <public type="string" name="APKTOOL_DUMMY_118a" id="0x7f11118a" />
+    <public type="string" name="APKTOOL_DUMMY_118b" id="0x7f11118b" />
+    <public type="string" name="APKTOOL_DUMMY_118c" id="0x7f11118c" />
+    <public type="string" name="APKTOOL_DUMMY_118d" id="0x7f11118d" />
+    <public type="string" name="APKTOOL_DUMMY_118e" id="0x7f11118e" />
+    <public type="string" name="APKTOOL_DUMMY_118f" id="0x7f11118f" />
+    <public type="string" name="APKTOOL_DUMMY_1190" id="0x7f111190" />
+    <public type="string" name="APKTOOL_DUMMY_1191" id="0x7f111191" />
+    <public type="string" name="APKTOOL_DUMMY_1192" id="0x7f111192" />
+    <public type="string" name="APKTOOL_DUMMY_1193" id="0x7f111193" />
+    <public type="string" name="APKTOOL_DUMMY_1194" id="0x7f111194" />
+    <public type="string" name="APKTOOL_DUMMY_1195" id="0x7f111195" />
+    <public type="string" name="APKTOOL_DUMMY_1196" id="0x7f111196" />
+    <public type="string" name="APKTOOL_DUMMY_1197" id="0x7f111197" />
+    <public type="string" name="APKTOOL_DUMMY_1198" id="0x7f111198" />
+    <public type="string" name="APKTOOL_DUMMY_1199" id="0x7f111199" />
+    <public type="string" name="APKTOOL_DUMMY_119a" id="0x7f11119a" />
+    <public type="string" name="APKTOOL_DUMMY_119b" id="0x7f11119b" />
+    <public type="string" name="APKTOOL_DUMMY_119c" id="0x7f11119c" />
+    <public type="string" name="APKTOOL_DUMMY_119d" id="0x7f11119d" />
+    <public type="string" name="APKTOOL_DUMMY_119e" id="0x7f11119e" />
+    <public type="string" name="APKTOOL_DUMMY_119f" id="0x7f11119f" />
+    <public type="string" name="APKTOOL_DUMMY_11a0" id="0x7f1111a0" />
+    <public type="string" name="APKTOOL_DUMMY_11a1" id="0x7f1111a1" />
+    <public type="string" name="APKTOOL_DUMMY_11a2" id="0x7f1111a2" />
+    <public type="string" name="APKTOOL_DUMMY_11a3" id="0x7f1111a3" />
+    <public type="string" name="APKTOOL_DUMMY_11a4" id="0x7f1111a4" />
+    <public type="string" name="APKTOOL_DUMMY_11a5" id="0x7f1111a5" />
+    <public type="string" name="APKTOOL_DUMMY_11a6" id="0x7f1111a6" />
+    <public type="string" name="APKTOOL_DUMMY_11a7" id="0x7f1111a7" />
+    <public type="string" name="APKTOOL_DUMMY_11a8" id="0x7f1111a8" />
+    <public type="string" name="APKTOOL_DUMMY_11a9" id="0x7f1111a9" />
+    <public type="string" name="APKTOOL_DUMMY_11aa" id="0x7f1111aa" />
+    <public type="string" name="APKTOOL_DUMMY_11ab" id="0x7f1111ab" />
+    <public type="string" name="APKTOOL_DUMMY_11ac" id="0x7f1111ac" />
+    <public type="string" name="APKTOOL_DUMMY_11ad" id="0x7f1111ad" />
+    <public type="string" name="APKTOOL_DUMMY_11ae" id="0x7f1111ae" />
+    <public type="string" name="APKTOOL_DUMMY_11af" id="0x7f1111af" />
+    <public type="string" name="APKTOOL_DUMMY_11b0" id="0x7f1111b0" />
+    <public type="string" name="APKTOOL_DUMMY_11b1" id="0x7f1111b1" />
+    <public type="string" name="APKTOOL_DUMMY_11b2" id="0x7f1111b2" />
+    <public type="string" name="APKTOOL_DUMMY_11b3" id="0x7f1111b3" />
+    <public type="string" name="APKTOOL_DUMMY_11b4" id="0x7f1111b4" />
+    <public type="string" name="APKTOOL_DUMMY_11b5" id="0x7f1111b5" />
+    <public type="string" name="APKTOOL_DUMMY_11b6" id="0x7f1111b6" />
+    <public type="string" name="APKTOOL_DUMMY_11b7" id="0x7f1111b7" />
+    <public type="string" name="APKTOOL_DUMMY_11b8" id="0x7f1111b8" />
+    <public type="string" name="APKTOOL_DUMMY_11b9" id="0x7f1111b9" />
+    <public type="string" name="APKTOOL_DUMMY_11ba" id="0x7f1111ba" />
+    <public type="string" name="APKTOOL_DUMMY_11bb" id="0x7f1111bb" />
+    <public type="string" name="APKTOOL_DUMMY_11bc" id="0x7f1111bc" />
+    <public type="string" name="APKTOOL_DUMMY_11bd" id="0x7f1111bd" />
+    <public type="string" name="APKTOOL_DUMMY_11be" id="0x7f1111be" />
+    <public type="string" name="APKTOOL_DUMMY_11bf" id="0x7f1111bf" />
+    <public type="string" name="APKTOOL_DUMMY_11c0" id="0x7f1111c0" />
+    <public type="string" name="APKTOOL_DUMMY_11c1" id="0x7f1111c1" />
+    <public type="string" name="APKTOOL_DUMMY_11c2" id="0x7f1111c2" />
+    <public type="string" name="APKTOOL_DUMMY_11c3" id="0x7f1111c3" />
+    <public type="string" name="APKTOOL_DUMMY_11c4" id="0x7f1111c4" />
+    <public type="string" name="APKTOOL_DUMMY_11c5" id="0x7f1111c5" />
+    <public type="string" name="APKTOOL_DUMMY_11c6" id="0x7f1111c6" />
+    <public type="string" name="APKTOOL_DUMMY_11c7" id="0x7f1111c7" />
+    <public type="string" name="APKTOOL_DUMMY_11c8" id="0x7f1111c8" />
+    <public type="string" name="APKTOOL_DUMMY_11c9" id="0x7f1111c9" />
+    <public type="string" name="APKTOOL_DUMMY_11ca" id="0x7f1111ca" />
+    <public type="string" name="APKTOOL_DUMMY_11cb" id="0x7f1111cb" />
+    <public type="string" name="APKTOOL_DUMMY_11cc" id="0x7f1111cc" />
+    <public type="string" name="APKTOOL_DUMMY_11cd" id="0x7f1111cd" />
+    <public type="string" name="APKTOOL_DUMMY_11ce" id="0x7f1111ce" />
+    <public type="string" name="APKTOOL_DUMMY_11cf" id="0x7f1111cf" />
+    <public type="string" name="APKTOOL_DUMMY_11d0" id="0x7f1111d0" />
+    <public type="string" name="APKTOOL_DUMMY_11d1" id="0x7f1111d1" />
+    <public type="string" name="APKTOOL_DUMMY_11d2" id="0x7f1111d2" />
+    <public type="string" name="APKTOOL_DUMMY_11d3" id="0x7f1111d3" />
+    <public type="string" name="APKTOOL_DUMMY_11d4" id="0x7f1111d4" />
+    <public type="string" name="APKTOOL_DUMMY_11d5" id="0x7f1111d5" />
+    <public type="string" name="APKTOOL_DUMMY_11d6" id="0x7f1111d6" />
+    <public type="string" name="APKTOOL_DUMMY_11d7" id="0x7f1111d7" />
+    <public type="string" name="APKTOOL_DUMMY_11d8" id="0x7f1111d8" />
+    <public type="string" name="APKTOOL_DUMMY_11d9" id="0x7f1111d9" />
+    <public type="string" name="APKTOOL_DUMMY_11da" id="0x7f1111da" />
+    <public type="string" name="APKTOOL_DUMMY_11db" id="0x7f1111db" />
+    <public type="string" name="APKTOOL_DUMMY_11dc" id="0x7f1111dc" />
+    <public type="string" name="APKTOOL_DUMMY_11dd" id="0x7f1111dd" />
+    <public type="string" name="APKTOOL_DUMMY_11de" id="0x7f1111de" />
+    <public type="string" name="APKTOOL_DUMMY_11df" id="0x7f1111df" />
+    <public type="string" name="APKTOOL_DUMMY_11e0" id="0x7f1111e0" />
+    <public type="string" name="APKTOOL_DUMMY_11e1" id="0x7f1111e1" />
+    <public type="string" name="APKTOOL_DUMMY_11e2" id="0x7f1111e2" />
+    <public type="string" name="APKTOOL_DUMMY_11e3" id="0x7f1111e3" />
+    <public type="string" name="APKTOOL_DUMMY_11e4" id="0x7f1111e4" />
+    <public type="string" name="APKTOOL_DUMMY_11e5" id="0x7f1111e5" />
+    <public type="string" name="APKTOOL_DUMMY_11e6" id="0x7f1111e6" />
+    <public type="string" name="APKTOOL_DUMMY_11e7" id="0x7f1111e7" />
+    <public type="string" name="APKTOOL_DUMMY_11e8" id="0x7f1111e8" />
+    <public type="string" name="APKTOOL_DUMMY_11e9" id="0x7f1111e9" />
+    <public type="string" name="APKTOOL_DUMMY_11ea" id="0x7f1111ea" />
+    <public type="string" name="APKTOOL_DUMMY_11eb" id="0x7f1111eb" />
+    <public type="string" name="APKTOOL_DUMMY_11ec" id="0x7f1111ec" />
+    <public type="string" name="APKTOOL_DUMMY_11ed" id="0x7f1111ed" />
+    <public type="string" name="APKTOOL_DUMMY_11ee" id="0x7f1111ee" />
+    <public type="string" name="APKTOOL_DUMMY_11ef" id="0x7f1111ef" />
+    <public type="string" name="APKTOOL_DUMMY_11f0" id="0x7f1111f0" />
+    <public type="string" name="APKTOOL_DUMMY_11f1" id="0x7f1111f1" />
+    <public type="string" name="APKTOOL_DUMMY_11f2" id="0x7f1111f2" />
+    <public type="string" name="APKTOOL_DUMMY_11f3" id="0x7f1111f3" />
+    <public type="string" name="APKTOOL_DUMMY_11f4" id="0x7f1111f4" />
+    <public type="string" name="APKTOOL_DUMMY_11f5" id="0x7f1111f5" />
+    <public type="string" name="APKTOOL_DUMMY_11f6" id="0x7f1111f6" />
+    <public type="string" name="APKTOOL_DUMMY_11f7" id="0x7f1111f7" />
+    <public type="string" name="APKTOOL_DUMMY_11f8" id="0x7f1111f8" />
+    <public type="string" name="APKTOOL_DUMMY_11f9" id="0x7f1111f9" />
+    <public type="string" name="APKTOOL_DUMMY_11fa" id="0x7f1111fa" />
+    <public type="string" name="APKTOOL_DUMMY_11fb" id="0x7f1111fb" />
+    <public type="string" name="APKTOOL_DUMMY_11fc" id="0x7f1111fc" />
+    <public type="string" name="APKTOOL_DUMMY_11fd" id="0x7f1111fd" />
+    <public type="string" name="APKTOOL_DUMMY_11fe" id="0x7f1111fe" />
+    <public type="string" name="APKTOOL_DUMMY_11ff" id="0x7f1111ff" />
+    <public type="string" name="APKTOOL_DUMMY_1200" id="0x7f111200" />
+    <public type="string" name="APKTOOL_DUMMY_1201" id="0x7f111201" />
+    <public type="string" name="APKTOOL_DUMMY_1202" id="0x7f111202" />
+    <public type="string" name="APKTOOL_DUMMY_1203" id="0x7f111203" />
+    <public type="string" name="APKTOOL_DUMMY_1204" id="0x7f111204" />
+    <public type="string" name="APKTOOL_DUMMY_1205" id="0x7f111205" />
+    <public type="string" name="APKTOOL_DUMMY_1206" id="0x7f111206" />
+    <public type="string" name="APKTOOL_DUMMY_1207" id="0x7f111207" />
+    <public type="string" name="APKTOOL_DUMMY_1208" id="0x7f111208" />
+    <public type="string" name="APKTOOL_DUMMY_1209" id="0x7f111209" />
+    <public type="string" name="APKTOOL_DUMMY_120a" id="0x7f11120a" />
+    <public type="string" name="APKTOOL_DUMMY_120b" id="0x7f11120b" />
+    <public type="string" name="APKTOOL_DUMMY_120c" id="0x7f11120c" />
+    <public type="string" name="APKTOOL_DUMMY_120d" id="0x7f11120d" />
+    <public type="string" name="APKTOOL_DUMMY_120e" id="0x7f11120e" />
+    <public type="string" name="APKTOOL_DUMMY_120f" id="0x7f11120f" />
+    <public type="string" name="APKTOOL_DUMMY_1210" id="0x7f111210" />
+    <public type="string" name="APKTOOL_DUMMY_1211" id="0x7f111211" />
+    <public type="string" name="APKTOOL_DUMMY_1212" id="0x7f111212" />
+    <public type="string" name="APKTOOL_DUMMY_1213" id="0x7f111213" />
+    <public type="string" name="APKTOOL_DUMMY_1214" id="0x7f111214" />
+    <public type="string" name="APKTOOL_DUMMY_1215" id="0x7f111215" />
+    <public type="string" name="APKTOOL_DUMMY_1216" id="0x7f111216" />
+    <public type="string" name="APKTOOL_DUMMY_1217" id="0x7f111217" />
+    <public type="string" name="APKTOOL_DUMMY_1218" id="0x7f111218" />
+    <public type="string" name="APKTOOL_DUMMY_1219" id="0x7f111219" />
+    <public type="string" name="APKTOOL_DUMMY_121a" id="0x7f11121a" />
+    <public type="string" name="APKTOOL_DUMMY_121b" id="0x7f11121b" />
+    <public type="string" name="APKTOOL_DUMMY_121c" id="0x7f11121c" />
+    <public type="string" name="APKTOOL_DUMMY_121d" id="0x7f11121d" />
+    <public type="string" name="APKTOOL_DUMMY_121e" id="0x7f11121e" />
+    <public type="string" name="APKTOOL_DUMMY_121f" id="0x7f11121f" />
+    <public type="string" name="APKTOOL_DUMMY_1220" id="0x7f111220" />
+    <public type="string" name="APKTOOL_DUMMY_1221" id="0x7f111221" />
+    <public type="string" name="APKTOOL_DUMMY_1222" id="0x7f111222" />
+    <public type="string" name="APKTOOL_DUMMY_1223" id="0x7f111223" />
+    <public type="string" name="APKTOOL_DUMMY_1224" id="0x7f111224" />
+    <public type="string" name="APKTOOL_DUMMY_1225" id="0x7f111225" />
+    <public type="string" name="APKTOOL_DUMMY_1226" id="0x7f111226" />
+    <public type="string" name="APKTOOL_DUMMY_1227" id="0x7f111227" />
+    <public type="string" name="APKTOOL_DUMMY_1228" id="0x7f111228" />
+    <public type="string" name="APKTOOL_DUMMY_1229" id="0x7f111229" />
+    <public type="string" name="APKTOOL_DUMMY_122a" id="0x7f11122a" />
+    <public type="string" name="APKTOOL_DUMMY_122b" id="0x7f11122b" />
+    <public type="string" name="APKTOOL_DUMMY_122c" id="0x7f11122c" />
+    <public type="string" name="APKTOOL_DUMMY_122d" id="0x7f11122d" />
+    <public type="string" name="APKTOOL_DUMMY_122e" id="0x7f11122e" />
+    <public type="string" name="APKTOOL_DUMMY_122f" id="0x7f11122f" />
+    <public type="string" name="APKTOOL_DUMMY_1230" id="0x7f111230" />
+    <public type="string" name="APKTOOL_DUMMY_1231" id="0x7f111231" />
+    <public type="string" name="APKTOOL_DUMMY_1232" id="0x7f111232" />
+    <public type="string" name="scree_nsize" id="0x7f110a34" />
+    <public type="string" name="empty_text" id="0x7f11027f" />
     <public type="style" name="ActionBarGrayTheme" id="0x7f120000" />
     <public type="style" name="ActionBarProgress" id="0x7f120001" />
     <public type="style" name="ActionBarSpinner" id="0x7f120002" />
@@ -15335,6 +15859,9 @@
     <public type="style" name="SolidSeekBar" id="0x7f1201bf" />
     <public type="style" name="TextStickerDialogForLolipop" id="0x7f120214" />
     <public type="style" name="VkIm.Toolbar.TitleText.Large" id="0x7f120323" />
+    <public type="style" name="MD.Button.Borderless" id="0x7f1203a7" />
+    <public type="style" name="MD.Button.Borderless.Dialog" id="0x7f1203a8" />
+    <public type="style" name="MaterialDialogTheme.Dark" id="0x7f1203a9" />
     <public type="style" name="Base.V22.Theme.AppCompat" id="0x7f12007a" />
     <public type="style" name="Base.V22.Theme.AppCompat.Light" id="0x7f12007b" />
     <public type="style" name="Base.V23.Theme.AppCompat" id="0x7f12007c" />
@@ -15371,4 +15898,6 @@
     <public type="xml" name="preferences_proxy" id="0x7f140018" />
     <public type="xml" name="preferences_gms" id="0x7f14001a" />
     <public type="xml" name="empty" id="0x7f14001b" />
+    <public type="xml" name="APKTOOL_DUMMY_f" id="0x7f14000f" />
+    <public type="xml" name="APKTOOL_DUMMY_19" id="0x7f140019" />
 </resources>

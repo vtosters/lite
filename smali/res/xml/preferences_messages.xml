@@ -11,7 +11,7 @@
     <PreferenceCategory android:title="@string/interfaceemoji">
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/alteremoji" android:key="alteremoji" android:summary="@string/alteremojisum" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/systememoji" android:key="systememoji" android:summary="@string/systememojisum" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/BGStickers" android:summary="@string/BGStickerssum" android:key="isBGStickersEnabled" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/BGStickers" android:key="isBGStickersEnabled" android:summary="@string/BGStickerssum" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">

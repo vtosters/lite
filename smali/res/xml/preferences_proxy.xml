@@ -2,8 +2,8 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="2фа вход">
-         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="libverify support" android:key="libverify" android:summary="Включение может пофиксить 2фа вход" android:defaultValue="false" />
-         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="libverify support" android:key="libverify" android:summary="Включение может пофиксить 2фа вход" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlproxy">
         <Preference android:enabled="false" android:title="@string/proxyimpinfo" android:summary="@string/proxyimpinfosum" />
