@@ -1163,13 +1163,11 @@
 
     move-result v7
 
-    const v8, 0x7f110ff8
+    const v8, 0x7f11102e
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
-
-    const-string v8, "Аккаунты"
 
     const-class v9, Lru/vtosters/lite/ui/fragments/AccountsFragment;
 
