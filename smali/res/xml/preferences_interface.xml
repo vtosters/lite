@@ -17,7 +17,7 @@
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacevideoext" android:key="isEnableExternalOpening" android:summary="@string/interfacevideoextsum" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfacevideorec" android:key="__dbg_disable_video_feed" android:summary="@string/interfacevideorecsum" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Новый видео каталог" android:key="newvideo" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/newvideo" android:key="newvideo" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
