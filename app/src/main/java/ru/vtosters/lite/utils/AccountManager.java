@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.SharedPreferences;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,7 +43,7 @@ public class AccountManager {
         return "err";
     }
 
-    public static String getAvalibleAcc() {
+    public static int getAvalibleAcc() {
         int intg = 0;
         while (true) {
             if (getName(Integer.toString(intg)) != "err") {
@@ -50,19 +51,38 @@ public class AccountManager {
             } else {
                 break;
             }
-        };
-        return Integer.toString(intg);
+        }
+        ;
+        return intg;
     }
 
-    public static int getAvalibleAccInt() {
+    public static CharSequence[] getAccAmountNames() {
         int intg = 0;
+        ArrayList<String> list = new ArrayList<String>();
         while (true) {
             if (getName(Integer.toString(intg)) != "err") {
+                list.add(getName(Integer.toString(intg)));
                 intg++;
             } else {
                 break;
             }
         };
-        return intg;
+        final CharSequence[] charSequenceItems = list.toArray(new CharSequence[list.size()]);
+        return charSequenceItems;
+    }
+
+    public static CharSequence[] getAccAmount() {
+        int intg = 0;
+        ArrayList<String> list = new ArrayList<String>();
+        while (true) {
+            if (getName(Integer.toString(intg)) != "err") {
+                list.add(Integer.toString(intg));
+                intg++;
+            } else {
+                break;
+            }
+        };
+        final CharSequence[] charSequenceItems = list.toArray(new CharSequence[list.size()]);
+        return charSequenceItems;
     }
 }
