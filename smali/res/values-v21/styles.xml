@@ -857,6 +857,13 @@
         <item name="android:textSize">20.0sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
+    <style name="MD.Button.Borderless" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="MD.Button.Borderless.Dialog" parent="@style/MD.Button.Borderless">
+        <item name="android:minWidth">64.0dip</item>
+        <item name="android:minHeight">48.0dip</item>
+    </style>
     <style name="MaterialDialogTheme.Dark" parent="@android:style/Theme.Material.Dialog.Alert">
         <item name="android:windowBackground">@drawable/mtrl_dlg_bg</item>
         <item name="android:colorAccent">?accent</item>
@@ -864,12 +871,5 @@
         <item name="android:buttonBarNeutralButtonStyle">@style/MD.Button.Borderless.Dialog</item>
         <item name="android:buttonBarNegativeButtonStyle">@style/MD.Button.Borderless.Dialog</item>
         <item name="dialogBg">?tabbar_background</item>
-    </style>
-    <style name="MD.Button.Borderless" parent="@android:style/Widget.Material.Button.Borderless.Colored">
-        <item name="android:textAllCaps">false</item>
-    </style>
-    <style name="MD.Button.Borderless.Dialog" parent="@style/MD.Button.Borderless">
-        <item name="android:minWidth">64.0dp</item>
-        <item name="android:minHeight">48.0dp</item>
     </style>
 </resources>

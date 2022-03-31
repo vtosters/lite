@@ -5,7 +5,7 @@
         <ImageView android:id="@id/icon" android:layout_width="56.0dip" android:layout_height="56.0dip" />
         <com.vk.imageloader.view.VKImageView android:id="@id/app_icon" android:layout_width="72.0dip" android:layout_height="72.0dip" app:roundedCornerRadius="14.0dip" />
         <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxLines="3" android:lineSpacingExtra="0.0sp" style="@style/VKUIText.Title1" />
-        <TextView android:gravity="center_horizontal" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip"  />
+        <TextView android:gravity="center_horizontal" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
         <TextView android:id="@id/more" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="4.0dip" style="@style/tertiary_button" />
         <android.support.v7.widget.RecyclerView android:id="@id/recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </LinearLayout>

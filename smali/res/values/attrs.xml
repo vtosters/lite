@@ -2146,6 +2146,5 @@
     <attr name="yesNoPreferenceStyle" format="reference" />
     <attr name="zOrderOnTop" format="boolean" />
     <attr name="tabbar_fix" format="reference|color" />
-    <attr name="dialogBg" format="reference" />
-
+    <attr name="dialogBg" format="reference|color" />
 </resources>

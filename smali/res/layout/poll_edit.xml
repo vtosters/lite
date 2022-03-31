@@ -13,7 +13,7 @@
             </LinearLayout>
             <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/poll_anonym_wrap" android:paddingLeft="@dimen/poll_edit_padding" android:paddingRight="@dimen/poll_edit_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip">
                 <com.vtosters.lite.ui.BadooTextView android:textSize="14.0dip" android:textColor="?accent" android:id="@id/poll_anonym_header" android:paddingLeft="16.0dip" android:paddingTop="13.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/poll_settings" app:typeface="Medium" />
-                <Switch android:textSize="16.0dip" android:textColor="?attr/text_primary" android:ellipsize="end" android:id="@id/poll_anonym_switch" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="18.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/poll_anonym" />
+                <Switch android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/poll_anonym_switch" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="18.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/poll_anonym" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
