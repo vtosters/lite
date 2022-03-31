@@ -14,11 +14,11 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtloffline" android:key="offline" android:summary="Отключение онлайна позволит вам оставаться в офлайне" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtloffline" android:key="offline" android:summary="@string/vtlofflinesummary" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/offline_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtloffline2" android:key="setoffline" android:summary="Работает только при отключении отправки статуса онлайн\nОтправляет мгновенно в офлайн после отправки сообщений и прочих методов апи которые отправляют в онлайн\n\nМожет выглядеть как ненастоящий уход из сети" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtloffline2" android:key="setoffline" android:summary="@string/vtloffline2summary" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories_vtl">
@@ -26,7 +26,7 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlawayphp" android:key="awayphp" android:summary="Слежка за пользователем для персонализации рекламы. Также проверка ссылок на блэклист от ВКонтакте и антивирус" android:defaultValue="true" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/benchapi" android:key="benchmark" android:summary="Тестирование скорости отправки запросов. Бесполезная функция для всех, кроме разработчиков ВКонтакте" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlawayphp" android:key="awayphp" android:summary="@string/vtlawayphpsummary" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/benchapi" android:key="benchmark" android:summary="@string/benchapisummary" android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>
