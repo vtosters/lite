@@ -4215,7 +4215,6 @@
     <string name="foafdate">\nДней с даты регистрации:</string>
     <string name="foaferr">Проблемы при загрузке данных!</string>
     <string name="savedmsg">Сохраненные сообщения</string>
-
     <string name="DNR_ON">Включить нечиталку</string>
     <string name="DNR_OFF">Отключить нечиталку</string>
     <string name="DNT_ON">Включить неписалку</string>
@@ -4230,9 +4229,11 @@
     <string name="act_pm">Для личных сообщений</string>
     <string name="act_cnv">Для бесед</string>
     <string name="act_bot">Для ботов/групп</string>
-
     <string name="vtloffline">Отправка статуса онлайн</string>
     <string name="vtloffline2">Принудительно отправлять офлайн запросы</string>
     <string name="benchapi">Бенчмарк апи</string>
     <string name="opencommit">Открыть коммит</string>
+    <string name="accounts">Аккаунты</string>
+    <string name="newacc">Добавить аккаунт</string>
+    <string name="selectacc">Выберите аккаунт</string>
 </resources>

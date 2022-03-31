@@ -4339,7 +4339,6 @@ Does not affect vk.cc links"</string>
     <string name="foafdate">\nDays from the date of registration:</string>
     <string name="foaferr">Issues when loading data!</string>
     <string name="savedmsg">Saved messages</string>
-
     <string name="DNR_ON">Enable Do Not Read</string>
     <string name="DNR_OFF">Disable Do Not Read</string>
     <string name="DNT_ON">Enable Do Not Type</string>
@@ -4354,9 +4353,11 @@ Does not affect vk.cc links"</string>
     <string name="act_pm">For Private messages</string>
     <string name="act_cnv">For Conversations</string>
     <string name="act_bot">For Bots/Groups</string>
-
     <string name="vtloffline">Send online status</string>
     <string name="vtloffline2">Force offline requests</string>
     <string name="benchapi">Benchmark api</string>
     <string name="opencommit">Open commit</string>
+    <string name="accounts">Accounts</string>
+    <string name="newacc">Add new account</string>
+    <string name="selectacc">Select account</string>
 </resources>
