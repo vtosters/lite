@@ -4236,4 +4236,13 @@
     <string name="accounts">Аккаунты</string>
     <string name="newacc">Добавить аккаунт</string>
     <string name="selectacc">Выберите аккаунт</string>
+    <string name="restartapp">Перезапустите приложение</string>
+    <string name="reportbut">Сообщить о баге</string>
+    <string name="newvideo">Новый видео каталог</string>
+    <string name="shitposting">Однотипные новости</string>
+    <string name="shitpostingsummary">Фильтр очистки постов с РФ и действиями связанными на Украине</string>
+    <string name="vtlofflinesummary">Отключение онлайна позволит вам оставаться в офлайне</string>
+    <string name="vtloffline2summary">Работает только при отключении отправки статуса онлайн\nОтправляет мгновенно в офлайн после отправки сообщений и прочих методов апи которые отправляют в онлайн\n\nМожет выглядеть как ненастоящий уход из сети</string>
+    <string name="vtlawayphpsummary">Слежка за пользователем для персонализации рекламы. Также проверка ссылок на блэклист от ВКонтакте и антивирус</string>
+    <string name="benchapisummary">Тестирование скорости отправки запросов. Бесполезная функция для всех, кроме разработчиков ВКонтакте</string>
 </resources>
