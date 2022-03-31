@@ -6,5 +6,5 @@
         <TextView android:textSize="16.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
         <TextView android:textSize="12.0dip" android:textColor="@color/gray" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
     </LinearLayout>
-    <View android:background="@drawable/bg_discover_card_rounded" android:backgroundTint="?tabbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:background="@drawable/bg_discover_card_rounded" android:layout_width="fill_parent" android:layout_height="fill_parent" android:backgroundTint="?tabbar_background" />
 </FrameLayout>
