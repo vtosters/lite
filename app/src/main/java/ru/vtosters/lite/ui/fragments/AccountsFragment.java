@@ -30,9 +30,9 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
         int vtosterXml = Helper.GetContext().getResources().getIdentifier("empty", "xml", Helper.GetContext().getPackageName());
         this.a(vtosterXml);
 
-        PreferencesUtil.addPreferenceCategory(this, "Аккаунты");
+        PreferencesUtil.addPreferenceCategory(this, Helper.getString("accounts"));
 
-        PreferencesUtil.addListPreference(this, "account", "", "Выберите аккаунт", AccountManager.getAccAmountNames(), AccountManager.getAccAmount());
+        PreferencesUtil.addListPreference(this, "account", "", Helper.getString("selectacc"), AccountManager.getAccAmountNames(), AccountManager.getAccAmount());
 
         a("account").b(AccountManager.getCurrentAccountName());
 
@@ -48,7 +48,7 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        PreferencesUtil.addPreference(this, "newacc", "Добавить аккаунт", "", null, preference -> {
+        PreferencesUtil.addPreference(this, "newacc", Helper.getString("newacc"), "", null, preference -> {
             SharedPreferences sharedPrefs = GetContext().getSharedPreferences("com.vtosters.lite_preferences", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPrefs.edit();
             editor.putString("account", Integer.toString(AccountManager.getAvalibleAcc()));
@@ -68,6 +68,6 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public int aq() {
-        return Helper.GetContext().getResources().getIdentifier("sett_account", "string", Helper.GetContext().getPackageName());
+        return Helper.GetContext().getResources().getIdentifier("accounts", "string", Helper.GetContext().getPackageName());
     }
 }
