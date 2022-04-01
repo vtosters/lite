@@ -64,6 +64,11 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
             ToastUtils.a("Перезапустите приложение");
             return false;
         });
+
+        PreferencesUtil.addPreference(this, "restartapp", Helper.getString("applicationrestart"), "", null, preference -> {
+            Helper.restarting();
+            return false;
+        });
     }
 
     @Override
