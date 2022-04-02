@@ -218,7 +218,7 @@ public class DockBarManager {
         int target = adapter.getIndexByViewType(toPosition, adapter.getItemType(toPosition));
         if (fromPosition < toPosition) {
 
-            if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT) return;
+            if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu")) return;
 
             DockBarTab tab = mSelectedTabs.get(curr);
             mSelectedTabs.remove(tab);
