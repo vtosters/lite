@@ -1,7 +1,11 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import static ru.vtosters.lite.utils.Themes.color_grishka;
+import static ru.vtosters.lite.utils.Themes.isAndroidMonet;
+
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -25,6 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 import ru.vtosters.lite.utils.Helper;
+import ru.vtosters.lite.utils.Themes;
 
 public class DockBarInjector {
     private static final DockBarManager sManager = DockBarManager.getInstance();
@@ -63,6 +68,9 @@ public class DockBarInjector {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
             Drawable drawable = Helper.GetContext().getResources().getDrawable(tab.iconID);
             ColorStateList colorStateList = Helper.GetContext().getResources().getColorStateList(com.vtosters.lite.R.color.bottom_navigation_item);
+            if (isAndroidMonet()) {
+                colorStateList = ColorStateList.valueOf(Themes.getAccentColor());
+            }
             add.setIcon((Drawable) new RecoloredDrawable(drawable, colorStateList));
             add.setShowAsAction(1);
             add.setCheckable(true);

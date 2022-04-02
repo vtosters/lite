@@ -21,7 +21,7 @@ import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Themes;
 
 public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditViewHolder>
-                    implements IItemTouchHelper {
+        implements IItemTouchHelper {
 
     public static final int SELECTED_TAB_TYPE = 1;
     public static final int DISABLED_TAB_TYPE = 2;
@@ -131,7 +131,7 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         int fromViewType = getItemType(fromPosition);
         int toViewType = getItemType(toPosition);
 
-        if (fromPosition < toPosition)  {
+        if (fromPosition < toPosition) {
 
             if (fromViewType != toViewType) {
                 mDockBarManager.swapAndMigrate(this, fromPosition, toPosition);
@@ -142,7 +142,7 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
 
         } else if (toPosition != 0) {
 
-            if (fromViewType != toViewType){
+            if (fromViewType != toViewType) {
                 mDockBarManager.swapAndMigrate(this, fromPosition, toPosition);
             } else {
                 List<DockBarTab> list = fromViewType == 1 ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
@@ -161,7 +161,6 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
     public int getItemType(int position) {
         return mDockBarManager.getItemType(position);
     }
-
 
 
     static class DockBarEditViewHolder extends RecyclerView.x {

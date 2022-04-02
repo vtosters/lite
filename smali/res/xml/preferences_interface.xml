@@ -8,7 +8,7 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
-        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/start" android:title="@string/interfacestartfr" android:key="start_value" android:defaultValue="newsfeed" android:dialogTitle="@string/interfacestartfrsum" android:entryValues="@array/start_value" />
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/start" android:title="@string/interfacestartfr" android:key="start_values" android:defaultValue="newsfeed" android:dialogTitle="@string/interfacestartfrsum" android:entryValues="@array/start_values" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfaceglobaldates" android:key="fulltime" android:summary="@string/interfaceglobaldatessum" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfaceglobalnum" android:key="shortinfo" android:summary="@string/interfaceglobalnumsum" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/interfaceglobalpost" android:key="shortpost" android:summary="@string/interfaceglobalpostsum" android:defaultValue="true" />

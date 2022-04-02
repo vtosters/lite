@@ -753,8 +753,10 @@ public class Prefs {
     }
 
     public static Class getStartFragment() {
-        return DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
-        /*String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("start_value", "");
+        String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("start_values", "");
+        if (string.equals("default")) {
+            return DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
+        }
         if (string.equals("newsfeed")) {
             return Feed2049.b.c();
         }
@@ -809,7 +811,7 @@ public class Prefs {
         if (string.equals("docs")) {
             return DocumentsViewFragment.class;
         }
-        return string.equals("brtd") ? BirthdaysFragment.class : Feed2049.b.c();*/
+        return string.equals("brtd") ? BirthdaysFragment.class : DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
     }
 
     public static Context BaseContextLocale(Context context) {
