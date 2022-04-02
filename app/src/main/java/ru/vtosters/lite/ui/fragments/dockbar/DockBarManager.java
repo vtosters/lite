@@ -85,7 +85,7 @@ public class DockBarManager {
             mDisabledTabs.add(new DockBarTab("tab_videos", R.drawable.ic_video_24, R.string.videos, R.id.menu_videos, VideosFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_lives", R.drawable.ic_live_filter_24dp, R.string.sett_live, R.id.menu_lives, LivesPostListFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_games", R.drawable.ic_games_24, R.string.games, R.id.menu_games, GamesFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_fave", R.drawable.ic_favorite_24, R.string.fave_title, R.id.menu_fave, FaveTabFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_fave", R.drawable.ic_favorite_24, R.string.exo_track_selection_title_video_res_0x7f11031e, R.id.menu_fave, FaveTabFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_documents", R.drawable.ic_document_24, R.string.docs, R.id.menu_documents, DocumentsViewFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));

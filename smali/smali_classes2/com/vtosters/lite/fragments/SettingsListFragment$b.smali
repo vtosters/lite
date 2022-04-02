@@ -837,7 +837,7 @@
 
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
-    const v6, 0x7f0808cb
+    const v6, 0x7f0803bc
 
     iget-object v7, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$b;->a:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
@@ -850,6 +850,8 @@
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
+
+    const-string v8, "Редактор докбара"
 
     const-class v9, Lru/vtosters/lite/ui/fragments/dockbar/DockBarFragment;
 
