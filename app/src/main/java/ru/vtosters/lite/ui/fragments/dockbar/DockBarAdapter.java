@@ -18,6 +18,7 @@ import com.vtosters.lite.R;
 import java.util.List;
 
 import ru.vtosters.lite.utils.Helper;
+import ru.vtosters.lite.utils.Themes;
 
 public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditViewHolder>
                     implements IItemTouchHelper {
@@ -55,18 +56,9 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         container.setLayoutParams(new LinearLayout.LayoutParams(-1, Helper.convertDpToPixel(48)));
         container.setVisibility(View.GONE);
 
-        TypedValue typedValue = new TypedValue();
-        Helper.GetContext().getTheme().resolveAttribute(R.attr.text_secondary, typedValue, true);
-
-        int textSecondary = typedValue.data;
-
-        Helper.GetContext().getTheme().resolveAttribute(R.attr.text_secondary, typedValue, true);
-
-        int textPrimary = typedValue.data;
-
         ImageView icon = new ImageView(Helper.GetContext());
         icon.setTag("icon");
-        icon.setImageTintList(ColorStateList.valueOf(Color.BLACK));
+        icon.setImageTintList(ColorStateList.valueOf(Themes.getAccentColor()));
         icon.setLayoutParams(new LinearLayout.LayoutParams(
                 Helper.convertDpToPixel(24),
                 Helper.convertDpToPixel(24)));
@@ -76,7 +68,7 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         title.setTag("title");
         title.setTextSize(16.0f);
         title.setTypeface(Typeface.DEFAULT_BOLD);
-        //title.setTextColor(textPrimary);
+        title.setTextColor(Themes.getTextAttr());
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, -2);
         params.weight = 1;
         params.leftMargin = Helper.convertDpToPixel(16);
@@ -107,12 +99,7 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         title.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
         title.setVisibility(View.GONE);
 
-        TypedValue typedValue = new TypedValue();
-        Helper.GetContext().getTheme().resolveAttribute(R.attr.text_secondary, typedValue, true);
-
-        int textPrimary = typedValue.data;
-
-        title.setTextColor(Color.BLACK);
+        title.setTextColor(Themes.getTextAttr());
 
         return title;
     }
