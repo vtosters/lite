@@ -2,27 +2,12 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
-import android.support.v4.f.Pools;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.d.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
-import com.vk.discover.DiscoverFeedFragment;
-import com.vk.menu.MenuFragment;
-import com.vk.newsfeed.NewsfeedFragment;
-import com.vk.notifications.NotificationsFragment;
-import com.vtosters.lite.fragments.GamesFragment;
-import com.vtosters.lite.fragments.PhotosFragment;
-import com.vtosters.lite.fragments.d.DocumentsViewFragment;
-import com.vtosters.lite.fragments.f.FriendsFragment;
-import com.vtosters.lite.fragments.h.GroupsFragment;
-import com.vtosters.lite.fragments.lives.LivesPostListFragment;
-import com.vtosters.lite.fragments.m.VideosFragment;
-import com.vtosters.lite.fragments.messages.dialogs.DialogsFragment;
-import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
 
@@ -39,8 +24,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import ru.vtosters.lite.ui.fragments.FeedFragment;
-import ru.vtosters.lite.ui.fragments.MusicFragment;
 import ru.vtosters.lite.utils.Helper;
 
 public class DockBarInjector {
@@ -56,10 +39,6 @@ public class DockBarInjector {
 
     public static void inject(BottomNavigationView navigationView) {
         Menu menu = navigationView.getMenu();
-        for (int i = 0; i < menu.size(); i++) {
-            MenuItem item = menu.getItem(i);
-            Log.d("sova", "Found menuitem " + item.getItemId() + ", " + item.getGroupId() + ", " + ((Object) item.getTitle()));
-        }
         menu.clear();
         try {
             Field field = BottomNavigationMenuView.class.getDeclaredField("h");
@@ -98,40 +77,40 @@ public class DockBarInjector {
         return 0;
     }
 
-    public static void injectMenuFragment(Menu m) {
+    public static void injectMenuFragment(Menu menu) {
         List<MenuItem> menuItems = new ArrayList<>();
-        for (int i = 0; i < m.size(); i++) {
-            menuItems.add(m.getItem(i));
+        for (int i = 0; i < menu.size(); i++) {
+            menuItems.add(menu.getItem(i));
         }
-        m.clear();
+        menu.clear();
 
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             if (tab.id != com.vtosters.lite.R.id.tab_menu) {
                 int itemId = tab.id;
-                switch (tab.id) {
-                    case com.vtosters.lite.R.id.tab_news:
-                        itemId = com.vtosters.lite.R.id.menu_newsfeed;
-                    case com.vtosters.lite.R.id.tab_discover:
-                        itemId = com.vtosters.lite.R.id.menu_search;
-                    case com.vtosters.lite.R.id.tab_feedback:
-                        itemId = com.vtosters.lite.R.id.menu_feedback;
-                    case com.vtosters.lite.R.id.tab_messages:
-                        itemId = com.vtosters.lite.R.id.menu_messages;
+                if (tab.id == com.vtosters.lite.R.id.tab_news) {
+                    itemId = com.vtosters.lite.R.id.menu_newsfeed;
+                } else if (tab.id == com.vtosters.lite.R.id.tab_discover) {
+                    itemId = com.vtosters.lite.R.id.menu_search;
+                } else if (tab.id == com.vtosters.lite.R.id.tab_feedback) {
+                    itemId = com.vtosters.lite.R.id.menu_feedback;
+                } else if (tab.id == com.vtosters.lite.R.id.tab_messages) {
+                    itemId = com.vtosters.lite.R.id.menu_messages;
                 }
-                MenuItem add = m.add(0, itemId, 0, tab.titleID);
+
+                MenuItem add = menu.add(0, itemId, 0, tab.titleID);
                 add.setIcon(tab.iconID);
                 add.setVisible(true);
             }
         }
 
         for (MenuItem menuItem : menuItems) {
-            MenuItem add2 = m.add(menuItem.getGroupId(), menuItem.getItemId(), menuItem.getOrder(), menuItem.getTitle());
-            add2.setIcon(menuItem.getIcon());
+            MenuItem item = menu.add(menuItem.getGroupId(), menuItem.getItemId(), menuItem.getOrder(), menuItem.getTitle());
+            item.setIcon(menuItem.getIcon());
         }
         menuItems.clear();
 
-        for (int i = 0; i < m.size(); i++) {
-            MenuItem menuItem = m.getItem(i);
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem menuItem = menu.getItem(i);
             for (DockBarTab tab : sManager.getSelectedTabs()) {
                 int itemId = menuItem.getItemId();
                 if (itemId == com.vtosters.lite.R.id.menu_newsfeed) {
@@ -151,7 +130,7 @@ public class DockBarInjector {
         }
 
         for (MenuItem menuItem : menuItems) {
-            m.removeItem(menuItem.getItemId());
+            menu.removeItem(menuItem.getItemId());
         }
     }
 
@@ -163,19 +142,14 @@ public class DockBarInjector {
                 "discover"
         ));
         for (DockBarTab tab : sManager.getSelectedTabs()) {
-            switch (tab.id) {
-                case com.vtosters.lite.R.id.tab_discover:
-                    arrayList.remove("discover");
-                    break;
-                case com.vtosters.lite.R.id.tab_feedback:
-                    arrayList.remove("feedback");
-                    break;
-                case com.vtosters.lite.R.id.tab_messages:
-                    arrayList.remove("messages");
-                    break;
-                case com.vtosters.lite.R.id.tab_news:
-                    arrayList.remove("news");
-                    break;
+            if (tab.id == com.vtosters.lite.R.id.tab_discover) {
+                arrayList.remove("discover");
+            } else if (tab.id == com.vtosters.lite.R.id.tab_feedback) {
+                arrayList.remove("feedback");
+            } else if (tab.id == com.vtosters.lite.R.id.tab_messages) {
+                arrayList.remove("messages");
+            } else if (tab.id == com.vtosters.lite.R.id.tab_news) {
+                arrayList.remove("news");
             }
         }
         try {
@@ -212,57 +186,14 @@ public class DockBarInjector {
     }
 
     public static Class<?> interceptClick(int id) {
-        switch (id) {
-            case com.vtosters.lite.R.id.tab_news:
-                return NewsfeedFragment.class;
-
-            case com.vtosters.lite.R.id.tab_discover:
-                return DiscoverFeedFragment.class;
-
-            case com.vtosters.lite.R.id.tab_messages:
-                return DialogsFragment.class;
-
-            case com.vtosters.lite.R.id.tab_feedback:
-                return NotificationsFragment.class;
-
-            case com.vtosters.lite.R.id.tab_menu:
-                return MenuFragment.class;
-
-            case com.vtosters.lite.R.id.menu_friends:
-                return FriendsFragment.class;
-
-            case com.vtosters.lite.R.id.menu_groups:
-                return GroupsFragment.class;
-
-            case com.vtosters.lite.R.id.menu_photos:
-                return PhotosFragment.class;
-
-            case com.vtosters.lite.R.id.menu_audios:
-                return MusicFragment.class;
-
-            case com.vtosters.lite.R.id.menu_videos:
-                return VideosFragment.class;
-
-            case com.vtosters.lite.R.id.menu_lives:
-                return LivesPostListFragment.class;
-
-            case com.vtosters.lite.R.id.menu_games:
-                return GamesFragment.class;
-
-            case com.vtosters.lite.R.id.menu_fave:
-                return FriendsFragment.class; //!
-
-            case com.vtosters.lite.R.id.menu_documents:
-                return DocumentsViewFragment.class;
-
-            case com.vtosters.lite.R.id.menu_payments:
-                return MoneyTransfersFragment.class;
-
-            case com.vtosters.lite.R.id.menu_vk_apps:
-                return AppsFragment.class;
-
-            default:
-                return AppsFragment.class;
+        for (DockBarTab tab : sManager.getSelectedTabs()) {
+            if (id == tab.id)
+                return tab.fragmentClass;
         }
+        for (DockBarTab tab : sManager.getDisabledTabs()) {
+            if (id == tab.id)
+                return tab.fragmentClass;
+        }
+        return AppsFragment.class;
     }
 }
