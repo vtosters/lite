@@ -33,6 +33,7 @@ import com.vk.notifications.NotificationsFragment;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
+import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.d.DocumentsViewFragment;
 import com.vtosters.lite.fragments.f.FriendsFragment;
 import com.vtosters.lite.fragments.h.GroupsFragment;
@@ -89,6 +90,8 @@ public class DockBarManager {
             mDisabledTabs.add(new DockBarTab("tab_documents", R.drawable.ic_document_24, R.string.docs, R.id.menu_documents, DocumentsViewFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
+            
         } else {
             try {
                 JSONObject json = new JSONObject(readFully(new FileInputStream(dockbar)));

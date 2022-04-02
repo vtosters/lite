@@ -20,6 +20,7 @@ import com.vk.about.Items2;
 import com.vk.apps.AppsFragment;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.Screen;
+import com.vk.discover.DiscoverFeedFragment;
 import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
@@ -772,7 +773,7 @@ public class Prefs {
         if (string.equals("friends")) {
             return FriendsFragment.class;
         }
-        if (string.equals(NavigatorKeys.v)) {
+        if (string.equals("photos")) {
             return PhotosFragment.class;
         }
         if (string.equals("videos")) {
@@ -785,7 +786,7 @@ public class Prefs {
             return AppsFragment.class;
         }
         if (string.equals("discover")) {
-            return DiscoverFragment.class;
+            return Feed2049.b.e();
         }
         if (string.equals("notifications")) {
             return NotificationsContainerFragment.class;
