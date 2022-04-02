@@ -748,6 +748,10 @@ public class Prefs {
         });
     }
 
+    public static boolean isUseAlternativeFragments() {
+        return true;
+    }
+
     public static Class getStartFragment() {
         return DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
         /*String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("start_value", "");

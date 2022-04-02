@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFeedFragment;
+import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.newsfeed.Feed2049;
 import com.vk.newsfeed.NewsfeedFragment;
 
 import org.json.JSONArray;
@@ -70,8 +72,8 @@ public class DockBarManager {
         File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
 
         if (!dockbar.exists()) {
-            mSelectedTabs.add(new DockBarTab("tab_news", R.drawable.ic_newsfeed_28, R.string.newsfeed, R.id.tab_news, NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_discover", R.drawable.ic_search_28, R.string.search, R.id.tab_discover, DiscoverFeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", R.drawable.ic_newsfeed_28, R.string.newsfeed, R.id.tab_news, Prefs.isUseAlternativeFragments() ? Feed2049.b.c() : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_discover", R.drawable.ic_search_28, R.string.search, R.id.tab_discover, Prefs.isUseAlternativeFragments() ? DiscoverFragment.class : DiscoverFeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", R.drawable.ic_menu_messages_28, R.string.messages, R.id.tab_messages, DialogsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_feedback", R.drawable.ic_menu_notifications_28, R.string.feedback, R.id.tab_feedback, NotificationsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_menu",R.drawable.ic_menu_more_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
@@ -101,6 +103,19 @@ public class DockBarManager {
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
+                    if (Prefs.isUseAlternativeFragments()) {
+                        if (tab.fragmentClass == NewsfeedFragment.class) {
+                            tab.fragmentClass = Feed2049.b.c();
+                        } else if (tab.fragmentClass == DiscoverFeedFragment.class) {
+                            tab.fragmentClass = DiscoverFragment.class;
+                        }
+                    } else {
+                        if (tab.fragmentClass == Feed2049.b.c()) {
+                            tab.fragmentClass = NewsfeedFragment.class;
+                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                            tab.fragmentClass = DiscoverFeedFragment.class;
+                        }
+                    }
                     mSelectedTabs.add(tab);
                 }
 
@@ -114,6 +129,19 @@ public class DockBarManager {
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
+                    if (Prefs.isUseAlternativeFragments()) {
+                        if (tab.fragmentClass == NewsfeedFragment.class) {
+                            tab.fragmentClass = Feed2049.b.c();
+                        } else if (tab.fragmentClass == DiscoverFeedFragment.class) {
+                            tab.fragmentClass = DiscoverFragment.class;
+                        }
+                    } else {
+                        if (tab.fragmentClass == Feed2049.b.c()) {
+                            tab.fragmentClass = NewsfeedFragment.class;
+                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                            tab.fragmentClass = DiscoverFeedFragment.class;
+                        }
+                    }
                     mDisabledTabs.add(tab);
                 }
 
