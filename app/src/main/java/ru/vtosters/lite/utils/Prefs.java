@@ -56,6 +56,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import kotlin.jvm.internal.Intrinsics;
+import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 
 public class Prefs {
     public static String VERSIONNAME = "2.0 DEV";
@@ -748,7 +749,8 @@ public class Prefs {
     }
 
     public static Class getStartFragment() {
-        String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("start_value", "");
+        return DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
+        /*String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("start_value", "");
         if (string.equals("newsfeed")) {
             return Feed2049.b.c();
         }
@@ -803,7 +805,7 @@ public class Prefs {
         if (string.equals("docs")) {
             return DocumentsViewFragment.class;
         }
-        return string.equals("brtd") ? BirthdaysFragment.class : Feed2049.b.c();
+        return string.equals("brtd") ? BirthdaysFragment.class : Feed2049.b.c();*/
     }
 
     public static Context BaseContextLocale(Context context) {

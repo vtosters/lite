@@ -288,6 +288,15 @@
 .method public final a(Ljava/lang/String;)I
     .locals 1
 
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectId(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_exterminatus
+
+    return v0
+
+    :cond_exterminatus
     const-string v0, "key"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V

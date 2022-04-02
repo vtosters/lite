@@ -835,35 +835,31 @@
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
+    const v6, 0x7f0808cb
 
-        new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
+    iget-object v7, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$b;->a:Lcom/vtosters/lite/fragments/SettingsListFragment;
 
-        const v6, 0x7f0808cb
+    invoke-static {v7}, Lcom/vtosters/lite/fragments/SettingsListFragment;->a(Lcom/vtosters/lite/fragments/SettingsListFragment;)I
 
-        iget-object v7, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$b;->a:Lcom/vtosters/lite/fragments/SettingsListFragment;
+    move-result v7
 
-        invoke-static {v7}, Lcom/vtosters/lite/fragments/SettingsListFragment;->a(Lcom/vtosters/lite/fragments/SettingsListFragment;)I
+    const v8, 0x7f110fea
 
-        move-result v7
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-        const v8, 0x7f110fea
+    move-result-object v8
 
-        invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-class v9, Lru/vtosters/lite/ui/fragments/dockbar/DockBarFragment;
 
-        move-result-object v8
+    invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
 
-        const-class v9, Lru/vtosters/lite/ui/fragments/dockbar/DockBarEditFragment;
+    invoke-static {v4, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
-        invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Class;)V
+    move-result-object v5
 
-        invoke-static {v4, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
-
-        move-result-object v5
-
-        invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
