@@ -236,6 +236,10 @@
 
     move-result-object v0
 
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectMap()Ljava/util/Map;
+
+    move-result-object v0
+
     sput-object v0, Lcom/vk/navigation/NavigationDelegateBottom;->z:Ljava/util/Map;
 
     return-void
@@ -519,6 +523,8 @@
     check-cast v2, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     iput-object v2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->f:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
+
+    invoke-static {v2}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->inject(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
 
     .line 439
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateBottom;->m()Landroid/app/Activity;
@@ -845,14 +851,24 @@
 
     .line 520
     :catch_0
-    sget-object v0, Lcom/vk/analytics/eventtracking/VkTracker;->b:Lcom/vk/analytics/eventtracking/VkTracker;
+    #sget-object v0, Lcom/vk/analytics/eventtracking/VkTracker;->b:Lcom/vk/analytics/eventtracking/VkTracker;
 
-    const-string v2, "ERROR.IM.IPC_REDIRECT_FAILED"
+    #const-string v2, "ERROR.IM.IPC_REDIRECT_FAILED"
 
-    invoke-virtual {v0, v2}, Lcom/vk/analytics/eventtracking/VkTracker;->a(Ljava/lang/String;)V
+    #invoke-virtual {v0, v2}, Lcom/vk/analytics/eventtracking/VkTracker;->a(Ljava/lang/String;)V
 
     .line 522
     :cond_0
+     invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
+
+     move-result-object p1
+
+     const/4 v2, 0x0
+
+     const/4 v0, 0x0
+
+     goto :goto_0
+
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1412,6 +1428,12 @@
 
 .method private final d(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
+
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
+
+    move-result v0
+
+    return v0
 
     .line 686
     sget-object v0, Lcom/vk/navigation/NavigationDelegateBottom;->z:Ljava/util/Map;
@@ -2645,6 +2667,21 @@
 
 .method public a(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
+
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 
     const-string v0, "fragment"
 
