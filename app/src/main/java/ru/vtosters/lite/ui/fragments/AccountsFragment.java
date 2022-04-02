@@ -44,7 +44,7 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
             VKAccount b = VKAccountManager.b();
             PushSubscriber.a.a(b.b(), b.c());
             AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-            ToastUtils.a("Перезапустите приложение");
+            ToastUtils.a(Helper.getString("restart"));
             return true;
         });
 
@@ -61,7 +61,7 @@ public class AccountsFragment extends MaterialPreferenceToolbarFragment {
             VKAccount b = VKAccountManager.b();
             PushSubscriber.a.a(b.b(), b.c());
             AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-            ToastUtils.a("Перезапустите приложение");
+            ToastUtils.a(Helper.getString("restart"));
             return false;
         });
 
