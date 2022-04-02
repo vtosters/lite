@@ -132,6 +132,12 @@
 .method public getMaxItemCount()I
     .locals 1
 
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->getItemCount()I
+
+    move-result v0
+
+    return v0
+
     const/4 v0, 0x5
 
     return v0

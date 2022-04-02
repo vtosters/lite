@@ -61,7 +61,9 @@
     .line 32
     new-instance v0, Landroid/support/v4/f/Pools$c;
 
-    const/4 v1, 0x5
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->getItemCount()I
+
+    move-result v1
 
     invoke-direct {v0, v1}, Landroid/support/v4/f/Pools$c;-><init>(I)V
 
@@ -186,7 +188,9 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->f:Landroid/view/View$OnClickListener;
 
-    const/4 p1, 0x5
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->getItemCount()I
+
+    move-result v1
 
     .line 73
     new-array p1, p1, [I

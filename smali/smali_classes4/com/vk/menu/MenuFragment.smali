@@ -1281,6 +1281,8 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
+    invoke-static {v6}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectMenuFragment(Landroid/view/Menu;)V
+
     .line 145
     invoke-direct {p0, p1}, Lcom/vk/menu/MenuFragment;->a(Landroid/support/v7/view/menu/MenuBuilder;)Ljava/util/List;
 
