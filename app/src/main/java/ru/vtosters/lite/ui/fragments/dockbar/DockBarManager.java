@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import android.util.Log;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.apps.AppsFragment;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.vk.notifications.NotificationsFragment;
 import com.vtosters.lite.R;
@@ -135,6 +138,7 @@ public class DockBarManager {
 
             JSONArray selected = new JSONArray();
             for (DockBarTab tab : mSelectedTabs) {
+
                 JSONObject item = new JSONObject()
                         .put("tag", tab.tag)
                         .put("iconID", tab.iconID)
@@ -190,9 +194,11 @@ public class DockBarManager {
             DockBarTab tab = mSelectedTabs.get(curr);
             mSelectedTabs.remove(tab);
             mDisabledTabs.add(tab);
+
             for (int i = mDisabledTabs.size() - 1; i > target; i--) {
                 Collections.swap(mDisabledTabs, i, i - 1);
             }
+
             for (int i = 0; i < target; i++) {
                 Collections.swap(mDisabledTabs, i, i + 1);
             }
@@ -203,9 +209,6 @@ public class DockBarManager {
             DockBarTab tab = mDisabledTabs.get(curr);
             mDisabledTabs.remove(tab);
             mSelectedTabs.add(tab);
-            for (int i = mSelectedTabs.size() - 1; i > 0; i--) {
-                Collections.swap(mSelectedTabs, i, i - 1);
-            }
         }
         adapter.b(fromPosition, toPosition);// notifyItemMoved
     }
@@ -235,7 +238,7 @@ public class DockBarManager {
         if (viewType == DockBarAdapter.SELECTED_TAB_TYPE) {
             return position - 1;
         } else if (viewType == DockBarAdapter.DISABLED_TAB_TYPE) {
-            return position - (mSelectedTabs.size() + mGroups.size());
+            return position - mSelectedTabs.size() - mGroups.size();
         } else if (viewType == RecyclerView.INVALID_TYPE){
             return position != 0 ? 1 : 0;
         } else {
