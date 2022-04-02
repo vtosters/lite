@@ -13,6 +13,7 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,16 +37,17 @@ import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 
 import ru.vtosters.lite.ui.fragments.MusicFragment;
 import ru.vtosters.lite.utils.Helper;
+import ru.vtosters.lite.utils.Prefs;
 
-public class DockBarEditHelper {
+public class DockBarManager {
     static final int MIN_SELECTED_TABS_LIMIT = 4;
     static final int MAX_SELECTED_TABS_LIMIT = 8;
 
-    private static DockBarEditHelper sInstance = new DockBarEditHelper();
+    private static DockBarManager sInstance = new DockBarManager();
 
-    public static DockBarEditHelper getInstance() {
+    public static DockBarManager getInstance() {
         if (sInstance == null)
-            sInstance = new DockBarEditHelper();
+            sInstance = new DockBarManager();
         return sInstance;
     }
 
@@ -53,17 +55,17 @@ public class DockBarEditHelper {
     private List<DockBarTab> mDisabledTabs = new ArrayList<>();
     private List<String> mGroups = Arrays.asList(
             "Выбранные элементы докбара",
-            "Отключённые элементы"
+            "Невыбранные элементы"
     );
 
-    public DockBarEditHelper() {
+    public DockBarManager() {
         load();
     }
 
     private void load() {
         File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
 
-       // if (!dockbar.exists()) {
+        if (!dockbar.exists()) {
             mSelectedTabs.add(new DockBarTab("tab_news", R.drawable.ic_newsfeed_28, R.string.newsfeed, R.id.tab_news, NewsfeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_discover", R.drawable.ic_search_28, R.string.search, R.id.tab_discover, DiscoverFeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", R.drawable.ic_menu_messages_28, R.string.messages, R.id.tab_messages, DialogsFragment.class));
@@ -81,7 +83,7 @@ public class DockBarEditHelper {
             mDisabledTabs.add(new DockBarTab("tab_documents", R.drawable.ic_document_24, R.string.docs, R.id.menu_documents, DocumentsViewFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
-        /*} else {
+        } else {
             try {
                 JSONObject json = new JSONObject(readFully(new FileInputStream(dockbar)));
 
@@ -92,7 +94,7 @@ public class DockBarEditHelper {
                             item.getString("tag"),
                             item.getInt("iconID"),
                             item.getInt("titleID"),
-                            item.getInt("resID"),
+                            item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
                     mSelectedTabs.add(tab);
@@ -105,7 +107,7 @@ public class DockBarEditHelper {
                             item.getString("tag"),
                             item.getInt("iconID"),
                             item.getInt("titleID"),
-                            item.getInt("resID"),
+                            item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
                     mDisabledTabs.add(tab);
@@ -114,7 +116,7 @@ public class DockBarEditHelper {
             } catch (JSONException | IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
-        }*/
+        }
     }
 
     private static String readFully(InputStream is) throws IOException {
@@ -137,6 +139,7 @@ public class DockBarEditHelper {
                         .put("tag", tab.tag)
                         .put("iconID", tab.iconID)
                         .put("titleID", tab.titleID)
+                        .put("id", tab.id)
                         .put("fragmentClass", tab.fragmentClass.getName());
                 selected.put(item);
             }
@@ -147,6 +150,7 @@ public class DockBarEditHelper {
                         .put("tag", tab.tag)
                         .put("iconID", tab.iconID)
                         .put("titleID", tab.titleID)
+                        .put("id", tab.id)
                         .put("fragmentClass", tab.fragmentClass.getName());
                 disabled.put(item);
             }
@@ -161,7 +165,7 @@ public class DockBarEditHelper {
         }
     }
 
-    public void swap(DockBarEditAdapter adapter, List<DockBarTab> list, int itemType, int fromPosition, int toPosition) {
+    public void swap(DockBarAdapter adapter, List<DockBarTab> list, int itemType, int fromPosition, int toPosition) {
         int curr = adapter.getIndexByViewType(fromPosition, itemType);
         int target = adapter.getIndexByViewType(toPosition, itemType);
         if (fromPosition < toPosition) {
@@ -173,10 +177,10 @@ public class DockBarEditHelper {
                 Collections.swap(list, i, i - 1);
             }
         }
-        adapter.notifyItemMoved(fromPosition, toPosition);
+        adapter.b(fromPosition, toPosition);// notifyItemMoved
     }
 
-    public void swapAndMigrate(DockBarEditAdapter adapter, int fromPosition, int toPosition) {
+    public void swapAndMigrate(DockBarAdapter adapter, int fromPosition, int toPosition) {
         int curr = adapter.getIndexByViewType(fromPosition, adapter.getItemType(fromPosition));
         int target = adapter.getIndexByViewType(toPosition, adapter.getItemType(toPosition));
         if (fromPosition < toPosition) {
@@ -203,10 +207,10 @@ public class DockBarEditHelper {
                 Collections.swap(mSelectedTabs, i, i - 1);
             }
         }
-        adapter.notifyItemMoved(fromPosition, toPosition);
+        adapter.b(fromPosition, toPosition);// notifyItemMoved
     }
 
-    public void move(DockBarEditAdapter adapter, int index) {
+    public void move(DockBarAdapter adapter, int index) {
         if (getItemType(index) == 1) {
             DockBarTab item = mSelectedTabs.get(getIndexByViewType(index, 1));
 
@@ -218,8 +222,8 @@ public class DockBarEditHelper {
                 Collections.swap(mDisabledTabs, i, i - 1);
             }
 
-            adapter.notifyItemRemoved(index);
-            adapter.notifyItemInserted(getItemCount() - mDisabledTabs.size());
+            adapter.e_(index); // notifyItemRemoved
+            adapter.d_(getItemCount() - mDisabledTabs.size()); // notifyItemInserted
         }
     }
 
@@ -228,9 +232,9 @@ public class DockBarEditHelper {
     }
 
     public int getIndexByViewType(int position, int viewType) {
-        if (viewType == DockBarEditAdapter.SELECTED_TAB_TYPE) {
+        if (viewType == DockBarAdapter.SELECTED_TAB_TYPE) {
             return position - 1;
-        } else if (viewType == DockBarEditAdapter.DISABLED_TAB_TYPE) {
+        } else if (viewType == DockBarAdapter.DISABLED_TAB_TYPE) {
             return position - (mSelectedTabs.size() + mGroups.size());
         } else if (viewType == RecyclerView.INVALID_TYPE){
             return position != 0 ? 1 : 0;
@@ -243,9 +247,9 @@ public class DockBarEditHelper {
         if (position == 0 || position == mSelectedTabs.size() + 1) {
             return RecyclerView.INVALID_TYPE;
         } else if (position - 1 < mSelectedTabs.size()) {
-            return DockBarEditAdapter.SELECTED_TAB_TYPE;
+            return DockBarAdapter.SELECTED_TAB_TYPE;
         } else {
-            return DockBarEditAdapter.DISABLED_TAB_TYPE;
+            return DockBarAdapter.DISABLED_TAB_TYPE;
         }
     }
 
