@@ -25,7 +25,11 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    const/4 v1, 0x5
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->getItemCount()I
+
+    move-result v1
+
+    #const/4 v1, 0x5
 
     if-le v0, v1, :cond_0
 
