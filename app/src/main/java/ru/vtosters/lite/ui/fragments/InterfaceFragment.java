@@ -7,6 +7,8 @@ import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
+import ru.vtosters.lite.utils.Helper;
+
 /* renamed from: ru.vtosters.lite.utils.lite.ui.activities.interface  reason: invalid class name */
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -34,7 +36,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     }
 
     public /* synthetic */ boolean restart(Preference preference, Object obj) {
-        ToastUtils.a("Пожалуйста перезапустите приложение");
+        ToastUtils.a(Helper.getString("restart"));
         return true;
     }
 }
