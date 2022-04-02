@@ -151,7 +151,7 @@
     <public type="array" name="language" id="0x7f030059" />
     <public type="array" name="lang_value" id="0x7f03005a" />
     <public type="array" name="start" id="0x7f03005b" />
-    <public type="array" name="start_value" id="0x7f03005c" />
+    <public type="array" name="start_values" id="0x7f03005c" />
     <public type="array" name="proxy" id="0x7f03005d" />
     <public type="array" name="proxy_value" id="0x7f03005e" />
     <public type="attr" name="BMSB_auto" id="0x7f040000" />

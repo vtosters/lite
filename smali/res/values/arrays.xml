@@ -585,6 +585,7 @@
         <item>uk</item>
     </string-array>
     <string-array name="start">
+        <item>Default</item>
         <item>Newsfeed</item>
         <item>Dialogs</item>
         <item>Menu</item>
@@ -605,7 +606,8 @@
         <item>Games</item>
         <item>Bookmarks</item>
     </string-array>
-    <string-array name="start_value">
+    <string-array name="start_values">
+        <item>default</item>
         <item>newsfeed</item>
         <item>messenger</item>
         <item>menu</item>
