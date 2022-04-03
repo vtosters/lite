@@ -13,20 +13,20 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.a {
         this.mAdapter = mAdapter;
     }
 
-    @Override // isItemViewSwipeEnabled
+    @Override // isLongPressDragEnabled
     public boolean a() {
         return true;
     }
 
-    @Override // isLongPressDragEnabled
+    @Override // isItemViewSwipeEnabled
     public boolean b() {
-        return true;
+        return false;
     }
 
     @Override
     public int a(RecyclerView recyclerView, RecyclerView.x viewHolder) {
         int pos = mAdapter.getItemType(viewHolder.d());
-        int dragFlags = pos != androidx.recyclerview.widget.RecyclerView.INVALID_TYPE ? androidx.recyclerview.widget.ItemTouchHelper.UP | androidx.recyclerview.widget.ItemTouchHelper.DOWN : 0;
+        int dragFlags = pos != DockBarAdapter.GROUP_TITLE_TYPE ? androidx.recyclerview.widget.ItemTouchHelper.UP | androidx.recyclerview.widget.ItemTouchHelper.DOWN : 0;
         int swipeFlags = pos == 1 ? androidx.recyclerview.widget.ItemTouchHelper.START | androidx.recyclerview.widget.ItemTouchHelper.END : 0;
         return makeMovementFlags(dragFlags, swipeFlags);
     }
@@ -38,7 +38,7 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.a {
 
     @Override
     public boolean b(RecyclerView recyclerView, RecyclerView.x viewHolder, RecyclerView.x target) {
-        if (mAdapter.getItemType(viewHolder.d()) == androidx.recyclerview.widget.RecyclerView.INVALID_TYPE)
+        if (mAdapter.getItemType(viewHolder.d()) == DockBarAdapter.GROUP_TITLE_TYPE)
             return false;
         return mAdapter.onItemMove(viewHolder.d(), target.d());
     }

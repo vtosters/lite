@@ -16,30 +16,33 @@ import android.widget.TextView;
 import com.vtosters.lite.R;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Themes;
 
-public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditViewHolder>
+public class DockBarAdapter extends RecyclerView.a
         implements IItemTouchHelper {
 
     public static final int SELECTED_TAB_TYPE = 1;
     public static final int DISABLED_TAB_TYPE = 2;
+    public static final int GROUP_TITLE_TYPE = 3;
 
+    
     private final DockBarManager mDockBarManager = DockBarManager.getInstance();
 
     @Override
-    public DockBarEditViewHolder b(ViewGroup parent, int i) {
-        LinearLayout container = new LinearLayout(parent.getContext());
-        container.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
+    public RecyclerView.x b(ViewGroup parent, int viewType) {
+        if (viewType == GROUP_TITLE_TYPE) {
+            return new GroupViewHolder(createGroupTitle());
+        } else {
+            return new DockBarEditViewHolder(createTabItem());
+        }
+    }
 
-        View tabItem = createTabItem();
-        container.addView(tabItem, new LinearLayout.LayoutParams(-1, -2));
-
-        View groupTitle = createGroupTitle();
-        container.addView(groupTitle, new LinearLayout.LayoutParams(-1, -2));
-
-        return new DockBarEditViewHolder(container);
+    @Override
+    public int b(int i) {
+        return getItemType(i);
     }
 
     private View createTabItem() {
@@ -54,7 +57,6 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
                 Helper.convertDpToPixel(12)
         );
         container.setLayoutParams(new LinearLayout.LayoutParams(-1, Helper.convertDpToPixel(48)));
-        container.setVisibility(View.GONE);
 
         ImageView icon = new ImageView(Helper.GetContext());
         icon.setTag("icon");
@@ -69,23 +71,18 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         title.setTextSize(16.0f);
         title.setTypeface(Typeface.DEFAULT_BOLD);
         title.setTextColor(Themes.getTextAttr());
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, -2);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2);
         params.weight = 1;
         params.leftMargin = Helper.convertDpToPixel(16);
         container.addView(title, params);
-
-//        ImageView move = new ImageView(Helper.GetContext());
-//        move.setTag("move");
-//        move.setImageTintList(ColorStateList.valueOf(textSecondary));
-//        move.setLayoutParams(new LinearLayout.LayoutParams(
-//                Helper.convertDpToPixel(24),
-//                Helper.convertDpToPixel(24)));
-//        container.addView(move);
 
         return container;
     }
 
     private View createGroupTitle() {
+        LinearLayout layout = new LinearLayout(Helper.GetContext());
+        layout.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
+
         TextView title = new TextView(Helper.GetContext());
         title.setTag("group_title");
         title.setTextSize(13.0f);
@@ -96,23 +93,23 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
                 Helper.convertDpToPixel(13)
         );
         title.setAllCaps(true);
-        title.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
-        title.setVisibility(View.GONE);
-
         title.setTextColor(Themes.getTextAttr());
+        layout.addView(title, new LinearLayout.LayoutParams(-2, -2));
 
-        return title;
+        return layout;
     }
 
     @Override
-    public void a(DockBarEditViewHolder holder, int position) {
-        int viewType = mDockBarManager.getItemType(position);
-        if (viewType == 1) {
-            holder.bind(mDockBarManager.getSelectedTab(position));
-        } else if (viewType == 2) {
-            holder.bind(mDockBarManager.getDisabledTab(position));
-        } else if (viewType == androidx.recyclerview.widget.RecyclerView.INVALID_TYPE) {
-            holder.bind(mDockBarManager.getGroupTitle(position));
+    public void a(RecyclerView.x holder, int position) {
+        if (holder instanceof GroupViewHolder) {
+            ((GroupViewHolder) holder).bind(mDockBarManager.getGroupTitle(position));
+        } else {
+            int viewType = getItemType(position);
+            if (viewType == SELECTED_TAB_TYPE) {
+                ((DockBarEditViewHolder) holder).bind(mDockBarManager.getSelectedTab(position));
+            } else if (viewType == DISABLED_TAB_TYPE) {
+                ((DockBarEditViewHolder) holder).bind(mDockBarManager.getDisabledTab(position));
+            }
         }
     }
 
@@ -136,7 +133,7 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
             if (fromViewType != toViewType) {
                 mDockBarManager.swapAndMigrate(this, fromPosition, toPosition);
             } else {
-                List<DockBarTab> list = fromViewType == 1 ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
+                List<DockBarTab> list = fromViewType == SELECTED_TAB_TYPE ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
                 mDockBarManager.swap(this, list, fromViewType, fromPosition, toPosition);
             }
 
@@ -145,7 +142,7 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
             if (fromViewType != toViewType) {
                 mDockBarManager.swapAndMigrate(this, fromPosition, toPosition);
             } else {
-                List<DockBarTab> list = fromViewType == 1 ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
+                List<DockBarTab> list = fromViewType == SELECTED_TAB_TYPE ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
                 mDockBarManager.swap(this, list, fromViewType, fromPosition, toPosition);
             }
 
@@ -162,35 +159,35 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         return mDockBarManager.getItemType(position);
     }
 
-
     static class DockBarEditViewHolder extends RecyclerView.x {
 
-        private LinearLayout mTabContainer;
         private ImageView mIcon;
         private TextView mTitle;
-//        private ImageView mMove;
-
-        private TextView mGroupTitle;
 
         public DockBarEditViewHolder(View itemView) {
             super(itemView);
 
-            mTabContainer = itemView.findViewWithTag("tab_item_container");
             mIcon = itemView.findViewWithTag("icon");
             mTitle = itemView.findViewWithTag("title");
-//            mMove = itemView.findViewWithTag("move");
-
-            mGroupTitle = itemView.findViewWithTag("group_title");
         }
 
         public void bind(DockBarTab tab) {
-            mTabContainer.setVisibility(View.VISIBLE);
             mIcon.setImageResource(tab.iconID);
             mTitle.setText(tab.titleID);
         }
+    }
+
+    static class GroupViewHolder extends RecyclerView.x {
+
+        private TextView mGroupTitle;
+
+        public GroupViewHolder(View view) {
+            super(view);
+
+            mGroupTitle = view.findViewWithTag("group_title");
+        }
 
         public void bind(String groupTitle) {
-            mGroupTitle.setVisibility(View.VISIBLE);
             mGroupTitle.setText(groupTitle);
         }
     }

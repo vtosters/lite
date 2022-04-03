@@ -277,21 +277,20 @@ public class DockBarManager {
             return position - 1;
         } else if (viewType == DockBarAdapter.DISABLED_TAB_TYPE) {
             return position - mSelectedTabs.size() - mGroups.size();
-        } else if (viewType == RecyclerView.INVALID_TYPE){
-            return position != 0 ? 1 : 0;
         } else {
-            return -1;
+            return position != 0 ? 1 : 0;
         }
     }
 
     public int getItemType(int position) {
         if (position == 0 || position == mSelectedTabs.size() + 1) {
-            return RecyclerView.INVALID_TYPE;
+            return DockBarAdapter.GROUP_TITLE_TYPE;
         } else if (position - 1 < mSelectedTabs.size()) {
             return DockBarAdapter.SELECTED_TAB_TYPE;
-        } else {
+        } else if (position - 1 >= mSelectedTabs.size()) {
             return DockBarAdapter.DISABLED_TAB_TYPE;
         }
+        return -1;
     }
 
     public DockBarTab getSelectedTab(int pos) {
