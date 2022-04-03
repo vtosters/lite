@@ -4117,6 +4117,168 @@
     goto/16 :goto_5
 
     :cond_52
+
+
+    const-string v2, "/vt/dockbar?.*"
+
+    .line 416
+    new-instance v3, Lkotlin/text/Regex;
+
+    invoke-direct {v3, v2}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0xe
+
+    const/4 v8, 0x0
+
+    move-object v2, v9
+
+    invoke-static/range {v2 .. v8}, Lcom/vk/common/links/LinkProcessor2;->a(Lcom/vk/common/links/LinkProcessor2;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_130
+
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 14
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/dockbar/DockBarFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_5
+
+    :cond_130
+
+
+    const-string v2, "/vt/tgs?.*"
+
+    .line 416
+    new-instance v3, Lkotlin/text/Regex;
+
+    invoke-direct {v3, v2}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0xe
+
+    const/4 v8, 0x0
+
+    move-object v2, v9
+
+    invoke-static/range {v2 .. v8}, Lcom/vk/common/links/LinkProcessor2;->a(Lcom/vk/common/links/LinkProcessor2;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_131
+
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 14
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/tgstickers/StickersFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_5
+
+    :cond_131
+
+
+    const-string v2, "/vt/accounts?.*"
+
+    .line 416
+    new-instance v3, Lkotlin/text/Regex;
+
+    invoke-direct {v3, v2}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0xe
+
+    const/4 v8, 0x0
+
+    move-object v2, v9
+
+    invoke-static/range {v2 .. v8}, Lcom/vk/common/links/LinkProcessor2;->a(Lcom/vk/common/links/LinkProcessor2;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_132
+
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 14
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/AccountsFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_5
+
+    :cond_132
+
+
+
     const-string v2, "/vt/feed?.*"
 
     .line 416
