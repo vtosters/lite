@@ -32,8 +32,10 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
+import com.vtosters.lite.fragments.SettingsListFragment;
 import com.vtosters.lite.fragments.d.DocumentsViewFragment;
 import com.vtosters.lite.fragments.f.FriendsFragment;
+import com.vtosters.lite.fragments.g.BirthdaysFragment;
 import com.vtosters.lite.fragments.h.GroupsFragment;
 import com.vtosters.lite.fragments.lives.LivesPostListFragment;
 import com.vtosters.lite.fragments.m.VideosFragment;
@@ -88,6 +90,8 @@ public class DockBarManager {
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, SettingsListFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_brtd", R.drawable.ic_menu_birthdays, R.string.birthdays_title, R.id.menu_birthdays, BirthdaysFragment.class));
 
         } else {
             try {
