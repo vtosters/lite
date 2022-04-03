@@ -7,6 +7,7 @@ import com.vk.discover.DiscoverFeedFragment;
 import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.Feed2049;
 import com.vk.newsfeed.NewsfeedFragment;
 
@@ -39,7 +40,6 @@ import com.vtosters.lite.fragments.m.VideosFragment;
 import com.vtosters.lite.fragments.messages.dialogs.DialogsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 
-import ru.vtosters.lite.ui.fragments.MusicFragment;
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
