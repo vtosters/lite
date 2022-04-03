@@ -5,17 +5,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.a.ItemTouchHelper;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
-import java.io.File;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
 import ru.vtosters.lite.utils.Helper;
@@ -32,7 +27,6 @@ public class DockBarFragment extends ToolbarFragment {
 
         LinearLayout container = new LinearLayout(n());
         container.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
-        container.setGravity(Gravity.CENTER);
         container.setOrientation(LinearLayout.VERTICAL);
 
         LinearLayout buttonsContainer = new LinearLayout(n());
@@ -91,12 +85,4 @@ public class DockBarFragment extends ToolbarFragment {
 
         a("Редактор докбара");
     }
-
-
-
-   /* @Override
-    public void A_() {
-        super.A_();
-
-    }*/
 }
