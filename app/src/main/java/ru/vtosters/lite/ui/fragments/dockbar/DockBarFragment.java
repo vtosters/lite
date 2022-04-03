@@ -5,12 +5,20 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.a.ItemTouchHelper;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import java.io.File;
+
 import me.grishka.appkit.fragments.ToolbarFragment;
+import ru.vtosters.lite.utils.Helper;
 
 public class DockBarFragment extends ToolbarFragment {
 
@@ -24,6 +32,42 @@ public class DockBarFragment extends ToolbarFragment {
 
         LinearLayout container = new LinearLayout(n());
         container.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
+        container.setGravity(Gravity.CENTER);
+        container.setOrientation(LinearLayout.VERTICAL);
+
+        LinearLayout buttonsContainer = new LinearLayout(n());
+        buttonsContainer.setPadding(
+                Helper.convertDpToPixel(13),
+                Helper.convertDpToPixel(10),
+                Helper.convertDpToPixel(13),
+                Helper.convertDpToPixel(10)
+        );
+        container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
+        
+        Button save = new Button(n());
+        save.setText("Сохранить");
+        save.setOnClickListener(v -> {
+            DockBarManager.getInstance().save();
+            Helper.restarting();
+        });
+
+        LinearLayout.LayoutParams saveParams = new LinearLayout.LayoutParams(0, -2);
+        saveParams.weight = 1.0f;
+        buttonsContainer.addView(save, saveParams);
+
+        View divider = new View(n());
+        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(Helper.convertDpToPixel(10), 0));
+
+        Button reset = new Button(n());
+        reset.setText("Сбросить");
+        reset.setOnClickListener(v -> {
+            DockBarManager.getInstance().delete();
+            Helper.restarting();
+        });
+
+        LinearLayout.LayoutParams resetParams = new LinearLayout.LayoutParams(0, -2);
+        resetParams.weight = 1.0f;
+        buttonsContainer.addView(reset, resetParams);
 
         mRecyclerView = new RecyclerView(n());
         mRecyclerView.setHasFixedSize(true);
@@ -48,9 +92,11 @@ public class DockBarFragment extends ToolbarFragment {
         a("Редактор докбара");
     }
 
-    @Override
+
+
+   /* @Override
     public void A_() {
         super.A_();
-        DockBarManager.getInstance().save();
-    }
+
+    }*/
 }
