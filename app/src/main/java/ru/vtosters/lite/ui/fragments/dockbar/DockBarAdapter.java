@@ -184,7 +184,6 @@ public class DockBarAdapter extends RecyclerView.a<DockBarAdapter.DockBarEditVie
         }
 
         public void bind(DockBarTab tab) {
-            Log.d("guzno", String.format("Bind data: { Icon: %d, Title: %s }", tab.iconID, Helper.GetContext().getString(tab.titleID)));
             mTabContainer.setVisibility(View.VISIBLE);
             mIcon.setImageResource(tab.iconID);
             mTitle.setText(tab.titleID);
