@@ -1,7 +1,5 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import android.util.Log;
-
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.apps.AppsFragment;
@@ -27,7 +25,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.vk.notifications.NotificationsFragment;
 import com.vtosters.lite.R;
@@ -47,8 +44,8 @@ import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
 public class DockBarManager {
-    static final int MIN_SELECTED_TABS_LIMIT = 3;
-    static final int MAX_SELECTED_TABS_LIMIT = 8;
+    public static final int MIN_SELECTED_TABS_LIMIT = 3;
+    public static final int MAX_SELECTED_TABS_LIMIT = 8;
 
     private static DockBarManager sInstance = new DockBarManager();
 
@@ -91,7 +88,7 @@ public class DockBarManager {
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
-            
+
         } else {
             try {
                 JSONObject json = new JSONObject(readFully(new FileInputStream(dockbar)));
@@ -164,9 +161,14 @@ public class DockBarManager {
         return bos.toString();
     }
 
+    public void delete() {
+        File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
+        if (dockbar.exists()) dockbar.delete();
+    }
+
     public void save() {
         try {
-            File cache = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
+            File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
 
             JSONArray selected = new JSONArray();
             for (DockBarTab tab : mSelectedTabs) {
@@ -194,7 +196,7 @@ public class DockBarManager {
             JSONObject json = new JSONObject();
             json.put("selected", selected).put("disabled", disabled);
 
-            FileOutputStream fos = new FileOutputStream(cache);
+            FileOutputStream fos = new FileOutputStream(dockbar);
             fos.write(json.toString().getBytes(StandardCharsets.UTF_8));
         } catch (JSONException | IOException e) {
             e.printStackTrace();
