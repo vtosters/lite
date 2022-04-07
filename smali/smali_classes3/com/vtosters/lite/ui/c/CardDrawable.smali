@@ -141,6 +141,8 @@
     invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setDither(Z)V
 
     .line 80
+    const/high16 p3, 0x3fc00000
+
     iput p3, p0, Lcom/vtosters/lite/ui/c/CardDrawable;->f:F
 
     .line 81
