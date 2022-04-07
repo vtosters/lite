@@ -258,6 +258,7 @@ public class Prefs {
                 String line = scanner.findInLine("VERSION_BUILD=.+");
                 if (line != null)
                     return line.replace("VERSION_BUILD=", "");
+                return "0000000";
             }
         } catch (IOException e) {
             e.printStackTrace();
