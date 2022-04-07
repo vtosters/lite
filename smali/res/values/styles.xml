@@ -4921,6 +4921,7 @@
     <style name="VkIm.Theme.Search.Bg.VkApp" parent="@style/VkIm.Theme.Search.Bg">
         <item name="android:background">?background_content</item>
         <item name="android:text">@string/vkim_msg_search_hint</item>
+        <item name="android:textColor">?text_secondary</item>
     </style>
     <style name="VkIm.Theme.Search.Bg.VkMe" parent="@style/VkIm.Theme.Search.Bg">
         <item name="android:background">#9bffffff</item>
