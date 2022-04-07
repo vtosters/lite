@@ -74,7 +74,7 @@ echo.
 echo %ESC%[1;4mBuild apk...%ESC%[0m
 echo.
 cd smali\
-call java -jar ../scripts/apktool.jar b . -o ../smali/VTLite.apk --use-aapt2 -p ../scripts/framework/
+call java -jar ../scripts/apktool.jar b . -o ../scripts/VTLite.apk --use-aapt2 -p ../scripts/framework/
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
