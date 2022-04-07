@@ -51,7 +51,6 @@ if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
 	echo -e "${RED}Провал.${NC}\n"
-	exit 1
 fi
 
 echo -e "${BOLD}${UNDERLINE}Сборка apk..${NC}"
