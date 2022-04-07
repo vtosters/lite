@@ -1142,11 +1142,22 @@
 .end method
 
 .method public t()Lcom/vk/dto/stories/model/StoryEntry;
-    .locals 2
+    .locals 3
 
     .line 181
     iget-object v0, p0, Lcom/vk/dto/stories/model/StoriesContainer;->a:Ljava/util/ArrayList;
 
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const v0, 0x0
+
+    return-object v0
+
+    :cond_1
     iget-object v1, p0, Lcom/vk/dto/stories/model/StoriesContainer;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
