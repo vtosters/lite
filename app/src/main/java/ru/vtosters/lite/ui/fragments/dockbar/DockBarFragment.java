@@ -78,7 +78,6 @@ public class DockBarFragment extends ToolbarFragment {
 
     @Override
     public void a(View arg0, Bundle arg1) {
-        Log.d("test", "Called onViewCreated method");
         o_(true);
 
         super.a(arg0, arg1);

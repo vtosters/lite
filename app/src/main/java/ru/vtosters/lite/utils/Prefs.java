@@ -108,6 +108,10 @@ public class Prefs {
         return BooleanFalse("adsgroup");
     }
 
+    public static boolean olddock() {
+        return BooleanFalse("olddock");
+    }
+
     public static boolean adsslider() {
         return BooleanFalse("__dbg_no_slider_ads");
     }
