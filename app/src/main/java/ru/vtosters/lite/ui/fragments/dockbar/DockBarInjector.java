@@ -68,9 +68,9 @@ public class DockBarInjector {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
             Drawable drawable = Helper.GetContext().getResources().getDrawable(tab.iconID);
             ColorStateList colorStateList = Helper.GetContext().getResources().getColorStateList(com.vtosters.lite.R.color.bottom_navigation_item);
-            if (isAndroidMonet()) {
-                colorStateList = ColorStateList.valueOf(Themes.getAccentColor());
-            }
+//            if (isAndroidMonet()) {
+//                colorStateList = ColorStateList.valueOf(Themes.getAccentColor());
+//            }
             add.setIcon((Drawable) new RecoloredDrawable(drawable, colorStateList));
             add.setShowAsAction(1);
             add.setCheckable(true);
