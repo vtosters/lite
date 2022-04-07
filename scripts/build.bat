@@ -68,7 +68,6 @@ if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
     echo %ESC%[31mFailed%ESC%[0m
-    exit /B 1
 )
 
 echo.
