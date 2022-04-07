@@ -24,12 +24,16 @@ VTosters Lite - это модифицированный клиент ВКонт�
 ./build.sh
 ```
 
+![](https://cdn.discordapp.com/attachments/762063967979175946/961657476317581393/unknown.png)
+
+
 ### Windows
 ```
 build.bat
 ```
 
-![](https://media.discordapp.net/attachments/762063967979175946/956927341450391562/unknown.png)
+![](https://cdn.discordapp.com/attachments/762063967979175946/961658465204465754/unknown.png)
+
 
 ## Проверка версии коммита
 
