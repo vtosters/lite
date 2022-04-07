@@ -51,7 +51,7 @@
     </style>
     <style name="ActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
         <item name="android:textSize">18.0dip</item>
-        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textColor">?text_primary</item>
     </style>
     <style name="ActionButton" parent="@style/Widget.AppCompat.Light.ActionButton" />
     <style name="ActionButton.Blue" parent="@style/ActionButton">
@@ -1642,7 +1642,7 @@
         <item name="android:shadowRadius">@integer/s2dip</item>
     </style>
     <style name="GradientActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
-        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textColor">?text_primary</item>
         <item name="android:shadowColor">#26000000</item>
         <item name="android:shadowDy">@integer/s1dip</item>
         <item name="android:shadowRadius">@integer/s2dip</item>
