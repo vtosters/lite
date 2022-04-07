@@ -120,7 +120,7 @@ GOTO startinstall
 echo.
 echo %ESC%[1;4mInstall apk...%ESC%[0m
 echo.
-call adb install VTLite.apk
+call adb install ../scripts/VTLite.apk
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
