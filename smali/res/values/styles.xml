@@ -3129,7 +3129,7 @@
     </style>
     <style name="UserSmallTitle">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:textColor">#ff2e3033</item>
+        <item name="android:textColor">?text_primary</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:duplicateParentState">false</item>
         <item name="android:layout_width">fill_parent</item>
