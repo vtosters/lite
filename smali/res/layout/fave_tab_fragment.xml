@@ -8,7 +8,7 @@
                 <TextView android:textSize="14.0sp" android:textColor="@color/white_opacity40" android:ellipsize="end" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:maxEms="20" android:fontFamily="@string/font_family_medium" />
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
-        <android.support.design.widget.TabLayout android:id="@id/tabs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" app:tabGravity="fill" app:tabIndicatorColor="#ffffffff" app:tabMaxWidth="0.0dip" app:tabMode="scrollable" app:tabSelectedTextColor="#ffffffff" app:tabTextColor="#99ffffff" />
+        <android.support.design.widget.TabLayout android:id="@id/tabs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" app:tabGravity="fill" app:tabIndicatorColor="?accent" app:tabMaxWidth="0.0dip" app:tabMode="scrollable" app:tabSelectedTextColor="?text_primary" app:tabTextColor="?text_secondary" />
     </android.support.design.widget.AppBarLayout>
     <ProgressBar android:layout_gravity="center" android:id="@id/loading" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="56.0dip" />
     <com.vk.core.view.VKViewPager android:id="@id/viewpager" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toBottomOf="@id/vk_app_bar" />
