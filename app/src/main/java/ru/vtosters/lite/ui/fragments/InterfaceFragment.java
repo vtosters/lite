@@ -36,7 +36,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     }
 
     public /* synthetic */ boolean restart(Preference preference, Object obj) {
-        ToastUtils.a(Helper.getString("restart"));
+        ToastUtils.a(Helper.getString("restartapp"));
         return true;
     }
 }
