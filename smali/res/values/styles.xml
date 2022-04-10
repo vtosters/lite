@@ -1318,7 +1318,7 @@
         <item name="actionBarTheme">@style/ActionBarTheme.ItemsFull</item>
     </style>
     <style name="BaseStyle.Registration.Blue" parent="@style/BaseStyle.Registration">
-        <item name="android:windowBackground">?accent</item>
+        <item name="android:windowBackground">@color/header_blue</item>
         <item name="android:windowIsFloating">false</item>
         <item name="colorAccent">@android:color/white</item>
         <item name="colorPrimary">@android:color/white</item>
