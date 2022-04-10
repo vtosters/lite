@@ -46,13 +46,14 @@ public class MultiAccountManager {
     }
 
     public static String getAvatar(String str) {
-        Pattern pattern = Pattern.compile(".*\"name\":\\{.*?:\"(.*?)\"\\}.*");
+        Pattern pattern = Pattern.compile(".*\"photo\":\\{.*?:\"(.*?)\"\\}.*");
         Matcher matcher = pattern.matcher(getNeededAccount(str).getString("key_vk_account", ""));
         if (matcher.find()) {
             String group = matcher.group(1);
-            return group;
+            String replaced = group.replace("\\/", "/");
+            return replaced;
         }
-        return "err";
+        return "https://vk.com/images/camera_200.png";
     }
 
     public static int getAvalibleAcc() {
@@ -88,7 +89,7 @@ public class MultiAccountManager {
         ArrayList<String> list = new ArrayList<String>();
         while (true) {
             if (getAvatar(Integer.toString(intg)) != "err") {
-                list.add(getName(Integer.toString(intg)));
+                list.add(getAvatar(Integer.toString(intg)));
                 intg++;
             } else {
                 break;
