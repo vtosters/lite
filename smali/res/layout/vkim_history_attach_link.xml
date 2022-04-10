@@ -7,6 +7,6 @@
     </FrameLayout>
     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip">
         <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/vkim_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:lines="2" android:lineSpacingExtra="2.0dip" />
-        <TextView android:textSize="14.0sp" android:textColor="#ff909499" android:ellipsize="end" android:id="@id/vkim_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" />
+        <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/vkim_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" />
     </LinearLayout>
 </LinearLayout>
