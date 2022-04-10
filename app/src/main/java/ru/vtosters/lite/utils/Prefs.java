@@ -1,5 +1,7 @@
 package ru.vtosters.lite.utils;
 
+import static android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+import static android.view.WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 
 import android.app.Activity;
@@ -20,8 +22,6 @@ import com.vk.about.Items2;
 import com.vk.apps.AppsFragment;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.Screen;
-import com.vk.discover.DiscoverFeedFragment;
-import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
@@ -475,15 +475,11 @@ public class Prefs {
     }
 
     public static void setNavbarColor(Window window, int i) {
-        if (navbar()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                window.setNavigationBarColor(getNavbarColor());
-            }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && VKThemeHelper.d()) {
+            window.getDecorView().setSystemUiVisibility(FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS | SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
-        if (Build.VERSION.SDK_INT >= 31 && VKThemeHelper.d()) {
-            View decorView = window.getDecorView();
-            Intrinsics.a((Object) decorView, "view");
-            decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() | 8192);
+        if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setNavigationBarColor(getNavbarColor());
         }
     }
 
