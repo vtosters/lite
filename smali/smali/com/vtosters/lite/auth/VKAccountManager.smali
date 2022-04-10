@@ -587,7 +587,7 @@
 .method public static e()Landroid/content/SharedPreferences;
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/AccountManager;->getCurrentAccount()Landroid/content/SharedPreferences;
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/multiaccount/MultiAccountManager;->getCurrentAccount()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
