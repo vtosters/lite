@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
 import static android.content.Context.MODE_PRIVATE;
-
 import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.SharedPreferences;
@@ -18,7 +17,6 @@ import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.f.FileUtils;
 import com.vk.core.util.AppContextHolder;
-import com.vk.core.util.ToastUtils;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.imageloader.view.VKCircleImageView;
 import com.vk.pushes.PushSubscriber;
@@ -32,7 +30,7 @@ import ru.vtosters.lite.utils.Helper;
 
 public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.MultiAccountViewHolder> {
 
-    private List<MultiAccountItem> mAccounts = new ArrayList<>();
+    private final List<MultiAccountItem> mAccounts = new ArrayList<>();
 
     public MultiAccountAdapter() {
         CharSequence[] getAccAmountNames = MultiAccountManager.getAccAmountNames();
@@ -96,8 +94,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
 
         return new MultiAccountViewHolder(layout);
     }
-
-
+    
     @Override
     public void a(MultiAccountViewHolder holder, int pos) {
         holder.bind(mAccounts.get(pos == 0 ? null : pos - 1), pos);
@@ -110,10 +107,10 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
 
     static class MultiAccountViewHolder extends RecyclerView.x {
 
-        private RelativeLayout mContainer;
-        private VKCircleImageView mAvatar;
-        private TextView mNickname;
-        private ImageButton mAction;
+        private final RelativeLayout mContainer;
+        private final VKCircleImageView mAvatar;
+        private final TextView mNickname;
+        private final ImageButton mAction;
 
         public MultiAccountViewHolder(View view) {
             super(view);
@@ -141,7 +138,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    ToastUtils.a(Helper.getString("restartapp"));
+                    Helper.restarting();
                 });
             } else {
                 mContainer.setOnClickListener(v -> {
@@ -153,19 +150,14 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    Helper.restarting();
                 });
                 mAvatar.a(item.imageUrl);
                 mNickname.setText(item.nickname);
                 mAction.setOnClickListener(v -> {
                     // здесь удаление аккаунта из префов
-                    VKImageLoader.b();
-                    ImEngineProvider.a().h();
-                    AudioMessageUtils.j();
-                    FileUtils.l();
-                    VKAccount b = VKAccountManager.b();
-                    PushSubscriber.a.a(b.b(), b.c());
-                    AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    ToastUtils.a(Helper.getString("restartapp"));
+                    GetContext().getSharedPreferences("pref_account_manager" + pos, MODE_PRIVATE).edit().clear().commit();
+                    Helper.restarting();
                 });
                 mAction.setVisibility(View.VISIBLE);
             }
