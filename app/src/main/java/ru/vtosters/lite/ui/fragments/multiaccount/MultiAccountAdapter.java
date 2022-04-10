@@ -136,6 +136,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     AudioMessageUtils.j();
                     FileUtils.l();
                     VKAccount b = VKAccountManager.b();
+                    GetContext().getSharedPreferences("push_subscriber" + pos, MODE_PRIVATE).edit().clear().commit();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
                     Helper.restarting();
@@ -148,6 +149,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     AudioMessageUtils.j();
                     FileUtils.l();
                     VKAccount b = VKAccountManager.b();
+                    GetContext().getSharedPreferences("push_subscriber" + pos, MODE_PRIVATE).edit().clear().commit();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
                     Helper.restarting();
