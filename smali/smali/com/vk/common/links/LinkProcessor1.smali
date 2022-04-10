@@ -4257,7 +4257,7 @@
     .line 14
     new-instance v8, Lcom/vk/navigation/Navigator;
 
-    const-class v0, Lru/vtosters/lite/ui/fragments/AccountsFragment;
+    const-class v0, Lru/vtosters/lite/ui/fragments/multiaccount/MultiAccountFragment;
 
     invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 

@@ -1,4 +1,4 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.ui.fragments.multiaccount;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ru.vtosters.lite.utils.Helper.GetContext;
@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AccountManager {
+import ru.vtosters.lite.utils.Helper;
+
+public class MultiAccountManager {
     public static SharedPreferences getCurrentAccount() {
         String Value = ru.vtosters.lite.utils.Helper.GetPreferences().getString("account", "");
         return Helper.GetContext().getSharedPreferences("pref_account_manager" + Value, MODE_PRIVATE);
@@ -43,6 +45,16 @@ public class AccountManager {
         return "err";
     }
 
+    public static String getAvatar(String str) {
+        Pattern pattern = Pattern.compile(".*\"name\":\\{.*?:\"(.*?)\"\\}.*");
+        Matcher matcher = pattern.matcher(getNeededAccount(str).getString("key_vk_account", ""));
+        if (matcher.find()) {
+            String group = matcher.group(1);
+            return group;
+        }
+        return "err";
+    }
+
     public static int getAvalibleAcc() {
         int intg = 0;
         while (true) {
@@ -61,6 +73,21 @@ public class AccountManager {
         ArrayList<String> list = new ArrayList<String>();
         while (true) {
             if (getName(Integer.toString(intg)) != "err") {
+                list.add(getName(Integer.toString(intg)));
+                intg++;
+            } else {
+                break;
+            }
+        };
+        final CharSequence[] charSequenceItems = list.toArray(new CharSequence[list.size()]);
+        return charSequenceItems;
+    }
+
+    public static CharSequence[] getAvatars() {
+        int intg = 0;
+        ArrayList<String> list = new ArrayList<String>();
+        while (true) {
+            if (getAvatar(Integer.toString(intg)) != "err") {
                 list.add(getName(Integer.toString(intg)));
                 intg++;
             } else {
