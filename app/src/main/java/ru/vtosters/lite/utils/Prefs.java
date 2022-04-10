@@ -468,7 +468,7 @@ public class Prefs {
     }
 
     public static boolean newvideo() {
-        return BooleanFalse("newvideo");
+        return false;
     }
 
     public static String widgetads() {
