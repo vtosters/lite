@@ -4,7 +4,6 @@
     <PreferenceCategory android:title="@string/vtlinterfacemsg">
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlcalls" android:key="calls" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlmsgtails" android:key="msgtails" android:defaultValue="true" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlmsgflat" android:key="msgflat" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlvoice" android:key="voice" android:summary="@string/vtlvoicesummary" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>

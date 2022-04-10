@@ -12,6 +12,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Фикс некоторых покрасок Monet" android:key="color_grishka" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="VK Me theme" android:key="vkim_msg" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="libverify support" android:key="libverify" android:summary="Включение может пофиксить 2фа вход" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlmsgflat" android:key="msgflat" android:defaultValue="false" />
         <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/language" android:title="Язык приложения" android:key="lang_value" android:defaultValue="system" android:dialogTitle="Выберите язык приложения" android:entryValues="@array/lang_value" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Функции для разработчиков">
