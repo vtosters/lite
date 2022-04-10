@@ -4355,7 +4355,7 @@
     <style name="VkIm.MsgPart.AudioMsg.Duration" parent="@style/VkIm.MsgPart.AudioMsg">
         <item name="android:textSize">12.0sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">#ff5181b8</item>
+        <item name="android:textColor">?text_primary</item>
         <item name="android:fontFamily">@string/fontRobotoRegular</item>
     </style>
     <style name="VkIm.MsgPart.Button" parent="@style/VkIm.MsgPart" />
@@ -4382,13 +4382,13 @@
     <style name="VkIm.MsgPart.Call.Failure" parent="@style/VkIm.MsgPart.Call">
         <item name="android:textSize">14.0sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">#ffe64646</item>
+        <item name="android:textColor">?text_primary</item>
         <item name="android:fontFamily">@string/fontRobotoRegular</item>
     </style>
     <style name="VkIm.MsgPart.Call.Title" parent="@style/VkIm.MsgPart.Call">
         <item name="android:textSize">15.0sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">#ff2e3033</item>
+        <item name="android:textColor">?text_primary</item>
         <item name="android:fontFamily">@string/fontRobotoMedium</item>
     </style>
     <style name="VkIm.MsgPart.Fwd" parent="@style/VkIm.MsgPart" />
@@ -4470,7 +4470,7 @@
         <item name="vkim_snippet_buttonTextSize">13.0sp</item>
         <item name="vkim_snippet_captionFontFamily">@string/fontRobotoRegular</item>
         <item name="vkim_snippet_captionText">@null</item>
-        <item name="vkim_snippet_captionTextColor">?im_history_incoming_foreground_caption</item>
+        <item name="vkim_snippet_captionTextColor">?text_primary</item>
         <item name="vkim_snippet_captionTextSize">13.0sp</item>
         <item name="vkim_snippet_contentPaddingBottom">4.0dip</item>
         <item name="vkim_snippet_contentPaddingLeft">10.0dip</item>
@@ -4478,7 +4478,7 @@
         <item name="vkim_snippet_contentPaddingTop">4.0dip</item>
         <item name="vkim_snippet_descriptionFontFamily">@string/fontRobotoRegular</item>
         <item name="vkim_snippet_descriptionText">@null</item>
-        <item name="vkim_snippet_descriptionTextColor">?im_history_incoming_foreground_caption</item>
+        <item name="vkim_snippet_descriptionTextColor">?text_secondary</item>
         <item name="vkim_snippet_descriptionTextSize">14.0sp</item>
         <item name="vkim_snippet_imageCornerRadius">?im_msg_part_corner_radius_big</item>
         <item name="vkim_snippet_imageMaxHeight">80.0dip</item>
@@ -4487,14 +4487,14 @@
         <item name="vkim_snippet_imageMinWidth">80.0dip</item>
         <item name="vkim_snippet_priceFontFamily">@string/fontRobotoRegular</item>
         <item name="vkim_snippet_priceText">@null</item>
-        <item name="vkim_snippet_priceTextColor">?im_history_incoming_foreground_caption</item>
+        <item name="vkim_snippet_priceTextColor">?text_primary</item>
         <item name="vkim_snippet_priceTextSize">13.0sp</item>
         <item name="vkim_snippet_timeMargin">8.0dip</item>
         <item name="vkim_snippet_timeText">@null</item>
         <item name="vkim_snippet_timeTextAppearance">@style/VkIm.MsgPart.Time.TextSimple</item>
         <item name="vkim_snippet_titleFontFamily">@string/fontRobotoMedium</item>
         <item name="vkim_snippet_titleText">@null</item>
-        <item name="vkim_snippet_titleTextColor">#ff2e3033</item>
+        <item name="vkim_snippet_titleTextColor">?text_primary</item>
         <item name="vkim_snippet_titleTextSize">14.0sp</item>
     </style>
     <style name="VkIm.MsgPart.Time" parent="@style/VkIm.MsgPart" />
