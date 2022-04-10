@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.vk.notifications.NotificationsContainerFragment;
 import com.vk.notifications.NotificationsFragment;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.GamesFragment;
@@ -75,7 +76,7 @@ public class DockBarManager {
             mSelectedTabs.add(new DockBarTab("tab_news", Prefs.olddock() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, Prefs.isUseAlternativeFragments() ? Feed2049.b.c() : NewsfeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_discover", Prefs.olddock() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, Prefs.isUseAlternativeFragments() ? DiscoverFragment.class : DiscoverFeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", Prefs.olddock() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_feedback", Prefs.olddock() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_feedback", Prefs.olddock() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_menu", Prefs.olddock() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
 
             mDisabledTabs.add(new DockBarTab("tab_friends", R.drawable.ic_user_24, R.string.friends, R.id.menu_friends, FriendsFragment.class));
