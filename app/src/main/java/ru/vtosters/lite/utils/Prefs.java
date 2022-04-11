@@ -59,7 +59,7 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager;
 
 public class Prefs {
-    public static String VERSIONNAME = "2.0 DEV";
+    public static String VERSIONNAME = "2.0 Beta";
     private static List<String> mFilters;
     private static List<Activity> activities = new ArrayList<>();
 
