@@ -13,8 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import ru.vtosters.lite.R;
-
 public class VideoDownloader {
     public static void downloadVideo(VideoFile videoFile, Context context) {
         final List<String> list = new ArrayList<>();

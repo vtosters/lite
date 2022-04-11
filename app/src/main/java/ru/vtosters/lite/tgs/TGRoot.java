@@ -2,7 +2,6 @@ package ru.vtosters.lite.tgs;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 
 import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;

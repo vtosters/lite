@@ -1,7 +1,5 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFeedFragment;
 import com.vk.discover.DiscoverFragment;
@@ -10,6 +8,20 @@ import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.Feed2049;
 import com.vk.newsfeed.NewsfeedFragment;
+import com.vk.notifications.NotificationsContainerFragment;
+import com.vtosters.lite.R;
+import com.vtosters.lite.fragments.GamesFragment;
+import com.vtosters.lite.fragments.PhotosFragment;
+import com.vtosters.lite.fragments.ProfileFragment;
+import com.vtosters.lite.fragments.SettingsListFragment;
+import com.vtosters.lite.fragments.d.DocumentsViewFragment;
+import com.vtosters.lite.fragments.f.FriendsFragment;
+import com.vtosters.lite.fragments.g.BirthdaysFragment;
+import com.vtosters.lite.fragments.h.GroupsFragment;
+import com.vtosters.lite.fragments.lives.LivesPostListFragment;
+import com.vtosters.lite.fragments.m.VideosFragment;
+import com.vtosters.lite.fragments.messages.dialogs.DialogsFragment;
+import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,22 +38,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import com.vk.notifications.NotificationsContainerFragment;
-import com.vk.notifications.NotificationsFragment;
-import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.GamesFragment;
-import com.vtosters.lite.fragments.PhotosFragment;
-import com.vtosters.lite.fragments.ProfileFragment;
-import com.vtosters.lite.fragments.SettingsListFragment;
-import com.vtosters.lite.fragments.d.DocumentsViewFragment;
-import com.vtosters.lite.fragments.f.FriendsFragment;
-import com.vtosters.lite.fragments.g.BirthdaysFragment;
-import com.vtosters.lite.fragments.h.GroupsFragment;
-import com.vtosters.lite.fragments.lives.LivesPostListFragment;
-import com.vtosters.lite.fragments.m.VideosFragment;
-import com.vtosters.lite.fragments.messages.dialogs.DialogsFragment;
-import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;

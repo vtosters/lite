@@ -1,7 +1,5 @@
 package ru.vtosters.lite.dnr;
 
-import android.util.Log;
-
 import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.commands.messages.SetUserActivityCmd;
 import com.vk.im.engine.models.dialogs.Dialog;

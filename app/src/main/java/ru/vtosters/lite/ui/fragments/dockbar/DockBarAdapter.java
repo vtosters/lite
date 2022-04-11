@@ -1,11 +1,8 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.vtosters.lite.R;
-
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Themes;

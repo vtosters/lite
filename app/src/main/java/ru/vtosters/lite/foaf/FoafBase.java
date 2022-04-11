@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.exifinterface.media.ExifInterface;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vtosters.lite.R;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -24,9 +25,6 @@ import java.util.regex.Pattern;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.f0x1d.net.F0x1dRequest;
-
-import com.vtosters.lite.R;
-
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 

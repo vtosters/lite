@@ -1,7 +1,5 @@
 package ru.vtosters.lite.dnr;
 
-import android.util.Log;
-
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 

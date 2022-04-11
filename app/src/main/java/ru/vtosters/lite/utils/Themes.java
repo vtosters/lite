@@ -10,9 +10,6 @@ import android.widget.ImageButton;
 import com.vk.core.d.RecoloredDrawable;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
-import com.vtosters.lite.auth.VKAccountManager;
-
-import ru.vtosters.lite.f0x1d.VTVerifications;
 
 public class Themes {
     public static int getAccentColor() {
