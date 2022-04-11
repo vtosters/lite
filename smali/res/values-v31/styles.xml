@@ -10,7 +10,6 @@
         <item name="text_secondary">@android:color/system_neutral2_200</item>
         <item name="background_content">@android:color/system_neutral1_900</item>
         <item name="background_page">@android:color/system_neutral1_800</item>
-
         <item name="action_sheet_action_foreground">@color/white</item>
         <item name="action_sheet_separator">@color/white_alpha12</item>
         <item name="activity_indicator_tint">@android:color/system_neutral2_200</item>
@@ -535,7 +534,6 @@
         <item name="im_bubble_gift_background">@color/gold_200</item>
         <item name="im_bubble_gift_text">@color/gold_500</item>
         <item name="im_bubble_gift_text_secondary">@color/gold_400</item>
-
         <item name="im_bubble_incoming">@android:color/system_neutral1_50</item>
         <item name="im_bubble_incoming_alternate">@android:color/system_neutral1_50</item>
         <item name="im_bubble_incoming_alternate_highlighted">@android:color/system_accent2_200</item>
@@ -544,7 +542,6 @@
         <item name="im_bubble_outgoing_alternate">@android:color/system_accent2_100</item>
         <item name="im_bubble_outgoing_alternate_highlighted">@android:color/system_accent2_200</item>
         <item name="im_bubble_outgoing_highlighted">@android:color/system_accent2_200</item>
-
         <item name="im_conversation_error_icon">@color/red_error</item>
         <item name="im_conversation_sending_icon">?accent</item>
         <item name="im_conversation_unread_counter_background">?accent</item>
@@ -675,7 +672,6 @@
         <item name="text_secondary">@android:color/system_neutral2_200</item>
         <item name="background_content">@android:color/system_neutral1_900</item>
         <item name="background_page">@android:color/system_neutral1_800</item>
-
         <item name="action_sheet_action_foreground">@color/white</item>
         <item name="action_sheet_separator">@color/white_alpha12</item>
         <item name="activity_indicator_tint">@android:color/system_neutral2_200</item>
@@ -821,7 +817,6 @@
         <item name="im_bubble_outgoing_alternate">@android:color/system_accent2_800</item>
         <item name="im_bubble_outgoing_alternate_highlighted">@android:color/system_accent1_800</item>
         <item name="im_bubble_outgoing_highlighted">@android:color/system_accent1_800</item>
-
         <item name="im_conversation_error_icon">@color/red_error</item>
         <item name="im_conversation_sending_icon">@color/im_old_accent</item>
         <item name="im_conversation_unread_counter_background">@android:color/system_neutral1_50</item>
@@ -947,5 +942,4 @@
         <item name="writebar_icon">@android:color/system_neutral2_200</item>
         <item name="tabbar_fix">?tabbar_background</item>
     </style>
-
 </resources>
