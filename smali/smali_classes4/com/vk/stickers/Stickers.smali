@@ -2556,6 +2556,8 @@
 
     move-result v0
 
+    const v0, 0x0 ## nedofix anim stickers
+
     return v0
 .end method
 

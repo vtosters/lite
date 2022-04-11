@@ -72,7 +72,7 @@ public class MultiAccountManager {
     }
 
     public static void addAccount() {
-        Helper.GetPreferences().edit().putInt("account", getAccountPrefsCount() + 1).commit();
+        Helper.GetPreferences().edit().putInt("account", getAccountPrefsCount()).commit();
     }
 
     public static void deleteAccount(int i) {
