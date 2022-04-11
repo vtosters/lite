@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
+import ru.vtosters.lite.utils.Helper;
 
 public class MultiAccountFragment extends ToolbarFragment {
 
@@ -35,6 +36,6 @@ public class MultiAccountFragment extends ToolbarFragment {
 
         super.a(arg0, arg1);
 
-        a("Аккаунты");
+        a(Helper.getString("accounts"));
     }
 }

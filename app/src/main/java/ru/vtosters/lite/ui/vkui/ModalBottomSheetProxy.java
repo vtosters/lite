@@ -1,14 +1,9 @@
 package ru.vtosters.lite.ui.vkui;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.view.View;
 
 import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
-
-import com.vtosters.lite.R;
-
-import ru.vtosters.lite.utils.Helper;
 
 public class ModalBottomSheetProxy {
     public final ModalBottomSheet.a builder;

@@ -16,8 +16,8 @@ import com.vtosters.lite.R;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.badmanners.DeviceInfoCollector;
+import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
 public class Crashreporter {

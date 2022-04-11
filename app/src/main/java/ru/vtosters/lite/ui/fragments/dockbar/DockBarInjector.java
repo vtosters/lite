@@ -1,11 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import static ru.vtosters.lite.utils.Themes.color_grishka;
-import static ru.vtosters.lite.utils.Themes.isAndroidMonet;
-
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -29,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 
 import ru.vtosters.lite.utils.Helper;
-import ru.vtosters.lite.utils.Themes;
 
 public class DockBarInjector {
     private static final DockBarManager sManager = DockBarManager.getInstance();

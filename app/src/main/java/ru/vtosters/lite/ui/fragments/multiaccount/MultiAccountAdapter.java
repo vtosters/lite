@@ -1,19 +1,12 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
-import static android.content.Context.MODE_PRIVATE;
-import static ru.vtosters.lite.utils.Helper.GetContext;
-
-import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -25,19 +18,14 @@ import com.vk.core.util.ToastUtils;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.imageloader.view.VKCircleImageView;
 import com.vk.pushes.PushSubscriber;
+import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
-import com.vtosters.lite.ui.refreshlayout.CircleImageView;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Themes;
-
-import com.vtosters.lite.R;
 
 public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.MultiAccountViewHolder> {
 

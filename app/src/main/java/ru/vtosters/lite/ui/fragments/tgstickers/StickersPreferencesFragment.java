@@ -8,8 +8,8 @@ import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.utils.Helper;
 
 public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment {
 

@@ -9,13 +9,13 @@ import android.widget.Toast;
 import com.vk.dto.common.VerifyInfo;
 import com.vk.navigation.NavigatorKeys;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import okhttp3.Call;
 import okhttp3.Callback;

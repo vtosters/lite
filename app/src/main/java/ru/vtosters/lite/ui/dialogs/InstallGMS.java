@@ -8,9 +8,9 @@ import android.content.Intent;
 
 import com.vk.navigation.Navigator;
 
+import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
-import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
 
 public class InstallGMS {
     public static void alert(final Activity activity) {
