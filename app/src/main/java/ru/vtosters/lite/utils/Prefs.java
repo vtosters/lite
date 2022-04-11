@@ -13,7 +13,6 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.View;
 import android.view.Window;
 
 import com.vk.about.Items;
@@ -56,7 +55,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import kotlin.jvm.internal.Intrinsics;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager;
 
@@ -711,7 +709,7 @@ public class Prefs {
         setupFilters();
         fixGapps();
         setProxy();
-        MultiAccountManager.MigrateToNewType();
+        MultiAccountManager.migrate();
         registerActivities(application);
     }
 
