@@ -4,12 +4,16 @@ import static android.content.Context.MODE_PRIVATE;
 import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -17,36 +21,33 @@ import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.f.FileUtils;
 import com.vk.core.util.AppContextHolder;
+import com.vk.core.util.ToastUtils;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.imageloader.view.VKCircleImageView;
 import com.vk.pushes.PushSubscriber;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
+import com.vtosters.lite.ui.refreshlayout.CircleImageView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ru.vtosters.lite.utils.Helper;
+import ru.vtosters.lite.utils.Themes;
+
+import com.vtosters.lite.R;
 
 public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.MultiAccountViewHolder> {
 
-    private final List<MultiAccountItem> mAccounts = new ArrayList<>();
-
-    public MultiAccountAdapter() {
-        CharSequence[] getAccAmountNames = MultiAccountManager.getAccAmountNames();
-        CharSequence[] getAccAmount = MultiAccountManager.getAccAmount();
-        CharSequence[] getAvatars = MultiAccountManager.getAvatars();
-
-        for (int i = 0; i < getAccAmount.length; i++) {
-            mAccounts.add(new MultiAccountItem((String) getAccAmountNames[i], (String) getAvatars[i], i));
-        }
-    }
+    private final List<MultiAccountItem> mAccounts = MultiAccountManager.buildList();
 
     @Override
     public MultiAccountViewHolder b(ViewGroup parent, int viewType) {
         RelativeLayout layout = new RelativeLayout(parent.getContext());
         layout.setPadding(
-                Helper.convertDpToPixel(6),
+                Helper.convertDpToPixel(12),
                 Helper.convertDpToPixel(6),
                 Helper.convertDpToPixel(6),
                 Helper.convertDpToPixel(6)
@@ -73,6 +74,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
         nickname.setEllipsize(TextUtils.TruncateAt.END);
         nickname.setSingleLine(true);
         nickname.setTextSize(15.0f);
+        nickname.setTextColor(Themes.getTextAttr());
         nickname.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
         RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(-2, -2);
         params1.addRule(RelativeLayout.CENTER_VERTICAL);
@@ -82,8 +84,8 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
         ImageButton action = new ImageButton(parent.getContext());
         action.setId(3);
         action.setBackgroundResource(com.vtosters.lite.R.drawable.rounded_list_selector);
-        action.setImageResource(com.vtosters.lite.R.drawable.ic_list_remove);
-        action.setVisibility(View.INVISIBLE);
+        Drawable drawable = Themes.recolorDrawable(Helper.getResources().getDrawable(R.drawable.ic_list_remove));
+        action.setImageDrawable(drawable);
         RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(
                 Helper.convertDpToPixel(48),
                 Helper.convertDpToPixel(48)
@@ -97,7 +99,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
     
     @Override
     public void a(MultiAccountViewHolder holder, int pos) {
-        holder.bind(mAccounts.get(pos == 0 ? null : pos - 1), pos);
+        holder.bind(pos == 0 ? null : mAccounts.get(pos-1), pos);
     }
 
     @Override
@@ -116,52 +118,66 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
             super(view);
 
             mContainer = (RelativeLayout) view;
-            mAvatar = view.findViewById(1);
-            mNickname = view.findViewById(2);
-            mAction = view.findViewById(3);
+            mAvatar = (VKCircleImageView) view.findViewById(1);
+            mNickname = (TextView) view.findViewById(2);
+            mAction = (ImageButton) view.findViewById(3);
         }
 
         public void bind(MultiAccountItem item, int pos) {
-            if (item == null) {
-                mAvatar.setImageResource(com.vtosters.lite.R.drawable.ic_list_add);
+            if (pos == 0) {
                 mNickname.setText("Добавить новый аккаунт");
                 mContainer.setOnClickListener(v -> {
-                    SharedPreferences sharedPrefs = GetContext().getSharedPreferences("com.vtosters.lite_preferences", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPrefs.edit();
-                    editor.putString("account", Integer.toString(MultiAccountManager.getAvalibleAcc()));
-                    editor.commit();
+                    MultiAccountManager.addAccount();
 
                     VKImageLoader.b();
                     ImEngineProvider.a().h();
                     AudioMessageUtils.j();
                     FileUtils.l();
                     VKAccount b = VKAccountManager.b();
-                    GetContext().getSharedPreferences("push_subscriber" + pos, MODE_PRIVATE).edit().clear().commit();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    ToastUtils.a(Helper.getString("restartapp"));
                     Helper.restarting();
                 });
+                Drawable drawable = Themes.recolorDrawable(Helper.getResources().getDrawable(R.drawable.ic_list_add));
+                mAction.setImageDrawable(drawable);
+                mAction.setClickable(false);
             } else {
                 mContainer.setOnClickListener(v -> {
-                    // здесь выбор аккаунта
+                    MultiAccountManager.switchAccount(item.index);
+
                     VKImageLoader.b();
                     ImEngineProvider.a().h();
                     AudioMessageUtils.j();
                     FileUtils.l();
                     VKAccount b = VKAccountManager.b();
-                    GetContext().getSharedPreferences("push_subscriber" + pos, MODE_PRIVATE).edit().clear().commit();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    ToastUtils.a(Helper.getString("restartapp"));
                     Helper.restarting();
+
                 });
-                mAvatar.a(item.imageUrl);
+
+                if (Helper.isNetworkConnected())
+                    mAvatar.a(item.imageUrl);
+                else
+                    mAvatar.a(R.drawable.vkim_ic_placeholder_user_square_64dp);
+
                 mNickname.setText(item.nickname);
+
                 mAction.setOnClickListener(v -> {
-                    // здесь удаление аккаунта из префов
-                    GetContext().getSharedPreferences("pref_account_manager" + pos, MODE_PRIVATE).edit().clear().commit();
+                    MultiAccountManager.deleteAccount(item.index);
+
+                    VKImageLoader.b();
+                    ImEngineProvider.a().h();
+                    AudioMessageUtils.j();
+                    FileUtils.l();
+                    VKAccount b = VKAccountManager.b();
+                    PushSubscriber.a.a(b.b(), b.c());
+                    AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    ToastUtils.a(Helper.getString("restartapp"));
                     Helper.restarting();
                 });
-                mAction.setVisibility(View.VISIBLE);
             }
         }
     }
