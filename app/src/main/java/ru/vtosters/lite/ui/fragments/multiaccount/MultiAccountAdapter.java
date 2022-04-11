@@ -124,7 +124,6 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    ToastUtils.a(Helper.getString("restartapp"));
                     Helper.restarting();
                 });
                 Drawable drawable = Themes.recolorDrawable(Helper.getResources().getDrawable(R.drawable.ic_list_add));
@@ -141,7 +140,6 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    ToastUtils.a(Helper.getString("restartapp"));
                     Helper.restarting();
 
                 });
@@ -163,7 +161,6 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    ToastUtils.a(Helper.getString("restartapp"));
                     Helper.restarting();
                 });
             }
