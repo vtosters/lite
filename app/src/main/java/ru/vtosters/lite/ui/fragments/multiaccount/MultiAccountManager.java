@@ -4,7 +4,6 @@ import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -56,7 +55,6 @@ public class MultiAccountManager {
                 String name = withRegex(keyVKAccount, ".*\"name\":\\{.*?:\"(.*?)\"\\}.*", "");
                 String avatarUrl = withRegex(keyVKAccount, ".*\"photo\":\\{.*?:\"(.*?)\"\\}.*", "https://vk.com/images/camera_200.png")
                         .replace("\\/", "/");
-                Log.d("MultiAcc", String.format("Name: %s, Avatar: %s, Index: %d", name, avatarUrl, i));
                 list.add(new MultiAccountItem(
                         name, avatarUrl, i
                 ));
@@ -75,9 +73,6 @@ public class MultiAccountManager {
 
     public static void addAccount() {
         Helper.GetPreferences().edit().putInt("account", getAccountPrefsCount() + 1).commit();
-        /*SharedPreferences prefs = Helper.GetContext().getSharedPreferences("pref_account_manager" + newAccount, Context.MODE_PRIVATE);
-        File file = new File(Helper.GetContext().getDir("shared_prefs", Context.MODE_PRIVATE), "pref_account_manager" + newAccount);
-        if (file.exists()) file.delete();*/
     }
 
     public static void deleteAccount(int i) {
