@@ -14,7 +14,6 @@ import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.f.FileUtils;
 import com.vk.core.util.AppContextHolder;
-import com.vk.core.util.ToastUtils;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.imageloader.view.VKCircleImageView;
 import com.vk.pushes.PushSubscriber;
