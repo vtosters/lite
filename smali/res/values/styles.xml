@@ -17,7 +17,7 @@
         <item name="android:background">@drawable/spinner_ab_holo_dark</item>
     </style>
     <style name="ActionBarSubtitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle.Inverse">
-        <item name="android:textColor">#80ffffff</item>
+        <item name="android:textColor">?header_text</item>
     </style>
     <style name="ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">?header_text</item>
@@ -51,7 +51,7 @@
     </style>
     <style name="ActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
         <item name="android:textSize">18.0dip</item>
-        <item name="android:textColor">?text_primary</item>
+        <item name="android:textColor">?header_text</item>
     </style>
     <style name="ActionButton" parent="@style/Widget.AppCompat.Light.ActionButton" />
     <style name="ActionButton.Blue" parent="@style/ActionButton">
@@ -1636,13 +1636,13 @@
         <item name="android:fontFamily">@string/font_family_medium</item>
     </style>
     <style name="GradientActionBarSubtitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle.Inverse">
-        <item name="android:textColor">#b0ffffff</item>
+        <item name="android:textColor">?header_text</item>
         <item name="android:shadowColor">#26000000</item>
         <item name="android:shadowDy">@integer/s1dip</item>
         <item name="android:shadowRadius">@integer/s2dip</item>
     </style>
     <style name="GradientActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
-        <item name="android:textColor">?text_primary</item>
+        <item name="android:textColor">?header_text</item>
         <item name="android:shadowColor">#26000000</item>
         <item name="android:shadowDy">@integer/s1dip</item>
         <item name="android:shadowRadius">@integer/s2dip</item>
