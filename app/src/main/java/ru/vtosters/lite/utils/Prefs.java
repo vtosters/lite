@@ -474,9 +474,6 @@ public class Prefs {
     }
 
     public static void setNavbarColor(Window window, int i) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && VKThemeHelper.d()) {
-            window.getDecorView().setSystemUiVisibility(FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS | SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
         if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setNavigationBarColor(getNavbarColor());
         }
