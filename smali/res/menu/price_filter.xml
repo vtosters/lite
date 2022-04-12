@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_check_24" android:id="@id/ok" android:title="@string/ok" android:showAsAction="always" app:menuTint="?text_primary" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_check_24" android:id="@id/ok" android:title="@string/ok" android:showAsAction="always" app:menuTint="?header_text" app:showAsAction="always" />
 </menu>
