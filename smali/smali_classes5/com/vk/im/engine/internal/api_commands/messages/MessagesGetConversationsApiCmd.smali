@@ -288,7 +288,7 @@
 
     move-result-object v0
 
-    const-string v1, "5.121"
+    const-string v1, "5.93"
 
     .line 56
     invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->c(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
