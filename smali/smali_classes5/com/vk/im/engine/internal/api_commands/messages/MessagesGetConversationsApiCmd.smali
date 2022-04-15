@@ -51,6 +51,10 @@
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getMsgCount()I
+
+    move-result p3
+
     iput p3, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->c:I
 
     iput-object p4, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->d:Ljava/lang/String;

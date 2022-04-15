@@ -14,6 +14,7 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.SummaryListPreference android:entries="@array/msgcount_value" android:title="Количество загружаемых сообщений" android:key="msgcount" android:defaultValue="30" android:dialogTitle="Выберите количество" android:entryValues="@array/msgcount" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/convUsersOnline" android:key="convUsersOnline" android:summary="@string/convUsersOnlinesum" android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>

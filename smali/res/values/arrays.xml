@@ -644,4 +644,22 @@
         <item>https</item>
         <item>socks</item>
     </string-array>
+    <string-array name="msgcount_value">
+        <item>Default</item>
+        <item>40 messages</item>
+        <item>50 messages</item>
+        <item>70 messages</item>
+        <item>100 messages</item>
+        <item>150 messages</item>
+        <item>200 messages</item>
+    </string-array>
+    <string-array name="msgcount">
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
 </resources>
