@@ -47,9 +47,7 @@
     .line 28
     invoke-direct {p0}, Lcom/vk/api/sdk/internal/ApiCommand;-><init>()V
 
-    const v0, 0x1
-
-    iput v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
+    iput p1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
@@ -225,6 +223,20 @@
 
     .line 48
     invoke-virtual {v1, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+
+    move-result-object v1
+
+
+    const-string v2, "start_message_id"
+
+    .line 49
+    iget v3, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     move-result-object v1
 
