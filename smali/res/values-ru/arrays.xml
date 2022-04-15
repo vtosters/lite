@@ -474,4 +474,13 @@
         <item>Сторонний HTTPS</item>
         <item>Сторонний SOCKS</item>
     </string-array>
+    <string-array name="msgcount_value">
+        <item>По умолчанию</item>
+        <item>40 сообщений</item>
+        <item>50 сообщений</item>
+        <item>70 сообщений</item>
+        <item>100 сообщений</item>
+        <item>150 сообщений</item>
+        <item>200 сообщений</item>
+    </string-array>
 </resources>

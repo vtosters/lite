@@ -1,7 +1,5 @@
 package ru.vtosters.lite.utils;
 
-import static android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-import static android.view.WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 
 import android.app.Activity;
@@ -61,7 +59,7 @@ import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager;
 public class Prefs {
     public static String VERSIONNAME = "2.0 Beta";
     private static List<String> mFilters;
-    private static List<Activity> activities = new ArrayList<>();
+    private static final List<Activity> activities = new ArrayList<>();
 
     public static boolean BooleanFalse(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
@@ -278,6 +276,10 @@ public class Prefs {
         return Helper.GetPreferences().getString("me_token", "");
     }
 
+    public static void setMeToken(String str) {
+        ru.vtosters.lite.utils.Helper.GetPreferences().edit().putString("me_token", str).apply();
+    }
+
     public static int getNavbarColor() {
         return VKThemeHelper.a((int) R.attr.tabbar_background);
     }
@@ -405,10 +407,6 @@ public class Prefs {
         return BooleanFalse("rightLikes");
     }
 
-    public static void setMeToken(String str) {
-        ru.vtosters.lite.utils.Helper.GetPreferences().edit().putString("me_token", str).apply();
-    }
-
     public static boolean setoffline() {
         return BooleanFalse("setoffline");
     }
@@ -471,6 +469,11 @@ public class Prefs {
 
     public static String widgetads() {
         return ads() ? "null" : "app_widget";
+    }
+
+    public static int getMsgCount() {
+        String customvalue = Helper.GetPreferences().getString("msgcount", "");
+        return customvalue.isEmpty() ? 30 : Integer.parseInt(customvalue);
     }
 
     public static void setNavbarColor(Window window, int i) {
