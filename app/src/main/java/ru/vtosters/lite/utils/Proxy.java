@@ -103,7 +103,7 @@ public class Proxy {
         switch (Helper.GetPreferences().getString("proxy", "")) {
             case "zaborona":
                 Properties properties = System.getProperties();
-                properties.setProperty("socksProxyHost", "socks.zaborona.help");
+                properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 properties.setProperty("socksProxyPort", "1488");
                 System.clearProperty("https.proxyHost");
                 System.clearProperty("https.proxyPort");
