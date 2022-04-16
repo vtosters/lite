@@ -15,7 +15,7 @@
     </item>
     <item>
         <shape>
-            <solid android:color="@color/white" />
+            <solid android:color="?background_content" />
             <corners android:radius="@dimen/vkui_button_corner_big_radius" />
         </shape>
     </item>
