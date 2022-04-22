@@ -1302,8 +1302,8 @@
         <item name="im_bubble_incoming_alternate">@color/gray_800</item>
         <item name="im_bubble_incoming_alternate_highlighted">@color/gray_600</item>
         <item name="im_bubble_incoming_highlighted">@color/gray_600</item>
-        <item name="im_bubble_outgoing">@color/gray_700</item>
-        <item name="im_bubble_outgoing_alternate">@color/gray_700</item>
+        <item name="im_bubble_outgoing">@color/gray_750</item>
+        <item name="im_bubble_outgoing_alternate">@color/gray_750</item>
         <item name="im_bubble_outgoing_alternate_highlighted">@color/gray_500</item>
         <item name="im_bubble_outgoing_highlighted">@color/gray_600</item>
         <item name="im_conversation_error_icon">@color/red_error</item>
