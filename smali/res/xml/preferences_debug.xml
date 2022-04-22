@@ -4,7 +4,6 @@
     <Preference android:enabled="false" android:title="Внимание!" android:summary="Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках, что бы не было проблем с работой приложения!" />
     <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Показывать пункт дебага в настройках" android:key="devmenu" android:defaultValue="false" />
     <PreferenceCategory android:title="Experimental">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Amoled Test" android:key="amoled" android:defaultValue="false" />
         <EditTextPreference android:title="Изменение версии вк" android:key="vkversion" android:summary="Требуется перезапуск" android:defaultValue="" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlusevkui" android:key="usevkui" android:summary="Редактирование страницы?" android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Статистика страницы" android:key="unlockstats" android:summary="Вкшники вроде перестали отдавать инфу" android:defaultValue="false" />
