@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Amoled тема" android:summary="Для примненения изменений поменяйте тему" android:key="amoled" android:defaultValue="false" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference android:title="Amoled тема" android:summary="Для применения изменений поменяйте тему" android:key="amoled" android:defaultValue="false" />
     <PreferenceCategory android:title="@string/vticon">
         <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vticonbtn" android:key="iconvk" android:summary="@string/vticonsummary" android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
