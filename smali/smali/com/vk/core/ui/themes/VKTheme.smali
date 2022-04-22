@@ -18,6 +18,8 @@
 
 .field public static final enum DARK:Lcom/vk/core/ui/themes/VKTheme;
 
+.field public static final enum AMOLED:Lcom/vk/core/ui/themes/VKTheme;
+
 .field public static final enum DEFAULT_LIGHT:Lcom/vk/core/ui/themes/VKTheme;
 
 
@@ -31,7 +33,7 @@
 .method static constructor <clinit>()V
     .locals 14
 
-    const/4 v0, 0x2
+    const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/vk/core/ui/themes/VKTheme;
 
@@ -74,6 +76,27 @@
     sput-object v1, Lcom/vk/core/ui/themes/VKTheme;->DARK:Lcom/vk/core/ui/themes/VKTheme;
 
     const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    new-instance v1, Lcom/vk/core/ui/themes/VKTheme;
+
+    const-string v9, "AMOLED"
+
+    .line 292
+    sget v13, Lcom/vk/s/R$g;->BaseDarkStyle:I
+
+    const/4 v10, 0x2
+
+    const-wide/16 v11, 0x2
+
+    move-object v8, v1
+
+    invoke-direct/range {v8 .. v13}, Lcom/vk/core/ui/themes/VKTheme;-><init>(Ljava/lang/String;IJI)V
+
+    sput-object v1, Lcom/vk/core/ui/themes/VKTheme;->AMOLED:Lcom/vk/core/ui/themes/VKTheme;
+
+    const/4 v2, 0x2
 
     aput-object v1, v0, v2
 

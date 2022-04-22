@@ -63,6 +63,10 @@ public class Themes {
         return ru.vtosters.lite.utils.Prefs.BooleanFalse("vkim_msg");
     }
 
+    public static boolean amoled() {
+        return ru.vtosters.lite.utils.Prefs.BooleanFalse("amoled");
+    }
+
     public static boolean vkme_msg() {
         return ru.vtosters.lite.utils.Prefs.BooleanFalse("vkme_msg");
     }
