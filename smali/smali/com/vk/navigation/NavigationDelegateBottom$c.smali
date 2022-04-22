@@ -109,7 +109,7 @@
 
     move-result-object p4
 
-    const-string v0, "scrollerField"
+    const-string v0, "m"
 
     .line 777
     invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
@@ -123,7 +123,7 @@
 
     move-result-object p1
 
-    const-string v0, "interpolator"
+    const-string v0, "f"
 
     .line 779
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V

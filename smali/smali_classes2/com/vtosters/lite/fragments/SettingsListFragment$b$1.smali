@@ -89,6 +89,15 @@
     sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKME_DARK:Lcom/vk/im/ui/themes/ImTheme;
 
     :cond_2
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->amoled()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_AMOLED:Lcom/vk/im/ui/themes/ImTheme;
+
+    :cond_3
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/themes/ImThemeHelper;->a(Lcom/vk/im/ui/themes/ImTheme;)V
 
     .line 190
