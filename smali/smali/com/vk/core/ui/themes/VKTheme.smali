@@ -84,7 +84,9 @@
     const-string v9, "AMOLED"
 
     .line 292
-    sget v13, Lcom/vk/s/R$g;->BaseDarkStyle:I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getAmoledTheme()I
+
+    move-result v13
 
     const/4 v10, 0x2
 

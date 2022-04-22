@@ -915,20 +915,10 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->amoled()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getCurrentDarkTheme()Lcom/vk/core/ui/themes/VKTheme;
 
-    move-result v3
+    move-result-object v2
 
-    if-eqz v3, :cond_10
-
-    sget-object v2, Lcom/vk/core/ui/themes/VKTheme;->AMOLED:Lcom/vk/core/ui/themes/VKTheme;
-
-    goto :goto_0
-
-    :cond_10
-    sget-object v2, Lcom/vk/core/ui/themes/VKTheme;->DARK:Lcom/vk/core/ui/themes/VKTheme;
-
-    goto :goto_0
     if-ne v0, v2, :cond_5
 
     :cond_4

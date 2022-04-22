@@ -351,18 +351,9 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->amoled()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getCurrentDarkTheme()Lcom/vk/core/ui/themes/VKTheme;
 
-    move-result v1
-
-    if-eqz v1, :cond_10
-
-    sget-object v0, Lcom/vk/core/ui/themes/VKTheme;->AMOLED:Lcom/vk/core/ui/themes/VKTheme;
-
-    goto :goto_0
-
-    :cond_10
-    sget-object v0, Lcom/vk/core/ui/themes/VKTheme;->DARK:Lcom/vk/core/ui/themes/VKTheme;
+    move-result-object v0
 
     goto :goto_0
 
