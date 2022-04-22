@@ -206,7 +206,7 @@
         <item name="android:seekBarStyle">@style/SolidSeekBar</item>
         <item name="android:alertDialogTheme">@style/MaterialDialogTheme.Dark</item>
         <item name="android:colorControlHighlight">#33999999</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
     </style>
 
     <style name="BaseAmoledStyle" parent="@style/BaseAmoledTheme">
@@ -266,7 +266,7 @@
         <item name="android:seekBarStyle">@style/SolidSeekBar</item>
         <item name="android:alertDialogTheme">@style/MaterialDialogTheme.Dark</item>
         <item name="android:colorControlHighlight">#33999999</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
     </style>
 
     <style name="BaseStyle" parent="@style/BaseTheme">
@@ -326,7 +326,7 @@
         <item name="android:colorPrimary">@color/white</item>
         <item name="android:colorPrimaryDark">@color/white</item>
         <item name="android:colorAccent">@color/white</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
     </style>
     <style name="BaseStyle.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:backgroundDimAmount">0.4</item>
@@ -463,7 +463,7 @@
         <item name="android:alertDialogTheme">@style/MaterialDialogTheme</item>
         <item name="android:colorControlHighlight">#33999999</item>
         <item name="android:statusBarColor">@color/clear</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
     </style>
     <style name="BottomSheetTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowAnimationStyle">@style/BottomSheet.AnimationStyle</item>
@@ -480,7 +480,7 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">0.0dip</item>
         <item name="android:backgroundDimEnabled">false</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
     </style>
     <style name="GradientActionBarSubtitleStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle.Inverse">
@@ -521,7 +521,7 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="android:windowElevation">0.0px</item>
         <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
     </style>
@@ -535,7 +535,7 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="android:windowElevation">0.0px</item>
     </style>
     <style name="PickerImageEditorActivity" parent="@style/Theme.AppCompat.Light.NoActionBar">
@@ -543,7 +543,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="colorAccent">@color/picker_blue</item>
         <item name="colorPrimary">@color/picker_blue</item>
         <item name="colorPrimaryDark">@color/picker_blue</item>
@@ -573,7 +573,7 @@
         <item name="android:colorBackgroundCacheHint">@android:color/white</item>
         <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
         <item name="android:colorPrimaryDark">@color/not_placeholder_color</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
         <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
         <item name="actionBarTheme">@style/ActionBarTheme.White</item>
@@ -603,13 +603,13 @@
     <style name="Theme.App.Transparent" parent="@style/Base.Theme.App.Transparent">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
     </style>
     <style name="TooltipFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowFullscreen">true</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
     </style>
     <style name="TransparentTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -639,7 +639,7 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
         <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
         <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
         <item name="actionBarTheme">@style/ActionBarTheme.White</item>
@@ -668,7 +668,7 @@
         <item name="android:textColorSecondary">#ccffffff</item>
         <item name="android:windowBackground">@android:color/black</item>
         <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">?tabbar_background</item>
         <item name="colorAccent">#ffffffff</item>
     </style>
     <style name="VideoPlayerTranslucentStyle" parent="@style/TranslucentStyle">

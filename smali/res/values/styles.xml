@@ -1157,7 +1157,6 @@
         <item name="appkitDefaultErrorText">@string/err_text</item>
         <item name="appkitRetryButtonText">@string/retry</item>
     </style>
-
     <style name="VkIm.Theme.VkApp.Amoled" parent="@style/VkIm.Theme.VkApp">
         <item name="accent">@color/sky_300</item>
         <item name="action_sheet_action_foreground">@color/white</item>
