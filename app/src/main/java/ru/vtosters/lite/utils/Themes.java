@@ -33,6 +33,10 @@ public class Themes {
         return Helper.GetContext().getResources().getIdentifier("BaseAmoledStyle", "style", Helper.GetContext().getPackageName());
     }
 
+    public static int getAmoledImTheme() {
+        return Helper.GetContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", Helper.GetContext().getPackageName());
+    }
+
     public static VKTheme getCurrentDarkTheme() {
         return amoled() ? VKTheme.AMOLED : VKTheme.DARK;
     }

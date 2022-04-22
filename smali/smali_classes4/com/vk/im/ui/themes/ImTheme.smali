@@ -24,6 +24,8 @@
 
 .field public static final enum VKME_LIGHT:Lcom/vk/im/ui/themes/ImTheme;
 
+.field public static final enum VKAPP_AMOLED:Lcom/vk/im/ui/themes/ImTheme;
+
 
 # instance fields
 .field private final id:I
@@ -35,7 +37,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    const/4 v0, 0x4
+    const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/vk/im/ui/themes/ImTheme;
 
@@ -98,6 +100,28 @@
     sput-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKME_DARK:Lcom/vk/im/ui/themes/ImTheme;
 
     aput-object v1, v0, v4
+
+
+    new-instance v1, Lcom/vk/im/ui/themes/ImTheme;
+
+    const-string v2, "VKAPP_AMOLED"
+
+    .line 58
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getAmoledImTheme()I
+
+    move-result v3
+
+    const/4 v4, 0x4
+
+    const/4 v5, 0x4
+
+    invoke-direct {v1, v2, v5, v4, v3}, Lcom/vk/im/ui/themes/ImTheme;-><init>(Ljava/lang/String;III)V
+
+    sput-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_AMOLED:Lcom/vk/im/ui/themes/ImTheme;
+
+    aput-object v1, v0, v5
+
+
 
     sput-object v0, Lcom/vk/im/ui/themes/ImTheme;->$VALUES:[Lcom/vk/im/ui/themes/ImTheme;
 
