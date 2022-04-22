@@ -164,6 +164,8 @@ public final class R {
         public static final int start_values = 0x7f03005c;
         public static final int proxy = 0x7f03005d;
         public static final int proxy_value = 0x7f03005e;
+        public static final int msgcount = 0x7f03005f;
+        public static final int msgcount_value = 0x7f030060;
     }
 
     public static final class attr {
@@ -15927,6 +15929,9 @@ public final class R {
         public static final int MD_Button_Borderless = 0x7f1203a7;
         public static final int MD_Button_Borderless_Dialog = 0x7f1203a8;
         public static final int MaterialDialogTheme_Dark = 0x7f1203a9;
+        public static final int BaseAmoledStyle = 0x7f1203aa;
+        public static final int BaseAmoledTheme = 0x7f1203ab;
+        public static final int Vk_Theme_client_amoled_generated = 0x7f1203ac;
     }
 
     public static final class xml {

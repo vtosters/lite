@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
 
 import com.vk.core.d.RecoloredDrawable;
+import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 
@@ -26,6 +27,14 @@ public class Themes {
 
     public static int getTabbarBackground() {
         return VKThemeHelper.a((int) R.attr.tabbar_background);
+    }
+
+    public static int getAmoledTheme() {
+        return Helper.GetContext().getResources().getIdentifier("BaseAmoledStyle", "style", Helper.GetContext().getPackageName());
+    }
+
+    public static VKTheme getCurrentDarkTheme() {
+        return amoled() ? VKTheme.AMOLED : VKTheme.DARK;
     }
 
     public static int getColorFromAttr(int attr) {
