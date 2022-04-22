@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Proxy.setProxy;
+import static ru.vtosters.lite.utils.Themes.amoled;
 
 import android.app.Activity;
 import android.app.Application;
@@ -272,6 +273,10 @@ public class Prefs {
         return !VKThemeHelper.d() ? "1" : "0";
     }
 
+    public static String getAmoledVKUI() {
+        return amoled() ? "1" : "0";
+    }
+
     public static String getMeToken() {
         return Helper.GetPreferences().getString("me_token", "");
     }
@@ -285,7 +290,7 @@ public class Prefs {
     }
 
     public static String getSSFSLink() {
-        return SSFSDomain() + "?token=" + ru.vtosters.lite.utils.Helper.GetUserToken() + "&vt_dark=" + getDarkVKUI() + "&secret=" + ru.vtosters.lite.utils.Helper.GetUserSecret() + "&proxy=" + getUserProxy() + "&lang=" + getLocale() + "&vt=1&vtl=1&vksans=" + isVKSansEnabled() + "&vt_version=" + getBuildNumber() + "&vt_debug=" + isDEVModEnabled();
+        return SSFSDomain() + "?token=" + ru.vtosters.lite.utils.Helper.GetUserToken() + "&vt_dark=" + getDarkVKUI() + "&vt_amoled=" + getAmoledVKUI() + "&secret=" + ru.vtosters.lite.utils.Helper.GetUserSecret() + "&proxy=" + getUserProxy() + "&lang=" + getLocale() + "&vt=1&vtl=1&vksans=" + isVKSansEnabled() + "&vt_version=" + getBuildNumber() + "&vt_debug=" + isDEVModEnabled();
     }
 
     public static String getString(String key, String defValue) {
