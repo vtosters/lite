@@ -3,8 +3,6 @@ package bruhcollective.itaysonlab.libvkx.client;
 import android.content.Context;
 import android.os.RemoteException;
 
-import bruhcollective.itaysonlab.libvkx.ILibVkxService;
-
 import com.vk.core.b.PackageManagerHelper;
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.PlayerRefer;
@@ -13,8 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import ru.vtosters.lite.utils.Helper;
-import ru.vtosters.lite.utils.Prefs;
+import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 

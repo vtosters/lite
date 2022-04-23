@@ -69,8 +69,10 @@
     <color name="brand_dark">#ff38618d</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
-    <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
-    <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
+    <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light
+    </color>
+    <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark
+    </color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="brown_gold">#ff9e8f72</color>
@@ -118,7 +120,8 @@
     <color name="com_facebook_button_login_background_color">#ff4267b2</color>
     <color name="com_facebook_button_login_silver_background_color">#fff4f6f8</color>
     <color name="com_facebook_button_login_silver_background_color_pressed">#ffe9eaf0</color>
-    <color name="com_facebook_button_send_background_color">@color/com_facebook_messenger_blue</color>
+    <color name="com_facebook_button_send_background_color">@color/com_facebook_messenger_blue
+    </color>
     <color name="com_facebook_button_send_background_color_pressed">#ff006fff</color>
     <color name="com_facebook_device_auth_text">#ff90949c</color>
     <color name="com_facebook_likeboxcountview_border_color">#ff6a7180</color>
@@ -498,13 +501,15 @@
     <color name="toolbar_blue_textColorPrimary">@color/white</color>
     <color name="toolbar_blue_textColorSecondary">@color/white</color>
     <color name="toolbar_milk_background">#fff7f7f7</color>
-    <color name="toolbar_milk_searchViewTextColorHint">@color/toolbar_milk_textColorSecondary</color>
+    <color name="toolbar_milk_searchViewTextColorHint">@color/toolbar_milk_textColorSecondary
+    </color>
     <color name="toolbar_milk_statusBarColorBack">@color/toolbar_milk_background</color>
     <color name="toolbar_milk_statusBarColorFront">#00000000</color>
     <color name="toolbar_milk_textColorPrimary">#ff444547</color>
     <color name="toolbar_milk_textColorSecondary">#ff909499</color>
     <color name="toolbar_white_background">@color/white_with_FixAndroidBug</color>
-    <color name="toolbar_white_searchViewTextColorHint">@color/toolbar_white_textColorSecondary</color>
+    <color name="toolbar_white_searchViewTextColorHint">@color/toolbar_white_textColorSecondary
+    </color>
     <color name="toolbar_white_statusBarColorBack">@color/white_with_FixAndroidBug</color>
     <color name="toolbar_white_statusBarColorFront">#45bbbbbb</color>
     <color name="toolbar_white_textColorPrimary">@color/attach_title</color>

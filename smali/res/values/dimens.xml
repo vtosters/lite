@@ -19,10 +19,14 @@
     <dimen name="abc_action_button_min_width_overflow_material">36.0dip</dimen>
     <dimen name="abc_alert_dialog_button_bar_height">48.0dip</dimen>
     <dimen name="abc_alert_dialog_button_dimen">48.0dip</dimen>
-    <item type="dimen" name="abc_button_inset_horizontal_material">@dimen/abc_control_inset_material</item>
+    <item type="dimen" name="abc_button_inset_horizontal_material">
+        @dimen/abc_control_inset_material
+    </item>
     <dimen name="abc_button_inset_vertical_material">6.0dip</dimen>
     <dimen name="abc_button_padding_horizontal_material">8.0dip</dimen>
-    <item type="dimen" name="abc_button_padding_vertical_material">@dimen/abc_control_padding_material</item>
+    <item type="dimen" name="abc_button_padding_vertical_material">
+        @dimen/abc_control_padding_material
+    </item>
     <dimen name="abc_cascading_menus_min_smallest_width">720.0dip</dimen>
     <dimen name="abc_config_prefDialogWidth">320.0dip</dimen>
     <dimen name="abc_control_corner_material">2.0dip</dimen>
@@ -48,7 +52,9 @@
     <dimen name="abc_edit_text_inset_horizontal_material">4.0dip</dimen>
     <dimen name="abc_edit_text_inset_top_material">10.0dip</dimen>
     <dimen name="abc_floating_window_z">16.0dip</dimen>
-    <item type="dimen" name="abc_list_item_padding_horizontal_material">@dimen/abc_action_bar_content_inset_material</item>
+    <item type="dimen" name="abc_list_item_padding_horizontal_material">
+        @dimen/abc_action_bar_content_inset_material
+    </item>
     <dimen name="abc_panel_menu_list_width">296.0dip</dimen>
     <dimen name="abc_progress_bar_height_material">4.0dip</dimen>
     <dimen name="abc_search_view_preferred_height">48.0dip</dimen>
@@ -360,7 +366,8 @@
     <dimen name="newsfeed_newpost_search_view_height">52.0dip</dimen>
     <dimen name="newsfeed_newpost_search_view_space">8.0dip</dimen>
     <dimen name="newsfeed_newpost_search_view_top_space">4.0dip</dimen>
-    <item type="dimen" name="newsfeed_newpost_settings_dialog_space">@dimen/newsfeed_newpost_space</item>
+    <item type="dimen" name="newsfeed_newpost_settings_dialog_space">@dimen/newsfeed_newpost_space
+    </item>
     <dimen name="newsfeed_newpost_settings_dialog_top_bottom_space">14.0dip</dimen>
     <dimen name="newsfeed_newpost_settings_layout_bottom_space">48.0dip</dimen>
     <dimen name="newsfeed_newpost_settings_layout_height">60.0dip</dimen>
@@ -407,7 +414,9 @@
     <dimen name="notification_large_icon_height">64.0dip</dimen>
     <dimen name="notification_large_icon_width">64.0dip</dimen>
     <dimen name="notification_main_column_padding_top">10.0dip</dimen>
-    <item type="dimen" name="notification_media_narrow_margin">@dimen/notification_content_margin_start</item>
+    <item type="dimen" name="notification_media_narrow_margin">
+        @dimen/notification_content_margin_start
+    </item>
     <dimen name="notification_right_icon_size">16.0dip</dimen>
     <dimen name="notification_right_side_padding_top">4.0dip</dimen>
     <dimen name="notification_small_icon_background_padding">3.0dip</dimen>

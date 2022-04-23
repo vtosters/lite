@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Base.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat" />
+
     <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light" />
+
     <style name="BaseDarkStyle" parent="@style/BaseDarkTheme">
         <item name="android:textColorSecondary">@color/prefs_subtitle</item>
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
@@ -54,6 +57,7 @@
         <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
+
     <style name="BaseAmoledStyle" parent="@style/BaseAmoledTheme">
         <item name="android:textColorSecondary">@color/prefs_subtitle</item>
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
@@ -106,6 +110,7 @@
         <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
+
     <style name="BaseStyle" parent="@style/BaseTheme">
         <item name="android:textColorSecondary">@color/prefs_subtitle</item>
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
@@ -159,6 +164,7 @@
         <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
+
     <style name="VkIm.Theme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowBackground">?background_content</item>
         <item name="android:fastScrollThumbDrawable">@drawable/vkim_fastscroll_thumb</item>
@@ -188,10 +194,12 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="Base.V22.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat">
         <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
         <item name="editTextBackground">?android:editTextBackground</item>
     </style>
+
     <style name="Base.V22.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light">
         <item name="actionModeShareDrawable">?android:actionModeShareDrawable</item>
         <item name="editTextBackground">?android:editTextBackground</item>

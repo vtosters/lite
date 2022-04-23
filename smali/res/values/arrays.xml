@@ -662,4 +662,18 @@
         <item>150</item>
         <item>200</item>
     </string-array>
+    <string-array name="lighttheme_value">
+        <item>Default</item>
+    </string-array>
+    <string-array name="lighttheme">
+        <item>default</item>
+    </string-array>
+    <string-array name="darktheme_value">
+        <item>Default</item>
+        <item>Amoled</item>
+    </string-array>
+    <string-array name="darktheme">
+        <item>default</item>
+        <item>amoled</item>
+    </string-array>
 </resources>

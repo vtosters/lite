@@ -83,10 +83,10 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
 
         return new MultiAccountViewHolder(layout);
     }
-    
+
     @Override
     public void a(MultiAccountViewHolder holder, int pos) {
-        holder.bind(pos == 0 ? null : mAccounts.get(pos-1), pos);
+        holder.bind(pos == 0 ? null : mAccounts.get(pos - 1), pos);
     }
 
     @Override

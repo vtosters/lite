@@ -65,7 +65,7 @@ public class Helper {
         return extendedUserProfile.a;
     }
 
-    public static void restarting(){
+    public static void restarting() {
         Context ctx = GetContext();
         PackageManager pm = ctx.getPackageManager();
         Intent intent = pm.getLaunchIntentForPackage(ctx.getPackageName());
@@ -141,6 +141,6 @@ public class Helper {
     public static boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) GetContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        return activeNetwork != null ? activeNetwork.isConnectedOrConnecting() :false;
+        return activeNetwork != null ? activeNetwork.isConnectedOrConnecting() : false;
     }
 }

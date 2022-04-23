@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple android:color="@color/music_selectable_bg_pressed"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/mask">
         <shape>
             <solid android:color="#ff000000" />
-            <corners android:topLeftRadius="@dimen/music_suggest_notification_selector_bg_corners" android:topRightRadius="@dimen/music_suggest_notification_selector_bg_corners" />
+            <corners
+                android:topLeftRadius="@dimen/music_suggest_notification_selector_bg_corners"
+                android:topRightRadius="@dimen/music_suggest_notification_selector_bg_corners" />
         </shape>
     </item>
     <item>
@@ -12,13 +14,17 @@
             <item android:state_selected="true">
                 <shape>
                     <solid android:color="@color/music_selectable_bg_selected" />
-                    <corners android:topLeftRadius="@dimen/music_suggest_notification_selector_bg_corners" android:topRightRadius="@dimen/music_suggest_notification_selector_bg_corners" />
+                    <corners
+                        android:topLeftRadius="@dimen/music_suggest_notification_selector_bg_corners"
+                        android:topRightRadius="@dimen/music_suggest_notification_selector_bg_corners" />
                 </shape>
             </item>
             <item>
                 <shape>
                     <solid android:color="@color/music_selectable_bg_normal" />
-                    <corners android:topLeftRadius="@dimen/music_suggest_notification_selector_bg_corners" android:topRightRadius="@dimen/music_suggest_notification_selector_bg_corners" />
+                    <corners
+                        android:topLeftRadius="@dimen/music_suggest_notification_selector_bg_corners"
+                        android:topRightRadius="@dimen/music_suggest_notification_selector_bg_corners" />
                 </shape>
             </item>
         </selector>

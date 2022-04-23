@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import com.vk.core.d.RecoloredDrawable;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
+import com.vk.im.ui.themes.ImTheme;
 import com.vtosters.lite.R;
 
 public class Themes {
@@ -37,8 +38,42 @@ public class Themes {
         return Helper.GetContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", Helper.GetContext().getPackageName());
     }
 
-    public static VKTheme getCurrentDarkTheme() {
-        return amoled() ? VKTheme.AMOLED : VKTheme.DARK;
+    public static VKTheme getDarkTheme() {
+        String string = Helper.GetPreferences().getString("darktheme", "");
+        if (string.isEmpty()) {
+            return VKTheme.DARK;
+        }
+        if (string.equals("amoled")) {
+            return VKTheme.AMOLED;
+        }
+        return VKTheme.DARK;
+    }
+
+    public static ImTheme getImDarkTheme() {
+        String string = Helper.GetPreferences().getString("darktheme", "");
+        if (string.isEmpty()) {
+            return ImTheme.VKAPP_DARK;
+        }
+        if (string.equals("amoled")) {
+            return ImTheme.VKAPP_AMOLED;
+        }
+        return ImTheme.VKAPP_DARK;
+    }
+
+    public static VKTheme getLightTheme() {
+        String string = Helper.GetPreferences().getString("lighttheme", "");
+        if (string.isEmpty()) {
+            return VKTheme.DEFAULT_LIGHT;
+        }
+        return VKTheme.DEFAULT_LIGHT;
+    }
+
+    public static ImTheme getImLightTheme() {
+        String string = Helper.GetPreferences().getString("lighttheme", "");
+        if (string.isEmpty()) {
+            return ImTheme.VKAPP_LIGHT;
+        }
+        return ImTheme.VKAPP_LIGHT;
     }
 
     public static int getColorFromAttr(int attr) {

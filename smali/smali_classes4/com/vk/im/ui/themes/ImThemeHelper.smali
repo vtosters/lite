@@ -118,7 +118,9 @@
     sput-object v0, Lcom/vk/im/ui/themes/ImThemeHelper;->e:Lcom/vk/core/util/Provider;
 
     .line 17
-    sget-object v0, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_LIGHT:Lcom/vk/im/ui/themes/ImTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getImLightTheme()Lcom/vk/im/ui/themes/ImTheme;
+
+    move-result-object v0
 
     sput-object v0, Lcom/vk/im/ui/themes/ImThemeHelper;->f:Lcom/vk/im/ui/themes/ImTheme;
 

@@ -91,7 +91,9 @@
     sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->b:Lcom/vk/core/ui/themes/VKThemeHelper;
 
     .line 37
-    sget-object v0, Lcom/vk/core/ui/themes/VKTheme;->DEFAULT_LIGHT:Lcom/vk/core/ui/themes/VKTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getLightTheme()Lcom/vk/core/ui/themes/VKTheme;
+
+    move-result-object v0
 
     sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->c:Lcom/vk/core/ui/themes/VKTheme;
 
@@ -351,14 +353,16 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getCurrentDarkTheme()Lcom/vk/core/ui/themes/VKTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getDarkTheme()Lcom/vk/core/ui/themes/VKTheme;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcom/vk/core/ui/themes/VKTheme;->DEFAULT_LIGHT:Lcom/vk/core/ui/themes/VKTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getLightTheme()Lcom/vk/core/ui/themes/VKTheme;
+
+    move-result-object v0
 
     .line 153
     :goto_0

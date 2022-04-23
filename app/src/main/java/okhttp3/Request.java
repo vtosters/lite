@@ -7,10 +7,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.Headers;
 import okhttp3.internal.Util;
 import okhttp3.internal.b.HttpMethod;
-import okhttp3.Request;
 
 public final class Request {
     /* renamed from: a  reason: collision with root package name */

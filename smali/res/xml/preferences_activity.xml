@@ -1,32 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/dnr">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_pm" android:key="read_pm" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_cnv" android:key="read_conversations" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_bot" android:key="read_bot" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/act_pm"
+            android:key="read_pm"
+            android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/act_cnv"
+            android:key="read_conversations"
+            android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/act_bot"
+            android:key="read_bot"
+            android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnw">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_pm" android:key="write_pm" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_cnv" android:key="write_conversations" android:defaultValue="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/act_bot" android:key="write_bot" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/act_pm"
+            android:key="write_pm"
+            android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/act_cnv"
+            android:key="write_conversations"
+            android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/act_bot"
+            android:key="write_bot"
+            android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtloffline" android:key="offline" android:summary="@string/vtlofflinesummary" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/vtloffline"
+            android:key="offline"
+            android:summary="@string/vtlofflinesummary"
+            android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/offline_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtloffline2" android:key="setoffline" android:summary="@string/vtloffline2summary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/vtloffline2"
+            android:key="setoffline"
+            android:summary="@string/vtloffline2summary"
+            android:defaultValue="false" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/dns" android:key="dns" android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/dns"
+            android:key="dns"
+            android:defaultValue="true" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/vtlawayphp" android:key="awayphp" android:summary="@string/vtlawayphpsummary" android:defaultValue="true" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference android:title="@string/benchapi" android:key="benchmark" android:summary="@string/benchapisummary" android:defaultValue="false" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/vtlawayphp"
+            android:key="awayphp"
+            android:summary="@string/vtlawayphpsummary"
+            android:defaultValue="true" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:title="@string/benchapi"
+            android:key="benchmark"
+            android:summary="@string/benchapisummary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>

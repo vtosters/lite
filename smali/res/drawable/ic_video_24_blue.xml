@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bitmap android:src="@drawable/ic_video_24" android:tint="?accent"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<bitmap android:src="@drawable/ic_video_24"
+    android:tint="?accent"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -36,7 +36,7 @@ public class DockBarFragment extends ToolbarFragment {
                 Helper.convertDpToPixel(10)
         );
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
-        
+
         Button save = new Button(n());
         save.setText("Сохранить");
         save.setOnClickListener(v -> {

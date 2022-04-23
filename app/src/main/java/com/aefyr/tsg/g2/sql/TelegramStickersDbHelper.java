@@ -11,11 +11,11 @@ import android.util.Log;
 
 import com.aefyr.tsg.g2.TelegramStickersPack;
 
-import java.io.File;
-import java.util.ArrayList;
-
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
 
 /**
  * Created by Aefyr on 19.05.2018.
