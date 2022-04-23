@@ -1,5 +1,15 @@
 package com.aefyr.tsg.g2;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+
+import com.aefyr.tsg.g2.sql.TelegramStickersDbHelper;
+import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
+import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersPackInfo;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,18 +17,8 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import com.aefyr.tsg.g2.sql.TelegramStickersDbHelper;
-import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
-import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersPackInfo;
-
-import android.content.Context;
-import android.content.Intent;
-import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
-
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
+import ru.vtosters.lite.utils.Helper;
 
 /**
  * Created by Aefyr on 19.05.2018.

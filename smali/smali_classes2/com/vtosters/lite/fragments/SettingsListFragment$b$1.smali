@@ -59,17 +59,10 @@
     .line 185
     sget-object v0, Lcom/vk/im/ui/themes/ImThemeHelper;->b:Lcom/vk/im/ui/themes/ImThemeHelper;
 
-    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_LIGHT:Lcom/vk/im/ui/themes/ImTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getImLightTheme()Lcom/vk/im/ui/themes/ImTheme;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vkim_msg()Z
+    move-result-object v1
 
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKME_LIGHT:Lcom/vk/im/ui/themes/ImTheme;
-
-    :cond_0
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/themes/ImThemeHelper;->a(Lcom/vk/im/ui/themes/ImTheme;)V
 
     goto :goto_0
@@ -78,26 +71,10 @@
     :cond_1
     sget-object v0, Lcom/vk/im/ui/themes/ImThemeHelper;->b:Lcom/vk/im/ui/themes/ImThemeHelper;
 
-    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_DARK:Lcom/vk/im/ui/themes/ImTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getImDarkTheme()Lcom/vk/im/ui/themes/ImTheme;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vkim_msg()Z
+    move-result-object v1
 
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKME_DARK:Lcom/vk/im/ui/themes/ImTheme;
-
-    :cond_2
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->amoled()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_AMOLED:Lcom/vk/im/ui/themes/ImTheme;
-
-    :cond_3
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/themes/ImThemeHelper;->a(Lcom/vk/im/ui/themes/ImTheme;)V
 
     .line 190

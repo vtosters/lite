@@ -1,8 +1,5 @@
 package com.aefyr.tsg.g2;
 
-import java.util.HashMap;
-import java.util.concurrent.atomic.AtomicLong;
-
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -10,10 +7,12 @@ import android.content.Context;
 import android.os.Build;
 
 import androidx.annotation.Nullable;
-import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
+
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicLong;
 
 
 /**

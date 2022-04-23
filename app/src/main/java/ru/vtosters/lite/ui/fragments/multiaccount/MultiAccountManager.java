@@ -30,7 +30,7 @@ public class MultiAccountManager {
     }
 
     private static int getAccountPrefsCount() {
-       File[] prefs = new File(Helper.GetContext().getFilesDir().getParent(), "shared_prefs")
+        File[] prefs = new File(Helper.GetContext().getFilesDir().getParent(), "shared_prefs")
                 .listFiles((dir, name) -> {
                     return name.matches("pref_account_manager\\d+\\.xml");
                 });

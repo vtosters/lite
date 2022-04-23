@@ -1,7 +1,6 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Proxy.setProxy;
-import static ru.vtosters.lite.utils.Themes.amoled;
 
 import android.app.Activity;
 import android.app.Application;
@@ -274,7 +273,8 @@ public class Prefs {
     }
 
     public static String getAmoledVKUI() {
-        return amoled() ? "1" : "0";
+        String string = Helper.GetPreferences().getString("darktheme", "");
+        return string.equals("amoled") ? "1" : "0";
     }
 
     public static String getMeToken() {

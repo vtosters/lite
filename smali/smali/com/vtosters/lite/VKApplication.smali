@@ -1187,7 +1187,9 @@
     invoke-static {v1}, Lcom/vk/im/ui/a/ImBridge13;->a(Lcom/vk/im/ui/a/ImBridge12;)V
 
     .line 411
-    sget-object v1, Lcom/vk/im/ui/themes/ImTheme;->VKAPP_LIGHT:Lcom/vk/im/ui/themes/ImTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getImLightTheme()Lcom/vk/im/ui/themes/ImTheme;
+
+    move-result-object v1
 
     invoke-static {v1}, Lcom/vk/im/ui/themes/ImThemeHelper;->b(Lcom/vk/im/ui/themes/ImTheme;)V
 

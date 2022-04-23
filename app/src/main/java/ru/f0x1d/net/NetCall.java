@@ -1,5 +1,7 @@
 package ru.f0x1d.net;
 
+import android.util.Base64;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,8 +14,6 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.TreeMap;
-
-import android.util.Base64;
 
 public final class NetCall {
     private NetRequest req;

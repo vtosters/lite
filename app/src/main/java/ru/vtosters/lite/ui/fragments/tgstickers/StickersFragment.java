@@ -166,10 +166,10 @@ public class StickersFragment extends ToolbarFragment {
                     TGPref.setTGBotKey(editText.getText().toString());
                     if (r != null) r.run();
                 }).setNegativeButton(android.R.string.cancel, null).setNeutralButton(Helper.getString("stickersapi7"), (dialog, which) -> new AlertDialog.Builder(super.n())
-                        .setTitle(Helper.getString("stickersapi8"))
-                        .setMessage(Helper.getString("stickersapi9") +
-                                Helper.getString("stickersapi10")).setPositiveButton(android.R.string.ok, null)
-                        .create().show()).create().show();
+                .setTitle(Helper.getString("stickersapi8"))
+                .setMessage(Helper.getString("stickersapi9") +
+                        Helper.getString("stickersapi10")).setPositiveButton(android.R.string.ok, null)
+                .create().show()).create().show();
     }
 
     private void checkApiKey(final Runnable r) {

@@ -9,12 +9,6 @@ import android.util.Log;
 import com.aefyr.tsg.g2.stickersgrabber.util.Flag;
 import com.aefyr.tsg.g2.stickersgrabber.util.GoalCounter;
 
-import ru.f0x1d.net.NetCall;
-import ru.f0x1d.net.NetCallback;
-import ru.f0x1d.net.NetClient;
-import ru.f0x1d.net.NetRequest;
-import ru.f0x1d.net.NetResponse;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -32,6 +26,12 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import ru.f0x1d.net.NetCall;
+import ru.f0x1d.net.NetCallback;
+import ru.f0x1d.net.NetClient;
+import ru.f0x1d.net.NetRequest;
+import ru.f0x1d.net.NetResponse;
 
 /**
  * Created by Aefyr on 11.05.2018.

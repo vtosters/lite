@@ -1,9 +1,6 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Themes.amoled;
-
 import android.util.Base64;
-import android.util.Log;
 import android.webkit.WebView;
 
 import com.vtosters.lite.R;
@@ -61,6 +58,7 @@ public class VKUIInjector {
     }
 
     public static void inject(WebView webView) {
+        String string = Helper.GetPreferences().getString("darktheme", "");
         if (Prefs.BooleanTrue("VKUI_INJ")) {
             if (!isLoaded) {
                 load();
@@ -70,7 +68,7 @@ public class VKUIInjector {
                 sb.append("\n\n");
                 sb.append(loadedCSS);
             }
-            if (amoled() == true) {
+            if (string.equals("amoled")) {
                 sb.append("\n\n");
                 sb.append(loadedCSSAmoled);
             }

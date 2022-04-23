@@ -224,7 +224,8 @@ public class DockBarManager {
         int target = adapter.getIndexByViewType(toPosition, adapter.getItemType(toPosition));
         if (fromPosition < toPosition) {
 
-            if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu")) return;
+            if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu"))
+                return;
 
             DockBarTab tab = mSelectedTabs.get(curr);
             mSelectedTabs.remove(tab);
@@ -237,7 +238,7 @@ public class DockBarManager {
             for (int i = 0; i < target; i++) {
                 Collections.swap(mDisabledTabs, i, i + 1);
             }
-        } else  {
+        } else {
 
             if (mSelectedTabs.size() >= MAX_SELECTED_TABS_LIMIT) return;
 

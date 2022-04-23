@@ -915,7 +915,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getCurrentDarkTheme()Lcom/vk/core/ui/themes/VKTheme;
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getDarkTheme()Lcom/vk/core/ui/themes/VKTheme;
 
     move-result-object v2
 

@@ -22,7 +22,7 @@ public class DockBarAdapter extends RecyclerView.a
     public static final int DISABLED_TAB_TYPE = 2;
     public static final int GROUP_TITLE_TYPE = 3;
 
-    
+
     private final DockBarManager mDockBarManager = DockBarManager.getInstance();
 
     @Override
