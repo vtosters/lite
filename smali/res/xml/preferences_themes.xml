@@ -3,7 +3,7 @@
     <PreferenceCategory android:title="@string/vtlthemes">
         <Preference
             android:enabled="false"
-            android:summary="Для примнения изменений тем необходимо переключить тему"
+            android:summary="Для примнений изменений тем необходимо переключить тему"
             android:title="Полезная информация" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
