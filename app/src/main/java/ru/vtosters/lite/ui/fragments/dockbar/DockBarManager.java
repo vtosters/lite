@@ -4,6 +4,7 @@ import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFeedFragment;
 import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
+import com.vk.feedlikes.fragments.FeedLikesFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.Feed2049;
@@ -82,6 +83,7 @@ public class DockBarManager {
             mDisabledTabs.add(new DockBarTab("tab_videos", R.drawable.ic_video_24, R.string.videos, R.id.menu_videos, VideosFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_lives", R.drawable.ic_live_filter_24dp, R.string.sett_live, R.id.menu_lives, LivesPostListFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_games", R.drawable.ic_games_24, R.string.games, R.id.menu_games, GamesFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_liked", R.drawable.ic_menu_like_24, R.string.sett_likes, R.id.menu_feed_likes, FeedLikesFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_fave", R.drawable.ic_favorite_24, R.string.exo_track_selection_title_video_res_0x7f11031e, R.id.menu_fave, FaveTabFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_documents", R.drawable.ic_document_24, R.string.docs, R.id.menu_documents, DocumentsViewFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
