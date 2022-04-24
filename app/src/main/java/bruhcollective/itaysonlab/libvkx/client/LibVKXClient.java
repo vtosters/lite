@@ -15,7 +15,6 @@ import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
-/* loaded from: classes6.dex */
 public class LibVKXClient {
     private static LibVKXClientImpl impl;
 
@@ -49,8 +48,7 @@ public class LibVKXClient {
         return getInstance().runOnService(action);
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public static /* synthetic */ void lambdaplay(List list, MusicTrack musicTrack, PlayerRefer playerRefer, ILibVkxService iLibVkxService) {
+    public static void lambdaplay(List list, MusicTrack musicTrack, PlayerRefer playerRefer, ILibVkxService iLibVkxService) {
         int indexOf = list.indexOf(musicTrack);
         ArrayList arrayList = new ArrayList();
         Iterator it = list.iterator();

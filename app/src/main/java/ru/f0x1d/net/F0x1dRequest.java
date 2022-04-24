@@ -51,7 +51,6 @@ public class F0x1dRequest {
             this.mIsPut = z2;
         }
 
-        /* JADX INFO: Access modifiers changed from: protected */
         public String doInBackground(Void... voidArr) {
             try {
                 HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(new String(this.url)).openConnection();
