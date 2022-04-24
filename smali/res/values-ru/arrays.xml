@@ -483,4 +483,16 @@
         <item>150 сообщений</item>
         <item>200 сообщений</item>
     </string-array>
+    <string-array name="darktheme_value">
+        <item>По умолчанию</item>
+        <item>Полностью чёрная</item>
+    </string-array>
+    <string-array name="lighttheme_value">
+        <item>По умолчанию</item>
+    </string-array>
+    <string-array name="commentssort_value">
+        <item>По умолчанию</item>
+        <item>От Новых к Старым</item>
+        <item>От Старых к Новым</item>
+    </string-array>
 </resources>

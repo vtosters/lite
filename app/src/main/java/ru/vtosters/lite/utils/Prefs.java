@@ -277,6 +277,20 @@ public class Prefs {
         return string.equals("amoled") ? "1" : "0";
     }
 
+    public static String getCommentsSort(String def) {
+        String string = Helper.GetPreferences().getString("commentssort", "");
+        if (string.isEmpty()) {
+            return def;
+        }
+        if (string.equals("new")) {
+            return "desc";
+        }
+        if (string.equals("old")) {
+            return "asc";
+        }
+        return def;
+    }
+
     public static String getMeToken() {
         return Helper.GetPreferences().getString("me_token", "");
     }

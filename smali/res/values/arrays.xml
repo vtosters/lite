@@ -676,4 +676,14 @@
         <item>default</item>
         <item>amoled</item>
     </string-array>
+    <string-array name="commentssort_value">
+        <item>Default</item>
+        <item>New to Old</item>
+        <item>Old to New</item>
+    </string-array>
+    <string-array name="commentssort">
+        <item>default</item>
+        <item>new</item>
+        <item>old</item>
+    </string-array>
 </resources>
