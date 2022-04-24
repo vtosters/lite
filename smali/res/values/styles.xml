@@ -2159,8 +2159,8 @@
 
     <style name="EditTextStandard" parent="@android:style/Widget.EditText">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:textColor">@color/almost_black</item>
-        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:textColorHint">?text_secondary</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@drawable/edit_text_standard_bg</item>
         <item name="android:paddingLeft">0.0dip</item>
@@ -3360,7 +3360,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">vertical</item>
         <item name="android:id">@id/top_block</item>
-        <item name="android:background">#ffffffff</item>
+        <item name="android:background">?background_content</item>
         <item name="android:clipToPadding">false</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -3375,7 +3375,7 @@
 
     <style name="RegistrationTextInfo" parent="@android:style/Widget.TextView">
         <item name="android:textSize">15.0dip</item>
-        <item name="android:textColor">#ff909499</item>
+        <item name="android:textColor">?text_primary</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingTop">24.0dip</item>
         <item name="android:paddingBottom">24.0dip</item>

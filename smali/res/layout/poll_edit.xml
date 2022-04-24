@@ -8,7 +8,7 @@
     <include layout="@layout/toolbar" />
 
     <ScrollView
-        android:background="@color/cards_bg"
+        android:background="?background_content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:fillViewport="true">

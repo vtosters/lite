@@ -7,7 +7,7 @@
     </item>
     <item android:top="25.0dip">
         <shape>
-            <solid android:color="@color/cards_bg" />
+            <solid android:color="?background_content" />
         </shape>
     </item>
 </layer-list>
