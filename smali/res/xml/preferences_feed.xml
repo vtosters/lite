@@ -72,6 +72,13 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:entries="@array/commentssort_value"
+            android:title="Сортировка комментариев"
+            android:key="commentssort"
+            android:defaultValue="default"
+            android:dialogTitle="Выберите значение"
+            android:entryValues="@array/commentssort" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:title="@string/vtlfeedreload"
             android:key="feedautoupdate"

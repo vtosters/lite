@@ -138,6 +138,10 @@
 
     .line 64
     :goto_1
+    invoke-static {p2}, Lru/vtosters/lite/utils/Prefs;->getCommentsSort(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
     invoke-virtual {p0, p1, p2}, Lcom/vk/api/wall/WallGetComments;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 66
