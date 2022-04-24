@@ -2,77 +2,77 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/interfacenewsfeed">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/altnewsfeed"
+            android:defaultValue="true"
             android:key="newfeed"
             android:summary="@string/altnewsfeedsum"
-            android:defaultValue="true" />
+            android:title="@string/altnewsfeed" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/showstories"
+            android:defaultValue="true"
             android:key="stories"
             android:summary="@string/showstoriessum"
-            android:defaultValue="true" />
+            android:title="@string/showstories" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/interfacenewsfeedswipe"
+            android:defaultValue="true"
             android:key="swipe"
             android:summary="@string/interfacenewsfeedswipesum"
-            android:defaultValue="true" />
+            android:title="@string/interfacenewsfeedswipe" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:entries="@array/start"
-            android:title="@string/interfacestartfr"
-            android:key="start_values"
             android:defaultValue="newsfeed"
             android:dialogTitle="@string/interfacestartfrsum"
-            android:entryValues="@array/start_values" />
+            android:entries="@array/start"
+            android:entryValues="@array/start_values"
+            android:key="start_values"
+            android:title="@string/interfacestartfr" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="Старые иконки"
+            android:defaultValue="false"
             android:key="olddock"
             android:summary="Использовать старые иконки в докбаре
 Необходимо сбросить настройки докбара для применения изменений"
-            android:defaultValue="false" />
+            android:title="Старые иконки" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/interfaceglobaldates"
+            android:defaultValue="true"
             android:key="fulltime"
             android:summary="@string/interfaceglobaldatessum"
-            android:defaultValue="true" />
+            android:title="@string/interfaceglobaldates" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/interfaceglobalnum"
+            android:defaultValue="true"
             android:key="shortinfo"
             android:summary="@string/interfaceglobalnumsum"
-            android:defaultValue="true" />
+            android:title="@string/interfaceglobalnum" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/interfaceglobalpost"
+            android:defaultValue="true"
             android:key="shortpost"
             android:summary="@string/interfaceglobalpostsum"
-            android:defaultValue="true" />
+            android:title="@string/interfaceglobalpost" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/interfacevideoext"
+            android:defaultValue="false"
             android:key="isEnableExternalOpening"
             android:summary="@string/interfacevideoextsum"
-            android:defaultValue="false" />
+            android:title="@string/interfacevideoext" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/interfacevideorec"
+            android:defaultValue="false"
             android:key="__dbg_disable_video_feed"
             android:summary="@string/interfacevideorecsum"
-            android:defaultValue="false" />
+            android:title="@string/interfacevideorec" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/menucutter"
+            android:defaultValue="false"
             android:key="showmenu"
             android:summary="@string/menucuttersum"
-            android:defaultValue="false" />
+            android:title="@string/menucutter" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/docknumbers"
+            android:defaultValue="true"
             android:key="dockcounter"
             android:summary="@string/docknumberssum"
-            android:defaultValue="true" />
+            android:title="@string/docknumbers" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

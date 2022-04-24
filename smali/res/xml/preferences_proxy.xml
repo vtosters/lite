@@ -3,70 +3,70 @@
     <PreferenceCategory android:title="@string/vtlproxy">
         <Preference
             android:enabled="false"
-            android:title="@string/proxyimpinfo"
-            android:summary="@string/proxyimpinfosum" />
+            android:summary="@string/proxyimpinfosum"
+            android:title="@string/proxyimpinfo" />
         <com.vtosters.lite.ui.SummaryListPreference
-            android:entries="@array/proxy"
-            android:title="@string/useproxy"
-            android:key="proxy"
             android:defaultValue="noproxy"
             android:dialogTitle="@string/useproxysum"
-            android:entryValues="@array/proxy_value" />
+            android:entries="@array/proxy"
+            android:entryValues="@array/proxy_value"
+            android:key="proxy"
+            android:title="@string/useproxy" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference
-            android:title="@string/proxyapi"
+            android:defaultValue=""
             android:key="proxyapi"
-            android:defaultValue="" />
+            android:title="@string/proxyapi" />
         <EditTextPreference
-            android:title="@string/proxyoauth"
+            android:defaultValue=""
             android:key="proxyoauth"
-            android:defaultValue="" />
+            android:title="@string/proxyoauth" />
         <EditTextPreference
-            android:title="@string/proxystatic"
+            android:defaultValue=""
             android:key="proxystatic"
-            android:defaultValue="" />
+            android:title="@string/proxystatic" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttp">
         <EditTextPreference
-            android:title="@string/proxydomain"
+            android:defaultValue=""
             android:key="proxyHostHTTP"
-            android:defaultValue="" />
+            android:title="@string/proxydomain" />
         <EditTextPreference
-            android:title="@string/proxyport"
+            android:defaultValue=""
             android:key="proxyPortHTTP"
-            android:defaultValue="" />
+            android:title="@string/proxyport" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttps">
         <EditTextPreference
-            android:title="@string/proxydomain"
+            android:defaultValue=""
             android:key="proxyHostHTTPS"
-            android:defaultValue="" />
+            android:title="@string/proxydomain" />
         <EditTextPreference
-            android:title="@string/proxyport"
+            android:defaultValue=""
             android:key="proxyPortHTTPS"
-            android:defaultValue="" />
+            android:title="@string/proxyport" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxysocks">
         <EditTextPreference
-            android:title="@string/proxydomain"
+            android:defaultValue=""
             android:key="proxyHostSocks"
-            android:defaultValue="" />
+            android:title="@string/proxydomain" />
         <EditTextPreference
-            android:title="@string/proxyport"
+            android:defaultValue=""
             android:key="proxyPortSocks"
-            android:defaultValue="" />
+            android:title="@string/proxyport" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
         <Preference
             android:persistent="false"
-            android:title="xtrafrancyz"
-            android:summary="@string/proxyownersxtr">
+            android:summary="@string/proxyownersxtr"
+            android:title="xtrafrancyz">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://xtrafrancyz.net/unblock-vk" />
@@ -88,8 +88,8 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
         <Preference
             android:persistent="false"
-            android:title="zaborona"
-            android:summary="@string/proxyownerszbr">
+            android:summary="@string/proxyownerszbr"
+            android:title="zaborona">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://zaborona.help" />

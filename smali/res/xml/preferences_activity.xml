@@ -2,67 +2,67 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/dnr">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/act_pm"
+            android:defaultValue="false"
             android:key="read_pm"
-            android:defaultValue="false" />
+            android:title="@string/act_pm" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/act_cnv"
+            android:defaultValue="false"
             android:key="read_conversations"
-            android:defaultValue="false" />
+            android:title="@string/act_cnv" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/act_bot"
+            android:defaultValue="false"
             android:key="read_bot"
-            android:defaultValue="false" />
+            android:title="@string/act_bot" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnw">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/act_pm"
+            android:defaultValue="false"
             android:key="write_pm"
-            android:defaultValue="false" />
+            android:title="@string/act_pm" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/act_cnv"
+            android:defaultValue="false"
             android:key="write_conversations"
-            android:defaultValue="false" />
+            android:title="@string/act_cnv" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/act_bot"
+            android:defaultValue="false"
             android:key="write_bot"
-            android:defaultValue="false" />
+            android:title="@string/act_bot" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtloffline"
+            android:defaultValue="true"
             android:key="offline"
             android:summary="@string/vtlofflinesummary"
-            android:defaultValue="true" />
+            android:title="@string/vtloffline" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/offline_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtloffline2"
+            android:defaultValue="false"
             android:key="setoffline"
             android:summary="@string/vtloffline2summary"
-            android:defaultValue="false" />
+            android:title="@string/vtloffline2" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/dns"
+            android:defaultValue="true"
             android:key="dns"
-            android:defaultValue="true" />
+            android:title="@string/dns" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtlawayphp"
+            android:defaultValue="true"
             android:key="awayphp"
             android:summary="@string/vtlawayphpsummary"
-            android:defaultValue="true" />
+            android:title="@string/vtlawayphp" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/benchapi"
+            android:defaultValue="false"
             android:key="benchmark"
             android:summary="@string/benchapisummary"
-            android:defaultValue="false" />
+            android:title="@string/benchapi" />
     </PreferenceCategory>
 </PreferenceScreen>
