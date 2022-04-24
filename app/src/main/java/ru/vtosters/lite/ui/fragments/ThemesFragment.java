@@ -1,7 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 
@@ -24,10 +22,6 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     public static class b implements Preference.b {
         @Override // android.support.v7.preference.Preference.b
         public boolean a(Preference preference, Object obj) {
-            SharedPreferences theme = Helper.GetContext().getSharedPreferences("vk_theme_helper", Context.MODE_PRIVATE);
-            SharedPreferences imtheme = Helper.GetContext().getSharedPreferences("vk_theme_helper", Context.MODE_PRIVATE);
-            theme.edit().clear().commit();
-            imtheme.edit().clear().commit();
             ToastUtils.a(Helper.getString("restartapp"));
             return true;
         }
