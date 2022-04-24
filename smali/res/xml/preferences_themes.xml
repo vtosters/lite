@@ -1,36 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vtosters.lite.ui.SummaryListPreference
-        android:entries="@array/darktheme_value"
-        android:title="Темная тема приложения"
-        android:key="darktheme"
-        android:defaultValue="default"
-        android:dialogTitle="Выберите тему"
-        android:entryValues="@array/darktheme" />
-    <com.vtosters.lite.ui.SummaryListPreference
-        android:entries="@array/lighttheme_value"
-        android:title="Светлая тема приложения"
-        android:key="lighttheme"
-        android:defaultValue="default"
-        android:dialogTitle="Выберите тему"
-        android:entryValues="@array/lighttheme" />
+    <PreferenceCategory android:title="@string/vtlthemes">
+        <Preference
+            android:enabled="false"
+            android:summary="Для примнения изменений тем необходимо переключить тему"
+            android:title="Полезная информация" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Выберите тему"
+            android:entries="@array/darktheme_value"
+            android:entryValues="@array/darktheme"
+            android:key="darktheme"
+            android:title="Темная тема приложения" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Выберите тему"
+            android:entries="@array/lighttheme_value"
+            android:entryValues="@array/lighttheme"
+            android:key="lighttheme"
+            android:title="Светлая тема приложения" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vticon">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vticonbtn"
+            android:defaultValue="false"
             android:key="iconvk"
             android:summary="@string/vticonsummary"
-            android:defaultValue="false" />
+            android:title="@string/vticonbtn" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtlnavbar"
+            android:defaultValue="true"
             android:key="navbar"
-            android:defaultValue="true" />
+            android:title="@string/vtlnavbar" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vkuiinj"
+            android:defaultValue="true"
             android:key="VKUI_INJ"
-            android:defaultValue="true" />
+            android:title="@string/vkuiinj" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

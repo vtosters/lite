@@ -2,50 +2,50 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/vtlinterfacemsg">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtlcalls"
+            android:defaultValue="true"
             android:key="calls"
-            android:defaultValue="true" />
+            android:title="@string/vtlcalls" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtlmsgtails"
+            android:defaultValue="true"
             android:key="msgtails"
-            android:defaultValue="true" />
+            android:title="@string/vtlmsgtails" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/vtlvoice"
+            android:defaultValue="true"
             android:key="voice"
             android:summary="@string/vtlvoicesummary"
-            android:defaultValue="true" />
+            android:title="@string/vtlvoice" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/alteremoji"
+            android:defaultValue="false"
             android:key="alteremoji"
             android:summary="@string/alteremojisum"
-            android:defaultValue="false" />
+            android:title="@string/alteremoji" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/systememoji"
+            android:defaultValue="false"
             android:key="systememoji"
             android:summary="@string/systememojisum"
-            android:defaultValue="false" />
+            android:title="@string/systememoji" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/BGStickers"
+            android:defaultValue="true"
             android:key="isBGStickersEnabled"
             android:summary="@string/BGStickerssum"
-            android:defaultValue="true" />
+            android:title="@string/BGStickers" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:entries="@array/msgcount_value"
-            android:title="Количество загружаемых сообщений"
-            android:key="msgcount"
             android:defaultValue="30"
             android:dialogTitle="Выберите количество"
-            android:entryValues="@array/msgcount" />
+            android:entries="@array/msgcount_value"
+            android:entryValues="@array/msgcount"
+            android:key="msgcount"
+            android:title="Количество загружаемых сообщений" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:title="@string/convUsersOnline"
+            android:defaultValue="false"
             android:key="convUsersOnline"
             android:summary="@string/convUsersOnlinesum"
-            android:defaultValue="false" />
+            android:title="@string/convUsersOnline" />
     </PreferenceCategory>
 </PreferenceScreen>
