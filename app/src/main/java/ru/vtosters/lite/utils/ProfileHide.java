@@ -3,8 +3,6 @@ package ru.vtosters.lite.utils;
 public class ProfileHide {
 //    private static final OkHttpClient client = new OkHttpClient();
 //
-//    /* JADX WARN: Type inference failed for: r1v1, types: [boolean] */
-//    /* JADX WARNING: Unknown variable types count: 1 */
 //    public static void injectMap(HashMap<Integer, AdministratorProfileFragment.a.a> hashMap) {
 //        for (int i = 0; VTVerifications.sServiceAccountsMap.valueOf(i) < 0; i++) {
 //            boolean valueOf = VTVerifications.sServiceAccountsMap.valueOf(Helper.getId());

@@ -71,7 +71,7 @@ public class FoafBase {
         F0x1dRequest.makeRequest(getLink(i), callback);
     }
 
-    static /* synthetic */ void lambdaLoadAndShow(ProgressDialog progressDialog, Context context, int i, String str) {
+    static void lambdaLoadAndShow(ProgressDialog progressDialog, Context context, int i, String str) {
         try {
             progressDialog.cancel();
             Matcher matcher = FOAF_REGEX.matcher(str);

@@ -12,9 +12,8 @@ import ru.vtosters.lite.utils.IconHelper;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
-    /* access modifiers changed from: package-private */
     public class a implements Preference.b {
-        public /* synthetic */ a() {
+        public a() {
         }
 
         @Override // android.support.v7.preference.Preference.b
@@ -24,14 +23,13 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    // com.vtosters.lite.fragments.MaterialPreferenceFragment, android.support.v4.app.DialogFragment, android.support.v4.app.Fragment
     public void b(Bundle bundle) {
         super.b(bundle);
         a(R.xml.preferences_themes);
         prefs();
     }
 
-    public /* synthetic */ boolean apply(Preference preference, Object obj) {
+    public boolean apply(Preference preference, Object obj) {
         if (((Boolean) obj).booleanValue()) {
             IconHelper.switchToVK();
         } else {

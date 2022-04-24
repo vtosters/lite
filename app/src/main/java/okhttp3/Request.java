@@ -11,7 +11,6 @@ import okhttp3.internal.Util;
 import okhttp3.internal.b.HttpMethod;
 
 public final class Request {
-    /* renamed from: a  reason: collision with root package name */
     final HttpUrl a;
     final String b;
     final Headers c;
@@ -83,7 +82,6 @@ public final class Request {
 
     public static class Builder {
 
-        /* renamed from: a  reason: collision with root package name */
         HttpUrl a;
         String b;
         Headers.a c;

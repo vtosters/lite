@@ -31,7 +31,6 @@ public class GCMFix {
     private static KeyPair pair;
     private static int rid = 0;
 
-    /* access modifiers changed from: private */
     public interface Callback {
         void doCallback(String str);
     }
@@ -95,12 +94,12 @@ public class GCMFix {
         }
     }
 
-    static /* synthetic */ void lambdaRequestToken(StringBuilder sb, AtomicBoolean wait, String s) {
+    static void lambdaRequestToken(StringBuilder sb, AtomicBoolean wait, String s) {
         sb.append(s.substring(20));
         wait.set(true);
     }
 
-    static /* synthetic */ void lambda$requestToken$1(String str) {
+    static void lambda$requestToken$1(String str) {
     }
 
     private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del) {

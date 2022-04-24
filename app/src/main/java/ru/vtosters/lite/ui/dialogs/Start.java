@@ -21,7 +21,6 @@ public class Start {
         builder.setMessage(getWelcome());
         builder.setCancelable(false);
         builder.setPositiveButton("Продолжить", new DialogInterface.OnClickListener() {
-            /* class ru.vtosters.lite.utils.lite.dialog.Start.AnonymousClass1 */
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -29,7 +28,6 @@ public class Start {
             }
         });
         builder.setNeutralButton("Новости", new DialogInterface.OnClickListener() {
-            /* class ru.vtosters.lite.utils.lite.dialog.Start.AnonymousClass2 */
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {

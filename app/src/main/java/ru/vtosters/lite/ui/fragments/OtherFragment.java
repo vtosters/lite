@@ -23,7 +23,6 @@ import ru.vtosters.lite.utils.Helper;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
-    /* access modifiers changed from: package-private */
     static class c implements Preference.c {
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
@@ -42,14 +41,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    // com.vtosters.lite.fragments.MaterialPreferenceFragment, android.support.v4.app.DialogFragment, android.support.v4.app.Fragment
     public void b(Bundle bundle) {
         super.b(bundle);
         a(R.xml.preferences_other);
         prefs();
     }
 
-    /* access modifiers changed from: package-private */
     public class e implements Preference.c {
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
@@ -65,7 +62,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    /* access modifiers changed from: package-private */
     public class b implements Preference.c {
         b() {
         }
@@ -77,7 +73,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    /* access modifiers changed from: package-private */
     public class d implements Preference.c {
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
@@ -89,7 +84,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    /* access modifiers changed from: package-private */
     public class a implements Preference.c {
         a() {
         }
