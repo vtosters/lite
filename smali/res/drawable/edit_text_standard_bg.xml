@@ -3,7 +3,7 @@
     <item android:state_focused="true">
         <inset android:insetLeft="-10.0dip" android:insetRight="-10.0dip" android:insetTop="-10.0dip" android:insetBottom="4.0dip">
             <shape>
-                <stroke android:width="2.0dip" android:color="#ff5793d9" />
+                <stroke android:width="2.0dip" android:color="?accent" />
                 <solid android:color="@android:color/transparent" />
             </shape>
         </inset>
