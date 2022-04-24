@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 
@@ -13,12 +15,21 @@ import ru.vtosters.lite.utils.IconHelper;
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     public class a implements Preference.b {
-        public a() {
-        }
-
         @Override // android.support.v7.preference.Preference.b
         public boolean a(Preference preference, Object obj) {
             return ThemesFragment.this.apply(preference, obj);
+        }
+    }
+
+    public static class b implements Preference.b {
+        @Override // android.support.v7.preference.Preference.b
+        public boolean a(Preference preference, Object obj) {
+            SharedPreferences theme = Helper.GetContext().getSharedPreferences("vk_theme_helper", Context.MODE_PRIVATE);
+            SharedPreferences imtheme = Helper.GetContext().getSharedPreferences("vk_theme_helper", Context.MODE_PRIVATE);
+            theme.edit().clear().commit();
+            imtheme.edit().clear().commit();
+            ToastUtils.a(Helper.getString("restartapp"));
+            return true;
         }
     }
 
@@ -41,5 +52,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         a("iconvk").a((Preference.b) new a());
+        a("darktheme").a((Preference.b) new b());
+        a("lighttheme").a((Preference.b) new b());
     }
 }
