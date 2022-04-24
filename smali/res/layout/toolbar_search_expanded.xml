@@ -24,7 +24,7 @@
 
     <ImageView
         android:id="@id/search_clear"
-        android:background="?accent"
+        android:background="?header_background"
         android:layout_width="48.0dip"
         android:layout_height="48.0dip"
         android:src="@drawable/ic_cancel_24"

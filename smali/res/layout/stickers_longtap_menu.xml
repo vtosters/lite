@@ -2,6 +2,7 @@
 <LinearLayout android:layout_gravity="bottom"
     android:orientation="vertical"
     android:background="@drawable/bg_overlay_light_card"
+    android:backgroundTint="?background_content"
     android:paddingLeft="8.0dip"
     android:paddingTop="16.0dip"
     android:paddingRight="8.0dip"
@@ -14,7 +15,7 @@
     <com.vk.core.view.TintTextView
         android:textSize="16.0sp"
         android:textStyle="normal"
-        android:textColor="@color/muted_black"
+        android:textColor="?text_secondary"
         android:gravity="center_vertical"
         android:id="@id/send_button"
         android:background="@drawable/music_selectable_bg"
@@ -26,12 +27,12 @@
         android:drawableLeft="@drawable/ic_send_24"
         android:drawablePadding="22.0dip"
         android:fontFamily="sans-serif"
-        app:drawableTint="@color/light_gray" />
+        app:drawableTint="?text_primary" />
 
     <com.vk.core.view.TintTextView
         android:textSize="16.0sp"
         android:textStyle="normal"
-        android:textColor="@color/muted_black"
+        android:textColor="?text_secondary"
         android:gravity="center_vertical"
         android:id="@id/favorites_button"
         android:background="@drawable/music_selectable_bg"
@@ -43,5 +44,5 @@
         android:drawableLeft="@drawable/ic_favorite_24"
         android:drawablePadding="22.0dip"
         android:fontFamily="sans-serif"
-        app:drawableTint="@color/light_gray" />
+        app:drawableTint="?text_primary" />
 </LinearLayout>
