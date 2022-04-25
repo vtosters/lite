@@ -32,6 +32,7 @@
             android:textStyle="normal"
             android:gravity="center_vertical"
             android:id="@id/playlist_title"
+            android:textColor="?text_primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4.0dip"
