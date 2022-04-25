@@ -508,7 +508,7 @@
     <color name="toolbar_milk_textColorPrimary">#ff444547</color>
     <color name="toolbar_milk_textColorSecondary">#ff909499</color>
     <color name="toolbar_white_background">@color/white_with_FixAndroidBug</color>
-    <color name="toolbar_white_searchViewTextColorHint">@color/toolbar_white_textColorSecondary
+    <color name="toolbar_white_searchViewTextColorHint">?header_text
     </color>
     <color name="toolbar_white_statusBarColorBack">@color/white_with_FixAndroidBug</color>
     <color name="toolbar_white_statusBarColorFront">#45bbbbbb</color>

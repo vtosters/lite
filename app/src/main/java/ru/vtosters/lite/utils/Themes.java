@@ -126,6 +126,13 @@ public class Themes {
         return new RecoloredDrawable(drawable, getAccentColor());
     }
 
+    public static Drawable recolorDrawableToolbar(Drawable drawable) {
+        if (drawable == null) {
+            return null;
+        }
+        return new RecoloredDrawable(drawable, getHeaderText());
+    }
+
     public static ColorStateList recolorCSL(ColorStateList colorStateList) {
         if (colorStateList == null) {
             return null;

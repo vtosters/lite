@@ -4,6 +4,8 @@
     <item
         android:icon="@drawable/libverify_ic_delete_white"
         android:id="@id/history_clear"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/notification_history_clear"
         app:showAsAction="ifRoom" />
 </menu>

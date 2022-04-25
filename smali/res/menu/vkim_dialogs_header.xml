@@ -5,6 +5,8 @@
         android:icon="@drawable/vkim_ic_search"
         android:id="@id/action_search"
         android:title="@string/vkim_dialogs_header_search"
-        app:iconTint="?im_app_icon_toolbar"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
+        app:iconTint="?header_text"
         app:showAsAction="always" />
 </menu>

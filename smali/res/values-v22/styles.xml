@@ -19,7 +19,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
         <item name="android:selectableItemBackground">@drawable/highlight</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionMenuTextColor">?header_text</item>
         <item name="android:actionBarDivider">@null</item>
         <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
@@ -72,7 +72,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
         <item name="android:selectableItemBackground">@drawable/highlight</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionMenuTextColor">?header_text</item>
         <item name="android:actionBarDivider">@null</item>
         <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
@@ -126,7 +126,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
         <item name="android:selectableItemBackground">@drawable/highlight</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionMenuTextColor">?header_text</item>
         <item name="android:actionBarDivider">@null</item>
         <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>

@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@id/copy_link"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/copy_link"
         app:showAsAction="never" />
 </menu>

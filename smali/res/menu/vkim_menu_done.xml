@@ -5,6 +5,7 @@
         android:icon="@drawable/ic_done_24"
         android:id="@id/vkim_done"
         android:title="@string/vkim_ok"
-        app:iconTint="?im_app_icon_toolbar"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         app:showAsAction="always" />
 </menu>

@@ -20,7 +20,7 @@
             android:layout_height="56.0dip"
             android:src="@drawable/ic_search_params_24"
             android:scaleType="centerInside"
-            android:tint="?accent"
+            android:tint="?header_text"
             android:contentDescription="@null" />
 
         <LinearLayout

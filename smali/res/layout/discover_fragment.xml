@@ -36,6 +36,7 @@
                     android:background="@drawable/picker_white_ripple_unbounded"
                     android:layout_width="48.0dip"
                     android:layout_height="48.0dip"
+                    android:tint="?header_text"
                     android:src="@drawable/ic_friend_add_24"
                     android:scaleType="centerInside" />
 

@@ -64,7 +64,7 @@
             android:layout_height="40.0dip"
             android:src="@drawable/ic_search_params_24"
             android:scaleType="centerInside"
-            android:tint="#ff909499" />
+            android:tint="?header_text" />
 
         <ImageView
             android:layout_gravity="center_vertical"

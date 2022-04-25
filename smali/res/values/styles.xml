@@ -50,12 +50,12 @@
 
     <style name="ActionBarTheme.White" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="android:textColorPrimary">@color/toolbar_white_textColorPrimary</item>
-        <item name="android:textColorSecondary">@color/toolbar_white_textColorSecondary</item>
+        <item name="android:textColorSecondary">?header_text</item>
         <item name="colorAccent">?accent</item>
         <item name="colorPrimary">@color/toolbar_white_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="ActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
@@ -178,7 +178,7 @@
         <item name="android:windowAnimationStyle">@android:style/Animation</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="AvatarPickerStyle" parent="@style/TransparentTheme">
@@ -1374,7 +1374,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
         <item name="android:selectableItemBackground">@drawable/highlight</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionMenuTextColor">?header_text</item>
         <item name="android:actionBarDivider">@null</item>
         <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
@@ -1708,7 +1708,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
         <item name="android:selectableItemBackground">@drawable/highlight</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionMenuTextColor">?header_text</item>
         <item name="android:actionBarDivider">@null</item>
         <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
@@ -1750,7 +1750,7 @@
     </style>
 
     <style name="BasePickerTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="BaseStyle" parent="@style/BaseTheme">
@@ -1768,7 +1768,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
         <item name="android:selectableItemBackground">@drawable/highlight</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionMenuTextColor">?header_text</item>
         <item name="android:actionBarDivider">@null</item>
         <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
         <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
@@ -1948,7 +1948,7 @@
         <item name="statusBarColorFront">@color/toolbar_white_statusBarColorFront</item>
         <item name="tabBarBorderReference">@drawable/tab_bar_white_border</item>
         <item name="tabBarTheme">@style/TabBarTheme</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="BaseStyle.WhiteToolbar.Messages" parent="@style/BaseStyle.WhiteToolbar">
@@ -2268,7 +2268,7 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">0.0dip</item>
         <item name="android:backgroundDimEnabled">false</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="GameText">
@@ -2780,7 +2780,7 @@
         <item name="colorAccent">#ffffffff</item>
         <item name="colorPrimary">@color/picker_blue</item>
         <item name="colorPrimaryDark">@color/picker_blue</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="PickerDialogAnimation">
@@ -2802,7 +2802,7 @@
         <item name="android:layout_margin">0.0dip</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="PickerFullScreenNoStatusDialog" parent="@style/Theme.AppCompat.Light.Dialog">

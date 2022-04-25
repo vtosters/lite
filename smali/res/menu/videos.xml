@@ -4,6 +4,9 @@
     <item
         android:icon="@drawable/ic_add_24"
         android:id="@id/add"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
+        app:iconTint="?header_text"
         android:title="@string/add"
         android:showAsAction="always"
         app:showAsAction="always">

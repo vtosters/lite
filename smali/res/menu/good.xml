@@ -4,6 +4,8 @@
     <item
         android:icon="@drawable/ic_market_28"
         android:id="@id/menu_cart"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/market_cart"
         app:showAsAction="always" />
     <item

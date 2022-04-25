@@ -4,6 +4,8 @@
     <item
         android:icon="@drawable/ic_check_24"
         android:id="@id/save"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/save"
         android:showAsAction="always"
         app:showAsAction="always" />
