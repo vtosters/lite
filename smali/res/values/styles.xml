@@ -29,11 +29,11 @@
         <item name="android:textColorSecondary">?header_tint</item>
         <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
         <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
-        <item name="colorAccent">#ffffffff</item>
+        <item name="colorAccent">?header_text</item>
         <item name="colorPrimary">@color/toolbar_blue_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
-        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="ActionBarTheme.ItemsFull" parent="@style/ActionBarTheme" />
@@ -1405,7 +1405,7 @@
         <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
         <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
         <item name="tabBarTheme">@style/TabBarTheme</item>
-        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 
@@ -1739,7 +1739,7 @@
         <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
         <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
         <item name="tabBarTheme">@style/TabBarTheme</item>
-        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 
@@ -1799,7 +1799,7 @@
         <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
         <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
         <item name="tabBarTheme">@style/TabBarTheme</item>
-        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 
@@ -1859,7 +1859,7 @@
         <item name="statusBarColorFront">@color/toolbar_blueDialog_statusBarColorFront</item>
         <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
         <item name="tabBarTheme">@style/TabBarTheme</item>
-        <item name="toolbarIconsColor">@color/toolbar_blue_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
 

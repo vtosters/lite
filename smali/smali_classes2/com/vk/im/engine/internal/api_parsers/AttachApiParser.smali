@@ -2418,25 +2418,6 @@
     :goto_0
     invoke-virtual {v0, v2}, Lcom/vk/im/engine/models/attaches/AttachWall;->a(Z)V
 
-    const-string v2, "copyright"
-
-    .line 213
-    invoke-static {p1, v2, v1}, Lcom/vk/core/extensions/JsonObjectExt;->a(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v2, 0x0
-
-    :goto_1
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/models/attaches/AttachWall;->a(Z)V
-
     const-string v2, "to_id"
 
     .line 214
