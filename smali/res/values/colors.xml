@@ -572,4 +572,5 @@
     <color name="window_bg_transparent">#00000000</color>
     <color name="yellow">#ffffc107</color>
     <color name="yellow_light">#ffffd54f</color>
+    <color name="iclauncher">#fffcfcfc</color>
 </resources>
