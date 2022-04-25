@@ -7,18 +7,24 @@
     <item
         android:icon="@drawable/vkui_ic_voip_call_24"
         android:id="@id/call"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:visible="false"
         android:title="@string/voip_call_user"
         app:showAsAction="always" />
     <item
         android:icon="@drawable/vkui_ic_voip_call_video_24"
         android:id="@id/call_video"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:visible="false"
         android:title="@string/voip_call_user"
         app:showAsAction="always" />
     <item
         android:icon="@drawable/ic_settings_24"
         android:id="@id/edit_group"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/edit_group"
         android:showAsAction="always"
         app:showAsAction="always" />

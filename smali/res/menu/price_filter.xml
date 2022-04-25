@@ -4,8 +4,9 @@
     <item
         android:icon="@drawable/ic_check_24"
         android:id="@id/ok"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/ok"
         android:showAsAction="always"
-        app:menuTint="?header_text"
         app:showAsAction="always" />
 </menu>

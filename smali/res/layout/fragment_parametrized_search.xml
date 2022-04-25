@@ -32,7 +32,7 @@
                 android:layout_height="56.0dip"
                 android:src="@drawable/ic_search_params_24"
                 android:scaleType="centerInside"
-                android:tint="?button_outline_border" />
+                android:tint="?header_text" />
 
             <LinearLayout
                 android:layout_gravity="center"

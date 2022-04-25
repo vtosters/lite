@@ -5,6 +5,8 @@
         android:icon="@drawable/ic_add_24"
         android:id="@id/friends_add"
         android:title="@string/add"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:showAsAction="always"
         app:showAsAction="always" />
 </menu>

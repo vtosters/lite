@@ -5,6 +5,8 @@
         android:icon="@drawable/ic_search_theme_tinted"
         android:id="@id/vkim_search_menu"
         android:visible="true"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/search"
         app:showAsAction="always" />
 </menu>

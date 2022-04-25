@@ -7,21 +7,27 @@
             android:id="@id/call"
             android:visible="false"
             android:title="@string/vkim_msg_header_menu_call"
-            app:iconTint="?header_tint"
+            app:menuTint="?header_text"
+            android:tint="?header_text"
+            app:iconTint="?header_text"
             app:showAsAction="always" />
         <item
             android:icon="?im_ic_voip_call_video"
             android:id="@id/call_video"
             android:visible="false"
             android:title="@string/vkim_msg_header_menu_call"
-            app:iconTint="?header_tint"
+            app:menuTint="?header_text"
+            android:tint="?header_text"
+            app:iconTint="?header_text"
             app:showAsAction="always" />
         <item
             android:icon="@drawable/vkim_ic_more_vertical_24"
             android:id="@id/more"
             android:visible="false"
             android:title="@string/vkim_toolbar_more_options"
-            app:iconTint="?header_tint"
+            app:menuTint="?header_text"
+            android:tint="?header_text"
+            app:iconTint="?header_text"
             app:showAsAction="always" />
     </group>
 </menu>

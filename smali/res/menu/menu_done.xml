@@ -5,6 +5,7 @@
         android:icon="@drawable/ic_done_24"
         android:id="@id/done"
         android:title="@string/save"
-        app:iconTint="?im_app_icon_toolbar"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         app:showAsAction="always" />
 </menu>

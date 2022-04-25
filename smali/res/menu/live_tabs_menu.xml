@@ -4,6 +4,9 @@
     <item
         android:icon="@drawable/ic_add_24"
         android:id="@id/tags"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
+        app:iconTint="?header_text"
         android:title="@string/camera_ui_live_start"
         app:showAsAction="always" />
 </menu>

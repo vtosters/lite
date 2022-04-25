@@ -4,6 +4,8 @@
     <item
         android:icon="@drawable/ic_temp_close"
         android:id="@id/close"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
         android:title="@string/close"
         app:showAsAction="always" />
 </menu>

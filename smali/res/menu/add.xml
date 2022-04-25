@@ -3,6 +3,7 @@
     <item
         android:icon="@drawable/ic_add_24"
         android:id="@id/add"
+        android:tint="?header_text"
         android:title="@string/add"
         android:showAsAction="always" />
 </menu>

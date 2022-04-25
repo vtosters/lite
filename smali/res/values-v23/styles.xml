@@ -62,7 +62,7 @@
         <item name="statusBarColorFront">@color/toolbar_white_statusBarColorFront</item>
         <item name="tabBarBorderReference">@drawable/tab_bar_white_border</item>
         <item name="tabBarTheme">@style/TabBarTheme</item>
-        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+        <item name="toolbarIconsColor">?header_text</item>
     </style>
 
     <style name="CardView" parent="@style/Base.CardView">

@@ -42,9 +42,10 @@
 
         <EditText
             android:textSize="16.0sp"
-            android:textColor="#ff2c2d2e"
+            android:textColor="?text_primary"
             android:id="@id/title"
             android:background="@drawable/vkui_bg_field_nonfocusable"
+            android:backgroundTint="?background_page"
             android:paddingTop="13.0dip"
             android:paddingBottom="11.0dip"
             android:fadingEdgeLength="6.0dip"

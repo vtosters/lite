@@ -6,5 +6,8 @@
         android:id="@id/add"
         android:title="@string/action_create_group"
         android:showAsAction="always"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
+        app:iconTint="?header_text"
         app:showAsAction="always" />
 </menu>

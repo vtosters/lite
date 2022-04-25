@@ -6,13 +6,17 @@
         android:id="@id/im_dialogs_create"
         android:title="@string/vkim_accessibility_create_dialog"
         android:showAsAction="always"
-        app:iconTint="?im_app_icon_toolbar"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
+        app:iconTint="?header_text"
         app:showAsAction="always" />
     <item
         android:icon="@drawable/ic_search_24"
         android:id="@id/im_dialogs_search"
         android:title="@string/search"
         android:showAsAction="always"
-        app:iconTint="?im_app_icon_toolbar"
+        app:menuTint="?header_text"
+        android:tint="?header_text"
+        app:iconTint="?header_text"
         app:showAsAction="always" />
 </menu>
