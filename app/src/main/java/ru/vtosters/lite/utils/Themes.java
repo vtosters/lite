@@ -30,6 +30,10 @@ public class Themes {
         return VKThemeHelper.a((int) R.attr.tabbar_background);
     }
 
+    public static int getHeaderBackground() {
+        return VKThemeHelper.a((int) R.attr.header_background);
+    }
+
     public static int getAmoledTheme() {
         return Helper.GetContext().getResources().getIdentifier("BaseAmoledStyle", "style", Helper.GetContext().getPackageName());
     }
