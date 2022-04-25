@@ -1457,39 +1457,6 @@
     const/16 v25, 0x0
 
     :goto_16
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->GetCopyright()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 373
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_28
-
-    const-string v2, "copyright"
-
-    .line 373
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    .line 374
-    sget-object v4, Lcom/vk/dto/newsfeed/entries/Post$EasyPromote;->a:Lcom/vk/dto/newsfeed/entries/Post$EasyPromote$b;
-
-    invoke-virtual {v4, v2}, Lcom/vk/dto/newsfeed/entries/Post$EasyPromote$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/entries/Post$EasyPromote;
-
-    move-result-object v2
-
-    move-object/from16 v25, v2
-
-    goto :goto_17
-
-    :cond_28
-    const/16 v25, 0x0
-
-    :goto_17
     const-string v2, "poster"
 
     .line 377

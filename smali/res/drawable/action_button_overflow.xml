@@ -9,7 +9,7 @@
             <size
                 android:height="4.0dip"
                 android:width="4.0dip" />
-            <solid android:color="@color/toolbar_blue_textColorSecondary" />
+            <solid android:color="?header_text" />
         </shape>
     </item>
     <item
@@ -21,7 +21,7 @@
             <size
                 android:height="4.0dip"
                 android:width="4.0dip" />
-            <solid android:color="@color/toolbar_blue_textColorSecondary" />
+            <solid android:color="?header_text" />
         </shape>
     </item>
     <item
@@ -33,7 +33,7 @@
             <size
                 android:height="4.0dip"
                 android:width="4.0dip" />
-            <solid android:color="@color/toolbar_blue_textColorSecondary" />
+            <solid android:color="?header_text" />
         </shape>
     </item>
 </layer-list>
