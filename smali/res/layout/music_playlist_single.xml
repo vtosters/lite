@@ -20,6 +20,7 @@
 
     <TextView
         android:textStyle="normal"
+        android:textColor="?text_primary"
         android:id="@id/playlist_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

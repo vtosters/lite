@@ -28,7 +28,7 @@
 
         <com.vtosters.lite.ui.CorrectlyMeasuringTextView
             android:textSize="20.0dip"
-            android:textColor="@color/music_text_primary"
+            android:textColor="?text_primary"
             android:ellipsize="end"
             android:id="@id/playlist_title"
             android:layout_width="wrap_content"
