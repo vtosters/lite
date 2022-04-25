@@ -44,7 +44,10 @@ public class VKUIInjector {
 
     public static void load() {
         loadedCSS = load("vt_ui_accent.css")
-                .replace("%accent%", Themes.hex(Themes.getAccentColor()))
+                .replace("%header_background%", Themes.hex(Themes.getColorFromAttr(R.attr.header_background)))
+                .replace("%background_content%", Themes.hex(Themes.getColorFromAttr(R.attr.background_content)))
+                .replace("%header_text%", Themes.hex(Themes.getColorFromAttr(R.attr.header_text)))
+                .replace("%accent%", Themes.hex(Themes.getColorFromAttr(R.attr.accent)))
                 .replace("%background_page%", Themes.hex(Themes.getColorFromAttr(R.attr.background_page)))
                 .replace("%background_content%", Themes.hex(Themes.getColorFromAttr(R.attr.background_content)))
                 .replace("%text_primary%", Themes.hex(Themes.getColorFromAttr(R.attr.text_primary)));
