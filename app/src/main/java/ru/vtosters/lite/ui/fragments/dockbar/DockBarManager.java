@@ -45,7 +45,7 @@ import ru.vtosters.lite.utils.Prefs;
 
 public class DockBarManager {
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
-    public static final int MAX_SELECTED_TABS_LIMIT = 8;
+    public static final int MAX_SELECTED_TABS_LIMIT = 9;
 
     private static DockBarManager sInstance = new DockBarManager();
 
