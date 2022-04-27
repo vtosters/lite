@@ -26,7 +26,7 @@
 
         <FrameLayout
             android:id="@id/fl_tabs_container"
-            android:background="#ffffffff"
+            android:background="?tabbar_background"
             android:visibility="invisible"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/picker_tab_panel_height">
@@ -42,7 +42,7 @@
 
             <View
                 android:id="@id/tabs_overlay"
-                android:background="#ffffffff"
+                android:background="?tabbar_background"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" />
 
@@ -73,11 +73,11 @@
 
             <TextView
                 android:textSize="16.0sp"
-                android:textColor="?accent"
+                android:textColor="@color/picker_blue"
                 android:gravity="center"
                 android:layout_gravity="bottom"
                 android:id="@id/tv_bottom_panel_cancel"
-                android:background="#ffffffff"
+                android:background="?tabbar_background"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/picker_viewer_bottom_padding"
                 android:text="@string/picker_cancel"
