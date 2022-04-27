@@ -24,11 +24,11 @@
             android:layout_width="wrap_content"
             android:layout_height="48.0dip"
             app:tabGravity="fill"
-            app:tabIndicatorColor="?accent"
+            app:tabIndicatorColor="?header_tab_active_indicator"
             app:tabMaxWidth="0.0dip"
             app:tabMode="scrollable"
-            app:tabSelectedTextColor="?text_primary"
-            app:tabTextColor="?text_secondary"
+            app:tabSelectedTextColor="?header_tab_active_text"
+            app:tabTextColor="?header_tab_inactive_text"
             style="@style/CatalogTabLayout" />
     </android.support.design.widget.AppBarLayout>
 

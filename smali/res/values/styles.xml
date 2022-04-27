@@ -3657,7 +3657,7 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="tabGravity">fill</item>
-        <item name="tabIndicatorColor">?header_tab_active_text</item>
+        <item name="tabIndicatorColor">?header_tab_active_indicator</item>
         <item name="tabIndicatorHeight">2.5dip</item>
         <item name="tabMaxWidth">0.0dip</item>
         <item name="tabMode">fixed</item>

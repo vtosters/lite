@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.design.widget.TabLayout
-        android:background="?background_content"
+        android:background="?header_background"
         android:id="@id/feed_likes_tablayout"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/feed_likes_filter_height"
@@ -14,12 +14,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tabBackground="?background_content"
+        app:tabBackground="?header_background"
         app:tabGravity="fill"
-        app:tabIndicatorColor="?accent"
+        app:tabIndicatorColor="?header_tab_active_indicator"
         app:tabMaxWidth="0.0dip"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="?accent"
+        app:tabSelectedTextColor="?header_tab_active_text"
         app:tabTextAppearance="@style/FeedLikesTabStyle"
-        app:tabTextColor="?text_primary" />
+        app:tabTextColor="?header_tab_inactive_text" />
 </merge>

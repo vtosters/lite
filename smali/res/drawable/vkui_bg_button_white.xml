@@ -14,7 +14,7 @@
     </item>
     <item>
         <shape>
-            <solid android:color="?accent" />
+            <solid android:color="?header_text" />
             <corners android:radius="@dimen/vkui_button_corner_big_radius" />
         </shape>
     </item>
