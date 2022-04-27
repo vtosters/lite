@@ -36,6 +36,18 @@
         <item name="toolbarIconsColor">?header_text</item>
     </style>
 
+    <style name="ActionBarThemeFix" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">?header_tint</item>
+        <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
+        <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorPrimary">@color/toolbar_blue_background</item>
+        <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
+        <item name="titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="toolbarIconsColor">?header_text</item>
+    </style>
+
     <style name="ActionBarTheme.ItemsFull" parent="@style/ActionBarTheme" />
 
     <style name="ActionBarTheme.Milk" parent="@style/ThemeOverlay.AppCompat.ActionBar">
@@ -4045,7 +4057,7 @@
 
     <style name="ToolbarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textSize">20.0dip</item>
-        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textColor">?header_text</item>
     </style>
 
     <style name="TooltipFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">

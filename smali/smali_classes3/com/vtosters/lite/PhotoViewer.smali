@@ -819,7 +819,9 @@
 
     iget-object v5, p0, Lcom/vtosters/lite/PhotoViewer;->b:Landroid/app/Activity;
 
-    const v6, 0x7f120004
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->picFix()I
+
+    move-result v6
 
     invoke-direct {v4, v5, v6}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
