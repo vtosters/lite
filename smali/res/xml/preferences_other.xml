@@ -13,6 +13,10 @@
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
         <Preference
+            android:key="stickfix"
+            android:title="Очистить кэш стикеров"
+            android:summary="Исправление загрузки стикеров при их полном отсутствии" />
+        <Preference
             android:key="applicationrestart"
             android:title="@string/applicationrestart" />
         <Preference
