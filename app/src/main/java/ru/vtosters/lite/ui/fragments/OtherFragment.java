@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.widget.Toast;
@@ -103,11 +104,25 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
+    public class f implements Preference.c {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean a(Preference preference) {
+            SharedPreferences prefs = Helper.GetContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+            prefs.edit().clear().commit();
+            Helper.restarting();
+            return true;
+        }
+
+        f() {
+        }
+    }
+
     private void prefs() {
         a("firebasefix").a((Preference.c) new a());
         a("applicationstop").a((Preference.c) new b());
         a("tokencopy").a((Preference.c) new c());
         a("applicationrestart").a((Preference.c) new d());
         a("clearcache").a((Preference.c) new e());
+        a("stickfix").a((Preference.c) new f());
     }
 }
