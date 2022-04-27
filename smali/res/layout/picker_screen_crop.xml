@@ -138,7 +138,7 @@
                 android:layout_height="fill_parent"
                 android:src="@drawable/ic_done_24"
                 android:scaleType="centerInside"
-                android:tint="?accent" />
+                android:tint="@color/accent_blue" />
 
             <View
                 android:background="@color/picker_grey_divider"
