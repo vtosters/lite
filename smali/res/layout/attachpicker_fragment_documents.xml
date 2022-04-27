@@ -35,9 +35,9 @@
             android:background="?header_alternate_background"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="?accent"
-            app:tabSelectedTextColor="?accent"
-            app:tabTextColor="@color/azure_100_muted" />
+            app:tabIndicatorColor="?header_tab_active_indicator"
+            app:tabSelectedTextColor="?header_tab_active_text"
+            app:tabTextColor="?header_tab_inactive_text" />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
