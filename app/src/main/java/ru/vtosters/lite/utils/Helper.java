@@ -1,5 +1,7 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Proxy.*;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -38,7 +40,7 @@ public class Helper {
     }
 
     public static String getConnectorDomain(String str) {
-        return Proxy.GetConnector(str);
+        return GetConnector(str);
     }
 
     public static void reloadMSG() {
@@ -107,7 +109,7 @@ public class Helper {
     }
 
     public static String getString(String str) {
-        return Helper.GetContext().getString(Integer.parseInt(String.valueOf(Helper.GetContext().getResources().getIdentifier(str, "string", Helper.GetContext().getPackageName()))));
+        return GetContext().getString(Integer.parseInt(String.valueOf(GetContext().getResources().getIdentifier(str, "string", GetContext().getPackageName()))));
     }
 
     public static String getPackageName() {
@@ -141,6 +143,6 @@ public class Helper {
     public static boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) GetContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        return activeNetwork != null ? activeNetwork.isConnectedOrConnecting() : false;
+        return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
     }
 }

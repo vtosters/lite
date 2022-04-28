@@ -7,14 +7,9 @@ import android.util.Log;
  */
 public class GoalCounter {
 
-    public interface OnGoalReachListener {
-        void onGoalReached();
-    }
-
-    private int goal;
+    private final int goal;
     private int i = 0;
-
-    private OnGoalReachListener listener;
+    private final OnGoalReachListener listener;
 
     public GoalCounter(int goal, OnGoalReachListener listener) {
         this.goal = goal;
@@ -35,5 +30,9 @@ public class GoalCounter {
 
     public synchronized int value() {
         return i;
+    }
+
+    public interface OnGoalReachListener {
+        void onGoalReached();
     }
 }

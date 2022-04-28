@@ -1,5 +1,7 @@
 package ru.vtosters.lite.dnr.helpers;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,7 +15,7 @@ import ru.vtosters.lite.utils.Helper;
 
 public class DoNotReadDBHelper extends SQLiteOpenHelper {
     public DoNotReadDBHelper() {
-        super(Helper.GetContext(), "dnr", null, 1);
+        super(GetContext(), "dnr", null, 1);
     }
 
     @Override

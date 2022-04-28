@@ -1,5 +1,7 @@
 package ru.vtosters.lite.tgs;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
@@ -23,21 +25,19 @@ import java.util.Stack;
 import ru.vtosters.lite.utils.Helper;
 
 public class TGRoot {
-    private final static Stack<Integer> pendingStickers = new Stack<>();
-
     public static final int N = 76820000;
     public static final int X = 976820000;
-
-    private static String TAG = "TGRoot";
+    private final static Stack<Integer> pendingStickers = new Stack<>();
+    private static final String TAG = "TGRoot";
 
     public static String getSummary() {
         switch (TGPref.getTGConnectMethod()) {
             case 0:
-                return Helper.getString("ctypedirect");
+                return getString("ctypedirect");
             case 2:
-                return Helper.getString("ctypesocks");
+                return getString("ctypesocks");
             default:
-                return Helper.getString("ctypedisabled");
+                return getString("ctypedisabled");
         }
     }
 
@@ -49,7 +49,7 @@ public class TGRoot {
         int stickerId = (id - N) % 120;
 
         TelegramStickersPack pack = null;
-        for (TelegramStickersPack p : TelegramStickersService.getInstance(Helper.GetContext()).getActivePacksListReference()) {
+        for (TelegramStickersPack p : TelegramStickersService.getInstance(GetContext()).getActivePacksListReference()) {
             if (p.index == index) {
                 pack = p;
                 break;
@@ -70,7 +70,7 @@ public class TGRoot {
 
     public static void injectStickers(List<StickerStockItem> list) {
         try {
-            List<TelegramStickersPack> packs = TelegramStickersService.getInstance(Helper.GetContext()).getActivePacksListReference();
+            List<TelegramStickersPack> packs = TelegramStickersService.getInstance(GetContext()).getActivePacksListReference();
             for (int i = packs.size() - 1; i >= 0; i--)
                 list.add(0, toStickerPack(packs.get(i)));
         } catch (Exception e) {
@@ -83,7 +83,7 @@ public class TGRoot {
         int index = (stickerId - N) / 120;
 
         TelegramStickersPack p = null;
-        for (TelegramStickersPack p_ : TelegramStickersService.getInstance(Helper.GetContext())
+        for (TelegramStickersPack p_ : TelegramStickersService.getInstance(GetContext())
                 .getActivePacksListReference()) {
             if (p_.index == index) {
                 p = p_;

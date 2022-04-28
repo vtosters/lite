@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Helper.*;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 
 import android.app.Activity;
@@ -57,17 +58,17 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager;
 
 public class Prefs {
+    private static final List<Activity> activities = new ArrayList<>();
     public static String VERSIONNAME = "2.0 Beta";
     private static List<String> mFilters;
-    private static final List<Activity> activities = new ArrayList<>();
 
     public static boolean BooleanFalse(String key) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GetContext());
         return prefs.getBoolean(key, false);
     }
 
     public static boolean BooleanTrue(String key) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GetContext());
         return prefs.getBoolean(key, true);
     }
 
@@ -241,11 +242,11 @@ public class Prefs {
     }
 
     public static String getBuildNumber() {
-        return Prefs.getBuild(Helper.GetContext(), "version.properties");
+        return Prefs.getBuild(GetContext(), "version.properties");
     }
 
     public static String getCommitLink() {
-        return "https://github.com/vtosters/lite/commit/" + Prefs.getBuild(Helper.GetContext(), "version.properties");
+        return "https://github.com/vtosters/lite/commit/" + Prefs.getBuild(GetContext(), "version.properties");
     }
 
     public static String getBuild(Context context, String name) {
@@ -265,7 +266,7 @@ public class Prefs {
     }
 
     public static String getBranch() {
-        return Helper.GetPreferences().getString("ota_branches", "Stable");
+        return GetPreferences().getString("ota_branches", "Stable");
     }
 
     public static String getDarkVKUI() {
@@ -273,12 +274,12 @@ public class Prefs {
     }
 
     public static String getAmoledVKUI() {
-        String string = Helper.GetPreferences().getString("darktheme", "");
+        String string = GetPreferences().getString("darktheme", "");
         return string.equals("amoled") ? "1" : "0";
     }
 
     public static String getCommentsSort(String def) {
-        String string = Helper.GetPreferences().getString("commentssort", "");
+        String string = GetPreferences().getString("commentssort", "");
         if (string.isEmpty()) {
             return def;
         }
@@ -292,23 +293,23 @@ public class Prefs {
     }
 
     public static String getMeToken() {
-        return Helper.GetPreferences().getString("me_token", "");
+        return GetPreferences().getString("me_token", "");
     }
 
     public static void setMeToken(String str) {
-        ru.vtosters.lite.utils.Helper.GetPreferences().edit().putString("me_token", str).apply();
+        GetPreferences().edit().putString("me_token", str).apply();
     }
 
     public static int getNavbarColor() {
-        return VKThemeHelper.a((int) R.attr.tabbar_background);
+        return VKThemeHelper.a(R.attr.tabbar_background);
     }
 
     public static String getSSFSLink() {
-        return SSFSDomain() + "?token=" + ru.vtosters.lite.utils.Helper.GetUserToken() + "&vt_dark=" + getDarkVKUI() + "&vt_amoled=" + getAmoledVKUI() + "&secret=" + ru.vtosters.lite.utils.Helper.GetUserSecret() + "&proxy=" + getUserProxy() + "&lang=" + getLocale() + "&vt=1&vtl=1&vksans=" + isVKSansEnabled() + "&vt_version=" + getBuildNumber() + "&vt_debug=" + isDEVModEnabled();
+        return SSFSDomain() + "?token=" + GetUserToken() + "&vt_dark=" + getDarkVKUI() + "&vt_amoled=" + getAmoledVKUI() + "&secret=" + GetUserSecret() + "&proxy=" + getUserProxy() + "&lang=" + getLocale() + "&vt=1&vtl=1&vksans=" + isVKSansEnabled() + "&vt_version=" + getBuildNumber() + "&vt_debug=" + isDEVModEnabled();
     }
 
     public static String getString(String key, String defValue) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GetContext());
         return prefs.getString(key, defValue);
     }
 
@@ -381,32 +382,32 @@ public class Prefs {
     }
 
     public static String proxyHostHTTP() {
-        String string = Helper.GetPreferences().getString("proxyHostHTTP", "");
+        String string = GetPreferences().getString("proxyHostHTTP", "");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     public static String proxyHostHTTPS() {
-        String string = Helper.GetPreferences().getString("proxyHostHTTPS", "");
+        String string = GetPreferences().getString("proxyHostHTTPS", "");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     public static String proxyHostSocks() {
-        String string = Helper.GetPreferences().getString("proxyHostSocks", "");
+        String string = GetPreferences().getString("proxyHostSocks", "");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     public static String proxyPortHTTP() {
-        String string = Helper.GetPreferences().getString("proxyPortHTTP", "");
+        String string = GetPreferences().getString("proxyPortHTTP", "");
         return string.isEmpty() ? "8888" : string;
     }
 
     public static String proxyPortHTTPS() {
-        String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("proxyPortHTTPS", "");
+        String string = GetPreferences().getString("proxyPortHTTPS", "");
         return string.isEmpty() ? "8888" : string;
     }
 
     public static String proxyPortSocks() {
-        String string = Helper.GetPreferences().getString("proxyPortSocks", "");
+        String string = GetPreferences().getString("proxyPortSocks", "");
         return string.isEmpty() ? "8888" : string;
     }
 
@@ -491,7 +492,7 @@ public class Prefs {
     }
 
     public static int getMsgCount() {
-        String customvalue = Helper.GetPreferences().getString("msgcount", "");
+        String customvalue = GetPreferences().getString("msgcount", "");
         return customvalue.isEmpty() ? 30 : Integer.parseInt(customvalue);
     }
 
@@ -534,7 +535,7 @@ public class Prefs {
         StandardFilterPut();
         ShortLinkPut();
         IDontWantToReadIt();
-        String string = Helper.GetPreferences().getString("spamfilters", "");
+        String string = GetPreferences().getString("spamfilters", "");
         if (!string.isEmpty()) {
             mFilters.addAll(Arrays.asList(string.split(", ")));
         }
@@ -543,7 +544,7 @@ public class Prefs {
     public static void ReferalsPut() {
         if (BooleanTrue("refsfilter")) {
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Helper.GetContext().getAssets().open("Referals.txt")));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(GetContext().getAssets().open("Referals.txt")));
                 while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {
@@ -562,7 +563,7 @@ public class Prefs {
     public static void ShortLinkPut() {
         if (BooleanTrue("shortlinkfilter")) {
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Helper.GetContext().getAssets().open("LinkShorter.txt")));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(GetContext().getAssets().open("LinkShorter.txt")));
                 while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {
@@ -581,7 +582,7 @@ public class Prefs {
     public static void StandardFilterPut() {
         if (BooleanTrue("default_ad_list")) {
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Helper.GetContext().getAssets().open("StandartFilter.txt")));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(GetContext().getAssets().open("StandartFilter.txt")));
                 while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {
@@ -600,7 +601,7 @@ public class Prefs {
     public static void IDontWantToReadIt() {
         if (BooleanTrue("shitposting")) {
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Helper.GetContext().getAssets().open("IDontWantToReadIt.txt")));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(GetContext().getAssets().open("IDontWantToReadIt.txt")));
                 while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {
@@ -617,7 +618,7 @@ public class Prefs {
     }
 
     public static String SSFSDomain() {
-        String string = Helper.GetPreferences().getString("ssfscustom", "");
+        String string = GetPreferences().getString("ssfscustom", "");
         if (!string.isEmpty()) {
             return string;
         }
@@ -625,7 +626,7 @@ public class Prefs {
     }
 
     public static String VKVersion() {
-        String string = Helper.GetPreferences().getString("vkversion", "");
+        String string = GetPreferences().getString("vkversion", "");
         if (!string.isEmpty()) {
             return string;
         }
@@ -673,7 +674,7 @@ public class Prefs {
     }
 
     public static String getLocale() {
-        String string = Helper.GetPreferences().getString("lang_value", "");
+        String string = GetPreferences().getString("lang_value", "");
         if (string.equals("system")) {
             return Locale.getDefault().getLanguage();
         }
@@ -681,7 +682,7 @@ public class Prefs {
     }
 
     public static boolean proxy() {
-        return ru.vtosters.lite.utils.Helper.GetPreferences().getString("proxy", "").equals("apiproxy");
+        return GetPreferences().getString("proxy", "").equals("apiproxy");
     }
 
     public static boolean authors_rec(String str) {
@@ -773,7 +774,7 @@ public class Prefs {
     }
 
     public static Class getStartFragment() {
-        String string = ru.vtosters.lite.utils.Helper.GetPreferences().getString("start_values", "");
+        String string = GetPreferences().getString("start_values", "");
         if (string.equals("default")) {
             return DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
         }
@@ -881,7 +882,7 @@ public class Prefs {
     public static void fixGapps() {
         try {
             if (Build.VERSION.SDK_INT >= 26) {
-                NotificationManager notificationManager = (NotificationManager) ru.vtosters.lite.utils.Helper.GetContext().getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager notificationManager = (NotificationManager) GetContext().getSystemService(Context.NOTIFICATION_SERVICE);
                 boolean z = false;
                 try {
                     if (notificationManager.getNotificationChannel("audio_playback_channel") != null) {
@@ -890,7 +891,7 @@ public class Prefs {
                 } catch (Exception ignored) {
                 }
                 if (!z) {
-                    notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", ru.vtosters.lite.utils.Helper.getResources().getString(R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
+                    notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
                 }
             }
         } catch (Exception ignored) {

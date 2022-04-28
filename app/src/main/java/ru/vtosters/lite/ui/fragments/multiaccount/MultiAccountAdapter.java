@@ -1,5 +1,8 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
+import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Themes.*;
+
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
@@ -34,17 +37,17 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
     public MultiAccountViewHolder b(ViewGroup parent, int viewType) {
         RelativeLayout layout = new RelativeLayout(parent.getContext());
         layout.setPadding(
-                Helper.convertDpToPixel(12),
-                Helper.convertDpToPixel(6),
-                Helper.convertDpToPixel(6),
-                Helper.convertDpToPixel(6)
+                convertDpToPixel(12),
+                convertDpToPixel(6),
+                convertDpToPixel(6),
+                convertDpToPixel(6)
         );
 
         VKCircleImageView avatar = new VKCircleImageView(parent.getContext());
         avatar.setId(1);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                Helper.convertDpToPixel(48),
-                Helper.convertDpToPixel(48)
+                convertDpToPixel(48),
+                convertDpToPixel(48)
         );
         params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         params.addRule(RelativeLayout.CENTER_VERTICAL);
@@ -53,7 +56,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
         TextView nickname = new TextView(parent.getContext());
         nickname.setId(2);
         nickname.setPaddingRelative(
-                Helper.convertDpToPixel(12),
+                convertDpToPixel(12),
                 0,
                 0,
                 0
@@ -61,7 +64,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
         nickname.setEllipsize(TextUtils.TruncateAt.END);
         nickname.setSingleLine(true);
         nickname.setTextSize(15.0f);
-        nickname.setTextColor(Themes.getTextAttr());
+        nickname.setTextColor(getTextAttr());
         nickname.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
         RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(-2, -2);
         params1.addRule(RelativeLayout.CENTER_VERTICAL);
@@ -71,11 +74,11 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
         ImageButton action = new ImageButton(parent.getContext());
         action.setId(3);
         action.setBackgroundResource(com.vtosters.lite.R.drawable.rounded_list_selector);
-        Drawable drawable = Themes.recolorDrawable(Helper.getResources().getDrawable(R.drawable.ic_list_remove));
+        Drawable drawable = recolorDrawable(getResources().getDrawable(R.drawable.ic_list_remove));
         action.setImageDrawable(drawable);
         RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(
-                Helper.convertDpToPixel(48),
-                Helper.convertDpToPixel(48)
+                convertDpToPixel(48),
+                convertDpToPixel(48)
         );
         params2.addRule(RelativeLayout.CENTER_VERTICAL);
         params2.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
@@ -105,9 +108,9 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
             super(view);
 
             mContainer = (RelativeLayout) view;
-            mAvatar = (VKCircleImageView) view.findViewById(1);
-            mNickname = (TextView) view.findViewById(2);
-            mAction = (ImageButton) view.findViewById(3);
+            mAvatar = view.findViewById(1);
+            mNickname = view.findViewById(2);
+            mAction = view.findViewById(3);
         }
 
         public void bind(MultiAccountItem item, int pos) {
@@ -123,9 +126,9 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    Helper.restarting();
+                    restarting();
                 });
-                Drawable drawable = Themes.recolorDrawable(Helper.getResources().getDrawable(R.drawable.ic_list_add));
+                Drawable drawable = recolorDrawable(getResources().getDrawable(R.drawable.ic_list_add));
                 mAction.setImageDrawable(drawable);
                 mAction.setClickable(false);
             } else {
@@ -139,11 +142,11 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    Helper.restarting();
+                    restarting();
 
                 });
 
-                if (Helper.isNetworkConnected())
+                if (isNetworkConnected())
                     mAvatar.a(item.imageUrl);
                 else
                     mAvatar.a(R.drawable.vkim_ic_placeholder_user_square_64dp);
@@ -160,7 +163,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    Helper.restarting();
+                    restarting();
                 });
             }
         }

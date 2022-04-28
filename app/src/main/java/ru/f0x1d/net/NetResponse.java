@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public final class NetResponse {
-    private byte[] data;
+    private final byte[] data;
     private int code;
 
     protected NetResponse(byte[] data) {

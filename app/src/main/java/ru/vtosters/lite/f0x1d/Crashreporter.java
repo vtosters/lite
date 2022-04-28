@@ -1,5 +1,7 @@
 package ru.vtosters.lite.f0x1d;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -35,12 +37,12 @@ public class Crashreporter {
     }
 
     static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity) {
-        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(Helper.GetContext()).toDeviceName() + "\n VTL Version: " + Prefs.VERSIONNAME + ", build: " + Prefs.getBuildNumber();
+        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(GetContext()).toDeviceName() + "\n VTL Version: " + Prefs.VERSIONNAME + ", build: " + Prefs.getBuildNumber();
         if (Build.VERSION.SDK_INT >= 26) {
             var notificationChannel = new NotificationChannel("crashes", "crash", NotificationManager.IMPORTANCE_DEFAULT);
             notificationChannel.enableVibration(true);
             notificationChannel.enableLights(true);
-            ((NotificationManager) Helper.GetContext().getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChannel);
+            ((NotificationManager) GetContext().getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChannel);
         }
 
         var foxbinIntent = new Intent("com.f0x1d.dogbin.ACTION_UPLOAD_TO_FOXBIN");
@@ -52,19 +54,19 @@ public class Crashreporter {
             foxbinIntent.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         }
 
-        var saveLogIntent = new Intent(Helper.GetContext(), LogWriterService.class);
+        var saveLogIntent = new Intent(GetContext(), LogWriterService.class);
         saveLogIntent.putExtra("log", logString);
         saveLogIntent.putExtra("notificationId", 1);
-        var psaveLogIntent = PendingIntent.getService(Helper.GetContext(), 0, saveLogIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+        var psaveLogIntent = PendingIntent.getService(GetContext(), 0, saveLogIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
-        var builder = new Notification.Builder(Helper.GetContext());
+        var builder = new Notification.Builder(GetContext());
         builder.setSmallIcon(R.drawable.ic_bug_24);
         builder.setContentTitle("VTL Крашнулся!");
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
         builder.setAutoCancel(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            builder.addAction(new Notification.Action(0, "Загрузить логи", PendingIntent.getActivity(Helper.GetContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
+            builder.addAction(new Notification.Action(0, "Загрузить логи", PendingIntent.getActivity(GetContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
             builder.addAction(new Notification.Action(0, "Сохранить в файл", psaveLogIntent));
         } else {
             builder.setContentIntent(PendingIntent.getActivity(activity, 0, foxbinIntent, PendingIntent.FLAG_ONE_SHOT));
@@ -75,13 +77,13 @@ public class Crashreporter {
         }
 
 
-        ((NotificationManager) Helper.GetContext().getSystemService(Context.NOTIFICATION_SERVICE)).notify(-2147483548, builder.build());
+        ((NotificationManager) GetContext().getSystemService(Context.NOTIFICATION_SERVICE)).notify(-2147483548, builder.build());
         Log.e("VTosters Lite", "crashed: " + th.getLocalizedMessage());
         uncaughtExceptionHandler.uncaughtException(thread, th);
     }
 
     private static boolean isFoxbinInstalled() {
-        var pm = Helper.GetContext().getPackageManager();
+        var pm = GetContext().getPackageManager();
         try {
             pm.getPackageInfo("com.f0x1d.dogbin", 0);
             return true;

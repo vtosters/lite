@@ -1,5 +1,7 @@
 package ru.vtosters.lite.foaf;
 
+import static android.widget.Toast.*;
+import static ru.vtosters.lite.utils.Helper.*;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
 
 import android.app.ProgressDialog;
@@ -32,7 +34,7 @@ public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"\\/>");
     private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
-    private static OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = new OkHttpClient();
 
     public static int GetLastSeenInt(int i) throws ParseException, IOException {
         Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(client.newCall(new Request.Builder().url(getLink(i)).build()).b().body().string());
@@ -81,10 +83,10 @@ public class FoafBase {
             String normalHumanDate = getNormalHumanDate(matcher.group(1));
             getNormalHumanDate(matcher2.group(1));
             AlertDialog.a a2 = new VkAlertDialog.a(context).a(R.string.addinf);
-            a2.b(Helper.getString("foafid") + " " + i + Helper.getString("foafregdate") + " " + normalHumanDate + Helper.getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).b(17039370, (DialogInterface.OnClickListener) null).b().show();
+            a2.b(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).b(17039370, null).b().show();
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(context, Helper.getString("foaferr"), Toast.LENGTH_SHORT).show();
+            makeText(context, getString("foaferr"), LENGTH_SHORT).show();
         }
     }
 

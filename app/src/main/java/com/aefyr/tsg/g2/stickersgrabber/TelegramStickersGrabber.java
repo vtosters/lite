@@ -38,12 +38,6 @@ import ru.f0x1d.net.NetResponse;
  */
 public class TelegramStickersGrabber {
     private static final String TAG = "TSG";
-
-    private static String BOT_API_BASE_URL;
-    private static String GET_STICKER_SET_URL;
-    private static String GET_FILE_URL;
-    private static String BOT_API_BASE_FILE_URL;
-
     public static String REAL_TG_IP = null;
     public static String PROXY_IP = null;
     public static int PROXY_PORT = -1;
@@ -52,9 +46,30 @@ public class TelegramStickersGrabber {
     public static boolean PROXY_SOCKS = true;
     public static boolean HAS_PASS = false;
     public static boolean USE_PROXY = false;
+    private static String BOT_API_BASE_URL;
+    private static String GET_STICKER_SET_URL;
+    private static String GET_FILE_URL;
+    private static String BOT_API_BASE_FILE_URL;
 
     static {
         updateURLs();
+    }
+
+    private final MessageDigest sha256;
+    private final Handler uiThreadHandler;
+    private String botApiKey = "";
+    private NetClient httpClient;
+    public TelegramStickersGrabber(String botApiKey) {
+        this.botApiKey = botApiKey;
+        httpClient = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
+        uiThreadHandler = new Handler(Looper.getMainLooper());
+        try {
+            sha256 = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            Log.wtf(TAG, "No support for SHA-256");
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
     }
 
     public static void updateURLs() {
@@ -65,11 +80,6 @@ public class TelegramStickersGrabber {
         GET_STICKER_SET_URL = BOT_API_BASE_URL + "getStickerSet?name=%s";
         GET_FILE_URL = BOT_API_BASE_URL + "getFile?file_id=%s";
     }
-
-    private String botApiKey = "";
-    private NetClient httpClient;
-    private final MessageDigest sha256;
-    private final Handler uiThreadHandler;
 
     public static boolean isTelegramBlocked() {
         NetClient client = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
@@ -99,43 +109,6 @@ public class TelegramStickersGrabber {
             return true;
         }
         return false;
-    }
-
-    public interface PackDownloadListener {
-        void onPackDownloaded(TelegramStickersPackInfo pack, boolean newVersionFound);
-
-        void onPackDownloadError(Exception e);
-
-        void onGotPackInfo(TelegramStickersPackInfo packInfo);
-
-        void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickerCount);
-    }
-
-    public interface KeyCheckListener {
-        void onKeyChecked(boolean ok);
-
-        void onNetError();
-    }
-
-    public class TSGException extends Exception {
-        private static final long serialVersionUID = 7866915509988422944L;
-
-        private TSGException(String message) {
-            super(message);
-        }
-    }
-
-    public TelegramStickersGrabber(String botApiKey) {
-        this.botApiKey = botApiKey;
-        httpClient = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
-        uiThreadHandler = new Handler(Looper.getMainLooper());
-        try {
-            sha256 = MessageDigest.getInstance("SHA-256");
-        } catch (NoSuchAlgorithmException e) {
-            Log.wtf(TAG, "No support for SHA-256");
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
     }
 
     public void resetProxy() {
@@ -199,40 +172,6 @@ public class TelegramStickersGrabber {
                 runOnUiThread(() -> listener.onKeyChecked(response.code() == 200));
             }
         });
-    }
-
-    private class StickerSet {
-        String id;
-        String name;
-        String version;
-        ArrayList<Sticker> stickers;
-
-        StickerSet(String id, String name, String version, ArrayList<Sticker> stickers) {
-            this.name = name;
-            this.stickers = stickers;
-            this.id = id;
-            this.version = version;
-        }
-    }
-
-    private class Sticker {
-        String emoji;
-        String fileId;
-
-        Sticker(String fileId, String emoji) {
-            this.fileId = fileId;
-            this.emoji = emoji;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            return obj instanceof Sticker && ((Sticker) obj).fileId.equals(fileId);
-        }
-
-        @Override
-        public int hashCode() {
-            return (17 * emoji.hashCode()) << 32 + fileId.hashCode();
-        }
     }
 
     private void getPackInfo(final String packName, final File packFolder, final String installedVersion, final PackDownloadListener listener) {
@@ -477,5 +416,63 @@ public class TelegramStickersGrabber {
 
     private void runOnUiThread(Runnable r) {
         uiThreadHandler.post(r);
+    }
+
+    public interface PackDownloadListener {
+        void onPackDownloaded(TelegramStickersPackInfo pack, boolean newVersionFound);
+
+        void onPackDownloadError(Exception e);
+
+        void onGotPackInfo(TelegramStickersPackInfo packInfo);
+
+        void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickerCount);
+    }
+
+    public interface KeyCheckListener {
+        void onKeyChecked(boolean ok);
+
+        void onNetError();
+    }
+
+    public class TSGException extends Exception {
+        private static final long serialVersionUID = 7866915509988422944L;
+
+        private TSGException(String message) {
+            super(message);
+        }
+    }
+
+    private class StickerSet {
+        String id;
+        String name;
+        String version;
+        ArrayList<Sticker> stickers;
+
+        StickerSet(String id, String name, String version, ArrayList<Sticker> stickers) {
+            this.name = name;
+            this.stickers = stickers;
+            this.id = id;
+            this.version = version;
+        }
+    }
+
+    private class Sticker {
+        String emoji;
+        String fileId;
+
+        Sticker(String fileId, String emoji) {
+            this.fileId = fileId;
+            this.emoji = emoji;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return obj instanceof Sticker && ((Sticker) obj).fileId.equals(fileId);
+        }
+
+        @Override
+        public int hashCode() {
+            return (17 * emoji.hashCode()) << 32 + fileId.hashCode();
+        }
     }
 }

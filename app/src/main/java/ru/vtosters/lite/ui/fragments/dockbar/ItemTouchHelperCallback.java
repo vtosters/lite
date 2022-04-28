@@ -7,7 +7,7 @@ import android.support.v7.widget.a.ItemTouchHelper;
 
 public class ItemTouchHelperCallback extends ItemTouchHelper.a {
 
-    private DockBarAdapter mAdapter;
+    private final DockBarAdapter mAdapter;
 
     public ItemTouchHelperCallback(DockBarAdapter mAdapter) {
         this.mAdapter = mAdapter;

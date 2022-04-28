@@ -1,5 +1,8 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Themes.*;
+
 import android.util.Base64;
 import android.webkit.WebView;
 
@@ -24,7 +27,7 @@ public class VKUIInjector {
 
     private static String load(String str) {
         try {
-            InputStream open = Helper.GetContext().getAssets().open(str);
+            InputStream open = GetContext().getAssets().open(str);
             StringBuilder sb = new StringBuilder();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(open, StandardCharsets.UTF_8));
             while (true) {
@@ -44,13 +47,13 @@ public class VKUIInjector {
 
     public static void load() {
         loadedCSS = load("vt_ui_accent.css")
-                .replace("%header_background%", Themes.hex(Themes.getColorFromAttr(R.attr.header_background)))
-                .replace("%background_content%", Themes.hex(Themes.getColorFromAttr(R.attr.background_content)))
-                .replace("%header_text%", Themes.hex(Themes.getColorFromAttr(R.attr.header_text)))
-                .replace("%accent%", Themes.hex(Themes.getColorFromAttr(R.attr.accent)))
-                .replace("%background_page%", Themes.hex(Themes.getColorFromAttr(R.attr.background_page)))
-                .replace("%background_content%", Themes.hex(Themes.getColorFromAttr(R.attr.background_content)))
-                .replace("%text_primary%", Themes.hex(Themes.getColorFromAttr(R.attr.text_primary)));
+                .replace("%header_background%", hex(getColorFromAttr(R.attr.header_background)))
+                .replace("%background_content%", hex(getColorFromAttr(R.attr.background_content)))
+                .replace("%header_text%", hex(getColorFromAttr(R.attr.header_text)))
+                .replace("%accent%", hex(getColorFromAttr(R.attr.accent)))
+                .replace("%background_page%", hex(getColorFromAttr(R.attr.background_page)))
+                .replace("%background_content%", hex(getColorFromAttr(R.attr.background_content)))
+                .replace("%text_primary%", hex(getColorFromAttr(R.attr.text_primary)));
 
         loadedCSSAmoled = load("vt_ui_oled.css");
         isLoaded = true;
@@ -61,7 +64,7 @@ public class VKUIInjector {
     }
 
     public static void inject(WebView webView) {
-        String string = Helper.GetPreferences().getString("darktheme", "");
+        String string = GetPreferences().getString("darktheme", "");
         if (Prefs.BooleanTrue("VKUI_INJ")) {
             if (!isLoaded) {
                 load();

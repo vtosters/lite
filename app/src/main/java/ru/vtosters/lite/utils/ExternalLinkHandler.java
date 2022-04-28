@@ -1,5 +1,7 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -55,7 +57,7 @@ public class ExternalLinkHandler {
     }
 
     private static boolean checkYoutubeLink(VideoFile file) {
-        if (!Helper.isEmpty(file.n)) {
+        if (!isEmpty(file.n)) {
             for (String filter : filters) {
                 if (file.n.contains(filter))
                     return true;
@@ -74,25 +76,25 @@ public class ExternalLinkHandler {
      * this.k = var3.optString("mp4_2160");
      */
     public static boolean checkVkVideo(VideoFile videoFile) {
-        if (!Helper.isEmpty(videoFile.e)) {
+        if (!isEmpty(videoFile.e)) {
             qualities.put("240", videoFile.e);
         }
-        if (!Helper.isEmpty(videoFile.f)) {
+        if (!isEmpty(videoFile.f)) {
             qualities.put("360", videoFile.f);
         }
-        if (!Helper.isEmpty(videoFile.g)) {
+        if (!isEmpty(videoFile.g)) {
             qualities.put("480", videoFile.g);
         }
-        if (!Helper.isEmpty(videoFile.h)) {
+        if (!isEmpty(videoFile.h)) {
             qualities.put("720", videoFile.h);
         }
-        if (!Helper.isEmpty(videoFile.i)) {
+        if (!isEmpty(videoFile.i)) {
             qualities.put("1080", videoFile.i);
         }
-        if (!Helper.isEmpty(videoFile.j)) {
+        if (!isEmpty(videoFile.j)) {
             qualities.put("1440", videoFile.j);
         }
-        if (!Helper.isEmpty(videoFile.k)) {
+        if (!isEmpty(videoFile.k)) {
             qualities.put("2160", videoFile.k);
         }
 
@@ -107,7 +109,7 @@ public class ExternalLinkHandler {
             Intent intent = new Intent();
 
             String packageName = getMXPlayerPackageName();
-            if (!Helper.isEmpty(packageName)) {
+            if (!isEmpty(packageName)) {
                 intent.setPackage(packageName);
                 intent.setDataAndType(uri, "application/mp4");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -118,7 +120,7 @@ public class ExternalLinkHandler {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
-            Helper.GetContext().startActivity(intent);
+            GetContext().startActivity(intent);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -127,7 +129,7 @@ public class ExternalLinkHandler {
     }
 
     private static String getMXPlayerPackageName() {
-        for (ApplicationInfo info : Helper.GetContext().getPackageManager().getInstalledApplications(0)) {
+        for (ApplicationInfo info : GetContext().getPackageManager().getInstalledApplications(0)) {
             String packName = info.packageName;
             if (packName.equals("com.mxtech.videoplayer.ad") || packName.equals("com.mxtech.videoplayer.pro"))
                 return packName;

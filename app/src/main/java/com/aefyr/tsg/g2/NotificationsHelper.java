@@ -21,17 +21,13 @@ import java.util.concurrent.atomic.AtomicLong;
 public class NotificationsHelper {
     private static final int NOTIFICATION_ID_BASE = 3921337;
     private static final String NOTIFICATION_CHANNEL_ID = "tgss_chan_v5";
-
-    private HashMap<TelegramStickersPack, Integer> downloadingPacksNotificationsIds;
-
-    private Context c;
-    private NotificationManagerCompat manager;
-    private int currentNotificationN = 0;
-
     private static final int MAX_UPDATE_NOTIFICATIONS_PER_SECOND = 3;
     private static final int MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS = 1000 / MAX_UPDATE_NOTIFICATIONS_PER_SECOND;
-
-    private AtomicLong lastNotificationTime = new AtomicLong(0);
+    private final HashMap<TelegramStickersPack, Integer> downloadingPacksNotificationsIds;
+    private final Context c;
+    private final NotificationManagerCompat manager;
+    private int currentNotificationN = 0;
+    private final AtomicLong lastNotificationTime = new AtomicLong(0);
 
     public NotificationsHelper(Context c) {
         this.c = c;

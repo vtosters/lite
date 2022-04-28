@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,10 +32,10 @@ public class DockBarFragment extends ToolbarFragment {
 
         LinearLayout buttonsContainer = new LinearLayout(n());
         buttonsContainer.setPadding(
-                Helper.convertDpToPixel(13),
-                Helper.convertDpToPixel(10),
-                Helper.convertDpToPixel(13),
-                Helper.convertDpToPixel(10)
+                convertDpToPixel(13),
+                convertDpToPixel(10),
+                convertDpToPixel(13),
+                convertDpToPixel(10)
         );
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
@@ -41,7 +43,7 @@ public class DockBarFragment extends ToolbarFragment {
         save.setText("Сохранить");
         save.setOnClickListener(v -> {
             DockBarManager.getInstance().save();
-            Helper.restarting();
+            restarting();
         });
 
         LinearLayout.LayoutParams saveParams = new LinearLayout.LayoutParams(0, -2);
@@ -49,13 +51,13 @@ public class DockBarFragment extends ToolbarFragment {
         buttonsContainer.addView(save, saveParams);
 
         View divider = new View(n());
-        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(Helper.convertDpToPixel(10), 0));
+        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
 
         Button reset = new Button(n());
         reset.setText("Сбросить");
         reset.setOnClickListener(v -> {
             DockBarManager.getInstance().delete();
-            Helper.restarting();
+            restarting();
         });
 
         LinearLayout.LayoutParams resetParams = new LinearLayout.LayoutParams(0, -2);

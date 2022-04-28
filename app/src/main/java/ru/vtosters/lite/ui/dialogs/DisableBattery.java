@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -16,7 +18,7 @@ import ru.vtosters.lite.utils.Prefs;
 public class DisableBattery {
     public static void alert(Activity activity) {
         if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && Prefs.BooleanTrue("showDoze")) {
-            final Context context = Helper.GetContext();
+            final Context context = GetContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle("Выключите оптимизацию батареи!");
@@ -36,7 +38,7 @@ public class DisableBattery {
                 builder.setNeutralButton("Игнорировать", new DialogInterface.OnClickListener() {
                     @Override // android.content.DialogInterface.OnClickListener
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Helper.edit().putBoolean("showDoze", false).apply();
+                        edit().putBoolean("showDoze", false).apply();
                     }
                 });
                 builder.show();

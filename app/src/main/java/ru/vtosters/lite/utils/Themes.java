@@ -1,5 +1,7 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
@@ -15,39 +17,39 @@ import com.vtosters.lite.R;
 
 public class Themes {
     public static int getAccentColor() {
-        return VKThemeHelper.a((int) R.attr.accent);
+        return VKThemeHelper.a(R.attr.accent);
     }
 
     public static int getTextAttr() {
-        return VKThemeHelper.a((int) R.attr.text_primary);
+        return VKThemeHelper.a(R.attr.text_primary);
     }
 
     public static int getSTextAttr() {
-        return VKThemeHelper.a((int) R.attr.text_secondary);
+        return VKThemeHelper.a(R.attr.text_secondary);
     }
 
     public static int getTabbarBackground() {
-        return VKThemeHelper.a((int) R.attr.tabbar_background);
+        return VKThemeHelper.a(R.attr.tabbar_background);
     }
 
     public static int getHeaderBackground() {
-        return VKThemeHelper.a((int) R.attr.header_background);
+        return VKThemeHelper.a(R.attr.header_background);
     }
 
     public static int getAmoledTheme() {
-        return Helper.GetContext().getResources().getIdentifier("BaseAmoledStyle", "style", Helper.GetContext().getPackageName());
+        return GetContext().getResources().getIdentifier("BaseAmoledStyle", "style", GetContext().getPackageName());
     }
 
     public static int picFix() {
-        return Helper.GetContext().getResources().getIdentifier("ActionBarThemeFix", "style", Helper.GetContext().getPackageName());
+        return GetContext().getResources().getIdentifier("ActionBarThemeFix", "style", GetContext().getPackageName());
     }
 
     public static int getAmoledImTheme() {
-        return Helper.GetContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", Helper.GetContext().getPackageName());
+        return GetContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", GetContext().getPackageName());
     }
 
     public static VKTheme getDarkTheme() {
-        String string = Helper.GetPreferences().getString("darktheme", "");
+        String string = GetPreferences().getString("darktheme", "");
         if (string.isEmpty()) {
             return VKTheme.DARK;
         }
@@ -58,7 +60,7 @@ public class Themes {
     }
 
     public static ImTheme getImDarkTheme() {
-        String string = Helper.GetPreferences().getString("darktheme", "");
+        String string = GetPreferences().getString("darktheme", "");
         if (string.isEmpty()) {
             return ImTheme.VKAPP_DARK;
         }
@@ -69,7 +71,7 @@ public class Themes {
     }
 
     public static VKTheme getLightTheme() {
-        String string = Helper.GetPreferences().getString("lighttheme", "");
+        String string = GetPreferences().getString("lighttheme", "");
         if (string.isEmpty()) {
             return VKTheme.DEFAULT_LIGHT;
         }
@@ -77,7 +79,7 @@ public class Themes {
     }
 
     public static ImTheme getImLightTheme() {
-        String string = Helper.GetPreferences().getString("lighttheme", "");
+        String string = GetPreferences().getString("lighttheme", "");
         if (string.isEmpty()) {
             return ImTheme.VKAPP_LIGHT;
         }
@@ -89,7 +91,7 @@ public class Themes {
     }
 
     public static int getHeaderText() {
-        return VKThemeHelper.a((int) R.attr.header_text);
+        return VKThemeHelper.a(R.attr.header_text);
     }
 
     public static boolean isAndroidMonet() {
@@ -162,10 +164,10 @@ public class Themes {
         if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
-        return Helper.GetContext().getResources().getColor(i);
+        return GetContext().getResources().getColor(i);
     }
 
     public static String hex(int i) {
-        return String.format("#%06X", new Object[]{Integer.valueOf(i & 16777215)});
+        return String.format("#%06X", Integer.valueOf(i & 16777215));
     }
 }

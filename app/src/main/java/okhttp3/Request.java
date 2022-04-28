@@ -15,9 +15,9 @@ public final class Request {
     final String b;
     final Headers c;
     final Map<Class<?>, Object> e;
-    private volatile CacheControl f;
     @Nullable
     final RequestBody requestBody;
+    private volatile CacheControl f;
 
     Request(Builder builder) {
         this.a = builder.a;
@@ -55,7 +55,7 @@ public final class Request {
 
     @Nullable
     public <T> T a(Class<? extends T> cls) {
-        return (T) cls.cast(this.e.get(cls));
+        return cls.cast(this.e.get(cls));
     }
 
     public Builder e() {

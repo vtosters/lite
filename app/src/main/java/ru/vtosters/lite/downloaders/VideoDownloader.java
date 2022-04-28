@@ -64,7 +64,7 @@ public class VideoDownloader {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile.toString() + ".mp4");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
             ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
         }));
         builder.show();

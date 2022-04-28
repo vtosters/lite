@@ -1,5 +1,7 @@
 package ru.f0x1d.net;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.os.AsyncTask;
 
 import com.vk.core.network.Network;
@@ -13,10 +15,6 @@ import ru.vtosters.lite.utils.Helper;
 
 public class F0x1dRequest {
 
-    public interface F0x1dRequestCallback {
-        void onResponse(String str);
-    }
-
     public static void makeRequest(byte[] bArr, F0x1dRequestCallback f0x1dRequestCallback) {
         new MakeRequestTask(bArr, f0x1dRequestCallback).execute();
     }
@@ -29,11 +27,15 @@ public class F0x1dRequest {
         new MakeRequestTask(str.getBytes(), f0x1dRequestCallback, true, !z).execute();
     }
 
+    public interface F0x1dRequestCallback {
+        void onResponse(String str);
+    }
+
     private static class MakeRequestTask extends AsyncTask<Void, Void, String> {
-        private F0x1dRequestCallback callback;
+        private final F0x1dRequestCallback callback;
         private boolean mIsPut;
         private boolean mIsVkToasterRequest;
-        private byte[] url;
+        private final byte[] url;
 
         public MakeRequestTask(byte[] bArr, F0x1dRequestCallback f0x1dRequestCallback) {
             this.mIsVkToasterRequest = false;
@@ -56,7 +58,7 @@ public class F0x1dRequest {
                 HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(new String(this.url)).openConnection();
                 httpURLConnection.setRequestMethod(this.mIsPut ? "PUT" : "GET");
                 if (this.mIsVkToasterRequest) {
-                    httpURLConnection.setRequestProperty("Token", Helper.GetUserToken());
+                    httpURLConnection.setRequestProperty("Token", GetUserToken());
                 }
                 if (!this.mIsVkToasterRequest) {
                     httpURLConnection.setRequestProperty("User-Agent", Network.a.a().a());

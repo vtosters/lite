@@ -11,7 +11,7 @@ import java.io.File;
 class PackDeletionTask extends AsyncTask<Void, Void, Boolean> {
     private static final String TAG = "TGSSAnnihilator";
 
-    private TelegramStickersPack pack;
+    private final TelegramStickersPack pack;
 
     PackDeletionTask(TelegramStickersPack pack) {
         this.pack = pack;

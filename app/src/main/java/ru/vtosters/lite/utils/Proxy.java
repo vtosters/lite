@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Helper.*;
 import static ru.vtosters.lite.utils.Prefs.proxyHostHTTP;
 import static ru.vtosters.lite.utils.Prefs.proxyHostHTTPS;
 import static ru.vtosters.lite.utils.Prefs.proxyHostSocks;
@@ -43,7 +44,7 @@ public class Proxy {
     }
 
     public static String getApiCom() {
-        String string = Helper.GetPreferences().getString("proxyapi", "");
+        String string = GetPreferences().getString("proxyapi", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "api.vk.com";
         }
@@ -51,7 +52,7 @@ public class Proxy {
     }
 
     public static String getAwayPhpCom() {
-        String string = Helper.GetPreferences().getString("proxyapi", "");
+        String string = GetPreferences().getString("proxyapi", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "m.vk.com";
         }
@@ -59,7 +60,7 @@ public class Proxy {
     }
 
     public static String getOauthCom() {
-        String string = Helper.GetPreferences().getString("proxyoauth", "");
+        String string = GetPreferences().getString("proxyoauth", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "oauth.vk.com";
         }
@@ -67,7 +68,7 @@ public class Proxy {
     }
 
     public static String getStaticCom() {
-        String string = Helper.GetPreferences().getString("proxystatic", "");
+        String string = GetPreferences().getString("proxystatic", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "static.vk.com";
         }
@@ -76,7 +77,7 @@ public class Proxy {
 
     public static String staticFix(String str) {
         String str2;
-        String string = Helper.GetPreferences().getString("proxystatic", "");
+        String string = GetPreferences().getString("proxystatic", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return str;
         }
@@ -100,7 +101,7 @@ public class Proxy {
     }
 
     public static void setProxy() {
-        switch (Helper.GetPreferences().getString("proxy", "")) {
+        switch (GetPreferences().getString("proxy", "")) {
             case "zaborona":
                 Properties properties = System.getProperties();
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");

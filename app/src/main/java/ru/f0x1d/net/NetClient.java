@@ -5,9 +5,39 @@ import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 
 public class NetClient {
-    private long timeout;
-    private Proxy proxy;
-    private PasswordAuthentication authenticator;
+    private final long timeout;
+    private final Proxy proxy;
+    private final PasswordAuthentication authenticator;
+
+    protected NetClient(Builder b) {
+        timeout = b.timeout;
+        proxy = b.proxy;
+        authenticator = b.auth;
+    }
+
+    public Builder newBuilder() {
+        Builder b = new Builder();
+        b.timeout = timeout;
+        b.proxy = proxy;
+        b.auth = authenticator;
+        return b;
+    }
+
+    public NetCall newCall(NetRequest req) {
+        return new NetCall(this, req);
+    }
+
+    public PasswordAuthentication getAuthenticator() {
+        return authenticator;
+    }
+
+    public Proxy getProxy() {
+        return proxy;
+    }
+
+    public long getTimeout() {
+        return timeout;
+    }
 
     public static final class Builder {
         private long timeout;
@@ -53,35 +83,5 @@ public class NetClient {
         public NetClient build() {
             return new NetClient(this);
         }
-    }
-
-    public Builder newBuilder() {
-        Builder b = new Builder();
-        b.timeout = timeout;
-        b.proxy = proxy;
-        b.auth = authenticator;
-        return b;
-    }
-
-    protected NetClient(Builder b) {
-        timeout = b.timeout;
-        proxy = b.proxy;
-        authenticator = b.auth;
-    }
-
-    public NetCall newCall(NetRequest req) {
-        return new NetCall(this, req);
-    }
-
-    public PasswordAuthentication getAuthenticator() {
-        return authenticator;
-    }
-
-    public Proxy getProxy() {
-        return proxy;
-    }
-
-    public long getTimeout() {
-        return timeout;
     }
 }

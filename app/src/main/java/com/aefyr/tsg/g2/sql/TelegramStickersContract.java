@@ -7,6 +7,10 @@ import android.provider.BaseColumns;
  */
 public final class TelegramStickersContract {
 
+    public static final String SQL_CREATE_ENTRIES = String.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s INTEGER AUTO_INCREMENT, %s TEXT, %s TEXT, %s TEXT, %s INTEGER, %s INTEGER, %s TEXT, %s TEXT)",
+            StickersTableEntry.TABLE_NAME, StickersTableEntry._ID, StickersTableEntry.COLUMN_NAME_INDEX, StickersTableEntry.COLUMN_NAME_ID, StickersTableEntry.COLUMN_NAME_NAME,
+            StickersTableEntry.COLUMN_NAME_FOLDER, StickersTableEntry.COLUMN_NAME_STICKERS_COUNT, StickersTableEntry.COLUMN_NAME_ENABLED, StickersTableEntry.COLUMN_NAME_VERSION, StickersTableEntry.COLUMN_NAME_EMOJIS);
+
     private TelegramStickersContract() {
     }
 
@@ -22,10 +26,6 @@ public final class TelegramStickersContract {
         public static final String COLUMN_NAME_VERSION = "version";
         public static final String COLUMN_NAME_EMOJIS = "emojis";
     }
-
-    public static final String SQL_CREATE_ENTRIES = String.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s INTEGER AUTO_INCREMENT, %s TEXT, %s TEXT, %s TEXT, %s INTEGER, %s INTEGER, %s TEXT, %s TEXT)",
-            StickersTableEntry.TABLE_NAME, StickersTableEntry._ID, StickersTableEntry.COLUMN_NAME_INDEX, StickersTableEntry.COLUMN_NAME_ID, StickersTableEntry.COLUMN_NAME_NAME,
-            StickersTableEntry.COLUMN_NAME_FOLDER, StickersTableEntry.COLUMN_NAME_STICKERS_COUNT, StickersTableEntry.COLUMN_NAME_ENABLED, StickersTableEntry.COLUMN_NAME_VERSION, StickersTableEntry.COLUMN_NAME_EMOJIS);
 
 
 }
