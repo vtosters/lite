@@ -26,14 +26,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import javax.net.ssl.HttpsURLConnection;
 
 public class GCMFix {
-    private static String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
     public static ArrayList<String> langs = new ArrayList<>();
+    private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
     private static KeyPair pair;
     private static int rid = 0;
-
-    public interface Callback {
-        void doCallback(String str);
-    }
 
     static {
         genNewKey();
@@ -194,5 +190,9 @@ public class GCMFix {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public interface Callback {
+        void doCallback(String str);
     }
 }

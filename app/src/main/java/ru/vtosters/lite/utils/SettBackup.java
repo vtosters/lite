@@ -1,20 +1,16 @@
 package ru.vtosters.lite.utils;
 
-import static android.app.Activity.RESULT_OK;
-import static android.os.Environment.*;
-import static android.widget.Toast.*;
-
-import static androidx.core.app.ActivityCompat.startActivityForResult;
-
-import static ru.vtosters.lite.utils.Helper.*;
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+import static android.os.Environment.getExternalStoragePublicDirectory;
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.Environment;
 import android.util.Base64;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -54,7 +50,7 @@ public class SettBackup {
                 e.printStackTrace();
                 makeText(GetContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
             }
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             makeText(GetContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();

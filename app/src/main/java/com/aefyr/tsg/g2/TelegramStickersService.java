@@ -1,5 +1,7 @@
 package com.aefyr.tsg.g2;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -27,29 +29,25 @@ public class TelegramStickersService {
     private static final String TAG = "TGStickersService";
     private static TelegramStickersService instance;
 
-    private Context c;
+    private final Context c;
 
-    private ArrayList<TelegramStickersPack> packs;
-    private ArrayList<TelegramStickersPack> activePacks;
-    private ArrayList<TelegramStickersPack> inactivePacks;
-    private ArrayList<StickersEventsListener> listeners;
-    private HashSet<String> currentlyDownloading;
+    private final ArrayList<TelegramStickersPack> packs;
+    private final ArrayList<TelegramStickersPack> activePacks;
+    private final ArrayList<TelegramStickersPack> inactivePacks;
+    private final ArrayList<StickersEventsListener> listeners;
+    private final HashSet<String> currentlyDownloading;
 
-    private Handler uiThreadHandler;
+    private final Handler uiThreadHandler;
 
-    private TelegramStickersGrabber grabber;
+    private final TelegramStickersGrabber grabber;
 
-    private TelegramStickersDbHelper dbHelper;
+    private final TelegramStickersDbHelper dbHelper;
     private boolean ready = false;
-    private ArrayList<Runnable> queuedTasks;
+    private final ArrayList<Runnable> queuedTasks;
 
-    private ThreadPoolExecutor executor;
+    private final ThreadPoolExecutor executor;
 
-    private NotificationsHelper notificationsHelper;
-
-    public static TelegramStickersService getInstance(Context c) {
-        return instance == null ? new TelegramStickersService(c) : instance;
-    }
+    private final NotificationsHelper notificationsHelper;
 
     private TelegramStickersService(Context context) {
         instance = this;
@@ -70,6 +68,10 @@ public class TelegramStickersService {
         inactivePacks = new ArrayList<>();
 
         updatePacks(true);
+    }
+
+    public static TelegramStickersService getInstance(Context c) {
+        return instance == null ? new TelegramStickersService(c) : instance;
     }
 
     private void updatePacks(final boolean notify) {
@@ -105,20 +107,6 @@ public class TelegramStickersService {
         });
     }
 
-    interface StickersEventsListener {
-        void onPackAdded(TelegramStickersPack pack, int atIndex);
-
-        void onPackRemoved(TelegramStickersPack pack, int atIndex);
-
-        void onPackChanged(TelegramStickersPack pack, int atIndex);
-
-        void onPackDownloadError(TelegramStickersPack pack, Exception error);
-
-        void onActivePacksListChanged();
-
-        void onInactivePacksListChanged();
-    }
-
     public void addStickersEventsListener(StickersEventsListener listener) {
         listeners.add(listener);
     }
@@ -128,7 +116,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackAdded(TelegramStickersPack pack, int atIndex) {
-        Helper.GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -138,7 +126,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackChanged(TelegramStickersPack pack, int atIndex) {
-        Helper.GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -148,7 +136,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackRemoved(TelegramStickersPack pack, int atIndex) {
-        Helper.GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -158,7 +146,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackDownloadError(TelegramStickersPack pack, Exception error) {
-        Helper.GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -168,7 +156,7 @@ public class TelegramStickersService {
     }
 
     private void notifyActivePacksListChanged() {
-        Helper.GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -178,7 +166,7 @@ public class TelegramStickersService {
     }
 
     private void notifyInactivePacksListChanged() {
-        Helper.GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -396,6 +384,20 @@ public class TelegramStickersService {
         int li2 = getPacksListReference().indexOf(p2);
         getPacksListReference().set(li2, p1);
         getPacksListReference().set(li1, p2);
+    }
+
+    interface StickersEventsListener {
+        void onPackAdded(TelegramStickersPack pack, int atIndex);
+
+        void onPackRemoved(TelegramStickersPack pack, int atIndex);
+
+        void onPackChanged(TelegramStickersPack pack, int atIndex);
+
+        void onPackDownloadError(TelegramStickersPack pack, Exception error);
+
+        void onActivePacksListChanged();
+
+        void onInactivePacksListChanged();
     }
 
 

@@ -1,5 +1,9 @@
 package ru.vtosters.lite.dnr;
 
+import static ru.f0x1d.net.F0x1dRequest.*;
+import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Proxy.*;
+
 import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.commands.messages.SetUserActivityCmd;
 import com.vk.im.engine.models.dialogs.Dialog;
@@ -15,6 +19,7 @@ import ru.vtosters.lite.utils.Proxy;
 public class DNRModule {
     public static DoNotReadDBHelper mDoNotReadDBHelper = new DoNotReadDBHelper();
     public static DoNotTypeDBHelper mDoNotTypeDBHelper = new DoNotTypeDBHelper();
+    public static Dialog mDialog;
 
     public static boolean isDnrEnabledFor(int id) {
         var isEnabled = mDoNotReadDBHelper.isEnabledForPeerId(id);
@@ -49,12 +54,10 @@ public class DNRModule {
     }
 
     public static void hookRead(Dialog dialog) {
-        F0x1dRequest.makeRequest("https://" + Proxy.getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.lastMsgVkId + "&peer_id=" + dialog.a() + "&v=5.91&access_token=" + Helper.GetUserToken(), response -> {
+        makeRequest("https://" + getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.lastMsgVkId + "&peer_id=" + dialog.a() + "&v=5.91&access_token=" + GetUserToken(), response -> {
             ToastUtils.a("Чат помечен как прочитанный!");
         });
     }
-
-    public static Dialog mDialog;
 
     public static void hookDNR(int peerId) {
         mDoNotReadDBHelper.setEnabledForPeerId(peerId, !mDoNotReadDBHelper.isEnabledForPeerId(peerId));

@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static android.widget.Toast.*;
+import static ru.vtosters.lite.utils.Helper.*;
 import static ru.vtosters.lite.utils.SettBackup.backupSettings;
 import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
 import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
@@ -28,23 +30,6 @@ import ru.vtosters.lite.utils.Helper;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
-    static class c implements Preference.c {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean a(Preference preference) {
-            copy(Helper.GetContext(), Helper.GetUserToken());
-            return true;
-        }
-
-        public static void copy(Context context, String str) {
-            ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
-            Toast.makeText(context, Helper.getString("copybtn"), Toast.LENGTH_SHORT).show();
-            ToastUtils.a(Helper.getString("tokenwarning"));
-        }
-
-        c() {
-        }
-    }
-
     @Override
     public void b(Bundle bundle) {
         super.b(bundle);
@@ -52,18 +37,48 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         prefs();
     }
 
+    private void prefs() {
+        a("firebasefix").a(new a());
+        a("applicationstop").a(new b());
+        a("tokencopy").a(new c());
+        a("applicationrestart").a(new d());
+        a("clearcache").a(new e());
+        a("stickfix").a(new f());
+        a("deleteprefs").a(new deleteprefs());
+
+        // a("saveprefs").a((Preference.c) new saveprefs());
+        // a("restoreprefs").a((Preference.c) new restoreprefs());
+    }
+
+    static class c implements Preference.c {
+        c() {
+        }
+
+        public static void copy(Context context, String str) {
+            ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
+            makeText(context, getString("copybtn"), LENGTH_SHORT).show();
+            ToastUtils.a(getString("tokenwarning"));
+        }
+
+        @Override // android.support.v7.preference.Preference.c
+        public boolean a(Preference preference) {
+            copy(GetContext(), GetUserToken());
+            return true;
+        }
+    }
+
     public class e implements Preference.c {
+        e() {
+        }
+
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             VKImageLoader.b();
             ImEngineProvider.a().h();
             AudioMessageUtils.j();
             FileUtils.l();
-            ToastUtils.a(Helper.getString("cachecleaned"));
+            ToastUtils.a(getString("cachecleaned"));
             return true;
-        }
-
-        e() {
         }
     }
 
@@ -79,13 +94,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     }
 
     public class d implements Preference.c {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean a(Preference preference) {
-            Helper.restarting();
-            return true;
+        d() {
         }
 
-        d() {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean a(Preference preference) {
+            restarting();
+            return true;
         }
     }
 
@@ -97,74 +112,61 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         public boolean a(Preference preference) {
             VKAccount b = VKAccountManager.b();
             PushSubscriber.a.a(b.b(), b.c());
-            ToastUtils.a(Helper.getString("fcmtokenrem"));
+            ToastUtils.a(getString("fcmtokenrem"));
             AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
             OtherFragment.this.aB().postDelayed(() -> {
                 PushSubscriber.a.a(true);
-                ToastUtils.a(Helper.getString("fcmtokenget"));
-                ToastUtils.a(Helper.getString("fcmtokenfixed"));
+                ToastUtils.a(getString("fcmtokenget"));
+                ToastUtils.a(getString("fcmtokenfixed"));
             }, 1000);
             return true;
         }
     }
 
     public class f implements Preference.c {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean a(Preference preference) {
-            SharedPreferences prefs = Helper.GetContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
-            prefs.edit().clear().commit();
-            Helper.restarting();
-            return true;
+        f() {
         }
 
-        f() {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean a(Preference preference) {
+            SharedPreferences prefs = GetContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+            prefs.edit().clear().commit();
+            restarting();
+            return true;
         }
     }
 
     public class deleteprefs implements Preference.c {
+        deleteprefs() {
+        }
+
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             deletePrefs();
-            Helper.restarting();
+            restarting();
             return true;
-        }
-
-        deleteprefs() {
         }
     }
 
     public class saveprefs implements Preference.c {
+        saveprefs() {
+        }
+
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             backupSettings();
             return true;
         }
-
-        saveprefs() {
-        }
     }
 
     public class restoreprefs implements Preference.c {
+        restoreprefs() {
+        }
+
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             restoreBackup();
             return true;
         }
-
-        restoreprefs() {
-        }
-    }
-
-    private void prefs() {
-        a("firebasefix").a((Preference.c) new a());
-        a("applicationstop").a((Preference.c) new b());
-        a("tokencopy").a((Preference.c) new c());
-        a("applicationrestart").a((Preference.c) new d());
-        a("clearcache").a((Preference.c) new e());
-        a("stickfix").a((Preference.c) new f());
-        a("deleteprefs").a((Preference.c) new deleteprefs());
-
-        // a("saveprefs").a((Preference.c) new saveprefs());
-        // a("restoreprefs").a((Preference.c) new restoreprefs());
     }
 }

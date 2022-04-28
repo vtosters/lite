@@ -27,12 +27,6 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper {
     private SQLiteDatabase writableDb;
     private SQLiteDatabase readableDb;
 
-    public interface PacksLoadingListener {
-        void onPackLoaded(TelegramStickersPack pack);
-
-        void onAllPacksLoaded(ArrayList<TelegramStickersPack> packs);
-    }
-
     public TelegramStickersDbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -103,6 +97,12 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper {
 
     public void getAllPacks(PacksLoadingListener listener) {
         new PacksLoadingTask(listener).execute();
+    }
+
+    public interface PacksLoadingListener {
+        void onPackLoaded(TelegramStickersPack pack);
+
+        void onAllPacksLoaded(ArrayList<TelegramStickersPack> packs);
     }
 
     private class PacksLoadingTask extends AsyncTask<Void, Void, ArrayList<TelegramStickersPack>> {

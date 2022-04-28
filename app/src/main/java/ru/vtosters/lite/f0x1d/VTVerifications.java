@@ -27,18 +27,17 @@ import okhttp3.Response;
 import ru.vtosters.lite.utils.Prefs;
 
 public class VTVerifications {
+    public static final HashMap<Integer, Boolean> sServiceAccountsMap = new HashMap<>();
     private static final String TAG = "VTVerifications";
     private static final String DEVELOPERS_KEY = "VTNRS3";
     private static final String PROMETHEUS_KEY = "VTNRS1";
     private static final String SERVICE_ACCOUNTS_KEY = "VTNRS4";
     private static final String VERIFICATIONS_KEY = "VTNRS0";
-    private static SharedPreferences mVerificationsCache;
     private static final HashMap<Integer, Boolean> sDevelopersMap = new HashMap<>();
     private static final HashMap<Integer, Boolean> sPrometheusMap = new HashMap<>();
-    public static final HashMap<Integer, Boolean> sServiceAccountsMap = new HashMap<>();
     private static final HashMap<Integer, Boolean> sVerificationsMap = new HashMap<>();
-
-    private static OkHttpClient client = new OkHttpClient();
+    private static SharedPreferences mVerificationsCache;
+    private static final OkHttpClient client = new OkHttpClient();
 
     public static void load(Context context) {
         mVerificationsCache = context.getSharedPreferences("vt_another_data", 0);
@@ -139,10 +138,7 @@ public class VTVerifications {
         if (!Prefs.BooleanTrue("VT_Verification")) {
             return false;
         }
-        if (isVerified((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0))) {
-            return true;
-        }
-        return false;
+        return isVerified((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
     public static boolean hasPrometheus(JSONObject jSONObject) {
@@ -152,10 +148,7 @@ public class VTVerifications {
         if (!Prefs.BooleanTrue("VT_Fire")) {
             return false;
         }
-        if (hasPrometheus((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0))) {
-            return true;
-        }
-        return false;
+        return hasPrometheus((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {

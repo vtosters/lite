@@ -12,21 +12,6 @@ import ru.vtosters.lite.utils.IconHelper;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
-    public class a implements Preference.b {
-        @Override // android.support.v7.preference.Preference.b
-        public boolean a(Preference preference, Object obj) {
-            return ThemesFragment.this.apply(preference, obj);
-        }
-    }
-
-    public static class b implements Preference.b {
-        @Override // android.support.v7.preference.Preference.b
-        public boolean a(Preference preference, Object obj) {
-            ToastUtils.a(Helper.getString("restartapp"));
-            return true;
-        }
-    }
-
     @Override
     public void b(Bundle bundle) {
         super.b(bundle);
@@ -45,8 +30,23 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        a("iconvk").a((Preference.b) new a());
-        a("darktheme").a((Preference.b) new b());
-        a("lighttheme").a((Preference.b) new b());
+        a("iconvk").a(new a());
+        a("darktheme").a(new b());
+        a("lighttheme").a(new b());
+    }
+
+    public static class b implements Preference.b {
+        @Override // android.support.v7.preference.Preference.b
+        public boolean a(Preference preference, Object obj) {
+            ToastUtils.a(Helper.getString("restartapp"));
+            return true;
+        }
+    }
+
+    public class a implements Preference.b {
+        @Override // android.support.v7.preference.Preference.b
+        public boolean a(Preference preference, Object obj) {
+            return ThemesFragment.this.apply(preference, obj);
+        }
     }
 }

@@ -48,6 +48,15 @@ public class DockBarManager {
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
 
     private static DockBarManager sInstance = new DockBarManager();
+    private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
+    private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
+    private final List<String> mGroups = Arrays.asList(
+            "Выбранные элементы докбара",
+            "Невыбранные элементы"
+    );
+    public DockBarManager() {
+        load();
+    }
 
     public static DockBarManager getInstance() {
         if (sInstance == null)
@@ -55,15 +64,14 @@ public class DockBarManager {
         return sInstance;
     }
 
-    private List<DockBarTab> mSelectedTabs = new ArrayList<>();
-    private List<DockBarTab> mDisabledTabs = new ArrayList<>();
-    private List<String> mGroups = Arrays.asList(
-            "Выбранные элементы докбара",
-            "Невыбранные элементы"
-    );
-
-    public DockBarManager() {
-        load();
+    private static String readFully(InputStream is) throws IOException {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        byte[] buffer = new byte[2048];
+        int len;
+        while ((len = is.read(buffer)) > 0) {
+            bos.write(buffer, 0, len);
+        }
+        return bos.toString();
     }
 
     private void load() {
@@ -152,16 +160,6 @@ public class DockBarManager {
                 e.printStackTrace();
             }
         }
-    }
-
-    private static String readFully(InputStream is) throws IOException {
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        byte[] buffer = new byte[2048];
-        int len;
-        while ((len = is.read(buffer)) > 0) {
-            bos.write(buffer, 0, len);
-        }
-        return bos.toString();
     }
 
     public void delete() {

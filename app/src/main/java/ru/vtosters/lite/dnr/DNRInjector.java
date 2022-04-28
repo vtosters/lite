@@ -1,5 +1,8 @@
 package ru.vtosters.lite.dnr;
 
+import static ru.vtosters.lite.dnr.DNRModule.*;
+import static ru.vtosters.lite.utils.Helper.*;
+
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 
@@ -12,13 +15,13 @@ public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = dialog.a();
 
-        if (DNRModule.isDnrEnabledFor(peerId)) {
+        if (isDnrEnabledFor(peerId)) {
             list.add(DialogAction.valueOf("DNR_OFF"));
         } else {
             list.add(DialogAction.valueOf("DNR_ON"));
         }
 
-        if (DNRModule.isDntEnabledFor(peerId)) {
+        if (isDntEnabledFor(peerId)) {
             list.add(DialogAction.valueOf("DNT_OFF"));
         } else {
             list.add(DialogAction.valueOf("DNT_ON"));
@@ -26,10 +29,10 @@ public class DNRInjector {
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
-        hashMap.put(DialogAction.valueOf("DNR_ON"), Helper.getIdentifier("DNR_ON", "string"));
-        hashMap.put(DialogAction.valueOf("DNR_OFF"), Helper.getIdentifier("DNR_OFF", "string"));
-        hashMap.put(DialogAction.valueOf("DNT_ON"), Helper.getIdentifier("DNT_ON", "string"));
-        hashMap.put(DialogAction.valueOf("DNT_OFF"), Helper.getIdentifier("DNT_OFF", "string"));
+        hashMap.put(DialogAction.valueOf("DNR_ON"), getIdentifier("DNR_ON", "string"));
+        hashMap.put(DialogAction.valueOf("DNR_OFF"), getIdentifier("DNR_OFF", "string"));
+        hashMap.put(DialogAction.valueOf("DNT_ON"), getIdentifier("DNT_ON", "string"));
+        hashMap.put(DialogAction.valueOf("DNT_OFF"), getIdentifier("DNT_OFF", "string"));
         return hashMap;
     }
 
@@ -56,11 +59,11 @@ public class DNRInjector {
     }
 
     public static void setDnr(Dialog dialog, boolean value) {
-        DNRModule.hookDNR(dialog.a());
+        hookDNR(dialog.a());
     }
 
     public static void setDnt(Dialog dialog, boolean value) {
-        DNRModule.hookDNT(dialog.a());
+        hookDNT(dialog.a());
     }
 }
 

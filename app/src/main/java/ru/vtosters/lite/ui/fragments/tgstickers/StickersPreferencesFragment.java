@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.os.Bundle;
 
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
@@ -17,19 +19,19 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
     public void b(Bundle bundle) {
         super.b(bundle);
 
-        int vtosterXml = Helper.GetContext().getResources().getIdentifier("empty", "xml", Helper.GetContext().getPackageName());
+        int vtosterXml = GetContext().getResources().getIdentifier("empty", "xml", GetContext().getPackageName());
         this.a(vtosterXml);
 
-        PreferencesUtil.addPreferenceCategory(this, Helper.getString("sprefsstickers"));
-        PreferencesUtil.addPreference(this, "", Helper.getString("sprefsdelkey"), "", null, preference -> {
+        PreferencesUtil.addPreferenceCategory(this, getString("sprefsstickers"));
+        PreferencesUtil.addPreference(this, "", getString("sprefsdelkey"), "", null, preference -> {
             TGPref.setTGBotKey(null);
-            ToastUtils.a(Helper.getString("sprefsdelkey2"));
+            ToastUtils.a(getString("sprefsdelkey2"));
             return false;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, Helper.getString("sprefsnetwork"));
-        PreferencesUtil.addListPreference(this, "VTGS:CM", "0", Helper.getString("sprefsctype"), new CharSequence[]{
-                Helper.getString("ctypedirect"), Helper.getString("ctypesocks")
+        PreferencesUtil.addPreferenceCategory(this, getString("sprefsnetwork"));
+        PreferencesUtil.addListPreference(this, "VTGS:CM", "0", getString("sprefsctype"), new CharSequence[]{
+                getString("ctypedirect"), getString("ctypesocks")
         }, new String[]{
                 "0", "2"
         });
@@ -44,22 +46,22 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
             return true;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, Helper.getString("ssocks"));
+        PreferencesUtil.addPreferenceCategory(this, getString("ssocks"));
 
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_host", Helper.getString("ssockshost"), (preference, o) -> {
+        PreferencesUtil.addEditTextPreference(this, "tg_proxy_host", getString("ssockshost"), (preference, o) -> {
             TGPref.setTGProxyIP((String) o);
             return true;
         });
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_port", Helper.getString("ssocksport"), (preference, o) -> {
+        PreferencesUtil.addEditTextPreference(this, "tg_proxy_port", getString("ssocksport"), (preference, o) -> {
             try {
                 TGPref.setTGProxyPort(Integer.parseInt((String) o));
                 return true;
             } catch (Exception e) {
-                ToastUtils.a(Helper.getString("ssockswport"));
+                ToastUtils.a(getString("ssockswport"));
                 return false;
             }
         });
-        PreferencesUtil.addMaterialSwitchPreference(this, "tg_proxy_auth", Helper.getString("ssocksauth"), "", null, false, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "tg_proxy_auth", getString("ssocksauth"), "", null, false, (preference, o) -> {
             boolean value = (boolean) o;
 
             a("tg_proxy_login").a(value); // findPreference("tg_proxy_login").setEnabled(value);
@@ -68,11 +70,11 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
             TGPref.setTGProxyPassEnabled(value);
             return true;
         });
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_login", Helper.getString("ssockslogin"), (preference, o) -> {
+        PreferencesUtil.addEditTextPreference(this, "tg_proxy_login", getString("ssockslogin"), (preference, o) -> {
             TGPref.setTGProxyUserPass((String) o, TGPref.getTGProxyPass());
             return true;
         });
-        PreferencesUtil.addEditTextPreference(this, "tg_proxy_pass", Helper.getString("ssockspass"), (preference, o) -> {
+        PreferencesUtil.addEditTextPreference(this, "tg_proxy_pass", getString("ssockspass"), (preference, o) -> {
             TGPref.setTGProxyUserPass(TGPref.getTGProxyUser(), (String) o);
             return true;
         });
@@ -83,7 +85,7 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
 
     @Override
     public int aq() {
-        return Helper.GetContext().getResources().getIdentifier("vtltgs", "string", Helper.GetContext().getPackageName());
+        return GetContext().getResources().getIdentifier("vtltgs", "string", GetContext().getPackageName());
     }
 }
 

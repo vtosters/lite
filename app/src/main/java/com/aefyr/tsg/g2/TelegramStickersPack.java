@@ -101,7 +101,7 @@ public class TelegramStickersPack extends CustomStickersPack {
 
     @Override
     public boolean equals(Object obj) {
-        return obj instanceof TelegramStickersPack && ((TelegramStickersPack) obj).id.toLowerCase().equals(id.toLowerCase());
+        return obj instanceof TelegramStickersPack && ((TelegramStickersPack) obj).id.equalsIgnoreCase(id);
     }
 
     @Override

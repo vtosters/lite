@@ -1,5 +1,7 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -51,7 +53,7 @@ public class LibVKXClientImpl {
     public boolean runOnService(LibVKXAction action) {
         if (serviceInstance != null) {
             try {
-                if (serviceInstance.getUserId() != Helper.GetUserId()) return false;
+                if (serviceInstance.getUserId() != GetUserId()) return false;
                 action.run(serviceInstance);
                 return true;
             } catch (RemoteException e) {
@@ -75,7 +77,7 @@ public class LibVKXClientImpl {
                     isBindFailed = true;
                 } else {
                     try {
-                        if (serviceInstance.getUserId() != Helper.GetUserId()) return;
+                        if (serviceInstance.getUserId() != GetUserId()) return;
                         runAfterBind.run(serviceInstance);
                     } catch (RemoteException e) {
                         e.printStackTrace();
@@ -95,8 +97,7 @@ public class LibVKXClientImpl {
 
     private boolean verifyBindActuality() {
         if (!checkIfAppExists()) return false; // no need
-        if (isBindFailed) return false;
-        return true;
+        return !isBindFailed;
     }
 
     private Intent getIntent() {

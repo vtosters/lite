@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -24,14 +26,14 @@ public class Start {
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
-                Helper.edit().putBoolean("showAlert", false).apply();
+                edit().putBoolean("showAlert", false).apply();
             }
         });
         builder.setNeutralButton("Новости", new DialogInterface.OnClickListener() {
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
-                Helper.edit().putBoolean("showAlert", false).apply();
+                edit().putBoolean("showAlert", false).apply();
                 activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
             }
         });

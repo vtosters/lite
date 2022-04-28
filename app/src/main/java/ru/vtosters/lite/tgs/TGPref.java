@@ -6,16 +6,16 @@ import android.preference.PreferenceManager;
 import ru.vtosters.lite.utils.Helper;
 
 public class TGPref {
-    private static SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
+    private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
 
-    private static String
-            CNCT_METHOD = "VTGS:CM",
-            TG_BOTKEY = "VTGS:BKey",
-            TG_PROXYIP = "VTGS:PIP",
-            TG_PROXYPORT = "VTGS:PPT",
-            TG_PROXYPASS = "VTGS:PPS",
-            TG_PROXYUSER = "VTGS:PUS",
-            TG_PROXYUSEPASS = "VTGS:PUsePassword";
+    private static final String
+            CNCT_METHOD = "VTGS:CM";
+    private static final String TG_BOTKEY = "VTGS:BKey";
+    private static final String TG_PROXYIP = "VTGS:PIP";
+    private static final String TG_PROXYPORT = "VTGS:PPT";
+    private static final String TG_PROXYPASS = "VTGS:PPS";
+    private static final String TG_PROXYUSER = "VTGS:PUS";
+    private static final String TG_PROXYUSEPASS = "VTGS:PUsePassword";
 
     public static int getTGConnectMethod() {
         return Integer.parseInt(Prefs.getString(CNCT_METHOD, "0"));
@@ -37,6 +37,10 @@ public class TGPref {
         return Prefs.getString(TG_PROXYIP, null);
     }
 
+    public static void setTGProxyIP(String ip) {
+        Prefs.edit().putString(TG_PROXYIP, ip).apply();
+    }
+
     public static int getTGProxyPort() {
         return Prefs.getInt(TG_PROXYPORT, 0);
     }
@@ -51,10 +55,6 @@ public class TGPref {
 
     public static String getTGProxyUser() {
         return Prefs.getString(TG_PROXYUSER, "");
-    }
-
-    public static void setTGProxyIP(String ip) {
-        Prefs.edit().putString(TG_PROXYIP, ip).apply();
     }
 
     public static void setTGProxyUserPass(String user, String pass) {

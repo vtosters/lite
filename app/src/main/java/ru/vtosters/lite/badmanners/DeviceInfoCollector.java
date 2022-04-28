@@ -164,7 +164,7 @@ public class DeviceInfoCollector {
             declaredField.setAccessible(true);
             Object obj = declaredField.get(defaultAdapter);
             if (obj != null) {
-                return (String) obj.getClass().getMethod("getAddress", new Class[0]).invoke(obj, new Object[0]);
+                return (String) obj.getClass().getMethod("getAddress").invoke(obj, new Object[0]);
             }
             return null;
         } catch (Exception e) {

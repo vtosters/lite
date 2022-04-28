@@ -4,9 +4,27 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class NetRequest {
-    private String url;
-    private String requestMethod;
-    private Map<String, String> params;
+    private final String url;
+    private final String requestMethod;
+    private final Map<String, String> params;
+
+    protected NetRequest(Builder b) {
+        url = b.url;
+        requestMethod = b.req;
+        params = b.params;
+    }
+
+    public Map<String, String> getRequestParams() {
+        return params;
+    }
+
+    public String url() {
+        return url;
+    }
+
+    public String getRequestMethod() {
+        return requestMethod;
+    }
 
     public static final class Builder {
         private String url;
@@ -42,23 +60,5 @@ public class NetRequest {
             params.put(param, value);
             return this;
         }
-    }
-
-    protected NetRequest(Builder b) {
-        url = b.url;
-        requestMethod = b.req;
-        params = b.params;
-    }
-
-    public Map<String, String> getRequestParams() {
-        return params;
-    }
-
-    public String url() {
-        return url;
-    }
-
-    public String getRequestMethod() {
-        return requestMethod;
     }
 }

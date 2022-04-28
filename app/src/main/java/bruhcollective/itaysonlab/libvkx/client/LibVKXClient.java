@@ -1,5 +1,7 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.Context;
 import android.os.RemoteException;
 
@@ -27,7 +29,7 @@ public class LibVKXClient {
 
     public static LibVKXClientImpl getInstance() {
         LibVKXClientImpl libVKXClientImpl = impl;
-        return libVKXClientImpl == null ? getInstance(Helper.GetContext()) : libVKXClientImpl;
+        return libVKXClientImpl == null ? getInstance(GetContext()) : libVKXClientImpl;
     }
 
     public static boolean isVkxInstalled() {

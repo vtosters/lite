@@ -1,5 +1,8 @@
 package ru.vtosters.lite.f0x1d;
 
+import static android.widget.Toast.*;
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
@@ -38,12 +41,12 @@ public class LogWriterService extends Service {
             writeLog(intent, file);
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(Helper.GetContext(), "Не удалось сохранить лог-файл", Toast.LENGTH_SHORT).show();
+            makeText(GetContext(), "Не удалось сохранить лог-файл", LENGTH_SHORT).show();
         }
         var notificationId = intent.getIntExtra("notificationId", 1);
-        var manager = (NotificationManager) Helper.GetContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        var manager = (NotificationManager) GetContext().getSystemService(Context.NOTIFICATION_SERVICE);
         manager.cancel(notificationId);
-        Toast.makeText(Helper.GetContext(), "Лог-файл был сохранен", Toast.LENGTH_SHORT).show();
+        makeText(GetContext(), "Лог-файл был сохранен", LENGTH_SHORT).show();
 
         stopSelf();
         return START_NOT_STICKY;

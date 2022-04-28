@@ -16,12 +16,22 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public final class NetCall {
-    private NetRequest req;
-    private NetClient cl;
+    private final NetRequest req;
+    private final NetClient cl;
 
     protected NetCall(NetClient cl, NetRequest req) {
         this.req = req;
         this.cl = cl;
+    }
+
+    private static String constructArgs(Map<String, String> args) throws UnsupportedEncodingException {
+        args = new TreeMap<>(args);
+        String str = "";
+        for (Map.Entry<String, String> en : args.entrySet()) {
+            if (!str.isEmpty()) str += "&";
+            str += URLEncoder.encode(en.getKey(), "UTF-8") + "=" + URLEncoder.encode(en.getValue(), "UTF-8");
+        }
+        return str;
     }
 
     public NetRequest request() {
@@ -63,16 +73,6 @@ public final class NetCall {
         NetResponse r = new NetResponse(bos.toByteArray());
         r.setCode(con.getResponseCode());
         return r;
-    }
-
-    private static String constructArgs(Map<String, String> args) throws UnsupportedEncodingException {
-        args = new TreeMap<>(args);
-        String str = "";
-        for (Map.Entry<String, String> en : args.entrySet()) {
-            if (!str.isEmpty()) str += "&";
-            str += URLEncoder.encode(en.getKey(), "UTF-8") + "=" + URLEncoder.encode(en.getValue(), "UTF-8");
-        }
-        return str;
     }
 
     public void enqueue(NetCallback cb) {

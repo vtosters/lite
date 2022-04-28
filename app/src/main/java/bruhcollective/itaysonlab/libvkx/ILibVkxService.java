@@ -4,10 +4,25 @@
 package bruhcollective.itaysonlab.libvkx;
 
 public interface ILibVkxService extends android.os.IInterface {
+    void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException;
+
+    int getUserId() throws android.os.RemoteException;
+    // Starts playback. playbackContext can be "other" if you don't sure what it is
+
+    void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException;
+    // A UserID. CHECK FOR THIS TO BE EQUAL BEFORE SENDING ANYTHING TO SERVICE!
+
+    void deleteTrackFromCache(int track_id, int owner_id) throws android.os.RemoteException;
+    // Cache add/remove
+
+    boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException;
+
+    java.util.List<String> getCache() throws android.os.RemoteException;
+
     /**
      * Default implementation for ILibVkxService.
      */
-    public static class Default implements ILibVkxService {
+    class Default implements ILibVkxService {
         // Starts playback. playbackContext can be "other" if you don't sure what it is
 
         @Override
@@ -46,13 +61,20 @@ public interface ILibVkxService extends android.os.IInterface {
             return null;
         }
     }
+    // Get a list of cached tracks. The response is close to VK's original response (an audio list)
+    // Also, the items in the list are JSON ones.
 
     /**
      * Local-side IPC implementation stub class.
      */
-    public static abstract class Stub extends android.os.Binder implements ILibVkxService {
+    abstract class Stub extends android.os.Binder implements ILibVkxService {
+        static final int TRANSACTION_play = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
+        static final int TRANSACTION_getUserId = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);
+        static final int TRANSACTION_addTrackToCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 3);
+        static final int TRANSACTION_deleteTrackFromCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 4);
+        static final int TRANSACTION_isTrackCached = (android.os.IBinder.FIRST_CALL_TRANSACTION + 5);
+        static final int TRANSACTION_getCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 6);
         private static final String DESCRIPTOR = "bruhcollective.itaysonlab.libvkx.ILibVkxService";
-
         /**
          * Construct the stub at attach it to the interface.
          */
@@ -73,6 +95,18 @@ public interface ILibVkxService extends android.os.IInterface {
                 return ((ILibVkxService) iin);
             }
             return new Proxy(obj);
+        }
+
+        public static boolean setDefaultImpl(ILibVkxService impl) {
+            if (Proxy.sDefaultImpl == null && impl != null) {
+                Proxy.sDefaultImpl = impl;
+                return true;
+            }
+            return false;
+        }
+
+        public static ILibVkxService getDefaultImpl() {
+            return Proxy.sDefaultImpl;
         }
 
         @Override
@@ -154,7 +188,8 @@ public interface ILibVkxService extends android.os.IInterface {
         }
 
         private static class Proxy implements ILibVkxService {
-            private android.os.IBinder mRemote;
+            public static ILibVkxService sDefaultImpl;
+            private final android.os.IBinder mRemote;
 
             Proxy(android.os.IBinder remote) {
                 mRemote = remote;
@@ -164,11 +199,12 @@ public interface ILibVkxService extends android.os.IInterface {
             public android.os.IBinder asBinder() {
                 return mRemote;
             }
+            // Starts playback. playbackContext can be "other" if you don't sure what it is
 
             public String getInterfaceDescriptor() {
                 return DESCRIPTOR;
             }
-            // Starts playback. playbackContext can be "other" if you don't sure what it is
+            // A UserID. CHECK FOR THIS TO BE EQUAL BEFORE SENDING ANYTHING TO SERVICE!
 
             @Override
             public void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException {
@@ -190,7 +226,7 @@ public interface ILibVkxService extends android.os.IInterface {
                     _data.recycle();
                 }
             }
-            // A UserID. CHECK FOR THIS TO BE EQUAL BEFORE SENDING ANYTHING TO SERVICE!
+            // Cache add/remove
 
             @Override
             public int getUserId() throws android.os.RemoteException {
@@ -211,7 +247,6 @@ public interface ILibVkxService extends android.os.IInterface {
                 }
                 return _result;
             }
-            // Cache add/remove
 
             @Override
             public void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException {
@@ -253,6 +288,8 @@ public interface ILibVkxService extends android.os.IInterface {
                     _data.recycle();
                 }
             }
+            // Get a list of cached tracks. The response is close to VK's original response (an audio list)
+            // Also, the items in the list are JSON ones.
 
             @Override
             public boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException {
@@ -275,8 +312,6 @@ public interface ILibVkxService extends android.os.IInterface {
                 }
                 return _result;
             }
-            // Get a list of cached tracks. The response is close to VK's original response (an audio list)
-            // Also, the items in the list are JSON ones.
 
             @Override
             public java.util.List<String> getCache() throws android.os.RemoteException {
@@ -297,44 +332,6 @@ public interface ILibVkxService extends android.os.IInterface {
                 }
                 return _result;
             }
-
-            public static ILibVkxService sDefaultImpl;
-        }
-
-        static final int TRANSACTION_play = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
-        static final int TRANSACTION_getUserId = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);
-        static final int TRANSACTION_addTrackToCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 3);
-        static final int TRANSACTION_deleteTrackFromCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 4);
-        static final int TRANSACTION_isTrackCached = (android.os.IBinder.FIRST_CALL_TRANSACTION + 5);
-        static final int TRANSACTION_getCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 6);
-
-        public static boolean setDefaultImpl(ILibVkxService impl) {
-            if (Proxy.sDefaultImpl == null && impl != null) {
-                Proxy.sDefaultImpl = impl;
-                return true;
-            }
-            return false;
-        }
-
-        public static ILibVkxService getDefaultImpl() {
-            return Proxy.sDefaultImpl;
         }
     }
-    // Starts playback. playbackContext can be "other" if you don't sure what it is
-
-    public void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException;
-    // A UserID. CHECK FOR THIS TO BE EQUAL BEFORE SENDING ANYTHING TO SERVICE!
-
-    public int getUserId() throws android.os.RemoteException;
-    // Cache add/remove
-
-    public void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException;
-
-    public void deleteTrackFromCache(int track_id, int owner_id) throws android.os.RemoteException;
-
-    public boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException;
-    // Get a list of cached tracks. The response is close to VK's original response (an audio list)
-    // Also, the items in the list are JSON ones.
-
-    public java.util.List<String> getCache() throws android.os.RemoteException;
 }

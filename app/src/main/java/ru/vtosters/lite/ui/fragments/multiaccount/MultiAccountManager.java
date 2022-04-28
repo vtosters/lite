@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
+import static ru.vtosters.lite.utils.Helper.*;
 import static ru.vtosters.lite.utils.Helper.GetContext;
 
 import android.content.Context;
@@ -16,7 +17,7 @@ import ru.vtosters.lite.utils.Helper;
 public class MultiAccountManager {
 
     public static void migrate() {
-        SharedPreferences OldPrefs = Helper.GetContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
+        SharedPreferences OldPrefs = GetContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
         String OldPrefsValue = OldPrefs.getString("key_vk_account", "");
         SharedPreferences NewPrefs = GetContext().getSharedPreferences("pref_account_manager0", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = NewPrefs.edit();
@@ -25,12 +26,12 @@ public class MultiAccountManager {
     }
 
     public static SharedPreferences getCurrentAccount() {
-        int account = Helper.GetPreferences().getInt("account", 0);
-        return Helper.GetContext().getSharedPreferences("pref_account_manager" + (account != 0 ? account : ""), Context.MODE_PRIVATE);
+        int account = GetPreferences().getInt("account", 0);
+        return GetContext().getSharedPreferences("pref_account_manager" + (account != 0 ? account : ""), Context.MODE_PRIVATE);
     }
 
     private static int getAccountPrefsCount() {
-        File[] prefs = new File(Helper.GetContext().getFilesDir().getParent(), "shared_prefs")
+        File[] prefs = new File(GetContext().getFilesDir().getParent(), "shared_prefs")
                 .listFiles((dir, name) -> {
                     return name.matches("pref_account_manager\\d+\\.xml");
                 });
@@ -49,7 +50,7 @@ public class MultiAccountManager {
     public static List<MultiAccountItem> buildList() {
         List<MultiAccountItem> list = new ArrayList<>();
         for (int i = 0; i <= getAccountPrefsCount(); i++) {
-            SharedPreferences prefs = Helper.GetContext().getSharedPreferences("pref_account_manager" + i, Context.MODE_PRIVATE);
+            SharedPreferences prefs = GetContext().getSharedPreferences("pref_account_manager" + i, Context.MODE_PRIVATE);
             String keyVKAccount = prefs.getString("key_vk_account", "");
             if (!keyVKAccount.isEmpty()) {
                 String name = withRegex(keyVKAccount, ".*\"name\":\\{.*?:\"(.*?)\"\\}.*", "");
@@ -64,22 +65,22 @@ public class MultiAccountManager {
     }
 
     public static boolean switchAccount(int i) {
-        int account = Helper.GetPreferences().getInt("account", 0);
+        int account = GetPreferences().getInt("account", 0);
         if (account == i) return false;
 
-        Helper.GetPreferences().edit().putInt("account", i).commit();
+        GetPreferences().edit().putInt("account", i).commit();
         return true;
     }
 
     public static void addAccount() {
-        Helper.GetPreferences().edit().putInt("account", getAccountPrefsCount()).commit();
+        GetPreferences().edit().putInt("account", getAccountPrefsCount()).commit();
     }
 
     public static void deleteAccount(int i) {
-        int account = Helper.GetPreferences().getInt("account", 0);
-        SharedPreferences prefs = Helper.GetContext().getSharedPreferences("pref_account_manager" + i, Context.MODE_PRIVATE);
+        int account = GetPreferences().getInt("account", 0);
+        SharedPreferences prefs = GetContext().getSharedPreferences("pref_account_manager" + i, Context.MODE_PRIVATE);
         prefs.edit().clear().commit();
-        File file = new File(new File(Helper.GetContext().getFilesDir().getParent(), "shared_prefs"), "pref_account_manager" + i);
+        File file = new File(new File(GetContext().getFilesDir().getParent(), "shared_prefs"), "pref_account_manager" + i);
         if (file.exists()) file.delete();
         if (account == i && getAccountPrefsCount() > 0)
             switchAccount(buildList().get(0).index);

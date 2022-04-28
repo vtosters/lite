@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
@@ -40,51 +42,51 @@ public class DockBarAdapter extends RecyclerView.a
     }
 
     private View createTabItem() {
-        LinearLayout container = new LinearLayout(Helper.GetContext());
+        LinearLayout container = new LinearLayout(GetContext());
         container.setTag("tab_item_container");
         container.setGravity(Gravity.CENTER_VERTICAL);
         container.setOrientation(LinearLayout.HORIZONTAL);
         container.setPadding(
-                Helper.convertDpToPixel(12),
-                Helper.convertDpToPixel(12),
-                Helper.convertDpToPixel(12),
-                Helper.convertDpToPixel(12)
+                convertDpToPixel(12),
+                convertDpToPixel(12),
+                convertDpToPixel(12),
+                convertDpToPixel(12)
         );
-        container.setLayoutParams(new LinearLayout.LayoutParams(-1, Helper.convertDpToPixel(48)));
+        container.setLayoutParams(new LinearLayout.LayoutParams(-1, convertDpToPixel(48)));
 
-        ImageView icon = new ImageView(Helper.GetContext());
+        ImageView icon = new ImageView(GetContext());
         icon.setTag("icon");
         icon.setImageTintList(ColorStateList.valueOf(Themes.getAccentColor()));
         icon.setLayoutParams(new LinearLayout.LayoutParams(
-                Helper.convertDpToPixel(24),
-                Helper.convertDpToPixel(24)));
+                convertDpToPixel(24),
+                convertDpToPixel(24)));
         container.addView(icon);
 
-        TextView title = new TextView(Helper.GetContext());
+        TextView title = new TextView(GetContext());
         title.setTag("title");
         title.setTextSize(16.0f);
         title.setTypeface(Typeface.DEFAULT_BOLD);
         title.setTextColor(Themes.getTextAttr());
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2);
         params.weight = 1;
-        params.leftMargin = Helper.convertDpToPixel(16);
+        params.leftMargin = convertDpToPixel(16);
         container.addView(title, params);
 
         return container;
     }
 
     private View createGroupTitle() {
-        LinearLayout layout = new LinearLayout(Helper.GetContext());
+        LinearLayout layout = new LinearLayout(GetContext());
         layout.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
 
-        TextView title = new TextView(Helper.GetContext());
+        TextView title = new TextView(GetContext());
         title.setTag("group_title");
         title.setTextSize(13.0f);
         title.setPadding(
-                Helper.convertDpToPixel(16),
-                Helper.convertDpToPixel(13),
-                Helper.convertDpToPixel(16),
-                Helper.convertDpToPixel(13)
+                convertDpToPixel(16),
+                convertDpToPixel(13),
+                convertDpToPixel(16),
+                convertDpToPixel(13)
         );
         title.setAllCaps(true);
         title.setTextColor(Themes.getTextAttr());
@@ -155,8 +157,8 @@ public class DockBarAdapter extends RecyclerView.a
 
     static class DockBarEditViewHolder extends RecyclerView.x {
 
-        private ImageView mIcon;
-        private TextView mTitle;
+        private final ImageView mIcon;
+        private final TextView mTitle;
 
         public DockBarEditViewHolder(View itemView) {
             super(itemView);
@@ -173,7 +175,7 @@ public class DockBarAdapter extends RecyclerView.a
 
     static class GroupViewHolder extends RecyclerView.x {
 
-        private TextView mGroupTitle;
+        private final TextView mGroupTitle;
 
         public GroupViewHolder(View view) {
             super(view);
