@@ -7,7 +7,6 @@ import android.util.Base64;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -27,7 +26,8 @@ public class SettBackup {
     public static void backupSettings() {
         SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String currentDateandTime = date.format(new Date());
-        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTLBackup_" + currentDateandTime + ".txt");
+        var directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTLBackup_" + currentDateandTime + ".txt";
+        var file = new File(directory);
         try {
             var exists = file.createNewFile();
 
@@ -39,6 +39,7 @@ public class SettBackup {
                 FileWriter out = new FileWriter(file);
                 out.write(getAllPrefs());
                 out.close();
+                Toast.makeText(Helper.GetContext(), "Сохранено в файл " + directory, Toast.LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
                 Toast.makeText(Helper.GetContext(), "Не удалось сохранить файл", Toast.LENGTH_SHORT).show();
@@ -52,9 +53,9 @@ public class SettBackup {
 
     public static String getAllPrefs() {
         Map<String, ?> allPrefs = prefs.getAll();
-        for (Map.Entry<String, ?> entry : allPrefs.entrySet()) {
-            Helper.SendToast(entry.getKey() + ": " + entry.getValue().toString());
-        }
         return Base64.encodeToString(allPrefs.toString().getBytes(), 1);
+    }
+
+    public static void restoreBackup() {
     }
 }
