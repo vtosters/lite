@@ -4,6 +4,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="calls"
+            android:summary="Иконка звонков в сообщениях"
             android:title="@string/vtlcalls" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
