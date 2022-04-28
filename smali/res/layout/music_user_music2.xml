@@ -17,7 +17,7 @@
             android:layout_height="48.0dip"
             android:layout_marginLeft="4.0dip"
             android:src="@drawable/ic_back_24"
-            android:tint="?accent"
+            android:tint="?header_text"
             android:contentDescription="@string/music_talkback_go_back"
             style="@style/ActionButton.White" />
 
@@ -29,7 +29,7 @@
             android:layout_height="48.0dip"
             android:layout_marginRight="4.0dip"
             android:src="@drawable/ic_menu_search"
-            android:tint="?accent"
+            android:tint="?header_text"
             style="@style/ActionButton.White" />
 
         <LinearLayout
@@ -43,7 +43,7 @@
 
             <TextView
                 android:textSize="16.0dip"
-                android:textColor="?text_primary"
+                android:textColor="?header_text"
                 android:ellipsize="end"
                 android:layout_gravity="center_vertical"
                 android:id="@id/title"
@@ -54,7 +54,7 @@
 
             <TextView
                 android:textSize="14.0dip"
-                android:textColor="?text_secondary"
+                android:textColor="?header_text_secondary"
                 android:ellipsize="end"
                 android:layout_gravity="center_vertical"
                 android:id="@id/subtitle"
