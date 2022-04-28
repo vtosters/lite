@@ -4,7 +4,7 @@
     <FrameLayout
         android:orientation="horizontal"
         android:id="@id/toolbar"
-        android:background="?tabbar_background"
+        android:background="?header_background"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:minHeight="?actionBarSize"
