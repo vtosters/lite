@@ -3,6 +3,8 @@
  */
 package bruhcollective.itaysonlab.libvkx;
 
+// Works only with original signature of VT
+
 public interface ILibVkxService extends android.os.IInterface {
     void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException;
 

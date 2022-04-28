@@ -8,8 +8,7 @@ import ru.vtosters.lite.utils.Helper;
 public class TGPref {
     private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
 
-    private static final String
-            CNCT_METHOD = "VTGS:CM";
+    private static final String CNCT_METHOD = "VTGS:CM";
     private static final String TG_BOTKEY = "VTGS:BKey";
     private static final String TG_PROXYIP = "VTGS:PIP";
     private static final String TG_PROXYPORT = "VTGS:PPT";
