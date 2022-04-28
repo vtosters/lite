@@ -1,5 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.SettBackup.backupSettings;
+import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -117,6 +120,29 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
+    public class deleteprefs implements Preference.c {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean a(Preference preference) {
+            deletePrefs();
+            Helper.restarting();
+            return true;
+        }
+
+        deleteprefs() {
+        }
+    }
+
+    public class saveprefs implements Preference.c {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean a(Preference preference) {
+            backupSettings();
+            return true;
+        }
+
+        saveprefs() {
+        }
+    }
+
     private void prefs() {
         a("firebasefix").a((Preference.c) new a());
         a("applicationstop").a((Preference.c) new b());
@@ -124,5 +150,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         a("applicationrestart").a((Preference.c) new d());
         a("clearcache").a((Preference.c) new e());
         a("stickfix").a((Preference.c) new f());
+
+        a("saveprefs").a((Preference.c) new saveprefs());
+        a("deleteprefs").a((Preference.c) new deleteprefs());
     }
 }

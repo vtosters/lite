@@ -24,6 +24,15 @@
             android:title="@string/killappbtn" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Backup system">
+        <Preference
+            android:key="deleteprefs"
+            android:title="Reset prefs" />
+        <Preference
+            android:key="saveprefs"
+            android:title="Save prefs to file" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
             android:enabled="false"
