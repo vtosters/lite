@@ -17,6 +17,9 @@
             android:title="Очистить кэш стикеров"
             android:summary="Исправление загрузки стикеров при их полном отсутствии" />
         <Preference
+            android:key="deleteprefs"
+            android:title="Сбросить настройки" />
+        <Preference
             android:key="applicationrestart"
             android:title="@string/applicationrestart" />
         <Preference
@@ -24,15 +27,18 @@
             android:title="@string/killappbtn" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Backup system">
+    <!-- <PreferenceCategory android:title="Backup system">
         <Preference
             android:key="deleteprefs"
             android:title="Reset prefs" />
         <Preference
             android:key="saveprefs"
             android:title="Save prefs to file" />
+        <Preference
+            android:key="restoreprefs"
+            android:title="Restore prefs" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
             android:enabled="false"

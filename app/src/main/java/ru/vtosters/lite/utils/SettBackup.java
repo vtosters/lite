@@ -1,7 +1,17 @@
 package ru.vtosters.lite.utils;
 
+import static android.app.Activity.RESULT_OK;
+import static android.os.Environment.*;
+import static android.widget.Toast.*;
+
+import static androidx.core.app.ActivityCompat.startActivityForResult;
+
+import static ru.vtosters.lite.utils.Helper.*;
+
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Environment;
 import android.util.Base64;
 import android.widget.Toast;
@@ -15,18 +25,18 @@ import java.util.Locale;
 import java.util.Map;
 
 public class SettBackup {
-    static SharedPreferences prefs = Helper.GetContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+    static SharedPreferences prefs = GetContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
 
     public static void deletePrefs() {
         prefs.edit().clear().commit();
-        File file = new File(new File(Helper.GetContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
+        File file = new File(new File(GetContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
         if (file.exists()) file.delete();
     }
 
     public static void backupSettings() {
         SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String currentDateandTime = date.format(new Date());
-        var directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTLBackup_" + currentDateandTime + ".txt";
+        var directory = getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS) + "/VTLBackup_" + currentDateandTime + ".txt";
         var file = new File(directory);
         try {
             var exists = file.createNewFile();
@@ -39,15 +49,15 @@ public class SettBackup {
                 FileWriter out = new FileWriter(file);
                 out.write(getAllPrefs());
                 out.close();
-                Toast.makeText(Helper.GetContext(), "Сохранено в файл " + directory, Toast.LENGTH_LONG).show();
+                makeText(GetContext(), "Сохранено в файл " + directory, LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
-                Toast.makeText(Helper.GetContext(), "Не удалось сохранить файл", Toast.LENGTH_SHORT).show();
+                makeText(GetContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
             }
             
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(Helper.GetContext(), "Не удалось сохранить файл", Toast.LENGTH_SHORT).show();
+            makeText(GetContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
         }
     }
 
@@ -57,5 +67,9 @@ public class SettBackup {
     }
 
     public static void restoreBackup() {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        intent.setType("text/plain");
+        GetContext().startActivity(intent);
     }
 }
