@@ -1,0 +1,46 @@
+name: Build VTosters Lite
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          
+      - uses: actions/checkout@v2
+      
+      - name: Download tools
+        run: |
+          sudo apt update
+          sudo apt install default-jre
+          sudo apt install python3
+          chmod +x scripts/apktool.jar
+          chmod +x scripts/apksigner.jar
+          
+      - name: Build VTLite
+        run: |
+          git checkout sources
+          bash scripts/build.sh
+            
+      - name: Sign and verify the apk
+        run: |
+          java -jar scripts/apksigner.jar sign --ks scripts/debug.keystore --ks-key-alias androiddebugkey --ks-pass pass:android smali/VTLite.apk
+          java -jar scripts/apksigner.jar verify smali/VTLite.apk
+                      
+      - name: Upload apk to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: VTLite.apk
+          path: smali/VTLite.apk
