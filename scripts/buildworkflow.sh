@@ -46,7 +46,7 @@ else
 fi
 
 echo -e "${BOLD}${UNDERLINE}Сборка apk..${NC}"
-java -jar scripts/apktool.jar b /smali -o smali/VTLite.apk --use-aapt2 -p scripts/framework/
+java -jar scripts/apktool.jar b smali -o smali/VTLite.apk --use-aapt2 -p scripts/framework/
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
