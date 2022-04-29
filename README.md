@@ -4,6 +4,10 @@ VTosters Lite - это модифицированный клиент (деком
 
 О найденных багах сообщать в [issues](https://github.com/vtosters/lite/issues), просьба не плодить дубликаты, воспользуйтесь поиском перед созданием нового issue
 
+Скачивать самые актуальные версии можно с [Actions](https://github.com/vtosters/lite/actions)
+
+Стабильные сборки находятся в [Releases](https://github.com/vtosters/lite/releases)
+
 ## Откладка
 
 Для откладки с помощью Android Studio необходимо пройти в `/smali/AndroidManifest.xml`

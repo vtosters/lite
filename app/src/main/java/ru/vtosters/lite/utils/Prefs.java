@@ -262,7 +262,7 @@ public class Prefs {
             e.printStackTrace();
         }
 
-        return null;
+        return "0000000";
     }
 
     public static String getBranch() {
