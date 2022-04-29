@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.vk.attachpicker.widget.TopShadowLinearLayout android:orientation="vertical"
-    android:background="?tabbar_background"
+    android:background="#ffffffff"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -43,7 +43,7 @@
                 android:gravity="center"
                 android:layout_gravity="bottom"
                 android:id="@id/tv_bottom_panel_cancel"
-                android:background="?tabbar_background"
+                android:background="@drawable/picker_btn_white"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/picker_viewer_bottom_padding"
                 android:text="@string/picker_cancel"
