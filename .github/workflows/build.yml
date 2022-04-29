@@ -31,7 +31,7 @@ jobs:
           
       - name: Build VTLite
         run: |
-          git checkout sources
+          git checkout master
           bash scripts/build.sh
             
       - name: Sign and verify the apk
