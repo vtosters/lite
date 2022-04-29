@@ -32,7 +32,7 @@ jobs:
       - name: Build VTLite
         run: |
           git checkout master
-          bash scripts/build.sh
+          bash scripts/buildworkflow.sh
             
       - name: Sign and verify the apk
         run: |
