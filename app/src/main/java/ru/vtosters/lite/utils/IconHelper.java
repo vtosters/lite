@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getPackageName;
 
 import android.content.ComponentName;
 import android.content.pm.PackageManager;

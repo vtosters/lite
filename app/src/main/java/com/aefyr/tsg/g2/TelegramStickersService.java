@@ -1,6 +1,6 @@
 package com.aefyr.tsg.g2;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
 
 import android.content.Context;
 import android.content.Intent;

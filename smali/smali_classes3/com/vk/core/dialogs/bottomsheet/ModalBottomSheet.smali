@@ -316,7 +316,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/view/Window;->setLayout(II)V
 
-    invoke-static {v2, v1}, Lru/vtosters/lite/utils/Prefs;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {v2, v1}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
 
     return-void
 .end method

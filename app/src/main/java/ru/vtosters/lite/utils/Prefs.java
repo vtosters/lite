@@ -1,19 +1,21 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.*;
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
+import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
+import static ru.vtosters.lite.utils.Helper.fixGapps;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getPreferences;
+import static ru.vtosters.lite.utils.Helper.getUserSecret;
+import static ru.vtosters.lite.utils.Helper.getUserToken;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 
 import android.app.Activity;
 import android.app.Application;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.Window;
 
 import com.vk.about.Items;
 import com.vk.about.Items1;
@@ -54,9 +56,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-
-import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
-import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager;
 
 public class Prefs {
     private static final List<Activity> activities = new ArrayList<>();
@@ -149,7 +148,7 @@ public class Prefs {
     }
 
     public static boolean copyright_post() {
-        return BooleanTrue("copyright_post");
+        return BooleanFalse("copyright_post");
     }
 
     public static boolean darkmode() {
@@ -253,10 +252,6 @@ public class Prefs {
         }
 
         return "0000000";
-    }
-
-    public static String getBranch() {
-        return getPreferences().getString("ota_branches", "Stable");
     }
 
     public static String getDarkVKUI() {
@@ -371,40 +366,6 @@ public class Prefs {
         return ads() ? "null" : "promo_button";
     }
 
-    public static String proxyHostHTTP() {
-        String string = getPreferences().getString("proxyHostHTTP", "");
-        return string.isEmpty() ? "192.168.0.1" : string;
-    }
-
-    public static String proxyHostHTTPS() {
-        String string = getPreferences().getString("proxyHostHTTPS", "");
-        return string.isEmpty() ? "192.168.0.1" : string;
-    }
-
-    public static String proxyHostSocks() {
-        String string = getPreferences().getString("proxyHostSocks", "");
-        return string.isEmpty() ? "192.168.0.1" : string;
-    }
-
-    public static String proxyPortHTTP() {
-        String string = getPreferences().getString("proxyPortHTTP", "");
-        return string.isEmpty() ? "8888" : string;
-    }
-
-    public static String proxyPortHTTPS() {
-        String string = getPreferences().getString("proxyPortHTTPS", "");
-        return string.isEmpty() ? "8888" : string;
-    }
-
-    public static String proxyPortSocks() {
-        String string = getPreferences().getString("proxyPortSocks", "");
-        return string.isEmpty() ? "8888" : string;
-    }
-
-    public static boolean proxyvk() {
-        return BooleanFalse("proxyvk");
-    }
-
     public static String readstatus() {
         return dnr() ? "messages.markAsRead" : "null";
     }
@@ -484,12 +445,6 @@ public class Prefs {
     public static int getMsgCount() {
         String customvalue = getPreferences().getString("msgcount", "");
         return customvalue.isEmpty() ? 30 : Integer.parseInt(customvalue);
-    }
-
-    public static void setNavbarColor(Window window, int i) {
-        if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setNavigationBarColor(getNavbarColor());
-        }
     }
 
     public static String MediacontentFix() {
@@ -724,7 +679,7 @@ public class Prefs {
     }
 
     private static void registerActivities(Application application) {
-        application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() { // from class: ru.vtoster2.VTCore.1
+        application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityPaused(Activity activity) {
             }
@@ -766,7 +721,7 @@ public class Prefs {
     public static Class getStartFragment() {
         String string = getPreferences().getString("start_values", "");
         if (string.equals("default")) {
-            return DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
+            return getInstance().getSelectedTabs().get(0).fragmentClass;
         }
         if (string.equals("newsfeed")) {
             return Feed2049.b.c();
@@ -822,22 +777,6 @@ public class Prefs {
         if (string.equals("docs")) {
             return DocumentsViewFragment.class;
         }
-        return string.equals("brtd") ? BirthdaysFragment.class : DockBarManager.getInstance().getSelectedTabs().get(0).fragmentClass;
-    }
-
-    public static Context BaseContextLocale(Context context) {
-        Locale locale = new Locale(getLocale());
-        Locale.setDefault(locale);
-        var resources = context.getResources();
-        var configuration = resources.getConfiguration();
-        if (Build.VERSION.SDK_INT >= 24) {
-            configuration.setLocale(locale);
-            configuration.setLayoutDirection(locale);
-            return context.createConfigurationContext(configuration);
-        }
-        configuration.locale = locale;
-        configuration.setLayoutDirection(locale);
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-        return context;
+        return string.equals("brtd") ? BirthdaysFragment.class : getInstance().getSelectedTabs().get(0).fragmentClass;
     }
 }

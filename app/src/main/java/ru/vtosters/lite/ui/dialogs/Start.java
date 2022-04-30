@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.edit;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.OEMDetector;
 import ru.vtosters.lite.utils.Prefs;
 

@@ -414,7 +414,7 @@
 
     .prologue
     .line 41
-    invoke-static {p1}, Lru/vtosters/lite/utils/Prefs;->BaseContextLocale(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Lru/vtosters/lite/utils/Helper;->BaseContextLocale(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -498,7 +498,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/utils/Prefs;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {v0, v1}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
 
     .line 48
     new-instance v0, Landroid/view/View;

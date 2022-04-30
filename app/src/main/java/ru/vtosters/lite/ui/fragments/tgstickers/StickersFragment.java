@@ -1,8 +1,16 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
-import static android.widget.Toast.*;
-import static ru.vtosters.lite.utils.Helper.*;
-import static ru.vtosters.lite.utils.Themes.*;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.Helper.convertDpToPixel;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getIdentifier;
+import static ru.vtosters.lite.utils.Helper.getResources;
+import static ru.vtosters.lite.utils.Helper.getString;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
+import static ru.vtosters.lite.utils.Themes.getSTextAttr;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.Themes.recolorDrawable;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;

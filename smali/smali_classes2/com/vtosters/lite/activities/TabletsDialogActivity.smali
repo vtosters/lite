@@ -127,7 +127,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/utils/Prefs;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p1, p2}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
 
     return-void
 .end method

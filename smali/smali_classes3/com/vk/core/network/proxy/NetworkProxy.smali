@@ -1166,7 +1166,7 @@
 
     move-result p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->proxyvk()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->proxyvk()Z
 
     move-result p1
 
@@ -1294,7 +1294,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->proxyvk()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->proxyvk()Z
 
     move-result v0
 

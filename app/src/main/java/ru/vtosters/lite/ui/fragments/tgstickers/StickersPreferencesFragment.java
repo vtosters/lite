@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getString;
 
 import android.os.Bundle;
 

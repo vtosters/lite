@@ -1595,7 +1595,7 @@
     .line 118
     invoke-virtual {p1, v0}, Landroid/view/Window;->setGravity(I)V
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/Prefs;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p1, v0}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
 
     :cond_0
     return-void

@@ -1,13 +1,17 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.*;
-import static ru.vtosters.lite.utils.Prefs.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getPreferences;
+import static ru.vtosters.lite.utils.Prefs.getNavbarColor;
+import static ru.vtosters.lite.utils.Prefs.navbar;
+import static ru.vtosters.lite.utils.Prefs.vksans;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.Toolbar;
+import android.view.Window;
 import android.widget.ImageButton;
 
 import com.vk.core.d.RecoloredDrawable;
@@ -166,6 +170,12 @@ public class Themes {
             return getAccentColor();
         }
         return getContext().getResources().getColor(i);
+    }
+
+    public static void setNavbarColor(Window window, int i) {
+        if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setNavigationBarColor(getNavbarColor());
+        }
     }
 
     public static String hex(int i) {

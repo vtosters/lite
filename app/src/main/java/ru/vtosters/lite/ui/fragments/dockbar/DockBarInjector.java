@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
