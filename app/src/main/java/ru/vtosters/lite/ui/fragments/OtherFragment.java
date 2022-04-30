@@ -12,7 +12,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
-import android.widget.Toast;
 
 import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
@@ -25,8 +24,6 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
-
-import ru.vtosters.lite.utils.Helper;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
@@ -62,7 +59,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
-            copy(GetContext(), GetUserToken());
+            copy(getContext(), getUserToken());
             return true;
         }
     }
@@ -99,7 +96,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
-            restarting();
+            restartApplication();
             return true;
         }
     }
@@ -129,9 +126,9 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
-            SharedPreferences prefs = GetContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+            SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
             prefs.edit().clear().commit();
-            restarting();
+            restartApplication();
             return true;
         }
     }
@@ -143,7 +140,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             deletePrefs();
-            restarting();
+            restartApplication();
             return true;
         }
     }

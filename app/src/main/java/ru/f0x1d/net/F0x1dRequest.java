@@ -11,8 +11,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import ru.vtosters.lite.utils.Helper;
-
 public class F0x1dRequest {
 
     public static void makeRequest(byte[] bArr, F0x1dRequestCallback f0x1dRequestCallback) {
@@ -58,7 +56,7 @@ public class F0x1dRequest {
                 HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(new String(this.url)).openConnection();
                 httpURLConnection.setRequestMethod(this.mIsPut ? "PUT" : "GET");
                 if (this.mIsVkToasterRequest) {
-                    httpURLConnection.setRequestProperty("Token", GetUserToken());
+                    httpURLConnection.setRequestProperty("Token", getUserToken());
                 }
                 if (!this.mIsVkToasterRequest) {
                     httpURLConnection.setRequestProperty("User-Agent", Network.a.a().a());

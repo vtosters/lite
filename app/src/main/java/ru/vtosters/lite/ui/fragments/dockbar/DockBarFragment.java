@@ -14,7 +14,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
-import ru.vtosters.lite.utils.Helper;
 
 public class DockBarFragment extends ToolbarFragment {
 
@@ -43,7 +42,7 @@ public class DockBarFragment extends ToolbarFragment {
         save.setText("Сохранить");
         save.setOnClickListener(v -> {
             DockBarManager.getInstance().save();
-            restarting();
+            restartApplication();
         });
 
         LinearLayout.LayoutParams saveParams = new LinearLayout.LayoutParams(0, -2);
@@ -57,7 +56,7 @@ public class DockBarFragment extends ToolbarFragment {
         reset.setText("Сбросить");
         reset.setOnClickListener(v -> {
             DockBarManager.getInstance().delete();
-            restarting();
+            restartApplication();
         });
 
         LinearLayout.LayoutParams resetParams = new LinearLayout.LayoutParams(0, -2);

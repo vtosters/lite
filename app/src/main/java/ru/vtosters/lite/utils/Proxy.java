@@ -44,7 +44,7 @@ public class Proxy {
     }
 
     public static String getApiCom() {
-        String string = GetPreferences().getString("proxyapi", "");
+        String string = getPreferences().getString("proxyapi", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "api.vk.com";
         }
@@ -52,7 +52,7 @@ public class Proxy {
     }
 
     public static String getAwayPhpCom() {
-        String string = GetPreferences().getString("proxyapi", "");
+        String string = getPreferences().getString("proxyapi", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "m.vk.com";
         }
@@ -60,7 +60,7 @@ public class Proxy {
     }
 
     public static String getOauthCom() {
-        String string = GetPreferences().getString("proxyoauth", "");
+        String string = getPreferences().getString("proxyoauth", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "oauth.vk.com";
         }
@@ -68,7 +68,7 @@ public class Proxy {
     }
 
     public static String getStaticCom() {
-        String string = GetPreferences().getString("proxystatic", "");
+        String string = getPreferences().getString("proxystatic", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return "static.vk.com";
         }
@@ -77,7 +77,7 @@ public class Proxy {
 
     public static String staticFix(String str) {
         String str2;
-        String string = GetPreferences().getString("proxystatic", "");
+        String string = getPreferences().getString("proxystatic", "");
         if (!Prefs.proxy() & string.isEmpty()) {
             return str;
         }
@@ -101,7 +101,7 @@ public class Proxy {
     }
 
     public static void setProxy() {
-        switch (GetPreferences().getString("proxy", "")) {
+        switch (getPreferences().getString("proxy", "")) {
             case "zaborona":
                 Properties properties = System.getProperties();
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");

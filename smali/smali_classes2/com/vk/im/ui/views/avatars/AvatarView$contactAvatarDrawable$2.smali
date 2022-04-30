@@ -66,7 +66,7 @@
 
     sget v2, Lcom/vk/im/ui/R$f;->roboto_medium:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_medium()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_medium()I
 
     move-result v2
 

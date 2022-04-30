@@ -6,7 +6,7 @@ import android.preference.PreferenceManager;
 import ru.vtosters.lite.utils.Helper;
 
 public class TGPref {
-    private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(Helper.GetContext());
+    private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(Helper.getContext());
 
     private static final String CNCT_METHOD = "VTGS:CM";
     private static final String TG_BOTKEY = "VTGS:BKey";

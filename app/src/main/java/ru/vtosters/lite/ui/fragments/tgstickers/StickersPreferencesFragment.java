@@ -11,7 +11,6 @@ import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.PreferencesUtil;
-import ru.vtosters.lite.utils.Helper;
 
 public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment {
 
@@ -19,7 +18,7 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
     public void b(Bundle bundle) {
         super.b(bundle);
 
-        int vtosterXml = GetContext().getResources().getIdentifier("empty", "xml", GetContext().getPackageName());
+        int vtosterXml = getContext().getResources().getIdentifier("empty", "xml", getContext().getPackageName());
         this.a(vtosterXml);
 
         PreferencesUtil.addPreferenceCategory(this, getString("sprefsstickers"));
@@ -85,7 +84,7 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
 
     @Override
     public int aq() {
-        return GetContext().getResources().getIdentifier("vtltgs", "string", GetContext().getPackageName());
+        return getContext().getResources().getIdentifier("vtltgs", "string", getContext().getPackageName());
     }
 }
 

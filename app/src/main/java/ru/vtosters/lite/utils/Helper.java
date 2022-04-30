@@ -2,6 +2,8 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Proxy.*;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.preference.PreferenceManager;
 
 import androidx.annotation.NonNull;
@@ -23,24 +26,20 @@ import com.vtosters.lite.im.ImEngineProvider;
 import java.lang.reflect.Method;
 
 public class Helper {
-    public static int GetUserId() {
+    public static int getUserId() {
         return VKAccountManager.b().a();
     }
 
-    public static String GetUserSecret() {
+    public static String getUserSecret() {
         return VKAccountManager.b().c();
     }
 
-    public static String GetUserToken() {
+    public static String getUserToken() {
         return VKAccountManager.b().b();
     }
 
     public static SharedPreferences.Editor edit() {
-        return PreferenceManager.getDefaultSharedPreferences(GetContext()).edit();
-    }
-
-    public static String getConnectorDomain(String str) {
-        return GetConnector(str);
+        return PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
     }
 
     public static void reloadMSG() {
@@ -67,8 +66,9 @@ public class Helper {
         return extendedUserProfile.a;
     }
 
-    public static void restarting() {
-        Context ctx = GetContext();
+    // Application restart (works on sdk 29+ too)
+    public static void restartApplication() {
+        Context ctx = getContext();
         PackageManager pm = ctx.getPackageManager();
         Intent intent = pm.getLaunchIntentForPackage(ctx.getPackageName());
         Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
@@ -76,8 +76,9 @@ public class Helper {
         Runtime.getRuntime().exit(0);
     }
 
+    // Global Context
     @NonNull
-    public static Context GetContext() {
+    public static Context getContext() {
         try {
             Class<?> appGlobalsClazz = Class.forName("android.app.AppGlobals");
 
@@ -91,9 +92,10 @@ public class Helper {
         return null;
     }
 
-    public static boolean IsGmsInstalled() {
+    // Google Market Services check
+    public static boolean isGmsInstalled() {
         try {
-            GetContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
+            getContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
             return true;
         } catch (Exception unused) {
             return false;
@@ -101,38 +103,30 @@ public class Helper {
     }
 
     public static Resources getResources() {
-        return GetContext().getResources();
+        return getContext().getResources();
     }
 
     public static int getIdentifier(String str, String str2) {
-        return getResources().getIdentifier(str, str2, GetContext().getPackageName());
+        return getResources().getIdentifier(str, str2, getContext().getPackageName());
     }
 
     public static String getString(String str) {
-        return GetContext().getString(Integer.parseInt(String.valueOf(GetContext().getResources().getIdentifier(str, "string", GetContext().getPackageName()))));
+        return getContext().getString(Integer.parseInt(String.valueOf(getContext().getResources().getIdentifier(str, "string", getContext().getPackageName()))));
     }
 
     public static String getPackageName() {
-        return GetContext().getPackageName();
+        return getContext().getPackageName();
     }
 
     public static int convertDpToPixel(float f) {
-        return (int) (f * (((float) GetContext().getResources().getDisplayMetrics().densityDpi) / 160.0f));
+        return (int) (f * (((float) getContext().getResources().getDisplayMetrics().densityDpi) / 160.0f));
     }
 
-    public static String GetString(@StringRes int res, Object... args) {
-        return GetContext().getString(res, args);
+    public static SharedPreferences getPreferences() {
+        return PreferenceManager.getDefaultSharedPreferences(getContext());
     }
 
-    public static SharedPreferences GetPrefs() {
-        return PreferenceManager.getDefaultSharedPreferences(GetContext());
-    }
-
-    public static SharedPreferences GetPreferences() {
-        return PreferenceManager.getDefaultSharedPreferences(GetContext());
-    }
-
-    public static void SendToast(String text) {
+    public static void sendToast(String text) {
         ToastUtils.a(text);
     }
 
@@ -141,8 +135,27 @@ public class Helper {
     }
 
     public static boolean isNetworkConnected() {
-        ConnectivityManager cm = (ConnectivityManager) GetContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+    }
+
+    public static void fixGapps() {
+        try {
+            if (Build.VERSION.SDK_INT >= 26) {
+                NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+                boolean z = false;
+                try {
+                    if (notificationManager.getNotificationChannel("audio_playback_channel") != null) {
+                        z = true;
+                    }
+                } catch (Exception ignored) {
+                }
+                if (!z) {
+                    notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(com.vtosters.lite.R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
+                }
+            }
+        } catch (Exception ignored) {
+        }
     }
 }

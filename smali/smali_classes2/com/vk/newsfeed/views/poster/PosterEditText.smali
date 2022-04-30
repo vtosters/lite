@@ -91,7 +91,7 @@
 
     const v0, 0x7f09000d
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_display_demibold()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_display_demibold()I
 
     move-result v0
 
@@ -152,7 +152,7 @@
 
     const p2, 0x7f09000d
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_display_demibold()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_display_demibold()I
 
     move-result p2
 
@@ -213,7 +213,7 @@
 
     const p2, 0x7f09000d
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_display_demibold()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_display_demibold()I
 
     move-result p2
 

@@ -129,7 +129,7 @@
     .line 61
     sget p3, Lcom/vk/s/R$d;->roboto_regular:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_regular()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_regular()I
 
     move-result p3
 
@@ -186,7 +186,7 @@
     .line 71
     sget v0, Lcom/vk/s/R$d;->roboto_regular:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_regular()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_regular()I
 
     move-result v0
 

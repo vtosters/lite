@@ -512,7 +512,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->IsGmsInstalled()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->isGmsInstalled()Z
 
     move-result v6
 

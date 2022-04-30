@@ -120,7 +120,7 @@ public class ExternalLinkHandler {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
-            GetContext().startActivity(intent);
+            getContext().startActivity(intent);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -129,7 +129,7 @@ public class ExternalLinkHandler {
     }
 
     private static String getMXPlayerPackageName() {
-        for (ApplicationInfo info : GetContext().getPackageManager().getInstalledApplications(0)) {
+        for (ApplicationInfo info : getContext().getPackageManager().getInstalledApplications(0)) {
             String packName = info.packageName;
             if (packName.equals("com.mxtech.videoplayer.ad") || packName.equals("com.mxtech.videoplayer.pro"))
                 return packName;

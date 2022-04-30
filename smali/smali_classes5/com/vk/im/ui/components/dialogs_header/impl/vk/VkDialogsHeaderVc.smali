@@ -494,11 +494,11 @@
 .method private final savedmsg()V
     .locals 8
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetUserId()I
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getUserId()I
 
     move-result v0
 

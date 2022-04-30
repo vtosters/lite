@@ -28,7 +28,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,9 +46,7 @@ import java.io.File;
 import me.grishka.appkit.fragments.ToolbarFragment;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.PreferencesUtil;
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
-import ru.vtosters.lite.utils.Themes;
 
 public class StickersFragment extends ToolbarFragment {
 
@@ -209,7 +206,7 @@ public class StickersFragment extends ToolbarFragment {
     @Override
     public View d(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         grabber = new TelegramStickersGrabber(TGPref.getTGBotKey());
-        stickersService = TelegramStickersService.getInstance(GetContext());
+        stickersService = TelegramStickersService.getInstance(getContext());
 
         editPadding = convertDpToPixel(24f);
 
@@ -252,13 +249,13 @@ public class StickersFragment extends ToolbarFragment {
                         LinearLayout linearLayout = new LinearLayout(super.n());
 
                         final EditText editText = new EditText(super.n());
-                        editText.setHintTextColor(PreferencesUtil.getSTextColor(GetContext()));
+                        editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
 
                         // Костыль для китката
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(GetContext())));
+                            editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
                         } else {
-                            ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(GetContext())));
+                            ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
                         }
                         linearLayout.addView(editText);
                         editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -272,7 +269,7 @@ public class StickersFragment extends ToolbarFragment {
                                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                                     String pack = editText.getText().toString();
                                     pack = parsePack(pack);
-                                    stickersService.requestPackDownload(pack, new File(GetContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
+                                    stickersService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
                                 }).setNeutralButton(android.R.string.cancel, null).create().show();
                     };
                     if (TGPref.getTGBotKey() == null) enterBotKey(() -> checkApiKey(work));
@@ -291,7 +288,7 @@ public class StickersFragment extends ToolbarFragment {
     @Override
     public void b(@Nullable Bundle savedInstanceState) {
         super.b(savedInstanceState);
-        GetContext().registerReceiver(receiver, new IntentFilter(ACTION_RELOAD));
+        getContext().registerReceiver(receiver, new IntentFilter(ACTION_RELOAD));
     }
 
     @Override
@@ -306,7 +303,7 @@ public class StickersFragment extends ToolbarFragment {
     @Override
     public void A_() {
         super.A_();
-        GetContext().unregisterReceiver(receiver);
+        getContext().unregisterReceiver(receiver);
     }
 
     private String parsePack(String pack) {
@@ -353,7 +350,7 @@ public class StickersFragment extends ToolbarFragment {
             holder.updateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.ic_camera_switch_48)));
             holder.updateButton.setOnClickListener(listener -> {
                 stickersService.setBotKey(TGPref.getTGBotKey());
-                stickersService.requestPackDownload(pack.id, new File(GetContext().getFilesDir(), new File("VT-Stickers", pack.id).getAbsolutePath()));
+                stickersService.requestPackDownload(pack.id, new File(getContext().getFilesDir(), new File("VT-Stickers", pack.id).getAbsolutePath()));
             });
 
             holder.deleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.vkim_ic_msg_delete)));
