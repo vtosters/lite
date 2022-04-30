@@ -1,6 +1,6 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
 
 import android.content.Context;
 import android.os.RemoteException;

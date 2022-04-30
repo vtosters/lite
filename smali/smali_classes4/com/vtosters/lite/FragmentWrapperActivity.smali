@@ -259,7 +259,7 @@
 
     invoke-virtual {v2, v3, v3}, Landroid/view/Window;->setFlags(II)V
 
-    invoke-static {v2, v3}, Lru/vtosters/lite/utils/Prefs;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {v2, v3}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
 
     :cond_0
     if-eqz v0, :cond_1

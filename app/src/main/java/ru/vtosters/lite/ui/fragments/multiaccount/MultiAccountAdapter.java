@@ -1,7 +1,11 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
-import static ru.vtosters.lite.utils.Helper.*;
-import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Helper.convertDpToPixel;
+import static ru.vtosters.lite.utils.Helper.getResources;
+import static ru.vtosters.lite.utils.Helper.isNetworkConnected;
+import static ru.vtosters.lite.utils.Helper.restartApplication;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.Themes.recolorDrawable;
 
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;

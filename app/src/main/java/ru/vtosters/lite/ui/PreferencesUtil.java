@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.convertDpToPixel;
+import static ru.vtosters.lite.utils.Helper.getContext;
 
 import android.app.AlertDialog;
 import android.content.Context;

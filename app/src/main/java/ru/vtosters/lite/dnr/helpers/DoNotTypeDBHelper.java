@@ -1,5 +1,7 @@
 package ru.vtosters.lite.dnr.helpers;
 
+import static ru.vtosters.lite.utils.Helper.getContext;
+
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,11 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.vtosters.lite.dnr.DNRPrefs;
-import ru.vtosters.lite.utils.Helper;
 
 public class DoNotTypeDBHelper extends SQLiteOpenHelper {
     public DoNotTypeDBHelper() {
-        super(Helper.getContext(), "dnt", null, 1);
+        super(getContext(), "dnt", null, 1);
     }
 
     @Override

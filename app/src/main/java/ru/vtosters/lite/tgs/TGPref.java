@@ -1,12 +1,12 @@
 package ru.vtosters.lite.tgs;
 
+import static ru.vtosters.lite.utils.Helper.getContext;
+
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import ru.vtosters.lite.utils.Helper;
-
 public class TGPref {
-    private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(Helper.getContext());
+    private static final SharedPreferences Prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
     private static final String CNCT_METHOD = "VTGS:CM";
     private static final String TG_BOTKEY = "VTGS:BKey";
@@ -57,8 +57,7 @@ public class TGPref {
     }
 
     public static void setTGProxyUserPass(String user, String pass) {
-        Prefs.edit().putString(TG_PROXYUSER, user).putString(TG_PROXYPASS, pass)
-                .apply();
+        Prefs.edit().putString(TG_PROXYUSER, user).putString(TG_PROXYPASS, pass).apply();
     }
 
     public static boolean isTGProxyPassEnabled() {

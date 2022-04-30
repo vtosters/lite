@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.isEmpty;
 
 import android.app.AlertDialog;
 import android.content.Context;

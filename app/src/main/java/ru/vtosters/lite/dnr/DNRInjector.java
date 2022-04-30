@@ -1,15 +1,16 @@
 package ru.vtosters.lite.dnr;
 
-import static ru.vtosters.lite.dnr.DNRModule.*;
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
+import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
+import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
+import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
+import static ru.vtosters.lite.utils.Helper.getIdentifier;
 
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 
 import java.util.LinkedHashMap;
 import java.util.List;
-
-import ru.vtosters.lite.utils.Helper;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {

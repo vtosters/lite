@@ -1,14 +1,13 @@
 package ru.vtosters.lite.foaf;
 
-import static android.widget.Toast.*;
-import static ru.vtosters.lite.utils.Helper.*;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.Helper.getString;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
-import android.widget.Toast;
 
 import androidx.exifinterface.media.ExifInterface;
 
@@ -27,7 +26,6 @@ import java.util.regex.Pattern;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.f0x1d.net.F0x1dRequest;
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
 public class FoafBase {

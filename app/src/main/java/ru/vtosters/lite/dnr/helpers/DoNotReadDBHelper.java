@@ -1,6 +1,6 @@
 package ru.vtosters.lite.dnr.helpers;
 
-import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
 
 import android.content.ContentValues;
 import android.database.Cursor;

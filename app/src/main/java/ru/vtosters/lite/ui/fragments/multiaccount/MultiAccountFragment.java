@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
+import static ru.vtosters.lite.utils.Helper.getString;
+
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
-import ru.vtosters.lite.utils.Helper;
 
 public class MultiAccountFragment extends ToolbarFragment {
 
@@ -36,6 +37,6 @@ public class MultiAccountFragment extends ToolbarFragment {
 
         super.a(arg0, arg1);
 
-        a(Helper.getString("accounts"));
+        a(getString("accounts"));
     }
 }

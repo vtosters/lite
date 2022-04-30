@@ -1,7 +1,9 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.*;
-import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getPreferences;
+import static ru.vtosters.lite.utils.Themes.getColorFromAttr;
+import static ru.vtosters.lite.utils.Themes.hex;
 
 import android.util.Base64;
 import android.webkit.WebView;

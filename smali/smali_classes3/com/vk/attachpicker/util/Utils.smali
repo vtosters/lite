@@ -317,7 +317,7 @@
     .line 72
     invoke-virtual {p0, p1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/Prefs;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {p0, p1}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

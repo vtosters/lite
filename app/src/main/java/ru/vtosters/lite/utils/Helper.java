@@ -1,6 +1,6 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Proxy.*;
+import static ru.vtosters.lite.utils.Prefs.getLocale;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -15,7 +15,6 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
 
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.UserProfile;
@@ -24,8 +23,10 @@ import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import java.lang.reflect.Method;
+import java.util.Locale;
 
 public class Helper {
+    // Current UserId
     public static int getUserId() {
         return VKAccountManager.b().a();
     }
@@ -42,10 +43,12 @@ public class Helper {
         return PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
     }
 
+    // Delete and reload msg cache
     public static void reloadMSG() {
         ImEngineProvider.a().h();
     }
 
+    // UserId Profile via userProfile
     public static int getUserID(UserProfile userProfile) {
         return userProfile.n;
     }
@@ -58,6 +61,7 @@ public class Helper {
         return userProfile.o;
     }
 
+    // UserId Profile via extendedUserProfile
     public static int getUserID(ExtendedUserProfile extendedUserProfile) {
         return getUserID(fromEup(extendedUserProfile));
     }
@@ -81,10 +85,8 @@ public class Helper {
     public static Context getContext() {
         try {
             Class<?> appGlobalsClazz = Class.forName("android.app.AppGlobals");
-
             Method getInitialApplication = appGlobalsClazz.getDeclaredMethod("getInitialApplication");
             getInitialApplication.setAccessible(true);
-
             return (Context) getInitialApplication.invoke(null);
         } catch (Exception e) {
             e.printStackTrace();
@@ -119,7 +121,7 @@ public class Helper {
     }
 
     public static int convertDpToPixel(float f) {
-        return (int) (f * (((float) getContext().getResources().getDisplayMetrics().densityDpi) / 160.0f));
+        return (int) (f * ((float) getContext().getResources().getDisplayMetrics().densityDpi / 160.0f));
     }
 
     public static SharedPreferences getPreferences() {
@@ -140,6 +142,7 @@ public class Helper {
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
     }
 
+    // Music channels fix
     public static void fixGapps() {
         try {
             if (Build.VERSION.SDK_INT >= 26) {
@@ -157,5 +160,22 @@ public class Helper {
             }
         } catch (Exception ignored) {
         }
+    }
+
+    // Language changer and BaseContext inject
+    public static Context BaseContextLocale(Context context) {
+        Locale locale = new Locale(getLocale());
+        Locale.setDefault(locale);
+        var resources = context.getResources();
+        var configuration = resources.getConfiguration();
+        if (Build.VERSION.SDK_INT >= 24) {
+            configuration.setLocale(locale);
+            configuration.setLayoutDirection(locale);
+            return context.createConfigurationContext(configuration);
+        }
+        configuration.locale = locale;
+        configuration.setLayoutDirection(locale);
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+        return context;
     }
 }

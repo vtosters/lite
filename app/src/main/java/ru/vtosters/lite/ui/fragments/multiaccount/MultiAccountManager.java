@@ -1,7 +1,7 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
-import static ru.vtosters.lite.utils.Helper.*;
 import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getPreferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;

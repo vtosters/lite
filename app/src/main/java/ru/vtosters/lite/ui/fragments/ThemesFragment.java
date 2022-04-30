@@ -1,14 +1,15 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Helper.getString;
+import static ru.vtosters.lite.utils.IconHelper.switchToDefault;
+import static ru.vtosters.lite.utils.IconHelper.switchToVK;
+
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.utils.Helper;
-import ru.vtosters.lite.utils.IconHelper;
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
@@ -21,11 +22,11 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     public boolean apply(Preference preference, Object obj) {
         if (((Boolean) obj).booleanValue()) {
-            IconHelper.switchToVK();
+            switchToVK();
         } else {
-            IconHelper.switchToDefault();
+            switchToDefault();
         }
-        ToastUtils.a(Helper.getString("iconapplying"));
+        ToastUtils.a(getString("iconapplying"));
         return true;
     }
 
@@ -38,7 +39,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     public static class b implements Preference.b {
         @Override // android.support.v7.preference.Preference.b
         public boolean a(Preference preference, Object obj) {
-            ToastUtils.a(Helper.getString("restartapp"));
+            ToastUtils.a(getString("restartapp"));
             return true;
         }
     }

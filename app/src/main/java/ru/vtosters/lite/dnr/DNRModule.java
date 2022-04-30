@@ -1,8 +1,8 @@
 package ru.vtosters.lite.dnr;
 
-import static ru.f0x1d.net.F0x1dRequest.*;
-import static ru.vtosters.lite.utils.Helper.*;
-import static ru.vtosters.lite.utils.Proxy.*;
+import static ru.f0x1d.net.F0x1dRequest.makeRequest;
+import static ru.vtosters.lite.utils.Helper.getUserToken;
+import static ru.vtosters.lite.utils.Proxy.getApiCom;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.commands.messages.SetUserActivityCmd;

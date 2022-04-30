@@ -1,13 +1,13 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Helper.getString;
+
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.utils.Helper;
 
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -22,7 +22,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     }
 
     public boolean restart(Preference preference, Object obj) {
-        ToastUtils.a(Helper.getString("restartapp"));
+        ToastUtils.a(getString("restartapp"));
         return true;
     }
 

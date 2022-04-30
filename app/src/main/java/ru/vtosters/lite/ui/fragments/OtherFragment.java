@@ -1,7 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static android.widget.Toast.*;
-import static ru.vtosters.lite.utils.Helper.*;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Helper.getString;
+import static ru.vtosters.lite.utils.Helper.getUserToken;
+import static ru.vtosters.lite.utils.Helper.restartApplication;
 import static ru.vtosters.lite.utils.SettBackup.backupSettings;
 import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
 import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
