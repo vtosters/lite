@@ -4040,7 +4040,7 @@
 
     if-eqz v2, :cond_51
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4091,7 +4091,7 @@
 
     if-eqz v2, :cond_52
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4144,7 +4144,7 @@
 
     if-eqz v2, :cond_130
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4197,7 +4197,7 @@
 
     if-eqz v2, :cond_131
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4250,7 +4250,7 @@
 
     if-eqz v2, :cond_132
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4304,7 +4304,7 @@
 
     if-eqz v2, :cond_53
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4355,7 +4355,7 @@
 
     if-eqz v2, :cond_54
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4406,7 +4406,7 @@
 
     if-eqz v2, :cond_55
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4457,7 +4457,7 @@
 
     if-eqz v2, :cond_56
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4508,7 +4508,7 @@
 
     if-eqz v2, :cond_57
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4559,7 +4559,7 @@
 
     if-eqz v2, :cond_58
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4610,7 +4610,7 @@
 
     if-eqz v2, :cond_59
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -4661,7 +4661,7 @@
 
     if-eqz v2, :cond_5a
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

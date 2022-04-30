@@ -26,8 +26,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import ru.vtosters.lite.utils.Helper;
-
 public class DockBarInjector {
     private static final DockBarManager sManager = DockBarManager.getInstance();
 
@@ -63,8 +61,8 @@ public class DockBarInjector {
 
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
-            Drawable drawable = GetContext().getResources().getDrawable(tab.iconID);
-            ColorStateList colorStateList = GetContext().getResources().getColorStateList(com.vtosters.lite.R.color.bottom_navigation_item);
+            Drawable drawable = getContext().getResources().getDrawable(tab.iconID);
+            ColorStateList colorStateList = getContext().getResources().getColorStateList(com.vtosters.lite.R.color.bottom_navigation_item);
 //            if (isAndroidMonet()) {
 //                colorStateList = ColorStateList.valueOf(Themes.getAccentColor());
 //            }

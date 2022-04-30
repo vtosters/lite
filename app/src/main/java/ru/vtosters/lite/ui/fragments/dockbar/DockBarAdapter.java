@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Themes;
 
 public class DockBarAdapter extends RecyclerView.a
@@ -42,7 +41,7 @@ public class DockBarAdapter extends RecyclerView.a
     }
 
     private View createTabItem() {
-        LinearLayout container = new LinearLayout(GetContext());
+        LinearLayout container = new LinearLayout(getContext());
         container.setTag("tab_item_container");
         container.setGravity(Gravity.CENTER_VERTICAL);
         container.setOrientation(LinearLayout.HORIZONTAL);
@@ -54,7 +53,7 @@ public class DockBarAdapter extends RecyclerView.a
         );
         container.setLayoutParams(new LinearLayout.LayoutParams(-1, convertDpToPixel(48)));
 
-        ImageView icon = new ImageView(GetContext());
+        ImageView icon = new ImageView(getContext());
         icon.setTag("icon");
         icon.setImageTintList(ColorStateList.valueOf(Themes.getAccentColor()));
         icon.setLayoutParams(new LinearLayout.LayoutParams(
@@ -62,7 +61,7 @@ public class DockBarAdapter extends RecyclerView.a
                 convertDpToPixel(24)));
         container.addView(icon);
 
-        TextView title = new TextView(GetContext());
+        TextView title = new TextView(getContext());
         title.setTag("title");
         title.setTextSize(16.0f);
         title.setTypeface(Typeface.DEFAULT_BOLD);
@@ -76,10 +75,10 @@ public class DockBarAdapter extends RecyclerView.a
     }
 
     private View createGroupTitle() {
-        LinearLayout layout = new LinearLayout(GetContext());
+        LinearLayout layout = new LinearLayout(getContext());
         layout.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
 
-        TextView title = new TextView(GetContext());
+        TextView title = new TextView(getContext());
         title.setTag("group_title");
         title.setTextSize(13.0f);
         title.setPadding(

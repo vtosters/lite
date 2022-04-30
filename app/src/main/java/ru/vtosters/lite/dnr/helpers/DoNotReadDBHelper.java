@@ -11,11 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.vtosters.lite.dnr.DNRPrefs;
-import ru.vtosters.lite.utils.Helper;
 
 public class DoNotReadDBHelper extends SQLiteOpenHelper {
     public DoNotReadDBHelper() {
-        super(GetContext(), "dnr", null, 1);
+        super(getContext(), "dnr", null, 1);
     }
 
     @Override

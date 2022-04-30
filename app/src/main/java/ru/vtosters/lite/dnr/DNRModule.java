@@ -10,11 +10,8 @@ import com.vk.im.engine.models.dialogs.Dialog;
 
 import java.util.List;
 
-import ru.f0x1d.net.F0x1dRequest;
 import ru.vtosters.lite.dnr.helpers.DoNotReadDBHelper;
 import ru.vtosters.lite.dnr.helpers.DoNotTypeDBHelper;
-import ru.vtosters.lite.utils.Helper;
-import ru.vtosters.lite.utils.Proxy;
 
 public class DNRModule {
     public static DoNotReadDBHelper mDoNotReadDBHelper = new DoNotReadDBHelper();
@@ -54,7 +51,7 @@ public class DNRModule {
     }
 
     public static void hookRead(Dialog dialog) {
-        makeRequest("https://" + getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.lastMsgVkId + "&peer_id=" + dialog.a() + "&v=5.91&access_token=" + GetUserToken(), response -> {
+        makeRequest("https://" + getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.lastMsgVkId + "&peer_id=" + dialog.a() + "&v=5.91&access_token=" + getUserToken(), response -> {
             ToastUtils.a("Чат помечен как прочитанный!");
         });
     }

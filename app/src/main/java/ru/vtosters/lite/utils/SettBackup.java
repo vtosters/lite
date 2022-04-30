@@ -5,7 +5,7 @@ import static android.os.Environment.getExternalStoragePublicDirectory;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.Helper.GetContext;
+import static ru.vtosters.lite.utils.Helper.getContext;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,11 +21,11 @@ import java.util.Locale;
 import java.util.Map;
 
 public class SettBackup {
-    static SharedPreferences prefs = GetContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+    static SharedPreferences prefs = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
 
     public static void deletePrefs() {
         prefs.edit().clear().commit();
-        File file = new File(new File(GetContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
+        File file = new File(new File(getContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
         if (file.exists()) file.delete();
     }
 
@@ -45,15 +45,15 @@ public class SettBackup {
                 FileWriter out = new FileWriter(file);
                 out.write(getAllPrefs());
                 out.close();
-                makeText(GetContext(), "Сохранено в файл " + directory, LENGTH_LONG).show();
+                makeText(getContext(), "Сохранено в файл " + directory, LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
-                makeText(GetContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+                makeText(getContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(GetContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+            makeText(getContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
         }
     }
 
@@ -66,6 +66,6 @@ public class SettBackup {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_GET_CONTENT);
         intent.setType("text/plain");
-        GetContext().startActivity(intent);
+        getContext().startActivity(intent);
     }
 }

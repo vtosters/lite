@@ -458,7 +458,7 @@
 
     const p3, 0x7f090009
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_regular()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_regular()I
 
     move-result p3
 

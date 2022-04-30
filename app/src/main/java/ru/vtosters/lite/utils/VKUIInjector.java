@@ -27,7 +27,7 @@ public class VKUIInjector {
 
     private static String load(String str) {
         try {
-            InputStream open = GetContext().getAssets().open(str);
+            InputStream open = getContext().getAssets().open(str);
             StringBuilder sb = new StringBuilder();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(open, StandardCharsets.UTF_8));
             while (true) {
@@ -64,7 +64,7 @@ public class VKUIInjector {
     }
 
     public static void inject(WebView webView) {
-        String string = GetPreferences().getString("darktheme", "");
+        String string = getPreferences().getString("darktheme", "");
         if (Prefs.BooleanTrue("VKUI_INJ")) {
             if (!isLoaded) {
                 load();

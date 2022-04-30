@@ -75,7 +75,7 @@ public class DockBarManager {
     }
 
     private void load() {
-        File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
+        File dockbar = new File(Helper.getContext().getFilesDir(), "dockbar.json");
 
         if (!dockbar.exists()) {
             mSelectedTabs.add(new DockBarTab("tab_news", Prefs.olddock() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, Prefs.isUseAlternativeFragments() ? Feed2049.b.c() : NewsfeedFragment.class));
@@ -163,13 +163,13 @@ public class DockBarManager {
     }
 
     public void delete() {
-        File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
+        File dockbar = new File(Helper.getContext().getFilesDir(), "dockbar.json");
         if (dockbar.exists()) dockbar.delete();
     }
 
     public void save() {
         try {
-            File dockbar = new File(Helper.GetContext().getFilesDir(), "dockbar.json");
+            File dockbar = new File(Helper.getContext().getFilesDir(), "dockbar.json");
 
             JSONArray selected = new JSONArray();
             for (DockBarTab tab : mSelectedTabs) {

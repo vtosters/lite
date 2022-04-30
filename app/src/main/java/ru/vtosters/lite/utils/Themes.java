@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Helper.*;
+import static ru.vtosters.lite.utils.Prefs.*;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -37,19 +38,19 @@ public class Themes {
     }
 
     public static int getAmoledTheme() {
-        return GetContext().getResources().getIdentifier("BaseAmoledStyle", "style", GetContext().getPackageName());
+        return getContext().getResources().getIdentifier("BaseAmoledStyle", "style", getContext().getPackageName());
     }
 
     public static int picFix() {
-        return GetContext().getResources().getIdentifier("ActionBarThemeFix", "style", GetContext().getPackageName());
+        return getContext().getResources().getIdentifier("ActionBarThemeFix", "style", getContext().getPackageName());
     }
 
     public static int getAmoledImTheme() {
-        return GetContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", GetContext().getPackageName());
+        return getContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", getContext().getPackageName());
     }
 
     public static VKTheme getDarkTheme() {
-        String string = GetPreferences().getString("darktheme", "");
+        String string = getPreferences().getString("darktheme", "");
         if (string.isEmpty()) {
             return VKTheme.DARK;
         }
@@ -60,7 +61,7 @@ public class Themes {
     }
 
     public static ImTheme getImDarkTheme() {
-        String string = GetPreferences().getString("darktheme", "");
+        String string = getPreferences().getString("darktheme", "");
         if (string.isEmpty()) {
             return ImTheme.VKAPP_DARK;
         }
@@ -71,7 +72,7 @@ public class Themes {
     }
 
     public static VKTheme getLightTheme() {
-        String string = GetPreferences().getString("lighttheme", "");
+        String string = getPreferences().getString("lighttheme", "");
         if (string.isEmpty()) {
             return VKTheme.DEFAULT_LIGHT;
         }
@@ -79,7 +80,7 @@ public class Themes {
     }
 
     public static ImTheme getImLightTheme() {
-        String string = GetPreferences().getString("lighttheme", "");
+        String string = getPreferences().getString("lighttheme", "");
         if (string.isEmpty()) {
             return ImTheme.VKAPP_LIGHT;
         }
@@ -164,10 +165,37 @@ public class Themes {
         if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
-        return GetContext().getResources().getColor(i);
+        return getContext().getResources().getColor(i);
     }
 
     public static String hex(int i) {
         return String.format("#%06X", Integer.valueOf(i & 16777215));
+    }
+    public static int vk_sans_display_demibold() {
+        return vksans() ? R.font.vk_sans_display_demibold : R.font.tt_commons_demi_bold;
+    }
+
+    public static int vk_sans_text_black() {
+        return vksans() ? R.font.vk_sans_display_bold : R.font.roboto_black;
+    }
+
+    public static int vk_sans_text_bold() {
+        return vksans() ? R.font.vk_sans_text_bold : R.font.roboto_bold;
+    }
+
+    public static int vk_sans_text_demibold() {
+        return vksans() ? R.font.vk_sans_text_demibold : R.font.roboto_bold_italic;
+    }
+
+    public static int vk_sans_text_light() {
+        return vksans() ? R.font.vk_sans_text_light : R.font.roboto_light;
+    }
+
+    public static int vk_sans_text_medium() {
+        return vksans() ? R.font.vk_sans_text_medium : R.font.roboto_medium;
+    }
+
+    public static int vk_sans_text_regular() {
+        return vksans() ? R.font.vk_sans_text_regular : R.font.roboto_regular;
     }
 }

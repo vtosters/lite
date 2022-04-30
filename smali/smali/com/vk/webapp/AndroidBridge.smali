@@ -526,7 +526,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->GetContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
 
     move-result-object v3
 

@@ -26,9 +26,6 @@ import com.vtosters.lite.im.ImEngineProvider;
 
 import java.util.List;
 
-import ru.vtosters.lite.utils.Helper;
-import ru.vtosters.lite.utils.Themes;
-
 public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.MultiAccountViewHolder> {
 
     private final List<MultiAccountItem> mAccounts = MultiAccountManager.buildList();
@@ -126,7 +123,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    restarting();
+                    restartApplication();
                 });
                 Drawable drawable = recolorDrawable(getResources().getDrawable(R.drawable.ic_list_add));
                 mAction.setImageDrawable(drawable);
@@ -142,7 +139,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    restarting();
+                    restartApplication();
 
                 });
 
@@ -163,7 +160,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
-                    restarting();
+                    restartApplication();
                 });
             }
         }

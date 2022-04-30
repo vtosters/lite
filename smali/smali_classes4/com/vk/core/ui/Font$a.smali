@@ -40,7 +40,7 @@
 
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_medium()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_medium()I
 
     move-result p0
 
@@ -144,7 +144,7 @@
 
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_black()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_black()I
 
     move-result p0
 
@@ -169,7 +169,7 @@
 
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_light()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_light()I
 
     move-result p0
 
@@ -194,7 +194,7 @@
 
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_regular()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_regular()I
 
     move-result p0
 
@@ -219,7 +219,7 @@
 
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_bold()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_bold()I
 
     move-result p0
 
@@ -246,7 +246,7 @@
 
     sget v1, Lcom/vk/s/R$d;->roboto_medium:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_medium()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_medium()I
 
     move-result v1
 
@@ -262,7 +262,7 @@
 
     sget v1, Lcom/vk/s/R$d;->roboto_medium:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_medium()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_medium()I
 
     move-result v1
 

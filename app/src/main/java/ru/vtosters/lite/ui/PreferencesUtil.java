@@ -24,7 +24,6 @@ import androidx.core.view.ViewCompat;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
 
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Themes;
 
 public class PreferencesUtil {
@@ -35,7 +34,7 @@ public class PreferencesUtil {
     }
 
     public static void addListPreference(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, CharSequence[] entries, CharSequence[] entriesValue) {
-        ListPreference preference = new ListPreference(GetContext());
+        ListPreference preference = new ListPreference(getContext());
         preference.a(entries);
         preference.b(entriesValue);
         preference.c(title); // setTitle
@@ -46,7 +45,7 @@ public class PreferencesUtil {
     }
 
     public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment materialPreferenceToolbarFragment, String key, CharSequence title, CharSequence summary, boolean defValue) {
-        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(GetContext());
+        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getContext());
         materialSwitchPreference.c(title); // setTitle
         materialSwitchPreference.b(summary); // setSummary
         materialSwitchPreference.d(key); // setKey
@@ -56,7 +55,7 @@ public class PreferencesUtil {
     }
 
     public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, int icon, boolean defValue, Preference.b listener) {
-        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(GetContext());
+        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getContext());
         materialSwitchPreference.c(title); // setTitle
         materialSwitchPreference.b(summary); // setSummary
         materialSwitchPreference.d(key); // setKey
@@ -64,13 +63,13 @@ public class PreferencesUtil {
         materialSwitchPreference.a(listener); // setOnPreferenceClickListener
 
         if (icon != 1)
-            materialSwitchPreference.a(setTint(GetContext(), ContextCompat.getDrawable(GetContext(), icon))); // preference.setIcon
+            materialSwitchPreference.a(setTint(getContext(), ContextCompat.getDrawable(getContext(), icon))); // preference.setIcon
 
         fragment.ay().d(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, String icon, boolean defValue, Preference.b listener) {
-        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(GetContext());
+        MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getContext());
         materialSwitchPreference.c(title); // setTitle
         materialSwitchPreference.b(summary); // setSummary
         materialSwitchPreference.d(key); // setKey
@@ -78,14 +77,14 @@ public class PreferencesUtil {
         fragment.ay().d(materialSwitchPreference); // materialPreferenceToolbarFragment.getPreferenceScreen().addPreference(preference)
 
         if (icon != null)
-            materialSwitchPreference.a(setTint(GetContext(), getDrawable(GetContext(), icon))); // preference.setIcon
+            materialSwitchPreference.a(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         materialSwitchPreference.a(listener); // setOnPreferenceClickListener(listener)
 
         fragment.ay().d(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary) {
-        Preference preference = new Preference(GetContext());
+        Preference preference = new Preference(getContext());
         preference.b(summary); // setSummary
         preference.c(title); // setTitle
         preference.d(key); // setKey
@@ -94,59 +93,59 @@ public class PreferencesUtil {
     }
 
     public static void addPreference(MaterialPreferenceToolbarFragment fragment, CharSequence title, CharSequence summary, @Nullable String icon, Preference.c listener) {
-        Preference preference = new Preference(GetContext());
+        Preference preference = new Preference(getContext());
         preference.b(summary); // setSummary
         preference.c(title); // setTitle
 
         if (icon != null)
-            preference.a(setTint(GetContext(), getDrawable(GetContext(), icon))); // preference.setIcon
+            preference.a(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         preference.a(listener); // preference.setOnPreferenceClickListener(listener)
 
         fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, @Nullable String icon, Preference.c listener) {
-        Preference preference = new Preference(GetContext());
+        Preference preference = new Preference(getContext());
         preference.b(summary); // setSummary
         preference.c(title); // setTitle
         preference.d(key); // setKey
 
         if (icon != null)
-            preference.a(setTint(GetContext(), getDrawable(GetContext(), icon))); // preference.setIcon
+            preference.a(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         preference.a(listener); // preference.setOnPreferenceClickListener(listener)
 
         fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addPreferenceCategory(MaterialPreferenceToolbarFragment fragment, CharSequence title) {
-        PreferenceCategory preference = new PreferenceCategory(GetContext(), null);
+        PreferenceCategory preference = new PreferenceCategory(getContext(), null);
         preference.c(title); // setTitle
         fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addPreferenceCategory(MaterialPreferenceToolbarFragment fragment, CharSequence title, int collapsedSize) {
-        PreferenceCategory preference = new PreferenceCategory(GetContext(), null);
+        PreferenceCategory preference = new PreferenceCategory(getContext(), null);
         preference.c(title); // setTitle
         fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
     public static void addEditTextPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, EditTextPrefChangeListener editTextPrefChangeListener) {
-        Preference preference = new Preference(GetContext());
+        Preference preference = new Preference(getContext());
 
         preference.c(title); // setTitle
         preference.d(key);  // setKey
         preference.a(preference1 -> {
-            LinearLayout linearLayout = new LinearLayout(GetContext());
+            LinearLayout linearLayout = new LinearLayout(getContext());
 
-            final EditText editText = new EditText(GetContext());
-            editText.setText(PreferenceManager.getDefaultSharedPreferences(GetContext()).getString(key, ""));
+            final EditText editText = new EditText(getContext());
+            editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(key, ""));
             editText.setHint(title);
-            editText.setHintTextColor(PreferencesUtil.getSTextColor(GetContext()));
+            editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(GetContext())));
+                editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
             } else {
-                ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(GetContext())));
+                ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
             }
             linearLayout.addView(editText);
             editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -162,7 +161,7 @@ public class PreferencesUtil {
                 if (!change)
                     return;
 
-                PreferenceManager.getDefaultSharedPreferences(GetContext())
+                PreferenceManager.getDefaultSharedPreferences(getContext())
                         .edit()
                         .putString(key, editText.getText().toString())
                         .apply();

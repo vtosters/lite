@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -18,8 +17,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-
-import ru.vtosters.lite.utils.Helper;
 
 public class LogWriterService extends Service {
     public LogWriterService() {
@@ -41,12 +38,12 @@ public class LogWriterService extends Service {
             writeLog(intent, file);
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(GetContext(), "Не удалось сохранить лог-файл", LENGTH_SHORT).show();
+            makeText(getContext(), "Не удалось сохранить лог-файл", LENGTH_SHORT).show();
         }
         var notificationId = intent.getIntExtra("notificationId", 1);
-        var manager = (NotificationManager) GetContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        var manager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
         manager.cancel(notificationId);
-        makeText(GetContext(), "Лог-файл был сохранен", LENGTH_SHORT).show();
+        makeText(getContext(), "Лог-файл был сохранен", LENGTH_SHORT).show();
 
         stopSelf();
         return START_NOT_STICKY;

@@ -14,7 +14,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
 public class LibVKXClient {
@@ -29,7 +28,7 @@ public class LibVKXClient {
 
     public static LibVKXClientImpl getInstance() {
         LibVKXClientImpl libVKXClientImpl = impl;
-        return libVKXClientImpl == null ? getInstance(GetContext()) : libVKXClientImpl;
+        return libVKXClientImpl == null ? getInstance(getContext()) : libVKXClientImpl;
     }
 
     public static boolean isVkxInstalled() {

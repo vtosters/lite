@@ -202,7 +202,7 @@
 
     const v5, 0x7f090007
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->vk_sans_text_medium()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vk_sans_text_medium()I
 
     move-result v5
 

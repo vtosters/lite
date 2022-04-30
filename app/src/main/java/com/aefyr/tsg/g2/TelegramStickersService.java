@@ -20,7 +20,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
-import ru.vtosters.lite.utils.Helper;
 
 /**
  * Created by Aefyr on 19.05.2018.
@@ -116,7 +115,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackAdded(TelegramStickersPack pack, int atIndex) {
-        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -126,7 +125,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackChanged(TelegramStickersPack pack, int atIndex) {
-        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -136,7 +135,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackRemoved(TelegramStickersPack pack, int atIndex) {
-        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -146,7 +145,7 @@ public class TelegramStickersService {
     }
 
     private void notifyPackDownloadError(TelegramStickersPack pack, Exception error) {
-        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -156,7 +155,7 @@ public class TelegramStickersService {
     }
 
     private void notifyActivePacksListChanged() {
-        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 
@@ -166,7 +165,7 @@ public class TelegramStickersService {
     }
 
     private void notifyInactivePacksListChanged() {
-        GetContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
+        getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
         if (listeners.isEmpty())
             return;
 

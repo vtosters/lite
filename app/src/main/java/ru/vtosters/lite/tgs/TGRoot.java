@@ -22,8 +22,6 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.Stack;
 
-import ru.vtosters.lite.utils.Helper;
-
 public class TGRoot {
     public static final int N = 76820000;
     public static final int X = 976820000;
@@ -49,7 +47,7 @@ public class TGRoot {
         int stickerId = (id - N) % 120;
 
         TelegramStickersPack pack = null;
-        for (TelegramStickersPack p : TelegramStickersService.getInstance(GetContext()).getActivePacksListReference()) {
+        for (TelegramStickersPack p : TelegramStickersService.getInstance(getContext()).getActivePacksListReference()) {
             if (p.index == index) {
                 pack = p;
                 break;
@@ -70,7 +68,7 @@ public class TGRoot {
 
     public static void injectStickers(List<StickerStockItem> list) {
         try {
-            List<TelegramStickersPack> packs = TelegramStickersService.getInstance(GetContext()).getActivePacksListReference();
+            List<TelegramStickersPack> packs = TelegramStickersService.getInstance(getContext()).getActivePacksListReference();
             for (int i = packs.size() - 1; i >= 0; i--)
                 list.add(0, toStickerPack(packs.get(i)));
         } catch (Exception e) {
@@ -83,7 +81,7 @@ public class TGRoot {
         int index = (stickerId - N) / 120;
 
         TelegramStickersPack p = null;
-        for (TelegramStickersPack p_ : TelegramStickersService.getInstance(GetContext())
+        for (TelegramStickersPack p_ : TelegramStickersService.getInstance(getContext())
                 .getActivePacksListReference()) {
             if (p_.index == index) {
                 p = p_;

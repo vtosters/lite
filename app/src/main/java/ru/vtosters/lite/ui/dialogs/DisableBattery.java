@@ -11,14 +11,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
 
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.OEMDetector;
 import ru.vtosters.lite.utils.Prefs;
 
 public class DisableBattery {
     public static void alert(Activity activity) {
         if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && Prefs.BooleanTrue("showDoze")) {
-            final Context context = GetContext();
+            final Context context = getContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle("Выключите оптимизацию батареи!");

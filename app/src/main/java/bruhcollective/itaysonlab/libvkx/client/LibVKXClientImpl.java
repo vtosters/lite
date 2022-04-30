@@ -14,7 +14,6 @@ import android.os.RemoteException;
 import java.util.List;
 
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
-import ru.vtosters.lite.utils.Helper;
 
 public class LibVKXClientImpl {
     private ILibVkxService serviceInstance;
@@ -53,7 +52,7 @@ public class LibVKXClientImpl {
     public boolean runOnService(LibVKXAction action) {
         if (serviceInstance != null) {
             try {
-                if (serviceInstance.getUserId() != GetUserId()) return false;
+                if (serviceInstance.getUserId() != getUserId()) return false;
                 action.run(serviceInstance);
                 return true;
             } catch (RemoteException e) {
@@ -77,7 +76,7 @@ public class LibVKXClientImpl {
                     isBindFailed = true;
                 } else {
                     try {
-                        if (serviceInstance.getUserId() != GetUserId()) return;
+                        if (serviceInstance.getUserId() != getUserId()) return;
                         runAfterBind.run(serviceInstance);
                     } catch (RemoteException e) {
                         e.printStackTrace();

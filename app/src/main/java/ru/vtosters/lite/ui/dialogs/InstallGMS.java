@@ -11,12 +11,11 @@ import android.content.Intent;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
-import ru.vtosters.lite.utils.Helper;
 import ru.vtosters.lite.utils.Prefs;
 
 public class InstallGMS {
     public static void alert(final Activity activity) {
-        if (!IsGmsInstalled()) {
+        if (!isGmsInstalled()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
             builder.setTitle("Внимание!");
             builder.setMessage(Text());
@@ -33,7 +32,7 @@ public class InstallGMS {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     edit().putBoolean("showAlertGms", false).apply();
-                    Context context = GetContext();
+                    Context context = getContext();
                     Intent a2 = new Navigator(InstallGMSFragment.class).a(context);
                     context.startActivity(a2);
                 }

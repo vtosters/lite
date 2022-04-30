@@ -49,7 +49,7 @@
 
     move-result v2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->GetBackgroundStickers()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getBackgroundStickers()Ljava/lang/String;
 
     move-result-object v0
 

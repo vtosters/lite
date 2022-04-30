@@ -13,7 +13,7 @@ import ru.vtosters.lite.utils.Helper;
 
 public class DoNotTypeDBHelper extends SQLiteOpenHelper {
     public DoNotTypeDBHelper() {
-        super(Helper.GetContext(), "dnt", null, 1);
+        super(Helper.getContext(), "dnt", null, 1);
     }
 
     @Override
