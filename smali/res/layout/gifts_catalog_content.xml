@@ -19,6 +19,7 @@
 
             <me.grishka.appkit.views.UsableRecyclerView
                 android:id="@id/list"
+                android:background="?background_content"
                 android:scrollbars="vertical"
                 android:clipToPadding="false"
                 android:layout_width="fill_parent"
