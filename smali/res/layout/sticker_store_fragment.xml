@@ -58,7 +58,7 @@
             app:tabBackground="@drawable/highlight"
             app:tabPaddingLeftRight="12.0dip"
             app:textAllCaps="true"
-            app:underlineColor="#ffd8d8d8"
+            app:underlineColor="?background_content"
             app:underlineHeight="0.5dip" />
     </FrameLayout>
 
