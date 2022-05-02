@@ -207,6 +207,10 @@ public class Globals {
         });
     }
 
+    public static String getApplicationName() {
+        return getContext().getApplicationInfo().loadLabel(getContext().getPackageManager()).toString();
+    }
+
     // Language changer and BaseContext inject
     public static Context BaseContextLocale(Context context) {
         Locale locale = new Locale(getLocale());
