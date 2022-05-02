@@ -42,7 +42,7 @@
 .method private a(Landroid/content/Context;Z)V
     .locals 5
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->ssl()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
 
     move-result v0
 

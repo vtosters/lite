@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getAppVersion()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/About;->getAppVersion()Ljava/lang/String;
 
     move-result-object p1
 

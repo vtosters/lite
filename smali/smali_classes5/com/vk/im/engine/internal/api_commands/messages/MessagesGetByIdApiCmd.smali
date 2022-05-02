@@ -208,7 +208,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-object v0
 .end method

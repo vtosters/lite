@@ -1,10 +1,10 @@
 package ru.vtosters.lite.dnr;
 
-import ru.vtosters.lite.utils.Prefs;
+import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
 
 public class DNRPrefs {
     public static boolean getStoriesRead() {
-        return Prefs.BooleanFalse("read_s");
+        return BooleanFalse("read_s");
     }
 
     public static boolean getMarkAsReadWithoutExceptions(int peerId) {
@@ -28,27 +28,27 @@ public class DNRPrefs {
     }
 
     public static boolean readPM(int peer) {
-        return (peer > 0 && peer < 2000000000) && Prefs.BooleanFalse("read_pm");
+        return (peer > 0 && peer < 2000000000) && BooleanFalse("read_pm");
     }
 
     public static boolean readConversations(int peer) {
-        return (peer > 2000000000) && Prefs.BooleanFalse("read_conversations");
+        return (peer > 2000000000) && BooleanFalse("read_conversations");
     }
 
     public static boolean readBots(int peer) {
-        return (peer < 0) && Prefs.BooleanFalse("read_bot");
+        return (peer < 0) && BooleanFalse("read_bot");
     }
 
     public static boolean writePM(int peer) {
-        return (peer > 0 && peer < 2000000000) && Prefs.BooleanFalse("write_pm");
+        return (peer > 0 && peer < 2000000000) && BooleanFalse("write_pm");
     }
 
     public static boolean writeConversations(int peer) {
-        return (peer > 2000000000) && Prefs.BooleanFalse("write_conversations");
+        return (peer > 2000000000) && BooleanFalse("write_conversations");
     }
 
     public static boolean writeBots(int peer) {
-        return (peer < 0) && Prefs.BooleanFalse("write_bot");
+        return (peer < 0) && BooleanFalse("write_bot");
     }
 
     public static boolean getActivityWithoutExceptions(int peerId) {

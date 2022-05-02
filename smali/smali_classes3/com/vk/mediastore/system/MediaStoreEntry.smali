@@ -514,7 +514,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix3()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix3()Ljava/lang/String;
 
     move-result-object v1
 

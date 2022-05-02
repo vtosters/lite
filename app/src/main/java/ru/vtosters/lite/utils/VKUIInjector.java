@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.getContext;
-import static ru.vtosters.lite.utils.Helper.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Themes.getColorFromAttr;
 import static ru.vtosters.lite.utils.Themes.hex;
 
@@ -67,7 +67,7 @@ public class VKUIInjector {
 
     public static void inject(WebView webView) {
         String string = getPreferences().getString("darktheme", "");
-        if (Prefs.BooleanTrue("VKUI_INJ")) {
+        if (Preferences.BooleanTrue("VKUI_INJ")) {
             if (!isLoaded) {
                 load();
             }

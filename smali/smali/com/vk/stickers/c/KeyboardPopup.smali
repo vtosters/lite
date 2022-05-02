@@ -138,7 +138,7 @@
     .locals 6
 
     .line 165
-    invoke-static {p1}, Lru/vtosters/lite/utils/Prefs;->alteremoji(Landroid/content/Context;)Z
+    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -161,7 +161,7 @@
     .locals 7
 
     .line 154
-    invoke-static {p1}, Lru/vtosters/lite/utils/Prefs;->alteremoji(Landroid/content/Context;)Z
+    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Landroid/content/Context;)Z
 
     move-result v5
 
@@ -339,7 +339,7 @@
     .locals 7
 
     .line 172
-    invoke-static {p1}, Lru/vtosters/lite/utils/Prefs;->alteremoji(Landroid/content/Context;)Z
+    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Landroid/content/Context;)Z
 
     move-result v4
 

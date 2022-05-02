@@ -2,8 +2,9 @@ package ru.vtosters.lite.foaf;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.Helper.getString;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
+import static ru.vtosters.lite.utils.Proxy.proxy;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -26,7 +27,7 @@ import java.util.regex.Pattern;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.f0x1d.net.F0x1dRequest;
-import ru.vtosters.lite.utils.Prefs;
+import ru.vtosters.lite.utils.Preferences;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
@@ -49,7 +50,7 @@ public class FoafBase {
     private static String getLink(int i) {
         String str;
         StringBuilder sb;
-        if (Prefs.proxy()) {
+        if (proxy()) {
             sb = new StringBuilder();
             str = "https://" + getApiCom() + "/_/vk.com/foaf.php?id=";
         } else {

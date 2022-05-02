@@ -29,7 +29,7 @@
     .line 18
     invoke-super {p0, p1}, Lcom/vk/webapp/VkUiFragment;->b(Landroid/os/Bundle;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getSSFSLink()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/SSFS;->getSSFSLink()Ljava/lang/String;
 
     move-result-object v0
 

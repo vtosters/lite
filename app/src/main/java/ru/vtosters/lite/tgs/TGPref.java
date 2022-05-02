@@ -1,6 +1,6 @@
 package ru.vtosters.lite.tgs;
 
-import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;

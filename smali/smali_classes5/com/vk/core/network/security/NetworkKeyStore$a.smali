@@ -474,7 +474,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->ssl()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
 
     move-result v0
 

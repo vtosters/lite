@@ -135,7 +135,7 @@
 .method private final a(IZ)Ljava/lang/String;
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->feedcache()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->feedcache()Z
 
     move-result v0
 

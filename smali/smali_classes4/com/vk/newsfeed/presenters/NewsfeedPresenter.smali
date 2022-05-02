@@ -1826,7 +1826,7 @@
 .method private final b(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
     .locals 4
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->stories()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->stories()Z
 
     move-result v0
 

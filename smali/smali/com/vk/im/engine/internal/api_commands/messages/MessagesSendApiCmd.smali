@@ -566,7 +566,7 @@
     invoke-interface {v2, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_f
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-object v2
 .end method
@@ -775,7 +775,7 @@
 
     check-cast p1, Ljava/lang/Integer;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-object p1
 .end method

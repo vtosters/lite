@@ -1,5 +1,7 @@
 package ru.vtosters.lite.f0x1d;
 
+import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Base64;
@@ -24,7 +26,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import ru.vtosters.lite.utils.Prefs;
 
 public class VTVerifications {
     public static final HashMap<Integer, Boolean> sServiceAccountsMap = new HashMap<>();
@@ -135,7 +136,7 @@ public class VTVerifications {
         if (jSONObject.optInt("verified", 0) == 1) {
             return true;
         }
-        if (!Prefs.BooleanTrue("VT_Verification")) {
+        if (!BooleanTrue("VT_Verification")) {
             return false;
         }
         return isVerified((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
@@ -145,14 +146,14 @@ public class VTVerifications {
         if (jSONObject.optInt("trending", 0) == 1) {
             return true;
         }
-        if (!Prefs.BooleanTrue("VT_Fire")) {
+        if (!BooleanTrue("VT_Fire")) {
             return false;
         }
         return hasPrometheus((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!Prefs.BooleanTrue("VT_Dev")) {
+        if (!BooleanTrue("VT_Dev")) {
             return false;
         }
         return isDeveloper((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));

@@ -521,7 +521,7 @@
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 26
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->convUsersOnline()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->convUsersOnline()Z
 
     move-result v5
 

@@ -2116,7 +2116,7 @@
 
     if-ge p2, v0, :cond_c
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->unlockstats()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->unlockstats()Z
 
     move-result p2
 
@@ -4248,7 +4248,7 @@
 
     iget-object v3, p0, Lcom/vk/profile/ui/BaseProfileFragment;->ai:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/Helper;->getUserID(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
+    invoke-static {v3}, Lru/vtosters/lite/utils/Globals;->getUserID(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
 
     move-result v1
 
@@ -4359,7 +4359,7 @@
 
     iget-object v3, p0, Lcom/vk/profile/ui/BaseProfileFragment;->ai:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/Helper;->getUserID(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
+    invoke-static {v3}, Lru/vtosters/lite/utils/Globals;->getUserID(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
 
     move-result v1
 

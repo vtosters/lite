@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Helper.getString;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.IconHelper.switchToDefault;
 import static ru.vtosters.lite.utils.IconHelper.switchToVK;
 

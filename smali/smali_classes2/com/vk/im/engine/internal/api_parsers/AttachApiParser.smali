@@ -2213,7 +2213,7 @@
     .line 183
     sget-object v3, Lcom/vk/im/engine/internal/api_parsers/ImageSizesParser;->a:Lcom/vk/im/engine/internal/api_parsers/ImageSizesParser;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getBackgroundStickers()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getBackgroundStickers()Ljava/lang/String;
 
     move-result-object v4
 

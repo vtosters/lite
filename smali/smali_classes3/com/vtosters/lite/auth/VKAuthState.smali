@@ -380,7 +380,7 @@
 
     const-string v1, "libverify_support"
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->libverify()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->libverify()Z
 
     move-result v2
 

@@ -1,6 +1,8 @@
 package ru.vtosters.lite.f0x1d;
 
-import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.About.*;
+import static ru.vtosters.lite.utils.Globals.*;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -19,7 +21,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import ru.vtosters.lite.badmanners.DeviceInfoCollector;
-import ru.vtosters.lite.utils.Prefs;
 
 public class Crashreporter {
     protected static String logString;
@@ -36,7 +37,7 @@ public class Crashreporter {
     }
 
     static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity) {
-        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(getContext()).toDeviceName() + "\n VTL Version: " + Prefs.VERSIONNAME + ", build: " + Prefs.getBuildNumber();
+        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(getContext()).toDeviceName() + "\n VTL Version: " + VERSIONNAME + ", build: " + getBuildNumber();
         if (Build.VERSION.SDK_INT >= 26) {
             var notificationChannel = new NotificationChannel("crashes", "crash", NotificationManager.IMPORTANCE_DEFAULT);
             notificationChannel.enableVibration(true);

@@ -167,7 +167,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->msgflat()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->msgflat()Z
 
     move-result v1
 

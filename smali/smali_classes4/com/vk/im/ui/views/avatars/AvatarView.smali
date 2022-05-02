@@ -342,7 +342,7 @@
 
     move-result p2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vkme_msg()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme_msg()Z
 
     move-result p2
 

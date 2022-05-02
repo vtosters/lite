@@ -2582,7 +2582,7 @@
 
     iput-boolean v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->bp:Z
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getFriendRecomm()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getFriendRecomm()Ljava/lang/String;
 
     move-result-object v2
 

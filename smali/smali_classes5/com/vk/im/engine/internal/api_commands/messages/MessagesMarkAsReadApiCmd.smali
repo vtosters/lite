@@ -62,7 +62,7 @@
 
     invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
-    # invoke-static {}, Lru/vtosters/lite/utils/Prefs;->readstatus()Ljava/lang/String;
+    # invoke-static {}, Lru/vtosters/lite/utils/Preferences;->readstatus()Ljava/lang/String;
 
     const-string v1, "messages.markAsRead"
 

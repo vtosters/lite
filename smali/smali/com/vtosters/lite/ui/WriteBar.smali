@@ -1031,7 +1031,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->voice()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
 
     move-result v0
 
@@ -1080,7 +1080,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->voice()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
 
     move-result v6
 
@@ -4835,7 +4835,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->voice()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
 
     move-result v2
 

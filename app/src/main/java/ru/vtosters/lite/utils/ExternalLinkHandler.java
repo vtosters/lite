@@ -1,7 +1,8 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.getContext;
-import static ru.vtosters.lite.utils.Helper.isEmpty;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.isEmpty;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -40,7 +41,7 @@ public class ExternalLinkHandler {
             }
         }
 
-        if (!Prefs.isEnableExternalOpening()) return false;
+        if (!isEnableExternalOpening()) return false;
 
         if (checkVkVideo(file)) {
             if (qualities.size() == 1) {

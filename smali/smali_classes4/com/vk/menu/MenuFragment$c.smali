@@ -153,7 +153,7 @@
 
     move-result p2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->newvideo()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->newvideo()Z
 
     move-result p2
 

@@ -1,7 +1,9 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Prefs.getLocale;
+import static ru.vtosters.lite.utils.Preferences.getLocale;
 
+import android.app.Activity;
+import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -12,20 +14,26 @@ import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 
 import androidx.annotation.NonNull;
 
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.UserProfile;
+import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
-public class Helper {
+public class Globals {
+    private static final List<Activity> activities = new ArrayList<>();
+
     // Current UserId
     public static int getUserId() {
         return VKAccountManager.b().a();
@@ -160,6 +168,43 @@ public class Helper {
             }
         } catch (Exception ignored) {
         }
+    }
+
+
+    public static void registerActivities(Application application) {
+        application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivityPaused(Activity activity) {
+            }
+
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivityResumed(Activity activity) {
+            }
+
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+            }
+
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivityStarted(Activity activity) {
+            }
+
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivityStopped(Activity activity) {
+            }
+
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivityCreated(Activity activity, Bundle bundle) {
+                if (activity instanceof VKActivity) {
+                    activities.add(activity);
+                }
+            }
+
+            @Override // android.app.Application.ActivityLifecycleCallbacks
+            public void onActivityDestroyed(Activity activity) {
+                activities.remove(activity);
+            }
+        });
     }
 
     // Language changer and BaseContext inject

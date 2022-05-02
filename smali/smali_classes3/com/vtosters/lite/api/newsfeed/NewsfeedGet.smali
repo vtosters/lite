@@ -503,7 +503,7 @@
     invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_d
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-void
 
@@ -531,7 +531,7 @@
 .method public static c(Z)J
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->feedautoupdate()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->feedautoupdate()Z
 
     move-result v0
 
@@ -730,7 +730,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/utils/Prefs;->inject(Lorg/json/JSONObject;)Z
+    invoke-static {v2}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 

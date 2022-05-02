@@ -2,7 +2,7 @@ package ru.vtosters.lite.f0x1d;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.app.NotificationManager;
 import android.app.Service;

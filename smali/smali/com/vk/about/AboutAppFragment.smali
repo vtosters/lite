@@ -632,7 +632,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/Prefs;->injectAbout(Ljava/util/List;)V
+    invoke-static {p1}, Lru/vtosters/lite/utils/About;->injectAbout(Ljava/util/List;)V
 
     return-void
 .end method

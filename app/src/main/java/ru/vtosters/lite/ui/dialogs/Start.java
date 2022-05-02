@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.Helper.edit;
+import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,7 +11,6 @@ import android.net.Uri;
 import android.os.Build;
 
 import ru.vtosters.lite.utils.OEMDetector;
-import ru.vtosters.lite.utils.Prefs;
 
 public class Start {
     public static void alert(final Activity activity) {
@@ -36,7 +36,7 @@ public class Start {
                 activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
             }
         });
-        if (Prefs.BooleanTrue("showAlert")) {
+        if (BooleanTrue("showAlert")) {
             builder.show();
         }
     }

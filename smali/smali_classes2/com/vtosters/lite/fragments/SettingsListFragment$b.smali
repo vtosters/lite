@@ -116,7 +116,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->devmenu()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->devmenu()Z
 
     move-result v5
 
@@ -512,7 +512,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->isGmsInstalled()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->isGmsInstalled()Z
 
     move-result v6
 

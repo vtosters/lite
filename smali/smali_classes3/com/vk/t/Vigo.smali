@@ -3659,7 +3659,7 @@
     .line 1302
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->VKVersion()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersion()Ljava/lang/String;
 
     move-result-object v2
 

@@ -1290,7 +1290,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->calls()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->calls()Z
 
     move-result v0
 
@@ -1995,7 +1995,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->dev()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
 
     move-result v0
 
@@ -2335,7 +2335,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->usevkui()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->usevkui()Z
 
     move-result v0
 
@@ -2354,7 +2354,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->usevkui()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->usevkui()Z
 
     move-result v0
 
@@ -2664,7 +2664,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->dev()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
 
     move-result v0
 
@@ -2689,7 +2689,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->dev()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
 
     move-result v0
 
@@ -3635,7 +3635,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->hasMusicSubscription()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->hasMusicSubscription()Z
 
     move-result v0
 
@@ -3669,7 +3669,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->isMusicRestricted()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->isMusicRestricted()Z
 
     move-result v0
 

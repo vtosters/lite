@@ -507,7 +507,7 @@
 
     iget-object v3, p1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->VKVersion()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersion()Ljava/lang/String;
 
     move-result-object v3
 

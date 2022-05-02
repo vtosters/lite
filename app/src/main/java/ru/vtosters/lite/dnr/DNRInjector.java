@@ -4,7 +4,7 @@ import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
-import static ru.vtosters.lite.utils.Helper.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;

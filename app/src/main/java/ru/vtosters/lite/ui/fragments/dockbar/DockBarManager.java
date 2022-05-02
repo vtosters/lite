@@ -1,6 +1,8 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import static ru.vtosters.lite.utils.Helper.getContext;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Preferences.newfeed;
+import static ru.vtosters.lite.utils.Preferences.olddock;
 
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFeedFragment;
@@ -42,8 +44,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import ru.vtosters.lite.utils.Prefs;
-
 public class DockBarManager {
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
@@ -79,11 +79,11 @@ public class DockBarManager {
         File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
 
         if (!dockbar.exists()) {
-            mSelectedTabs.add(new DockBarTab("tab_news", Prefs.olddock() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, Prefs.isUseAlternativeFragments() ? Feed2049.b.c() : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_discover", Prefs.olddock() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, Prefs.isUseAlternativeFragments() ? DiscoverFragment.class : DiscoverFeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_messages", Prefs.olddock() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_feedback", Prefs.olddock() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_menu", Prefs.olddock() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", olddock() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? Feed2049.b.c() : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_discover", olddock() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, newfeed() ? DiscoverFragment.class : DiscoverFeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_messages", olddock() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_feedback", olddock() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_menu", olddock() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
 
             mDisabledTabs.add(new DockBarTab("tab_friends", R.drawable.ic_user_24, R.string.friends, R.id.menu_friends, FriendsFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_groups", R.drawable.ic_users_24, R.string.groups, R.id.menu_groups, GroupsFragment.class));
@@ -115,7 +115,7 @@ public class DockBarManager {
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
-                    if (Prefs.isUseAlternativeFragments()) {
+                    if (newfeed()) {
                         if (tab.fragmentClass == NewsfeedFragment.class) {
                             tab.fragmentClass = Feed2049.b.c();
                         } else if (tab.fragmentClass == DiscoverFeedFragment.class) {
@@ -141,7 +141,7 @@ public class DockBarManager {
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
-                    if (Prefs.isUseAlternativeFragments()) {
+                    if (newfeed()) {
                         if (tab.fragmentClass == NewsfeedFragment.class) {
                             tab.fragmentClass = Feed2049.b.c();
                         } else if (tab.fragmentClass == DiscoverFeedFragment.class) {

@@ -2,12 +2,13 @@ package ru.vtosters.lite.ui.fragments.tgstickers;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.Helper.convertDpToPixel;
-import static ru.vtosters.lite.utils.Helper.getContext;
-import static ru.vtosters.lite.utils.Helper.getIdentifier;
-import static ru.vtosters.lite.utils.Helper.getResources;
-import static ru.vtosters.lite.utils.Helper.getString;
+import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.getResources;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
+import static ru.vtosters.lite.utils.Themes.getNavbarColor;
 import static ru.vtosters.lite.utils.Themes.getSTextAttr;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 import static ru.vtosters.lite.utils.Themes.recolorDrawable;
@@ -54,7 +55,6 @@ import java.io.File;
 import me.grishka.appkit.fragments.ToolbarFragment;
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.PreferencesUtil;
-import ru.vtosters.lite.utils.Prefs;
 
 public class StickersFragment extends ToolbarFragment {
 
@@ -372,7 +372,7 @@ public class StickersFragment extends ToolbarFragment {
             holder.switchCompat.setOnCheckedChangeListener((buttonView, isChecked) -> stickersService.setPackEnabled(pack, isChecked, false));
             holder.count.setText(pack.stickersCount + " " + getString("stickerscount"));
 
-            holder.layout.setBackgroundColor(Prefs.getNavbarColor());
+            holder.layout.setBackgroundColor(getNavbarColor());
 
             // Color костыль
             int color = getTextAttr();

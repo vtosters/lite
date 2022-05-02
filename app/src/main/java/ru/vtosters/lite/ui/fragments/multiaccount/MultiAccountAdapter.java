@@ -1,9 +1,9 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
-import static ru.vtosters.lite.utils.Helper.convertDpToPixel;
-import static ru.vtosters.lite.utils.Helper.getResources;
-import static ru.vtosters.lite.utils.Helper.isNetworkConnected;
-import static ru.vtosters.lite.utils.Helper.restartApplication;
+import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
+import static ru.vtosters.lite.utils.Globals.getResources;
+import static ru.vtosters.lite.utils.Globals.isNetworkConnected;
+import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 import static ru.vtosters.lite.utils.Themes.recolorDrawable;
 

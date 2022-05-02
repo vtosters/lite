@@ -165,7 +165,7 @@
 
     move-result-object v3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->gcmfix()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->gcmfix()Z
 
     move-result v5
 

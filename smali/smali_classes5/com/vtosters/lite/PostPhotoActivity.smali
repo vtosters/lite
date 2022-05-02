@@ -227,7 +227,7 @@
 
     .prologue
     .line 41
-    invoke-static {p1}, Lru/vtosters/lite/utils/Helper;->BaseContextLocale(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Lru/vtosters/lite/utils/Globals;->BaseContextLocale(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 

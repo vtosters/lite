@@ -138,7 +138,7 @@
 
     .line 64
     :goto_1
-    invoke-static {p2}, Lru/vtosters/lite/utils/Prefs;->getCommentsSort(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lru/vtosters/lite/utils/Newsfeed;->getCommentsSort(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
