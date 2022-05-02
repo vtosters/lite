@@ -10,15 +10,19 @@ import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
+import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
+import com.vk.discover.DiscoverFeedFragment;
+import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.navigation.NavigatorKeys;
-import com.vk.newsfeed.Feed2049;
+import com.vk.newsfeed.HomeFragment;
+import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
@@ -203,7 +207,7 @@ public class Newsfeed {
             return getInstance().getSelectedTabs().get(0).fragmentClass;
         }
         if (string.equals("newsfeed")) {
-            return Feed2049.b.c();
+            return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
         }
         if (string.equals("messenger")) {
             return DialogsFragment.class;
@@ -230,7 +234,7 @@ public class Newsfeed {
             return AppsFragment.class;
         }
         if (string.equals("discover")) {
-            return Feed2049.b.e();
+            return newfeed() ? DiscoverFragment.class : DiscoverFeedFragment.class;
         }
         if (string.equals("notifications")) {
             return NotificationsContainerFragment.class;
