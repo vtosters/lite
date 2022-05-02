@@ -495,4 +495,9 @@
         <item>От Новых к Старым</item>
         <item>От Старых к Новым</item>
     </string-array>
+    <string-array name="newsupdate_value">
+        <item>По умолчанию</item>
+        <item>Не обновлять</item>
+        <item>Обновлять мгновенно</item>
+    </string-array>
 </resources>

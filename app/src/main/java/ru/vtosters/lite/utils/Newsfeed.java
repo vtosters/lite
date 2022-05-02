@@ -1,10 +1,19 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.*;
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static java.lang.Long.MAX_VALUE;
+import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.adsgroup;
+import static ru.vtosters.lite.utils.Preferences.adsstories;
+import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
+import static ru.vtosters.lite.utils.Preferences.copyright_post;
+import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
+import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
 import com.vk.apps.AppsFragment;
+import com.vk.core.preference.Preference;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
@@ -172,6 +181,20 @@ public class Newsfeed {
             return "asc";
         }
         return def;
+    }
+
+    public static long getUpdateNewsfeed(boolean refresh_timeout) {
+        String string = getPreferences().getString("newsupdate", "");
+        if (string.isEmpty()) {
+            return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
+        }
+        if (string.equals("no_update")) {
+            return MAX_VALUE;
+        }
+        if (string.equals("imd_update")) {
+            return 10000L;
+        }
+        return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
     }
 
     public static Class getStartFragment() {

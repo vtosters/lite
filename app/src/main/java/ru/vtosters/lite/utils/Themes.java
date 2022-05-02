@@ -194,4 +194,10 @@ public class Themes {
         return VKThemeHelper.a(R.attr.tabbar_background);
     }
 
+    public static String getBackgroundStickers() {
+        if (isBGStickersEnabled()) {
+            return "images_with_background";
+        }
+        return "images";
+    }
 }

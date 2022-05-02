@@ -1,6 +1,6 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.*;
+import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
 import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Newsfeed.*;
 import static ru.vtosters.lite.utils.Proxy.*;
@@ -17,7 +17,15 @@ import com.vtosters.lite.data.Users;
 import java.util.Locale;
 
 public class Preferences {
-    public static String VERSIONNAME = "2.0 Beta";
+    public static String VERSIONNAME = "Beta";
+
+    public static void init(Application application) {
+        setupFilters();
+        fixGapps();
+        setProxy();
+        migrate();
+        registerActivities(application);
+    }
 
     public static boolean BooleanFalse(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
@@ -27,13 +35,6 @@ public class Preferences {
     public static boolean BooleanTrue(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         return prefs.getBoolean(key, true);
-    }
-
-    public static String getBackgroundStickers() {
-        if (isBGStickersEnabled()) {
-            return "images_with_background";
-        }
-        return "images";
     }
 
     public static boolean authorsrecomm() {
@@ -142,10 +143,6 @@ public class Preferences {
 
     public static boolean dockcounter() {
         return BooleanTrue("dockcounter");
-    }
-
-    public static boolean feedautoupdate() {
-        return BooleanTrue("feedautoupdate");
     }
 
     public static boolean feedcache() {
@@ -318,13 +315,5 @@ public class Preferences {
             return Locale.getDefault().getLanguage();
         }
         return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
-    }
-
-    public static void init(Application application) {
-        setupFilters();
-        fixGapps();
-        setProxy();
-        migrate();
-        registerActivities(application);
     }
 }
