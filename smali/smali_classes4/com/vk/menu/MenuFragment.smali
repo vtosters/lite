@@ -1301,7 +1301,7 @@
 
     if-eqz v5, :cond_12
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->showmenu()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->showmenu()Z
 
     move-result v5
 

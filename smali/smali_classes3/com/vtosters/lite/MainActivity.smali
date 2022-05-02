@@ -104,7 +104,7 @@
 
     const-class v1, Lcom/vtosters/lite/fragments/messages/dialogs/DialogsFragment;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -661,7 +661,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -755,7 +755,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 

@@ -1,6 +1,6 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
-import static ru.vtosters.lite.utils.Helper.getUserId;
+import static ru.vtosters.lite.utils.Globals.getUserId;
 
 import android.content.ComponentName;
 import android.content.Context;

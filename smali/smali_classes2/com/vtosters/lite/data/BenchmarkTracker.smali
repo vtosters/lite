@@ -232,7 +232,7 @@
 .method private a(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->benchmark()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->benchmark()Z
 
     move-result v0
 

@@ -1505,7 +1505,7 @@
 .method public static a(Ljava/lang/CharSequence;ZF)Ljava/lang/CharSequence;
     .locals 9
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->shortpost()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortpost()Z
 
     move-result v0
 

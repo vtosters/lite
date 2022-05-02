@@ -566,7 +566,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lru/vtosters/lite/utils/Prefs;->inject(Lorg/json/JSONObject;)Z
+    invoke-static {v7}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 

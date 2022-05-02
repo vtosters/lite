@@ -508,7 +508,7 @@
 
     .line 153
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->awayphp()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->awayphp()Z
 
     move-result v0
 

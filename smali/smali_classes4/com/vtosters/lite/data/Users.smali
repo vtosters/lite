@@ -13,13 +13,13 @@
         }
     .end annotation
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->offline()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->offline()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-void
 

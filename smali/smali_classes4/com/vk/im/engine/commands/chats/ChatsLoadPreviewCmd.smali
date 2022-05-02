@@ -135,7 +135,7 @@
 
     check-cast p1, Lcom/vk/im/engine/models/chats/ChatPreview;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-object p1
 .end method

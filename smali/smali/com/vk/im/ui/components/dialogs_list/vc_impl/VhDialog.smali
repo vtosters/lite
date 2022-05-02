@@ -124,7 +124,7 @@
 
     move-result v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vkme_msg()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme_msg()Z
 
     move-result v1
 
@@ -1327,7 +1327,7 @@
     const-string p2, "VT_Verification"
 
     .line 181
-    invoke-static {p2}, Lru/vtosters/lite/utils/Prefs;->BooleanTrue(Ljava/lang/String;)Z
+    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->BooleanTrue(Ljava/lang/String;)Z
 
     move-result p2
 
@@ -1357,7 +1357,7 @@
     const-string p2, "VT_Verification"
 
     .line 181
-    invoke-static {p2}, Lru/vtosters/lite/utils/Prefs;->BooleanTrue(Ljava/lang/String;)Z
+    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->BooleanTrue(Ljava/lang/String;)Z
 
     move-result p2
 

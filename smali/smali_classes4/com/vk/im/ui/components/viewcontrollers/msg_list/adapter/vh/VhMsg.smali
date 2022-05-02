@@ -673,7 +673,7 @@
 
     move-result p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vkme_msg()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme_msg()Z
 
     move-result p1
 
@@ -1127,7 +1127,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->vkme_msg()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme_msg()Z
 
     move-result v0
 
@@ -1940,7 +1940,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->msgtails()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->msgtails()Z
 
     move-result p0
 

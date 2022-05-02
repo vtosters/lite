@@ -1062,7 +1062,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->darkmode()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->darkmode()Z
 
     move-result v0
 

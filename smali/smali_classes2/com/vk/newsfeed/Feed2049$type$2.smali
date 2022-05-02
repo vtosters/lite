@@ -69,7 +69,7 @@
 .method public final b()Lcom/vk/newsfeed/Feed2049$ExperimentType;
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->newfeed()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->newfeed()Z
 
     move-result v0
 

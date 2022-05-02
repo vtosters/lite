@@ -85,7 +85,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getLocale()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getLocale()Ljava/lang/String;
 
     move-result-object v1
 
@@ -95,7 +95,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getLocale()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getLocale()Ljava/lang/String;
 
     move-result-object v1
 

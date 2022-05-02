@@ -66,7 +66,7 @@
     goto/16 :goto_6
 
     :sswitch_0
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->widgetads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->widgetads()Ljava/lang/String;
 
     move-result-object p2
 
@@ -100,7 +100,7 @@
     goto/16 :goto_6
 
     :sswitch_1
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->authorsads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->authorsads()Ljava/lang/String;
 
     move-result-object p2
 
@@ -136,7 +136,7 @@
     goto/16 :goto_6
 
     :sswitch_3
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->promoads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->promoads()Ljava/lang/String;
 
     move-result-object p2
 
@@ -408,7 +408,7 @@
     goto/16 :goto_6
 
     :sswitch_10
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->friendsads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->friendsads()Ljava/lang/String;
 
     move-result-object p2
 

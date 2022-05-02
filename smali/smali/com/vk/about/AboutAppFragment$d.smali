@@ -273,7 +273,7 @@
 
     check-cast v2, Landroid/content/Context;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getCommitLink()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/About;->getCommitLink()Ljava/lang/String;
 
     move-result-object v3
 
@@ -304,7 +304,7 @@
 
     if-eqz v0, :cond_8
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
 
     move-result-object p1
 

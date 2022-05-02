@@ -132,7 +132,7 @@
 
     const-string v4, "_data"
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix2()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix2()Ljava/lang/String;
 
     move-result-object v5
 
@@ -155,7 +155,7 @@
 
     const-string v1, "_id"
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix2()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix2()Ljava/lang/String;
 
     move-result-object v2
 
@@ -371,7 +371,7 @@
 
     move-result v6
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix2()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix2()Ljava/lang/String;
 
     move-result-object v7
 
@@ -833,7 +833,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix()Ljava/lang/String;
 
     move-result-object v10
 
@@ -866,7 +866,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix()Ljava/lang/String;
 
     move-result-object v9
 
@@ -1045,7 +1045,7 @@
 
     move-result v6
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->MediacontentFix2()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->MediacontentFix2()Ljava/lang/String;
 
     move-result-object v7
 

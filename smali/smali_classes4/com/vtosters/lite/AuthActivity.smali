@@ -448,7 +448,7 @@
 
     .prologue
     .line 41
-    invoke-static {p1}, Lru/vtosters/lite/utils/Helper;->BaseContextLocale(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Lru/vtosters/lite/utils/Globals;->BaseContextLocale(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -618,7 +618,7 @@
 
     .line 187
     :sswitch_3
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
 
     move-result-object p0
 

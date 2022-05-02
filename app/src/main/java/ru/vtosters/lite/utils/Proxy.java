@@ -1,8 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Helper.getPreferences;
-import static ru.vtosters.lite.utils.Prefs.BooleanFalse;
-import static ru.vtosters.lite.utils.Prefs.proxy;
+import static ru.vtosters.lite.utils.Globals.*;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 import java.util.Properties;
 
@@ -158,6 +157,10 @@ public class Proxy {
     public static String proxyPortSocks() {
         String string = getPreferences().getString("proxyPortSocks", "");
         return string.isEmpty() ? "8888" : string;
+    }
+
+    public static boolean proxy() {
+        return getPreferences().getString("proxy", "").equals("apiproxy");
     }
 
     // Official vk proxy enforcer

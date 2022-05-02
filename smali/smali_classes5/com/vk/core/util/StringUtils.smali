@@ -132,7 +132,7 @@
 .method public static final a(I)Ljava/lang/String;
     .locals 4
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
 
     move-result v1
 
@@ -258,7 +258,7 @@
 .method public static final a(III)Ljava/lang/String;
     .locals 6
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->shortinfo()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
 
     move-result v1
 

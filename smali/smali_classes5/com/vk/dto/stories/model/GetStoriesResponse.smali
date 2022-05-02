@@ -205,7 +205,7 @@
 
     invoke-static {v4, v5, v1, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Lorg/json/JSONArray;Ljava/util/Collection;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->storyads()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->storyads()Ljava/lang/String;
 
     move-result-object v4
 

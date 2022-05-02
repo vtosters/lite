@@ -1,8 +1,9 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.Helper.edit;
-import static ru.vtosters.lite.utils.Helper.getContext;
-import static ru.vtosters.lite.utils.Helper.isGmsInstalled;
+import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
+import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,7 +14,6 @@ import android.content.Intent;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
-import ru.vtosters.lite.utils.Prefs;
 
 public class InstallGMS {
     public static void alert(final Activity activity) {
@@ -39,7 +39,7 @@ public class InstallGMS {
                     context.startActivity(a2);
                 }
             });
-            if (Prefs.BooleanTrue("showAlertGms")) {
+            if (BooleanTrue("showAlertGms")) {
                 builder.show();
             }
         }

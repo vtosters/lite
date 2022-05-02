@@ -1420,7 +1420,7 @@
 
     .line 230
     :cond_0
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->dns()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dns()Z
 
     move-result v2
 
@@ -1597,7 +1597,7 @@
 .method public static a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
     .locals 10
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->dns()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dns()Z
 
     move-result v2
 

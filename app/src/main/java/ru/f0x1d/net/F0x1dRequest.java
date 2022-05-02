@@ -1,6 +1,6 @@
 package ru.f0x1d.net;
 
-import static ru.vtosters.lite.utils.Helper.getUserToken;
+import static ru.vtosters.lite.utils.Globals.getUserToken;
 
 import android.os.AsyncTask;
 

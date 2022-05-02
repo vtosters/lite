@@ -1,7 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import static ru.vtosters.lite.utils.Helper.convertDpToPixel;
-import static ru.vtosters.lite.utils.Helper.restartApplication;
+import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
+import static ru.vtosters.lite.utils.Globals.restartApplication;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;

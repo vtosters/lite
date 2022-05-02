@@ -1403,7 +1403,7 @@
     const/4 p1, 0x0
 
     :goto_1
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->dockcounter()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dockcounter()Z
 
     move-result v1
 
@@ -3863,7 +3863,7 @@
 .method public final p()Z
     .locals 7
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->swipe()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->swipe()Z
 
     move-result v6
 

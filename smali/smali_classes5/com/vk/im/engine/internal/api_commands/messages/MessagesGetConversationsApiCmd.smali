@@ -51,7 +51,7 @@
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getMsgCount()I
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getMsgCount()I
 
     move-result p3
 
@@ -331,7 +331,7 @@
 
     check-cast p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->forceOffline()V
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 
     return-object p1
 

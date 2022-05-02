@@ -59,7 +59,7 @@
 
     const-string v1, "arm"
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->VKVersion()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersion()Ljava/lang/String;
 
     move-result-object v2
 
@@ -727,7 +727,7 @@
     .param p0, "s"    # I
 
     .line 17
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->fulltime()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->fulltime()Z
 
     move-result v0
 
@@ -1071,7 +1071,7 @@
 .method private setLang()V
     .locals 6
 
-    invoke-static {}, Lru/vtosters/lite/utils/Helper;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1089,7 +1089,7 @@
 
     new-instance v3, Ljava/util/Locale;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Prefs;->getLocale()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getLocale()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1321,7 +1321,7 @@
 .method public onCreate()V
     .locals 4
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Prefs;->init(Landroid/app/Application;)V
+    invoke-static {p0}, Lru/vtosters/lite/utils/Preferences;->init(Landroid/app/Application;)V
 
     invoke-direct {p0}, Lcom/vtosters/lite/VKApplication;->setLang()V
 
