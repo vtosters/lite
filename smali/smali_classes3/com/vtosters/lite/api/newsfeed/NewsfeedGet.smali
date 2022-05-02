@@ -531,17 +531,12 @@
 .method public static c(Z)J
     .locals 3
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->feedautoupdate()Z
+    invoke-static {p0}, Lru/vtosters/lite/utils/Newsfeed;->getUpdateNewsfeed(Z)J
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-wide v0, Ljava/lang/Long;->MAX_VALUE:J
+    move-result-wide v0
 
     return-wide v0
 
-    :cond_0
     if-eqz p0, :cond_1
 
     const-string p0, "refresh_timeout_top"

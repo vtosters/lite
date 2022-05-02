@@ -686,4 +686,14 @@
         <item>new</item>
         <item>old</item>
     </string-array>
+    <string-array name="newsupdate_value">
+        <item>Default</item>
+        <item>Do not update</item>
+        <item>Immediately update</item>
+    </string-array>
+    <string-array name="newsupdate">
+        <item>default</item>
+        <item>no_update</item>
+        <item>imd_update</item>
+    </string-array>
 </resources>

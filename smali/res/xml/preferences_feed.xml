@@ -79,10 +79,13 @@
             android:entryValues="@array/commentssort"
             android:key="commentssort"
             android:title="Сортировка комментариев" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="feedautoupdate"
-            android:title="@string/vtlfeedreload" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Выберите значение"
+            android:entries="@array/newsupdate_value"
+            android:entryValues="@array/newsupdate"
+            android:key="newsupdate"
+            android:title="Обновление новостей" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="feedcache"
