@@ -61,6 +61,6 @@ public class About {
     }
 
     public static String getAppVersion() throws IOException {
-        return "VTLite | " + VERSIONNAME + " | " + getBuildNumber();
+        return getApplicationName() + " " + VERSIONNAME + " | " + getBuildNumber();
     }
 }
