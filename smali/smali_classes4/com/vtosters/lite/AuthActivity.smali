@@ -500,6 +500,8 @@
     :cond_1
     invoke-super {p0}, Landroid/support/v4/app/FragmentActivity;->finish()V
 
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/multiaccount/MultiAccountManager;->migrationRestart()V
+
     return-void
 .end method
 
