@@ -5,8 +5,8 @@ import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.olddock;
 
 import com.vk.apps.AppsFragment;
-import com.vk.discover.DiscoverFeedFragment;
 import com.vk.discover.DiscoverFragment;
+import com.vk.discover.GatewaysFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.fragments.FeedLikesFragment;
 import com.vk.menu.MenuFragment;
@@ -80,7 +80,7 @@ public class DockBarManager {
 
         if (!dockbar.exists()) {
             mSelectedTabs.add(new DockBarTab("tab_news", olddock() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_discover", olddock() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, newfeed() ? DiscoverFragment.class : DiscoverFeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_discover", olddock() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, newfeed() ? GatewaysFragment.class : DiscoverFragment.class ));
             mSelectedTabs.add(new DockBarTab("tab_messages", olddock() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_feedback", olddock() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_menu", olddock() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
@@ -118,14 +118,14 @@ public class DockBarManager {
                     if (newfeed()) {
                         if (tab.fragmentClass == NewsfeedFragment.class) {
                             tab.fragmentClass = HomeFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFeedFragment.class) {
+                        } else if (tab.fragmentClass == DiscoverFragment.class) {
                             tab.fragmentClass = DiscoverFragment.class;
                         }
                     } else {
                         if (tab.fragmentClass == HomeFragment.class) {
                             tab.fragmentClass = NewsfeedFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFragment.class) {
-                            tab.fragmentClass = DiscoverFeedFragment.class;
+                        } else if (tab.fragmentClass == GatewaysFragment.class) {
+                            tab.fragmentClass = GatewaysFragment.class;
                         }
                     }
                     mSelectedTabs.add(tab);
@@ -144,14 +144,14 @@ public class DockBarManager {
                     if (newfeed()) {
                         if (tab.fragmentClass == NewsfeedFragment.class) {
                             tab.fragmentClass = HomeFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFeedFragment.class) {
-                            tab.fragmentClass = DiscoverFragment.class;
+                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                            tab.fragmentClass = GatewaysFragment.class;
                         }
                     } else {
                         if (tab.fragmentClass == HomeFragment.class) {
                             tab.fragmentClass = NewsfeedFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFragment.class) {
-                            tab.fragmentClass = DiscoverFeedFragment.class;
+                        } else if (tab.fragmentClass == GatewaysFragment.class) {
+                            tab.fragmentClass = DiscoverFragment.class;
                         }
                     }
                     mDisabledTabs.add(tab);
