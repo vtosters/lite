@@ -15,8 +15,8 @@ import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
-import com.vk.discover.DiscoverFeedFragment;
 import com.vk.discover.DiscoverFragment;
+import com.vk.discover.GatewaysFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
@@ -234,7 +234,7 @@ public class Newsfeed {
             return AppsFragment.class;
         }
         if (string.equals("discover")) {
-            return newfeed() ? DiscoverFragment.class : DiscoverFeedFragment.class;
+            return newfeed() ? GatewaysFragment.class : DiscoverFragment.class;
         }
         if (string.equals("notifications")) {
             return NotificationsContainerFragment.class;
