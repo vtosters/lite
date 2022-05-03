@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import ru.vtosters.lite.utils.Globals;
+
 public class MultiAccountManager {
 
     public static void migrate() {
@@ -20,7 +22,15 @@ public class MultiAccountManager {
         SharedPreferences NewPrefs = getContext().getSharedPreferences("pref_account_manager0", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = NewPrefs.edit();
         editor.putString("key_vk_account", OldPrefsValue);
-        editor.apply();
+        editor.commit();
+    }
+
+    public static void migrationRestart() {
+        SharedPreferences prefs = getPreferences();
+        if (prefs.getBoolean("multiaccount_restart", true)) {
+            prefs.edit().putBoolean("multiaccount_restart", false).commit();
+            Globals.restartApplication();
+        }
     }
 
     public static SharedPreferences getCurrentAccount() {
@@ -80,7 +90,15 @@ public class MultiAccountManager {
         prefs.edit().clear().commit();
         File file = new File(new File(getContext().getFilesDir().getParent(), "shared_prefs"), "pref_account_manager" + i);
         if (file.exists()) file.delete();
-        if (account == i && getAccountPrefsCount() > 0)
-            switchAccount(buildList().get(0).index);
+        if (account == i && getAccountPrefsCount() > 0) {
+            List<MultiAccountItem> accounts = buildList();
+            if (accounts.size() > 0)
+                switchAccount(buildList().get(0).index);
+            else {
+                getContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE)
+                        .edit().clear().commit();
+                Globals.getPreferences().edit().putBoolean("multiaccount_restart", true).commit();
+            }
+        }
     }
 }
