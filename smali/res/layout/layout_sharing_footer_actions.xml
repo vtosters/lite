@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.vk.sharing.view.SharingActionsView android:orientation="horizontal"
     android:id="@id/sharing_actions_container"
-    android:background="@color/pale_grey"
+    android:background="?tabbar_background"
     android:paddingLeft="4.0dip"
     android:paddingTop="8.0dip"
     android:paddingRight="4.0dip"
