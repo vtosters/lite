@@ -38,6 +38,16 @@
             android:defaultValue=""
             android:key="proxyPortHTTP"
             android:title="@string/proxyport" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="proxyUserHTTP"
+            android:summary="Если имеется"
+            android:title="Логин" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="proxyPassHTTP"
+            android:summary="Если имеется"
+            android:title="Пароль" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttps">
@@ -49,6 +59,16 @@
             android:defaultValue=""
             android:key="proxyPortHTTPS"
             android:title="@string/proxyport" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="proxyUserHTTPS"
+            android:summary="Если имеется"
+            android:title="Логин" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="proxyPassHTTPS"
+            android:summary="Если имеется"
+            android:title="Пароль" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxysocks">
@@ -60,6 +80,16 @@
             android:defaultValue=""
             android:key="proxyPortSocks"
             android:title="@string/proxyport" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="proxyUserSocks"
+            android:summary="Если имеется"
+            android:title="Логин" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="proxyPassSocks"
+            android:summary="Если имеется"
+            android:title="Пароль" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
