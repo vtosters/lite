@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
+        android:background="?background_content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:fillViewport="true">
@@ -15,6 +16,7 @@
             android:paddingRight="@dimen/standard_list_item_padding"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="?background_content"
             app:max_width="400.0dip">
 
             <include layout="@layout/discover_search_header" />
@@ -147,11 +149,11 @@
 
     <TextView
         android:textSize="16.0sp"
-        android:textColor="#ffffffff"
+        android:textColor="?header_text"
         android:gravity="center"
         android:layout_gravity="bottom"
         android:id="@id/tv_apply_params"
-        android:background="@drawable/picker_btn_blue"
+        android:background="?tabbar_background"
         android:layout_width="fill_parent"
         android:layout_height="48.0dip"
         android:text="@string/discover_search_show_result"

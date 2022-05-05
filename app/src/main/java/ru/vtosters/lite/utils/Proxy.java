@@ -1,7 +1,8 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.getPreferences;
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
+import static java.lang.System.*;
+import static ru.vtosters.lite.utils.Globals.*;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 import java.util.Properties;
 
@@ -81,52 +82,88 @@ public class Proxy {
     }
 
     public static void setProxy() {
+        Properties properties = getProperties();
         switch (getPreferences().getString("proxy", "")) {
             case "zaborona":
-                Properties properties = System.getProperties();
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 properties.setProperty("socksProxyPort", "1488");
-                System.clearProperty("https.proxyHost");
-                System.clearProperty("https.proxyPort");
-                System.clearProperty("http.proxyHost");
-                System.clearProperty("http.proxyPort");
+                clearProperty("java.net.socks.username");
+                clearProperty("java.net.socks.password");
+                resetProxySocks();
                 break;
             case "socks":
-                Properties properties2 = System.getProperties();
-                properties2.setProperty("socksProxyHost", proxyHostSocks());
-                properties2.setProperty("socksProxyPort", proxyPortSocks());
-                System.clearProperty("https.proxyHost");
-                System.clearProperty("https.proxyPort");
-                System.clearProperty("http.proxyHost");
-                System.clearProperty("http.proxyPort");
+                properties.setProperty("socksProxyHost", proxyHostSocks());
+                properties.setProperty("socksProxyPort", proxyPortSocks());
+                properties.setProperty("java.net.socks.username", proxyUserSocks());
+                properties.setProperty("java.net.socks.password", proxyPassSocks());
+                resetProxySocks();
                 break;
             case "http":
-                Properties properties3 = System.getProperties();
-                properties3.setProperty("http.proxyHost", proxyHostHTTP());
-                properties3.setProperty("http.proxyPort", proxyPortHTTP());
-                System.clearProperty("socksProxyHost");
-                System.clearProperty("socksPortHost");
-                System.clearProperty("https.proxyHost");
-                System.clearProperty("https.proxyPort");
+                properties.setProperty("http.proxyHost", proxyHostHTTP());
+                properties.setProperty("http.proxyPort", proxyPortHTTP());
+                properties.setProperty("http.proxyUser", proxyUserHTTP());
+                properties.setProperty("http.proxyPassword", proxyPassHTTP());
+                resetProxyHttp();
                 break;
             case "https":
-                Properties properties4 = System.getProperties();
-                properties4.setProperty("https.proxyHost", proxyHostHTTPS());
-                properties4.setProperty("https.proxyPort", proxyPortHTTPS());
-                System.clearProperty("socksProxyHost");
-                System.clearProperty("socksPortHost");
-                System.clearProperty("http.proxyHost");
-                System.clearProperty("http.proxyPort");
+                properties.setProperty("https.proxyHost", proxyHostHTTPS());
+                properties.setProperty("https.proxyPort", proxyPortHTTPS());
+                properties.setProperty("https.proxyUser", proxyUserHTTPS());
+                properties.setProperty("https.proxyPassword", proxyPassHTTPS());
+                resetProxyHttps();
                 break;
             default:
-                System.clearProperty("socksProxyHost");
-                System.clearProperty("socksPortHost");
-                System.clearProperty("https.proxyHost");
-                System.clearProperty("https.proxyPort");
-                System.clearProperty("http.proxyHost");
-                System.clearProperty("http.proxyPort");
+                resetProxy();
                 break;
         }
+    }
+
+    public static void resetProxy() {
+        clearProperty("https.proxyHost");
+        clearProperty("https.proxyPort");
+        clearProperty("https.proxyUser");
+        clearProperty("https.proxyPassword");
+        clearProperty("http.proxyHost");
+        clearProperty("http.proxyPort");
+        clearProperty("http.proxyUser");
+        clearProperty("http.proxyPassword");
+        clearProperty("socksProxyHost");
+        clearProperty("socksPortHost");
+        clearProperty("java.net.socks.username");
+        clearProperty("java.net.socks.password");
+    }
+
+    public static void resetProxySocks() {
+        clearProperty("https.proxyHost");
+        clearProperty("https.proxyPort");
+        clearProperty("https.proxyUser");
+        clearProperty("https.proxyPassword");
+        clearProperty("http.proxyHost");
+        clearProperty("http.proxyPort");
+        clearProperty("http.proxyUser");
+        clearProperty("http.proxyPassword");
+    }
+
+    public static void resetProxyHttp() {
+        clearProperty("https.proxyHost");
+        clearProperty("https.proxyPort");
+        clearProperty("https.proxyUser");
+        clearProperty("https.proxyPassword");
+        clearProperty("socksProxyHost");
+        clearProperty("socksPortHost");
+        clearProperty("java.net.socks.username");
+        clearProperty("java.net.socks.password");
+    }
+
+    public static void resetProxyHttps() {
+        clearProperty("http.proxyHost");
+        clearProperty("http.proxyPort");
+        clearProperty("http.proxyUser");
+        clearProperty("http.proxyPassword");
+        clearProperty("socksProxyHost");
+        clearProperty("socksPortHost");
+        clearProperty("java.net.socks.username");
+        clearProperty("java.net.socks.password");
     }
 
     public static String proxyHostHTTP() {
@@ -157,6 +194,36 @@ public class Proxy {
     public static String proxyPortSocks() {
         String string = getPreferences().getString("proxyPortSocks", "");
         return string.isEmpty() ? "8888" : string;
+    }
+
+    public static String proxyUserHTTP() {
+        String string = getPreferences().getString("proxyUserHTTP", "");
+        return string.isEmpty() ? "" : string;
+    }
+
+    public static String proxyUserHTTPS() {
+        String string = getPreferences().getString("proxyUserHTTPS", "");
+        return string.isEmpty() ? "" : string;
+    }
+
+    public static String proxyUserSocks() {
+        String string = getPreferences().getString("proxyUserSocks", "");
+        return string.isEmpty() ? "" : string;
+    }
+
+    public static String proxyPassHTTP() {
+        String string = getPreferences().getString("proxyPassHTTP", "");
+        return string.isEmpty() ? "" : string;
+    }
+
+    public static String proxyPassHTTPS() {
+        String string = getPreferences().getString("proxyPassHTTPS", "");
+        return string.isEmpty() ? "" : string;
+    }
+
+    public static String proxyPassSocks() {
+        String string = getPreferences().getString("proxyPassSocks", "");
+        return string.isEmpty() ? "" : string;
     }
 
     public static boolean proxy() {
