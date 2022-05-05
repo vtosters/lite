@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.design.widget.AppBarLayout
-        android:background="?header_alternate_background"
+        android:background="?background_content"
         android:layout_width="fill_parent"
         android:layout_height="?actionBarSize"
         style="@style/VKAppBar">

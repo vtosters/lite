@@ -203,11 +203,7 @@
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
     .line 180
-    iget-object v0, p0, Lcom/vk/sharing/view/SharingActionsView$a;->l:Landroid/text/TextPaint;
-
-    const v1, 0x7f0600ab
-
-    invoke-static {p1, v1}, Landroid/support/v4/content/ContextCompat;->c(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getHeaderText()I
 
     move-result v1
 

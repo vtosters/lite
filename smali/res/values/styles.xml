@@ -8016,7 +8016,7 @@
     </style>
 
     <style name="Widget.Design.BottomSheet.Modal" parent="@android:style/Widget">
-        <item name="android:background">?android:colorBackground</item>
+        <item name="android:background">?background_content</item>
         <item name="behavior_hideable">true</item>
         <item name="behavior_peekHeight">auto</item>
         <item name="behavior_skipCollapsed">false</item>
