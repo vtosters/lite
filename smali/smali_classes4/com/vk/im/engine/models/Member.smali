@@ -26,9 +26,9 @@
 
 
 # instance fields
-.field private b:Lcom/vk/im/engine/models/MemberType;
+.field public b:Lcom/vk/im/engine/models/MemberType;
 
-.field private c:I
+.field public c:I
 
 
 # direct methods

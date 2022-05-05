@@ -21,6 +21,8 @@
 .method public constructor <init>(Lcom/vk/im/engine/internal/storage/CacheEnvironment;)V
     .locals 7
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->grabVKDatabase(Lcom/vk/im/engine/internal/storage/CacheEnvironment;)V
+
     const-string v0, "env"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V

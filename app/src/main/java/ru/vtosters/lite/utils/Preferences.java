@@ -1,9 +1,12 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Newsfeed.*;
-import static ru.vtosters.lite.utils.Proxy.*;
+import static ru.vtosters.lite.utils.Globals.fixGapps;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.registerActivities;
+import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
+import static ru.vtosters.lite.utils.Proxy.setProxy;
 
 import android.app.Application;
 import android.content.Context;
