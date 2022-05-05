@@ -36,37 +36,37 @@
 
 
 # instance fields
-.field private c:I
+.field public c:I
 
-.field private d:I
+.field public d:I
 
-.field private e:I
+.field public e:I
 
-.field private f:I
+.field public f:I
 
-.field private g:I
+.field public g:I
 
-.field private h:J
+.field public h:J
 
-.field private i:Lcom/vk/im/engine/models/Member;
+.field public i:Lcom/vk/im/engine/models/Member;
 
-.field private j:Z
+.field public j:Z
 
-.field private k:Z
+.field public k:Z
 
-.field private l:Z
+.field public l:Z
 
-.field private m:Z
+.field public m:Z
 
-.field private n:Lcom/vk/im/engine/models/messages/MsgSyncState;
+.field public n:Lcom/vk/im/engine/models/messages/MsgSyncState;
 
-.field private o:Lcom/vk/im/engine/models/Weight;
+.field public o:Lcom/vk/im/engine/models/Weight;
 
-.field private p:Z
+.field public p:Z
 
-.field private q:Z
+.field public q:Z
 
-.field private r:I
+.field public r:I
 
 
 # direct methods

@@ -2,7 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.isEmpty;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
 import android.app.AlertDialog;
 import android.content.Context;

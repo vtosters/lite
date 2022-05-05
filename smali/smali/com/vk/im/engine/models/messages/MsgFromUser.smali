@@ -29,11 +29,11 @@
 
 
 # instance fields
-.field private d:Ljava/lang/String;
+.field public d:Ljava/lang/String;
 
-.field private e:Ljava/lang/String;
+.field public e:Ljava/lang/String;
 
-.field private f:Ljava/util/List;
+.field public f:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -43,7 +43,7 @@
     .end annotation
 .end field
 
-.field private g:Ljava/util/List;
+.field public g:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -53,11 +53,11 @@
     .end annotation
 .end field
 
-.field private h:Ljava/lang/String;
+.field public h:Ljava/lang/String;
 
-.field private i:Ljava/lang/String;
+.field public i:Ljava/lang/String;
 
-.field private j:Ljava/lang/String;
+.field public j:Ljava/lang/String;
 
 
 # direct methods

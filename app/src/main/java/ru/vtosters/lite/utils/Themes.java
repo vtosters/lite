@@ -1,7 +1,11 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Preferences.color_grishka;
+import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
+import static ru.vtosters.lite.utils.Preferences.navbar;
+import static ru.vtosters.lite.utils.Preferences.vksans;
 
 import android.content.Context;
 import android.content.res.ColorStateList;

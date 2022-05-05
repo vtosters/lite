@@ -1,7 +1,9 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Globals.getApplicationName;
+import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
+import static ru.vtosters.lite.utils.Preferences.oldabout;
 
 import android.content.Context;
 

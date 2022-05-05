@@ -31,19 +31,19 @@
 
 
 # instance fields
-.field private b:Lcom/vk/im/engine/models/messages/NestedMsg$Type;
+.field public b:Lcom/vk/im/engine/models/messages/NestedMsg$Type;
 
-.field private c:I
+.field public c:I
 
-.field private d:I
+.field public d:I
 
-.field private e:Lcom/vk/im/engine/models/Member;
+.field public e:Lcom/vk/im/engine/models/Member;
 
-.field private f:Ljava/lang/String;
+.field public f:Ljava/lang/String;
 
-.field private g:Ljava/lang/String;
+.field public g:Ljava/lang/String;
 
-.field private h:Ljava/util/List;
+.field public h:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -53,7 +53,7 @@
     .end annotation
 .end field
 
-.field private i:Ljava/util/List;
+.field public i:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -63,7 +63,7 @@
     .end annotation
 .end field
 
-.field private j:J
+.field public j:J
 
 
 # direct methods

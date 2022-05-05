@@ -1,9 +1,13 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.About.*;
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Preferences.*;
-import static ru.vtosters.lite.utils.Proxy.*;
+import static ru.vtosters.lite.utils.About.getBuildNumber;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getUserSecret;
+import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.Preferences.dev;
+import static ru.vtosters.lite.utils.Preferences.getLocale;
+import static ru.vtosters.lite.utils.Preferences.vksans;
+import static ru.vtosters.lite.utils.Proxy.proxy;
 
 import com.vk.core.ui.themes.VKThemeHelper;
 

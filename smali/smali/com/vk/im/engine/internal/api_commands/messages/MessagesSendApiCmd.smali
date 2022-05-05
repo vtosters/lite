@@ -261,6 +261,10 @@
 
     move-result-object v6
 
+    invoke-static {p0}, Lru/vtosters/lite/encryption/EncryptProvider;->encryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
+
+    move-result-object v6
+
     invoke-interface {v2, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 108

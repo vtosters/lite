@@ -34,6 +34,13 @@ import java.util.Locale;
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
 
+    static SharedPreferences prefs = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+
+    public static SharedPreferences getPrefs() {
+        if (prefs == null) prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        return prefs;
+    }
+
     // Current UserId
     public static int getUserId() {
         return VKAccountManager.b().a();
@@ -205,6 +212,11 @@ public class Globals {
                 activities.remove(activity);
             }
         });
+    }
+
+    public static Activity getCurrentActivity() {
+        if (activities.size() == 0) return null;
+        else return activities.get(0);
     }
 
     public static String getApplicationName() {
