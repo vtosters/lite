@@ -655,6 +655,8 @@
 
     invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/messages/Msg;->f(I)V
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->setBodyDBParser(Lcom/vk/im/engine/models/messages/Msg;)V
+
     return-object v0
 
     :pswitch_data_0

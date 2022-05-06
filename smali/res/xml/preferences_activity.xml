@@ -55,6 +55,11 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="undeletemsg"
+            android:summary="Может не сохранять вложения"
+            android:title="Оставлять удаленные сообщения" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="awayphp"
             android:summary="@string/vtlawayphpsummary"

@@ -74,6 +74,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
+            SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+            prefs.edit().clear().commit();
             VKImageLoader.b();
             ImEngineProvider.a().h();
             AudioMessageUtils.j();

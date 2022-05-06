@@ -61,8 +61,17 @@
 
 # virtual methods
 .method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollChanges;)V
-    .locals 2
+    .locals 4
 
+    invoke-static {}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return-void
+
+    :cond_7
     const-string v0, "out"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V
@@ -83,8 +92,19 @@
 .end method
 
 .method protected b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;Lcom/vk/im/engine/internal/longpoll/LongPollEntityMissed;)V
-    .locals 1
+    .locals 4
 
+    invoke-static {p0}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hookDeletedMessageId(Lcom/vk/im/engine/internal/longpoll/a/MsgDeleteLpTask;)V
+
+    invoke-static {}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    return-void
+
+    :cond_a
     const-string v0, "lpInfo"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V
@@ -120,8 +140,19 @@
 .end method
 
 .method protected c(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
-    .locals 3
+    .locals 5
 
+    invoke-static {}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->hook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-static {p0}, Lru/vtosters/lite/utils/DeletedMessagesHandler;->updateDialog(Lcom/vk/im/engine/internal/longpoll/a/MsgDeleteLpTask;)V
+
+    return-void
+
+    :cond_a
     const-string v0, "lpInfo"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V
