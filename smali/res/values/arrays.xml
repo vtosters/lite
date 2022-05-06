@@ -696,4 +696,14 @@
         <item>no_update</item>
         <item>imd_update</item>
     </string-array>
+    <string-array name="undel_value">
+        <item>[Deleted]</item>
+        <item>🗑</item>
+        <item>❌</item>
+    </string-array>
+    <string-array name="undel">
+        <item>default</item>
+        <item>icon</item>
+        <item>icon2</item>
+    </string-array>
 </resources>

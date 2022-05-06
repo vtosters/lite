@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
 
 import android.content.ContentValues;
@@ -27,17 +28,15 @@ public class DeletedMessagesHandler {
 
     private static List<Integer> sDeletedMessagesList = new ArrayList<>();
 
-    private static final String DELETED_PREFIX = "[Удалено] ";
-
     private static SQLiteDatabase sVKSQLiteDatabase;
     private static int sBodyIndex = -1;
-    private static DeletedMessagesDBHelper sToasterDatabase;
+    private static DeletedMessagesDBHelper sVTDatabase;
 
     public static void reloadMessagesList() {
-        if (sToasterDatabase == null) {
-            sToasterDatabase = new DeletedMessagesDBHelper();
+        if (sVTDatabase == null) {
+            sVTDatabase = new DeletedMessagesDBHelper();
         }
-        sDeletedMessagesList = new ArrayList<>(sToasterDatabase.loadAllMessages());
+        sDeletedMessagesList = new ArrayList<>(sVTDatabase.loadAllMessages());
     }
 
     public static void grabVKDatabase(CacheEnvironment storageEnvironment) {
@@ -71,9 +70,23 @@ public class DeletedMessagesHandler {
     }
 
     private static void editTextOfMsg(MsgFromUser msgFromUser) {
-        if (!msgFromUser.e.startsWith(DELETED_PREFIX)) {
-            msgFromUser.e = DELETED_PREFIX + EncryptProvider.decryptMessage(msgFromUser);
+        if (!msgFromUser.e.startsWith(getPreifxUndelete())) {
+            msgFromUser.e = getPreifxUndelete() + EncryptProvider.decryptMessage(msgFromUser);
         }
+    }
+
+    private static String getPreifxUndelete() {
+        String string = getPreferences().getString("undeletemsg_prefix", "");
+        if (string.isEmpty()) {
+            return "[Удалено] ";
+        }
+        if (string.equals("icon")) {
+            return "\uD83D\uDDD1 ";
+        }
+        if (string.equals("icon2")) {
+            return "❌ ";
+        }
+        return "[Удалено] ";
     }
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) {
@@ -100,7 +113,7 @@ public class DeletedMessagesHandler {
         }
 
         sDeletedMessagesList.add(messageId);
-        sToasterDatabase.saveDeletedMessage(messageId);
+        sVTDatabase.saveDeletedMessage(messageId);
     }
 
     public static Cursor getMessageFromDatabaseById(int messageId) {

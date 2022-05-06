@@ -500,4 +500,9 @@
         <item>Не обновлять</item>
         <item>Обновлять мгновенно</item>
     </string-array>
+    <string-array name="undel_value">
+        <item>[Удалено]</item>
+        <item>🗑</item>
+        <item>❌</item>
+    </string-array>
 </resources>

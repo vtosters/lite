@@ -54,6 +54,13 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Выберите значение"
+            android:entries="@array/undel_value"
+            android:entryValues="@array/undel"
+            android:key="undeletemsg_prefix"
+            android:title="Пометка удаленного сообщения" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="undeletemsg"
