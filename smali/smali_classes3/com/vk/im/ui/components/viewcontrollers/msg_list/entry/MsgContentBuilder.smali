@@ -168,6 +168,10 @@
 
     move-result-object v2
 
+    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
+
+    move-result-object v2
+
     check-cast v2, Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -499,6 +503,14 @@
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/NestedMsg;->E()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/NestedMsg;->b()I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
