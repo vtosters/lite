@@ -1,12 +1,15 @@
 package ru.vtosters.lite.ui.fragments.multiaccount;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Globals.isNetworkConnected;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 import static ru.vtosters.lite.utils.Themes.recolorDrawable;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
@@ -127,6 +130,8 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+                    prefs.edit().clear().commit();
                     restartApplication();
                 });
                 Drawable drawable = recolorDrawable(getResources().getDrawable(R.drawable.ic_list_add));
@@ -143,6 +148,8 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+                    prefs.edit().clear().commit();
                     restartApplication();
 
                 });
@@ -164,6 +171,8 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
                     VKAccount b = VKAccountManager.b();
                     PushSubscriber.a.a(b.b(), b.c());
                     AppContextHolder.a.getSharedPreferences("gcm", 0).edit().clear().apply();
+                    SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+                    prefs.edit().clear().commit();
                     restartApplication();
                 });
             }

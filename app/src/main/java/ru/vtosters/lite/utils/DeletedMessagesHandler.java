@@ -27,7 +27,7 @@ public class DeletedMessagesHandler {
 
     private static List<Integer> sDeletedMessagesList = new ArrayList<>();
 
-    private static final String DELETED_PREFIX = "\uD83D\uDDD1 ";
+    private static final String DELETED_PREFIX = "[Удалено] ";
 
     private static SQLiteDatabase sVKSQLiteDatabase;
     private static int sBodyIndex = -1;
@@ -45,7 +45,7 @@ public class DeletedMessagesHandler {
     }
 
     public static boolean hook() {
-        return BooleanFalse("hook_deleted_messages");
+        return BooleanFalse("undeletemsg");
     }
 
     public static void setBodyDBParser(Msg msg) {
