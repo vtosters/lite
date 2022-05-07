@@ -52,9 +52,7 @@ public class Newsfeed {
 
     public static boolean isBlockedByFilter(String str) {
         for (String str2 : mFilters) {
-            if (str.toLowerCase().contains(str2.toLowerCase())) {
-                return true;
-            }
+            if (str.toLowerCase().contains(str2.toLowerCase())) return true;
         }
         return false;
     }
@@ -119,8 +117,7 @@ public class Newsfeed {
             if (!Preferences.captions()) {
                 return true;
             }
-            boolean postsrecomm = postsrecomm();
-            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && !postsrecomm) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && postsrecomm) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && postsrecomm) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && postsrecomm) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && postsrecomm))));
+            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && !postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && postsrecomm()) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && postsrecomm()) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && postsrecomm()))));
         } catch (JSONException unused) {
             return false;
         }
@@ -174,92 +171,69 @@ public class Newsfeed {
     }
 
     public static String getCommentsSort(String def) {
-        String string = getPreferences().getString("commentssort", "");
-        if (string.isEmpty()) {
-            return def;
+        switch (getPreferences().getString("commentssort", "")) {
+            case "new":
+                return "desc";
+            case "old":
+                return "asc";
+            default:
+                return def;
         }
-        if (string.equals("new")) {
-            return "desc";
-        }
-        if (string.equals("old")) {
-            return "asc";
-        }
-        return def;
     }
 
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
-        String string = getPreferences().getString("newsupdate", "");
-        if (string.isEmpty()) {
-            return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
+        switch (getPreferences().getString("newsupdate", "")) {
+            case "no_update":
+                return MAX_VALUE;
+            case "imd_update":
+                return 10000L;
+            default:
+                return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
         }
-        if (string.equals("no_update")) {
-            return MAX_VALUE;
-        }
-        if (string.equals("imd_update")) {
-            return 10000L;
-        }
-        return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
     }
 
     public static Class getStartFragment() {
-        String string = getPreferences().getString("start_values", "");
-        if (string.equals("default")) {
-            return getInstance().getSelectedTabs().get(0).fragmentClass;
+        switch (getPreferences().getString("start_values", "")) {
+            case "newsfeed":
+                return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
+            case "messenger":
+                return DialogsFragment.class;
+            case "groups":
+                return GroupsFragment.class;
+            case "music":
+                return MusicFragment.class;
+            case "friends":
+                return FriendsFragment.class;
+            case "photos":
+                return PhotosFragment.class;
+            case "videos":
+                return VideosFragment.class;
+            case "settings":
+                return SettingsListFragment.class;
+            case "apps":
+                return AppsFragment.class;
+            case "discover":
+                return newfeed() ? GatewaysFragment.class : DiscoverFragment.class;
+            case "notifications":
+                return NotificationsContainerFragment.class;
+            case "money":
+                return MoneyTransfersFragment.class;
+            case "games":
+                return GamesFragment.class;
+            case "liked":
+                return FaveTabFragment.class;
+            case "menu":
+                return MenuFragment.class;
+            case "profile":
+                return ProfileFragment.class;
+            case "lives":
+                return LivesTabsFragment.class;
+            case "docs":
+                return DocumentsViewFragment.class;
+            case "brtd":
+                return BirthdaysFragment.class;
+            default:
+                return getInstance().getSelectedTabs().get(0).fragmentClass;
         }
-        if (string.equals("newsfeed")) {
-            return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
-        }
-        if (string.equals("messenger")) {
-            return DialogsFragment.class;
-        }
-        if (string.equals("groups")) {
-            return GroupsFragment.class;
-        }
-        if (string.equals("music")) {
-            return MusicFragment.class;
-        }
-        if (string.equals("friends")) {
-            return FriendsFragment.class;
-        }
-        if (string.equals("photos")) {
-            return PhotosFragment.class;
-        }
-        if (string.equals("videos")) {
-            return VideosFragment.class;
-        }
-        if (string.equals("settings")) {
-            return SettingsListFragment.class;
-        }
-        if (string.equals("apps")) {
-            return AppsFragment.class;
-        }
-        if (string.equals("discover")) {
-            return newfeed() ? GatewaysFragment.class : DiscoverFragment.class;
-        }
-        if (string.equals("notifications")) {
-            return NotificationsContainerFragment.class;
-        }
-        if (string.equals("money")) {
-            return MoneyTransfersFragment.class;
-        }
-        if (string.equals("games")) {
-            return GamesFragment.class;
-        }
-        if (string.equals("liked")) {
-            return FaveTabFragment.class;
-        }
-        if (string.equals("menu")) {
-            return MenuFragment.class;
-        }
-        if (string.equals("profile")) {
-            return ProfileFragment.class;
-        }
-        if (string.equals("lives")) {
-            return LivesTabsFragment.class;
-        }
-        if (string.equals("docs")) {
-            return DocumentsViewFragment.class;
-        }
-        return string.equals("brtd") ? BirthdaysFragment.class : getInstance().getSelectedTabs().get(0).fragmentClass;
     }
 }

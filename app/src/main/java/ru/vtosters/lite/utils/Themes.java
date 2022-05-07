@@ -55,41 +55,35 @@ public class Themes {
     }
 
     public static VKTheme getDarkTheme() {
-        String string = getPreferences().getString("darktheme", "");
-        if (string.isEmpty()) {
-            return VKTheme.DARK;
+        switch (getPreferences().getString("darktheme", "")) {
+            case "amoled":
+                return VKTheme.AMOLED;
+            default:
+                return VKTheme.DARK;
         }
-        if (string.equals("amoled")) {
-            return VKTheme.AMOLED;
-        }
-        return VKTheme.DARK;
     }
 
     public static ImTheme getImDarkTheme() {
-        String string = getPreferences().getString("darktheme", "");
-        if (string.isEmpty()) {
-            return ImTheme.VKAPP_DARK;
+        switch (getPreferences().getString("darktheme", "")) {
+            case "amoled":
+                return ImTheme.VKAPP_AMOLED;
+            default:
+                return ImTheme.VKAPP_DARK;
         }
-        if (string.equals("amoled")) {
-            return ImTheme.VKAPP_AMOLED;
-        }
-        return ImTheme.VKAPP_DARK;
     }
 
     public static VKTheme getLightTheme() {
-        String string = getPreferences().getString("lighttheme", "");
-        if (string.isEmpty()) {
-            return VKTheme.DEFAULT_LIGHT;
+        switch (getPreferences().getString("lighttheme", "")) {
+            default:
+                return VKTheme.DEFAULT_LIGHT;
         }
-        return VKTheme.DEFAULT_LIGHT;
     }
 
     public static ImTheme getImLightTheme() {
-        String string = getPreferences().getString("lighttheme", "");
-        if (string.isEmpty()) {
-            return ImTheme.VKAPP_LIGHT;
+        switch (getPreferences().getString("lighttheme", "")) {
+            default:
+                return ImTheme.VKAPP_LIGHT;
         }
-        return ImTheme.VKAPP_LIGHT;
     }
 
     public static int getColorFromAttr(int attr) {
@@ -101,11 +95,7 @@ public class Themes {
     }
 
     public static boolean isAndroidMonet() {
-        if (color_grishka()) {
-            return Build.VERSION.SDK_INT >= 31;
-        } else {
-            return false;
-        }
+        return color_grishka() && Build.VERSION.SDK_INT >= 31;
     }
 
     public static boolean isColorRefAccented(int i) {
