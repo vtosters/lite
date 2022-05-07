@@ -39,10 +39,6 @@
             android:title="Фикс некоторых покрасок Monet" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="vkim_msg"
-            android:title="VK Me theme" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
             android:key="libverify"
             android:summary="Включение может пофиксить 2фа вход"
             android:title="libverify support" />

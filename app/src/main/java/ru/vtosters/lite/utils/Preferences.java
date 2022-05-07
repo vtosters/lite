@@ -308,10 +308,7 @@ public class Preferences {
 
     public static String VKVersion() {
         String string = getPreferences().getString("vkversion", "");
-        if (!string.isEmpty()) {
-            return string;
-        }
-        return "5.29";
+        return !string.isEmpty() ? string : "5.29";
     }
 
     public static String getLocale() {
