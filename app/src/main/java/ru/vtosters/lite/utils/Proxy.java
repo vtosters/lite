@@ -87,15 +87,11 @@ public class Proxy {
             case "zaborona":
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 properties.setProperty("socksProxyPort", "1488");
-                clearProperty("java.net.socks.username");
-                clearProperty("java.net.socks.password");
                 resetProxySocks();
                 break;
             case "socks":
                 properties.setProperty("socksProxyHost", proxyHostSocks());
                 properties.setProperty("socksProxyPort", proxyPortSocks());
-                properties.setProperty("java.net.socks.username", proxyUserSocks());
-                properties.setProperty("java.net.socks.password", proxyPassSocks());
                 resetProxySocks();
                 break;
             case "http":
@@ -129,8 +125,6 @@ public class Proxy {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-        clearProperty("java.net.socks.username");
-        clearProperty("java.net.socks.password");
     }
 
     public static void resetProxySocks() {
@@ -151,8 +145,6 @@ public class Proxy {
         clearProperty("https.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-        clearProperty("java.net.socks.username");
-        clearProperty("java.net.socks.password");
     }
 
     public static void resetProxyHttps() {
@@ -162,8 +154,6 @@ public class Proxy {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-        clearProperty("java.net.socks.username");
-        clearProperty("java.net.socks.password");
     }
 
     public static String proxyHostHTTP() {
@@ -206,11 +196,6 @@ public class Proxy {
         return string.isEmpty() ? "" : string;
     }
 
-    public static String proxyUserSocks() {
-        String string = getPreferences().getString("proxyUserSocks", "");
-        return string.isEmpty() ? "" : string;
-    }
-
     public static String proxyPassHTTP() {
         String string = getPreferences().getString("proxyPassHTTP", "");
         return string.isEmpty() ? "" : string;
@@ -218,11 +203,6 @@ public class Proxy {
 
     public static String proxyPassHTTPS() {
         String string = getPreferences().getString("proxyPassHTTPS", "");
-        return string.isEmpty() ? "" : string;
-    }
-
-    public static String proxyPassSocks() {
-        String string = getPreferences().getString("proxyPassSocks", "");
         return string.isEmpty() ? "" : string;
     }
 

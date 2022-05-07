@@ -80,16 +80,6 @@
             android:defaultValue=""
             android:key="proxyPortSocks"
             android:title="@string/proxyport" />
-        <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyUserSocks"
-            android:summary="Если имеется"
-            android:title="Логин" />
-        <EditTextPreference
-            android:defaultValue=""
-            android:key="proxyPassSocks"
-            android:summary="Если имеется"
-            android:title="Пароль" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
