@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/vtosters/lite/api/stats/StatsTrackUploadServerStateAPIRequest$a;)V
     .locals 5
 
-    return-void
-
     const-string v0, "stats.trackUploadServerState"
 
     .line 27
