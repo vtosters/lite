@@ -39,7 +39,7 @@
     .locals 0
 
     .line 295
-    invoke-static {}, Lcom/vk/medianative/MediaNative;->nativeAudioStopRecord()V
+    invoke-static {}, Lru/vtosters/lite/utils/OpusLoader;->AudioStopRecordBridge()V
 
     return-void
 .end method

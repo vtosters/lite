@@ -46,6 +46,10 @@
             android:defaultValue="false"
             android:key="msgflat"
             android:title="@string/vtlmsgflat" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="opusmodule"
+            android:title="Opus Module" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="system"
             android:dialogTitle="Выберите язык приложения"

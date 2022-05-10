@@ -19,7 +19,7 @@ import com.vtosters.lite.R;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import ru.vtosters.lite.badmanners.DeviceInfoCollector;
+import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 
 public class Crashreporter {
     protected static String logString;

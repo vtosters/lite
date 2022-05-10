@@ -198,7 +198,7 @@
     move-result v3
 
     :goto_2
-    invoke-static {v1, v3}, Lcom/vk/medianative/MediaNative;->nativeAudioWriteFrame(Ljava/nio/ByteBuffer;I)I
+    invoke-static {v1, v3}, Lru/vtosters/lite/utils/OpusLoader;->AudioWriteFrameBridge(Ljava/nio/ByteBuffer;I)I
 
     move-result v1
 
