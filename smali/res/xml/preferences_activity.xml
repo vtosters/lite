@@ -77,13 +77,13 @@
             android:summary="@string/benchapisummary"
             android:title="@string/benchapi" />
         <EditTextPreference
-            android:defaultValue="5.29"
-            android:key="vkversion"
+            android:defaultValue="7.24"
+            android:key="vkver"
             android:summary="Требуется перезапуск"
             android:title="Подмена версии ВК" />
         <EditTextPreference
-            android:defaultValue="3439"
-            android:key="vkversionbuild"
+            android:defaultValue="12116"
+            android:key="vkbuild"
             android:summary="Требуется перезапуск"
             android:title="Подмена версии билда ВК" />
     </PreferenceCategory>

@@ -24,6 +24,9 @@ import java.util.Locale;
 public class Preferences {
     public static String VERSIONNAME = "Beta";
 
+    public static Integer VKBUILD = 12116; // 3439 orig
+    public static String VKVER = "7.24"; // 5.29 orig
+
     public static void init(Application application) {
         setupFilters();
         fixGapps();
@@ -313,13 +316,13 @@ public class Preferences {
     }
 
     public static String VKVersion() {
-        String string = getPreferences().getString("vkversion", "");
-        return !string.isEmpty() ? string : "5.29";
+        String string = getPreferences().getString("vkver", "");
+        return !string.isEmpty() ? string : VKVER;
     }
 
     public static int VKVersionBuild() {
-        String string = getPreferences().getString("vkversionbuild", "");
-        return !string.isEmpty() ? Integer.parseInt(string) : 3439;
+        String string = getPreferences().getString("vkbuild", "");
+        return !string.isEmpty() ? Integer.parseInt(string) : VKBUILD;
     }
 
     public static long VKVersionBuildLong() {
