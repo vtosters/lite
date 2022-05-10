@@ -1,8 +1,7 @@
 package ru.vtosters.lite.f0x1d;
 
-import static ru.vtosters.lite.utils.About.*;
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.About.getBuildNumber;
+import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -37,7 +36,7 @@ public class Crashreporter {
     }
 
     static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity) {
-        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(getContext()).toDeviceName() + "\n VTL Version: " + VERSIONNAME + ", build: " + getBuildNumber();
+        logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(getContext()).toDeviceName() + ", commit: " + getBuildNumber();
         if (Build.VERSION.SDK_INT >= 26) {
             var notificationChannel = new NotificationChannel("crashes", "crash", NotificationManager.IMPORTANCE_DEFAULT);
             notificationChannel.enableVibration(true);
@@ -61,7 +60,7 @@ public class Crashreporter {
 
         var builder = new Notification.Builder(getContext());
         builder.setSmallIcon(R.drawable.ic_bug_24);
-        builder.setContentTitle("VTL Крашнулся!");
+        builder.setContentTitle("Произошла ошибка в работе VTLite!");
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
         builder.setAutoCancel(true);
