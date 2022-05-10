@@ -51,9 +51,8 @@ public class OpusLoader {
     public static void AudioStopRecordBridge() {
         if (isReadyToUse()) {
             // Init custom AudioStopRecord
-        } else {
-            MediaNative.nativeAudioStopRecord();
         }
+        MediaNative.nativeAudioStopRecord();
     }
 
     private static boolean isReadyToUse() {
