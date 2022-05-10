@@ -268,28 +268,28 @@
     :try_start_0
     const-class v0, Landroid/support/v4/view/ViewPager;
 
-    const-string v1, "mScroller"
+    const-string v1, "m"
 
     .line 111
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    const-string v2, "m"
+    const-string v2, "scroller"
 
     .line 112
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    const-string v2, "sInterpolator"
+    const-string v2, "f"
 
     .line 113
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    const-string v3, "f"
+    const-string v3, "interpolator"
 
     .line 114
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
