@@ -1,5 +1,8 @@
 package ru.vtosters.lite.audio.gcm;
 
+import static ru.vtosters.lite.utils.Preferences.VKVersion;
+import static ru.vtosters.lite.utils.Preferences.VKVersionBuild;
+
 import android.os.Build;
 import android.util.Base64;
 
@@ -108,7 +111,7 @@ public class GCMFix {
             params.add("X-X-subscription=841415684880");
         }
         params.add("X-X-subtype=841415684880");
-        params.add("X-app_ver=3439");
+        params.add("X-app_ver=" + VKVersionBuild());
         params.add("X-kid=|ID|" + rid + "|");
         params.add("X-osv=30");
         params.add("X-sig=" + sig);
@@ -129,12 +132,12 @@ public class GCMFix {
         if (!del) {
             params.add("X-gmp_app_id=1:841415684880:android:632f429381141121");
         }
-        params.add("X-app_ver_name=5.29");
+        params.add("X-app_ver_name=" + VKVersion());
         params.add("app=com.vkontakte.android");
         params.add("sender=841415684880");
         params.add("device=" + androidId);
         params.add("cert=48761eef50ee53afc4cc9c5f10e6bde7f8f5b82f");
-        params.add("app_ver=3439");
+        params.add("app_ver=" + VKVersionBuild());
         params.add("gcm_ver=11949470");
     }
 

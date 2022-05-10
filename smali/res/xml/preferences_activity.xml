@@ -76,5 +76,15 @@
             android:key="benchmark"
             android:summary="@string/benchapisummary"
             android:title="@string/benchapi" />
+        <EditTextPreference
+            android:defaultValue="5.29"
+            android:key="vkversion"
+            android:summary="Требуется перезапуск"
+            android:title="Подмена версии ВК" />
+        <EditTextPreference
+            android:defaultValue="3439"
+            android:key="vkversionbuild"
+            android:summary="Требуется перезапуск"
+            android:title="Подмена версии билда ВК" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -47,7 +47,9 @@
 
     aput-object v2, v1, v3
 
-    const/16 v2, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v2
 
     .line 39
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

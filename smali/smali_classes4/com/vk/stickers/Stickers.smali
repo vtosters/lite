@@ -569,7 +569,9 @@
 
     move-result-wide v0
 
-    const-wide/16 v2, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuildLong()J
+
+    move-result-wide v2
 
     cmp-long v4, v0, v2
 

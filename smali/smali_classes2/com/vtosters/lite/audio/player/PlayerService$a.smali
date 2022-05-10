@@ -190,7 +190,9 @@
 
     const-string v2, "music_build_version"
 
-    const/16 v3, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v3
 
     .line 809
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

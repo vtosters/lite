@@ -1404,12 +1404,22 @@
 
     .line 720
     iget v6, v5, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v6
+
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 721
     :try_start_1
     iget-object v4, v5, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersion()Ljava/lang/String;
+
+    move-result-object v4
+
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 

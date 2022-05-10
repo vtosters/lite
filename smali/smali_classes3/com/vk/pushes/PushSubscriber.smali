@@ -339,7 +339,9 @@
 
     move-result v5
 
-    const/16 v6, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v6
 
     invoke-direct {p0}, Lcom/vk/pushes/PushSubscriber;->a()Ljava/lang/String;
 

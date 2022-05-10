@@ -272,6 +272,10 @@
     .line 66
     iget v1, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v1
+
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -280,6 +284,10 @@
 
     .line 67
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersion()Ljava/lang/String;
+
+    move-result-object v0
 
     iput-object v0, p0, Lcom/google/firebase/iid/o;->c:Ljava/lang/String;
     :try_end_0

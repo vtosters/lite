@@ -10,11 +10,6 @@
         android:key="devmenu"
         android:title="Показывать пункт дебага в настройках" />
     <PreferenceCategory android:title="Experimental">
-        <EditTextPreference
-            android:defaultValue=""
-            android:key="vkversion"
-            android:summary="Требуется перезапуск"
-            android:title="Изменение версии вк" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="usevkui"
