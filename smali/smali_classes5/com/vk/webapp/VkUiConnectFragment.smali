@@ -1595,6 +1595,8 @@
 .method private final br()V
     .locals 3
 
+    return-void
+
     .line 740
     invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->aC()Lio/reactivex/disposables/CompositeDisposable;
 

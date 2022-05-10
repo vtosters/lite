@@ -62,6 +62,8 @@
     .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const p1, 0x0
+
     iput p1, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->d:I
 
     iput-object p2, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->e:Ljava/lang/String;
@@ -409,6 +411,8 @@
 
 .method public b(I)V
     .locals 6
+
+    return-void
 
     .line 43
     iget v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->d:I
