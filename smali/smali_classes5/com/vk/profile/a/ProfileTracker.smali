@@ -173,6 +173,8 @@
 
     .line 66
     :cond_0
+    return-void
+
     new-instance p0, Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "stats.trackEvents"

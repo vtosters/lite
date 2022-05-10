@@ -241,6 +241,8 @@
 .method public c()V
     .locals 4
 
+    return-void
+
     .line 73
     invoke-virtual {p0}, Lcom/vk/n/MasksAnalytics;->b()V
 

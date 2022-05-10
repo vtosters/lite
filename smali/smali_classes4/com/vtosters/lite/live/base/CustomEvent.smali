@@ -87,6 +87,8 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
+    return-void
+
     .line 71
     new-instance v1, Lcom/vtosters/lite/api/l/StatTrackCustomEvents;
 

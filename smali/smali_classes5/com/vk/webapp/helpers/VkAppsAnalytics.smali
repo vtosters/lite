@@ -101,6 +101,10 @@
 .method private final c()Lio/reactivex/disposables/Disposable;
     .locals 12
 
+    const/4 v0, 0x0
+
+    return-object v0
+
     .line 60
     iget-object v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->c:Ljava/util/List;
 
@@ -259,6 +263,10 @@
 .method public final a()Lio/reactivex/disposables/Disposable;
     .locals 3
 
+    const/4 v0, 0x0
+
+    return-object v0
+
     .line 14
     new-instance v0, Lcom/vtosters/lite/api/ResultlessAPIRequest;
 
@@ -302,6 +310,8 @@
 
 .method public a(I)V
     .locals 5
+
+    return-void
 
     .line 28
     iget v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->d:I
