@@ -38,6 +38,8 @@
 .method public run()V
     .locals 7
 
+    return-void
+
     .line 110
     iget-object v0, p0, Lcom/vk/attachpicker/analytics/EditorAnalytics$1;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 

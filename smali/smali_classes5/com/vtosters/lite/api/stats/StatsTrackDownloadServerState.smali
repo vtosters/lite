@@ -7,6 +7,8 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Exception;)V
     .locals 1
 
+    return-void
+
     const-string v0, "stats.trackDownloadServerState"
 
     .line 11

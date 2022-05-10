@@ -395,6 +395,8 @@
 .method private final d()V
     .locals 3
 
+    return-void
+
     .line 191
     new-instance v0, Lcom/vk/api/sdk/a/VKBooleanRequest;
 

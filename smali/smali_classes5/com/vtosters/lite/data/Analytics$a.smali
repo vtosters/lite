@@ -407,6 +407,10 @@
 .method public d()Lcom/vtosters/lite/data/Analytics$a;
     .locals 5
 
+    const/4 p0, 0x0
+
+    return-object p0
+
     .line 588
     iget-object v0, p0, Lcom/vtosters/lite/data/Analytics$a;->d:Ljava/lang/String;
 
