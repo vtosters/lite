@@ -317,6 +317,15 @@ public class Preferences {
         return !string.isEmpty() ? string : "5.29";
     }
 
+    public static int VKVersionBuild() {
+        String string = getPreferences().getString("vkversionbuild", "");
+        return !string.isEmpty() ? Integer.parseInt(string) : 3439;
+    }
+
+    public static long VKVersionBuildLong() {
+        return (long) VKVersionBuild();
+    }
+
     public static String getLocale() {
         String string = getPreferences().getString("lang_value", "");
         if (string.equals("system")) {

@@ -48,6 +48,11 @@
     move-result-object p0
 
     iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result p0
+
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -700,6 +705,10 @@
     move-result-object p0
 
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersion()Ljava/lang/String;
+
+    move-result p0
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 

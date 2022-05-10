@@ -552,7 +552,9 @@
 .method private final c()V
     .locals 8
 
-    const/16 v0, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v0
 
     .line 159
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

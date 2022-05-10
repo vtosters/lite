@@ -34,6 +34,11 @@
 
     .line 23
     iget v1, v1, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v1
+
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -376,7 +376,9 @@
 
     const-string v5, "music_build_version"
 
-    const/16 v6, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v6
 
     .line 745
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1142,7 +1144,9 @@
 
     const-string v2, "music_build_version"
 
-    const/16 v3, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v3
 
     .line 579
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2499,7 +2503,9 @@
 
     const-string v0, "music_build_version"
 
-    const/16 v1, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v1
 
     .line 394
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

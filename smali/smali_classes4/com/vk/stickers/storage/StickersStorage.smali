@@ -126,7 +126,9 @@
 
     long-to-int v0, v0
 
-    const/16 v1, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v1
 
     if-eq v0, v1, :cond_0
 
@@ -161,7 +163,9 @@
 
     iget-object v1, p0, Lcom/vk/stickers/storage/StickersStorage;->b:Ljava/lang/String;
 
-    const/16 v2, 0xd6f
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+
+    move-result v2
 
     int-to-long v2, v2
 
