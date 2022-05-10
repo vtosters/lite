@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="#fffafbfc"
+<FrameLayout android:background="?tabbar_background"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -27,7 +27,7 @@
 
         <com.vk.im.ui.views.span.SpanPressableTextView
             android:textSize="14.0sp"
-            android:textColor="#ff71757a"
+            android:textColor="?text_primary"
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
@@ -56,13 +56,13 @@
             android:layout_height="48.0dip"
             android:src="@drawable/ic_cancel_24"
             android:scaleType="centerInside"
-            android:tint="@color/light_gray"
+            android:tint="?text_primary"
             android:contentDescription="@null" />
     </LinearLayout>
 
     <TextView
         android:textSize="14.0sp"
-        android:textColor="#ff71757a"
+        android:textColor="?text_primary"
         android:ellipsize="end"
         android:layout_gravity="start|center"
         android:id="@id/loading"
@@ -77,7 +77,7 @@
 
     <TextView
         android:textSize="14.0sp"
-        android:textColor="#ff71757a"
+        android:textColor="?text_primary"
         android:ellipsize="end"
         android:layout_gravity="start|center"
         android:id="@id/error"
