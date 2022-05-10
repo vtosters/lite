@@ -1,4 +1,4 @@
-package ru.vtosters.lite.badmanners;
+package ru.vtosters.lite.deviceinfo;
 
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;

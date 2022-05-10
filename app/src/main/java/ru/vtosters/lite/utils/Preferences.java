@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
+import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 
 import android.app.Application;
@@ -30,6 +31,7 @@ public class Preferences {
         migrate();
         reloadMessagesList();
         registerActivities(application);
+        LoadLibrary("vkopustest");
     }
 
     public static boolean BooleanFalse(String key) {
@@ -40,6 +42,10 @@ public class Preferences {
     public static boolean BooleanTrue(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         return prefs.getBoolean(key, true);
+    }
+
+    public static boolean opusmodule() {
+        return BooleanTrue("opusmodule");
     }
 
     public static boolean authorsrecomm() {

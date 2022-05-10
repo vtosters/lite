@@ -1,4 +1,4 @@
-package ru.vtosters.lite.badmanners;
+package ru.vtosters.lite.deviceinfo;
 
 public class Device {
     private String androidId;

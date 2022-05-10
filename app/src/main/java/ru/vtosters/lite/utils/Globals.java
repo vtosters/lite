@@ -16,10 +16,10 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.UserProfile;
 import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
@@ -144,7 +144,7 @@ public class Globals {
     }
 
     public static void sendToast(String text) {
-        ToastUtils.a(text);
+        Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     public static boolean isEmpty(String str) {

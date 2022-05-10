@@ -116,7 +116,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/vk/medianative/MediaNative;->nativeAudioStartRecord(Ljava/lang/String;)I
+    invoke-static {v3}, Lru/vtosters/lite/utils/OpusLoader;->AudioStartRecordBridge(Ljava/lang/String;)I
 
     move-result v3
 
@@ -207,7 +207,9 @@
     .line 360
     iget-object v3, p0, Lcom/vk/audio/AudioMessageUtils$c;->a:Lcom/vk/audio/AudioMessageUtils;
 
-    const-wide/16 v4, 0x0
+    invoke-static {}, Lru/vtosters/lite/utils/OpusLoader;->getLength()J
+
+    move-result-wide v4
 
     invoke-static {v3, v4, v5}, Lcom/vk/audio/AudioMessageUtils;->a(Lcom/vk/audio/AudioMessageUtils;J)J
 
@@ -324,7 +326,7 @@
     invoke-interface {v3, v4}, Lcom/vk/audio/AudioRecordObserver;->a(Ljava/lang/String;)V
 
     .line 373
-    invoke-static {}, Lcom/vk/medianative/MediaNative;->nativeAudioStopRecord()V
+    invoke-static {}, Lru/vtosters/lite/utils/OpusLoader;->AudioStopRecordBridge()V
 
     .line 374
     iget-object v3, p0, Lcom/vk/audio/AudioMessageUtils$c;->a:Lcom/vk/audio/AudioMessageUtils;
