@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
 import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
+import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
 import android.app.Application;
 import android.content.Context;
@@ -35,7 +36,9 @@ public class Preferences {
         reloadMessagesList();
         registerActivities(application);
         LoadLibrary("vkopustest");
+        systemThemeChanger();
     }
+
 
     public static boolean BooleanFalse(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
@@ -49,6 +52,10 @@ public class Preferences {
 
     public static boolean opusmodule() {
         return BooleanTrue("opusmodule");
+    }
+
+    public static boolean systemtheme() {
+        return BooleanTrue("systemtheme");
     }
 
     public static boolean authorsrecomm() {

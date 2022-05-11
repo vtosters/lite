@@ -5,10 +5,12 @@ import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
+import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +21,7 @@ import com.vk.core.d.RecoloredDrawable;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.im.ui.themes.ImTheme;
+import com.vk.im.ui.themes.ImThemeHelper;
 import com.vtosters.lite.R;
 
 public class Themes {
@@ -193,5 +196,27 @@ public class Themes {
             return "images_with_background";
         }
         return "images";
+    }
+
+    public static void systemThemeChanger() {
+        if (!systemtheme())
+            return;
+        int currentNightMode = getContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        switch (currentNightMode) {
+            case Configuration.UI_MODE_NIGHT_UNDEFINED:
+                changeTheme(getLightTheme(), getImLightTheme());
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                changeTheme(getLightTheme(), getImLightTheme());
+                break;
+            case Configuration.UI_MODE_NIGHT_YES:
+                changeTheme(getDarkTheme(), getImDarkTheme());
+                break;
+        }
+    }
+
+    public static void changeTheme(VKTheme theme, ImTheme imtheme) {
+            VKThemeHelper.b.a(theme);
+            ImThemeHelper.b.a(imtheme);
     }
 }

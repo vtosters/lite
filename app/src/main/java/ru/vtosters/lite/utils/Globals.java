@@ -239,4 +239,13 @@ public class Globals {
         resources.updateConfiguration(configuration, resources.getDisplayMetrics());
         return context;
     }
+
+    public static float[] getCenterScreenCoords() {
+        int width = getResources().getDisplayMetrics().widthPixels;
+        int height = getResources().getDisplayMetrics().heightPixels;
+
+        int centerWidth = width/2;
+        int centerHeight = height/2;
+        return new float[] {centerWidth, centerHeight};
+    }
 }
