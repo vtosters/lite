@@ -73,6 +73,5 @@
             android:key="dockcounter"
             android:summary="@string/docknumberssum"
             android:title="@string/docknumbers" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

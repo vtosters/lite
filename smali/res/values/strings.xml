@@ -4243,7 +4243,7 @@ Warning! It can cause long downloads of user lists if there are a lot of users i
     <string name="ctypedisabled">Not set</string>
     <string name="ctypesocks">Socks</string>
     <string name="dnr">Do not read</string>
-    <string name="dns">Send status of viewing stories</string>
+    <string name="dns">Status of viewing/checking stories</string>
     <string name="dnw">Do not write</string>
     <string name="docknumbers">Counters in dockbar</string>
     <string name="docknumberssum">"Disabling doesn't work in the tablet interface"</string>
@@ -4276,7 +4276,7 @@ Registration date:"</string>
 Expand text..."</string>
     <string name="interfacenewsfeed">Feed</string>
     <string name="interfacenewsfeedswipe">Side camera in the news</string>
-    <string name="interfacenewsfeedswipesum">Works only with the default newsfeed design</string>
+    <string name="interfacenewsfeedswipesum">Works only with classic newsfeed design</string>
     <string name="interfacestartfr">Default start fragment</string>
     <string name="interfacestartfrsum">Select start fragment</string>
     <string name="interfacevideo">Video</string>
@@ -4329,7 +4329,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="shitposting">The same type of news</string>
     <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine</string>
     <string name="showstories">Show stories</string>
-    <string name="showstoriessum">Show stories at the top of the feed</string>
+    <string name="showstoriessum">The story section at the top of the feed</string>
     <string name="showvtfire">Show special verifications</string>
     <string name="showvtverify">Show verifications</string>
     <string name="sprefsctype">Connection type</string>
@@ -4367,10 +4367,10 @@ You need to restart the application to apply proxy settings"</string>
     <string name="useproxy">Proxy variant</string>
     <string name="useproxyinfo">Information about using a proxy</string>
     <string name="useproxysum">Select the proxy variant</string>
-    <string name="vkuiinj">VKUI theming</string>
+    <string name="vkuiinj">Coloring web pages</string>
     <string name="vtlawayphpsummary">Tracking the user to personalize ads. Also checking links to the blacklist from VKontakte and antivirus</string>
     <string name="vtloffline">Send online status</string>
-    <string name="vtloffline2">Force offline requests</string>
+    <string name="vtloffline2">Force offline</string>
     <string name="vtloffline2summary">"Works only when online status sending is disabledsends instantly offline after sending messages and other api methods that are sent online
 
 May look like a fake leaving the online"</string>

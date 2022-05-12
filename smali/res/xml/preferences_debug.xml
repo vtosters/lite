@@ -3,7 +3,7 @@
     android:key="preferences_debug">
     <Preference
         android:enabled="false"
-        android:summary="Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках, что бы не было проблем с работой приложения!"
+        android:summary="Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках!"
         android:title="Внимание!" />
     <com.vtosters.lite.ui.MaterialSwitchPreference
         android:defaultValue="false"
@@ -28,10 +28,6 @@
             android:defaultValue="false"
             android:key="vkme_msg"
             android:title="VK Me MSG mode" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="color_grishka"
-            android:title="Фикс некоторых покрасок Monet" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="libverify"

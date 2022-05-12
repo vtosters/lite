@@ -24,6 +24,5 @@
             android:key="gcmfix"
             android:summary="Актуально если музыкальный раздел не работает (не отображается музыка или вместо музыки написано Слушайте в официальном приложении ВКонтакте) или же отсутствует компонент GMS"
             android:title="Исправление музыкального раздела" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -38,11 +38,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="navbar"
+            android:summary="Если системно имеется"
             android:title="@string/vtlnavbar" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="VKUI_INJ"
+            android:summary="Покраска страниц как VKID под тему приложения"
             android:title="@string/vkuiinj" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>
