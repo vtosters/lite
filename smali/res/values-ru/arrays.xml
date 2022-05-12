@@ -445,7 +445,7 @@
         <item>Украинский</item>
     </string-array>
     <string-array name="start">
-        <item>Стандартное</item>
+        <item>По умолчанию</item>
         <item>Новости</item>
         <item>Диалоги</item>
         <item>Меню</item>

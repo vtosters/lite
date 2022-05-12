@@ -9,6 +9,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="msgtails"
+            android:summary="Может некорректно работать с вложениями"
             android:title="@string/vtlmsgtails" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"

@@ -4,6 +4,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_no_ads"
+            android:summary="Обычные рекламные вставки в ленте между постами"
             android:title="@string/vtldads" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
@@ -13,10 +14,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_no_slider_ads"
+            android:summary="Реклама со списком (товаров)"
             android:title="@string/vtldca" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="adsstories"
+            android:summary="Реклама при перехеходе между историями"
             android:title="@string/vtldas" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
@@ -55,14 +58,17 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="friendsrecomm"
+            android:summary="Рекомендации возможных друзей"
             android:title="@string/vtlrecommendfriend" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="authorsrecomm"
+            android:summary="Рекомендации постов популярных авторов контента"
             android:title="@string/vtlrecommendauthor" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="postsrecomm"
+            android:summary="Рекомендации лайкнутых постов твоих друзей"
             android:title="@string/vtlrecommendfriendpost" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
@@ -89,6 +95,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="feedcache"
+            android:summary="Оставлять список загруженных постов в ленте"
             android:title="@string/vtlfeedcache" />
     </PreferenceCategory>
 </PreferenceScreen>

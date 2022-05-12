@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/dnr">
+        <Preference
+            android:enabled="false"
+            android:summary="Функция позволяет вам не отправлять статус вашего набора/написания сообщения"
+            android:title="Что это за функция?" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="read_pm"
@@ -16,6 +20,14 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnw">
+        <Preference
+            android:enabled="false"
+            android:summary="Функция позволяет вам не отправлять статус прочтения вами сообщения собеседника"
+            android:title="Что это за функция?" />
+        <Preference
+            android:enabled="false"
+            android:summary="Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника она прочитана не будет"
+            android:title="Внимание!" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="write_pm"
@@ -28,6 +40,32 @@
             android:defaultValue="false"
             android:key="write_bot"
             android:title="@string/act_bot" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/stories_vtl">
+        <Preference
+            android:enabled="false"
+            android:summary="Функция позволяет вам не отправлять статус просмотра вами историй"
+            android:title="Что это за функция?" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="dns"
+            android:title="@string/dns" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Анти-удаление сообщений">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="Выберите значение"
+            android:entries="@array/undel_value"
+            android:entryValues="@array/undel"
+            android:key="undeletemsg_prefix"
+            android:title="Пометка удаленного сообщения" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="undeletemsg"
+            android:summary="Может не сохранять вложения"
+            android:title="Оставлять удаленные сообщения" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
@@ -46,26 +84,7 @@
             android:title="@string/vtloffline2" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/stories_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="dns"
-            android:title="@string/dns" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="Выберите значение"
-            android:entries="@array/undel_value"
-            android:entryValues="@array/undel"
-            android:key="undeletemsg_prefix"
-            android:title="Пометка удаленного сообщения" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="undeletemsg"
-            android:summary="Может не сохранять вложения"
-            android:title="Оставлять удаленные сообщения" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="awayphp"

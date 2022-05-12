@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/vtsystem">
+    <PreferenceCategory android:title="Исправление работы приложения">
         <Preference
             android:key="firebasefix"
             android:summary="@string/firebasefixsum"
             android:title="@string/firebasefix" />
-        <Preference
-            android:key="clearcache"
-            android:summary="@string/clearcachesum"
-            android:title="@string/clearcache" />
-        <Preference
-            android:key="tokencopy"
-            android:title="@string/copytokenbtn" />
         <Preference
             android:key="stickfix"
             android:title="Очистить кэш стикеров"
             android:summary="Исправление загрузки стикеров при их полном отсутствии" />
         <Preference
             android:key="deleteprefs"
+            android:summary="Сбрасывает включенные вами функции модификации на значения по умолчанию"
             android:title="Сбросить настройки" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="color_grishka"
+            android:title="Исправление покрасок для Android 12" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtsystem">
+        <Preference
+            android:key="clearcache"
+            android:summary="@string/clearcachesum"
+            android:title="@string/clearcache" />
         <Preference
             android:key="applicationrestart"
             android:title="@string/applicationrestart" />
         <Preference
             android:key="applicationstop"
             android:title="@string/killappbtn" />
+        <Preference
+            android:key="tokencopy"
+            android:title="@string/copytokenbtn" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <!-- <PreferenceCategory android:title="Backup system">
@@ -60,6 +68,5 @@
             android:defaultValue="true"
             android:key="VT_Fire"
             android:title="@string/showvtfire" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

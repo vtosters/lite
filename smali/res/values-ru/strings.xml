@@ -4118,7 +4118,7 @@
     <string name="ctypedisabled">Не установлено</string>
     <string name="ctypesocks">Socks</string>
     <string name="dnr">Нечиталка</string>
-    <string name="dns">Отправка статуса просмотра истории</string>
+    <string name="dns">Статус просмотра/прочтения историй</string>
     <string name="dnw">Неписалка</string>
     <string name="docknumbers">Счётчики в докбаре</string>
     <string name="docknumberssum">Отключение не работает в интерфейсе для планшетов</string>
@@ -4151,7 +4151,7 @@
 Показать полностью..."</string>
     <string name="interfacenewsfeed">Лента</string>
     <string name="interfacenewsfeedswipe">Боковая камера в новостях</string>
-    <string name="interfacenewsfeedswipesum">Работает только со стандартным дизайном новостей</string>
+    <string name="interfacenewsfeedswipesum">Работает только с классическим дизайном новостей</string>
     <string name="interfacestartfr">Стандартный стартовый фрагмент</string>
     <string name="interfacestartfrsum">Выберите стартовый фрагмент</string>
     <string name="interfacevideo">Видео</string>
@@ -4204,7 +4204,7 @@
     <string name="shitposting">Однотипные новости</string>
     <string name="shitpostingsummary">Фильтр очистки постов с РФ и действиями связанными на Украине</string>
     <string name="showstories">Показывать истории</string>
-    <string name="showstoriessum">Показывать истории в верхней части ленты</string>
+    <string name="showstoriessum">Блок истории в верхней части ленты</string>
     <string name="showvtfire">Показывать специальные верификации</string>
     <string name="showvtverify">Показывать верификации</string>
     <string name="sprefsctype">Тип подключения</string>
@@ -4242,10 +4242,10 @@
     <string name="useproxy">Вариант прокси</string>
     <string name="useproxyinfo">Информация об использовании прокси</string>
     <string name="useproxysum">Выберите вариант прокси</string>
-    <string name="vkuiinj">Покраска VKUI</string>
+    <string name="vkuiinj">Покраска веб страниц</string>
     <string name="vtlawayphpsummary">Слежка за пользователем для персонализации рекламы. Также проверка ссылок на блэклист от ВКонтакте и антивирус</string>
     <string name="vtloffline">Отправка статуса онлайн</string>
-    <string name="vtloffline2">Принудительно отправлять офлайн запросы</string>
+    <string name="vtloffline2">Принудительный офлайн</string>
     <string name="vtloffline2summary">"Работает только при отключении отправки статуса онлайн
 Отправляет мгновенно в офлайн после отправки сообщений и прочих методов апи которые отправляют в онлайн
 
