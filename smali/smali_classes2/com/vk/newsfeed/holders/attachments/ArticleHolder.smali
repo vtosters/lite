@@ -768,18 +768,6 @@
     if-eqz v7, :cond_a
 
     .line 109
-    invoke-virtual {v7}, Lcom/vk/dto/common/VerifyInfo;->e()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_7
-
-    const v7, 0x7f0808cf
-
-    goto :goto_3
-
-    .line 109
-    :cond_7
     invoke-virtual {v7}, Lcom/vk/dto/common/VerifyInfo;->d()Z
 
     move-result v8
