@@ -1390,40 +1390,10 @@
     const/4 v2, 0x0
 
     :goto_3
-    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->e()Lcom/vk/dto/newsfeed/Owner;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/Owner;->f()Lcom/vk/dto/common/VerifyInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_8
-
-    invoke-virtual {v0}, Lcom/vk/dto/common/VerifyInfo;->e()Z
-
-    move-result p2
-
-    goto :goto_4
-
-    :cond_8
-    const/4 p2, 0x0
-
-    .line 308
-    :goto_4
     const v3, 0x7f0601bd
 
     const v4, 0x7f080365
 
-    if-eqz p2, :cond_9
-
-    const v4, 0x7f0808cf
-
-    const v1, 0x7f0808cf
-
-    goto :goto_6
-
-    :cond_9
     if-eqz v0, :cond_a
 
     if-eqz v2, :cond_a
