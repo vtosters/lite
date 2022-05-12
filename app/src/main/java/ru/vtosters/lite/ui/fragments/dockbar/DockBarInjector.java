@@ -1,8 +1,10 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
 
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -62,11 +64,17 @@ public class DockBarInjector {
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
             Drawable drawable = getContext().getResources().getDrawable(tab.iconID);
-            ColorStateList colorStateList = getContext().getResources().getColorStateList(com.vtosters.lite.R.color.bottom_navigation_item);
-//            if (isAndroidMonet()) {
-//                colorStateList = ColorStateList.valueOf(Themes.getAccentColor());
-//            }
-            add.setIcon(new RecoloredDrawable(drawable, colorStateList));
+            ColorStateList dockcolors = new ColorStateList(
+                    new int[][]{
+                            new int[]{android.R.attr.state_checked},
+                            new int[]{-android.R.attr.state_checked}
+                    },
+                    new int[] {
+                            getAccentColor(),
+                            Color.parseColor("#ffaaaeb3")
+                    }
+            );
+            add.setIcon(new RecoloredDrawable(drawable, dockcolors));
             add.setShowAsAction(1);
             add.setCheckable(true);
         }
