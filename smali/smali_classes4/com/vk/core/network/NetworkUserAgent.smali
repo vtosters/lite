@@ -43,11 +43,8 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
+    const/16 v6, 0xd6f
 
-    move-result v6
-
-    .line 26
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
