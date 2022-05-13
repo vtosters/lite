@@ -292,9 +292,7 @@
     :try_start_0
     new-instance v0, Lcom/vk/api/internal/InternalGetNotifications;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
-
-    move-result v1
+    const/16 v1, 0xd6f
 
     invoke-static {}, Lcom/vtosters/lite/data/Analytics;->e()Ljava/lang/String;
 
@@ -427,9 +425,7 @@
     :try_start_0
     new-instance v0, Lcom/vk/api/internal/InternalGetUserNotifications;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->VKVersionBuild()I
-
-    move-result v4
+    const/16 v4, 0xd6f
 
     .line 260
     invoke-static {}, Lcom/vtosters/lite/data/Analytics;->e()Ljava/lang/String;
