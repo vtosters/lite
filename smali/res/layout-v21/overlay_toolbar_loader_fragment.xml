@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:id="@id/appkit_loader_content"
-        android:background="#ffffffff"
+        android:background="?background_content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 

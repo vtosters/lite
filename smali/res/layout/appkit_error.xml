@@ -6,6 +6,7 @@
 
     <LinearLayout
         android:gravity="center"
+        android:background="?background_content"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:padding="16.0dip"

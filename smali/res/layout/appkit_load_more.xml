@@ -14,6 +14,7 @@
         android:orientation="horizontal"
         android:id="@id/load_more_error"
         android:padding="16.0dip"
+        android:background="?background_content"
         android:layout_width="fill_parent"
         android:layout_height="76.0dip">
 
