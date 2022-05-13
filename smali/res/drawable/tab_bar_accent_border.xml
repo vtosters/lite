@@ -7,7 +7,7 @@
         <solid android:color="@android:color/transparent" />
         <stroke
             android:width="0.5dip"
-            android:color="@color/blue_300" />
+            android:color="?accent" />
         <padding
             android:left="0.0dip"
             android:top="0.0dip"

@@ -1290,7 +1290,7 @@
         <item name="im_btn_confirm">@drawable/vkim_btn_confirm_default</item>
         <item name="im_btn_confirm_background">?accent</item>
         <item name="im_btn_confirm_background_dark">?accent</item>
-        <item name="im_btn_confirm_background_disabled">@color/blue_200_muted</item>
+        <item name="im_btn_confirm_background_disabled">?accent</item>
         <item name="im_btn_reject_background">@color/black</item>
         <item name="im_btn_reject_background_dark">@color/black</item>
         <item name="im_btn_reject_foreground">@color/white</item>

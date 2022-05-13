@@ -42,7 +42,7 @@
         android:layout_width="16.0dip"
         android:layout_height="16.0dip"
         android:src="@drawable/ic_favorite_16"
-        android:tint="@color/blue_200_muted"
+        android:tint="?accent"
         android:layout_marginEnd="4.0dip"
         app:layout_constraintBottom_toBottomOf="@id/game_title"
         app:layout_constraintEnd_toStartOf="@id/game_menu"
