@@ -3,8 +3,12 @@
     <PreferenceCategory android:title="@string/dnr">
         <Preference
             android:enabled="false"
-            android:summary="Функция позволяет вам не отправлять статус вашего набора/написания сообщения"
+            android:summary="Функция позволяет вам не отправлять статус прочтения вами сообщения собеседника"
             android:title="Что это за функция?" />
+        <Preference
+            android:enabled="false"
+            android:summary="Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника она прочитана не будет"
+            android:title="Внимание!" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="read_pm"
@@ -22,12 +26,8 @@
     <PreferenceCategory android:title="@string/dnw">
         <Preference
             android:enabled="false"
-            android:summary="Функция позволяет вам не отправлять статус прочтения вами сообщения собеседника"
+            android:summary="Функция позволяет вам не отправлять статус вашего набора/написания сообщения"
             android:title="Что это за функция?" />
-        <Preference
-            android:enabled="false"
-            android:summary="Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника она прочитана не будет"
-            android:title="Внимание!" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="write_pm"
