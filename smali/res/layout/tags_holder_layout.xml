@@ -18,7 +18,7 @@
         android:layout_height="24.0dip"
         android:layout_marginTop="12.0dip"
         android:src="@drawable/ic_tag_24"
-        android:tint="@color/blue_200_muted"
+        android:tint="?accent"
         android:layout_marginStart="16.0dip" />
 
     <com.vk.fave.views.FaveTagViewGroup
