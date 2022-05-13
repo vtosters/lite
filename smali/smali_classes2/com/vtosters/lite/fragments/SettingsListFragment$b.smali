@@ -83,7 +83,7 @@
     return-object p1
 .end method
 
-.method b()Ljava/util/ArrayList;
+.method public b()Ljava/util/ArrayList;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1117,6 +1117,50 @@
     new-instance v9, Lcom/vtosters/lite/fragments/VTReport;
 
     invoke-direct {v9, p0}, Lcom/vtosters/lite/fragments/VTReport;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment$b;)V
+
+    invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;)V
+
+    invoke-static {v4, v5}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->c(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
+
+    const v6, 0x7f080340
+
+    const v7, 0x7f040022
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "Скачать последнюю версию"
+
+    new-instance v9, Lcom/vtosters/lite/fragments/VTDownload;
+
+    invoke-direct {v9, p0}, Lcom/vtosters/lite/fragments/VTDownload;-><init>(Lcom/vtosters/lite/fragments/SettingsListFragment$b;)V
 
     invoke-direct {v5, v6, v7, v8, v9}, Lcom/vtosters/lite/fragments/SettingsListFragment$a;-><init>(IILjava/lang/Object;Ljava/lang/Runnable;)V
 
