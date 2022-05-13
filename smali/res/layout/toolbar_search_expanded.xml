@@ -33,7 +33,7 @@
 
     <ImageView
         android:id="@id/search_voice"
-        android:background="?accent"
+        android:background="?header_background"
         android:layout_width="48.0dip"
         android:layout_height="48.0dip"
         android:src="@drawable/ic_voice_24"
@@ -42,7 +42,7 @@
 
     <ImageView
         android:id="@id/search_done"
-        android:background="?accent"
+        android:background="?header_background"
         android:layout_width="48.0dip"
         android:layout_height="48.0dip"
         android:src="@drawable/ic_check_24"
