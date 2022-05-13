@@ -323,13 +323,11 @@ public class Preferences {
     }
 
     public static String VKVersion() {
-        String string = getPreferences().getString("vkver", "");
-        return !string.isEmpty() ? string : VKVER;
+        return VKVER;
     }
 
     public static int VKVersionBuild() {
-        String string = getPreferences().getString("vkbuild", "");
-        return !string.isEmpty() ? Integer.parseInt(string) : VKBUILD;
+        return VKBUILD;
     }
 
     public static long VKVersionBuildLong() {
