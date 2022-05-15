@@ -63,7 +63,7 @@ public class Preferences {
     }
 
     public static boolean captions() {
-        return BooleanTrue("captions");
+        return true; //BooleanTrue("captions");
     }
 
     public static boolean copyright_post() {
