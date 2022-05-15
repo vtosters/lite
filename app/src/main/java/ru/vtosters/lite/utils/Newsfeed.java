@@ -67,7 +67,7 @@ public class Newsfeed {
 
         String customfilters = getPrefsValue("spamfilters");
 
-        if (!getPrefsValue("spamfilters").isEmpty()) {
+        if (!customfilters.isEmpty()) {
             mFilters.addAll(Arrays.asList(customfilters.split(", ")));
         }
 
