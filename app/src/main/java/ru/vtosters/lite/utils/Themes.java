@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
@@ -58,7 +58,7 @@ public class Themes {
     }
 
     public static VKTheme getDarkTheme() {
-        switch (getPreferences().getString("darktheme", "")) {
+        switch (getPrefsValue("darktheme")) {
             case "amoled":
                 return VKTheme.AMOLED;
             default:
@@ -67,7 +67,7 @@ public class Themes {
     }
 
     public static ImTheme getImDarkTheme() {
-        switch (getPreferences().getString("darktheme", "")) {
+        switch (getPrefsValue("darktheme")) {
             case "amoled":
                 return ImTheme.VKAPP_AMOLED;
             default:
@@ -76,14 +76,14 @@ public class Themes {
     }
 
     public static VKTheme getLightTheme() {
-        switch (getPreferences().getString("lighttheme", "")) {
+        switch (getPrefsValue("lighttheme")) {
             default:
                 return VKTheme.DEFAULT_LIGHT;
         }
     }
 
     public static ImTheme getImLightTheme() {
-        switch (getPreferences().getString("lighttheme", "")) {
+        switch (getPrefsValue("lighttheme")) {
             default:
                 return ImTheme.VKAPP_LIGHT;
         }

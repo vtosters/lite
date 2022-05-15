@@ -37,18 +37,15 @@ public class OEMDetector {
 
     private static String getSystemProperty(String str) {
         BufferedReader bufferedReader;
-        Throwable th;
-        BufferedReader bufferedReader2 = null;
         try {
             bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec("getprop " + str).getInputStream()), 1024);
             try {
-                String readLine = bufferedReader.readLine();
                 try {
                     bufferedReader.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                return readLine;
+                return bufferedReader.readLine();
             } catch (IOException ignored) {
             }
         } catch (Throwable ignored) {

@@ -41,6 +41,10 @@ public class Globals {
         return prefs;
     }
 
+    public static String getPrefsValue(String pref) {
+        return getPreferences().getString(pref, "");
+    }
+
     // Current UserId
     public static int getUserId() {
         return VKAccountManager.b().a();
@@ -162,14 +166,14 @@ public class Globals {
         try {
             if (Build.VERSION.SDK_INT >= 26) {
                 NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
-                boolean z = false;
+                boolean hasMusicChannel = false;
                 try {
                     if (notificationManager.getNotificationChannel("audio_playback_channel") != null) {
-                        z = true;
+                        hasMusicChannel = true;
                     }
                 } catch (Exception ignored) {
                 }
-                if (!z) {
+                if (!hasMusicChannel) {
                     notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(com.vtosters.lite.R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
                 }
             }
