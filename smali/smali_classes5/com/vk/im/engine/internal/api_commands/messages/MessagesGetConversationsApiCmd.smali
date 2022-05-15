@@ -244,7 +244,6 @@
 
     move-result-object v1
 
-
     .line 49
     const-string v2, "filter"
 

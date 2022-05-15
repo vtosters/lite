@@ -43,7 +43,7 @@
             android:entries="@array/msgcount_value"
             android:entryValues="@array/msgcount"
             android:key="msgcount"
-            android:title="Количество загружаемых сообщений" />
+            android:title="Количество загружаемых сразу сообщений" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="convUsersOnline"

@@ -254,6 +254,10 @@
 
     check-cast v0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getMsgCount()I
+
+    move-result p1
+
     iput p1, v0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetArgs$a;->f:I
 
     return-object v0
