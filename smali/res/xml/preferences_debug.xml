@@ -3,7 +3,7 @@
     android:key="preferences_debug">
     <Preference
         android:enabled="false"
-        android:summary="Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках!"
+        android:summary="Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках (пожалуйста)"
         android:title="Внимание!" />
     <com.vtosters.lite.ui.MaterialSwitchPreference
         android:defaultValue="false"

@@ -7,7 +7,7 @@
             android:title="Что это за функция?" />
         <Preference
             android:enabled="false"
-            android:summary="Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника она прочитана не будет"
+            android:summary="Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника оно прочитано не будет"
             android:title="Внимание!" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
