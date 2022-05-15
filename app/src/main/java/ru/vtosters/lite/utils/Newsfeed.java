@@ -3,7 +3,7 @@ package ru.vtosters.lite.utils;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
@@ -65,10 +65,10 @@ public class Newsfeed {
         getFilter("default_ad_list", "StandartFilter.txt");
         getFilter("shitposting", "IDontWantToReadIt.txt");
 
-        String string = getPreferences().getString("spamfilters", "");
+        String customfilters = getPrefsValue("spamfilters");
 
-        if (!string.isEmpty()) {
-            mFilters.addAll(Arrays.asList(string.split(", ")));
+        if (!getPrefsValue("spamfilters").isEmpty()) {
+            mFilters.addAll(Arrays.asList(customfilters.split(", ")));
         }
 
     }
@@ -171,7 +171,7 @@ public class Newsfeed {
     }
 
     public static String getCommentsSort(String def) {
-        switch (getPreferences().getString("commentssort", "")) {
+        switch (getPrefsValue("commentssort")) {
             case "new":
                 return "desc";
             case "old":
@@ -182,7 +182,7 @@ public class Newsfeed {
     }
 
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
-        switch (getPreferences().getString("newsupdate", "")) {
+        switch (getPrefsValue("newsupdate")) {
             case "no_update":
                 return MAX_VALUE;
             case "imd_update":
@@ -193,7 +193,7 @@ public class Newsfeed {
     }
 
     public static Class getStartFragment() {
-        switch (getPreferences().getString("start_values", "")) {
+        switch (getPrefsValue("start_values")) {
             case "newsfeed":
                 return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
             case "messenger":

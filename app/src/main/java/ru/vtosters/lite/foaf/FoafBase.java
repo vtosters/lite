@@ -27,7 +27,6 @@ import java.util.regex.Pattern;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.f0x1d.net.F0x1dRequest;
-import ru.vtosters.lite.utils.Preferences;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");

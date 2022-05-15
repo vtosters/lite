@@ -1,25 +1,23 @@
 package ru.vtosters.lite.utils;
 
-import static java.lang.System.*;
-import static ru.vtosters.lite.utils.Globals.*;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static java.lang.System.clearProperty;
+import static java.lang.System.getProperties;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
 
 import java.util.Properties;
 
 public class Proxy {
     public static String getOauthComAuth() {
-        String oauthComHttps = getOauthComHttps();
-        return oauthComHttps + "/authorize";
+        return getOauthComHttps() + "/authorize";
     }
 
     public static String getOauthComAuthClient() {
-        String oauthComAuth = getOauthComAuth();
-        return oauthComAuth + "?client_id=";
+        return getOauthComAuth() + "?client_id=";
     }
 
     public static String getOauthComBlank() {
-        String oauthComHttps = getOauthComHttps();
-        return oauthComHttps + "/blank.html";
+        return getOauthComHttps() + "/blank.html";
     }
 
     public static String getOauthComBlankRedirect() {
@@ -31,8 +29,7 @@ public class Proxy {
     }
 
     public static String getStaticComSupport() {
-        String staticCom = getStaticCom();
-        return staticCom + "/support";
+        return getStaticCom() + "/support";
     }
 
     public static String oauthFix() {
@@ -40,7 +37,7 @@ public class Proxy {
     }
 
     public static String getApiCom() {
-        String string = getPreferences().getString("proxyapi", "");
+        String string = getPrefsValue("proxyapi");
         if (!proxy() & string.isEmpty()) {
             return "api.vk.com";
         }
@@ -48,7 +45,7 @@ public class Proxy {
     }
 
     public static String getAwayPhpCom() {
-        String string = getPreferences().getString("proxyapi", "");
+        String string = getPrefsValue("proxyapi");
         if (!proxy() & string.isEmpty()) {
             return "m.vk.com";
         }
@@ -56,7 +53,7 @@ public class Proxy {
     }
 
     public static String getOauthCom() {
-        String string = getPreferences().getString("proxyoauth", "");
+        String string = getPrefsValue("proxyoauth");
         if (!proxy() & string.isEmpty()) {
             return "oauth.vk.com";
         }
@@ -64,7 +61,7 @@ public class Proxy {
     }
 
     public static String getStaticCom() {
-        String string = getPreferences().getString("proxystatic", "");
+        String string = getPrefsValue("proxystatic");
         if (!proxy() & string.isEmpty()) {
             return "static.vk.com";
         }
@@ -73,7 +70,7 @@ public class Proxy {
 
     public static String staticFix(String str) {
         String str2;
-        String string = getPreferences().getString("proxystatic", "");
+        String string = getPrefsValue("proxystatic");
         if (!proxy() & string.isEmpty()) {
             return str;
         }
@@ -83,7 +80,7 @@ public class Proxy {
 
     public static void setProxy() {
         Properties properties = getProperties();
-        switch (getPreferences().getString("proxy", "")) {
+        switch (getPrefsValue("proxy")) {
             case "zaborona":
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 properties.setProperty("socksProxyPort", "1488");
@@ -157,57 +154,57 @@ public class Proxy {
     }
 
     public static String proxyHostHTTP() {
-        String string = getPreferences().getString("proxyHostHTTP", "");
+        String string = getPrefsValue("proxyHostHTTP");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     public static String proxyHostHTTPS() {
-        String string = getPreferences().getString("proxyHostHTTPS", "");
+        String string = getPrefsValue("proxyHostHTTPS");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     public static String proxyHostSocks() {
-        String string = getPreferences().getString("proxyHostSocks", "");
+        String string = getPrefsValue("proxyHostSocks");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
     public static String proxyPortHTTP() {
-        String string = getPreferences().getString("proxyPortHTTP", "");
+        String string = getPrefsValue("proxyPortHTTP");
         return string.isEmpty() ? "8888" : string;
     }
 
     public static String proxyPortHTTPS() {
-        String string = getPreferences().getString("proxyPortHTTPS", "");
+        String string = getPrefsValue("proxyPortHTTPS");
         return string.isEmpty() ? "8888" : string;
     }
 
     public static String proxyPortSocks() {
-        String string = getPreferences().getString("proxyPortSocks", "");
+        String string = getPrefsValue("proxyPortSocks");
         return string.isEmpty() ? "8888" : string;
     }
 
     public static String proxyUserHTTP() {
-        String string = getPreferences().getString("proxyUserHTTP", "");
+        String string = getPrefsValue("proxyUserHTTP");
         return string.isEmpty() ? "" : string;
     }
 
     public static String proxyUserHTTPS() {
-        String string = getPreferences().getString("proxyUserHTTPS", "");
+        String string = getPrefsValue("proxyUserHTTPS");
         return string.isEmpty() ? "" : string;
     }
 
     public static String proxyPassHTTP() {
-        String string = getPreferences().getString("proxyPassHTTP", "");
+        String string = getPrefsValue("proxyPassHTTP");
         return string.isEmpty() ? "" : string;
     }
 
     public static String proxyPassHTTPS() {
-        String string = getPreferences().getString("proxyPassHTTPS", "");
+        String string = getPrefsValue("proxyPassHTTPS");
         return string.isEmpty() ? "" : string;
     }
 
     public static boolean proxy() {
-        return getPreferences().getString("proxy", "").equals("apiproxy");
+        return getPrefsValue("proxy").equals("apiproxy");
     }
 
     // Official vk proxy enforcer

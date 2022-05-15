@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
 
 import android.content.ContentValues;
@@ -76,7 +76,7 @@ public class DeletedMessagesHandler {
     }
 
     private static String getPreifxUndelete() {
-        String string = getPreferences().getString("undeletemsg_prefix", "");
+        String string = getPrefsValue("undeletemsg_prefix");
         if (string.isEmpty()) {
             return "[Удалено] ";
         }

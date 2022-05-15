@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.About.getBuildNumber;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserSecret;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Preferences.dev;
@@ -17,7 +17,7 @@ public class SSFS {
     }
 
     public static String SSFSDomain() {
-        String string = getPreferences().getString("ssfscustom", "");
+        String string = getPrefsValue("ssfscustom");
         if (!string.isEmpty()) {
             return string;
         }
@@ -29,8 +29,7 @@ public class SSFS {
     }
 
     public static String getAmoledVKUI() {
-        String string = getPreferences().getString("darktheme", "");
-        return string.equals("amoled") ? "1" : "0";
+        return getPrefsValue("darktheme").equals("amoled") ? "1" : "0";
     }
 
     public static String getUserProxy() {

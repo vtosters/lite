@@ -4,7 +4,7 @@ import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.mig
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
 import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
@@ -298,7 +298,7 @@ public class Preferences {
     }
 
     public static int getMsgCount() {
-        String customvalue = getPreferences().getString("msgcount", "");
+        String customvalue = getPrefsValue("msgcount");
         return customvalue.isEmpty() ? 30 : Integer.parseInt(customvalue);
     }
 
@@ -335,7 +335,7 @@ public class Preferences {
     }
 
     public static String getLocale() {
-        String string = getPreferences().getString("lang_value", "");
+        String string = getPrefsValue("lang_value");
         if (string.equals("system")) {
             return Locale.getDefault().getLanguage();
         }
