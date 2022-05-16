@@ -94,11 +94,11 @@ public class Newsfeed {
 
     public static boolean injectFilters(JSONObject jSONObject) {
         String optString = jSONObject.optString(NavigatorKeys.j, "");
-        if (!ads(optString) && !authors_rec(optString) && !recomm(optString) && !friendrecomm(optString)) {
+        if (!ads(optString) && !checkCopyright(optString) && !authors_rec(optString) && !recomm(optString) && !friendrecomm(optString)) {
             String optString2 = jSONObject.optString("post_type", "");
             if (!ads(optString2) && !authors_rec(optString2) && !recomm(optString2) && !friendrecomm(optString2)) {
                 String optString3 = jSONObject.optString("filters", "");
-                if (ads(optString3) || authors_rec(optString3) || recomm(optString3) || friendrecomm(optString3) || isBlockedByFilter(jSONObject.optString(NavigatorKeys.x, "")) || checkCopyright(jSONObject) || captions(jSONObject)) {
+                if (ads(optString3) || authors_rec(optString3) || recomm(optString3) || friendrecomm(optString3) || isBlockedByFilter(jSONObject.optString(NavigatorKeys.x, "")) || captions(jSONObject)) {
                     return false;
                 }
                 return !AD(jSONObject);
@@ -142,8 +142,8 @@ public class Newsfeed {
         return jSONObject.optInt("marked_as_ads", 0) == 1 && adsgroup();
     }
 
-    public static boolean checkCopyright(JSONObject jSONObject) {
-        return jSONObject.optInt("copyright", 0) == 1 && copyright_post();
+    public static boolean checkCopyright(String str) {
+        return str.equals("copyright") && copyright_post();
     }
 
     public static String friendsads() {

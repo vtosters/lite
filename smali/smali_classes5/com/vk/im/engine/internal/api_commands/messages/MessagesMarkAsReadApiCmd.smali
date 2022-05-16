@@ -128,7 +128,6 @@
     invoke-virtual {p1, v0}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
 
     :cond_beb
-
     const/4 p1, 0x1
 
     .line 24

@@ -1067,7 +1067,7 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "5.97"
+    const-string v0, "5.111"
 
     return-object v0
 .end method
