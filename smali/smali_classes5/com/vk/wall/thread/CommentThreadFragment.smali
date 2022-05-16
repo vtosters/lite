@@ -763,7 +763,9 @@
 
     move-result v0
 
-    add-int/lit16 v0, v0, 0x2000
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getNeededColorStatusbar()I
+
+    move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
