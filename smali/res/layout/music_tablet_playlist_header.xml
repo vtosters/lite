@@ -36,7 +36,7 @@
 
     <TextView
         android:textSize="17.0dip"
-        android:textColor="?text_primary"
+        android:textColor="?header_text"
         android:ellipsize="end"
         android:id="@id/playlist_title"
         android:layout_width="0.0dip"
