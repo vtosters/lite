@@ -126,7 +126,9 @@
 
     move-result v1
 
-    or-int/lit16 v1, v1, 0x2000
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getNeededColorStatusbarFix()I
+
+    move-result v1
 
     .line 68
     invoke-virtual {v0, v1}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->setSystemUiVisibility(I)V

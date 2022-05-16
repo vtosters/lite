@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
@@ -14,6 +15,7 @@ import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 
@@ -55,6 +57,23 @@ public class Themes {
 
     public static int getAmoledImTheme() {
         return getContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", getContext().getPackageName());
+    }
+
+    public static void setStatusBarTheme(View getview) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getview.setSystemUiVisibility(getview.getSystemUiVisibility() + getNeededColorStatusbar());
+        }
+    }
+
+    public static int getNeededColorStatusbar() {
+        if (VKThemeHelper.d() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            return 8192;
+        }
+        return 0;
+    }
+
+    public static int getNeededColorStatusbarFix() {
+        return VKThemeHelper.d() ? 8192 : 0;
     }
 
     public static VKTheme getDarkTheme() {

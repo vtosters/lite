@@ -31,7 +31,9 @@
 
     move-result p0
 
-    or-int/lit16 p0, p0, 0x2000
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getNeededColorStatusbar()I
+
+    move-result p0
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
@@ -62,7 +64,9 @@
 
     move-result p0
 
-    or-int/lit16 p0, p0, 0x2000
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getNeededColorStatusbar()I
+
+    move-result p0
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
@@ -74,7 +78,9 @@
 
     move-result p0
 
-    and-int/lit16 p0, p0, -0x2001
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getNeededColorStatusbar()I
+
+    move-result p0
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
