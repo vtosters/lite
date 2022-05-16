@@ -80,8 +80,19 @@
 .end method
 
 .method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
-    .locals 3
+    .locals 4
 
+    iget v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgMarkAsReadJob;->b:I
+
+    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRModule;->isDnrEnabledFor(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_beb
+
+    return-void
+
+    :cond_beb
     const-string v0, "env"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V

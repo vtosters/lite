@@ -80,10 +80,18 @@
 
     move-result v3
 
+    if-eqz v3, :cond_beb
+
     const/4 p1, 0x0
 
-    if-nez v3, :cond_beb
+    .line 24
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
+    move-result-object p1
+
+    return-object p1
+
+    :cond_beb
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -131,7 +139,6 @@
 
     const/4 p1, 0x1
 
-    :cond_beb
     .line 24
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
