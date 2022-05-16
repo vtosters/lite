@@ -1433,7 +1433,9 @@
 
     :cond_26
     :goto_15
-    const-string v2, "ads_easy_promote"
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->copyrightfix()Ljava/lang/String;
+
+    move-result-object v2
 
     .line 373
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;

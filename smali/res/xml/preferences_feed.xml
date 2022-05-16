@@ -21,6 +21,10 @@
             android:key="adsstories"
             android:summary="Реклама при переходе между историями"
             android:title="@string/vtldas" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="copyright_post"
+            android:title="Отключить посты с источником" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">

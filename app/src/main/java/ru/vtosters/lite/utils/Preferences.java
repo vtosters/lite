@@ -63,7 +63,7 @@ public class Preferences {
     }
 
     public static boolean captions() {
-        return true; //BooleanTrue("captions");
+        return BooleanTrue("captions");
     }
 
     public static boolean copyright_post() {
@@ -235,6 +235,10 @@ public class Preferences {
 
     public static String readstatus() {
         return dnr() ? "messages.markAsRead" : "null";
+    }
+
+    public static String copyrightfix() {
+        return copyright_post() ? "copyright" : "ads_easy_promote";
     }
 
     public static boolean refsfilter() {
