@@ -80,6 +80,8 @@
 
     move-result v3
 
+    const/4 p1, 0x0
+
     if-nez v3, :cond_beb
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -127,9 +129,9 @@
 
     invoke-virtual {p1, v0}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
 
-    :cond_beb
     const/4 p1, 0x1
 
+    :cond_beb
     .line 24
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

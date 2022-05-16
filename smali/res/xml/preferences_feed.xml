@@ -24,6 +24,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="copyright_post"
+            android:summary="В большенстве случаев рекламные посты с пометкой источника рекламодателя"
             android:title="Отключить посты с источником" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
