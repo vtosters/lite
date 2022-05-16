@@ -226,6 +226,17 @@
 .method public b(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 6
 
+    iget v0, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
+
+    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRModule;->isDnrEnabledFor(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_beb
+
+    return-void
+
+    :cond_beb
     const-string v0, "env"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V
