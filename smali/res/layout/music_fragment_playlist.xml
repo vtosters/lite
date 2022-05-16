@@ -55,7 +55,7 @@
 
                     <TextView
                         android:textSize="17.0dip"
-                        android:textColor="?text_primary"
+                        android:textColor="?header_text"
                         android:ellipsize="end"
                         android:gravity="center_horizontal"
                         android:id="@id/playlist_title"
