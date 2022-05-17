@@ -42,6 +42,8 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     :cond_0
     return-void
 .end method

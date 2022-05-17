@@ -86,5 +86,7 @@
 
     :cond_2
     :goto_0
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     return-void
 .end method

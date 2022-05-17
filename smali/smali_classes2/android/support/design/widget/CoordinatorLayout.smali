@@ -2419,6 +2419,8 @@
     .line 3218
     invoke-virtual {p0, v0}, Landroid/support/design/widget/CoordinatorLayout;->setSystemUiVisibility(I)V
 
+    invoke-static {p0}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     goto :goto_0
 
     :cond_2

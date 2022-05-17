@@ -79,6 +79,8 @@
     const/16 v1, 0xd04
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

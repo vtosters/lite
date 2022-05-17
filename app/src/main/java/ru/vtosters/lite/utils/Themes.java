@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
@@ -66,17 +67,18 @@ public class Themes {
         return VKThemeHelper.a(R.attr.header_text);
     }
 
-    public static void setStatusBarTheme(View getview) {
+    public static void setBarTheme(View getview) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getview.setSystemUiVisibility(getview.getSystemUiVisibility() + getNeededColorStatusbar());
+            getview.setSystemUiVisibility(getNeededColorNavbar() | getNeededColorStatusbar());
         }
     }
 
     public static int getNeededColorStatusbar() {
-        if (VKThemeHelper.d() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            return 8192;
-        }
-        return 0;
+        return VKThemeHelper.d() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? 8192 : 0;
+    }
+
+    public static int getNeededColorNavbar() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? VKThemeHelper.d() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
     public static int getNeededColorStatusbarFix() {
@@ -175,6 +177,7 @@ public class Themes {
     public static void setNavbarColor(Window window, int i) {
         if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setNavigationBarColor(getTabbarBackground());
+            window.getDecorView().setSystemUiVisibility(getNeededColorNavbar());
         }
     }
 

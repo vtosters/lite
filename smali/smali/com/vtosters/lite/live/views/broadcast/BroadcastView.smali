@@ -681,6 +681,8 @@
     .line 249
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     :cond_0
     return-void
 .end method
@@ -726,6 +728,8 @@
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
 
     :cond_0
     return-void
