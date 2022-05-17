@@ -1,6 +1,5 @@
 package ru.vtosters.lite.utils;
 
-import static android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
@@ -43,6 +42,10 @@ public class Themes {
         return VKThemeHelper.a(R.attr.tabbar_background);
     }
 
+    public static int getBackgroundContent() {
+        return VKThemeHelper.a(R.attr.background_content);
+    }
+
     public static int getHeaderBackground() {
         return VKThemeHelper.a(R.attr.header_background);
     }
@@ -57,6 +60,10 @@ public class Themes {
 
     public static int getAmoledImTheme() {
         return getContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", getContext().getPackageName());
+    }
+
+    public static int getHeaderText() {
+        return VKThemeHelper.a(R.attr.header_text);
     }
 
     public static void setStatusBarTheme(View getview) {
@@ -110,10 +117,6 @@ public class Themes {
 
     public static int getColorFromAttr(int attr) {
         return VKThemeHelper.a(attr);
-    }
-
-    public static int getHeaderText() {
-        return VKThemeHelper.a(R.attr.header_text);
     }
 
     public static boolean isAndroidMonet() {
@@ -171,7 +174,7 @@ public class Themes {
 
     public static void setNavbarColor(Window window, int i) {
         if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setNavigationBarColor(getNavbarColor());
+            window.setNavigationBarColor(getTabbarBackground());
         }
     }
 
@@ -204,10 +207,6 @@ public class Themes {
 
     public static int vk_sans_text_regular() {
         return vksans() ? R.font.vk_sans_text_regular : R.font.roboto_regular;
-    }
-
-    public static int getNavbarColor() {
-        return VKThemeHelper.a(R.attr.tabbar_background);
     }
 
     public static String getBackgroundStickers() {

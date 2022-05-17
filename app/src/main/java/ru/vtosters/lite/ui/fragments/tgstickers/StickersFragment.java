@@ -8,8 +8,8 @@ import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getNavbarColor;
 import static ru.vtosters.lite.utils.Themes.getSTextAttr;
+import static ru.vtosters.lite.utils.Themes.getTabbarBackground;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 import static ru.vtosters.lite.utils.Themes.recolorDrawable;
 
@@ -372,7 +372,7 @@ public class StickersFragment extends ToolbarFragment {
             holder.switchCompat.setOnCheckedChangeListener((buttonView, isChecked) -> stickersService.setPackEnabled(pack, isChecked, false));
             holder.count.setText(pack.stickersCount + " " + getString("stickerscount"));
 
-            holder.layout.setBackgroundColor(getNavbarColor());
+            holder.layout.setBackgroundColor(getTabbarBackground());
 
             // Color костыль
             int color = getTextAttr();
