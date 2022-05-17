@@ -65,7 +65,9 @@
     goto :goto_0
 
     :cond_0
-    const/high16 p1, -0x1000000
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result p1
 
     :goto_0
     return p1
