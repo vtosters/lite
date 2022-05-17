@@ -1089,6 +1089,10 @@
     :cond_c
     const v5, -0x8e8a86
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result v5
+
     :goto_6
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -1406,7 +1410,12 @@
     :cond_2
     const v7, -0x8e8a86
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result v7
+
     :goto_1
+    .line 180
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 268
@@ -1532,6 +1541,10 @@
     :cond_7
     const v6, -0xd3d2d2
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result v6
+
     :goto_3
     invoke-virtual {v5, v6}, Lcom/vk/core/widget/AdaptiveSizeTextView;->setTextColor(I)V
 
@@ -1580,7 +1593,9 @@
 
     if-eqz v0, :cond_a
 
-    const v2, -0x29000001
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result v2
 
     :cond_a
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setTextColor(I)V
