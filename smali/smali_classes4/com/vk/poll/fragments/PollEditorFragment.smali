@@ -4607,6 +4607,8 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     .line 375
     :cond_2
     invoke-virtual {p0}, Lcom/vk/poll/fragments/PollEditorFragment;->p()Landroid/support/v4/app/FragmentActivity;

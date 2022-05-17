@@ -165,6 +165,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     .line 96
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/LeaderboardFragment;->p()Landroid/support/v4/app/FragmentActivity;
 

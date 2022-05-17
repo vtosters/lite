@@ -635,6 +635,8 @@
     .line 158
     invoke-virtual {p1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     .line 161
     :cond_0
     new-instance v0, Lcom/vtosters/lite/ui/widget/MenuListView;
@@ -815,6 +817,8 @@
     const/16 v0, 0x500
 
     invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/EdgeSlidingPaneLayout;->setSystemUiVisibility(I)V
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
 
     .line 266
     :cond_0

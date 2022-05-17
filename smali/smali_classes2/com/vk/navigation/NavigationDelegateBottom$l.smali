@@ -120,6 +120,8 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     goto :goto_1
 
     :cond_1
@@ -174,6 +176,8 @@
     iget v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$l;->b:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
 
     :cond_2
     :goto_1

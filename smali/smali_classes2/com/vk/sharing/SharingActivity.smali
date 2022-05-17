@@ -663,6 +663,8 @@
     .line 399
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->setBarTheme(Landroid/view/View;)V
+
     .line 403
     :cond_0
     invoke-virtual {p0, v2, v2}, Lcom/vk/sharing/SharingActivity;->overridePendingTransition(II)V
