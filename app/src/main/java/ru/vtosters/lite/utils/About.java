@@ -44,7 +44,7 @@ public class About {
     }
 
     public static String getCommitLink() {
-        return "https://github.com/vtosters/lite/commit/" + getBuild(getContext(), "version.properties");
+        return "https://git.devshelter.su/gdlbo/lite/commit/" + getBuild(getContext(), "version.properties"); // https://github.com/vtosters/lite/commit/ github repo
     }
 
     public static String getBuild(Context context, String name) {

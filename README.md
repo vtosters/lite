@@ -8,6 +8,10 @@ VTosters Lite - это модифицированный клиент (деком
 
 Стабильные сборки находятся в [Releases](https://github.com/vtosters/lite/releases)
 
+Зеркало на нашем [Git](https://git.devshelter.su/gdlbo/lite)
+
+Зеркало на [Github](https://github.com/vtosters/lite)
+
 ## Отладка приложения
 
 Для отладки с помощью Android Studio необходимо пройти в `/smali/AndroidManifest.xml`
