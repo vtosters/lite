@@ -37,18 +37,18 @@ public class Preferences {
         registerActivities(application);
         LoadLibrary("vkopustest");
         systemThemeChanger();
-    }
+    } // VK Init
 
 
     public static boolean BooleanFalse(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         return prefs.getBoolean(key, false);
-    }
+    } // Make bool false by default + get current value
 
     public static boolean BooleanTrue(String key) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         return prefs.getBoolean(key, true);
-    }
+    } // Make bool true by default + get current value
 
     public static boolean opusmodule() {
         return BooleanTrue("opusmodule");
@@ -168,6 +168,10 @@ public class Preferences {
 
     public static boolean feedcache() {
         return BooleanTrue("feedcache");
+    }
+
+    public static boolean getCommentsSort() {
+        return BooleanFalse("commentssorting");
     }
 
     public static void forceOffline() {
@@ -308,15 +312,15 @@ public class Preferences {
 
     public static String MediacontentFix() {
         return Build.VERSION.SDK_INT >= 29 ? "date_modified DESC" : "datetaken DESC";
-    }
+    } // Fix photo picker for sdk 29+
 
     public static String MediacontentFix2() {
         return Build.VERSION.SDK_INT >= 29 ? "date_modified" : "datetaken";
-    }
+    } // Fix photo picker for sdk 29+
 
     public static String MediacontentFix3() {
         return Build.VERSION.SDK_INT >= 29 ? ", date_modified=" : ", dateTaken=";
-    }
+    } // Fix photo picker for sdk 29+
 
     public static boolean color_grishka() {
         return BooleanTrue("color_grishka");
