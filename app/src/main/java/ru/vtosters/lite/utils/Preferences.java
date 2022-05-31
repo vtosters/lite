@@ -170,7 +170,7 @@ public class Preferences {
         return BooleanTrue("feedcache");
     }
 
-    public static boolean getCommentsSort() {
+    public static boolean CommentsSort() {
         return BooleanFalse("commentssorting");
     }
 

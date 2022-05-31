@@ -6,6 +6,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
 import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.CommentsSort;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
@@ -172,14 +173,7 @@ public class Newsfeed {
     }
 
     public static String getCommentsSort(String def) {
-        switch (getPrefsValue("commentssort")) {
-            case "new":
-                return "desc";
-            case "old":
-                return "asc";
-            default:
-                return def;
-        }
+        return CommentsSort() ? "desc" : "asc";
     }
 
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
