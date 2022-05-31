@@ -122,7 +122,7 @@ public class Proxy {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-    }
+    } // Reset all proxies
 
     public static void resetProxySocks() {
         clearProperty("https.proxyHost");
@@ -133,7 +133,7 @@ public class Proxy {
         clearProperty("http.proxyPort");
         clearProperty("http.proxyUser");
         clearProperty("http.proxyPassword");
-    }
+    } // Reset all except socks
 
     public static void resetProxyHttp() {
         clearProperty("https.proxyHost");
@@ -142,7 +142,7 @@ public class Proxy {
         clearProperty("https.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-    }
+    } // Reset all except http
 
     public static void resetProxyHttps() {
         clearProperty("http.proxyHost");
@@ -151,7 +151,7 @@ public class Proxy {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-    }
+    } // Reset all except https
 
     public static String proxyHostHTTP() {
         String string = getPrefsValue("proxyHostHTTP");
@@ -207,8 +207,8 @@ public class Proxy {
         return getPrefsValue("proxy").equals("apiproxy");
     }
 
-    // Official vk proxy enforcer
+
     public static boolean proxyvk() {
         return BooleanFalse("proxyvk");
-    }
+    } // Official vk proxy enforcer
 }

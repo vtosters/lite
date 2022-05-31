@@ -4,6 +4,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
 import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
@@ -90,7 +91,7 @@ public class Newsfeed {
                 e.printStackTrace();
             }
         }
-    }
+    } // Get needed filter list from assets
 
     public static boolean injectFilters(JSONObject jSONObject) {
         String optString = jSONObject.optString(NavigatorKeys.j, "");
@@ -105,7 +106,7 @@ public class Newsfeed {
             }
         }
         return false;
-    }
+    } // json newsfeed/posts injector to detect and delete posts
 
     public static boolean authors_rec(String str) {
         return str.equals("authors_rec") && !authorsrecomm();

@@ -41,6 +41,7 @@ public class Globals {
         return prefs;
     }
 
+    // Get pref value as string
     public static String getPrefsValue(String pref) {
         return getPreferences().getString(pref, "");
     }
@@ -58,6 +59,7 @@ public class Globals {
         return VKAccountManager.b().b();
     }
 
+    // Edit SharedPreferences
     public static SharedPreferences.Editor edit() {
         return PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
     }
@@ -127,10 +129,14 @@ public class Globals {
         return getContext().getResources();
     }
 
+    // Get res id
+    // "res name", "res type"
     public static int getIdentifier(String str, String str2) {
         return getResources().getIdentifier(str, str2, getContext().getPackageName());
     }
 
+    // Get string via getIdentifier
+    // "string name in res"
     public static String getString(String str) {
         return getContext().getString(Integer.parseInt(String.valueOf(getContext().getResources().getIdentifier(str, "string", getContext().getPackageName()))));
     }
@@ -155,6 +161,7 @@ public class Globals {
         return str == null || str.isEmpty();
     }
 
+    // Network check
     public static boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
