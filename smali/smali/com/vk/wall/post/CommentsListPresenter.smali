@@ -379,7 +379,7 @@
 
     move-result-object v8
 
-    const/4 v9, 0x0
+    const/4 v9, 0x2
 
     invoke-virtual {p0}, Lcom/vk/wall/post/CommentsListPresenter;->z()Ljava/lang/String;
 
@@ -389,7 +389,7 @@
 
     move v4, p1
 
-    invoke-direct/range {v1 .. v10}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v1 .. v10}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1084,7 +1084,7 @@
 
     move-object v4, v1
 
-    invoke-direct/range {v4 .. v13}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v4 .. v13}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     .line 171
     invoke-virtual {p1}, Lcom/vtosters/lite/NewsComment;->h()I
@@ -1912,7 +1912,7 @@
 
     move v8, p1
 
-    invoke-direct/range {v2 .. v11}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2220,11 +2220,11 @@
 
     const/4 v6, 0x1
 
-    const/4 v8, 0x0
+    const/4 v8, 0x2
 
     move-object v0, v10
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     .line 105
     invoke-virtual {p0}, Lcom/vk/wall/post/CommentsListPresenter;->v()I
