@@ -4,7 +4,7 @@
         <ripple android:color="@color/overlay">
             <item>
                 <shape>
-                    <solid android:color="?header_text" />
+                    <solid android:color="?header_background" />
                     <corners android:radius="@dimen/vkui_button_corner_big_radius" />
                 </shape>
             </item>
@@ -12,7 +12,7 @@
     </item>
     <item>
         <shape>
-            <solid android:color="?header_text" />
+            <solid android:color="?header_background" />
             <corners android:radius="@dimen/vkui_button_corner_big_radius" />
         </shape>
     </item>

@@ -4341,7 +4341,7 @@
     </style>
 
     <style name="VKUIButton.White" parent="@style/VKUIButton">
-        <item name="android:textColor">@color/vkui_white_button_text</item>
+        <item name="android:textColor">?header_text</item>
         <item name="android:background">@drawable/vkui_bg_button_white</item>
     </style>
 
