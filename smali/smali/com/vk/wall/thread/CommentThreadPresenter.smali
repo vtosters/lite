@@ -956,7 +956,7 @@
 
     move v4, p1
 
-    invoke-direct/range {v1 .. v10}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v1 .. v10}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     .line 211
     iget p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter;->c:I
@@ -3087,7 +3087,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v10}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v1 .. v10}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     .line 235
     iget v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter;->c:I
@@ -4222,7 +4222,7 @@
 
     move-object v0, v10
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/api/wall/WallGetComments;-><init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
 
     .line 219
     iget v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter;->c:I

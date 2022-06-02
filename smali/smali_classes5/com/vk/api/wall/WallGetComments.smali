@@ -26,7 +26,7 @@
 
 
 # direct methods
-.method public constructor <init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+.method public constructor <init>(IIIIIZLjava/lang/String;ILjava/lang/String;)V
     .locals 1
 
     const-string v0, "execute.getCommentsNew"
@@ -127,18 +127,7 @@
     :cond_3
     const-string p1, "sort"
 
-    if-eqz p8, :cond_4
-
-    const-string p2, "desc"
-
-    goto :goto_1
-
-    :cond_4
-    const-string p2, "asc"
-
-    .line 64
-    :goto_1
-    invoke-static {p2}, Lru/vtosters/lite/utils/Newsfeed;->getCommentsSort(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p8}, Lru/vtosters/lite/utils/Newsfeed;->getCommentsSort(I)Ljava/lang/String;
 
     move-result-object p2
 

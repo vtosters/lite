@@ -171,8 +171,8 @@ public class Newsfeed {
         return adsstories() ? "null" : "ads";
     }
 
-    public static String getCommentsSort(String def) {
-        return CommentsSort() ? "desc" : "asc";
+    public static String getCommentsSort(int value) {
+        return !CommentsSort() && value == 2 || value == 1 ? "desc" : "asc";
     }
 
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
