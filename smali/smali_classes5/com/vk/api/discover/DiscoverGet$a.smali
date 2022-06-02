@@ -349,7 +349,7 @@
     :goto_4
     move-object v11, v10
 
-    const-string v10, "info"
+    const-string v10, "null"
 
     .line 115
     invoke-virtual {v2, v10}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
