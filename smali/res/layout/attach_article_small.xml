@@ -100,12 +100,12 @@
                 android:layout_width="16.0dip"
                 android:layout_height="16.0dip"
                 android:src="@drawable/ic_longreads_black_16"
-                android:tint="@color/black" />
+                android:tint="?header_text" />
 
             <TextView
                 android:textSize="12.0sp"
                 android:textStyle="normal"
-                android:textColor="@color/black"
+                android:textColor="?header_text"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
