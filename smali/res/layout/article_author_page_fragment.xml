@@ -24,7 +24,7 @@
             android:layout_height="238.0dip"
             app:contentScrim="?text_primary"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            app:statusBarScrim="?tabbar_background"
+            app:statusBarScrim="?header_background"
             app:titleEnabled="false">
 
             <LinearLayout
