@@ -1,7 +1,6 @@
 package ru.vtosters.lite.encryption.base;
 
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
-import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -50,29 +49,29 @@ public abstract class IMProcessor {
 
     public boolean isUsed() {
         //Log.d("IMProcessor", "Checking if decoded with "+getUIName());
-        return BooleanTrue("VT_IMDecode_"+getPrefKey());
+        return getBoolValue("VT_IMDecode_"+getPrefKey(), true);
     }
 
     public boolean isUsedToEncrypt(int id) {
         //Log.d("IMProcessor", "Checking if "+id+" is ready to be encrypted with "+getUIName());
-        return BooleanFalse("VT_IMEncode_"+getPrefKey()+"_"+id);
+        return getBoolValue("VT_IMEncode_"+getPrefKey()+"_"+id, false);
     }
 
     public void enableEncryptFor(int id) {
-        Globals.getPrefs().edit().putBoolean("VT_IMEncode_"+getPrefKey()+"_"+id, true).apply();
+        Globals.getDefprefs().edit().putBoolean("VT_IMEncode_"+getPrefKey()+"_"+id, true).apply();
     }
 
     public void disableEncryptFor(int id) {
-        Globals.getPrefs().edit().putBoolean("VT_IMEncode_"+getPrefKey()+"_"+id, false).apply();
+        Globals.getDefprefs().edit().putBoolean("VT_IMEncode_"+getPrefKey()+"_"+id, false).apply();
     }
 
     public void setEncryptionKeyFor(int id, @Nullable String key) {
         if (key == null || key.isEmpty()) key = "VTAesDefault";
-        Globals.getPrefs().edit().putString("VT_IMEncodeKey_"+getPrefKey()+"_"+id, key).apply();
+        Globals.getDefprefs().edit().putString("VT_IMEncodeKey_"+getPrefKey()+"_"+id, key).apply();
     }
 
     @Nullable
     public String getEncryptionKeyFor(int id) {
-        return Globals.getPrefs().getString("VT_IMEncodeKey_"+getPrefKey()+"_"+id, null);
+        return Globals.getDefprefs().getString("VT_IMEncodeKey_"+getPrefKey()+"_"+id, null);
     }
 }

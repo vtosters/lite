@@ -1,7 +1,7 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
 import android.os.RemoteException;
@@ -36,7 +36,7 @@ public class LibVKXClient {
     }
 
     public static boolean isIntegrationEnabled() {
-        return BooleanFalse("libvkx_integration") && isVkxInstalled();
+        return getBoolValue("libvkx_integration", false) && isVkxInstalled();
     }
 
     public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, PlayerRefer playerRefer) {

@@ -113,7 +113,7 @@ public class VTostersAESProcessor extends IMProcessor {
     @Nullable
     @Override
     public String getEncryptionKeyFor(int id) {
-        return Globals.getPrefs().getString("VT_IMEncodeKey_"+getPrefKey()+"_"+id, "VTAesDefault");
+        return Globals.getDefprefs().getString("VT_IMEncodeKey_"+getPrefKey()+"_"+id, "VTAesDefault");
     }
 
     public static class Triple<F, S, T> {

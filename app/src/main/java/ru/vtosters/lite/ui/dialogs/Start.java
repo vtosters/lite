@@ -1,7 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -36,7 +36,7 @@ public class Start {
                 activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
             }
         });
-        if (BooleanTrue("showAlert")) {
+        if (getBoolValue("showAlert", true)) {
             builder.show();
         }
     }
