@@ -45,7 +45,7 @@
             android:minHeight="48.0dip"
             app:tabBackground="@drawable/music_tab_bg"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorColor="?header_tab_active_indicator"
             app:tabMaxWidth="0.0dip"
             app:tabMode="fixed" />
     </android.support.design.widget.AppBarLayout>
