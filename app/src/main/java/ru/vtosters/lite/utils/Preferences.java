@@ -337,7 +337,7 @@ public class Preferences {
     }
 
     public static long VKVersionBuildLong() {
-        return (long) VKVersionBuild();
+        return VKVersionBuild();
     }
 
     public static String getLocale() {
