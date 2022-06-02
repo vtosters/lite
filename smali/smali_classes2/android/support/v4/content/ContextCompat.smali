@@ -358,6 +358,16 @@
 .method public static b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 2
 
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lru/vtosters/lite/utils/Themes;->themeCSL(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
+
     .line 395
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 

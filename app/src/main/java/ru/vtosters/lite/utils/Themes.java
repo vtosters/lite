@@ -12,12 +12,15 @@ import static ru.vtosters.lite.utils.Preferences.vksans;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+
+import androidx.core.graphics.ColorUtils;
 
 import com.vk.core.d.RecoloredDrawable;
 import com.vk.core.ui.themes.VKTheme;
@@ -26,7 +29,14 @@ import com.vk.im.ui.themes.ImTheme;
 import com.vk.im.ui.themes.ImThemeHelper;
 import com.vtosters.lite.R;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Themes {
+    public static List<String> accentColors = Arrays.asList(
+            "71AAEB", "3F8AE0", "528BCC", "4986CC", "5181B8", "74A2D6", "518BCC"
+    );
+
     public static void applyTheme(VKTheme theme, ImTheme imtheme) {
         VKThemeHelper.b.a(theme); // VKThemeHelper.b.a(VKTheme value) VK Theme apply
         ImThemeHelper.b.a(imtheme); // ImThemeHelper.b.a(ImTheme value) VK Theme Msg apply
@@ -71,6 +81,10 @@ public class Themes {
     public static int getAmoledImTheme() {
         return getContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", getContext().getPackageName());
     } // Get Amoled theme id for messages
+
+    public static int getAttrId(String attr) {
+        return getContext().getResources().getIdentifier(attr, "attr", getContext().getPackageName());
+    }
 
     public static void setBarTheme(View getview) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -161,6 +175,55 @@ public class Themes {
         }
         return ColorStateList.valueOf(getAccentColor());
     } // Recolor ColorStateList to accent color
+
+    public static ColorStateList themeCSL(ColorStateList csl) {
+        int color = csl.getDefaultColor();
+        try {
+            int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
+            int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
+
+            boolean isUnselAccent = isAccentedColor(unsel);
+            boolean isSelAccent = isAccentedColor(sel);
+
+            if (isUnselAccent || isSelAccent) {
+
+                return new ColorStateList(new int[][] {
+                        new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
+                }, new int[] {isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
+            }
+            return csl;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    } // Recolor ColorStateList
+
+    public static int darken(int color, float by) {
+        float[] hsl = new float[3];
+        ColorUtils.colorToHSL(color, hsl);
+        hsl[2] -= by;
+        hsl[2] = Math.max(0f, Math.min(hsl[2], 1f));
+        return ColorUtils.HSLToColor(hsl);
+    }
+
+    public static int lighten(int color, float factor) {
+        int red = (int) ((Color.red(color) * (1 - factor) / 255 + factor) * 255);
+        int green = (int) ((Color.green(color) * (1 - factor) / 255 + factor) * 255);
+        int blue = (int) ((Color.blue(color) * (1 - factor) / 255 + factor) * 255);
+        return Color.argb(Color.alpha(color), red, green, blue);
+    }
+
+    public static int halfAlpha(int src) {
+        return ColorUtils.setAlphaComponent(src, 169);
+    }
+
+    public static boolean isAccentedColor(ColorStateList target) {
+        return target != null && isAccentedColor(target.getDefaultColor());
+    }
+
+    public static boolean isAccentedColor(int target) {
+        return accentColors.contains(hex(target).toUpperCase());
+    }
 
     public static int getColor(Context context, int i) {
         if (isColorRefAccented(i) && isAndroidMonet()) {
