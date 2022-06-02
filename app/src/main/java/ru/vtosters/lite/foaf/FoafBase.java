@@ -25,8 +25,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import ru.f0x1d.net.F0x1dRequest;
+import ru.vtosters.lite.net.Request;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
@@ -35,7 +34,7 @@ public class FoafBase {
     private static final OkHttpClient client = new OkHttpClient();
 
     public static int GetLastSeenInt(int i) throws ParseException, IOException {
-        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(client.newCall(new Request.Builder().url(getLink(i)).build()).b().body().string());
+        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(client.newCall(new okhttp3.Request.Builder().url(getLink(i)).build()).b().body().string());
         if (!matcher.find()) {
             return 0;
         }
@@ -67,8 +66,8 @@ public class FoafBase {
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        F0x1dRequest.F0x1dRequestCallback callback = str -> FoafBase.lambdaLoadAndShow(progressDialog, context, i, str);
-        F0x1dRequest.makeRequest(getLink(i), callback);
+        Request.RequestCallback callback =str -> FoafBase.lambdaLoadAndShow(progressDialog, context, i, str);
+        Request.makeRequest(getLink(i), callback);
     }
 
     static void lambdaLoadAndShow(ProgressDialog progressDialog, Context context, int i, String str) {

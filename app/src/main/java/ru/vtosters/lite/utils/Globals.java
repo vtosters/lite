@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -33,7 +34,6 @@ import java.util.Locale;
 
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
-
     static SharedPreferences prefs = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
 
     public static SharedPreferences getPrefs() {
@@ -41,15 +41,18 @@ public class Globals {
         return prefs;
     }
 
-    // Get pref value as string
+    public static void componentSwitcher(String component, Boolean enabled) {
+        var packageManager = getContext().getPackageManager();
+        packageManager.setComponentEnabledSetting(new ComponentName(getPackageName(), getPackageName() + "." + component), enabled? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+    } // Component switcher for changing app icon
+
     public static String getPrefsValue(String pref) {
         return getPreferences().getString(pref, "");
-    }
+    } // Get pref value as string
 
-    // Current UserId
     public static int getUserId() {
         return VKAccountManager.b().a();
-    }
+    } // Current UserId
 
     public static String getUserSecret() {
         return VKAccountManager.b().c();
@@ -59,20 +62,17 @@ public class Globals {
         return VKAccountManager.b().b();
     }
 
-    // Edit SharedPreferences
     public static SharedPreferences.Editor edit() {
         return PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-    }
+    } // Edit SharedPreferences
 
-    // Delete and reload msg cache
     public static void reloadMSG() {
         ImEngineProvider.a().h();
-    }
+    } // Delete and reload msg cache
 
-    // UserId Profile via userProfile
     public static int getUserID(UserProfile userProfile) {
         return userProfile.n;
-    }
+    } // UserId Profile via userProfile
 
     public static String getUserFirstName(UserProfile userProfile) {
         return userProfile.p;
@@ -82,26 +82,25 @@ public class Globals {
         return userProfile.o;
     }
 
-    // UserId Profile via extendedUserProfile
     public static int getUserID(ExtendedUserProfile extendedUserProfile) {
         return getUserID(fromEup(extendedUserProfile));
-    }
+    } // UserId Profile via extendedUserProfile
 
     public static UserProfile fromEup(ExtendedUserProfile extendedUserProfile) {
         return extendedUserProfile.a;
     }
 
-    // Application restart (works on sdk 29+ too)
     public static void restartApplication() {
         Context ctx = getContext();
         PackageManager pm = ctx.getPackageManager();
+
         Intent intent = pm.getLaunchIntentForPackage(ctx.getPackageName());
         Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
         ctx.startActivity(mainIntent);
-        Runtime.getRuntime().exit(0);
-    }
 
-    // Global Context
+        Runtime.getRuntime().exit(0);
+    } // Application restart (works on sdk 29+ too)
+
     @NonNull
     public static Context getContext() {
         try {
@@ -113,9 +112,9 @@ public class Globals {
             e.printStackTrace();
         }
         return null;
-    }
+    } // Getting the global context through reflection to use context on application initialization
 
-    // Google Market Services check
+
     public static boolean isGmsInstalled() {
         try {
             getContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
@@ -123,23 +122,19 @@ public class Globals {
         } catch (Exception unused) {
             return false;
         }
-    }
+    } // Google Market Services check
 
     public static Resources getResources() {
         return getContext().getResources();
     }
 
-    // Get res id
-    // "res name", "res type"
-    public static int getIdentifier(String str, String str2) {
-        return getResources().getIdentifier(str, str2, getContext().getPackageName());
-    }
+    public static int getIdentifier(String name, String type) {
+        return getResources().getIdentifier(name, type, getContext().getPackageName());
+    } // Get res id
 
-    // Get string via getIdentifier
-    // "string name in res"
-    public static String getString(String str) {
-        return getContext().getString(Integer.parseInt(String.valueOf(getContext().getResources().getIdentifier(str, "string", getContext().getPackageName()))));
-    }
+    public static String getString(String resourcename) {
+        return getContext().getString(Integer.parseInt(String.valueOf(getContext().getResources().getIdentifier(resourcename, "string", getContext().getPackageName()))));
+    } // Get string via getIdentifier
 
     public static String getPackageName() {
         return getContext().getPackageName();
@@ -161,33 +156,29 @@ public class Globals {
         return str == null || str.isEmpty();
     }
 
-    // Network check
     public static boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
-    }
+    } // Network check
 
-    // Music channels fix
     public static void fixGapps() {
         try {
             if (Build.VERSION.SDK_INT >= 26) {
                 NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
                 boolean hasMusicChannel = false;
+
                 try {
                     if (notificationManager.getNotificationChannel("audio_playback_channel") != null) {
                         hasMusicChannel = true;
                     }
-                } catch (Exception ignored) {
-                }
+                } catch (Exception ignored) {}
                 if (!hasMusicChannel) {
                     notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(com.vtosters.lite.R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
                 }
             }
-        } catch (Exception ignored) {
-        }
-    }
-
+        } catch (Exception ignored) {}
+    } // Music channels fix
 
     public static void registerActivities(Application application) {
         application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
@@ -234,22 +225,25 @@ public class Globals {
         return getContext().getApplicationInfo().loadLabel(getContext().getPackageManager()).toString();
     }
 
-    // Language changer and BaseContext inject
     public static Context BaseContextLocale(Context context) {
         Locale locale = new Locale(getLocale());
         Locale.setDefault(locale);
+
         var resources = context.getResources();
         var configuration = resources.getConfiguration();
+
         if (Build.VERSION.SDK_INT >= 24) {
             configuration.setLocale(locale);
             configuration.setLayoutDirection(locale);
             return context.createConfigurationContext(configuration);
         }
+
         configuration.locale = locale;
         configuration.setLayoutDirection(locale);
         resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+
         return context;
-    }
+    } // Language changer and BaseContext injector
 
     public static float[] getCenterScreenCoords() {
         int width = getResources().getDisplayMetrics().widthPixels;

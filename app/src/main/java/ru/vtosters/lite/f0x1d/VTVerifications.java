@@ -42,6 +42,7 @@ public class VTVerifications {
 
     public static void load(Context context) {
         mVerificationsCache = context.getSharedPreferences("vt_another_data", 0);
+
         try {
             processArray(new JSONArray(getLoaded(VERIFICATIONS_KEY)), sVerificationsMap, null);
             processArray(new JSONArray(getLoaded(PROMETHEUS_KEY)), sPrometheusMap, null);
@@ -53,7 +54,7 @@ public class VTVerifications {
         }
 
         Request request = new Request.Builder()
-                .url("https://gdlbo.net/vktoaster/getGalo4kiBatch")
+                .url("https://vtosters.app/vktoaster/getGalo4kiBatch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404,1337]}"))
                 .build();
 
@@ -102,9 +103,7 @@ public class VTVerifications {
     }
 
     public static boolean hasPrometheus(int i) {
-
         return sPrometheusMap.get(i) != null ? sPrometheusMap.get(i) : false;
-
     }
 
     public static boolean isDeveloper(int i) {
@@ -136,9 +135,11 @@ public class VTVerifications {
         if (jSONObject.optInt("verified", 0) == 1) {
             return true;
         }
+
         if (!BooleanTrue("VT_Verification")) {
             return false;
         }
+
         return isVerified((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
@@ -146,9 +147,11 @@ public class VTVerifications {
         if (jSONObject.optInt("trending", 0) == 1) {
             return true;
         }
+
         if (!BooleanTrue("VT_Fire")) {
             return false;
         }
+
         return hasPrometheus((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
@@ -156,6 +159,7 @@ public class VTVerifications {
         if (!BooleanTrue("VT_Dev")) {
             return false;
         }
+
         return isDeveloper((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 

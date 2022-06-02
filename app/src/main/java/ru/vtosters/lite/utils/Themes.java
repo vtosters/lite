@@ -27,6 +27,11 @@ import com.vk.im.ui.themes.ImThemeHelper;
 import com.vtosters.lite.R;
 
 public class Themes {
+    public static void applyTheme(VKTheme theme, ImTheme imtheme) {
+        VKThemeHelper.b.a(theme); // VKThemeHelper.b.a(VKTheme value) VK Theme apply
+        ImThemeHelper.b.a(imtheme); // ImThemeHelper.b.a(ImTheme value) VK Theme Msg apply
+    } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
+
     public static int getAccentColor() {
         return VKThemeHelper.a(R.attr.accent);
     } // Color accent
@@ -155,7 +160,7 @@ public class Themes {
             return null;
         }
         return ColorStateList.valueOf(getAccentColor());
-    }
+    } // Recolor ColorStateList to accent color
 
     public static int getColor(Context context, int i) {
         if (isColorRefAccented(i) && isAndroidMonet()) {
@@ -226,19 +231,14 @@ public class Themes {
         int currentNightMode = getContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         switch (currentNightMode) {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
-                changeTheme(getLightTheme(), getImLightTheme());
+                applyTheme(getLightTheme(), getImLightTheme());
                 break;
             case Configuration.UI_MODE_NIGHT_NO:
-                changeTheme(getLightTheme(), getImLightTheme());
+                applyTheme(getLightTheme(), getImLightTheme());
                 break;
             case Configuration.UI_MODE_NIGHT_YES:
-                changeTheme(getDarkTheme(), getImDarkTheme());
+                applyTheme(getDarkTheme(), getImDarkTheme());
                 break;
         }
-    }
-
-    public static void changeTheme(VKTheme theme, ImTheme imtheme) {
-        VKThemeHelper.b.a(theme); // VKThemeHelper.b.a(VKTheme value) VK Theme apply
-        ImThemeHelper.b.a(imtheme); // ImThemeHelper.b.a(ImTheme value) VK Theme Msg apply
     }
 }

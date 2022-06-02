@@ -60,7 +60,7 @@ public class StickersFragment extends ToolbarFragment {
 
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
 
-    private final static int TYPE_DIRECT = 0, TYPE_SOCKS = 2, TYPE_TOASTER_SERVER = 3;
+    private final static int TYPE_DIRECT = 0, TYPE_SOCKS = 2;
     private static final String TAG = "StickersFragment";
     public int from;
     public int to;
@@ -97,7 +97,6 @@ public class StickersFragment extends ToolbarFragment {
     private void initGrabber() {
         int method = TGPref.getTGConnectMethod();
         switch (method) {
-            case TYPE_TOASTER_SERVER:
             case TYPE_DIRECT:
                 TelegramStickersGrabber.USE_PROXY = false;
                 grabber.resetProxy();
@@ -251,7 +250,6 @@ public class StickersFragment extends ToolbarFragment {
                         openMenu(getString("stickersproxy1"));
                         return;
                     }
-                case TYPE_TOASTER_SERVER:
                 case TYPE_DIRECT:
                     final Runnable work = () -> {
                         LinearLayout linearLayout = new LinearLayout(super.n());
