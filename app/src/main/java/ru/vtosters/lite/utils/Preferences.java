@@ -23,6 +23,8 @@ import com.vtosters.lite.data.Users;
 import java.util.Locale;
 
 public class Preferences {
+    public static SharedPreferences preferences = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+
     public static String VERSIONNAME = "Beta";
 
     public static Integer VKBUILD = 12116; // 3439 orig
@@ -39,71 +41,67 @@ public class Preferences {
         systemThemeChanger();
     } // VK Init
 
-
-    public static boolean BooleanFalse(String key) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-        return prefs.getBoolean(key, false);
-    } // Make bool false by default + get current value
-
-    public static boolean BooleanTrue(String key) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-        return prefs.getBoolean(key, true);
-    } // Make bool true by default + get current value
+    public static boolean getBoolValue(String key, Boolean value) {
+        if (preferences == null) {
+            preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        }
+        return preferences.getBoolean(key, value);
+    } // Set bool by default and get value
 
     public static boolean opusmodule() {
-        return BooleanTrue("opusmodule");
+        return getBoolValue("opusmodule", true);
     }
 
     public static boolean systemtheme() {
-        return BooleanTrue("systemtheme");
+        return getBoolValue("systemtheme", true);
     }
 
     public static boolean authorsrecomm() {
-        return BooleanTrue("authorsrecomm");
+        return getBoolValue("authorsrecomm", true);
     }
 
     public static boolean captions() {
-        return BooleanTrue("captions");
+        return getBoolValue("captions", true);
     }
 
     public static boolean copyright_post() {
-        return BooleanFalse("copyright_post");
+        return getBoolValue("copyright_post", false);
     }
 
     public static boolean default_ad_list() {
-        return BooleanFalse("default_ad_list");
+        return getBoolValue("default_ad_list", false);
     }
 
     public static boolean shitposting() {
-        return BooleanFalse("shitposting");
+        return getBoolValue("shitposting", false);
     }
 
     public static boolean friendsrecomm() {
-        return BooleanTrue("friendsrecomm");
+        return getBoolValue("friendsrecomm", true);
     }
 
     public static boolean isBGStickersEnabled() {
-        return BooleanTrue("isBGStickersEnabled");
+        return getBoolValue("isBGStickersEnabled", true);
     }
 
     public static boolean ads() {
-        return BooleanFalse("__dbg_no_ads");
+        return getBoolValue("__dbg_no_ads", false);
     }
 
     public static boolean adsgroup() {
-        return BooleanFalse("adsgroup");
+        return getBoolValue("adsgroup", false);
     }
 
     public static boolean olddock() {
-        return BooleanFalse("olddock");
+        return getBoolValue("olddock", false);
     }
 
     public static boolean adsslider() {
-        return BooleanFalse("__dbg_no_slider_ads");
+        return getBoolValue("__dbg_no_slider_ads", false);
     }
 
     public static boolean adsstories() {
-        return BooleanFalse("adsstories");
+        return getBoolValue("adsstories", false);
     }
 
     public static boolean alteremoji(Context context) {
@@ -111,67 +109,67 @@ public class Preferences {
     }
 
     public static boolean alteremojipref() {
-        return BooleanFalse("alteremoji");
+        return getBoolValue("alteremoji", false);
     }
 
     public static boolean awayphp() {
-        return BooleanTrue("awayphp");
+        return getBoolValue("awayphp", true);
     }
 
     public static boolean VKUI_INJ() {
-        return BooleanTrue("VKUI_INJ");
+        return getBoolValue("VKUI_INJ", true);
     }
 
     public static boolean benchmark() {
-        return BooleanFalse("benchmark");
+        return getBoolValue("benchmark", false);
     }
 
     public static boolean calls() {
-        return BooleanTrue("calls");
+        return getBoolValue("calls", true);
     }
 
     public static boolean convUsersOnline() {
-        return BooleanFalse("convUsersOnline");
+        return getBoolValue("convUsersOnline", false);
     }
 
     public static boolean darkmode() {
-        return BooleanTrue("darkmode");
+        return getBoolValue("darkmode", true);
     }
 
     public static boolean dev() {
-        return BooleanFalse("dev");
+        return getBoolValue("dev", false);
     }
 
     public static boolean devmenu() {
-        return BooleanFalse("devmenu");
+        return getBoolValue("devmenu", false);
     }
 
     public static boolean dnr() {
-        return BooleanTrue("dnr");
+        return getBoolValue("dnr", true);
     }
 
     public static boolean dns() {
-        return BooleanTrue("dns");
+        return getBoolValue("dns", true);
     }
 
     public static boolean libverify() {
-        return BooleanFalse("libverify");
+        return getBoolValue("libverify", false);
     }
 
     public static boolean dnt() {
-        return BooleanTrue("dnt");
+        return getBoolValue("dnt", true);
     }
 
     public static boolean dockcounter() {
-        return BooleanTrue("dockcounter");
+        return getBoolValue("dockcounter", true);
     }
 
     public static boolean feedcache() {
-        return BooleanTrue("feedcache");
+        return getBoolValue("feedcache", true);
     }
 
     public static boolean CommentsSort() {
-        return BooleanFalse("commentssorting");
+        return getBoolValue("commentssorting", false);
     }
 
     public static void forceOffline() {
@@ -182,59 +180,59 @@ public class Preferences {
     }
 
     public static boolean fulltime() {
-        return BooleanTrue("fulltime");
+        return getBoolValue("fulltime", true);
     }
 
     public static boolean gcmfix() {
-        return BooleanTrue("gcmfix");
+        return getBoolValue("gcmfix", true);
     }
 
     public static boolean hasMusicSubscription() {
-        return BooleanTrue("hasMusicSubscription");
+        return getBoolValue("hasMusicSubscription", true);
     }
 
     public static boolean isEnableExternalOpening() {
-        return BooleanFalse("isEnableExternalOpening");
+        return getBoolValue("isEnableExternalOpening", false);
     }
 
     public static boolean iconvk() {
-        return BooleanFalse("iconvk");
+        return getBoolValue("iconvk", false);
     }
 
     public static boolean iconvkru() {
-        return BooleanFalse("iconvkru");
+        return getBoolValue("iconvkru", false);
     }
 
     public static boolean isMusicRestricted() {
-        return BooleanTrue("isMusicRestricted");
+        return getBoolValue("isMusicRestricted", true);
     }
 
     public static boolean msgflat() {
-        return BooleanFalse("msgflat");
+        return getBoolValue("msgflat", false);
     }
 
     public static boolean msgtails() {
-        return BooleanTrue("msgtails");
+        return getBoolValue("msgtails", true);
     }
 
     public static boolean navbar() {
-        return BooleanTrue("navbar");
+        return getBoolValue("navbar", true);
     }
 
     public static boolean newfeed() {
-        return BooleanTrue("newfeed");
+        return getBoolValue("newfeed", true);
     }
 
     public static boolean offline() {
-        return BooleanTrue("offline");
+        return getBoolValue("offline", true);
     }
 
     public static boolean oldabout() {
-        return BooleanFalse("oldabout");
+        return getBoolValue("oldabout", false);
     }
 
     public static boolean postsrecomm() {
-        return BooleanTrue("postsrecomm");
+        return getBoolValue("postsrecomm", true);
     }
 
     public static String readstatus() {
@@ -246,59 +244,59 @@ public class Preferences {
     }
 
     public static boolean refsfilter() {
-        return BooleanFalse("refsfilter");
+        return getBoolValue("refsfilter", false);
     }
 
     public static boolean setoffline() {
-        return BooleanFalse("setoffline");
+        return getBoolValue("setoffline", false);
     }
 
     public static boolean shortinfo() {
-        return BooleanTrue("shortinfo");
+        return getBoolValue("shortinfo", true);
     }
 
     public static boolean shortlinkfilter() {
-        return BooleanFalse("shortlinkfilter");
+        return getBoolValue("shortlinkfilter", false);
     }
 
     public static boolean shortpost() {
-        return BooleanTrue("shortpost");
+        return getBoolValue("shortpost", true);
     }
 
     public static boolean showmenu() {
-        return BooleanFalse("showmenu");
+        return getBoolValue("showmenu", false);
     }
 
     public static boolean ssl() {
-        return BooleanTrue("ssl");
+        return getBoolValue("ssl", true);
     }
 
     public static boolean stories() {
-        return BooleanTrue("stories");
+        return getBoolValue("stories", true);
     }
 
     public static boolean swipe() {
-        return BooleanTrue("swipe");
+        return getBoolValue("swipe", true);
     }
 
     public static boolean systememoji() {
-        return BooleanFalse("systememoji");
+        return getBoolValue("systememoji", false);
     }
 
     public static boolean unlockstats() {
-        return BooleanFalse("unlockstats");
+        return getBoolValue("unlockstats", false);
     }
 
     public static boolean usevkui() {
-        return BooleanTrue("usevkui");
+        return getBoolValue("usevkui", true);
     }
 
     public static boolean vksans() {
-        return BooleanFalse("vksans");
+        return getBoolValue("vksans", false);
     }
 
     public static boolean voice() {
-        return BooleanTrue("voice");
+        return getBoolValue("voice", true);
     }
 
     public static boolean newvideo() {
@@ -323,11 +321,11 @@ public class Preferences {
     } // Fix photo picker for sdk 29+
 
     public static boolean color_grishka() {
-        return BooleanTrue("color_grishka");
+        return getBoolValue("color_grishka", true);
     }
 
     public static boolean vkme_msg() {
-        return BooleanFalse("vkme_msg");
+        return getBoolValue("vkme_msg", false);
     }
 
     public static String VKVersion() {

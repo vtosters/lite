@@ -3,7 +3,7 @@ package ru.vtosters.lite.ui.dialogs;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
-import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -39,7 +39,7 @@ public class InstallGMS {
                     context.startActivity(a2);
                 }
             });
-            if (BooleanTrue("showAlertGms")) {
+            if (getBoolValue("showAlertGms", true)) {
                 builder.show();
             }
         }

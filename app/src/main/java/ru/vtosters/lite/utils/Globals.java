@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 
 import android.app.Activity;
@@ -34,11 +35,10 @@ import java.util.Locale;
 
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
-    static SharedPreferences prefs = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
 
-    public static SharedPreferences getPrefs() {
-        if (prefs == null) prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-        return prefs;
+    public static SharedPreferences getDefprefs() {
+        if (preferences == null) preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        return preferences;
     }
 
     public static void componentSwitcher(String component, Boolean enabled) {

@@ -1,6 +1,6 @@
 package ru.vtosters.lite.f0x1d;
 
-import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -136,7 +136,7 @@ public class VTVerifications {
             return true;
         }
 
-        if (!BooleanTrue("VT_Verification")) {
+        if (!getBoolValue("VT_Verification", true)) {
             return false;
         }
 
@@ -148,7 +148,7 @@ public class VTVerifications {
             return true;
         }
 
-        if (!BooleanTrue("VT_Fire")) {
+        if (!getBoolValue("VT_Fire", true)) {
             return false;
         }
 
@@ -156,7 +156,7 @@ public class VTVerifications {
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!BooleanTrue("VT_Dev")) {
+        if (!getBoolValue("VT_Dev", true)) {
             return false;
         }
 

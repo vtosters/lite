@@ -1,10 +1,10 @@
 package ru.vtosters.lite.dnr;
 
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 public class DNRPrefs {
     public static boolean getStoriesRead() {
-        return BooleanFalse("read_s");
+        return getBoolValue("read_s", false);
     }
 
     public static boolean getMarkAsReadWithoutExceptions(int peerId) {
@@ -28,27 +28,27 @@ public class DNRPrefs {
     }
 
     public static boolean readPM(int peer) {
-        return (peer > 0 && peer < 2000000000) && BooleanFalse("read_pm");
+        return (peer > 0 && peer < 2000000000) && getBoolValue("read_pm", false);
     }
 
     public static boolean readConversations(int peer) {
-        return (peer > 2000000000) && BooleanFalse("read_conversations");
+        return (peer > 2000000000) && getBoolValue("read_conversations", false);
     }
 
     public static boolean readBots(int peer) {
-        return (peer < 0) && BooleanFalse("read_bot");
+        return (peer < 0) && getBoolValue("read_bot", false);
     }
 
     public static boolean writePM(int peer) {
-        return (peer > 0 && peer < 2000000000) && BooleanFalse("write_pm");
+        return (peer > 0 && peer < 2000000000) && getBoolValue("write_pm", false);
     }
 
     public static boolean writeConversations(int peer) {
-        return (peer > 2000000000) && BooleanFalse("write_conversations");
+        return (peer > 2000000000) && getBoolValue("write_conversations", false);
     }
 
     public static boolean writeBots(int peer) {
-        return (peer < 0) && BooleanFalse("write_bot");
+        return (peer < 0) && getBoolValue("write_bot", false);
     }
 
     public static boolean getActivityWithoutExceptions(int peerId) {

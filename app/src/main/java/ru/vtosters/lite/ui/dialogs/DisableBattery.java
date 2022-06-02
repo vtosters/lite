@@ -2,7 +2,7 @@ package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,7 +17,7 @@ import ru.vtosters.lite.utils.OEMDetector;
 
 public class DisableBattery {
     public static void alert(Activity activity) {
-        if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && BooleanTrue("showDoze")) {
+        if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)) {
             final Context context = getContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);

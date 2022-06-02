@@ -4,14 +4,13 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
-import static ru.vtosters.lite.utils.Preferences.BooleanTrue;
 import static ru.vtosters.lite.utils.Preferences.CommentsSort;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
@@ -76,7 +75,7 @@ public class Newsfeed {
     }
 
     public static void getFilter(String boolname, String filename) {
-        if (BooleanTrue(boolname)) {
+        if (getBoolValue(boolname, true)) {
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
                 while (true) {

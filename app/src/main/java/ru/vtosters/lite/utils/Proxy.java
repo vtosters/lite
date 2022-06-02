@@ -3,7 +3,7 @@ package ru.vtosters.lite.utils;
 import static java.lang.System.clearProperty;
 import static java.lang.System.getProperties;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import java.util.Properties;
 
@@ -209,6 +209,6 @@ public class Proxy {
 
 
     public static boolean proxyvk() {
-        return BooleanFalse("proxyvk");
+        return getBoolValue("proxyvk", false);
     } // Official vk proxy enforcer
 }

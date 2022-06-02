@@ -2,14 +2,13 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.BooleanFalse;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 
-import com.vk.core.ui.themes.VKTheme;
 import com.vk.im.engine.events.OnMsgUpdateEvent;
 import com.vk.im.engine.internal.longpoll.a.MsgDeleteLpTask;
 import com.vk.im.engine.internal.storage.CacheEnvironment;
@@ -44,7 +43,7 @@ public class DeletedMessagesHandler {
     }
 
     public static boolean hook() {
-        return BooleanFalse("undeletemsg");
+        return getBoolValue("undeletemsg", false);
     }
 
     public static void setBodyDBParser(Msg msg) {
