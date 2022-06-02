@@ -17,7 +17,6 @@ import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
 import com.vk.discover.DiscoverFragment;
-import com.vk.discover.GatewaysFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
@@ -207,7 +206,7 @@ public class Newsfeed {
             case "apps":
                 return AppsFragment.class;
             case "discover":
-                return newfeed() ? GatewaysFragment.class : DiscoverFragment.class;
+                return DiscoverFragment.class;
             case "notifications":
                 return NotificationsContainerFragment.class;
             case "money":
