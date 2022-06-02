@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 
 import android.app.Activity;
 import android.app.Application;

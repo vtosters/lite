@@ -92,10 +92,6 @@
 
     iput-object p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->c:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getMsgCount()I
-
-    move-result p3
-
     iput p3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->d:I
 
     iput-object p4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->e:Lcom/vk/im/engine/models/Source;
