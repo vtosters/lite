@@ -21,11 +21,11 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     public boolean apply(Preference preference, Object obj) {
         if (((Boolean) obj).booleanValue()) {
-            componentSwitcher("VTIconDefault", true);
-            componentSwitcher("VTIconVK", false);
-        } else {
             componentSwitcher("VTIconDefault", false);
             componentSwitcher("VTIconVK", true);
+        } else {
+            componentSwitcher("VTIconDefault", true);
+            componentSwitcher("VTIconVK", false);
         }
 
         ToastUtils.a(getString("iconapplying"));
