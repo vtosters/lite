@@ -1,6 +1,6 @@
 package ru.vtosters.lite.dnr;
 
-import static ru.f0x1d.net.F0x1dRequest.makeRequest;
+import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
 

@@ -27,11 +27,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import ru.f0x1d.net.NetCall;
-import ru.f0x1d.net.NetCallback;
-import ru.f0x1d.net.NetClient;
-import ru.f0x1d.net.NetRequest;
-import ru.f0x1d.net.NetResponse;
+import ru.vtosters.lite.net.NetCall;
+import ru.vtosters.lite.net.NetCallback;
+import ru.vtosters.lite.net.NetClient;
+import ru.vtosters.lite.net.NetRequest;
+import ru.vtosters.lite.net.NetResponse;
 
 /**
  * Created by Aefyr on 11.05.2018.

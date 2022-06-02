@@ -1,4 +1,4 @@
-package ru.f0x1d.net;
+package ru.vtosters.lite.net;
 
 import android.util.Base64;
 

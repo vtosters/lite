@@ -8,7 +8,6 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Base64;
 
@@ -32,7 +31,7 @@ public class SettBackup {
     public static void backupSettings() {
         SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String currentDateandTime = date.format(new Date());
-        var directory = getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS) + "/VTLBackup_" + currentDateandTime + ".txt";
+        var directory = getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS + "/VTLBackups/") + "/Backup_" + currentDateandTime + ".txt";
         var file = new File(directory);
         try {
             var exists = file.createNewFile();
@@ -63,9 +62,7 @@ public class SettBackup {
     }
 
     public static void restoreBackup() {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        intent.setType("text/plain");
-        getContext().startActivity(intent);
+        File dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS + "/VTLBackups/").getPath());;
+        // TODO Make restore backup from file list
     }
 }

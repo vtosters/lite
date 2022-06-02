@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 
+import com.vk.core.ui.themes.VKTheme;
 import com.vk.im.engine.events.OnMsgUpdateEvent;
 import com.vk.im.engine.internal.longpoll.a.MsgDeleteLpTask;
 import com.vk.im.engine.internal.storage.CacheEnvironment;
@@ -25,7 +26,6 @@ import java.util.List;
 import ru.vtosters.lite.encryption.EncryptProvider;
 
 public class DeletedMessagesHandler {
-
     private static List<Integer> sDeletedMessagesList = new ArrayList<>();
 
     private static SQLiteDatabase sVKSQLiteDatabase;
@@ -76,17 +76,7 @@ public class DeletedMessagesHandler {
     }
 
     private static String getPreifxUndelete() {
-        String string = getPrefsValue("undeletemsg_prefix");
-        if (string.isEmpty()) {
-            return "[Удалено] ";
-        }
-        if (string.equals("icon")) {
-            return "\uD83D\uDDD1 ";
-        }
-        if (string.equals("icon2")) {
-            return "❌ ";
-        }
-        return "[Удалено] ";
+        return getPrefsValue("undeletemsg_prefix") + " ";
     }
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) {
@@ -128,7 +118,6 @@ public class DeletedMessagesHandler {
     }
 
     public static class DeletedMessagesDBHelper extends SQLiteOpenHelper {
-
         public DeletedMessagesDBHelper() {
             super(getContext(), "deleted_msgs", null, 1);
         }

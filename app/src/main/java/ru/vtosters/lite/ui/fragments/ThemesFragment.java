@@ -1,8 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Globals.componentSwitcher;
 import static ru.vtosters.lite.utils.Globals.getString;
-import static ru.vtosters.lite.utils.IconHelper.switchToDefault;
-import static ru.vtosters.lite.utils.IconHelper.switchToVK;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
@@ -22,10 +21,13 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     public boolean apply(Preference preference, Object obj) {
         if (((Boolean) obj).booleanValue()) {
-            switchToVK();
+            componentSwitcher("VTIconDefault", true);
+            componentSwitcher("VTIconVK", false);
         } else {
-            switchToDefault();
+            componentSwitcher("VTIconDefault", false);
+            componentSwitcher("VTIconVK", true);
         }
+
         ToastUtils.a(getString("iconapplying"));
         return true;
     }
