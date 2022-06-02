@@ -131,6 +131,11 @@ public class VTVerifications {
         return Base64.encodeToString(str.getBytes(), 1);
     }
 
+
+    public static boolean vtverif() {
+        return getBoolValue("VT_Verification", true);
+    }
+
     public static boolean isVerified(JSONObject jSONObject) {
         if (jSONObject.optInt("verified", 0) == 1) {
             return true;

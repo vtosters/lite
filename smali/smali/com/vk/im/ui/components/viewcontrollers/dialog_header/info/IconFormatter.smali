@@ -73,10 +73,8 @@
 
     if-eqz p2, :cond_1
 
-    const-string p2, "VT_Verification"
-
     .line 181
-    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->BooleanTrue(Ljava/lang/String;)Z
+    invoke-static {}, Lru/vtosters/lite/f0x1d/VTVerifications;->vtverif()Z
 
     move-result p2
 
@@ -104,10 +102,8 @@
 
     if-eqz p2, :cond_2
 
-    const-string p2, "VT_Verification"
-
     .line 181
-    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->BooleanTrue(Ljava/lang/String;)Z
+    invoke-static {}, Lru/vtosters/lite/f0x1d/VTVerifications;->vtverif()Z
 
     move-result p2
 
