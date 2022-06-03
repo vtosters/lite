@@ -3,12 +3,12 @@
     <PreferenceCategory android:title="@string/dnr">
         <Preference
             android:enabled="false"
-            android:summary="Функция позволяет вам не отправлять статус прочтения вами сообщения собеседника"
-            android:title="Что это за функция?" />
+            android:summary="@string/activity_dnr_summary"
+            android:title="@string/activity_what_is_it" />
         <Preference
             android:enabled="false"
-            android:summary="Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника оно прочитано не будет"
-            android:title="Внимание!" />
+            android:summary="@string/activity_dnr_visual"
+            android:title="@string/activity_dnr_warn" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="read_pm"
@@ -26,8 +26,8 @@
     <PreferenceCategory android:title="@string/dnw">
         <Preference
             android:enabled="false"
-            android:summary="Функция позволяет вам не отправлять статус вашего набора/написания сообщения"
-            android:title="Что это за функция?" />
+            android:summary="@string/activity_dnw_summary"
+            android:title="@string/activity_what_is_it" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="write_pm"
@@ -45,27 +45,27 @@
     <PreferenceCategory android:title="@string/stories_vtl">
         <Preference
             android:enabled="false"
-            android:summary="Функция позволяет вам не отправлять статус просмотра вами историй"
-            android:title="Что это за функция?" />
+            android:summary="@string/activity_dns_summary"
+            android:title="@string/activity_what_is_it" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dns"
             android:title="@string/dns" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Анти-удаление сообщений">
+    <PreferenceCategory android:title="@string/activity_undel">
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
-            android:dialogTitle="Выберите значение"
+            android:dialogTitle="@string/activity_undel_dial"
             android:entries="@array/undel_value"
             android:entryValues="@array/undel"
             android:key="undeletemsg_prefix"
-            android:title="Пометка удаленного сообщения" />
+            android:title="@string/activity_undel_tag" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="undeletemsg"
-            android:summary="Может не сохранять вложения"
-            android:title="Оставлять удаленные сообщения" />
+            android:summary="@string/activity_undel_attachments"
+            android:title="@string/activity_undel_enable" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">

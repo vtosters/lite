@@ -4,12 +4,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="calls"
-            android:summary="Иконка звонков в сообщениях"
+            android:summary="@string/messages_interface_calls_summary"
             android:title="@string/vtlcalls" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="msgtails"
-            android:summary="Может некорректно работать с вложениями"
+            android:summary="@string/messages_interface_tails_summary"
             android:title="@string/vtlmsgtails" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
@@ -39,11 +39,11 @@
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="30"
-            android:dialogTitle="Выберите количество"
+            android:dialogTitle="@string/messages_other_choose_count"
             android:entries="@array/msgcount_value"
             android:entryValues="@array/msgcount"
             android:key="msgcount"
-            android:title="Количество загружаемых сразу сообщений" />
+            android:title="@string/messages_other_download_first" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="convUsersOnline"
