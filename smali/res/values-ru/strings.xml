@@ -4102,7 +4102,7 @@
     <string name="alteremoji">Альтернативный дизайн меню с эмодзи</string>
     <string name="alteremojisum">Альтернативный вид выбора эмодзи и стикеров в миниатюрном меню</string>
     <string name="altnewsfeed">Альтернативный дизайн ленты</string>
-    <string name="altnewsfeedsum">Дизайн с новыми вкладками в ленте, а также замена поиска по умолчанию на улучшенный (в нижнем меню)</string>
+    <string name="altnewsfeedsum">Дизайн с динамическими вкладками в ленте</string>
     <string name="applicationrestart">Перезапустить приложение</string>
     <string name="benchapi">Бенчмарк апи</string>
     <string name="benchapisummary">Тестирование скорости отправки запросов. Бесполезная функция для всех, кроме разработчиков ВКонтакте</string>

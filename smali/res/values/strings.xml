@@ -4227,7 +4227,7 @@ Does not affect vk.cc links"</string>
     <string name="alteremoji">Alternative type of emoji menu</string>
     <string name="alteremojisum">Alrernative selection of emojis and stickers in the miniature menu</string>
     <string name="altnewsfeed">Alternative design of newsfeed</string>
-    <string name="altnewsfeedsum">Design with new tabs in the feed, as well as replacing default search with an improved one (in the bottom menu)</string>
+    <string name="altnewsfeedsum">Design with dynamic tabs in the feed</string>
     <string name="applicationrestart">Restart application</string>
     <string name="benchapi">Benchmark api</string>
     <string name="benchapisummary">Testing the speed of sending requests. Useless function for everyone except VKontakte developers</string>
