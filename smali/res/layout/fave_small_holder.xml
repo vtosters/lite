@@ -59,7 +59,7 @@
         android:layout_marginTop="4.0dip"
         android:src="@drawable/ic_more_vertical_24"
         android:scaleType="center"
-        android:tint="@color/fave_action_gray"
+        android:tint="?text_primary"
         android:layout_marginEnd="4.0dip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -115,7 +115,7 @@
 
         <TextView
             android:textSize="13.0sp"
-            android:textColor="@color/gray_400"
+            android:textColor="?text_primary"
             android:ellipsize="end"
             android:gravity="start|center"
             android:id="@id/tv_subtitle"
@@ -136,12 +136,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/iv_fave_image"
         app:layout_constraintTop_toBottomOf="@id/tv_subtitle_container"
-        app:separatorTextColor="@color/gray_400"
+        app:separatorTextColor="?text_primary"
         app:singleLineMode="true"
         app:tagFontFamily="@string/font_family_regular"
         app:tagHorizontalPadding="2.0dip"
         app:tagLineSpacingExtra="5.0sp"
-        app:tagTextColor="@color/gray_400"
+        app:tagTextColor="?text_primary"
         app:tagTextSize="13.0sp"
         app:tagVerticalPadding="1.0dip"
         app:verticalSpacing="0.0dip" />
@@ -151,7 +151,7 @@
         android:layout_width="12.0dip"
         android:layout_height="12.0dip"
         android:src="@drawable/ic_tag_12"
-        android:tint="@color/gray_300"
+        android:tint="?text_primary"
         app:layout_constraintBottom_toBottomOf="@id/ft_tag_group"
         app:layout_constraintStart_toStartOf="@id/tv_title"
         app:layout_constraintTop_toTopOf="@id/ft_tag_group" />
