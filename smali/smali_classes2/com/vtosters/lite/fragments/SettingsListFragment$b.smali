@@ -851,7 +851,11 @@
 
     move-result-object v8
 
-    const-string v8, "Редактор докбара"
+    const v8, 0x7f111239
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
 
     const-class v9, Lru/vtosters/lite/ui/fragments/dockbar/DockBarFragment;
 
@@ -1152,11 +1156,11 @@
 
     const v7, 0x7f040022
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    const v8, 0x7f11123e
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v8, "Скачать последнюю версию"
+    move-result-object v8
 
     new-instance v9, Lcom/vtosters/lite/fragments/VTDownload;
 

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Исправление работы приложения">
+    <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
             android:key="firebasefix"
             android:summary="@string/firebasefixsum"
             android:title="@string/firebasefix" />
         <Preference
             android:key="stickfix"
-            android:title="Очистить кэш стикеров"
-            android:summary="Исправление загрузки стикеров при их полном отсутствии" />
+            android:title="@string/other_clear_stickers_cache"
+            android:summary="@string/other_clear_stickers_cache_summary" />
         <Preference
             android:key="deleteprefs"
-            android:summary="Сбрасывает включенные вами функции модификации на значения по умолчанию"
-            android:title="Сбросить настройки" />
+            android:summary="@string/other_reset_settings_summary"
+            android:title="@string/other_reset_settings" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="color_grishka"
-            android:title="Исправление покрасок для Android 12" />
+            android:title="@string/other_fix_dynamic_colors" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtsystem">

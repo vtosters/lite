@@ -41,13 +41,13 @@
         <EditTextPreference
             android:defaultValue=""
             android:key="proxyUserHTTP"
-            android:summary="Если имеется"
-            android:title="Логин" />
+            android:summary="@string/proxy_if"
+            android:title="@string/proxy_login_title" />
         <EditTextPreference
             android:defaultValue=""
             android:key="proxyPassHTTP"
-            android:summary="Если имеется"
-            android:title="Пароль" />
+            android:summary="@string/proxy_if"
+            android:title="@string/proxy_password_title" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttps">
@@ -62,13 +62,13 @@
         <EditTextPreference
             android:defaultValue=""
             android:key="proxyUserHTTPS"
-            android:summary="Если имеется"
-            android:title="Логин" />
+            android:summary="@string/proxy_if"
+            android:title="@string/proxy_login_title" />
         <EditTextPreference
             android:defaultValue=""
             android:key="proxyPassHTTPS"
-            android:summary="Если имеется"
-            android:title="Пароль" />
+            android:summary="@string/proxy_if"
+            android:title="@string/proxy_password_title" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxysocks">

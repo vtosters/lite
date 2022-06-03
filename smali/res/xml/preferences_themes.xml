@@ -3,27 +3,27 @@
     <PreferenceCategory android:title="@string/vtlthemes">
         <Preference
             android:enabled="false"
-            android:summary="Для примнений изменений тем необходимо переключить тему"
-            android:title="Полезная информация" />
+            android:summary="@string/appearance_theme_info_summary"
+            android:title="@string/appearance_theme_info" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
-            android:dialogTitle="Выберите тему"
+            android:dialogTitle="@string/appearance_theme_dialog_title"
             android:entries="@array/darktheme_value"
             android:entryValues="@array/darktheme"
             android:key="darktheme"
-            android:title="Темная тема приложения" />
+            android:title="@string/appearance_theme_dark_theme" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
-            android:dialogTitle="Выберите тему"
+            android:dialogTitle="@string/appearance_theme_dialog_title"
             android:entries="@array/lighttheme_value"
             android:entryValues="@array/lighttheme"
             android:key="lighttheme"
-            android:title="Светлая тема приложения" />
+            android:title="@string/appearance_theme_light_theme" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="systemtheme"
-            android:summary="Применение системной темы при запуске приложения"
-            android:title="Использовать системную тему" />
+            android:summary="@string/appearance_theme_use_system_summary"
+            android:title="@string/appearance_theme_use_system" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vticon">
@@ -38,12 +38,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="navbar"
-            android:summary="Если системно имеется"
+            android:summary="@string/appearance_other_color_navbar_summary"
             android:title="@string/vtlnavbar" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="VKUI_INJ"
-            android:summary="Покраска страниц как VKID под тему приложения"
+            android:summary="@string/appearance_other_color_webview_summary"
             android:title="@string/vkuiinj" />
     </PreferenceCategory>
 </PreferenceScreen>
