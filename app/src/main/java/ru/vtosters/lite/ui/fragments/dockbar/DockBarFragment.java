@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import ru.vtosters.lite.R;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
 

@@ -169,6 +169,10 @@
 
     if-eqz v1, :cond_2
 
+    invoke-static {}, Lru/vtosters/lite/utils/JsonInjectors;->discoverBannerButton()Lorg/json/JSONObject;
+
+    move-result-object p1
+
     .line 13
     sget-object v0, Lcom/vk/dto/common/actions/ActionOpenUrl;->b:Lcom/vk/dto/common/actions/ActionOpenUrl$b;
 
