@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.olddock;
 
@@ -51,8 +52,8 @@ public class DockBarManager {
     private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
     private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
     private final List<String> mGroups = Arrays.asList(
-            "Выбранные элементы докбара",
-            "Невыбранные элементы"
+            getString("dockbar_selected_items"),
+            getString("dockbar_unselected_items")
     );
     public DockBarManager() {
         load();

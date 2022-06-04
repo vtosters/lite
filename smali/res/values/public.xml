@@ -154,6 +154,18 @@
     <public type="array" name="start_values" id="0x7f03005c" />
     <public type="array" name="proxy" id="0x7f03005d" />
     <public type="array" name="proxy_value" id="0x7f03005e" />
+    <public type="array" name="commentssort" id="0x7f03005f" />
+    <public type="array" name="commentssort_value" id="0x7f030060" />
+    <public type="array" name="darktheme" id="0x7f030061" />
+    <public type="array" name="darktheme_value" id="0x7f030062" />
+    <public type="array" name="lighttheme" id="0x7f030063" />
+    <public type="array" name="lighttheme_value" id="0x7f030064" />
+    <public type="array" name="msgcount" id="0x7f030065" />
+    <public type="array" name="msgcount_value" id="0x7f030066" />
+    <public type="array" name="newsupdate" id="0x7f030067" />
+    <public type="array" name="newsupdate_value" id="0x7f030068" />
+    <public type="array" name="undel" id="0x7f030069" />
+    <public type="array" name="undel_value" id="0x7f03006a" />
     <public type="attr" name="BMSB_auto" id="0x7f040000" />
     <public type="attr" name="BMSB_error_text_color" id="0x7f040001" />
     <public type="attr" name="BuyMusicSubscriptionButtonStyle" id="0x7f040002" />
@@ -2375,6 +2387,7 @@
     <public type="color" name="window_bg_transparent" id="0x7f06028b" />
     <public type="color" name="yellow" id="0x7f06028c" />
     <public type="color" name="yellow_light" id="0x7f06028d" />
+    <public type="color" name="iclauncher" id="0x7f06028e" />
     <public type="color" name="abc_color_highlight_material" id="0x7f060004" />
     <public type="dimen" name="_post_side_padding" id="0x7f070000" />
     <public type="dimen" name="abc_action_bar_content_inset_material" id="0x7f070001" />
@@ -14556,9 +14569,6 @@
     <public type="string" name="vtverify" id="0x7f1110bb" />
     <public type="string" name="vtverifyinfo" id="0x7f1110bc" />
     <public type="string" name="vtverifyinfosum" id="0x7f1110bd" />
-    <public type="string" name="vtlota" id="0x7f111233" />
-    <public type="string" name="DNR_ON" id="0x7f111234" />
-    <public type="string" name="DNR_OFF" id="0x7f111235" />
     <public type="string" name="APKTOOL_DUMMY_10be" id="0x7f1110be" />
     <public type="string" name="APKTOOL_DUMMY_10bf" id="0x7f1110bf" />
     <public type="string" name="APKTOOL_DUMMY_10c0" id="0x7f1110c0" />
@@ -14932,6 +14942,147 @@
     <public type="string" name="APKTOOL_DUMMY_1230" id="0x7f111230" />
     <public type="string" name="APKTOOL_DUMMY_1231" id="0x7f111231" />
     <public type="string" name="APKTOOL_DUMMY_1232" id="0x7f111232" />
+    <public type="string" name="vtlota" id="0x7f111233" />
+    <public type="string" name="DNR_ON" id="0x7f111234" />
+    <public type="string" name="DNR_OFF" id="0x7f111235" />
+    <public type="string" name="add_another_account" id="0x7f111236" />
+    <public type="string" name="other_clear_stickers_cache" id="0x7f111237" />
+    <public type="string" name="other_clear_stickers_cache_summary" id="0x7f111238" />
+    <public type="string" name="dockbar_editor" id="0x7f111239" />
+    <public type="string" name="dockbar_reset" id="0x7f11123a" />
+    <public type="string" name="dockbar_save" id="0x7f11123b" />
+    <public type="string" name="dockbar_selected_items" id="0x7f11123c" />
+    <public type="string" name="dockbar_unselected_items" id="0x7f11123d" />
+    <public type="string" name="download_latest_vtl" id="0x7f11123e" />
+    <public type="string" name="other_fix_dynamic_colors" id="0x7f11123f" />
+    <public type="string" name="other_reset_settings" id="0x7f111240" />
+    <public type="string" name="other_reset_settings_summary" id="0x7f111241" />
+    <public type="string" name="other_fix_app" id="0x7f111242" />
+    <public type="string" name="activity_dnr_summary" id="0x7f111243" />
+    <public type="string" name="activity_dnr_visual" id="0x7f111244" />
+    <public type="string" name="activity_dnr_warn" id="0x7f111245" />
+    <public type="string" name="activity_dns_summary" id="0x7f111246" />
+    <public type="string" name="activity_dnw_summary" id="0x7f111247" />
+    <public type="string" name="activity_undel" id="0x7f111248" />
+    <public type="string" name="activity_undel_attachments" id="0x7f111249" />
+    <public type="string" name="activity_undel_dial" id="0x7f11124a" />
+    <public type="string" name="activity_undel_enable" id="0x7f11124b" />
+    <public type="string" name="activity_undel_tag" id="0x7f11124c" />
+    <public type="string" name="activity_what_is_it" id="0x7f11124d" />
+    <public type="string" name="appearance_other_color_navbar_summary" id="0x7f11124e" />
+    <public type="string" name="appearance_other_color_webview_summary" id="0x7f11124f" />
+    <public type="string" name="appearance_theme_dark_theme" id="0x7f111250" />
+    <public type="string" name="appearance_theme_dialog_title" id="0x7f111251" />
+    <public type="string" name="appearance_theme_info" id="0x7f111252" />
+    <public type="string" name="appearance_theme_info_summary" id="0x7f111253" />
+    <public type="string" name="appearance_theme_light_theme" id="0x7f111254" />
+    <public type="string" name="appearance_theme_use_system" id="0x7f111255" />
+    <public type="string" name="appearance_theme_use_system_summary" id="0x7f111256" />
+    <public type="string" name="debug_cache" id="0x7f111257" />
+    <public type="string" name="debug_cache_trusted_hash" id="0x7f111258" />
+    <public type="string" name="debug_cache_video" id="0x7f111259" />
+    <public type="string" name="debug_cache_webview" id="0x7f11125a" />
+    <public type="string" name="debug_developer_dark_mode" id="0x7f11125b" />
+    <public type="string" name="debug_developer_force_ssl" id="0x7f11125c" />
+    <public type="string" name="debug_developer_force_ssl_summary" id="0x7f11125d" />
+    <public type="string" name="debug_developer_functions" id="0x7f11125e" />
+    <public type="string" name="debug_developer_has_music_subscription" id="0x7f11125f" />
+    <public type="string" name="debug_developer_has_music_subscription_summary" id="0x7f111260" />
+    <public type="string" name="debug_developer_is_music_restricted" id="0x7f111261" />
+    <public type="string" name="debug_developer_is_music_restricted_summary" id="0x7f111262" />
+    <public type="string" name="debug_developer_mode" id="0x7f111263" />
+    <public type="string" name="debug_developer_mode_summary" id="0x7f111264" />
+    <public type="string" name="debug_developer_old_about" id="0x7f111265" />
+    <public type="string" name="debug_developer_ssfs_custom" id="0x7f111266" />
+    <public type="string" name="debug_domains" id="0x7f111267" />
+    <public type="string" name="debug_domains_api" id="0x7f111268" />
+    <public type="string" name="debug_domains_awayphp" id="0x7f111269" />
+    <public type="string" name="debug_domains_editing" id="0x7f11126a" />
+    <public type="string" name="debug_domains_editing_summary" id="0x7f11126b" />
+    <public type="string" name="debug_domains_oauth" id="0x7f11126c" />
+    <public type="string" name="debug_domains_vkui_host" id="0x7f11126d" />
+    <public type="string" name="debug_domains_vkui_spa" id="0x7f11126e" />
+    <public type="string" name="debug_experimental" id="0x7f11126f" />
+    <public type="string" name="debug_experimental_language" id="0x7f111270" />
+    <public type="string" name="debug_experimental_language_summary" id="0x7f111271" />
+    <public type="string" name="debug_experimental_libverify" id="0x7f111272" />
+    <public type="string" name="debug_experimental_libverify_summary" id="0x7f111273" />
+    <public type="string" name="debug_experimental_opusmodule" id="0x7f111274" />
+    <public type="string" name="debug_experimental_page_stats" id="0x7f111275" />
+    <public type="string" name="debug_experimental_page_stats_summary" id="0x7f111276" />
+    <public type="string" name="debug_experimental_usevkui" id="0x7f111277" />
+    <public type="string" name="debug_experimental_vk_me_mode" id="0x7f111278" />
+    <public type="string" name="debug_experimental_vk_sans_font" id="0x7f111279" />
+    <public type="string" name="debug_logging" id="0x7f11127a" />
+    <public type="string" name="debug_logging_api" id="0x7f11127b" />
+    <public type="string" name="debug_logging_api_errors" id="0x7f11127c" />
+    <public type="string" name="debug_logging_api_errors_summary" id="0x7f11127d" />
+    <public type="string" name="debug_logging_api_summary" id="0x7f11127e" />
+    <public type="string" name="debug_logging_apply_spaces" id="0x7f11127f" />
+    <public type="string" name="debug_logging_apply_spaces_summary" id="0x7f111280" />
+    <public type="string" name="debug_logging_breakpoints" id="0x7f111281" />
+    <public type="string" name="debug_logging_breakpoints_summary" id="0x7f111282" />
+    <public type="string" name="debug_logging_file" id="0x7f111283" />
+    <public type="string" name="debug_logging_file_summary" id="0x7f111284" />
+    <public type="string" name="debug_logging_force_stats_sending" id="0x7f111285" />
+    <public type="string" name="debug_logging_memleak" id="0x7f111286" />
+    <public type="string" name="debug_logging_visualise_viewposttime" id="0x7f111287" />
+    <public type="string" name="debug_logging_visualise_viewposttime_summary" id="0x7f111288" />
+    <public type="string" name="debug_logging_webview" id="0x7f111289" />
+    <public type="string" name="debug_other" id="0x7f11128a" />
+    <public type="string" name="debug_proxy" id="0x7f11128b" />
+    <public type="string" name="debug_proxy_enable" id="0x7f11128c" />
+    <public type="string" name="debug_proxy_enable_summary" id="0x7f11128d" />
+    <public type="string" name="debug_proxy_force" id="0x7f11128e" />
+    <public type="string" name="debug_proxy_force_summary" id="0x7f11128f" />
+    <public type="string" name="debug_show_settings_item" id="0x7f111290" />
+    <public type="string" name="debug_system" id="0x7f111291" />
+    <public type="string" name="debug_system_fcm" id="0x7f111292" />
+    <public type="string" name="debug_system_fcm_copy_token" id="0x7f111293" />
+    <public type="string" name="debug_system_google_now" id="0x7f111294" />
+    <public type="string" name="debug_system_language" id="0x7f111295" />
+    <public type="string" name="debug_system_terminate" id="0x7f111296" />
+    <public type="string" name="debug_tests" id="0x7f111297" />
+    <public type="string" name="debug_tests_ads" id="0x7f111298" />
+    <public type="string" name="debug_tests_bd" id="0x7f111299" />
+    <public type="string" name="debug_tests_captcha" id="0x7f11129a" />
+    <public type="string" name="debug_tests_crash" id="0x7f11129b" />
+    <public type="string" name="debug_tests_pretty_cards" id="0x7f11129c" />
+    <public type="string" name="debug_tests_spa" id="0x7f11129d" />
+    <public type="string" name="debug_tests_spa_uri" id="0x7f11129e" />
+    <public type="string" name="debug_tests_validation" id="0x7f11129f" />
+    <public type="string" name="debug_warning" id="0x7f1112a0" />
+    <public type="string" name="debug_warning_summary" id="0x7f1112a1" />
+    <public type="string" name="feed_ads_carousel_summary" id="0x7f1112a2" />
+    <public type="string" name="feed_ads_regular_summary" id="0x7f1112a3" />
+    <public type="string" name="feed_ads_sources" id="0x7f1112a4" />
+    <public type="string" name="feed_ads_sources_summary" id="0x7f1112a5" />
+    <public type="string" name="feed_ads_stories_summary" id="0x7f1112a6" />
+    <public type="string" name="feed_other_cache_summary" id="0x7f1112a7" />
+    <public type="string" name="feed_other_sort_comments" id="0x7f1112a8" />
+    <public type="string" name="feed_other_sort_comments_summary" id="0x7f1112a9" />
+    <public type="string" name="feed_other_update" id="0x7f1112aa" />
+    <public type="string" name="feed_other_update_dialog_title" id="0x7f1112ab" />
+    <public type="string" name="feed_recommendations_authors_summary" id="0x7f1112ac" />
+    <public type="string" name="feed_recommendations_friends_reacted_summary" id="0x7f1112ad" />
+    <public type="string" name="feed_recommendations_friends_summary" id="0x7f1112ae" />
+    <public type="string" name="interface_global_old_icons" id="0x7f1112af" />
+    <public type="string" name="interface_global_old_icons_summary" id="0x7f1112b0" />
+    <public type="string" name="messages_interface_calls_summary" id="0x7f1112b1" />
+    <public type="string" name="messages_interface_tails_summary" id="0x7f1112b2" />
+    <public type="string" name="messages_other_choose_count" id="0x7f1112b3" />
+    <public type="string" name="messages_other_download_first" id="0x7f1112b4" />
+    <public type="string" name="proxy_if" id="0x7f1112b5" />
+    <public type="string" name="proxy_login_title" id="0x7f1112b6" />
+    <public type="string" name="proxy_password_title" id="0x7f1112b7" />
+    <public type="string" name="vkx_download" id="0x7f1112b8" />
+    <public type="string" name="vkx_fix_music" id="0x7f1112b9" />
+    <public type="string" name="vkx_fix_music_summary" id="0x7f1112ba" />
+    <public type="string" name="vkx_integration" id="0x7f1112bb" />
+    <public type="string" name="vkx_other" id="0x7f1112bc" />
+    <public type="string" name="vkx_title" id="0x7f1112bd" />
+    <public type="string" name="vkx_why" id="0x7f1112be" />
+    <public type="string" name="vkx_why_summary" id="0x7f1112bf" />
     <public type="string" name="scree_nsize" id="0x7f110a34" />
     <public type="string" name="empty_text" id="0x7f11027f" />
     <public type="style" name="ActionBarGrayTheme" id="0x7f120000" />
@@ -15840,6 +15991,11 @@
     <public type="style" name="title_text" id="0x7f1203a4" />
     <public type="style" name="tooltip_bubble_text" id="0x7f1203a5" />
     <public type="style" name="Vk.Theme.Dark" id="0x7f1203a6" />
+    <public type="style" name="ActionBarThemeFix" id="0x7f1203aa" />
+    <public type="style" name="BaseAmoledStyle" id="0x7f1203ab" />
+    <public type="style" name="BaseAmoledTheme" id="0x7f1203ac" />
+    <public type="style" name="Vk.Theme.client_amoled_generated" id="0x7f1203ad" />
+    <public type="style" name="VkIm.Theme.VkApp.Amoled" id="0x7f1203ae" />
     <public type="style" name="Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" id="0x7f120039" />
     <public type="style" name="Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small" id="0x7f12003a" />
     <public type="style" name="Base.V21.Theme.AppCompat" id="0x7f120074" />
@@ -15887,6 +16043,7 @@
     <public type="xml" name="sync_contacts" id="0x7f14000c" />
     <public type="xml" name="widget_player_big_provider" id="0x7f14000d" />
     <public type="xml" name="widget_player_provider" id="0x7f14000e" />
+    <public type="xml" name="APKTOOL_DUMMY_f" id="0x7f14000f" />
     <public type="xml" name="preferences_feed" id="0x7f140010" />
     <public type="xml" name="preferences_interface" id="0x7f140011" />
     <public type="xml" name="preferences_other" id="0x7f140012" />
@@ -15896,8 +16053,7 @@
     <public type="xml" name="preferences_music" id="0x7f140016" />
     <public type="xml" name="preferences_tgs" id="0x7f140017" />
     <public type="xml" name="preferences_proxy" id="0x7f140018" />
+    <public type="xml" name="APKTOOL_DUMMY_19" id="0x7f140019" />
     <public type="xml" name="preferences_gms" id="0x7f14001a" />
     <public type="xml" name="empty" id="0x7f14001b" />
-    <public type="xml" name="APKTOOL_DUMMY_f" id="0x7f14000f" />
-    <public type="xml" name="APKTOOL_DUMMY_19" id="0x7f140019" />
 </resources>
