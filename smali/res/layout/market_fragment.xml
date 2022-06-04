@@ -13,7 +13,7 @@
 
         <FrameLayout
             android:id="@id/filter_block"
-            android:background="#fff7f7f7"
+            android:background="?background_content"
             android:padding="4.0dip"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
@@ -37,12 +37,14 @@
 
         <LinearLayout
             android:orientation="vertical"
+            android:background="?background_content"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_below="@id/filter_block">
 
             <FrameLayout
                 android:id="@id/filter_price"
+                android:background="?background_content"
                 android:paddingLeft="@dimen/post_side_padding"
                 android:paddingTop="16.0dip"
                 android:paddingRight="@dimen/post_side_padding"
@@ -55,6 +57,7 @@
                     android:gravity="center_vertical"
                     android:id="@id/filter_price_badge"
                     android:background="@drawable/highlight_filter_badge"
+                    android:backgroundTint="?background_page"
                     android:paddingLeft="8.0dip"
                     android:clickable="true"
                     android:layout_width="wrap_content"
@@ -63,7 +66,7 @@
 
                     <TextView
                         android:textSize="14.0dip"
-                        android:textColor="#ff51647a"
+                        android:textColor="?text_primary"
                         android:id="@id/price_filter_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />

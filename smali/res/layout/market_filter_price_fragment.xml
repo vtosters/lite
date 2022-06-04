@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout android:orientation="vertical"
+    android:background="?background_page"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <FrameLayout
         android:id="@id/cardContainer"
+        android:background="?background_content"
+        android:tint="?background_content"
         android:paddingTop="8.0dip"
         android:paddingBottom="22.0dip"
         android:layout_width="fill_parent"
@@ -21,6 +24,7 @@
 
         <LinearLayout
             android:paddingLeft="@dimen/post_side_padding"
+            android:background="?background_content"
             android:paddingRight="@dimen/post_side_padding"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
