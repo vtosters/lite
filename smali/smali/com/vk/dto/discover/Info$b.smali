@@ -38,6 +38,10 @@
 .method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/discover/Info;
     .locals 7
 
+    invoke-static {}, Lru/vtosters/lite/utils/JsonInjectors;->discoverBanner()Lorg/json/JSONObject;
+
+    move-result-object p1
+
     const-string v0, "json"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V

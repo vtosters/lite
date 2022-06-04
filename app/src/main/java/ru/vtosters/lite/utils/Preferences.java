@@ -1,10 +1,12 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
 import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
@@ -338,6 +340,10 @@ public class Preferences {
 
     public static long VKVersionBuildLong() {
         return VKVersionBuild();
+    }
+
+    public static boolean hasVerification() {
+        return isVerified(getUserId());
     }
 
     public static String getLocale() {

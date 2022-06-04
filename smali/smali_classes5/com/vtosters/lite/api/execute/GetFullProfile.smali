@@ -1463,7 +1463,9 @@
     iput-object v4, v3, Lcom/vtosters/lite/api/ExtendedUserProfile;->bj:Ljava/util/ArrayList;
 
     :cond_20
-    const-string v4, "buttons"
+    invoke-static {}, Lru/vtosters/lite/utils/JsonInjectors;->haveDonateButton()Ljava/lang/String;
+
+    move-result-object v4
 
     .line 266
     invoke-virtual {p1, v4}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z

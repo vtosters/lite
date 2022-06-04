@@ -349,7 +349,9 @@
     :goto_4
     move-object v11, v10
 
-    const-string v10, "null"
+    invoke-static {}, Lru/vtosters/lite/utils/JsonInjectors;->haveDonateBanner()Ljava/lang/String;
+
+    move-result-object v10
 
     .line 115
     invoke-virtual {v2, v10}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
