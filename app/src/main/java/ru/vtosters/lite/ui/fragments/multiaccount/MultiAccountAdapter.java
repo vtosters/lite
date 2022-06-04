@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments.multiaccount;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getResources;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.isNetworkConnected;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
@@ -119,7 +120,7 @@ public class MultiAccountAdapter extends RecyclerView.a<MultiAccountAdapter.Mult
 
         public void bind(MultiAccountItem item, int pos) {
             if (pos == 0) {
-                mNickname.setText("Добавить новый аккаунт");
+                mNickname.setText(getString("add_another_account"));
                 mContainer.setOnClickListener(v -> {
                     MultiAccountManager.addAccount();
 

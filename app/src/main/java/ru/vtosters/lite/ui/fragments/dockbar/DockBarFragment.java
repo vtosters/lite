@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import ru.vtosters.lite.R;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
 
@@ -40,7 +42,7 @@ public class DockBarFragment extends ToolbarFragment {
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
         Button save = new Button(n());
-        save.setText("Сохранить");
+        save.setText(getString("dockbar_save"));
         save.setOnClickListener(v -> {
             DockBarManager.getInstance().save();
             restartApplication();
@@ -54,7 +56,7 @@ public class DockBarFragment extends ToolbarFragment {
         buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
 
         Button reset = new Button(n());
-        reset.setText("Сбросить");
+        reset.setText(getString("dockbar_reset"));
         reset.setOnClickListener(v -> {
             DockBarManager.getInstance().delete();
             restartApplication();
@@ -83,6 +85,6 @@ public class DockBarFragment extends ToolbarFragment {
 
         super.a(arg0, arg1);
 
-        a("Редактор докбара");
+        a(getString("dockbar_editor"));
     }
 }
