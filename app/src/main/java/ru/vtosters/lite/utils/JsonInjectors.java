@@ -39,7 +39,7 @@ public class JsonInjectors {
 
     public static String haveDonateBanner() {
         Random random = new Random();
-        int randomshower = random.nextInt(7);
+        int randomshower = random.nextInt(5);
 
         return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "info";
     }
