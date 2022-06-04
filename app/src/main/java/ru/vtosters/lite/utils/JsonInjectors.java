@@ -6,6 +6,8 @@ import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Random;
+
 public class JsonInjectors {
     public static JSONObject profileButton() throws JSONException {
         String pic = "https:\\/\\/sun1-18.userapi.com\\/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ\\/5R-DEF37PFs.png";
@@ -36,10 +38,16 @@ public class JsonInjectors {
     }
 
     public static String haveDonateBanner() {
-        return hasVerification() || donaterecomm() ? "null" : "info";
+        Random random = new Random();
+        int randomshower = random.nextInt(7);
+
+        return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "info";
     }
 
     public static String haveDonateButton() {
-        return hasVerification() || donaterecomm() ? "null" : "buttons";
+        Random random = new Random();
+        int randomshower = random.nextInt(5);
+
+        return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "buttons";
     }
 }
