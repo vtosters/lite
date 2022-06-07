@@ -20,8 +20,8 @@ public class JsonInjectors {
     }
 
     public static JSONObject discoverBanner() throws JSONException {
-        String smallimg = "https:\\/\\/psv4.userapi.com\\/c505536\\/u251706814\\/docs\\/d22\\/f608ae5431ba\\/IMG_20220604_202507_144.png";
-        String background = "https:\\/\\/psv4.userapi.com\\/c235031\\/u251706814\\/docs\\/d48\\/8d4c0e16d450\\/IMG_20220604_202504_348.jpg";
+        String smallimg = "https:\\/\\/sun1-25.userapi.com\\/3D4YtNHjgwoyxav3FksnYRINp_FhWULuDKYdcA\\/zfCUgKMS0O4.png";
+        String background = "https:\\/\\/images.wsj.net\\/im-501403";
         String title = "Задонать";
         String desc = "Помоги проекту донатом и получи приятные бонусы на аккаунт";
         String text_color = "ffffff";
@@ -39,14 +39,14 @@ public class JsonInjectors {
 
     public static String haveDonateBanner() {
         Random random = new Random();
-        int randomshower = random.nextInt(5);
+        int randomshower = random.nextInt(7);
 
         return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "info";
     }
 
     public static String haveDonateButton() {
         Random random = new Random();
-        int randomshower = random.nextInt(5);
+        int randomshower = random.nextInt(7);
 
         return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "buttons";
     }
