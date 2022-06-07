@@ -43,7 +43,7 @@ public class DeletedMessagesHandler {
     }
 
     public static boolean hook() {
-        return getBoolValue("undeletemsg", false);
+        return getBoolValue("undeletemsg", true);
     }
 
     public static void setBodyDBParser(Msg msg) {

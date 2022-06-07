@@ -15130,10 +15130,10 @@ public final class R {
         public static final int proxy_login_title = 0x7f1112b6;
         public static final int proxy_password_title = 0x7f1112b7;
         public static final int vkx_download = 0x7f1112b8;
-        public static final int vkx_fix_music = 0x7f1112b9;
-        public static final int vkx_fix_music_summary = 0x7f1112ba;
+        public static final int vk_fix_music = 0x7f1112b9;
+        public static final int vk_fix_music_summary = 0x7f1112ba;
         public static final int vkx_integration = 0x7f1112bb;
-        public static final int vkx_other = 0x7f1112bc;
+        public static final int vk_fix_music_other = 0x7f1112bc;
         public static final int vkx_title = 0x7f1112bd;
         public static final int vkx_why = 0x7f1112be;
         public static final int vkx_why_summary = 0x7f1112bf;

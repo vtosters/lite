@@ -4070,15 +4070,15 @@
     <string name="vtlsfilterrefs">Фильтр реферальных ссылок</string>
     <string name="vtlsfilterrefssummary">Фильтр для блокировки постов с реферальными ссылками, такими как ali.pub и тд</string>
     <string name="vtlrecommend">Рекомендации</string>
-    <string name="vtlrecommendfriend">Рекомендации друзей</string>
-    <string name="vtlrecommendauthor">Рекомендации авторов</string>
-    <string name="vtlrecommendfriendpost">Рекомендации постов друзей</string>
+    <string name="vtlrecommendfriend">Отключить рекомендации друзей</string>
+    <string name="vtlrecommendauthor">Отключить рекомендации авторов</string>
+    <string name="vtlrecommendfriendpost">Отключить рекомендации постов друзей</string>
     <string name="BGStickers">Обводка стикеров</string>
     <string name="vtlrecommendmarksummary">Посты по типу Вам может быть интересно и тд</string>
     <string name="vtlfeedwork">Прочее</string>
     <string name="vtlfeedreload">Автоматическое обновление ленты</string>
     <string name="vtlfeedcache">Кэшировать посты в ленте</string>
-    <string name="vtlrecommendmark">Посты с пометкой рекомендовано</string>
+    <string name="vtlrecommendmark">Отключить посты с пометкой рекомендовано</string>
     <string name="vtlmsgtails">Хвосты сообщений</string>
     <string name="vtlmsgflat">Плоские сообщения</string>
     <string name="vtlupdmsg">Обновить</string>
@@ -4309,9 +4309,9 @@
     <string name="vkx_why_summary">Интеграция позволит использовать возможности VK X прямиком в VTosters Lite\n\nКроме воспроизведения, в клиенте будет работать и кеш из плеера</string>
     <string name="vkx_download">Скачать VKX</string>
     <string name="vkx_integration">Интеграция с VK X</string>
-    <string name="vkx_other">Прочее</string>
-    <string name="vkx_fix_music">Исправление музыкального раздела</string>
-    <string name="vkx_fix_music_summary">Актуально если музыкальный раздел не работает (не отображается музыка или вместо музыки написано Слушайте в официальном приложении ВКонтакте) или же отсутствует компонент GMS</string>
+    <string name="vk_fix_music_other">Прочее</string>
+    <string name="vk_fix_music">Исправление музыкального раздела</string>
+    <string name="vk_fix_music_summary">Актуально если музыкальный раздел не работает (не отображается музыка или вместо музыки написано Слушайте в официальном приложении ВКонтакте) или же отсутствует компонент GMS</string>
 
     <string name="proxy_if">Если имеется</string>
     <string name="proxy_login_title">Логин</string>

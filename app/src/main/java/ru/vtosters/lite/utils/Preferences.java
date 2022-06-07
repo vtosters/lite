@@ -59,11 +59,11 @@ public class Preferences {
     }
 
     public static boolean authorsrecomm() {
-        return getBoolValue("authorsrecomm", true);
+        return getBoolValue("authorsrecomm", false);
     }
 
     public static boolean captions() {
-        return getBoolValue("captions", true);
+        return getBoolValue("captions", false);
     }
 
     public static boolean copyright_post() {
@@ -79,7 +79,7 @@ public class Preferences {
     }
 
     public static boolean friendsrecomm() {
-        return getBoolValue("friendsrecomm", true);
+        return getBoolValue("friendsrecomm", false);
     }
 
     public static boolean isBGStickersEnabled() {
@@ -175,7 +175,7 @@ public class Preferences {
     }
 
     public static void forceOffline() {
-        if (setoffline()) {
+        if (setoffline() && !offline()) {
             Users.b();
         }
         setupFilters();
@@ -234,7 +234,7 @@ public class Preferences {
     }
 
     public static boolean postsrecomm() {
-        return getBoolValue("postsrecomm", true);
+        return getBoolValue("postsrecomm", false);
     }
 
     public static String readstatus() {
@@ -250,7 +250,7 @@ public class Preferences {
     }
 
     public static boolean setoffline() {
-        return getBoolValue("setoffline", false);
+        return getBoolValue("setoffline", true);
     }
 
     public static boolean shortinfo() {
