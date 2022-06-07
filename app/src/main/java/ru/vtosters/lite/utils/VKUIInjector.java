@@ -1,12 +1,12 @@
 package ru.vtosters.lite.utils;
 
+import static android.util.Base64.encodeToString;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Themes.getColorFromAttr;
 import static ru.vtosters.lite.utils.Themes.hex;
 
-import android.util.Base64;
 import android.webkit.WebView;
 
 import com.vtosters.lite.R;
@@ -22,17 +22,13 @@ public class VKUIInjector {
     private static String loadedCSS = "";
     private static String loadedCSSAmoled = "";
 
-    static {
-    }
-
-    public VKUIInjector() {
-    }
-
     private static String load(String str) {
         try {
             InputStream open = getContext().getAssets().open(str);
             StringBuilder sb = new StringBuilder();
+
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(open, StandardCharsets.UTF_8));
+
             while (true) {
                 String readLine = bufferedReader.readLine();
                 if (readLine != null) {
@@ -42,7 +38,9 @@ public class VKUIInjector {
                     return sb.toString();
                 }
             }
+
         } catch (IOException e) {
+
             e.printStackTrace();
             return "";
         }
@@ -68,20 +66,26 @@ public class VKUIInjector {
 
     public static void inject(WebView webView) {
         String string = getPrefsValue("darktheme");
+
         if (getBoolValue("VKUI_INJ", true)) {
+
             if (!isLoaded) {
                 load();
             }
+
             StringBuilder sb = new StringBuilder();
+
             if (true/*Themes.isAccentedCache()*/) {
                 sb.append("\n\n");
                 sb.append(loadedCSS);
             }
+
             if (string.equals("amoled")) {
                 sb.append("\n\n");
                 sb.append(loadedCSSAmoled);
             }
-            inject(webView, Base64.encodeToString(sb.toString().getBytes(), 2));
+
+            inject(webView, encodeToString(sb.toString().getBytes(), 2));
         }
     }
 }

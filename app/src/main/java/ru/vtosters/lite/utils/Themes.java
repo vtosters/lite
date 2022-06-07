@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static java.util.Arrays.asList;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
@@ -29,11 +30,10 @@ import com.vk.im.ui.themes.ImTheme;
 import com.vk.im.ui.themes.ImThemeHelper;
 import com.vtosters.lite.R;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Themes {
-    public static List<String> accentColors = Arrays.asList(
+    public static List<String> accentColors = asList(
             "71AAEB", "3F8AE0", "528BCC", "4986CC", "5181B8", "74A2D6", "518BCC"
     );
 
@@ -191,8 +191,10 @@ public class Themes {
                         new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
                 }, new int[] {isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
             }
+
             return csl;
         } catch (Exception e) {
+
             e.printStackTrace();
             return null;
         }

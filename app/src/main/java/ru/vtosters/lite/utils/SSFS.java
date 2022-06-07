@@ -18,9 +18,9 @@ public class SSFS {
 
     public static String SSFSDomain() {
         String string = getPrefsValue("ssfscustom");
-        if (!string.isEmpty()) {
-            return string;
-        }
+
+        if (!string.isEmpty()) return string;
+
         return "https://vtsf.vknext.net";
     }
 

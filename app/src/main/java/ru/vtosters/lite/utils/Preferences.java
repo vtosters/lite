@@ -352,9 +352,11 @@ public class Preferences {
 
     public static String getLocale() {
         String string = getPrefsValue("lang_value");
+
         if (string.equals("system")) {
             return Locale.getDefault().getLanguage();
         }
+
         return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
     }
 }
