@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/activity_undel">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/activity_undel_dial"
+            android:entries="@array/undel_value"
+            android:entryValues="@array/undel"
+            android:key="undeletemsg_prefix"
+            android:title="@string/activity_undel_tag" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="undeletemsg"
+            android:summary="@string/activity_undel_attachments"
+            android:title="@string/activity_undel_enable" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/online_vtl">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="offline"
+            android:summary="@string/vtlofflinesummary"
+            android:title="@string/vtloffline" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="setoffline"
+            android:summary="@string/vtloffline2summary"
+            android:title="@string/vtloffline2" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnr">
         <Preference
             android:enabled="false"
@@ -51,37 +79,6 @@
             android:defaultValue="true"
             android:key="dns"
             android:title="@string/dns" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/activity_undel">
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/activity_undel_dial"
-            android:entries="@array/undel_value"
-            android:entryValues="@array/undel"
-            android:key="undeletemsg_prefix"
-            android:title="@string/activity_undel_tag" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="undeletemsg"
-            android:summary="@string/activity_undel_attachments"
-            android:title="@string/activity_undel_enable" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/online_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="offline"
-            android:summary="@string/vtlofflinesummary"
-            android:title="@string/vtloffline" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/offline_vtl">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="setoffline"
-            android:summary="@string/vtloffline2summary"
-            android:title="@string/vtloffline2" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">

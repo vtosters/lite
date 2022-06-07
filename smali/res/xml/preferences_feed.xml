@@ -61,22 +61,22 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="friendsrecomm"
             android:summary="@string/feed_recommendations_friends_summary"
             android:title="@string/vtlrecommendfriend" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="authorsrecomm"
             android:summary="@string/feed_recommendations_authors_summary"
             android:title="@string/vtlrecommendauthor" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="postsrecomm"
             android:summary="@string/feed_recommendations_friends_reacted_summary"
             android:title="@string/vtlrecommendfriendpost" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="captions"
             android:summary="@string/vtlrecommendmarksummary"
             android:title="@string/vtlrecommendmark" />

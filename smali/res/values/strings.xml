@@ -4195,15 +4195,15 @@ Does not affect vk.cc links"</string>
     <string name="vtlsfilterrefs">Referral links filter</string>
     <string name="vtlsfilterrefssummary">Blocks posts containing referral links, such as ali.pub and so on</string>
     <string name="vtlrecommend">Recommendations</string>
-    <string name="vtlrecommendfriend">Friends recommendations</string>
-    <string name="vtlrecommendauthor">Authors recommendations</string>
-    <string name="vtlrecommendfriendpost">"Recommended friends' posts"</string>
+    <string name="vtlrecommendfriend">Disable friends recommendations</string>
+    <string name="vtlrecommendauthor">Disable authors recommendations</string>
+    <string name="vtlrecommendfriendpost">Disable recommended friends posts</string>
     <string name="BGStickers">Sticker outlines</string>
     <string name="vtlrecommendmarksummary">Posts like You may be interested</string>
     <string name="vtlfeedwork">Other</string>
     <string name="vtlfeedreload">Automatic feed update</string>
     <string name="vtlfeedcache">Cache feed posts</string>
-    <string name="vtlrecommendmark">Posts with recommended mark</string>
+    <string name="vtlrecommendmark">Disable posts with recommended mark</string>
     <string name="vtlmsgtails">Message tails</string>
     <string name="vtlmsgflat">Flat Messages</string>
     <string name="vtlupdmsg">Update</string>
@@ -4428,16 +4428,16 @@ May look like a fake leaving the online"</string>
     <string name="messages_interface_calls_summary">Call icon in messages</string>
     <string name="messages_interface_tails_summary">May not work correctly with attachments</string>
     <string name="messages_other_choose_count">Choose count</string>
-    <string name="messages_other_download_first">First downloaded messages count</string>
+    <string name="messages_other_download_first">Amount of messages downloaded at once</string>
 
     <string name="vkx_title" translatable="false">VK X</string>
     <string name="vkx_why">Why?</string>
     <string name="vkx_why_summary">Integration let you use VK X features directly in VTosters Lite\n\nIn addition to playback, cached tracks also will work in client</string>
     <string name="vkx_download">Download VK X</string>
     <string name="vkx_integration">VK X Integration</string>
-    <string name="vkx_other">Other</string>
-    <string name="vkx_fix_music">Fix music section</string>
-    <string name="vkx_fix_music_summary">Use when music section doesn\'t work (no tracks/\'listen in official VK app\') or there is no GMS component</string>
+    <string name="vk_fix_music_other">Other</string>
+    <string name="vk_fix_music">Fix the music tab</string>
+    <string name="vk_fix_music_summary">Use when music tab doesn\'t work (no tracks/\'listen in official VK app\') or there is no GMS component</string>
 
     <string name="proxy_if">If available</string>
     <string name="proxy_login_title">Login</string>

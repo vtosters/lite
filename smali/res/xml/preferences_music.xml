@@ -18,11 +18,11 @@
             android:title="@string/vkx_integration" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vkx_other">
+    <PreferenceCategory android:title="@string/vk_fix_music_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="gcmfix"
-            android:summary="@string/vkx_fix_music_summary"
-            android:title="@string/vkx_fix_music" />
+            android:summary="@string/vk_fix_music_summary"
+            android:title="@string/vk_fix_music" />
     </PreferenceCategory>
 </PreferenceScreen>

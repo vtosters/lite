@@ -108,16 +108,16 @@ public class Newsfeed {
     } // json newsfeed/posts injector to detect and delete posts
 
     public static boolean authors_rec(String str) {
-        return str.equals("authors_rec") && !authorsrecomm();
+        return str.equals("authors_rec") && authorsrecomm();
     }
 
     public static boolean captions(JSONObject jSONObject) {
         try {
             JSONObject jSONObject2 = jSONObject.getJSONObject("caption");
-            if (!Preferences.captions()) {
+            if (Preferences.captions()) {
                 return true;
             }
-            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && !postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && postsrecomm()) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && postsrecomm()) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && postsrecomm()))));
+            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && !postsrecomm()) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && !postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && !postsrecomm()) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && !postsrecomm()))));
         } catch (JSONException unused) {
             return false;
         }
@@ -131,11 +131,11 @@ public class Newsfeed {
     }
 
     public static boolean recomm(String str) {
-        return (str.equals("user_rec") || str.equals("live_recommended") || str.equals("inline_user_rec")) && !postsrecomm();
+        return (str.equals("user_rec") || str.equals("live_recommended") || str.equals("inline_user_rec")) && postsrecomm();
     }
 
     public static boolean friendrecomm(String str) {
-        return str.equals("friends_recommendations") && !friendsrecomm();
+        return str.equals("friends_recommendations") && friendsrecomm();
     }
 
     public static boolean AD(JSONObject jSONObject) {
@@ -147,15 +147,15 @@ public class Newsfeed {
     }
 
     public static String friendsads() {
-        return postsrecomm() ? "user_rec" : "null";
+        return !postsrecomm() ? "user_rec" : "null";
     }
 
     public static String getFriendRecomm() {
-        return friendsrecomm() ? "friends_recommendations" : "null";
+        return !friendsrecomm() ? "friends_recommendations" : "null";
     }
 
     public static String authorsads() {
-        return authorsrecomm() ? "authors_rec" : "null";
+        return !authorsrecomm() ? "authors_rec" : "null";
     }
 
     public static String widgetads() {

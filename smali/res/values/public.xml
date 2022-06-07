@@ -15076,10 +15076,10 @@
     <public type="string" name="proxy_login_title" id="0x7f1112b6" />
     <public type="string" name="proxy_password_title" id="0x7f1112b7" />
     <public type="string" name="vkx_download" id="0x7f1112b8" />
-    <public type="string" name="vkx_fix_music" id="0x7f1112b9" />
-    <public type="string" name="vkx_fix_music_summary" id="0x7f1112ba" />
+    <public type="string" name="vk_fix_music" id="0x7f1112b9" />
+    <public type="string" name="vk_fix_music_summary" id="0x7f1112ba" />
     <public type="string" name="vkx_integration" id="0x7f1112bb" />
-    <public type="string" name="vkx_other" id="0x7f1112bc" />
+    <public type="string" name="vk_fix_music_other" id="0x7f1112bc" />
     <public type="string" name="vkx_title" id="0x7f1112bd" />
     <public type="string" name="vkx_why" id="0x7f1112be" />
     <public type="string" name="vkx_why_summary" id="0x7f1112bf" />
