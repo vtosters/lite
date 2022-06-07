@@ -19,6 +19,7 @@ public class About {
     public static void injectAbout(List<Items2> list) {
         list.clear();
         list.add(new Items1());
+
         if (!oldabout()) {
             list.add(new Items(21, com.vtosters.lite.R.string.opencommit));
             list.add(new Items(8, com.vtosters.lite.R.string.tgchannel));
@@ -30,6 +31,7 @@ public class About {
             list.add(new Items(18, com.vtosters.lite.R.string.sett_debug));
             return;
         }
+
         list.add(new Items(0, com.vtosters.lite.R.string.about_app_feedback));
         list.add(new Items(1, com.vtosters.lite.R.string.about_app_estimate));
         list.add(new Items(2, com.vtosters.lite.R.string.about_app_privacy));

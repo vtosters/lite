@@ -38,48 +38,41 @@ public class Proxy {
 
     public static String getApiCom() {
         String string = getPrefsValue("proxyapi");
-        if (!proxy() & string.isEmpty()) {
-            return "api.vk.com";
-        }
+        if (!proxy() & string.isEmpty()) return "api.vk.com";
         return string;
     }
 
     public static String getAwayPhpCom() {
         String string = getPrefsValue("proxyapi");
-        if (!proxy() & string.isEmpty()) {
-            return "m.vk.com";
-        }
+        if (!proxy() & string.isEmpty()) return "m.vk.com";
         return string;
     }
 
     public static String getOauthCom() {
         String string = getPrefsValue("proxyoauth");
-        if (!proxy() & string.isEmpty()) {
-            return "oauth.vk.com";
-        }
+        if (!proxy() & string.isEmpty()) return "oauth.vk.com";
         return string;
     }
 
     public static String getStaticCom() {
         String string = getPrefsValue("proxystatic");
-        if (!proxy() & string.isEmpty()) {
-            return "static.vk.com";
-        }
+        if (!proxy() & string.isEmpty()) return "static.vk.com";
         return string;
     }
 
     public static String staticFix(String str) {
         String str2;
         String string = getPrefsValue("proxystatic");
-        if (!proxy() & string.isEmpty()) {
-            return str;
-        }
+
+        if (!proxy() & string.isEmpty()) return str;
+
         str2 = string;
         return str.replace(str2, "static.vk.com");
     }
 
     public static void setProxy() {
         Properties properties = getProperties();
+
         switch (getPrefsValue("proxy")) {
             case "zaborona":
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");

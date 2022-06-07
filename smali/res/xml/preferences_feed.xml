@@ -83,6 +83,10 @@
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
+        <Preference
+            android:key="officialnewssett"
+            android:summary="Официальные настройки новостей встроенные в клиент"
+            android:title="Встроенные настройки новостей" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/feed_other_update_dialog_title"
@@ -100,9 +104,5 @@
             android:key="feedcache"
             android:summary="@string/feed_other_cache_summary"
             android:title="@string/vtlfeedcache" />
-        <Preference
-            android:key="officialnewssett"
-            android:summary="Официальные настройки новостей встроенные в клиент"
-            android:title="Встроенные настройки новостей" />
     </PreferenceCategory>
 </PreferenceScreen>
