@@ -117,7 +117,7 @@ public class Newsfeed {
             if (Preferences.captions()) {
                 return true;
             }
-            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && !postsrecomm()) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && !postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && !postsrecomm()) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && !postsrecomm()))));
+            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && postsrecomm()) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && postsrecomm()) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && postsrecomm()))));
         } catch (JSONException unused) {
             return false;
         }
