@@ -2,8 +2,9 @@ package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 import static java.util.Arrays.asList;
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
@@ -71,19 +72,19 @@ public class Themes {
     } // Header/Toolbar color text
 
     public static int getAmoledTheme() {
-        return getContext().getResources().getIdentifier("BaseAmoledStyle", "style", getContext().getPackageName());
+        return getIdentifier("BaseAmoledStyle", "style");
     } // Get Amoled theme id
 
     public static int picFix() {
-        return getContext().getResources().getIdentifier("ActionBarThemeFix", "style", getContext().getPackageName());
+        return getIdentifier("ActionBarThemeFix", "style");
     } // Fix tabbar color in photo viewer
 
     public static int getAmoledImTheme() {
-        return getContext().getResources().getIdentifier("VkIm.Theme.VkApp.Amoled", "style", getContext().getPackageName());
+        return getIdentifier("VkIm.Theme.VkApp.Amoled", "style");
     } // Get Amoled theme id for messages
 
     public static int getAttrId(String attr) {
-        return getContext().getResources().getIdentifier(attr, "attr", getContext().getPackageName());
+        return getIdentifier(attr, "attr");
     }
 
     public static void setBarTheme(View getview) {
@@ -234,14 +235,14 @@ public class Themes {
         if (Build.VERSION.SDK_INT >= 23) {
             return context.getColor(i);
         }
-        return context.getResources().getColor(i);
+        return getResources().getColor(i);
     } // Android Support color injector + accent color checker
 
     public static int getColor2(int i) {
         if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
-        return getContext().getResources().getColor(i);
+        return getResources().getColor(i);
     } // Android Support color injector + accent color checker
 
     public static void setNavbarColor(Window window, int i) {
@@ -293,7 +294,7 @@ public class Themes {
     public static void systemThemeChanger() {
         if (!systemtheme())
             return;
-        int currentNightMode = getContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         switch (currentNightMode) {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
                 applyTheme(getLightTheme(), getImLightTheme());

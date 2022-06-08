@@ -2,6 +2,7 @@ package ru.vtosters.lite.f0x1d;
 
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getString;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -60,13 +61,13 @@ public class Crashreporter {
 
         var builder = new Notification.Builder(getContext());
         builder.setSmallIcon(R.drawable.ic_bug_24);
-        builder.setContentTitle("Произошла ошибка в работе VTLite!");
+        builder.setContentTitle(getString("vtl_crashed"));
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
         builder.setAutoCancel(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            builder.addAction(new Notification.Action(0, "Загрузить логи", PendingIntent.getActivity(getContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
-            builder.addAction(new Notification.Action(0, "Сохранить в файл", psaveLogIntent));
+            builder.addAction(new Notification.Action(0, getString("vtl_crash_upload"), PendingIntent.getActivity(getContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
+            builder.addAction(new Notification.Action(0, getString("vtl_crash_save"), psaveLogIntent));
         } else {
             builder.setContentIntent(PendingIntent.getActivity(activity, 0, foxbinIntent, PendingIntent.FLAG_ONE_SHOT));
         }

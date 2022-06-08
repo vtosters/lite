@@ -140,7 +140,7 @@ public class Globals {
     } // Get res id
 
     public static String getString(String resourcename) {
-        return getContext().getString(Integer.parseInt(String.valueOf(getContext().getResources().getIdentifier(resourcename, "string", getContext().getPackageName()))));
+        return getContext().getString(getIdentifier(resourcename, "string"));
     } // Get string via getIdentifier
 
     public static String getPackageName() {
@@ -148,7 +148,7 @@ public class Globals {
     }
 
     public static int convertDpToPixel(float f) {
-        return (int) (f * ((float) getContext().getResources().getDisplayMetrics().densityDpi / 160.0f));
+        return (int) (f * ((float) getResources().getDisplayMetrics().densityDpi / 160.0f));
     }
 
     public static SharedPreferences getPreferences() {

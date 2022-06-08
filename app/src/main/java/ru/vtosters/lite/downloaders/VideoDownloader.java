@@ -1,5 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
+import static ru.vtosters.lite.utils.Globals.getString;
+
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.Context;
@@ -48,7 +50,7 @@ public class VideoDownloader {
         }
 
         if (list.isEmpty()) {
-            ToastUtils.a("Данное видео невозможно скачать");
+            ToastUtils.a(getString("videodownloaderr"));
             return;
         }
 

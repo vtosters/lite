@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
@@ -21,10 +22,10 @@ public class DisableBattery {
             final Context context = getContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                builder.setTitle("Выключите оптимизацию батареи!");
-                builder.setMessage("Из-за того, что Вы используете оболочку из списка ниже - уведомления могут приходить с задержкой или не приходить вовсе. \n Для того, чтобы это исправить - нажмите на кнопку \"Отключить оптимизацию\". \n\nПрошивки на которых наблюдаются проблемы с пушами:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience или TouchWiz, Magic UI, ZenUI, Funtouch OS");
+                builder.setTitle(getString("batteryissuetitle"));
+                builder.setMessage(getString("batteryissuesumm"));
                 builder.setCancelable(false);
-                builder.setPositiveButton("Отключить оптимизацию", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(getString("batteryissuebtn1"), new DialogInterface.OnClickListener() {
                     @Override // android.content.DialogInterface.OnClickListener
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent("android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS");
@@ -35,7 +36,7 @@ public class DisableBattery {
                         context.startActivity(intent);
                     }
                 });
-                builder.setNeutralButton("Игнорировать", new DialogInterface.OnClickListener() {
+                builder.setNeutralButton(getString("batteryissuebtn2"), new DialogInterface.OnClickListener() {
                     @Override // android.content.DialogInterface.OnClickListener
                     public void onClick(DialogInterface dialogInterface, int i) {
                         edit().putBoolean("showDoze", false).apply();
