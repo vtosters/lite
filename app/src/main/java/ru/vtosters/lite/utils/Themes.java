@@ -44,6 +44,10 @@ public class Themes {
         ImThemeHelper.b.a(imtheme); // ImThemeHelper.b.a(ImTheme value) VK Theme Msg apply
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
+    public static boolean isDarkTheme() {
+        return !VKThemeHelper.d();
+    }
+
     public static int getAccentColor() {
         return VKThemeHelper.a(R.attr.accent);
     } // Color accent
@@ -293,8 +297,14 @@ public class Themes {
     }
 
     public static void systemThemeChanger() {
-        if (!systemtheme())
-            return;
+        if (isDarkTheme()){
+            applyTheme(getDarkTheme(), getImDarkTheme());
+        } else {
+            applyTheme(getLightTheme(), getImLightTheme());
+        }
+
+        if (!systemtheme()) return;
+
         int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         switch (currentNightMode) {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
