@@ -6479,8 +6479,7 @@
         <item name="vkim_msg_out_light_full">@drawable/vkim_msg_out_def_full_t</item>
         <item name="vkim_msg_out_light_full_sel">@drawable/vkim_msg_out_def_full_sel_t</item>
         <item name="vkim_msg_out_light_full_tail">@drawable/vkim_msg_out_def_full_tail_t</item>
-        <item name="vkim_msg_out_light_full_tail_sel">@drawable/vkim_msg_out_def_full_tail_sel_t
-        </item>
+        <item name="vkim_msg_out_light_full_tail_sel">@drawable/vkim_msg_out_def_full_tail_sel_t</item>
         <item name="vkim_msg_out_light_mid">@drawable/vkim_msg_out_def_mid_t</item>
         <item name="vkim_msg_out_light_mid_sel">@drawable/vkim_msg_out_def_mid_sel_t</item>
         <item name="vkim_msg_out_light_top">@drawable/vkim_msg_out_def_top_t</item>
@@ -6490,7 +6489,7 @@
         </item>
     </style>
 
-    <style name="VkIm.Theme.VkApp.Dark" parent="@style/VkIm.Theme.VkMe">
+    <style name="VkIm.Theme.VkApp.Dark" parent="@style/VkIm.Theme.VkApp">
         <item name="accent">@color/sky_300</item>
         <item name="action_sheet_action_foreground">@color/white</item>
         <item name="action_sheet_separator">@color/white_alpha12</item>
@@ -6661,9 +6660,7 @@
         <item name="im_history_incoming_foreground_link">@color/im_old_accent_muted</item>
         <item name="im_history_incoming_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_history_incoming_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_incoming_snippet_placeholder_background">
-            @color/im_old_accent_muted_14
-        </item>
+        <item name="im_history_incoming_snippet_placeholder_background">@color/im_old_accent_muted_14</item>
         <item name="im_history_incoming_snippet_placeholder_icon">@color/im_old_accent_muted</item>
         <item name="im_history_info_bar_background">#fffafbfc</item>
         <item name="im_history_info_bar_border">#26000000</item>
@@ -6677,9 +6674,7 @@
         <item name="im_history_outgoing_foreground_link">@color/im_old_accent</item>
         <item name="im_history_outgoing_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_history_outgoing_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_outgoing_snippet_placeholder_background">
-            @color/im_old_accent_muted_14
-        </item>
+        <item name="im_history_outgoing_snippet_placeholder_background">@color/im_old_accent_muted_14</item>
         <item name="im_history_outgoing_snippet_placeholder_icon">@color/im_old_accent_muted</item>
         <item name="im_history_sending_icon">@color/im_old_accent</item>
         <item name="im_history_sticker_badge_background">#e6ffffff</item>
@@ -6769,7 +6764,7 @@
         <item name="writebar_icon">@color/gray_400</item>
     </style>
 
-    <style name="VkIm.Theme.VkApp.Light" parent="@style/VkIm.Theme.VkMe">
+    <style name="VkIm.Theme.VkApp.Light" parent="@style/VkIm.Theme.VkApp">
         <item name="accent">@color/blue_300</item>
         <item name="action_sheet_action_foreground">@color/azure_A100</item>
         <item name="action_sheet_separator">@color/black_alpha12</item>
@@ -6940,9 +6935,7 @@
         <item name="im_history_incoming_foreground_link">@color/im_old_accent_muted</item>
         <item name="im_history_incoming_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_history_incoming_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_incoming_snippet_placeholder_background">
-            @color/im_old_accent_muted_14
-        </item>
+        <item name="im_history_incoming_snippet_placeholder_background">@color/im_old_accent_muted_14</item>
         <item name="im_history_incoming_snippet_placeholder_icon">@color/im_old_accent_muted</item>
         <item name="im_history_info_bar_background">#fffafbfc</item>
         <item name="im_history_info_bar_border">#26000000</item>
@@ -6956,9 +6949,7 @@
         <item name="im_history_outgoing_foreground_link">@color/im_old_accent</item>
         <item name="im_history_outgoing_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_history_outgoing_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_outgoing_snippet_placeholder_background">
-            @color/im_old_accent_muted_14
-        </item>
+        <item name="im_history_outgoing_snippet_placeholder_background">@color/im_old_accent_muted_14</item>
         <item name="im_history_outgoing_snippet_placeholder_icon">@color/im_old_accent_muted</item>
         <item name="im_history_sending_icon">@color/im_old_accent</item>
         <item name="im_history_sticker_badge_background">#e6ffffff</item>
@@ -7080,10 +7071,8 @@
         <item name="im_msg_list_add_duration">0</item>
         <item name="im_msg_part_corner_radius_big">14.0dip</item>
         <item name="im_msg_part_corner_radius_small">6.0dip</item>
-        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_new
-        </item>
-        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_new
-        </item>
+        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_new</item>
+        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_new</item>
         <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_new</item>
         <item name="im_msg_zhukov_divider_size">4.0dip</item>
         <item name="im_new_theme">true</item>
@@ -7203,8 +7192,8 @@
         <item name="control_foreground">@color/gray_100</item>
         <item name="control_tint">@color/gray_900</item>
         <item name="control_tint_muted">@color/gray_400</item>
-        <item name="counter_primary_background">@color/white</item>
-        <item name="counter_primary_text">@color/gray_900</item>
+        <item name="counter_primary_background">@color/sky_300</item>
+        <item name="counter_primary_text">@color/white</item>
         <item name="counter_secondary_background">@color/gray_500</item>
         <item name="counter_secondary_text">@color/gray_900</item>
         <item name="destructive">@color/red_light</item>
@@ -7227,14 +7216,14 @@
         <item name="header_alternate_tab_active_indicator">@color/gray_100</item>
         <item name="header_alternate_tab_active_text">@color/gray_100</item>
         <item name="header_alternate_tab_inactive_text">@color/gray_500</item>
-        <item name="header_background">@color/gray_900</item>
-        <item name="header_background_before_blur">@color/gray_A970</item>
-        <item name="header_background_before_blur_alternate">@color/gray_A970</item>
+        <item name="header_background">@color/gray_800</item>
+        <item name="header_background_before_blur">@color/gray_950</item>
+        <item name="header_background_before_blur_alternate">@color/gray_950</item>
         <item name="header_search_field_background">@color/gray_700</item>
         <item name="header_search_field_tint">@color/gray_100</item>
         <item name="header_tab_active_background">@color/gray_600</item>
-        <item name="header_tab_active_indicator">@color/white</item>
-        <item name="header_tab_active_text">@color/white</item>
+        <item name="header_tab_active_indicator">@color/gray_100</item>
+        <item name="header_tab_active_text">@color/gray_100</item>
         <item name="header_tab_inactive_text">@color/gray_500</item>
         <item name="header_text">@color/gray_100</item>
         <item name="header_text_alternate">@color/gray_100</item>
@@ -7248,20 +7237,20 @@
         <item name="icon_outline_secondary">@color/gray_400</item>
         <item name="icon_secondary">@color/gray_500</item>
         <item name="icon_tertiary">@color/gray_700</item>
-        <item name="im_accent">@color/im_dark_accent</item>
-        <item name="im_accent_dark">@color/im_dark_accent_muted</item>
-        <item name="im_alert">#ffc03642</item>
+        <item name="im_accent">@color/im_old_accent_muted</item>
+        <item name="im_accent_dark">@color/im_old_accent_muted</item>
+        <item name="im_alert">@color/red</item>
         <item name="im_app_background_chat">?background_content</item>
         <item name="im_app_background_navbar">@color/black</item>
         <item name="im_app_background_navbar_light">false</item>
-        <item name="im_app_background_secondary">#ff232323</item>
-        <item name="im_app_background_statusbar">@color/black</item>
+        <item name="im_app_background_secondary">#ffebedf0</item>
+        <item name="im_app_background_statusbar">@color/muted_blue</item>
         <item name="im_app_background_statusbar_light">false</item>
         <item name="im_app_background_tabbar">#ff0f0f0f</item>
-        <item name="im_app_icon">@color/im_dark_accent</item>
-        <item name="im_app_icon_destructive">@color/red_error</item>
+        <item name="im_app_icon">@color/im_old_accent</item>
+        <item name="im_app_icon_destructive">@color/red</item>
         <item name="im_app_icon_inv">@color/white</item>
-        <item name="im_app_icon_secondary">@color/im_dark_blue_gray_light</item>
+        <item name="im_app_icon_secondary">@color/im_old_blue_gray_light</item>
         <item name="im_app_icon_toolbar">@color/white</item>
         <item name="im_app_swipe_background_end">#ff4cb8ff</item>
         <item name="im_app_swipe_background_start">#ff3f7fe0</item>
@@ -7269,18 +7258,18 @@
         <item name="im_app_toolbar_foreground_end">@color/white</item>
         <item name="im_app_toolbar_foreground_semitransparent">#80ffffff</item>
         <item name="im_app_toolbar_foreground_start">@color/white</item>
-        <item name="im_app_toolbar_tabs_indicator">#00000000</item>
-        <item name="im_attach_tint">@color/white</item>
-        <item name="im_btn_accept_background">@color/azure_300_alpha10</item>
-        <item name="im_btn_accept_background_dark">@color/azure_300_alpha15</item>
-        <item name="im_btn_accept_foreground">@color/azure_A400</item>
-        <item name="im_btn_confirm">@drawable/vkim_btn_confirm_dark</item>
-        <item name="im_btn_confirm_background">@color/blue_A400</item>
-        <item name="im_btn_confirm_background_dark">@color/blue_A500</item>
-        <item name="im_btn_confirm_background_disabled">@color/blue_A800</item>
-        <item name="im_btn_reject_background">@color/red_error_alpha10</item>
-        <item name="im_btn_reject_background_dark">@color/red_error_alpha15</item>
-        <item name="im_btn_reject_foreground">@color/red_error</item>
+        <item name="im_app_toolbar_tabs_indicator">@color/white</item>
+        <item name="im_attach_tint">@color/sky_300</item>
+        <item name="im_btn_accept_background">@color/black</item>
+        <item name="im_btn_accept_background_dark">@color/black</item>
+        <item name="im_btn_accept_foreground">@color/white</item>
+        <item name="im_btn_confirm">@drawable/vkim_btn_confirm_default</item>
+        <item name="im_btn_confirm_background">@color/blue_300</item>
+        <item name="im_btn_confirm_background_dark">?accent</item>
+        <item name="im_btn_confirm_background_disabled">@color/blue_200_muted</item>
+        <item name="im_btn_reject_background">@color/black</item>
+        <item name="im_btn_reject_background_dark">@color/black</item>
+        <item name="im_btn_reject_foreground">@color/white</item>
         <item name="im_bubble_border_alternate">@color/clear</item>
         <item name="im_bubble_border_alternate_highlighted">@color/clear</item>
         <item name="im_bubble_button_background">@color/gray_750</item>
@@ -7299,8 +7288,8 @@
         <item name="im_bubble_outgoing_alternate_highlighted">@color/gray_500</item>
         <item name="im_bubble_outgoing_highlighted">@color/gray_600</item>
         <item name="im_conversation_error_icon">@color/red_error</item>
-        <item name="im_conversation_sending_icon">@color/im_dark_accent</item>
-        <item name="im_conversation_unread_counter_background">@color/im_dark_accent</item>
+        <item name="im_conversation_sending_icon">@color/im_old_accent</item>
+        <item name="im_conversation_unread_counter_background">@color/im_old_accent</item>
         <item name="im_conversation_unread_counter_foreground">@color/white</item>
         <item name="im_conversation_unread_counter_muted_background">#ffa9b0b8</item>
         <item name="im_conversation_verified_icon">#ff67a5eb</item>
@@ -7308,77 +7297,69 @@
         <item name="im_history_common_badge_background">#66000000</item>
         <item name="im_history_common_badge_foreground">@color/white</item>
         <item name="im_history_divider_background">@color/white</item>
-        <item name="im_history_divider_foreground">@color/im_dark_blue_gray_medium</item>
+        <item name="im_history_divider_foreground">@color/im_old_blue_gray_medium</item>
         <item name="im_history_divider_separator">#1e000000</item>
         <item name="im_history_image_bubbleless_border">#1e000000</item>
-        <item name="im_history_incoming_attachment_icon">@color/im_dark_accent_muted</item>
-        <item name="im_history_incoming_background">#ff5a5c5e</item>
-        <item name="im_history_incoming_background_gift">#ffa47c1d</item>
-        <item name="im_history_incoming_background_gift_selected">#ffcaa241</item>
-        <item name="im_history_incoming_background_selected">#ffc2c7cc</item>
-        <item name="im_history_incoming_button">@color/im_dark_accent</item>
+        <item name="im_history_incoming_attachment_icon">@color/im_old_accent_muted</item>
+        <item name="im_history_incoming_background">#ff3c3c3c</item>
+        <item name="im_history_incoming_background_selected">#ff8e9398</item>
+        <item name="im_history_incoming_button">@color/im_old_accent</item>
         <item name="im_history_incoming_foreground">@color/black</item>
         <item name="im_history_incoming_foreground_caption">@color/im_dark_gray_medium</item>
         <item name="im_history_incoming_foreground_caption_inv">@color/white</item>
-        <item name="im_history_incoming_foreground_link">@color/im_dark_accent_muted</item>
-        <item name="im_history_incoming_foreground_name">@color/im_dark_accent_muted</item>
+        <item name="im_history_incoming_foreground_link">@color/im_old_accent_muted</item>
+        <item name="im_history_incoming_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_history_incoming_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_incoming_snippet_placeholder_background">
-            @color/im_dark_accent_muted_14
-        </item>
-        <item name="im_history_incoming_snippet_placeholder_icon">@color/im_dark_accent_muted</item>
+        <item name="im_history_incoming_snippet_placeholder_background">@color/im_dark_accent_muted_14</item>
+        <item name="im_history_incoming_snippet_placeholder_icon">@color/im_old_accent_muted</item>
         <item name="im_history_info_bar_background">#ff232323</item>
         <item name="im_history_info_bar_border">#26000000</item>
         <item name="im_history_live_badge_background">#ffff3347</item>
-        <item name="im_history_outgoing_attachment_icon">@color/im_dark_accent_muted</item>
-        <item name="im_history_outgoing_background">#ff5b6d83</item>
-        <item name="im_history_outgoing_background_gift">#ffa47c1d</item>
-        <item name="im_history_outgoing_background_gift_selected">#ffcaa241</item>
-        <item name="im_history_outgoing_background_selected">#ffa3bedc</item>
-        <item name="im_history_outgoing_button">@color/im_dark_accent_muted</item>
+        <item name="im_history_outgoing_attachment_icon">@color/im_old_accent_muted</item>
+        <item name="im_history_outgoing_background">#ff4c4c4c</item>
+        <item name="im_history_outgoing_background_selected">#ff6f9ed3</item>
+        <item name="im_history_outgoing_button">@color/im_old_accent_muted</item>
         <item name="im_history_outgoing_foreground">@color/black</item>
         <item name="im_history_outgoing_foreground_caption">@color/im_dark_gray_medium</item>
-        <item name="im_history_outgoing_foreground_link">@color/im_dark_accent</item>
-        <item name="im_history_outgoing_foreground_name">@color/im_dark_accent_muted</item>
+        <item name="im_history_outgoing_foreground_link">@color/im_old_accent</item>
+        <item name="im_history_outgoing_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_history_outgoing_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_outgoing_snippet_placeholder_background">
-            @color/im_dark_accent_muted_14
-        </item>
-        <item name="im_history_outgoing_snippet_placeholder_icon">@color/im_dark_accent_muted</item>
-        <item name="im_history_sending_icon">@color/im_dark_accent</item>
+        <item name="im_history_outgoing_snippet_placeholder_background">@color/im_dark_accent_muted_14</item>
+        <item name="im_history_outgoing_snippet_placeholder_icon">@color/im_old_accent_muted</item>
+        <item name="im_history_sending_icon">@color/im_old_accent</item>
         <item name="im_history_sticker_badge_background">#e6ffffff</item>
         <item name="im_history_sticker_badge_foreground">@color/im_dark_gray_medium</item>
-        <item name="im_history_unread_icon">@color/im_dark_accent</item>
-        <item name="im_is_vk_me">true</item>
+        <item name="im_history_unread_icon">@color/im_old_accent</item>
+        <item name="im_is_vk_me">false</item>
         <item name="im_item_foreground_caption">@color/im_dark_gray_medium</item>
-        <item name="im_item_foreground_name">@color/im_dark_accent_muted</item>
+        <item name="im_item_foreground_name">@color/im_old_accent_muted</item>
         <item name="im_item_foreground_subhead">@color/im_dark_gray_dark</item>
         <item name="im_item_foreground_tertiary">@color/im_dark_gray_light</item>
-        <item name="im_menu_foreground">#eeffffff</item>
+        <item name="im_menu_foreground">@color/gray_800</item>
         <item name="im_reply_sender_text">@color/white</item>
         <item name="im_reply_separator">@color/white</item>
         <item name="im_service_message_text">@color/gray_500</item>
-        <item name="im_tabbar_icon_active">@color/im_dark_accent</item>
-        <item name="im_tabbar_icon_inactive">@color/im_dark_blue_gray_light</item>
+        <item name="im_tabbar_icon_active">@color/im_old_accent</item>
+        <item name="im_tabbar_icon_inactive">@color/im_old_blue_gray_light</item>
         <item name="im_toolbar_separator">@color/gray_300</item>
         <item name="im_toolbar_voice_msg_background">@color/gray_700</item>
         <item name="image_border">@color/white_alpha8</item>
-        <item name="input_background">@color/gray_800</item>
-        <item name="input_border">@color/gray_800</item>
-        <item name="landing_background">@color/gray_900</item>
+        <item name="input_background">@color/gray_700</item>
+        <item name="input_border">@color/gray_700</item>
+        <item name="landing_background">?accent</item>
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
-        <item name="landing_primary_button_foreground">@color/gray_900</item>
-        <item name="landing_primary_button_foreground_disabled">#6619191a</item>
-        <item name="landing_snippet_border">@color/black_alpha15</item>
-        <item name="landing_text_secondary">@color/gray_500</item>
+        <item name="landing_primary_button_foreground">?accent</item>
+        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_snippet_border">@color/clear</item>
+        <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
         <item name="like_text_tint">@color/red_light</item>
-        <item name="link_alternate">@color/white</item>
+        <item name="link_alternate">@color/sky_300</item>
         <item name="loader_background">@color/gray_900</item>
         <item name="loader_tint">@color/gray_500</item>
         <item name="loader_track_fill">@color/gray_700</item>
-        <item name="loader_track_value_fill">@color/white</item>
+        <item name="loader_track_value_fill">@color/sky_300</item>
         <item name="media_overlay_button_background">@color/white</item>
         <item name="media_overlay_button_background_disabled">#66ffffff</item>
         <item name="media_overlay_button_foreground">@color/gray_800</item>
@@ -7398,7 +7379,7 @@
         <item name="placeholder_icon_foreground_secondary">@color/gray_600</item>
         <item name="placeholder_icon_tint">@color/white</item>
         <item name="poll_option_background">@color/white</item>
-        <item name="search_bar_background">@color/clear</item>
+        <item name="search_bar_background">@color/gray_900</item>
         <item name="search_bar_field_background">@color/gray_700</item>
         <item name="search_bar_field_tint">@color/gray_300</item>
         <item name="search_bar_segmented_control_tint">@color/gray_400</item>
@@ -7430,7 +7411,7 @@
         <item name="text_tertiary">@color/gray_600</item>
         <item name="toolbar_attach_background_from">@color/gray_500</item>
         <item name="toolbar_attach_background_to">@color/gray_600</item>
-        <item name="writebar_icon">@color/gray_100</item>
+        <item name="writebar_icon">@color/gray_400</item>
     </style>
 
     <style name="VkIm.Theme.VkMe.Light" parent="@style/VkIm.Theme.VkMe">
@@ -7606,9 +7587,7 @@
         <item name="im_history_incoming_foreground_link">@color/azure_A400</item>
         <item name="im_history_incoming_foreground_name">@color/azure_A400</item>
         <item name="im_history_incoming_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_incoming_snippet_placeholder_background">
-            @color/im_new_accent_muted_14
-        </item>
+        <item name="im_history_incoming_snippet_placeholder_background">@color/im_new_accent_muted_14</item>
         <item name="im_history_incoming_snippet_placeholder_icon">@color/azure_A400</item>
         <item name="im_history_info_bar_background">#fffafbfc</item>
         <item name="im_history_info_bar_border">#26000000</item>
@@ -7624,9 +7603,7 @@
         <item name="im_history_outgoing_foreground_link">@color/azure_300</item>
         <item name="im_history_outgoing_foreground_name">@color/azure_A400</item>
         <item name="im_history_outgoing_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_outgoing_snippet_placeholder_background">
-            @color/im_new_accent_muted_14
-        </item>
+        <item name="im_history_outgoing_snippet_placeholder_background">@color/im_new_accent_muted_14</item>
         <item name="im_history_outgoing_snippet_placeholder_icon">@color/azure_A400</item>
         <item name="im_history_sending_icon">@color/azure_300</item>
         <item name="im_history_sticker_badge_background">#e6ffffff</item>
