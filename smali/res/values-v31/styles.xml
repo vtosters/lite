@@ -1611,7 +1611,7 @@
         <item name="im_history_image_bubbleless_border">#1e000000</item>
         <item name="im_history_incoming_attachment_icon">?accent</item>
         <item name="im_history_incoming_background">@android:color/system_neutral1_50</item>
-        <item name="im_history_incoming_background_selected">@android:color/system_accent1_800
+        <item name="im_history_incoming_background_selected">@android:color/system_accent1_400
         </item>
         <item name="im_history_incoming_button">?accent</item>
         <item name="im_history_incoming_foreground">@color/black</item>
@@ -2288,5 +2288,17 @@
         <item name="toolbar_attach_background_from">@color/gray_500</item>
         <item name="toolbar_attach_background_to">@color/gray_600</item>
         <item name="writebar_icon">@color/gray_400</item>
+    </style>
+
+    <style name="VkIm.Theme.ToolbarShadow.Thick.VkApp" parent="@style/VkIm.Theme.ToolbarShadow.Thick">
+        <item name="android:background">@drawable/bg_toolbar_shadow_dark</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dip</item>
+    </style>
+
+    <style name="VkIm.Theme.ToolbarShadow.Thick.VkMe" parent="@style/VkIm.Theme.ToolbarShadow.Thick">
+        <item name="android:background">@drawable/bg_toolbar_shadow_light</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dip</item>
     </style>
 </resources>
