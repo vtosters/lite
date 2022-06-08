@@ -8,11 +8,6 @@
             android:title="@string/vtlcalls" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="msgtails"
-            android:summary="@string/messages_interface_tails_summary"
-            android:title="@string/vtlmsgtails" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
             android:key="voice"
             android:summary="@string/vtlvoicesummary"
             android:title="@string/vtlvoice" />
