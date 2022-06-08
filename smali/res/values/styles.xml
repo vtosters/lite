@@ -5671,7 +5671,7 @@
     <style name="VkIm.InviteLink.TextBtn" parent="@style/VkIm.InviteLink">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/light_blue</item>
+        <item name="android:textColor">?accent</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">@dimen/vkim_list_padding</item>
         <item name="android:paddingRight">@dimen/vkim_list_padding</item>

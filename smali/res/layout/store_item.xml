@@ -79,7 +79,7 @@
 
         <com.vtosters.lite.ui.BadooTextView
             android:enabled="false"
-            android:textColor="@color/light_blue_gray"
+            android:textColor="?accent"
             android:id="@id/sticker_ok"
             android:paddingTop="4.5dip"
             android:paddingBottom="8.5dip"
