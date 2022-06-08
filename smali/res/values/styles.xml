@@ -7082,7 +7082,7 @@
         <item name="im_toolbar_shadow_style_thin">@style/VkIm.Theme.ToolbarShadow.Thin</item>
         <item name="im_unknown_avatar_end_color">@color/steel_gray_350</item>
         <item name="im_unknown_avatar_start_color">@color/steel_gray_150</item>
-        <item name="shadowBottom">@null</item>
+        <item name="shadowBottom">@drawable/bg_toolbar_shadow_dark</item>
         <item name="vkim_dialog_sync_connecting">@color/steel_gray_150</item>
         <item name="vkim_dialog_sync_refreshing">@color/azure_300</item>
         <item name="vkim_msg_in_def_bottom">@drawable/vkim_msg_new_in_def_bottom</item>
