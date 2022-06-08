@@ -2301,4 +2301,11 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">0dip</item>
     </style>
+
+    <style name="AppBarShadow">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dip</item>
+        <item name="layout_behavior">com.vk.core.view.AppBarShadowBehavior</item>
+    </style>
 </resources>
