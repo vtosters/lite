@@ -58,6 +58,10 @@
             android:entryValues="@array/lang_value"
             android:key="lang_value"
             android:title="@string/debug_experimental_language" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="disableanimstickers"
+            android:title="Disable anim stickers + suggestions" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_developer_functions">
         <com.vtosters.lite.ui.MaterialSwitchPreference
