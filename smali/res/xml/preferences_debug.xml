@@ -11,10 +11,6 @@
         android:title="@string/debug_show_settings_item" />
     <PreferenceCategory android:title="@string/debug_experimental">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="vkme_theme"
-            android:title="VKME Тема сообщений" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="usevkui"
             android:summary="@string/debug_experimental_usevkui"
