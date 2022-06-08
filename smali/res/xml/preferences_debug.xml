@@ -12,6 +12,11 @@
     <PreferenceCategory android:title="@string/debug_experimental">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
+            android:key="msgtails"
+            android:summary="@string/messages_interface_tails_summary"
+            android:title="@string/vtlmsgtails" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
             android:key="usevkui"
             android:summary="@string/debug_experimental_usevkui"
             android:title="@string/vtlusevkui" />
