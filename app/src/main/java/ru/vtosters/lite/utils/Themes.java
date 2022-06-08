@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
+import static ru.vtosters.lite.utils.Preferences.vkme_theme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 
 import android.content.Context;
@@ -119,7 +120,7 @@ public class Themes {
             case "amoled":
                 return ImTheme.VKAPP_AMOLED;
             default:
-                return ImTheme.VKAPP_DARK;
+                return vkme_theme() ? ImTheme.VKME_DARK : ImTheme.VKAPP_DARK;
         }
     } // Return needed theme for theme changer
 
@@ -133,7 +134,7 @@ public class Themes {
     public static ImTheme getImLightTheme() {
         switch (getPrefsValue("lighttheme")) {
             default:
-                return ImTheme.VKAPP_LIGHT;
+                return vkme_theme() ? ImTheme.VKME_LIGHT : ImTheme.VKAPP_LIGHT;
         }
     } // Return needed theme for theme changer
 

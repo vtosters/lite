@@ -147,15 +147,15 @@ public class Newsfeed {
     }
 
     public static String friendsads() {
-        return !postsrecomm() ? "user_rec" : "null";
+        return postsrecomm() ? "null" : "user_rec";
     }
 
     public static String getFriendRecomm() {
-        return !friendsrecomm() ? "friends_recommendations" : "null";
+        return friendsrecomm() ? "null" : "friends_recommendations";
     }
 
     public static String authorsads() {
-        return !authorsrecomm() ? "authors_rec" : "null";
+        return authorsrecomm() ? "null" : "authors_rec";
     }
 
     public static String widgetads() {

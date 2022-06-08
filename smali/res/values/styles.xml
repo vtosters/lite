@@ -6490,7 +6490,7 @@
         </item>
     </style>
 
-    <style name="VkIm.Theme.VkApp.Dark" parent="@style/VkIm.Theme.VkApp">
+    <style name="VkIm.Theme.VkApp.Dark" parent="@style/VkIm.Theme.VkMe">
         <item name="accent">@color/sky_300</item>
         <item name="action_sheet_action_foreground">@color/white</item>
         <item name="action_sheet_separator">@color/white_alpha12</item>
@@ -6769,7 +6769,7 @@
         <item name="writebar_icon">@color/gray_400</item>
     </style>
 
-    <style name="VkIm.Theme.VkApp.Light" parent="@style/VkIm.Theme.VkApp">
+    <style name="VkIm.Theme.VkApp.Light" parent="@style/VkIm.Theme.VkMe">
         <item name="accent">@color/blue_300</item>
         <item name="action_sheet_action_foreground">@color/azure_A100</item>
         <item name="action_sheet_separator">@color/black_alpha12</item>
@@ -7066,8 +7066,8 @@
         <item name="im_contact_avatar_end_color">#ff3f8ae0</item>
         <item name="im_contact_avatar_start_color">#ff66ccff</item>
         <item name="im_dialogs_divider">?background_content</item>
-        <item name="im_dialogs_item_style">@style/VkIm.Theme.DialogItem.VkMe</item>
-        <item name="im_dialogs_state_style">@style/VkIm.Theme.DialogsStateProgress.VkMe</item>
+        <item name="im_dialogs_item_style">@style/VkIm.Theme.DialogItem.VkApp</item>
+        <item name="im_dialogs_state_style">@style/VkIm.Theme.DialogsStateProgress.VkApp</item>
         <item name="im_divider_color">?separator_common</item>
         <item name="im_history_fwd_padding_bottom">0.0dip</item>
         <item name="im_history_fwd_padding_end">0.0dip</item>
