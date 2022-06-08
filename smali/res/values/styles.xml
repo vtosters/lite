@@ -6399,7 +6399,7 @@
         <item name="im_chat_avatar_start_color_6">#ffe664fa</item>
         <item name="im_contact_avatar_end_color">#ff3f8ae0</item>
         <item name="im_contact_avatar_start_color">#ff66ccff</item>
-        <item name="im_dialogs_divider">#26000000</item>
+        <item name="im_dialogs_divider">?background_content</item>
         <item name="im_dialogs_item_style">@style/VkIm.Theme.DialogItem.VkApp</item>
         <item name="im_dialogs_state_style">@style/VkIm.Theme.DialogsStateProgress.VkApp</item>
         <item name="im_divider_color">@color/black_alpha12</item>
