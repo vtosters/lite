@@ -334,6 +334,10 @@ public class Preferences {
         return getBoolValue("roundedmsgs", false);
     }
 
+    public static boolean disableanimstickers() {
+        return getBoolValue("disableanimstickers", true);
+    }
+
     public static boolean donaterecomm() {
         return getBoolValue("donaterecomm", false);
     }

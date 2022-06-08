@@ -289,6 +289,17 @@
 .method private F()Z
     .locals 2
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->disableanimstickers()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_228
+
+    const v0, 0x0 ## nedofix anim stickers
+
+    return v0
+
+    :cond_228
     const-string v0, "stickers"
 
     const-string v1, "animation_enabled"
@@ -297,8 +308,6 @@
     invoke-static {v0, v1}, Lcom/vk/core/preference/Preference;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
-
-    const v0, 0x0 ## nedofix anim stickers
 
     return v0
 .end method
@@ -2551,6 +2560,17 @@
 .method public n()Z
     .locals 2
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->disableanimstickers()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_228
+
+    const v0, 0x0 ## nedofix anim stickers
+
+    return v0
+
+    :cond_228
     const-string v0, "stickers"
 
     const-string v1, "suggests_enabled"
@@ -2559,8 +2579,6 @@
     invoke-static {v0, v1}, Lcom/vk/core/preference/Preference;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
-
-    const v0, 0x0 ## nedofix anim stickers
 
     return v0
 .end method
