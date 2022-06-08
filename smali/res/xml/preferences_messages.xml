@@ -3,18 +3,13 @@
     <PreferenceCategory android:title="@string/vtlinterfacemsg">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="calls"
-            android:summary="@string/messages_interface_calls_summary"
-            android:title="@string/vtlcalls" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
             android:key="voice"
             android:summary="@string/vtlvoicesummary"
             android:title="@string/vtlvoice" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="roundedmsgs"
-            android:title="Круглые сообщения" />
+            android:title="@string/roundedmsgs" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">

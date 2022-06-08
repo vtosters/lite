@@ -127,7 +127,7 @@ public class Preferences {
     }
 
     public static boolean calls() {
-        return getBoolValue("calls", true);
+        return getBoolValue("calls", false);
     }
 
     public static boolean convUsersOnline() {
