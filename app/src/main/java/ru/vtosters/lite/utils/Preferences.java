@@ -330,8 +330,8 @@ public class Preferences {
         return getBoolValue("vkme_msg", false);
     }
 
-    public static boolean vkme_theme() {
-        return getBoolValue("vkme_theme", false);
+    public static boolean roundedmsgs() {
+        return getBoolValue("roundedmsgs", false);
     }
 
     public static boolean donaterecomm() {
