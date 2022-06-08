@@ -142,7 +142,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">@android:color/system_accent1_900</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -234,7 +234,7 @@
         <item name="button_muted_background">@color/gray_40</item>
         <item name="button_muted_background_disabled">#66f2f3f5</item>
         <item name="button_muted_foreground">@android:color/system_accent1_900</item>
-        <item name="button_muted_foreground_disabled">#665181b8</item>
+        <item name="button_muted_foreground_disabled">?accent</item>
         <item name="button_outline_border">@android:color/system_accent1_600</item>
         <item name="button_outline_border_disabled">@android:color/system_accent1_1000</item>
         <item name="button_outline_foreground">@android:color/system_accent1_600</item>
@@ -250,7 +250,7 @@
         <item name="button_tertiary_background">@color/clear</item>
         <item name="button_tertiary_background_disabled">#66000000</item>
         <item name="button_tertiary_foreground">@android:color/system_accent1_900</item>
-        <item name="button_tertiary_foreground_disabled">#665181b8</item>
+        <item name="button_tertiary_foreground_disabled">?accent</item>
         <item name="cell_button_foreground">@android:color/system_accent1_600</item>
         <item name="cell_button_foreground_disabled">#66528bcc</item>
         <item name="content_placeholder_icon">@color/steel_gray_300</item>
@@ -338,7 +338,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">@android:color/system_accent1_900</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -530,7 +530,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">?accent</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -624,13 +624,13 @@
         <item name="button_muted_background">@color/gray_40</item>
         <item name="button_muted_background_disabled">#66f2f3f5</item>
         <item name="button_muted_foreground">?accent</item>
-        <item name="button_muted_foreground_disabled">#665181b8</item>
+        <item name="button_muted_foreground_disabled">?accent</item>
         <item name="button_outline_border">?accent</item>
         <item name="button_outline_border_disabled">#66528bcc</item>
         <item name="button_outline_foreground">?accent</item>
         <item name="button_outline_foreground_disabled">#66528bcc</item>
         <item name="button_primary_background">?accent</item>
-        <item name="button_primary_background_disabled">#665181b8</item>
+        <item name="button_primary_background_disabled">?accent</item>
         <item name="button_primary_foreground">@color/white</item>
         <item name="button_primary_foreground_disabled">#66ffffff</item>
         <item name="button_secondary_background">@color/black_blue45_alpha10</item>
@@ -640,7 +640,7 @@
         <item name="button_tertiary_background">@color/clear</item>
         <item name="button_tertiary_background_disabled">#66000000</item>
         <item name="button_tertiary_foreground">?accent</item>
-        <item name="button_tertiary_foreground_disabled">#665181b8</item>
+        <item name="button_tertiary_foreground_disabled">?accent</item>
         <item name="cell_button_foreground">?accent</item>
         <item name="cell_button_foreground_disabled">#66528bcc</item>
         <item name="content_placeholder_icon">@color/steel_gray_300</item>
@@ -817,7 +817,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">?accent</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -1101,7 +1101,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">@android:color/system_accent1_900</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -1379,7 +1379,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">?accent</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -1472,13 +1472,13 @@
         <item name="button_muted_background">@color/gray_40</item>
         <item name="button_muted_background_disabled">#66f2f3f5</item>
         <item name="button_muted_foreground">?accent</item>
-        <item name="button_muted_foreground_disabled">#665181b8</item>
+        <item name="button_muted_foreground_disabled">?accent</item>
         <item name="button_outline_border">?accent</item>
         <item name="button_outline_border_disabled">#66528bcc</item>
         <item name="button_outline_foreground">?accent</item>
         <item name="button_outline_foreground_disabled">#66528bcc</item>
         <item name="button_primary_background">?accent</item>
-        <item name="button_primary_background_disabled">#665181b8</item>
+        <item name="button_primary_background_disabled">?accent</item>
         <item name="button_primary_foreground">@color/white</item>
         <item name="button_primary_foreground_disabled">#66ffffff</item>
         <item name="button_secondary_background">@color/black_blue45_alpha10</item>
@@ -1488,7 +1488,7 @@
         <item name="button_tertiary_background">@color/clear</item>
         <item name="button_tertiary_background_disabled">#66000000</item>
         <item name="button_tertiary_foreground">?accent</item>
-        <item name="button_tertiary_foreground_disabled">#665181b8</item>
+        <item name="button_tertiary_foreground_disabled">?accent</item>
         <item name="cell_button_foreground">?accent</item>
         <item name="cell_button_foreground_disabled">#66528bcc</item>
         <item name="content_placeholder_icon">@color/steel_gray_300</item>
@@ -1665,7 +1665,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">?accent</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -1948,7 +1948,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">@android:color/system_accent1_900</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
@@ -2226,7 +2226,7 @@
         <item name="landing_primary_button_background">@color/white</item>
         <item name="landing_primary_button_background_disabled">#66ffffff</item>
         <item name="landing_primary_button_foreground">?accent</item>
-        <item name="landing_primary_button_foreground_disabled">#665181b8</item>
+        <item name="landing_primary_button_foreground_disabled">?accent</item>
         <item name="landing_snippet_border">@color/clear</item>
         <item name="landing_text_secondary">@color/white_alpha60</item>
         <item name="landing_text_title">@color/white</item>
