@@ -5865,7 +5865,7 @@
     <style name="VkIm.MsgPart.Time.TextContrast.Stickers" parent="@style/VkIm.MsgPart.Time.TextContrast">
         <item name="android:textSize">11.0sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">?im_history_sticker_badge_foreground</item>
+        <item name="android:textColor">?text_secondary</item>
         <item name="android:lines">1</item>
         <item name="android:singleLine">true</item>
         <item name="android:fontFamily">@string/fontRobotoRegular</item>
