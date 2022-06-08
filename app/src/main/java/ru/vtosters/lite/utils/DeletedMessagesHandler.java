@@ -75,7 +75,7 @@ public class DeletedMessagesHandler {
     }
 
     private static String getPreifxUndelete() {
-        return getPrefsValue("undeletemsg_prefix") + " ";
+        return getPrefsValue("undeletemsg_prefix_value") + " ";
     }
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) {

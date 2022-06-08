@@ -2,6 +2,7 @@ package ru.vtosters.lite.foaf;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
 import static ru.vtosters.lite.utils.Proxy.proxy;
@@ -79,7 +80,7 @@ public class FoafBase {
             matcher2.find();
             String normalHumanDate = getNormalHumanDate(matcher.group(1));
             getNormalHumanDate(matcher2.group(1));
-            AlertDialog.a a2 = new VkAlertDialog.a(context).a(R.string.addinf);
+            AlertDialog.a a2 = new VkAlertDialog.a(context).a(getIdentifier("addinf", "string"));
             a2.b(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).b(17039370, null).b().show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -71,6 +71,6 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="donaterecomm"
-            android:title="Отключить рекомендации о донате" />
+            android:title="@string/donaterecomm" />
     </PreferenceCategory>
 </PreferenceScreen>

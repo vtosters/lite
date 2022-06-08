@@ -6,7 +6,7 @@
             android:dialogTitle="@string/activity_undel_dial"
             android:entries="@array/undel_value"
             android:entryValues="@array/undel"
-            android:key="undeletemsg_prefix"
+            android:key="undeletemsg_prefix_value"
             android:title="@string/activity_undel_tag" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"

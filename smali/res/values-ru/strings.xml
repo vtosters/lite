@@ -4205,6 +4205,7 @@
     <string name="shitpostingsummary">Фильтр очистки постов с РФ и действиями связанными на Украине</string>
     <string name="showstories">Показывать истории</string>
     <string name="showstoriessum">Блок истории в верхней части ленты</string>
+    <string name="donaterecomm">Отключить рекомендации о донате</string>
     <string name="showvtfire">Показывать специальные верификации</string>
     <string name="showvtverify">Показывать верификации</string>
     <string name="sprefsctype">Тип подключения</string>
@@ -4267,11 +4268,13 @@
     <string name="feed_recommendations_authors_summary">Рекомендации постов популярных авторов контента</string>
     <string name="feed_recommendations_friends_reacted_summary">Рекомендации лайкнутых постов ваших друзей</string>
 
-    <string name="feed_other_update">Обновление новостей</string>
+    <string name="feed_other_update">Автоматическое обновление новостей</string>
     <string name="feed_other_update_dialog_title">Выберите тип обновления</string>
     <string name="feed_other_sort_comments">Сортировка комментариев</string>
     <string name="feed_other_sort_comments_summary">Сортировать комментарии по новизне</string>
     <string name="feed_other_cache_summary">Оставлять список загруженных постов в ленте</string>
+    <string name="officialnewssett">Встроенные настройки новостей</string>
+    <string name="officialnewssett_summary">Официальные настройки новостей встроенные в клиент</string>
 
     <string name="appearance_theme_info">Полезная информация</string>
     <string name="appearance_theme_info_summary">Для применений изменений тем необходимо переключить тему</string>

@@ -18,6 +18,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -129,7 +130,13 @@ public class Globals {
     }
 
     public static int getIdentifier(String name, String type) {
-        return getResources().getIdentifier(name, type, getContext().getPackageName());
+        try {
+           return getResources().getIdentifier(name, type, getContext().getPackageName());
+        } catch (Exception e) {
+            Log.d("VTLite", "Not found " + name + "as type " + type);
+            e.printStackTrace();
+        }
+        return 0;
     } // Get res id
 
     public static String getString(String resourcename) {
@@ -174,7 +181,7 @@ public class Globals {
                     }
                 } catch (Exception ignored) {}
                 if (!hasMusicChannel) {
-                    notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(com.vtosters.lite.R.string.audio_message_play_error), NotificationManager.IMPORTANCE_LOW));
+                    notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(getIdentifier("audio_message_play_error", "string")), NotificationManager.IMPORTANCE_LOW));
                 }
             }
         } catch (Exception ignored) {}

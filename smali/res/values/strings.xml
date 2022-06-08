@@ -4330,6 +4330,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine</string>
     <string name="showstories">Show stories</string>
     <string name="showstoriessum">The story section at the top of the feed</string>
+    <string name="donaterecomm">Disable recommendations about donation</string>
     <string name="showvtfire">Show special verifications</string>
     <string name="showvtverify">Show verifications</string>
     <string name="sprefsctype">Connection type</string>
@@ -4391,11 +4392,13 @@ May look like a fake leaving the online"</string>
     <string name="feed_recommendations_authors_summary">Recommend popular authors\' posts friends</string>
     <string name="feed_recommendations_friends_reacted_summary">Recommend posts that your friends like</string>
 
-    <string name="feed_other_update">Update news</string>
+    <string name="feed_other_update">Audo update news</string>
     <string name="feed_other_update_dialog_title">Choose update type</string>
     <string name="feed_other_sort_comments">Sort comments</string>
     <string name="feed_other_sort_comments_summary">Sort comments by newest</string>
     <string name="feed_other_cache_summary">Keep cached posts in feed</string>
+    <string name="officialnewssett">Built-in news settings</string>
+    <string name="officialnewssett_summary">Official news settings built-in into the client</string>
 
     <string name="appearance_theme_info">Useful information</string>
     <string name="appearance_theme_info_summary">To apply theme changes you should toggle the theme</string>
