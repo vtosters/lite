@@ -60,7 +60,7 @@
             android:layout_width="24.0dip"
             android:layout_height="24.0dip"
             android:src="@drawable/ic_share_outline_24"
-            android:tint="@color/light_blue" />
+            android:tint="?accent" />
 
         <TextView
             android:text="@string/vkim_share"
@@ -81,7 +81,7 @@
             android:layout_width="24.0dip"
             android:layout_height="24.0dip"
             android:src="@drawable/vkim_ic_msg_copy"
-            android:tint="@color/light_blue" />
+            android:tint="?accent" />
 
         <TextView
             android:text="@string/vkim_copy_link"
@@ -102,7 +102,7 @@
             android:layout_width="24.0dip"
             android:layout_height="24.0dip"
             android:src="@drawable/ic_do_not_disturb_24"
-            android:tint="@color/light_blue" />
+            android:tint="?accent" />
 
         <TextView
             android:text="@string/vkim_chat_link_invalidate"
