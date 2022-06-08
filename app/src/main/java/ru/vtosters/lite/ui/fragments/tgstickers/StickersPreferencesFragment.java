@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.fragments.tgstickers;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 
 import android.os.Bundle;
@@ -19,7 +19,7 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
     public void b(Bundle bundle) {
         super.b(bundle);
 
-        int vtosterXml = getContext().getResources().getIdentifier("empty", "xml", getContext().getPackageName());
+        int vtosterXml = getIdentifier("empty", "xml");
         this.a(vtosterXml);
 
         PreferencesUtil.addPreferenceCategory(this, getString("sprefsstickers"));
@@ -85,7 +85,7 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
 
     @Override
     public int aq() {
-        return getContext().getResources().getIdentifier("vtltgs", "string", getContext().getPackageName());
+        return getIdentifier("vtltgs", "string");
     }
 }
 

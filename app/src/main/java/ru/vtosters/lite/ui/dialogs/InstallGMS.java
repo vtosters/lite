@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -19,17 +20,17 @@ public class InstallGMS {
     public static void alert(final Activity activity) {
         if (!isGmsInstalled()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-            builder.setTitle("Внимание!");
-            builder.setMessage(Text());
+            builder.setTitle(getString("debug_warning"));
+            builder.setMessage(getString("gmsissuesumm"));
             builder.setCancelable(false);
-            builder.setPositiveButton("Продолжить без GMS", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(getString("gmsissuebtn1"), new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     edit().putBoolean("showAlertGms", false).apply();
                 }
             });
-            builder.setNeutralButton("Установить GMS", new DialogInterface.OnClickListener() {
+            builder.setNeutralButton(getString("gmsissuebtn2"), new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -43,9 +44,5 @@ public class InstallGMS {
                 builder.show();
             }
         }
-    }
-
-    private static String Text() {
-        return "На вашем устройстве отсутствует компонент Google Play Services (GMS), который необходим для корректной работы VTosters Lite";
     }
 }

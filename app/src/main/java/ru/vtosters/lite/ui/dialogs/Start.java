@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
@@ -18,17 +19,17 @@ public class Start {
             activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle("Внимание!");
+        builder.setTitle(getString("debug_warning"));
         builder.setMessage(getWelcome());
         builder.setCancelable(false);
-        builder.setPositiveButton("Продолжить", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getString("startbtn2"), new DialogInterface.OnClickListener() {
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
                 edit().putBoolean("showAlert", false).apply();
             }
         });
-        builder.setNeutralButton("Новости", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton(getString("startbtn1"), new DialogInterface.OnClickListener() {
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -42,9 +43,12 @@ public class Start {
     }
 
     private static String getWelcome() {
-        if (!OEMDetector.isOEM()) {
-            return "Модификация VTosters Lite не имеет никакого отношения к VK Group!\nРаспространяется полностью бесплатно!";
+        String Default = getString("startsumm1");
+
+        if (OEMDetector.isOEM()){
+            return Default + getString("startsumm2");
         }
-        return "Модификация VTosters Lite не имеет никакого отношения к VK Group!\nРаспространяется полностью бесплатно!\n\nПриложение может некорректно работать в связи с тем, что вы, скорее всего, используете оболочку из списка ниже. Все проблемы с отображением и работой приложения связаны только с вашей прошивкой и только с ней. Все багрепорты, присланные из-за проблем на этой прошивке, не рассматриваются разработчиками и не будут исправлены.\n\nНажимая на кнопку \"Продолжить\", вы соглашаетесь с тем, что возможные баги приложения могут произойти из-за специфики вашей прошивки. Рекомендуем использовать прошивки на базе AOSP для получения максимальной стабильности.\n\nПрошивки на которых наблюдаются проблемы с приложениями:\nFlyme, EMUI, MIUI, ColorOS, Samsung Experience или TouchWiz, Magic UI, ZenUI, Funtouch OS";
+
+        return Default;
     }
 }

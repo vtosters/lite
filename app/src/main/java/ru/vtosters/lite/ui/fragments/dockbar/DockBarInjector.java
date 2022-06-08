@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 
 import android.content.res.ColorStateList;
@@ -63,7 +63,7 @@ public class DockBarInjector {
 
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
-            Drawable drawable = getContext().getResources().getDrawable(tab.iconID);
+            Drawable drawable = getResources().getDrawable(tab.iconID);
             ColorStateList dockcolors = new ColorStateList(
                     new int[][]{
                             new int[]{android.R.attr.state_checked},

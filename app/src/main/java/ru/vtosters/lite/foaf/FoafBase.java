@@ -63,7 +63,7 @@ public class FoafBase {
 
     public static void loadAndShow(Context context, int i) {
         ProgressDialog progressDialog = new ProgressDialog(context);
-        progressDialog.setMessage("Загрузка...");
+        progressDialog.setMessage(getString("com_facebook_loading"));
         progressDialog.setCancelable(false);
         progressDialog.show();
 
