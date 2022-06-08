@@ -2,6 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getApplicationName;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
 import static ru.vtosters.lite.utils.Preferences.oldabout;
 
@@ -21,25 +22,25 @@ public class About {
         list.add(new Items1());
 
         if (!oldabout()) {
-            list.add(new Items(21, com.vtosters.lite.R.string.opencommit));
-            list.add(new Items(8, com.vtosters.lite.R.string.tgchannel));
-            list.add(new Items(9, com.vtosters.lite.R.string.tgchat));
-            list.add(new Items(16, com.vtosters.lite.R.string.vtfaq));
-            list.add(new Items(19, com.vtosters.lite.R.string.vtsite));
-            list.add(new Items(20, com.vtosters.lite.R.string.donate));
-            list.add(new Items(17, com.vtosters.lite.R.string.vkgroup));
-            list.add(new Items(18, com.vtosters.lite.R.string.sett_debug));
+            list.add(new Items(21, getIdentifier("opencommit", "string")));
+            list.add(new Items(8, getIdentifier("tgchannel", "string")));
+            list.add(new Items(9, getIdentifier("tgchat", "string")));
+            list.add(new Items(16, getIdentifier("vtfaq", "string")));
+            list.add(new Items(19, getIdentifier("vtsite", "string")));
+            list.add(new Items(20, getIdentifier("donate", "string")));
+            list.add(new Items(17, getIdentifier("vkgroup", "string")));
+            list.add(new Items(18, getIdentifier("sett_debug", "string")));
             return;
         }
 
-        list.add(new Items(0, com.vtosters.lite.R.string.about_app_feedback));
-        list.add(new Items(1, com.vtosters.lite.R.string.about_app_estimate));
-        list.add(new Items(2, com.vtosters.lite.R.string.about_app_privacy));
-        list.add(new Items(5, com.vtosters.lite.R.string.about_app_cookie));
-        list.add(new Items(3, com.vtosters.lite.R.string.about_app_terms_to_use));
-        list.add(new Items(4, com.vtosters.lite.R.string.about_app_license));
-        list.add(new Items(6, com.vtosters.lite.R.string.about_app_data_protect));
-        list.add(new Items(8, com.vtosters.lite.R.string.sett_debug));
+        list.add(new Items(0, getIdentifier("about_app_feedback", "string")));
+        list.add(new Items(1, getIdentifier("about_app_estimate", "string")));
+        list.add(new Items(2, getIdentifier("about_app_privacy", "string")));
+        list.add(new Items(5, getIdentifier("about_app_cookie", "string")));
+        list.add(new Items(3, getIdentifier("about_app_terms_to_use", "string")));
+        list.add(new Items(4, getIdentifier("about_app_license", "string")));
+        list.add(new Items(6, getIdentifier("about_app_data_protect", "string")));
+        list.add(new Items(8, getIdentifier("sett_debug", "string")));
     }
     public static String getBuildNumber() {
         return getBuild(getContext(), "version.properties");

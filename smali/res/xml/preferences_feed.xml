@@ -85,8 +85,8 @@
     <PreferenceCategory android:title="@string/vtlfeedwork">
         <Preference
             android:key="officialnewssett"
-            android:summary="Официальные настройки новостей встроенные в клиент"
-            android:title="Встроенные настройки новостей" />
+            android:summary="@string/officialnewssett_summary"
+            android:title="@string/officialnewssett" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/feed_other_update_dialog_title"
