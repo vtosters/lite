@@ -88,6 +88,10 @@ public class Themes {
         return getIdentifier("VkIm.Theme.VkApp.Amoled", "style");
     } // Get Amoled theme id for messages
 
+    public static int getAmoledMeTheme() {
+        return getIdentifier("VkIm.Theme.VkMe.Amoled", "style");
+    } // Get Amoled theme id for messages with rounded msg
+
     public static int getAttrId(String attr) {
         return getIdentifier(attr, "attr");
     }
@@ -122,7 +126,7 @@ public class Themes {
     public static ImTheme getImDarkTheme() {
         switch (getPrefsValue("darktheme")) {
             case "amoled":
-                return ImTheme.VKAPP_AMOLED;
+                return roundedmsgs() ? ImTheme.VKME_AMOLED : ImTheme.VKAPP_AMOLED;
             default:
                 return roundedmsgs() ? ImTheme.VKME_DARK : ImTheme.VKAPP_DARK;
         }

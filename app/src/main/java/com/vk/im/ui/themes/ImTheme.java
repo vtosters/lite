@@ -12,6 +12,7 @@ public enum ImTheme {
     VKAPP_DARK(3, VkIm_Theme_VkApp_Dark),
     VKME_LIGHT(1, VkIm_Theme_VkMe_Light),
     VKME_DARK(2, VkIm_Theme_VkMe_Dark),
+    VKME_AMOLED(5, Themes.getAmoledMeTheme()),
     VKAPP_AMOLED(4, Themes.getAmoledImTheme());
 
     private final int id;

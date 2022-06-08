@@ -559,7 +559,7 @@
         <item name="im_conversation_unread_counter_background">?accent</item>
         <item name="im_conversation_unread_counter_foreground">@color/white</item>
         <item name="im_conversation_unread_counter_muted_background">#ffa9b0b8</item>
-        <item name="im_conversation_verified_icon">#ff67a5eb</item>
+        <item name="im_conversation_verified_icon">?accent</item>
         <item name="im_forward_line_tint">?accent</item>
         <item name="im_history_common_badge_background">#66000000</item>
         <item name="im_history_common_badge_foreground">@color/white</item>
@@ -844,7 +844,7 @@
         </item>
         <item name="im_conversation_unread_counter_foreground">@color/white</item>
         <item name="im_conversation_unread_counter_muted_background">#ffa9b0b8</item>
-        <item name="im_conversation_verified_icon">@android:color/system_neutral1_50</item>
+        <item name="im_conversation_verified_icon">?accent</item>
         <item name="im_forward_line_tint">@color/white</item>
         <item name="im_history_common_badge_background">#66000000</item>
         <item name="im_history_common_badge_foreground">@color/white</item>
@@ -1316,7 +1316,7 @@
         <item name="im_conversation_unread_counter_background">?accent</item>
         <item name="im_conversation_unread_counter_foreground">@color/white</item>
         <item name="im_conversation_unread_counter_muted_background">#ffa9b0b8</item>
-        <item name="im_conversation_verified_icon">#ff67a5eb</item>
+        <item name="im_conversation_verified_icon">?accent</item>
         <item name="im_forward_line_tint">@color/white</item>
         <item name="im_history_common_badge_background">#66000000</item>
         <item name="im_history_common_badge_foreground">@color/white</item>
