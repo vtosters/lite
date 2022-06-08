@@ -8,8 +8,7 @@ import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 import static ru.vtosters.lite.utils.Proxy.proxy;
-
-import com.vk.core.ui.themes.VKThemeHelper;
+import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 
 public class SSFS {
     public static String getSSFSLink() {
@@ -25,11 +24,11 @@ public class SSFS {
     }
 
     public static String getDarkVKUI() {
-        return !VKThemeHelper.d() ? "1" : "0";
+        return isDarkTheme() ? "1" : "0";
     }
 
     public static String getAmoledVKUI() {
-        return getPrefsValue("darktheme").equals("amoled") ? "1" : "0";
+        return getPrefsValue("darktheme").equals("amoled") && isDarkTheme() ? "1" : "0";
     }
 
     public static String getUserProxy() {

@@ -4571,6 +4571,8 @@ May look like a fake leaving the online"</string>
 
     <string name="videodownloaderr">This video cannot be downloaded</string>
 
+    <string name="roundedmsgs">Rounded messages</string>
+
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />
     <item type="string" name="APKTOOL_DUMMY_10c0" />

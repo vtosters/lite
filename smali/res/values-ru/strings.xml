@@ -4437,5 +4437,7 @@
 
     <string name="videodownloaderr">Данное видео невозможно скачать</string>
 
+    <string name="roundedmsgs">Круглые сообщения</string>
+
     <string name="empty_text" />
 </resources>
