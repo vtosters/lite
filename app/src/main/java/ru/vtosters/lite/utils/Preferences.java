@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static android.os.Build.VERSION;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
@@ -19,8 +20,8 @@ import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.vk.core.util.Screen;
 import com.vk.im.engine.models.users.UserSex;
@@ -49,12 +50,23 @@ public class Preferences {
         systemThemeChanger();
     } // VK Init
 
+    public static void forceOffline() {
+        if (setoffline() && !offline()) {
+            Users.b();
+        }
+        setupFilters();
+    }
+
     public static boolean getBoolValue(String key, Boolean value) {
         if (preferences == null) {
             preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         }
         return preferences.getBoolean(key, value);
     } // Set bool by default and get value
+
+    public static SharedPreferences getPrefsFromFile(String filename) {
+        return getContext().getSharedPreferences(filename, Context.MODE_PRIVATE);
+    }
 
     public static boolean opusmodule() {
         return getBoolValue("opusmodule", true);
@@ -178,13 +190,6 @@ public class Preferences {
 
     public static boolean CommentsSort() {
         return getBoolValue("commentssorting", false);
-    }
-
-    public static void forceOffline() {
-        if (setoffline() && !offline()) {
-            Users.b();
-        }
-        setupFilters();
     }
 
     public static boolean gcmfix() {
@@ -313,15 +318,15 @@ public class Preferences {
     }
 
     public static String MediacontentFix() {
-        return Build.VERSION.SDK_INT >= 29 ? "date_modified DESC" : "datetaken DESC";
+        return VERSION.SDK_INT >= 29 ? "date_modified DESC" : "datetaken DESC";
     } // Fix photo picker for sdk 29+
 
     public static String MediacontentFix2() {
-        return Build.VERSION.SDK_INT >= 29 ? "date_modified" : "datetaken";
+        return VERSION.SDK_INT >= 29 ? "date_modified" : "datetaken";
     } // Fix photo picker for sdk 29+
 
     public static String MediacontentFix3() {
-        return Build.VERSION.SDK_INT >= 29 ? ", date_modified=" : ", dateTaken=";
+        return VERSION.SDK_INT >= 29 ? ", date_modified=" : ", dateTaken=";
     } // Fix photo picker for sdk 29+
 
     public static boolean color_grishka() {
@@ -370,21 +375,19 @@ public class Preferences {
         return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
     }
 
-
     public static boolean fulltime() {
         return getPrefsValue("dateformat").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
     }
 
     public static String getDateFormat() {
-        if (getPrefsValue("dateformat").equals("noyear")) {
-            return getString("fulltime2");
+        switch (getPrefsValue("dateformat")) {
+            case "noyear":
+                return getString("fulltime2");
+            case "full":
+                return getString("fulltime");
+            default:
+                return getString("fulltime3");
         }
-
-        if (getPrefsValue("dateformat").equals("full")) {
-            return getString("fulltime");
-        }
-
-        return getString("fulltime3");
     }
 
     public static String getFormattedDate(UserSex type, long time){
@@ -393,9 +396,9 @@ public class Preferences {
         if(!fulltime()) return null;
 
         try {
-            return getStringDate(type == UserSex.FEMALE ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), new Object[]{date.format(new Date(time))});
-
+            return getStringDate(type == UserSex.FEMALE ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), date.format(new Date(time)));
         } catch (Throwable th) {
+            Log.d("VTLite", "Format data error, type " + type + " , time " + time);
             th.printStackTrace();
             return null;
         }
