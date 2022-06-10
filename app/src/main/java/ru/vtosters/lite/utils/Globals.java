@@ -22,6 +22,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 
 import com.vtosters.lite.UserProfile;
 import com.vtosters.lite.VKActivity;
@@ -142,6 +143,10 @@ public class Globals {
     public static String getString(String resourcename) {
         return getContext().getString(getIdentifier(resourcename, "string"));
     } // Get string via getIdentifier
+
+    public static String getStringDate(@StringRes int i, Object... objArr) {
+        return getContext().getString(i, objArr);
+    }
 
     public static String getPackageName() {
         return getContext().getPackageName();

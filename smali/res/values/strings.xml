@@ -4189,6 +4189,8 @@ Filters are case-sensitive!"</string>
     <string name="vtlnavbar">Color navigation bar</string>
     <string name="donate">Donate</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
+    <string name="fulltime2">dd MMMM HH:mm:ss</string>
+    <string name="fulltime3">dd MMMM HH:mm</string>
     <string name="vtlsfiltershort">Short link filter</string>
     <string name="vtlsfiltershortsummary">"Blocks posts containing short links, such as bit.ly or cutt.ly
 Does not affect vk.cc links"</string>
@@ -4572,6 +4574,8 @@ May look like a fake leaving the online"</string>
     <string name="videodownloaderr">This video cannot be downloaded</string>
 
     <string name="roundedmsgs">Rounded messages</string>
+
+    <string name="dateformat">Select the date display type</string>
 
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />

@@ -510,6 +510,16 @@
 .method public final a(Lcom/vk/im/engine/models/users/UserSex;J)Ljava/lang/String;
     .locals 2
 
+    invoke-static {p1, p2, p3}, Lru/vtosters/lite/utils/Preferences;->getFormattedDate(Lcom/vk/im/engine/models/users/UserSex;J)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    .line 1
+    :cond_1
     const-string v0, "userSex"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V

@@ -731,7 +731,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 18
     new-instance v0, Ljava/util/Date;
@@ -1531,15 +1531,7 @@
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const p0, 0x7f11100f
-
-    invoke-virtual {v3, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getDateFormat()Ljava/lang/String;
 
     move-result-object v3
 

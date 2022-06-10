@@ -505,4 +505,10 @@
         <item>🗑</item>
         <item>❌</item>
     </string-array>
+    <string-array name="dateformat_value">
+        <item>По умолчанию</item>
+        <item>15 апреля в 18:42</item>
+        <item>15 апреля в 18:42:28</item>
+        <item>15 апреля 2022 в 18:42:28</item>
+    </string-array>
 </resources>

@@ -52,11 +52,9 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->b:Lcom/vk/im/ui/formatters/FileSizeFormatter;
 
     .line 28
-    new-instance p1, Ljava/text/SimpleDateFormat;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->setDateFormat()Ljava/text/SimpleDateFormat;
 
-    const-string v0, "dd MMMM HH:mm"
-
-    invoke-direct {p1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->c:Ljava/text/SimpleDateFormat;
 
