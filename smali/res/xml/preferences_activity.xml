@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/activity_undel">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
+            android:defaultValue="🗑"
             android:dialogTitle="@string/activity_undel_dial"
             android:entries="@array/undel_value"
             android:entryValues="@array/undel_value"
