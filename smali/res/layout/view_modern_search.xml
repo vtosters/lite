@@ -20,11 +20,11 @@
             android:layout_height="48.0dip"
             android:src="@drawable/ic_back_24"
             android:scaleType="centerInside"
-            android:tint="#ff909499" />
+            android:tint="?text_primary" />
 
         <com.vk.core.view.NoMenuEditText
             android:textSize="16.0dip"
-            android:textColor="#ff000000"
+            android:textColor="?header_text"
             android:textColorHint="#ffaaaeb3"
             android:gravity="center_vertical"
             android:id="@id/query"
@@ -41,7 +41,7 @@
 
         <TextView
             android:textSize="16.0dip"
-            android:textColor="#ff000000"
+            android:textColor="?header_text"
             android:textColorHint="#ffaaaeb3"
             android:ellipsize="end"
             android:gravity="center_vertical"
@@ -74,6 +74,6 @@
             android:layout_height="40.0dip"
             android:src="@drawable/ic_cancel_24"
             android:scaleType="centerInside"
-            android:tint="#ff909499" />
+            android:tint="?header_text" />
     </LinearLayout>
 </merge>
