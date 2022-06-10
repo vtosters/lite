@@ -17,6 +17,7 @@ import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -388,6 +389,11 @@ public class Preferences {
             default:
                 return getString("fulltime3");
         }
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    public static SimpleDateFormat setDateFormat() {
+        return new SimpleDateFormat(getDateFormat());
     }
 
     public static String getFormattedDate(UserSex type, long time){
