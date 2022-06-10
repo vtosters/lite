@@ -41,13 +41,13 @@ public class JsonInjectors {
         Random random = new Random();
         int randomshower = random.nextInt(8);
 
-        return !hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "info";
+        return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "info";
     }
 
     public static String haveDonateButton() {
         Random random = new Random();
         int randomshower = random.nextInt(10);
 
-        return !hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "buttons";
+        return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "buttons";
     }
 }
