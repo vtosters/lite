@@ -1611,8 +1611,7 @@
         <item name="im_history_image_bubbleless_border">#1e000000</item>
         <item name="im_history_incoming_attachment_icon">?accent</item>
         <item name="im_history_incoming_background">@android:color/system_neutral1_50</item>
-        <item name="im_history_incoming_background_selected">@android:color/system_accent1_400
-        </item>
+        <item name="im_history_incoming_background_selected">@android:color/system_accent1_100</item>
         <item name="im_history_incoming_button">?accent</item>
         <item name="im_history_incoming_foreground">@color/black</item>
         <item name="im_history_incoming_foreground_caption">@color/im_old_gray_medium</item>
@@ -1620,26 +1619,21 @@
         <item name="im_history_incoming_foreground_link">?accent</item>
         <item name="im_history_incoming_foreground_name">?accent</item>
         <item name="im_history_incoming_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_incoming_snippet_placeholder_background">
-            @android:color/system_accent1_1000
-        </item>
+        <item name="im_history_incoming_snippet_placeholder_background">@android:color/system_accent1_1000</item>
         <item name="im_history_incoming_snippet_placeholder_icon">?accent</item>
         <item name="im_history_info_bar_background">#fffafbfc</item>
         <item name="im_history_info_bar_border">#26000000</item>
         <item name="im_history_live_badge_background">#ffff3347</item>
         <item name="im_history_outgoing_attachment_icon">?accent</item>
-        <item name="im_history_outgoing_background">@android:color/system_accent2_100</item>
-        <item name="im_history_outgoing_background_selected">@android:color/system_accent1_800
-        </item>
+        <item name="im_history_outgoing_background">@android:color/system_accent2_50</item>
+        <item name="im_history_outgoing_background_selected">@android:color/system_neutral2_100</item>
         <item name="im_history_outgoing_button">?accent</item>
         <item name="im_history_outgoing_foreground">@color/black</item>
         <item name="im_history_outgoing_foreground_caption">@color/im_old_gray_medium</item>
         <item name="im_history_outgoing_foreground_link">@android:color/system_accent1_900</item>
         <item name="im_history_outgoing_foreground_name">@android:color/system_accent1_900</item>
         <item name="im_history_outgoing_image_placeholder_background">#14000c1a</item>
-        <item name="im_history_outgoing_snippet_placeholder_background">
-            @android:color/system_accent1_1000
-        </item>
+        <item name="im_history_outgoing_snippet_placeholder_background">@android:color/system_accent1_1000</item>
         <item name="im_history_outgoing_snippet_placeholder_icon">?accent</item>
         <item name="im_history_sending_icon">?accent</item>
         <item name="im_history_sticker_badge_background">#e6ffffff</item>
@@ -1912,8 +1906,8 @@
         <item name="im_history_info_bar_border">#26000000</item>
         <item name="im_history_live_badge_background">#ffff3347</item>
         <item name="im_history_outgoing_attachment_icon">?accent</item>
-        <item name="im_history_outgoing_background">@android:color/system_neutral1_800</item>
-        <item name="im_history_outgoing_background_selected">@android:color/system_accent1_500</item>
+        <item name="im_history_outgoing_background">@android:color/system_accent2_700</item>
+        <item name="im_history_outgoing_background_selected">@android:color/system_neutral2_800</item>
         <item name="im_history_outgoing_button">?accent</item>
         <item name="im_history_outgoing_foreground">@color/black</item>
         <item name="im_history_outgoing_foreground_caption">@color/im_old_gray_medium</item>
@@ -2190,8 +2184,8 @@
         <item name="im_history_info_bar_border">#26000000</item>
         <item name="im_history_live_badge_background">#ffff3347</item>
         <item name="im_history_outgoing_attachment_icon">?accent</item>
-        <item name="im_history_outgoing_background">@android:color/system_neutral1_800</item>
-        <item name="im_history_outgoing_background_selected">@android:color/system_accent1_500</item>
+        <item name="im_history_outgoing_background">@android:color/system_accent2_700</item>
+        <item name="im_history_outgoing_background_selected">@android:color/system_neutral2_800</item>
         <item name="im_history_outgoing_button">?accent</item>
         <item name="im_history_outgoing_foreground">@color/black</item>
         <item name="im_history_outgoing_foreground_caption">@color/im_old_gray_medium</item>
