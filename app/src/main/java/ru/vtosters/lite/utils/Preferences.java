@@ -372,7 +372,7 @@ public class Preferences {
 
 
     public static boolean fulltime() {
-        return getPrefsValue(" ").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
+        return getPrefsValue("dateformat").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
     }
 
     public static String getDateFormat() {
