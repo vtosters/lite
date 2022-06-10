@@ -5,7 +5,10 @@ import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.mig
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Globals.getStringDate;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
@@ -20,8 +23,11 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 
 import com.vk.core.util.Screen;
+import com.vk.im.engine.models.users.UserSex;
 import com.vtosters.lite.data.Users;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 public class Preferences {
@@ -179,10 +185,6 @@ public class Preferences {
             Users.b();
         }
         setupFilters();
-    }
-
-    public static boolean fulltime() {
-        return getBoolValue("fulltime", true);
     }
 
     public static boolean gcmfix() {
@@ -366,5 +368,36 @@ public class Preferences {
         }
 
         return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
+    }
+
+
+    public static boolean fulltime() {
+        return getPrefsValue(" ").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
+    }
+
+    public static String getDateFormat() {
+        if (getPrefsValue("dateformat").equals("noyear")) {
+            return getString("fulltime2");
+        }
+
+        if (getPrefsValue("dateformat").equals("full")) {
+            return getString("fulltime");
+        }
+
+        return getString("fulltime3");
+    }
+
+    public static String getFormattedDate(UserSex type, long time){
+        SimpleDateFormat date = new SimpleDateFormat(getDateFormat(), Locale.getDefault());
+
+        if(!fulltime()) return null;
+
+        try {
+            return getStringDate(type == UserSex.FEMALE ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), new Object[]{date.format(new Date(time))});
+
+        } catch (Throwable th) {
+            th.printStackTrace();
+            return null;
+        }
     }
 }

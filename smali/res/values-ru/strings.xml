@@ -4064,6 +4064,8 @@
     <string name="vtlnavbar">Покрасить панель навигации</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
+    <string name="fulltime2">dd MMMM в HH:mm:ss</string>
+    <string name="fulltime3">dd MMMM в HH:mm</string>
     <string name="vtlsfiltershort">"Фильтр коротких ссылок "</string>
     <string name="vtlsfiltershortsummary">"Фильтр для блокировки постов с короткими ссылками, такими как bit.ly или cutt.ly
 Этот фильтр не затрагивает ссылки vk.cc"</string>
@@ -4438,6 +4440,8 @@
     <string name="videodownloaderr">Данное видео невозможно скачать</string>
 
     <string name="roundedmsgs">Круглые сообщения</string>
+
+    <string name="dateformat">Выберите тип показа дат</string>
 
     <string name="empty_text" />
 </resources>

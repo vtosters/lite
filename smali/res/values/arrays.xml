@@ -706,4 +706,16 @@
         <item>icon</item>
         <item>icon2</item>
     </string-array>
+    <string-array name="dateformat_value">
+        <item>Default</item>
+        <item>15 april 18:42</item>
+        <item>15 april 18:42:28</item>
+        <item>15 april 2022 18:42:28</item>
+    </string-array>
+    <string-array name="dateformat">
+        <item>default</item>
+        <item>noseconds</item>
+        <item>noyear</item>
+        <item>full</item>
+    </string-array>
 </resources>

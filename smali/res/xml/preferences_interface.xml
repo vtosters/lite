@@ -25,16 +25,18 @@
             android:entryValues="@array/start_values"
             android:key="start_values"
             android:title="@string/interfacestartfr" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/dateformat"
+            android:entries="@array/dateformat_value"
+            android:entryValues="@array/dateformat"
+            android:key="dateformat"
+            android:title="@string/interfaceglobaldates" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="olddock"
             android:summary="@string/interface_global_old_icons_summary"
             android:title="@string/interface_global_old_icons" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="fulltime"
-            android:summary="@string/interfaceglobaldatessum"
-            android:title="@string/interfaceglobaldates" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="shortinfo"
