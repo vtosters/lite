@@ -7070,7 +7070,7 @@
         <item name="im_msg_box_margin_start_with_avatar">8.0dip</item>
         <item name="im_msg_list_add_duration">0</item>
         <item name="im_msg_part_corner_radius_big">14.0dip</item>
-        <item name="im_msg_part_corner_radius_small">6.0dip</item>
+        <item name="im_msg_part_corner_radius_small">14.0dip</item>
         <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_new</item>
         <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_new</item>
         <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_new</item>
