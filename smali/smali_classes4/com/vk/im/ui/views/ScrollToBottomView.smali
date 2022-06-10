@@ -106,8 +106,21 @@
 .end method
 
 .method private static a(I)Ljava/lang/CharSequence;
-    .locals 2
+    .locals 3
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
     const v0, 0xf4240
 
     if-lt p0, v0, :cond_0

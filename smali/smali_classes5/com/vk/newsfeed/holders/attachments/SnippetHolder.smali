@@ -418,6 +418,19 @@
 .method private final a(I)Ljava/lang/String;
     .locals 4
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
     const v0, 0x989680
 
     if-le p1, v0, :cond_0
