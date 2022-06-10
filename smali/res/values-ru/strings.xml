@@ -4286,7 +4286,7 @@
     <string name="appearance_theme_use_system">Использовать системную тему</string>
     <string name="appearance_theme_use_system_summary">Применение системной темы при запуске приложения</string>
 
-    <string name="appearance_other_color_navbar_summary">Если семтемно имеется</string>
+    <string name="appearance_other_color_navbar_summary">Если системно имеется</string>
     <string name="appearance_other_color_webview_summary">Покраска страниц, таких как VKID, под тему приложения</string>
 
     <string name="interface_global_old_icons">Старые иконки</string>
