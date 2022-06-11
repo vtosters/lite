@@ -2668,7 +2668,7 @@
         <item name="android:textSize">16.0dip</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColorHint">?header_text</item>
-        <item name="android:background">@drawable/bg_modern_search</item>
+        <item name="android:background">@drawable/bg_modern_search_im_new</item>
         <item name="android:backgroundTint">?background_content</item>
         <item name="android:maxLines">1</item>
     </style>

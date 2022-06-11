@@ -349,7 +349,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    ## invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 107
     :cond_1
