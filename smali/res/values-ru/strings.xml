@@ -4443,5 +4443,8 @@
 
     <string name="dateformat">Выберите тип показа дат</string>
 
+    <string name="franimation">Анимация фрагментов (бета)</string>
+    <string name="selectfranimation">Выберите анимацию фрагментов</string>
+
     <string name="empty_text" />
 </resources>

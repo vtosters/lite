@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set android:ordering="together"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/fast_out_linear_in"
+    android:ordering="together"
+    android:shareInterpolator="true">
     <translate
         android:duration="300"
         android:fromYDelta="0.0"

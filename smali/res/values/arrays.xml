@@ -559,18 +559,20 @@
         <item>Document</item>
     </string-array>
     <string-array name="animations">
+        <item>No Animation</item>
+        <item>Android Q</item>
+        <item>Fade</item>
         <item>Slide</item>
         <item>System</item>
         <item>System task</item>
-        <item>AndroidX</item>
-        <item>Fade</item>
     </string-array>
     <string-array name="animations_values">
+        <item>noanim</item>
+        <item>q</item>
+        <item>fade</item>
         <item>slide</item>
         <item>system</item>
         <item>system_task</item>
-        <item>frag_enter</item>
-        <item>frag_fade</item>
     </string-array>
     <string-array name="language">
         <item>System</item>
