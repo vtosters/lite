@@ -438,6 +438,14 @@
         <item>Видеозапись</item>
         <item>Документ</item>
     </string-array>
+    <string-array name="animations">
+        <item>Без анимации</item>
+        <item>Android Q</item>
+        <item>Fade</item>
+        <item>Слайд</item>
+        <item>Системный</item>
+        <item>Системный (task)</item>
+    </string-array>
     <string-array name="language">
         <item>Системный</item>
         <item>Английский</item>

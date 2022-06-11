@@ -5,15 +5,15 @@
         android:state_pressed="true">
         <objectAnimator
             android:duration="200"
+            android:propertyName="translationZ"
             android:valueTo="4.0dip"
-            android:valueType="floatType"
-            android:propertyName="translationZ" />
+            android:valueType="floatType" />
     </item>
     <item>
         <objectAnimator
             android:duration="200"
+            android:propertyName="translationZ"
             android:valueTo="2.0dip"
-            android:valueType="floatType"
-            android:propertyName="translationZ" />
+            android:valueType="floatType" />
     </item>
 </selector>

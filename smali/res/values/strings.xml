@@ -4577,6 +4577,9 @@ May look like a fake leaving the online"</string>
 
     <string name="dateformat">Select the date display type</string>
 
+    <string name="franimation">Fragment animation (beta)</string>
+    <string name="selectfranimation">Select fragment animation</string>
+
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />
     <item type="string" name="APKTOOL_DUMMY_10c0" />

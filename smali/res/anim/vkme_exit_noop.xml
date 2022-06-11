@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set android:duration="200"
-    android:fillBefore="true"
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="200"
     android:fillAfter="false"
-    android:fillEnabled="false"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:fillBefore="true"
+    android:fillEnabled="false">
     <alpha
         android:fromAlpha="1.0"
         android:toAlpha="1.0" />

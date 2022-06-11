@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set android:interpolator="@android:interpolator/accelerate_decelerate"
+<set xmlns:android="http://schemas.android.com/apk/res/android"
     android:duration="300"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:interpolator="@android:interpolator/fast_out_slow_in">
     <translate
         android:fromYDelta="0.0"
         android:toYDelta="14.999998%" />
