@@ -1,7 +1,6 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;

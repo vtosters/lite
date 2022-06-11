@@ -9,7 +9,7 @@
 
     <EditText
         android:textSize="16.0dip"
-        android:textColorHint="?header_text"
+        android:textColorHint="?text_primary"
         android:id="@id/search_input"
         android:background="@null"
         android:paddingRight="16.0dip"

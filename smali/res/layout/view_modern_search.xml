@@ -6,7 +6,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:id="@id/search_box"
-        android:background="@drawable/bg_modern_search"
+        android:background="@drawable/bg_modern_search_im_new"
         android:backgroundTint="?background_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
@@ -21,12 +21,12 @@
             android:layout_height="48.0dip"
             android:src="@drawable/ic_back_24"
             android:scaleType="centerInside"
-            android:tint="?header_text" />
+            android:tint="?text_primary" />
 
         <com.vk.core.view.NoMenuEditText
             android:textSize="16.0dip"
-            android:textColor="?header_text"
-            android:textColorHint="?header_text_secondary"
+            android:textColor="?text_primary"
+            android:textColorHint="?text_secondary"
             android:gravity="center_vertical"
             android:id="@id/query"
             android:background="@null"
@@ -42,8 +42,8 @@
 
         <TextView
             android:textSize="16.0dip"
-            android:textColor="?header_text"
-            android:textColorHint="?header_text_secondary"
+            android:textColor="?text_primary"
+            android:textColorHint="?text_secondary"
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:id="@id/query_static"
@@ -65,7 +65,7 @@
             android:layout_height="40.0dip"
             android:src="@drawable/ic_search_params_24"
             android:scaleType="centerInside"
-            android:tint="?header_text" />
+            android:tint="?text_primary" />
 
         <ImageView
             android:layout_gravity="center_vertical"
@@ -75,6 +75,6 @@
             android:layout_height="40.0dip"
             android:src="@drawable/ic_cancel_24"
             android:scaleType="centerInside"
-            android:tint="?header_text" />
+            android:tint="?text_primary" />
     </LinearLayout>
 </merge>
