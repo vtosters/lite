@@ -99,6 +99,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getSTextAttr()I
+
+    move-result v0
+
     .line 26
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
