@@ -2,13 +2,13 @@
 <resources>
 
     <style name="ActionBarGrayTheme">
-        <item name="android:textColorPrimary">@color/attach_title</item>
-        <item name="android:textColorSecondary">@color/attach_title</item>
+        <item name="android:textColorPrimary">?header_text</item>
+        <item name="android:textColorSecondary">?header_text</item>
         <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
         <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
-        <item name="android:colorAccent">@color/attach_title</item>
-        <item name="colorAccent">@color/attach_title</item>
-        <item name="colorPrimary">#fffafafa</item>
+        <item name="android:colorAccent">?accent</item>
+        <item name="colorAccent">?accent</item>
+        <item name="colorPrimary">?header_background</item>
     </style>
 
     <style name="ActionBarSpinner" parent="@android:style/Widget.Material.Spinner" />
@@ -19,13 +19,13 @@
 
     <style name="ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">?header_text</item>
-        <item name="android:textColorSecondary">?header_tint</item>
+        <item name="android:textColorSecondary">?header_text</item>
         <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
         <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
         <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
-        <item name="android:colorAccent">#ffffffff</item>
-        <item name="colorAccent">#ffffffff</item>
-        <item name="colorPrimary">@color/toolbar_blue_background</item>
+        <item name="android:colorAccent">?accent</item>
+        <item name="colorAccent">?accent</item>
+        <item name="colorPrimary">?header_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
         <item name="toolbarIconsColor">?header_text</item>
@@ -41,7 +41,7 @@
         <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
         <item name="android:colorAccent">?accent</item>
         <item name="colorAccent">?accent</item>
-        <item name="colorPrimary">@color/toolbar_milk_background</item>
+        <item name="colorPrimary">?header_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
         <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
@@ -53,7 +53,7 @@
         <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
         <item name="android:colorAccent">?accent</item>
         <item name="colorAccent">?accent</item>
-        <item name="colorPrimary">@color/toolbar_white_background</item>
+        <item name="colorPrimary">?header_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
         <item name="toolbarIconsColor">?header_text</item>

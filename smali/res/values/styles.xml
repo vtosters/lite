@@ -30,7 +30,7 @@
         <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
         <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
         <item name="colorAccent">?header_text</item>
-        <item name="colorPrimary">@color/toolbar_blue_background</item>
+        <item name="colorPrimary">?header_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
         <item name="toolbarIconsColor">?header_text</item>
@@ -54,17 +54,17 @@
         <item name="android:textColorPrimary">@color/toolbar_milk_textColorPrimary</item>
         <item name="android:textColorSecondary">@color/toolbar_milk_textColorSecondary</item>
         <item name="colorAccent">?accent</item>
-        <item name="colorPrimary">@color/toolbar_milk_background</item>
+        <item name="colorPrimary">?header_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
         <item name="toolbarIconsColor">@color/toolbar_milk_textColorSecondary</item>
     </style>
 
     <style name="ActionBarTheme.White" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:textColorPrimary">@color/toolbar_white_textColorPrimary</item>
-        <item name="android:textColorSecondary">?header_text</item>
+        <item name="android:textColorPrimary">?header_text</item>
+        <item name="android:textColorSecondary">?header_text_secondary</item>
         <item name="colorAccent">?accent</item>
-        <item name="colorPrimary">@color/toolbar_white_background</item>
+        <item name="colorPrimary">?background_content</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
         <item name="toolbarIconsColor">?header_text</item>
@@ -78,15 +78,15 @@
     <style name="ActionButton" parent="@style/Widget.AppCompat.Light.ActionButton" />
 
     <style name="ActionButton.Blue" parent="@style/ActionButton">
-        <item name="android:tint">@color/music_action_button_blue</item>
+        <item name="android:tint">?header_text</item>
     </style>
 
     <style name="ActionButton.Gray" parent="@style/ActionButton">
-        <item name="android:tint">@color/music_action_button_gray</item>
+        <item name="android:tint">?header_text</item>
     </style>
 
     <style name="ActionButton.White" parent="@style/ActionButton">
-        <item name="android:tint">@color/music_action_button_white</item>
+        <item name="android:tint">?header_text</item>
     </style>
 
     <style name="ActionOverflowButtonStyle" parent="@style/Widget.AppCompat.ActionButton.Overflow">
@@ -2667,8 +2667,9 @@
     <style name="MusicSearch">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColorHint">@color/music_text_hint</item>
+        <item name="android:textColorHint">?header_text</item>
         <item name="android:background">@drawable/bg_modern_search</item>
+        <item name="android:backgroundTint">?background_content</item>
         <item name="android:maxLines">1</item>
     </style>
 
@@ -6339,7 +6340,7 @@
     <style name="VkIm.Theme.Search.Bg.VkApp" parent="@style/VkIm.Theme.Search.Bg">
         <item name="android:background">?background_content</item>
         <item name="android:text">@string/vkim_msg_search_hint</item>
-        <item name="android:textColor">?text_secondary</item>
+        <item name="android:textColor">?header_text</item>
     </style>
 
     <style name="VkIm.Theme.Search.Bg.VkMe" parent="@style/VkIm.Theme.Search.Bg">
@@ -6349,6 +6350,7 @@
 
     <style name="VkIm.Theme.Search.VkApp" parent="@style/VkIm.Theme.Search">
         <item name="search_bg">@drawable/bg_modern_search</item>
+        <item name="android:tint">?background_content</item>
     </style>
 
     <style name="VkIm.Theme.Search.VkMe" parent="@style/VkIm.Theme.Search">

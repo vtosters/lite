@@ -7,6 +7,7 @@
         android:orientation="horizontal"
         android:id="@id/search_box"
         android:background="@drawable/bg_modern_search"
+        android:backgroundTint="?background_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:layout_width="fill_parent"
@@ -20,12 +21,12 @@
             android:layout_height="48.0dip"
             android:src="@drawable/ic_back_24"
             android:scaleType="centerInside"
-            android:tint="?text_primary" />
+            android:tint="?header_text" />
 
         <com.vk.core.view.NoMenuEditText
             android:textSize="16.0dip"
             android:textColor="?header_text"
-            android:textColorHint="#ffaaaeb3"
+            android:textColorHint="?header_text_secondary"
             android:gravity="center_vertical"
             android:id="@id/query"
             android:background="@null"
@@ -42,7 +43,7 @@
         <TextView
             android:textSize="16.0dip"
             android:textColor="?header_text"
-            android:textColorHint="#ffaaaeb3"
+            android:textColorHint="?header_text_secondary"
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:id="@id/query_static"
