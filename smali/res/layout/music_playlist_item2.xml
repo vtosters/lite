@@ -21,7 +21,7 @@
     <TextView
         android:textSize="14.0dip"
         android:textStyle="normal"
-        android:textColor="?header_text"
+        android:textColor="?text_primary"
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:id="@id/playlist_title"

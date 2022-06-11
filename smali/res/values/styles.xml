@@ -38,14 +38,14 @@
 
     <style name="ActionBarThemeFix" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondary">?header_tint</item>
+        <item name="android:textColorSecondary">@color/white</item>
         <item name="android:selectableItemBackground">@drawable/highlight_toolbar</item>
         <item name="android:actionBarItemBackground">@drawable/highlight_icon_white_unbounded</item>
         <item name="colorAccent">@color/white</item>
         <item name="colorPrimary">@color/toolbar_blue_background</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
         <item name="titleTextAppearance">@style/ToolbarTitle</item>
-        <item name="toolbarIconsColor">?header_text</item>
+        <item name="toolbarIconsColor">@color/white</item>
     </style>
 
     <style name="ActionBarTheme.ItemsFull" parent="@style/ActionBarTheme" />
@@ -61,8 +61,8 @@
     </style>
 
     <style name="ActionBarTheme.White" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:textColorPrimary">?text_primary</item>
-        <item name="android:textColorSecondary">?text_secondary</item>
+        <item name="android:textColorPrimary">?header_text</item>
+        <item name="android:textColorSecondary">?header_text_secondary</item>
         <item name="colorAccent">?accent</item>
         <item name="colorPrimary">?background_content</item>
         <item name="layout_scrollFlags">enterAlways|scroll|snap</item>
@@ -72,13 +72,13 @@
 
     <style name="ActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
         <item name="android:textSize">18.0dip</item>
-        <item name="android:textColor">?text_primary</item>
+        <item name="android:textColor">?header_text</item>
     </style>
 
     <style name="ActionButton" parent="@style/Widget.AppCompat.Light.ActionButton" />
 
     <style name="ActionButton.Blue" parent="@style/ActionButton">
-        <item name="android:tint">?text_primary</item>
+        <item name="android:tint">?header_text</item>
     </style>
 
     <style name="ActionButton.Gray" parent="@style/ActionButton">
@@ -86,7 +86,7 @@
     </style>
 
     <style name="ActionButton.White" parent="@style/ActionButton">
-        <item name="android:tint">?text_primary</item>
+        <item name="android:tint">?header_text</item>
     </style>
 
     <style name="ActionOverflowButtonStyle" parent="@style/Widget.AppCompat.ActionButton.Overflow">
