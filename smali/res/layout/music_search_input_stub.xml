@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textColorHint="@color/music_text_hint"
+<TextView android:textColorHint="?header_text"
     android:gravity="center_vertical"
     android:paddingLeft="60.0dip"
     android:paddingRight="56.0dip"
