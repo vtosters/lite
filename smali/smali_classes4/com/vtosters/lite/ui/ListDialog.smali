@@ -142,10 +142,10 @@
 
     invoke-static {}, Lru/vtosters/lite/utils/Themes;->getBackgroundContent()I
 
-    move-result p0
+    move-result v0
 
     .line 237
-    invoke-virtual {p2, p0}, Landroid/widget/ListView;->setBackgroundColor(I)V
+    invoke-virtual {p2, v0}, Landroid/widget/ListView;->setBackgroundColor(I)V
 
     .line 238
     invoke-virtual {p2, p6}, Landroid/widget/ListView;->setDividerHeight(I)V
