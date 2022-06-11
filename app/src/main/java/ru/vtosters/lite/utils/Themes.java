@@ -200,7 +200,7 @@ public class Themes {
             boolean isUnselAccent = isAccentedColor(unsel);
             boolean isSelAccent = isAccentedColor(sel);
 
-            if (isUnselAccent || isSelAccent ) {
+            if (isUnselAccent || isSelAccent) {
 
                 return new ColorStateList(new int[][] {
                         new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
