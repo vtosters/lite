@@ -8,8 +8,8 @@ import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
-import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.roundedmsgs;
+import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 
 import android.content.Context;
@@ -18,14 +18,17 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.core.graphics.ColorUtils;
 
 import com.vk.core.d.RecoloredDrawable;
+import com.vk.core.extensions.TextViewExt;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.im.ui.themes.ImTheme;
@@ -35,9 +38,7 @@ import com.vtosters.lite.R;
 import java.util.List;
 
 public class Themes {
-    public static List<String> accentColors = asList(
-            "71AAEB", "3F8AE0", "528BCC", "4986CC", "5181B8", "74A2D6", "518BCC"
-    );
+    public static List<String> accentColors;
 
     public static void applyTheme(VKTheme theme, ImTheme imtheme) {
         VKThemeHelper.b.a(theme); // VKThemeHelper.b.a(VKTheme value) VK Theme apply
@@ -187,7 +188,6 @@ public class Themes {
     } // Recolor ColorStateList to accent color
 
     public static ColorStateList themeCSL(ColorStateList csl) {
-        int color = csl.getDefaultColor();
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
@@ -209,6 +209,16 @@ public class Themes {
             return null;
         }
     } // Recolor ColorStateList
+
+    public static void recolorTextView(TextView paramTextView, int resid, int colorid) {
+        if (resid == 0) {
+            TextViewExt.a(paramTextView, (Drawable) null);
+        } else if (colorid == 0) {
+            TextViewExt.a(paramTextView, ContextCompat.a(paramTextView.getContext(), resid));
+        } else {
+            TextViewExt.a(paramTextView, ContextCompat.a(paramTextView.getContext(), resid), themeCSL(paramTextView.getContext().getColorStateList(colorid)));
+        }
+    } // Recolor TextView
 
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
