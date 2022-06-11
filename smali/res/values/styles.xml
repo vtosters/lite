@@ -4347,7 +4347,7 @@
     </style>
 
     <style name="VKUIButton.White.BigRadius" parent="@style/VKUIButton.White">
-        <item name="android:background">@drawable/vkui_bg_button_white_big_radius</item>
+        <item name="android:background">@drawable/vkui_bg_button_white</item>
     </style>
 
     <style name="VKUIButton.WhiteTransparent15" parent="@style/VKUIButton">
