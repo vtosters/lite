@@ -574,6 +574,16 @@
         <item>system</item>
         <item>system_task</item>
     </string-array>
+    <string-array name="animations2">
+        <item>No Animation</item>
+        <item>System</item>
+        <item>System task</item>
+    </string-array>
+    <string-array name="animations_values2">
+        <item>noanim</item>
+        <item>system</item>
+        <item>system_task</item>
+    </string-array>
     <string-array name="language">
         <item>System</item>
         <item>English</item>
