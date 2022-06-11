@@ -28,8 +28,8 @@
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="noanim"
             android:dialogTitle="@string/selectfranimation"
-            android:entries="@array/animations"
-            android:entryValues="@array/animations_values"
+            android:entries="@array/animations2"
+            android:entryValues="@array/animations_values2"
             android:key="anim_rtrn_type"
             android:title="@string/franimation" />
         <com.vtosters.lite.ui.SummaryListPreference
