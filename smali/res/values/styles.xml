@@ -3419,6 +3419,9 @@
     </style>
 
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" parent="@android:style/Widget">
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:textColorPrimary">?text_primary</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
         <item name="android:textAlignment">viewStart</item>
         <item name="android:layout_alignParentStart">true</item>
     </style>
