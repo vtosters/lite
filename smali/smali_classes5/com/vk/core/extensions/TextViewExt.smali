@@ -99,10 +99,6 @@
 .method public static final a(Landroid/widget/TextView;II)V
     .locals 1
 
-    invoke-static {p0, p1, p2}, Lru/vtosters/lite/utils/Themes;->recolorTextView(Landroid/widget/TextView;II)V
-
-    return-void
-
     const-string v0, "receiver$0"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/Object;Ljava/lang/String;)V

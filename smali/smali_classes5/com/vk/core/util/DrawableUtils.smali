@@ -108,10 +108,6 @@
 .method public static a(Landroid/widget/TextView;II)V
     .locals 1
 
-    invoke-static {p0, p1, p2}, Lru/vtosters/lite/utils/Themes;->recolorTextView(Landroid/widget/TextView;II)V
-
-    return-void
-
     if-nez p1, :cond_0
 
     const/4 p1, 0x0

@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static java.util.Arrays.asList;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
@@ -18,27 +18,27 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.core.graphics.ColorUtils;
 
 import com.vk.core.d.RecoloredDrawable;
-import com.vk.core.extensions.TextViewExt;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.im.ui.themes.ImTheme;
 import com.vk.im.ui.themes.ImThemeHelper;
 import com.vtosters.lite.R;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Themes {
-    public static List<String> accentColors;
+    public static List<String> accentColors = Arrays.asList(
+            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
+    );
 
     public static void applyTheme(VKTheme theme, ImTheme imtheme) {
         VKThemeHelper.b.a(theme); // VKThemeHelper.b.a(VKTheme value) VK Theme apply
@@ -187,7 +187,12 @@ public class Themes {
         return ColorStateList.valueOf(getAccentColor());
     } // Recolor ColorStateList to accent color
 
-    public static ColorStateList themeCSL(ColorStateList csl) {
+    public static ColorStateList themeCSL(Context context, int color) {
+        if (isColorRefAccented(color) && isAndroidMonet()) {
+            return ColorStateList.valueOf(getAccentColor());
+        }
+
+        ColorStateList csl = context.getColorStateList(color);
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
@@ -195,7 +200,7 @@ public class Themes {
             boolean isUnselAccent = isAccentedColor(unsel);
             boolean isSelAccent = isAccentedColor(sel);
 
-            if (isUnselAccent || isSelAccent) {
+            if (isUnselAccent || isSelAccent ) {
 
                 return new ColorStateList(new int[][] {
                         new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
@@ -209,16 +214,6 @@ public class Themes {
             return null;
         }
     } // Recolor ColorStateList
-
-    public static void recolorTextView(TextView paramTextView, int resid, int colorid) {
-        if (resid == 0) {
-            TextViewExt.a(paramTextView, (Drawable) null);
-        } else if (colorid == 0) {
-            TextViewExt.a(paramTextView, ContextCompat.a(paramTextView.getContext(), resid));
-        } else {
-            TextViewExt.a(paramTextView, ContextCompat.a(paramTextView.getContext(), resid), themeCSL(paramTextView.getContext().getColorStateList(colorid)));
-        }
-    } // Recolor TextView
 
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
@@ -244,7 +239,7 @@ public class Themes {
     }
 
     public static boolean isAccentedColor(int target) {
-        return accentColors.contains(hex(target).toUpperCase());
+        return accentColors.contains(hex(target).toLowerCase());
     }
 
     public static int getColor(Context context, int i) {
