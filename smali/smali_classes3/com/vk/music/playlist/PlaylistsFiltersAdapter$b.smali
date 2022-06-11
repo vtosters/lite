@@ -72,6 +72,14 @@
 
     iput-object p2, p0, Lcom/vk/music/playlist/PlaylistsFiltersAdapter$b;->a:Landroid/widget/TextView;
 
+    iget-object p2, p0, Lcom/vk/music/playlist/PlaylistsFiltersAdapter$b;->a:Landroid/widget/TextView;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getBackgroundContent()I
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setBackgroundColor(I)V
+
     const-string p2, "LayoutInflater.from(cont\u2026as TextView\n            }"
 
     .line 69

@@ -207,7 +207,13 @@
 
     <style name="Base.Widget.AppCompat.ListView" parent="@android:style/Widget.Material.ListView" />
 
-    <style name="Base.Widget.AppCompat.ListView.DropDown" parent="@android:style/Widget.Material.ListView.DropDown" />
+    <style name="Base.Widget.AppCompat.ListView.DropDown" parent="@android:style/Widget.Material.ListView.DropDown">
+        <item name="android:background">?background_content</item>
+        <item name="android:textColorPrimary">?text_primary</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
+        <item name="android:colorAccent">?accent</item>
+    </style>
 
     <style name="Base.Widget.AppCompat.ListView.Menu" parent="@style/Base.Widget.AppCompat.ListView" />
 
