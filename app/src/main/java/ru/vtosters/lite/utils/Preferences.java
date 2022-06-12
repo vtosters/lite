@@ -113,8 +113,8 @@ public class Preferences {
         return getBoolValue("adsgroup", false);
     }
 
-    public static boolean olddock() {
-        return getBoolValue("olddock", false);
+    public static boolean oldicons() {
+        return getBoolValue("oldicons", false);
     }
 
     public static boolean adsslider() {

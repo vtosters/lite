@@ -170,7 +170,6 @@
     .line 31
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/vk/video/a/VideoMenuActionsBuilder;->a(IIII)V
 
-
     :cond_8
     const p1, 0x7f0a0bcf
 
