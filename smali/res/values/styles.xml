@@ -4723,6 +4723,7 @@
         <item name="toolbar_attach_background_to">@color/steel_gray_250</item>
         <item name="writebar_icon">@color/azure_300</item>
         <item name="tabbar_fix">?accent</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
     </style>
 
     <style name="Vk.Theme.client_amoled_generated" parent="@style/Vk.Theme.Dark">
@@ -4917,6 +4918,7 @@
         <item name="toolbar_attach_background_to">@color/gray_600</item>
         <item name="writebar_icon">@color/gray_400</item>
         <item name="tabbar_fix">?tabbar_background</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
     </style>
 
     <style name="Vk.Theme.client_dark_generated" parent="@style/Vk.Theme.Dark">
@@ -5111,6 +5113,7 @@
         <item name="toolbar_attach_background_to">@color/gray_600</item>
         <item name="writebar_icon">@color/gray_400</item>
         <item name="tabbar_fix">?tabbar_background</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
     </style>
 
     <style name="Vk.Theme.client_light_generated" parent="@style/Vk.Theme">
@@ -5305,6 +5308,7 @@
         <item name="toolbar_attach_background_to">@color/steel_gray_250</item>
         <item name="writebar_icon">@color/steel_gray_300</item>
         <item name="tabbar_fix">?accent</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
     </style>
 
     <style name="Vk.Theme.space_gray_generated" parent="@style/Vk.Theme">
@@ -5498,6 +5502,7 @@
         <item name="toolbar_attach_background_from">@color/gray_500</item>
         <item name="toolbar_attach_background_to">@color/gray_600</item>
         <item name="writebar_icon">@color/gray_100</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
     </style>
 
     <style name="VkAlertDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog.Alert">

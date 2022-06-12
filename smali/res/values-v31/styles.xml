@@ -13,6 +13,7 @@
         <item name="accent">@android:color/system_accent1_100</item>
         <item name="text_primary">@android:color/system_accent1_50</item>
         <item name="text_secondary">@android:color/system_neutral2_200</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
         <item name="background_content">@android:color/system_neutral1_900</item>
         <item name="background_page">@android:color/system_neutral1_800</item>
         <item name="action_sheet_action_foreground">@color/white</item>
@@ -209,6 +210,7 @@
         <item name="accent">@android:color/system_accent1_500</item>
         <item name="text_primary">@android:color/system_accent1_900</item>
         <item name="text_secondary">@android:color/system_accent2_700</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
         <item name="background_content">@android:color/system_neutral1_10</item>
         <item name="background_page">@android:color/system_neutral1_50</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -593,6 +595,7 @@
         <item name="toolbar_attach_background_to">@color/gray_600</item>
         <item name="writebar_icon">@color/gray_400</item>
         <item name="tabbar_fix">?tabbar_background</item>
+        <item name="android:textColorSecondary">?text_secondary</item>
     </style>
 
     <style name="VkIm.Theme.VkApp.Light" parent="@style/VkIm.Theme.VkApp">
