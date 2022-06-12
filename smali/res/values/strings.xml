@@ -4414,7 +4414,7 @@ May look like a fake leaving the online"</string>
     <string name="appearance_other_color_webview_summary">Color pages such as VKID in app theme</string>
 
     <string name="interface_global_old_icons">Old icons</string>
-    <string name="interface_global_old_icons_summary">Use old icons in dockbar. You should reset its setting to apply changes</string>
+    <string name="interface_global_old_icons_summary">You should reset its setting to apply changes</string>
 
     <string name="activity_what_is_it">What is it?</string>
     <string name="activity_dnr_summary">Function lets you don\'t send read message status</string>

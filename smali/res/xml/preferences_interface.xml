@@ -40,11 +40,6 @@
             android:key="dateformat"
             android:title="@string/interfaceglobaldates" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="olddock"
-            android:summary="@string/interface_global_old_icons_summary"
-            android:title="@string/interface_global_old_icons" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="shortinfo"
             android:summary="@string/interfaceglobalnumsum"

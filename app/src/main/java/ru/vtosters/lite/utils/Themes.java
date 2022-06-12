@@ -229,6 +229,13 @@ public class Themes {
         return Color.argb(Color.alpha(color), red, green, blue);
     }
 
+    public static int fixTextColor(int resid) {
+        if (resid == R.color.music_action_button_gray || resid == R.color.cool_grey || resid == R.color.accent_blue){
+            return isDarkTheme()? R.color.white : R.color.cool_grey;
+        }
+        return resid;
+    }
+
     public static int halfAlpha(int src) {
         return ColorUtils.setAlphaComponent(src, 169);
     }

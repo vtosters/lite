@@ -24,6 +24,11 @@
             android:key="systemtheme"
             android:summary="@string/appearance_theme_use_system_summary"
             android:title="@string/appearance_theme_use_system" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="oldicons"
+            android:summary="@string/interface_global_old_icons_summary"
+            android:title="@string/interface_global_old_icons" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vticon">

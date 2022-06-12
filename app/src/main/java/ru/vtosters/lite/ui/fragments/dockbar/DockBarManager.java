@@ -3,7 +3,7 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
-import static ru.vtosters.lite.utils.Preferences.olddock;
+import static ru.vtosters.lite.utils.Preferences.oldicons;
 
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
@@ -79,11 +79,11 @@ public class DockBarManager {
         File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
 
         if (!dockbar.exists()) {
-            mSelectedTabs.add(new DockBarTab("tab_news", olddock() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_discover", olddock() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class ));
-            mSelectedTabs.add(new DockBarTab("tab_messages", olddock() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_feedback", olddock() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_menu", olddock() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", oldicons() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_discover", oldicons() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class ));
+            mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_menu", oldicons() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
 
             mDisabledTabs.add(new DockBarTab("tab_friends", R.drawable.ic_user_24, R.string.friends, R.id.menu_friends, FriendsFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_groups", R.drawable.ic_users_24, R.string.groups, R.id.menu_groups, GroupsFragment.class));
