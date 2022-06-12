@@ -117,6 +117,10 @@ public class Preferences {
         return getBoolValue("oldicons", false);
     }
 
+    public static boolean vkme() {
+        return getBoolValue("vkme", false);
+    }
+
     public static boolean adsslider() {
         return getBoolValue("__dbg_no_slider_ads", false);
     }
@@ -182,7 +186,7 @@ public class Preferences {
     }
 
     public static boolean dockcounter() {
-        return getBoolValue("dockcounter", true);
+        return getBoolValue("dockcounter", true) && !vkme();
     }
 
     public static boolean feedcache() {

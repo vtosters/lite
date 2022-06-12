@@ -87,6 +87,10 @@
 
     const v0, 0x7f070062
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+
+    move-result v0
+
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p1
@@ -157,6 +161,10 @@
 
     const p2, 0x7f070062
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+
+    move-result p2
+
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p1
@@ -226,6 +234,10 @@
     move-result-object p1
 
     const p2, 0x7f070062
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+
+    move-result p2
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -299,6 +311,10 @@
     move-result-object p1
 
     const p2, 0x7f070062
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+
+    move-result p2
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 

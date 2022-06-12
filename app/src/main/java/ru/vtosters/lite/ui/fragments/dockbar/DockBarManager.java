@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.oldicons;
+import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
@@ -78,7 +79,16 @@ public class DockBarManager {
     private void load() {
         File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
 
+
+
         if (!dockbar.exists()) {
+            if(vkme()) {
+                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, SettingsListFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
+                return;
+            }
+
             mSelectedTabs.add(new DockBarTab("tab_news", oldicons() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_discover", oldicons() ? R.drawable.ic_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class ));
             mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
@@ -225,8 +235,11 @@ public class DockBarManager {
         int target = adapter.getIndexByViewType(toPosition, adapter.getItemType(toPosition));
         if (fromPosition < toPosition) {
 
-            if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu"))
-                return;
+            if(!vkme()){
+                if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu")){
+                    return;
+                }
+            }
 
             DockBarTab tab = mSelectedTabs.get(curr);
             mSelectedTabs.remove(tab);
