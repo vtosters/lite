@@ -66,7 +66,23 @@
 .end method
 
 .method public constructor <init>(IIII)V
-    .locals 1
+    .locals 5
+
+    invoke-static {p4}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p4
+
+    invoke-static {p3}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p3
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p2
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p1
 
     .line 29
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
@@ -98,6 +114,18 @@
 
 .method public constructor <init>(IILjava/lang/String;IZ)V
     .locals 1
+
+    invoke-static {p4}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p4
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p2
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->fixTextColor(I)I
+
+    move-result p1
 
     .line 41
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
