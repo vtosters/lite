@@ -10,6 +10,10 @@
         android:key="devmenu"
         android:title="@string/debug_show_settings_item" />
     <PreferenceCategory android:title="@string/debug_experimental">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vkme"
+            android:title="vkme" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="noanim"
             android:dialogTitle="@string/selectfranimation"

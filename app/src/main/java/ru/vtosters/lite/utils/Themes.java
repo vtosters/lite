@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.roundedmsgs;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
+import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 
 import android.content.Context;
@@ -309,6 +310,18 @@ public class Themes {
             return "images_with_background";
         }
         return "images";
+    }
+
+    public static int getNavigationHeight(int Default) {
+        int VKME = R.dimen.design_bottom_sheet_peek_height_min;
+
+        return vkme()? VKME : Default;
+    }
+
+    public static int getNavigationWidth(int Default) {
+        int VKME = R.dimen.app_minimumsize_h;
+
+        return vkme()? VKME : Default;
     }
 
     public static void systemThemeChanger() {

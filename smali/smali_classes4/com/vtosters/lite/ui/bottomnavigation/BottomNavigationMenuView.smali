@@ -127,6 +127,10 @@
 
     const p2, 0x7f07005b
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->getNavigationWidth(I)I
+
+    move-result p2
+
     .line 57
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -136,6 +140,10 @@
 
     const p2, 0x7f07005c
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->getNavigationWidth(I)I
+
+    move-result p2
+
     .line 58
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -144,6 +152,10 @@
     iput p2, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->d:I
 
     const p2, 0x7f070062
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+
+    move-result p2
 
     .line 59
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
