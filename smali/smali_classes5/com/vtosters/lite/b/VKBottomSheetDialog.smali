@@ -296,13 +296,7 @@
     .line 256
     iget-object p1, p0, Lcom/vtosters/lite/b/VKBottomSheetDialog;->t:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x7f060278
-
-    invoke-static {v1, v2}, Landroid/support/v4/content/ContextCompat;->c(Landroid/content/Context;I)I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getBackgroundContent()I
 
     move-result v1
 
