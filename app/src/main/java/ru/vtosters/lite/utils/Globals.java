@@ -32,6 +32,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import com.vk.navigation.Navigator;
 import com.vtosters.lite.UserProfile;
 import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
@@ -148,6 +149,17 @@ public class Globals {
 
         Runtime.getRuntime().exit(0);
     } // Application restart (works on sdk 29+ too)
+
+    public static void restartApplicationInto(Class Class) {
+        Context ctx = getContext();
+        PackageManager pm = ctx.getPackageManager();
+
+        Intent intent = new Navigator(Class).a(ctx);
+        Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
+        ctx.startActivity(mainIntent);
+
+        Runtime.getRuntime().exit(0);
+    }
 
     @NonNull
     public static Context getContext() {
