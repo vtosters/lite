@@ -24,6 +24,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -149,6 +150,15 @@ public class Globals {
 
         Runtime.getRuntime().exit(0);
     } // Application restart (works on sdk 29+ too)
+
+    public static void restartApplicationWithTimer() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                restartApplication();
+            }
+        }, 500);
+    }
 
     public static void restartApplicationInto(Class Class) {
         Context ctx = getContext();
