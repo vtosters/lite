@@ -47,7 +47,9 @@ public class Preferences {
         migrate();
         reloadMessagesList();
         registerActivities(application);
-        LoadLibrary("vkopustest");
+        if(dev()){
+            LoadLibrary("vkopustest");
+        }
         systemThemeChanger();
     } // VK Init
 

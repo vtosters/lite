@@ -13,6 +13,7 @@ import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
+import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
@@ -175,6 +176,9 @@ public class Newsfeed {
     }
 
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
+        if (vkme()) {
+            return MAX_VALUE;
+        }
         switch (getPrefsValue("newsupdate")) {
             case "no_update":
                 return MAX_VALUE;
@@ -186,6 +190,9 @@ public class Newsfeed {
     }
 
     public static Class getStartFragment() {
+        if (vkme()) {
+            return DialogsFragment.class;
+        }
         switch (getPrefsValue("start_values")) {
             case "newsfeed":
                 return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
