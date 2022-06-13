@@ -344,6 +344,10 @@ public class Preferences {
         return getBoolValue("vkme_msg", false);
     }
 
+    public static boolean vkme_notifs() {
+        return getBoolValue("vkme_notifs", false);
+    }
+
     public static boolean roundedmsgs() {
         return getBoolValue("roundedmsgs", false);
     }

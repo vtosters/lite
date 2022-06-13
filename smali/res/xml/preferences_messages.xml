@@ -10,11 +10,23 @@
             android:defaultValue="false"
             android:key="roundedmsgs"
             android:title="@string/roundedmsgs" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="VK Me">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="vkme"
             android:summary="@string/vkmesumm"
             android:title="@string/vkme" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vkme_msg"
+            android:title="@string/debug_experimental_vk_me_mode" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vkme_notifs"
+            android:summary="vkme_notifs"
+            android:title="vkme_notifs" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
