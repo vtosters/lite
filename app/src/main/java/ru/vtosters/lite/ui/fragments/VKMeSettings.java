@@ -9,8 +9,14 @@ import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
+import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+import static ru.vtosters.lite.utils.Themes.applyTheme;
+import static ru.vtosters.lite.utils.Themes.getDarkTheme;
+import static ru.vtosters.lite.utils.Themes.getImDarkTheme;
+import static ru.vtosters.lite.utils.Themes.getImLightTheme;
+import static ru.vtosters.lite.utils.Themes.getLightTheme;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +24,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import com.vk.about.AboutAppFragment;
+import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
@@ -56,6 +63,31 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             Intent a2 = new Navigator(MultiAccountFragment.class).a(context);
             context.startActivity(a2);
             return false;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", "Темная тема", "", "ic_palette_24", false, (preference, o) -> {
+            boolean value = (boolean) o;
+
+            if(value){
+                applyTheme(getLightTheme(), getImLightTheme());
+            } else {
+                applyTheme(getDarkTheme(), getImDarkTheme());
+            }
+
+            edit().putBoolean("isdark", value).commit();
+
+            VKThemeHelper.a(this.p());
+
+            restartApplicationWithTimer();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", getString("appearance_theme_use_system"), getString("appearance_theme_use_system_summary"), "ic_recent_24", true, (preference, o) -> {
+            boolean value = (boolean) o;
+
+            edit().putBoolean("systemtheme", value).commit();
+
+            return true;
         });
 
         if (!isGmsInstalled()) {
