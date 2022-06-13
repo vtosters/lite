@@ -4580,6 +4580,9 @@ May look like a fake leaving the online"</string>
     <string name="franimation">Fragment animation (beta)</string>
     <string name="selectfranimation">Select fragment animation</string>
 
+    <string name="vkme">VK Me mode</string>
+    <string name="vkmesumm">Replacing the dock and some elements with something similar as in VK Me</string>
+
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />
     <item type="string" name="APKTOOL_DUMMY_10c0" />

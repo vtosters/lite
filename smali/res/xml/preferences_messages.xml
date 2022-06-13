@@ -10,6 +10,11 @@
             android:defaultValue="false"
             android:key="roundedmsgs"
             android:title="@string/roundedmsgs" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vkme"
+            android:summary="@string/vkmesumm"
+            android:title="@string/vkme" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">

@@ -19,7 +19,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         a("newfeed").a(new restart());
-        a("vkme").a(new restart());
     }
 
     public boolean restart(Preference preference, Object obj) {

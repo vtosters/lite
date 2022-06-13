@@ -49,11 +49,6 @@
             android:key="shortpost"
             android:summary="@string/interfaceglobalpostsum"
             android:title="@string/interfaceglobalpost" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="vkme"
-            android:summary="Замена докбара и некоторых элементов на что-то похожее как в VK Me"
-            android:title="Режим VK Me" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
