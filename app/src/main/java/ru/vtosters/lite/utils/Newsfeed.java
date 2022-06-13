@@ -13,6 +13,7 @@ import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
+import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.apps.AppsFragment;
@@ -28,7 +29,6 @@ import com.vk.notifications.NotificationsContainerFragment;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
-import com.vtosters.lite.fragments.SettingsListFragment;
 import com.vtosters.lite.fragments.d.DocumentsViewFragment;
 import com.vtosters.lite.fragments.f.FriendsFragment;
 import com.vtosters.lite.fragments.g.BirthdaysFragment;
@@ -209,7 +209,7 @@ public class Newsfeed {
             case "videos":
                 return VideosFragment.class;
             case "settings":
-                return SettingsListFragment.class;
+                return useNewSettings();
             case "apps":
                 return AppsFragment.class;
             case "discover":

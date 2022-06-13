@@ -20,11 +20,6 @@
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="systemtheme"
-            android:summary="@string/appearance_theme_use_system_summary"
-            android:title="@string/appearance_theme_use_system" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="oldicons"
             android:summary="@string/interface_global_old_icons_summary"
