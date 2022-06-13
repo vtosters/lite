@@ -1,7 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
-import android.os.Bundle;
+import static ru.vtosters.lite.utils.Globals.getString;
 
+import android.os.Bundle;
+import android.support.v7.preference.Preference;
+
+import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
@@ -10,5 +14,25 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     public void b(Bundle bundle) {
         super.b(bundle);
         a(R.xml.preferences_messages);
+        prefs();
+    }
+
+    private void prefs() {
+        a("vkme").a(new MessagesFragment.restart());
+    }
+
+    public boolean restart(Preference preference, Object obj) {
+        ToastUtils.a(getString("restartapp"));
+        return true;
+    }
+
+    public class restart implements Preference.b {
+        restart() {
+        }
+
+        @Override // android.support.v7.preference.Preference.b
+        public boolean a(Preference preference, Object obj) {
+            return MessagesFragment.this.restart(preference, obj);
+        }
     }
 }

@@ -4446,5 +4446,8 @@
     <string name="franimation">Анимация фрагментов (бета)</string>
     <string name="selectfranimation">Выберите анимацию фрагментов</string>
 
+    <string name="vkme">Режим VK Me</string>
+    <string name="vkmesumm">Замена докбара и некоторых элементов на что-то похожее как в VK Me</string>
+
     <string name="empty_text" />
 </resources>
