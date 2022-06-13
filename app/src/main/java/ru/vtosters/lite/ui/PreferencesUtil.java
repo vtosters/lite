@@ -118,6 +118,19 @@ public class PreferencesUtil {
         fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
+    public static void addPreferenceDrawable(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, @Nullable Drawable icon, Preference.c listener) {
+        Preference preference = new Preference(getContext());
+        preference.b(summary); // setSummary
+        preference.c(title); // setTitle
+        preference.d(key); // setKey
+
+        if (icon != null)
+            preference.a(icon); // preference.setIcon
+        preference.a(listener); // preference.setOnPreferenceClickListener(listener)
+
+        fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
+    }
+
     public static void addPreferenceCategory(MaterialPreferenceToolbarFragment fragment, CharSequence title) {
         PreferenceCategory preference = new PreferenceCategory(getContext(), null);
         preference.c(title); // setTitle

@@ -46,7 +46,7 @@ public class MultiAccountManager {
         return prefs != null ? prefs.length : 0;
     }
 
-    private static String withRegex(String base, String regex, String def) {
+    public static String withRegex(String base, String regex, String def) {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(base);
         if (matcher.find()) {
