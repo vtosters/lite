@@ -85,9 +85,7 @@
 
     invoke-static {v0}, Lcom/vtosters/lite/fragments/SettingsListFragment;->b(Lcom/vtosters/lite/fragments/SettingsListFragment;)V
 
-    const-string v0, "\u041f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435!"
-
-    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->restartApplicationWithTimer()V
 
     return-void
 .end method

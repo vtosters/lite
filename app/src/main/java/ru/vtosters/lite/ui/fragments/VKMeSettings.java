@@ -8,7 +8,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserId;
-import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Themes.applyTheme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
@@ -19,7 +19,6 @@ import static ru.vtosters.lite.utils.Themes.getLightTheme;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 
 import com.vk.about.AboutAppFragment;
 import com.vk.core.ui.themes.VKThemeHelper;
@@ -40,7 +39,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
         String keyVKAccount = getCurrentAccount().getString("key_vk_account", "");
         String avatarUrl = withRegex(keyVKAccount, ".*\"photo\":\\{.*?:\"(.*?)\"\\}.*", "https://vk.com/images/camera_200.png").replace("\\/", "/");
         String name = withRegex(keyVKAccount, ".*\"name\":\\{.*?:\"(.*?)\"\\}.*", "");
-        String id = "id" + Integer.toString(getUserId());
+        String id = "@id" + Integer.toString(getUserId());
         int vtosterXml = getIdentifier("empty", "xml");
         this.a(vtosterXml);
 
@@ -64,26 +63,20 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
 
             VKThemeHelper.a(this.p());
 
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    restartApplication();
-                }
-            }, 500);
-
+            restartApplicationWithTimer();
             return true;
         });
 
         PreferencesUtil.addPreferenceCategory(this, getString("notification_settings"));
 
-        PreferencesUtil.addPreference(this, "", getString("vtlmessages"), "", "ic_message_28", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlmessages"), "", "ic_message_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MessagesFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), "", "ic_write_28", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), "", "ic_write_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ActivityFragment.class).a(context);
             context.startActivity(a2);
