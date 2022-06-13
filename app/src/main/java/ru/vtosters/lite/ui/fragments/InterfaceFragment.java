@@ -18,7 +18,8 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        a("newfeed").a(new a());
+        a("newfeed").a(new restart());
+        a("vkme").a(new restart());
     }
 
     public boolean restart(Preference preference, Object obj) {
@@ -26,8 +27,8 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         return true;
     }
 
-    public class a implements Preference.b {
-        a() {
+    public class restart implements Preference.b {
+        restart() {
         }
 
         @Override // android.support.v7.preference.Preference.b

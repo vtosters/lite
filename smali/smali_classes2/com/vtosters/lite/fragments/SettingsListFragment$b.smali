@@ -835,6 +835,12 @@
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme()Z
+
+    move-result v5
+
+    if-nez v5, :cond_228
+
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
     const v6, 0x7f0803bc
@@ -867,6 +873,7 @@
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    :cond_228
     new-instance v5, Lcom/vtosters/lite/fragments/SettingsListFragment$a;
 
     const v6, 0x7f08067b
