@@ -4474,7 +4474,7 @@ May look like a fake leaving the online"</string>
     <string name="debug_experimental_page_stats">Page stats</string>
     <string name="debug_experimental_page_stats_summary">VK Devs seems to have stopped sending info</string>
     <string name="debug_experimental_vk_sans_font">VK Sans font</string>
-    <string name="debug_experimental_vk_me_mode">VK Me MSG mode</string>
+    <string name="debug_experimental_vk_me_mode">VK Me dialogs mode</string>
     <string name="debug_experimental_libverify">libverify support</string>
     <string name="debug_experimental_libverify_summary">Turning on may fix 2fa login</string>
     <string name="debug_experimental_opusmodule">Opus Module</string>

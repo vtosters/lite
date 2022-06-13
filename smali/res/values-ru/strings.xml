@@ -4348,7 +4348,7 @@
     <string name="debug_experimental_page_stats">Статистика страницы</string>
     <string name="debug_experimental_page_stats_summary">Вкшники вроде перестали отдавать инфу</string>
     <string name="debug_experimental_vk_sans_font">Шрифт VK Sans</string>
-    <string name="debug_experimental_vk_me_mode">Режим VK Me MSG</string>
+    <string name="debug_experimental_vk_me_mode">Режим VK Me для диалогов</string>
     <string name="debug_experimental_libverify">Поддержка libverify</string>
     <string name="debug_experimental_libverify_summary">Включение может пофиксить 2фа вход</string>
     <string name="debug_experimental_opusmodule">Модуль Opus</string>

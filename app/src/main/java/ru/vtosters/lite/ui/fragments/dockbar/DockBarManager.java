@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.oldicons;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
@@ -79,11 +80,10 @@ public class DockBarManager {
     private void load() {
         File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
 
-
-
         if (!dockbar.exists()) {
             if(vkme()) {
                 mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, SettingsListFragment.class));
+                if(vkme_notifs()) mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
                 return;
