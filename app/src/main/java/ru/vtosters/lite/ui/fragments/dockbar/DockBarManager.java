@@ -46,6 +46,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import ru.vtosters.lite.ui.fragments.VKMeSettings;
+
 public class DockBarManager {
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
@@ -82,7 +84,7 @@ public class DockBarManager {
 
         if (!dockbar.exists()) {
             if(vkme()) {
-                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, SettingsListFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, VKMeSettings.class));
                 if(vkme_notifs()) mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));

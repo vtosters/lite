@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static androidx.core.content.ContextCompat.getDrawable;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 
@@ -13,10 +14,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
@@ -30,7 +38,10 @@ import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
+import java.io.InputStream;
 import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -90,6 +101,41 @@ public class Globals {
 
     public static UserProfile fromEup(ExtendedUserProfile extendedUserProfile) {
         return extendedUserProfile.a;
+    }
+
+    @SuppressWarnings("deprecation")
+    public static Drawable drawableFromUrl(String url) {
+        try {
+            URL aryURI = new URL(url);
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+            URLConnection conn = aryURI.openConnection();
+            InputStream is = conn.getInputStream();
+            Bitmap bmp = BitmapFactory.decodeStream(is);
+
+            return new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(getBitmapClippedCircle(bmp), convertDpToPixel(48), convertDpToPixel(48), true));
+        } catch (Exception e) {
+            return getDrawable(getContext(), com.vtosters.lite.R.drawable.libverify_ic_account_circle_white);
+        }
+    }
+
+    public static Bitmap getBitmapClippedCircle(Bitmap bitmap) {
+        final int width = bitmap.getWidth();
+        final int height = bitmap.getHeight();
+        final Bitmap outputBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+
+        final Path path = new Path();
+        path.addCircle(
+                (float)(width / 2)
+                , (float)(height / 2)
+                , (float) Math.min(width, (height / 2))
+                , Path.Direction.CCW);
+
+        final Canvas canvas = new Canvas(outputBitmap);
+        canvas.clipPath(path);
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        return outputBitmap;
     }
 
     public static void restartApplication() {
