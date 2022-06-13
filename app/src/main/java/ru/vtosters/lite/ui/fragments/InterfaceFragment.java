@@ -1,11 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 
-import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
@@ -19,10 +18,14 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         a("newfeed").a(new restart());
+        a("dateformat").a(new restart());
+        a("stories").a(new restart());
+        a("swipe").a(new restart());
+        a("dockcounter").a(new restart());
     }
 
     public boolean restart(Preference preference, Object obj) {
-        ToastUtils.a(getString("restartapp"));
+        restartApplicationWithTimer();
         return true;
     }
 
