@@ -3,18 +3,29 @@ package ru.vtosters.lite.ui.fragments;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.getCurrentAccount;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.withRegex;
 import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
+import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserId;
+import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.Preferences.devmenu;
+import static ru.vtosters.lite.utils.Themes.applyTheme;
+import static ru.vtosters.lite.utils.Themes.getDarkTheme;
+import static ru.vtosters.lite.utils.Themes.getImDarkTheme;
+import static ru.vtosters.lite.utils.Themes.getImLightTheme;
+import static ru.vtosters.lite.utils.Themes.getLightTheme;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.vk.about.AboutAppFragment;
+import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.fragments.SettingsDebugFragment;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
@@ -40,6 +51,29 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
+        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", "Темная тема", "", "ic_palette_24", false, (preference, o) -> {
+            boolean value = (boolean) o;
+
+            if(value){
+                applyTheme(getLightTheme(), getImLightTheme());
+            } else {
+                applyTheme(getDarkTheme(), getImDarkTheme());
+            }
+
+            edit().putBoolean("isdark", value).commit();
+
+            VKThemeHelper.a(this.p());
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    restartApplication();
+                }
+            }, 500);
+
+            return true;
+        });
+
         PreferencesUtil.addPreferenceCategory(this, getString("notification_settings"));
 
         PreferencesUtil.addPreference(this, "", getString("vtlmessages"), "", "ic_message_28", preference -> {
@@ -49,16 +83,16 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), "", "ic_message_28", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), "", "ic_write_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ActivityFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), "", "ic_write_28", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlthemes"), "", "ic_palette_24", preference -> {
             Context context = getContext();
-            Intent a2 = new Navigator(ActivityFragment.class).a(context);
+            Intent a2 = new Navigator(ThemesFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
@@ -99,6 +133,14 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             context.startActivity(a2);
             return false;
         });
+
+        if(devmenu())
+            PreferencesUtil.addPreference(this, "", getString("sett_debug"), "", "ic_bug_24", preference -> {
+                Context context = getContext();
+                Intent a2 = new Navigator(SettingsDebugFragment.class).a(context);
+                context.startActivity(a2);
+                return false;
+            });
 
     }
 
