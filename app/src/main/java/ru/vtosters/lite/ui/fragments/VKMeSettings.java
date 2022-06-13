@@ -42,7 +42,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreferenceCategory(this, getString("notification_settings"));
 
-        PreferencesUtil.addPreference(this, "", getString("vtlmessages"), "", "ic_write_28", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlmessages"), "", "ic_message_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MessagesFragment.class).a(context);
             context.startActivity(a2);
