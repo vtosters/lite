@@ -33,7 +33,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import ru.vtosters.lite.ui.fragments.VKMeSettings;
+import ru.vtosters.lite.ui.fragments.VTSettings;
 
 public class Preferences {
     public static SharedPreferences preferences = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
@@ -148,7 +148,7 @@ public class Preferences {
 
     public static Class useNewSettings() {
         boolean bool = getBoolValue("useNewSettings", true);
-        return bool? VKMeSettings.class : SettingsListFragment.class;
+        return bool? VTSettings.class : SettingsListFragment.class;
     }
 
     public static boolean VKUI_INJ() {

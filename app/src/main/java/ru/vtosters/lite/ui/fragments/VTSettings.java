@@ -17,14 +17,15 @@ import static ru.vtosters.lite.utils.Themes.getDarkTheme;
 import static ru.vtosters.lite.utils.Themes.getImDarkTheme;
 import static ru.vtosters.lite.utils.Themes.getImLightTheme;
 import static ru.vtosters.lite.utils.Themes.getLightTheme;
+import static ru.vtosters.lite.utils.Themes.setTheme;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.vk.about.AboutAppFragment;
-import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
@@ -45,7 +46,7 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 
-public class VKMeSettings extends MaterialPreferenceToolbarFragment {
+public class VTSettings extends MaterialPreferenceToolbarFragment {
 
     @Override
     public void b(Bundle bundle) {
@@ -54,7 +55,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
         String keyVKAccount = getCurrentAccount().getString("key_vk_account", "");
         String avatarUrl = withRegex(keyVKAccount, ".*\"photo\":\\{.*?:\"(.*?)\"\\}.*", "https://vk.com/images/camera_200.png").replace("\\/", "/");
         String name = withRegex(keyVKAccount, ".*\"name\":\\{.*?:\"(.*?)\"\\}.*", "");
-        String id = "@id" + Integer.toString(getUserId());
+        String id = "@id" + getUserId();
         int vtosterXml = getIdentifier("empty", "xml");
         this.a(vtosterXml);
 
@@ -65,7 +66,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", "Темная тема", "", "ic_palette_24", false, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", getString("vtsettdarktheme"), "", "ic_palette_24", false, (preference, o) -> {
             boolean value = (boolean) o;
 
             if(value){
@@ -76,19 +77,21 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
 
             edit().putBoolean("isdark", value).commit();
 
-            VKThemeHelper.a(this.p());
+            setTheme(this.p());
 
             restartApplicationWithTimer();
             return true;
         });
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", getString("appearance_theme_use_system"), getString("appearance_theme_use_system_summary"), "ic_recent_24", true, (preference, o) -> {
-            boolean value = (boolean) o;
+        if (Build.VERSION.SDK_INT >= 29) {
+            PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", getString("appearance_theme_use_system"), getString("appearance_theme_use_system_summary"), "ic_recent_24", true, (preference, o) -> {
+                boolean value = (boolean) o;
 
-            edit().putBoolean("systemtheme", value).commit();
+                edit().putBoolean("systemtheme", value).commit();
 
-            return true;
-        });
+                return true;
+            });
+        }
 
         if (!isGmsInstalled()) {
             PreferencesUtil.addPreference(this, "", getString("installgms"), "", "ic_alert", preference -> {
@@ -116,7 +119,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        PreferencesUtil.addPreferenceCategory(this, "Аккаунт");
+        PreferencesUtil.addPreferenceCategory(this, getString("vtsettaccount"));
 
         PreferencesUtil.addPreference(this, "", getString("vkconnect"), "", "ic_tags_24", preference -> {
             Context context = getContext();
@@ -194,7 +197,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        PreferencesUtil.addPreferenceCategory(this, "Настройки модификации");
+        PreferencesUtil.addPreferenceCategory(this,  getString("vtsettmod"));
 
         if (!vkme()) {
             PreferencesUtil.addPreference(this, "", getString("vtlfeed"), "", "ic_newsfeed_24", preference -> {
@@ -268,7 +271,7 @@ public class VKMeSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, "О модификации");
+        PreferencesUtil.addPreferenceCategory(this, getString("vtsettaboutmod"));
 
         PreferencesUtil.addPreference(this, "", getString("menu_about"), "", "ic_about_24", preference -> {
             Context context = getContext();

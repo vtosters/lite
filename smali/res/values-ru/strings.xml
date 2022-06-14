@@ -4449,5 +4449,10 @@
     <string name="vkme">Режим VK Me</string>
     <string name="vkmesumm">Замена докбара и некоторых элементов на что-то похожее как в VK Me</string>
 
+    <string name="vtsettaccount">Аккаунт</string>
+    <string name="vtsettdarktheme">Темная тема</string>
+    <string name="vtsettaboutmod">О модификации</string>
+    <string name="vtsettmod">Настройки мода</string>
+
     <string name="empty_text" />
 </resources>
