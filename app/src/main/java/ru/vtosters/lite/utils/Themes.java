@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
@@ -325,11 +326,15 @@ public class Themes {
     }
 
     public static void systemThemeChanger() {
-        if (isDarkTheme()){
+        Boolean isDarkTheme = isDarkTheme();
+
+        if (isDarkTheme){
             applyTheme(getDarkTheme(), getImDarkTheme());
         } else {
             applyTheme(getLightTheme(), getImLightTheme());
         }
+
+        edit().putBoolean("isdark", isDarkTheme).commit();
 
         if (!systemtheme()) return;
 
@@ -337,12 +342,15 @@ public class Themes {
         switch (currentNightMode) {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
                 applyTheme(getLightTheme(), getImLightTheme());
+                edit().putBoolean("isdark", !isDarkTheme).commit();
                 break;
             case Configuration.UI_MODE_NIGHT_NO:
                 applyTheme(getLightTheme(), getImLightTheme());
+                edit().putBoolean("isdark", !isDarkTheme).commit();
                 break;
             case Configuration.UI_MODE_NIGHT_YES:
                 applyTheme(getDarkTheme(), getImDarkTheme());
+                edit().putBoolean("isdark", isDarkTheme).commit();
                 break;
         }
     }
