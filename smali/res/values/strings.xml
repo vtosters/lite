@@ -4583,6 +4583,12 @@ May look like a fake leaving the online"</string>
     <string name="vkme">VK Me mode</string>
     <string name="vkmesumm">Replacing the dock and some elements with something similar as in VK Me</string>
 
+    <string name="vtsettaccount">Account</string>
+    <string name="vtsettdarktheme">Dark theme</string>
+    <string name="vtsettaboutmod">About modification</string>
+    <string name="vtsettmod">Mod settings</string>
+
+
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />
     <item type="string" name="APKTOOL_DUMMY_10c0" />

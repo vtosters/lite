@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static com.vk.im.ui.themes.ImTheme.*;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
@@ -13,6 +14,7 @@ import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
@@ -46,6 +48,9 @@ public class Themes {
         ImThemeHelper.b.a(imtheme); // ImThemeHelper.b.a(ImTheme value) VK Theme Msg apply
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
+    public static void setTheme(Activity activity) {
+        VKThemeHelper.a(activity); // apply changed theme
+    }
     public static boolean isDarkTheme() {
         return !VKThemeHelper.d();
     }
@@ -128,9 +133,9 @@ public class Themes {
     public static ImTheme getImDarkTheme() {
         switch (getPrefsValue("darktheme")) {
             case "amoled":
-                return roundedmsgs() ? ImTheme.VKME_AMOLED : ImTheme.VKAPP_AMOLED;
+                return roundedmsgs() ? VKME_AMOLED : VKAPP_AMOLED;
             default:
-                return roundedmsgs() ? ImTheme.VKME_DARK : ImTheme.VKAPP_DARK;
+                return roundedmsgs() ? VKME_DARK : VKAPP_DARK;
         }
     } // Return needed theme for theme changer
 
@@ -144,7 +149,7 @@ public class Themes {
     public static ImTheme getImLightTheme() {
         switch (getPrefsValue("lighttheme")) {
             default:
-                return roundedmsgs() ? ImTheme.VKME_LIGHT : ImTheme.VKAPP_LIGHT;
+                return roundedmsgs() ? VKME_LIGHT : VKAPP_LIGHT;
         }
     } // Return needed theme for theme changer
 
@@ -312,6 +317,7 @@ public class Themes {
         }
         return "images";
     }
+
 
     public static int getNavigationHeight(int Default) {
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;
