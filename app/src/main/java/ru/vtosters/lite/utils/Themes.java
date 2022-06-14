@@ -326,7 +326,7 @@ public class Themes {
     }
 
     public static void systemThemeChanger() {
-        Boolean isDarkTheme = isDarkTheme();
+        boolean isDarkTheme = isDarkTheme();
 
         if (isDarkTheme){
             applyTheme(getDarkTheme(), getImDarkTheme());
@@ -334,23 +334,21 @@ public class Themes {
             applyTheme(getLightTheme(), getImLightTheme());
         }
 
-        edit().putBoolean("isdark", isDarkTheme).commit();
-
-        if (!systemtheme()) return;
+        if (!systemtheme()){
+            edit().putBoolean("isdark", isDarkTheme).commit();
+            return;
+        }
 
         int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         switch (currentNightMode) {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
-                applyTheme(getLightTheme(), getImLightTheme());
-                edit().putBoolean("isdark", !isDarkTheme).commit();
-                break;
             case Configuration.UI_MODE_NIGHT_NO:
+                edit().putBoolean("isdark", false).commit();
                 applyTheme(getLightTheme(), getImLightTheme());
-                edit().putBoolean("isdark", !isDarkTheme).commit();
                 break;
             case Configuration.UI_MODE_NIGHT_YES:
+                edit().putBoolean("isdark", true).commit();
                 applyTheme(getDarkTheme(), getImDarkTheme());
-                edit().putBoolean("isdark", isDarkTheme).commit();
                 break;
         }
     }
