@@ -1504,7 +1504,7 @@
         <item name="header_alternate_tab_active_indicator">@color/gray_100</item>
         <item name="header_alternate_tab_active_text">@color/gray_100</item>
         <item name="header_alternate_tab_inactive_text">@color/gray_500</item>
-        <item name="header_background">@color/gray_900</item>
+        <item name="header_background">@color/black</item>
         <item name="header_background_before_blur">@color/black</item>
         <item name="header_background_before_blur_alternate">@color/black</item>
         <item name="header_search_field_background">@color/gray_700</item>
@@ -1689,7 +1689,7 @@
         <item name="stories_skeleton_loader_background">@color/gray_700</item>
         <item name="switch_ios_off_border">@color/black</item>
         <item name="tabbar_active_icon">@color/white</item>
-        <item name="tabbar_background">@color/gray_900</item>
+        <item name="tabbar_background">@color/black</item>
         <item name="tabbar_inactive_icon">@color/gray_500</item>
         <item name="text_action_counter">@color/gray_300</item>
         <item name="text_link">@color/sky_300</item>
@@ -4803,7 +4803,7 @@
         <item name="header_alternate_tab_active_indicator">@color/gray_100</item>
         <item name="header_alternate_tab_active_text">@color/gray_100</item>
         <item name="header_alternate_tab_inactive_text">@color/gray_500</item>
-        <item name="header_background">@color/gray_900</item>
+        <item name="header_background">@color/black</item>
         <item name="header_background_before_blur">@color/gray_950</item>
         <item name="header_background_before_blur_alternate">@color/gray_950</item>
         <item name="header_search_field_background">@color/gray_700</item>
@@ -4902,7 +4902,7 @@
         <item name="stories_skeleton_loader_background">@color/gray_700</item>
         <item name="switch_ios_off_border">@color/black</item>
         <item name="tabbar_active_icon">@color/white</item>
-        <item name="tabbar_background">@color/gray_900</item>
+        <item name="tabbar_background">@color/black</item>
         <item name="tabbar_inactive_icon">@color/gray_500</item>
         <item name="text_action_counter">@color/gray_300</item>
         <item name="text_link">@color/sky_300</item>
@@ -7500,7 +7500,7 @@
         <item name="header_alternate_tab_active_indicator">@color/gray_100</item>
         <item name="header_alternate_tab_active_text">@color/gray_100</item>
         <item name="header_alternate_tab_inactive_text">@color/gray_500</item>
-        <item name="header_background">@color/gray_900</item>
+        <item name="header_background">@color/black</item>
         <item name="header_background_before_blur">@color/gray_950</item>
         <item name="header_background_before_blur_alternate">@color/gray_950</item>
         <item name="header_search_field_background">@color/gray_700</item>
@@ -7681,7 +7681,7 @@
         <item name="stories_skeleton_loader_background">@color/gray_700</item>
         <item name="switch_ios_off_border">@color/gray_800</item>
         <item name="tabbar_active_icon">@color/white</item>
-        <item name="tabbar_background">@color/gray_900</item>
+        <item name="tabbar_background">@color/black</item>
         <item name="tabbar_inactive_icon">@color/gray_500</item>
         <item name="text_action_counter">@color/gray_300</item>
         <item name="text_link">@color/sky_300</item>

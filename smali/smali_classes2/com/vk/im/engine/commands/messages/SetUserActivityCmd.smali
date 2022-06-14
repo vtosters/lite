@@ -41,7 +41,7 @@
 
 
 # instance fields
-.field private final b:I
+.field public final b:I
 
 .field private final c:Lcom/vk/im/engine/models/typing/ComposingType;
 

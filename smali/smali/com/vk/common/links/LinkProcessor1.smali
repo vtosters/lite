@@ -3610,6 +3610,10 @@
 
     const-class v2, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+
+    move-result-object v2
+
     invoke-direct {v0, v2, v12}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->c(Landroid/content/Context;)V
@@ -4669,6 +4673,10 @@
     new-instance v8, Lcom/vk/navigation/Navigator;
 
     const-class v0, Lcom/vtosters/lite/fragments/SettingsListFragment;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+
+    move-result-object v0
 
     invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 

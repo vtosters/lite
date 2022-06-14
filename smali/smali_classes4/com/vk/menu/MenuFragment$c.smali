@@ -217,6 +217,10 @@
 
     const-class v2, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+
+    move-result-object v2
+
     invoke-direct {p2, v1, v2}, Lcom/vk/menu/MenuFragment$c;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v2

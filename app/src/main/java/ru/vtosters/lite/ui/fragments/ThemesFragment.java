@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.Globals.componentSwitcher;
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
@@ -34,14 +35,15 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         a("iconvk").a(new a());
-        a("darktheme").a(new b());
-        a("lighttheme").a(new b());
+        a("darktheme").a(new restart());
+        a("lighttheme").a(new restart());
+        a("navbar").a(new restart());
     }
 
-    public static class b implements Preference.b {
+    public static class restart implements Preference.b {
         @Override // android.support.v7.preference.Preference.b
         public boolean a(Preference preference, Object obj) {
-            ToastUtils.a(getString("restartapp"));
+            restartApplicationWithTimer();
             return true;
         }
     }
