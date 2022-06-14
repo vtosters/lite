@@ -1,16 +1,29 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
+import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
+import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.getAccountPrefsCount;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.getCurrentAccount;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.withRegex;
+import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.workingAccounts;
+import static ru.vtosters.lite.utils.About.getBuildNumber;
+import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
+import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
+import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
+import static ru.vtosters.lite.utils.Preferences.navbar;
+import static ru.vtosters.lite.utils.Preferences.offline;
+import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Themes.applyTheme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
@@ -25,6 +38,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
+import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
@@ -43,6 +57,7 @@ import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscri
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
+import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 
@@ -56,15 +71,41 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         String avatarUrl = withRegex(keyVKAccount, ".*\"photo\":\\{.*?:\"(.*?)\"\\}.*", "https://vk.com/images/camera_200.png").replace("\\/", "/");
         String name = withRegex(keyVKAccount, ".*\"name\":\\{.*?:\"(.*?)\"\\}.*", "");
         String id = "@id" + getUserId();
+
+        String feedsumm = getValAsString("vtlfeedsumm", ads());
+        String docksumm = getDocksumm();
+        String musicsumm = getValAsString("vtlmusicsumm", isIntegrationEnabled());
+        String msgsumm = getValAsString("vtlmsgsumm", vkme());
+        String activitysumm = getValAsString("vtlactivitysumm", !offline());
+        String themessumm = getValAsString("vtlthemessumm", navbar());
+        String tgssumm = getTGSsumm();
+        String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
+        String proxysumm = getValAsString("vtlproxysumm", !getPrefsValue("proxy").equals("noproxy"));
+        String othersumm = getValAsString("vtlothersumm", vtverif());
+        String multiaccsumm = getMultiAccsumm();
+        String ssfs = getSSFSsumm();
+        String about = "Commit: " + getBuildNumber();
+
         int vtosterXml = getIdentifier("empty", "xml");
         this.a(vtosterXml);
 
-        PreferencesUtil.addPreferenceDrawable(this, "", name, id, drawableFromUrl(avatarUrl), preference -> {
-            Context context = getContext();
-            Intent a2 = new Navigator(MultiAccountFragment.class).a(context);
-            context.startActivity(a2);
-            return false;
-        });
+        if (vkme()) {
+            PreferencesUtil.addPreferenceDrawable(this, "", name, id, drawableFromUrl(avatarUrl), preference -> {
+                Context context = getContext();
+                Intent a2 = new Navigator(MultiAccountFragment.class).a(context);
+                context.startActivity(a2);
+                return false;
+            });
+        } else {
+            PreferencesUtil.addPreference(this, "", getString("accounts"), multiaccsumm, "ic_user_24", preference -> {
+                Context context = getContext();
+                Intent a2 = new Navigator(MultiAccountFragment.class).a(context);
+                context.startActivity(a2);
+                return false;
+            });
+
+            PreferencesUtil.addPreferenceCategory(this, getString("vtsettdarktheme"));
+        }
 
         PreferencesUtil.addMaterialSwitchPreference(this, "isdark", getString("vtsettdarktheme"), "", "ic_palette_24", false, (preference, o) -> {
             boolean value = (boolean) o;
@@ -149,7 +190,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtssfs"), "", "ic_link_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtssfs"), ssfs, "ic_link_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SSFS.class).a(context);
             context.startActivity(a2);
@@ -200,21 +241,21 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         PreferencesUtil.addPreferenceCategory(this,  getString("vtsettmod"));
 
         if (!vkme()) {
-            PreferencesUtil.addPreference(this, "", getString("vtlfeed"), "", "ic_newsfeed_24", preference -> {
+            PreferencesUtil.addPreference(this, "", getString("vtlfeed"), feedsumm, "ic_newsfeed_24", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(FeedFragment.class).a(context);
                 context.startActivity(a2);
                 return false;
             });
 
-            PreferencesUtil.addPreference(this, "", getString("dockbar_editor"), "", "ic_list_24", preference -> {
+            PreferencesUtil.addPreference(this, "", getString("dockbar_editor"), docksumm, "ic_list_24", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(DockBarFragment.class).a(context);
                 context.startActivity(a2);
                 return false;
             });
 
-            PreferencesUtil.addPreference(this, "", getString("vtlmusic"), "", "ic_music_24", preference -> {
+            PreferencesUtil.addPreference(this, "", getString("vtlmusic"), musicsumm, "ic_music_24", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(MusicFragment.class).a(context);
                 context.startActivity(a2);
@@ -222,49 +263,49 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        PreferencesUtil.addPreference(this, "", getString("vtlmessages"), "", "ic_message_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlmessages"), msgsumm, "ic_message_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MessagesFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), "", "ic_write_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlactivity"), activitysumm, "ic_write_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ActivityFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlthemes"), "", "ic_palette_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlthemes"), themessumm, "ic_palette_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ThemesFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtltgs"), "", "ic_telegram", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtltgs"), tgssumm, "ic_telegram", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(StickersFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlinterface"), "", "ic_interface", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlinterface"), interfacesumm, "ic_interface", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(InterfaceFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlproxy"), "", "ic_globe_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlproxy"), proxysumm, "ic_globe_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ProxySettingsFragment.class).a(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtlother"), "", "ic_more_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtlother"), othersumm, "ic_more_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(OtherFragment.class).a(context);
             context.startActivity(a2);
@@ -273,10 +314,15 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreferenceCategory(this, getString("vtsettaboutmod"));
 
-        PreferencesUtil.addPreference(this, "", getString("menu_about"), "", "ic_about_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("menu_about"), about, "ic_about_24", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(AboutAppFragment.class).a(context);
             context.startActivity(a2);
+            return false;
+        });
+
+        PreferencesUtil.addPreference(this, "", getString("opencommit"), "", "ic_link_24", preference -> {
+            getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(getCommitLink())));
             return false;
         });
 
@@ -294,7 +340,42 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest")));
             return false;
         });
+    }
 
+    public static String getValAsString(String stringid, Boolean value) {
+        if(disableSettingsSumms()) return "";
+
+        if (value){
+            return getString(stringid) + ": " + getString("vtlsettenabled");
+        }
+
+        return getString(stringid) + ": " + getString("vtlsettdisabled");
+    }
+
+    public static String getSSFSsumm() {
+        if(disableSettingsSumms()) return "";
+
+        if(hasSpecialVerif()) return getString("vtlssfssumm") + ": " + getString("vtlsettverifyes");
+
+        return getString("vtlssfssumm") + ": " + getString("vtlsettverifno");
+    }
+
+    public static String getDocksumm() {
+        if(disableSettingsSumms()) return "";
+
+        return getString("vtldocksumm") + ": " + DockBarManager.getInstance().getTabCount();
+    }
+
+    public static String getTGSsumm() {
+        if(disableSettingsSumms()) return "";
+
+        return getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(getContext()).getPacksListReference().size();
+    }
+
+    public static String getMultiAccsumm() {
+        if(disableSettingsSumms() || getAccountPrefsCount() <= 1) return "";
+
+        return getString("vtlmultiaccsumm") + ": " + workingAccounts();
     }
 
     @Override

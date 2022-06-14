@@ -200,7 +200,6 @@ public class Proxy {
         return getPrefsValue("proxy").equals("apiproxy");
     }
 
-
     public static boolean proxyvk() {
         return getBoolValue("proxyvk", false);
     } // Official vk proxy enforcer

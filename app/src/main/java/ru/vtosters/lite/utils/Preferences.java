@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.os.Build.VERSION;
+import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
@@ -364,6 +365,10 @@ public class Preferences {
         return getBoolValue("disableanimstickers", true);
     }
 
+    public static boolean disableSettingsSumms() {
+        return getBoolValue("disableSettingsSumms", false);
+    }
+
     public static boolean donaterecomm() {
         return getBoolValue("donaterecomm", false);
     }
@@ -383,6 +388,11 @@ public class Preferences {
     public static boolean hasVerification() {
         return isVerified(getUserId());
     }
+
+    public static boolean hasSpecialVerif() {
+        return hasPrometheus(getUserId());
+    }
+
 
     public static String getLocale() {
         String string = getPrefsValue("lang_value");
