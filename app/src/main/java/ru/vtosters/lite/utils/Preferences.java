@@ -27,10 +27,13 @@ import android.util.Log;
 import com.vk.core.util.Screen;
 import com.vk.im.engine.models.users.UserSex;
 import com.vtosters.lite.data.Users;
+import com.vtosters.lite.fragments.SettingsListFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import ru.vtosters.lite.ui.fragments.VKMeSettings;
 
 public class Preferences {
     public static SharedPreferences preferences = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
@@ -141,6 +144,11 @@ public class Preferences {
 
     public static boolean awayphp() {
         return getBoolValue("awayphp", true);
+    }
+
+    public static Class useNewSettings() {
+        boolean bool = getBoolValue("useNewSettings", true);
+        return bool? VKMeSettings.class : SettingsListFragment.class;
     }
 
     public static boolean VKUI_INJ() {

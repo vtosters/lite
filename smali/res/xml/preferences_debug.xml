@@ -65,6 +65,10 @@
             android:defaultValue="true"
             android:key="disableanimstickers"
             android:title="Disable anim stickers + suggestions" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="useNewSettings"
+            android:title="Use New Settings" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_developer_functions">
         <com.vtosters.lite.ui.MaterialSwitchPreference

@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.oldicons;
+import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
@@ -20,7 +21,6 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
-import com.vtosters.lite.fragments.SettingsListFragment;
 import com.vtosters.lite.fragments.d.DocumentsViewFragment;
 import com.vtosters.lite.fragments.f.FriendsFragment;
 import com.vtosters.lite.fragments.g.BirthdaysFragment;
@@ -45,8 +45,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import ru.vtosters.lite.ui.fragments.VKMeSettings;
 
 public class DockBarManager {
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
@@ -84,7 +82,7 @@ public class DockBarManager {
 
         if (!dockbar.exists()) {
             if(vkme()) {
-                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, VKMeSettings.class));
+                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
                 if(vkme_notifs()) mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_menu_notifications_28 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_menu_messages_28 : R.drawable.ic_message_28_outline, R.string.messages, R.id.tab_messages, DialogsFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
@@ -110,7 +108,7 @@ public class DockBarManager {
             mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, SettingsListFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
             mDisabledTabs.add(new DockBarTab("tab_brtd", R.drawable.ic_menu_birthdays, R.string.birthdays_title, R.id.menu_birthdays, BirthdaysFragment.class));
 
         } else {
