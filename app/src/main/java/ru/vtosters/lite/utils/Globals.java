@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import static androidx.core.content.ContextCompat.getDrawable;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
+import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 
 import android.app.Activity;
 import android.app.Application;
@@ -321,6 +322,8 @@ public class Globals {
         configuration.locale = locale;
         configuration.setLayoutDirection(locale);
         resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+
+        edit().putBoolean("isdark", isDarkTheme()).commit();
 
         return context;
     } // Language changer and BaseContext injector
