@@ -4454,5 +4454,26 @@
     <string name="vtsettaboutmod">О модификации</string>
     <string name="vtsettmod">Настройки мода</string>
 
+    <string name="vtlsettenabled">Включено</string>
+    <string name="vtlsettdisabled">Отключено</string>
+
+    <string name="vtlsettverifno">Нет</string>
+    <string name="vtlsettverifyes">Да</string>
+
+    <string name="vtlfeedsumm">Блокировать рекламу</string>
+    <string name="vtldocksumm">Докбар элементов</string>
+    <string name="vtlmusicsumm">VKX интеграция</string>
+    <string name="vtlmsgsumm">Режим VK Me</string>
+    <string name="vtlactivitysumm">Офлайн режим</string>
+    <string name="vtlthemessumm">Покраска навбара</string>
+    <string name="vtltgssumm">Установлено паков</string>
+    <string name="vtlinterfacesumm">Округление чисел</string>
+    <string name="vtlproxysumm">Проксирование</string>
+    <string name="vtlothersumm">Отображение верификаций</string>
+    <string name="vtlmultiaccsumm">Доступно аккаунтов</string>
+    <string name="vtlhidesumm">Скрыть подписи в настройках</string>
+
+    <string name="vtlssfssumm">Имеется Огонь прометея</string>
+
     <string name="empty_text" />
 </resources>

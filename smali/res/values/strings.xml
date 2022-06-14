@@ -4588,6 +4588,26 @@ May look like a fake leaving the online"</string>
     <string name="vtsettaboutmod">About modification</string>
     <string name="vtsettmod">Mod settings</string>
 
+    <string name="vtlsettenabled">enabled</string>
+    <string name="vtlsettdisabled">disabled</string>
+
+    <string name="vtlsettverifno">No</string>
+    <string name="vtlsettverifyes">Yes</string>
+
+    <string name="vtlfeedsumm">Block ads</string>
+    <string name="vtldocksumm">Dockbar elements</string>
+    <string name="vtlmusicsumm">VKX Integration</string>
+    <string name="vtlmsgsumm">VK Me mode</string>
+    <string name="vtlactivitysumm">Offline mode</string>
+    <string name="vtlthemessumm">Navbar coloring</string>
+    <string name="vtltgssumm">Installed packs</string>
+    <string name="vtlinterfacesumm">Round numbers</string>
+    <string name="vtlproxysumm">Proxy</string>
+    <string name="vtlothersumm">Show verifications</string>
+    <string name="vtlmultiaccsumm">Available accounts</string>
+    <string name="vtlhidesumm">Hide settings summaries</string>
+
+    <string name="vtlssfssumm">Have Prometheus verif</string>
 
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />

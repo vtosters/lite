@@ -38,7 +38,7 @@ public class MultiAccountManager {
         return getContext().getSharedPreferences("pref_account_manager" + (account != 0 ? account : ""), Context.MODE_PRIVATE);
     }
 
-    private static int getAccountPrefsCount() {
+    public static int getAccountPrefsCount() {
         File[] prefs = new File(getContext().getFilesDir().getParent(), "shared_prefs")
                 .listFiles((dir, name) -> {
                     return name.matches("pref_account_manager\\d+\\.xml");
@@ -57,7 +57,7 @@ public class MultiAccountManager {
 
     public static List<MultiAccountItem> buildList() {
         List<MultiAccountItem> list = new ArrayList<>();
-        for (int i = 0; i <= getAccountPrefsCount(); i++) {
+        for (int i = 0; i <= workingAccounts(); i++) {
             SharedPreferences prefs = getContext().getSharedPreferences("pref_account_manager" + i, Context.MODE_PRIVATE);
             String keyVKAccount = prefs.getString("key_vk_account", "");
             if (!keyVKAccount.isEmpty()) {
@@ -72,6 +72,18 @@ public class MultiAccountManager {
         return list;
     }
 
+    public static int workingAccounts() {
+        int count = 0;
+        for (int i = 0; i <= getAccountPrefsCount(); i++) {
+            SharedPreferences prefs = getContext().getSharedPreferences("pref_account_manager" + i, Context.MODE_PRIVATE);
+            String keyVKAccount = prefs.getString("key_vk_account", "");
+            if (!keyVKAccount.isEmpty()) {
+                ++count;
+            }
+        }
+        return count;
+    }
+
     public static boolean switchAccount(int i) {
         int account = getPreferences().getInt("account", 0);
         if (account == i) return false;
@@ -81,7 +93,7 @@ public class MultiAccountManager {
     }
 
     public static void addAccount() {
-        getPreferences().edit().putInt("account", getAccountPrefsCount()).commit();
+        getPreferences().edit().putInt("account", workingAccounts()).commit();
     }
 
     public static void deleteAccount(int i) {
@@ -90,7 +102,7 @@ public class MultiAccountManager {
         prefs.edit().clear().commit();
         File file = new File(new File(getContext().getFilesDir().getParent(), "shared_prefs"), "pref_account_manager" + i);
         if (file.exists()) file.delete();
-        if (account == i && getAccountPrefsCount() > 0) {
+        if (account == i && workingAccounts() > 0) {
             List<MultiAccountItem> accounts = buildList();
             if (accounts.size() > 0)
                 switchAccount(buildList().get(0).index);

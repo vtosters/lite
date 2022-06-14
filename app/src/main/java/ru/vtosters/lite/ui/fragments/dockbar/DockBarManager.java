@@ -309,6 +309,10 @@ public class DockBarManager {
         return mSelectedTabs.get(getIndexByViewType(pos, 1));
     }
 
+    public int getTabCount() {
+        return mSelectedTabs.size();
+    }
+
     public DockBarTab getDisabledTab(int pos) {
         return mDisabledTabs.get(getIndexByViewType(pos, 2));
     }

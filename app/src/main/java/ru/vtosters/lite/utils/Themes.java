@@ -318,7 +318,6 @@ public class Themes {
         return "images";
     }
 
-
     public static int getNavigationHeight(int Default) {
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;
 
