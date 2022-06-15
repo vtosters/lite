@@ -25,6 +25,7 @@ import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.Themes.applyTheme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
 import static ru.vtosters.lite.utils.Themes.getImDarkTheme;
@@ -34,6 +35,7 @@ import static ru.vtosters.lite.utils.Themes.setTheme;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -54,6 +56,8 @@ import com.vtosters.lite.fragments.SettingsDebugFragment;
 import com.vtosters.lite.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.fragments.k.BlacklistFragment;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
+
+import java.security.NoSuchAlgorithmException;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -337,20 +341,26 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, getString("updates"));
+        try {
+            if (validateAppSignature()) {
+                PreferencesUtil.addPreferenceCategory(this, getString("updates"));
 
-        PreferencesUtil.addPreference(this, "", getString("checkforupdates"), "", "ic_download_24", preference -> {
-            OTADialog.checkUpdates(p());
-            return false;
-        });
+                PreferencesUtil.addPreference(this, "", getString("checkforupdates"), "", "ic_download_24", preference -> {
+                    OTADialog.checkUpdates(p());
+                    return false;
+                });
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "checkupdates", getString("checkupdates"), "", "ic_recent_24", true, (preference, o) -> {
-            boolean value = (boolean) o;
+                PreferencesUtil.addMaterialSwitchPreference(this, "checkupdates", getString("checkupdates"), "", "ic_recent_24", true, (preference, o) -> {
+                    boolean value = (boolean) o;
 
-            edit().putBoolean("checkupdates", value).commit();
+                    edit().putBoolean("checkupdates", value).commit();
 
-            return true;
-        });
+                    return true;
+                });
+            }
+        } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
 
     public static String getValAsString(String stringid, Boolean value) {
