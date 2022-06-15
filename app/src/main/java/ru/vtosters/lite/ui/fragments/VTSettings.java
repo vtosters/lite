@@ -56,6 +56,7 @@ import com.vtosters.lite.fragments.k.BlacklistFragment;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
@@ -336,10 +337,19 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("download_latest_vtl"), "", "ic_download_24", preference -> {
-//            getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest")));
+        PreferencesUtil.addPreferenceCategory(this, getString("updates"));
+
+        PreferencesUtil.addPreference(this, "", getString("checkforupdates"), "", "ic_download_24", preference -> {
             OTADialog.checkUpdates(p());
             return false;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "checkupdates", getString("checkupdates"), "", "ic_recent_24", true, (preference, o) -> {
+            boolean value = (boolean) o;
+
+            edit().putBoolean("checkupdates", value).commit();
+
+            return true;
         });
     }
 

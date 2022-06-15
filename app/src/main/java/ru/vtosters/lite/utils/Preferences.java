@@ -361,6 +361,10 @@ public class Preferences {
         return getBoolValue("roundedmsgs", false);
     }
 
+    public static boolean checkupdates() {
+        return getBoolValue("checkupdates", true);
+    }
+
     public static boolean disableanimstickers() {
         return getBoolValue("disableanimstickers", true);
     }
