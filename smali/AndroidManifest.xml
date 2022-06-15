@@ -75,6 +75,7 @@
         <meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="false"/>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
         <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/cornflower_blue"/>
+        <activity android:name="ru.vtosters.lite.ui.activities.APKInstallActivity" />
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.vtosters.lite.MainActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>

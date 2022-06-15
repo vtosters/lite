@@ -1,16 +1,19 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
+import android.text.Html;
 import android.widget.Toast;
 
 import com.vk.core.dialogs.VKProgressDialog;
 
+import ru.vtosters.lite.downloaders.OTADownloader;
+import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
+import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.OTAHelper;
 
 public class OTADialog implements OTAHelper.OTAListener {
 
     private Activity mActivity;
-    private VKProgressDialog mProgressDialog;
 
     private OTAHelper mHelper;
 
@@ -21,11 +24,6 @@ public class OTADialog implements OTAHelper.OTAListener {
     public OTADialog(Activity activity) {
         mActivity = activity;
 
-        mProgressDialog = new VKProgressDialog(activity);
-        mProgressDialog.setTitle("Проверка обновлений...");
-        mProgressDialog.setCancelable(false);
-        mProgressDialog.show();
-
         mHelper = new OTAHelper(this);
         mHelper.loadData();
     }
@@ -34,7 +32,12 @@ public class OTADialog implements OTAHelper.OTAListener {
     public void onUpdateApplied() {
         mActivity.runOnUiThread(() -> {
             Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
-            mProgressDialog.dismiss();
+            new ModalBottomSheetWrapper(mActivity)
+                    .setUpdateInfoView(mHelper.getNewVersionName(), mHelper.getUpdateDescription())
+                    .setPositiveButton("Обновить", () -> {
+                        OTADownloader.downloadBuild(mHelper.getDownloadUrl());
+                    })
+                    .show();
         });
     }
 
@@ -42,7 +45,6 @@ public class OTADialog implements OTAHelper.OTAListener {
     public void onUpdateCanceled() {
         mActivity.runOnUiThread(() -> {
             Toast.makeText(mActivity, "Обновлений не найдено", Toast.LENGTH_SHORT).show();
-            mProgressDialog.dismiss();
         });
     }
 }
