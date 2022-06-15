@@ -566,11 +566,7 @@
 
     .line 65
     :cond_0
-    invoke-static {p0}, Lru/vtosters/lite/ui/dialogs/Start;->alert(Landroid/app/Activity;)V
-
-    invoke-static {p0}, Lru/vtosters/lite/ui/dialogs/InstallGMS;->alert(Landroid/app/Activity;)V
-
-    invoke-static {p0}, Lru/vtosters/lite/ui/dialogs/DisableBattery;->alert(Landroid/app/Activity;)V
+    invoke-static {p0}, Lru/vtosters/lite/utils/Globals;->MainActivityInit(Landroid/app/Activity;)V
 
     invoke-virtual {p0}, Lcom/vtosters/lite/MainActivity;->getWindow()Landroid/view/Window;
 

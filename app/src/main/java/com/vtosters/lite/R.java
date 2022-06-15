@@ -15007,7 +15007,7 @@ public final class R {
         public static final int dockbar_save = 0x7f11123b;
         public static final int dockbar_selected_items = 0x7f11123c;
         public static final int dockbar_unselected_items = 0x7f11123d;
-        public static final int download_latest_vtl = 0x7f11123e;
+        public static final int checkforupdates = 0x7f11123e;
         public static final int other_fix_dynamic_colors = 0x7f11123f;
         public static final int other_reset_settings = 0x7f111240;
         public static final int other_reset_settings_summary = 0x7f111241;
