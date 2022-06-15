@@ -4463,7 +4463,7 @@ May look like a fake leaving the online"</string>
 
     <string name="add_another_account">Add new account</string>
 
-    <string name="download_latest_vtl">Download latest version</string>
+    <string name="checkforupdates">Check for updates</string>
 
     <string name="debug_warning">Warning!</string>
     <string name="debug_warning_summary">These options are for testing this app only. If you are a regular user, please, don\'t use them</string>
@@ -4608,6 +4608,9 @@ May look like a fake leaving the online"</string>
     <string name="vtlhidesumm">Hide settings summaries</string>
 
     <string name="vtlssfssumm">Have access</string>
+    <string name="checkupdates">Auto updates</string>
+    <string name="updates">Updates</string>
+
 
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />

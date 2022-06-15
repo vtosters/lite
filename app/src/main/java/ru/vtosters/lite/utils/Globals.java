@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static androidx.core.content.ContextCompat.getDrawable;
+import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
@@ -49,12 +50,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import ru.vtosters.lite.ui.dialogs.DisableBattery;
+import ru.vtosters.lite.ui.dialogs.InstallGMS;
+import ru.vtosters.lite.ui.dialogs.Start;
+import ru.vtosters.lite.ui.dialogs.OTADialog;
+
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
 
     public static SharedPreferences getDefprefs() {
         if (preferences == null) preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         return preferences;
+    }
+
+    public static void MainActivityInit(Activity activity) {
+        if(checkupdates())
+            OTADialog.checkUpdates(activity);
+        Start.alert(activity);
+        InstallGMS.alert(activity);
+        DisableBattery.alert(activity);
     }
 
     public static void componentSwitcher(String component, Boolean enabled) {
