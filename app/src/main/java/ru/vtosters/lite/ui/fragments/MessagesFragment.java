@@ -18,6 +18,10 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         a("vkme").a(new MessagesFragment.restart());
+        a("vkme_notifs").a(new MessagesFragment.restart());
+        a("isBGStickersEnabled").a(new MessagesFragment.restart());
+        a("roundedmsgs").a(new MessagesFragment.restart());
+        a("systememoji").a(new MessagesFragment.restart());
     }
 
     public boolean restart(Preference preference, Object obj) {

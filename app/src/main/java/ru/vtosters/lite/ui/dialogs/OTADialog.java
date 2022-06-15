@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import static ru.vtosters.lite.utils.Globals.getString;
+
 import android.app.Activity;
 
 import ru.vtosters.lite.downloaders.OTADownloader;
@@ -29,7 +31,7 @@ public class OTADialog implements OTAHelper.OTAListener {
             // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             new ModalBottomSheetWrapper(mActivity)
                     .setUpdateInfoView(mHelper.getNewVersionName(), mHelper.getUpdateDescription())
-                    .setPositiveButton("Обновить", () -> {
+                    .setPositiveButton(getString("updateanddownload"), () -> {
                         OTADownloader.downloadBuild(mHelper.getDownloadUrl());
                     })
                     .show();
