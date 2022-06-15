@@ -46,6 +46,7 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLConnection;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -63,7 +64,7 @@ public class Globals {
         return preferences;
     }
 
-    public static void MainActivityInit(Activity activity) {
+    public static void MainActivityInit(Activity activity) throws PackageManager.NameNotFoundException, NoSuchAlgorithmException{
         if(checkupdates())
             OTADialog.checkUpdates(activity);
         Start.alert(activity);

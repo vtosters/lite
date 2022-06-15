@@ -16,12 +16,14 @@ import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
 import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
+import static ru.vtosters.lite.utils.SignatureChecker.*;
 import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -30,6 +32,7 @@ import com.vk.im.engine.models.users.UserSex;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -361,8 +364,8 @@ public class Preferences {
         return getBoolValue("roundedmsgs", false);
     }
 
-    public static boolean checkupdates() {
-        return getBoolValue("checkupdates", true);
+    public static boolean checkupdates() throws PackageManager.NameNotFoundException, NoSuchAlgorithmException{
+        return getBoolValue("checkupdates", true) && validateAppSignature();
     }
 
     public static boolean disableanimstickers() {
