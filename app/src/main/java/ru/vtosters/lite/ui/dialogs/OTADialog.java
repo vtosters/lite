@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
-import android.widget.Toast;
 
 import ru.vtosters.lite.downloaders.OTADownloader;
 import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
@@ -27,7 +26,7 @@ public class OTADialog implements OTAHelper.OTAListener {
     @Override
     public void onUpdateApplied() {
         mActivity.runOnUiThread(() -> {
-            Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             new ModalBottomSheetWrapper(mActivity)
                     .setUpdateInfoView(mHelper.getNewVersionName(), mHelper.getUpdateDescription())
                     .setPositiveButton("Обновить", () -> {
@@ -40,7 +39,7 @@ public class OTADialog implements OTAHelper.OTAListener {
     @Override
     public void onUpdateCanceled() {
         mActivity.runOnUiThread(() -> {
-            Toast.makeText(mActivity, "Обновлений не найдено", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(mActivity, "Обновлений не найдено", Toast.LENGTH_SHORT).show();
         });
     }
 }
