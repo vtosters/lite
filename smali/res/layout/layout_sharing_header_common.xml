@@ -14,7 +14,7 @@
 
         <com.vtosters.lite.ui.BadooTextView
             android:textSize="16.0dip"
-            android:textColor="@color/dark_grey"
+            android:textColor="?text_primary"
             android:id="@id/sharing_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
 
         <TextView
             android:textSize="14.0dip"
-            android:textColor="@color/cool_grey"
+            android:textColor="?text_secondary"
             android:ellipsize="end"
             android:id="@id/sharing_subtitle"
             android:visibility="gone"
@@ -39,7 +39,7 @@
         android:layout_width="48.0dip"
         android:layout_height="48.0dip"
         android:layout_marginRight="4.0dip"
-        android:tint="@color/cool_grey"
+        android:tint="?text_primary"
         android:contentDescription="@string/search"
         android:layout_marginEnd="4.0dip"
         app:srcCompat="@drawable/ic_search_24"
@@ -53,7 +53,7 @@
         android:layout_height="48.0dip"
         android:src="@drawable/ic_settings_24"
         android:scaleType="center"
-        android:tint="@color/gray_300"
+        android:tint="?text_primary"
         android:contentDescription="@string/menu_settings"
         android:layout_marginEnd="4.0dip"
         style="@style/Widget.AppCompat.ActionButton" />

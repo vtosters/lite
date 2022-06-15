@@ -254,6 +254,14 @@
 
     iput-object p1, p0, Lcom/vk/sharing/view/SharingView;->l:Landroid/view/View;
 
+    iget-object p1, p0, Lcom/vk/sharing/view/SharingView;->l:Landroid/view/View;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
     const/16 p1, 0x200
 
     .line 269
@@ -341,6 +349,14 @@
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/sharing/view/SharingView;->p:Landroid/widget/TextView;
+
+    iget-object p1, p0, Lcom/vk/sharing/view/SharingView;->p:Landroid/widget/TextView;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     const p1, 0x7f0a09ea
 
@@ -504,6 +520,12 @@
 
     move-result-object p1
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
     check-cast p1, Lcom/vk/sharing/view/SharingActionsView;
 
     iput-object p1, p0, Lcom/vk/sharing/view/SharingView;->H:Lcom/vk/sharing/view/SharingActionsView;
@@ -527,6 +549,14 @@
     check-cast p1, Landroid/widget/LinearLayout;
 
     iput-object p1, p0, Lcom/vk/sharing/view/SharingView;->I:Landroid/widget/LinearLayout;
+
+    iget-object p1, p0, Lcom/vk/sharing/view/SharingView;->I:Landroid/widget/LinearLayout;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
     .line 370
     new-instance p1, Lcom/vk/sharing/view/SharingView$16;
@@ -2209,6 +2239,14 @@
 
     iput-object v0, p0, Lcom/vk/sharing/view/SharingView;->O:Landroid/view/View;
 
+    iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->O:Landroid/view/View;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
     .line 711
     iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->O:Landroid/view/View;
 
@@ -2244,6 +2282,14 @@
 
     iput-object v0, p0, Lcom/vk/sharing/view/SharingView;->P:Landroid/view/View;
 
+    iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->P:Landroid/view/View;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
     .line 719
     iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->P:Landroid/view/View;
 
@@ -2278,6 +2324,14 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/sharing/view/SharingView;->Q:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->Q:Landroid/view/View;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
     .line 727
     iget-object v0, p0, Lcom/vk/sharing/view/SharingView;->Q:Landroid/view/View;
