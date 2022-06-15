@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView android:textSize="16.0sp"
-    android:textColor="@color/muted_black"
+    android:textColor="?text_primary"
     android:ellipsize="marquee"
     android:gravity="center|left"
     android:id="@android:id/text1"
