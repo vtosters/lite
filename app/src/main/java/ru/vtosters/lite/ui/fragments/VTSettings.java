@@ -337,7 +337,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         });
 
         PreferencesUtil.addPreference(this, "", getString("download_latest_vtl"), "", "ic_download_24", preference -> {
-            getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest")));
+//            getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest")));
+            OTADialog.checkUpdates(p());
             return false;
         });
     }
