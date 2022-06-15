@@ -124,7 +124,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (Build.VERSION.SDK_INT >= 29) {
+        if (Build.VERSION.SDK_INT >= 28) {
             PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", getString("appearance_theme_use_system"), getString("appearance_theme_use_system_summary"), "ic_recent_24", true, (preference, o) -> {
                 boolean value = (boolean) o;
 

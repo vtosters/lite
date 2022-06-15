@@ -4607,7 +4607,7 @@ May look like a fake leaving the online"</string>
     <string name="vtlmultiaccsumm">Available accounts</string>
     <string name="vtlhidesumm">Hide settings summaries</string>
 
-    <string name="vtlssfssumm">Have Prometheus verif</string>
+    <string name="vtlssfssumm">Have access</string>
 
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />

@@ -80,7 +80,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return getBoolValue("systemtheme", true);
+        return getBoolValue("systemtheme", true) && VERSION.SDK_INT >= 28;
     }
 
     public static boolean authorsrecomm() {

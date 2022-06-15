@@ -4473,7 +4473,7 @@
     <string name="vtlmultiaccsumm">Доступно аккаунтов</string>
     <string name="vtlhidesumm">Скрыть подписи в настройках</string>
 
-    <string name="vtlssfssumm">Имеется Огонь прометея</string>
+    <string name="vtlssfssumm">Есть доступ</string>
 
     <string name="empty_text" />
 </resources>
