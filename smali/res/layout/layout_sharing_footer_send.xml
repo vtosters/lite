@@ -33,7 +33,7 @@
 
         <com.vtosters.lite.ui.BadooTextView
             android:textSize="16.0dip"
-            android:textColor="@color/sharing_blue_btn_text"
+            android:textColor="@color/cool_blue"
             android:gravity="center"
             android:id="@android:id/text1"
             android:duplicateParentState="true"

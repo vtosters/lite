@@ -369,6 +369,12 @@
 
     iput-object p1, p0, Lcom/vk/sharing/view/SharingView;->q:Landroid/widget/TextView;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getSTextAttr()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
     .line 283
     new-instance p1, Lcom/vk/sharing/view/SharingView$1;
 
