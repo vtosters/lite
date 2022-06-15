@@ -1,14 +1,10 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
-import android.text.Html;
 import android.widget.Toast;
-
-import com.vk.core.dialogs.VKProgressDialog;
 
 import ru.vtosters.lite.downloaders.OTADownloader;
 import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
-import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.OTAHelper;
 
 public class OTADialog implements OTAHelper.OTAListener {
