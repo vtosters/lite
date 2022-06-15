@@ -16,7 +16,7 @@
 
     <TextView
         android:textSize="14.0sp"
-        android:textColor="#ff528bcc"
+        android:textColor="?accent"
         android:gravity="center|right"
         android:id="@id/tv_reset"
         android:background="@drawable/picker_white_ripple_bounded"
