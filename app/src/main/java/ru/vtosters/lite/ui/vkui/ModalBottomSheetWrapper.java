@@ -1,9 +1,9 @@
 package ru.vtosters.lite.ui.vkui;
 
+import static ru.vtosters.lite.utils.Globals.getString;
+
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.Typeface;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,7 +33,7 @@ public class ModalBottomSheetWrapper {
 
         container.setOrientation(LinearLayout.VERTICAL);
 
-        title.setText("Новая версия " + version);
+        title.setText(getString("newversion") + " " + version);
         title.setTypeface(title.getTypeface(), Typeface.BOLD);
         title.setSingleLine(true);
         title.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -42,7 +42,7 @@ public class ModalBottomSheetWrapper {
         container.addView(title, new LinearLayout.LayoutParams(-1, -2));
 
         changelogView.setPadding(0, Globals.convertDpToPixel(8), 0, 0);
-        changelogView.setText("Изменения: \n" + changelog);
+        changelogView.setText(getString("changelog") + ": \n" + changelog);
         changelogView.setTextColor(Themes.getTextAttr());
         container.addView(changelogView, new LinearLayout.LayoutParams(-1, -2));
 

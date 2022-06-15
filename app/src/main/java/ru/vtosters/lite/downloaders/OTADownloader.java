@@ -1,5 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
+import static ru.vtosters.lite.utils.Globals.getString;
+
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -46,7 +48,7 @@ public class OTADownloader {
                     File apk = maxIndex == -1 ? new File(downloadDir, "VTLite.apk") : new File(downloadDir, "VTLite-" + maxIndex + ".apk");
                     APKInstallActivity.installOta(context, FileUtils.h(apk));
                 } else if (status == DownloadManager.STATUS_FAILED) {
-                    // do something
+                    Globals.sendToast(getString("downloaderr"));
                 }
             }
         }
@@ -54,7 +56,6 @@ public class OTADownloader {
 
     public static void downloadBuild(String url) {
         var context = Globals.getContext();
-        url = "https://github.com/vtosters/lite/releases/download/v0.2.9-beta2/VTLite.apk";
         var uri = Uri.parse(url);
 
         context.registerReceiver(callback, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));

@@ -4611,6 +4611,11 @@ May look like a fake leaving the online"</string>
     <string name="checkupdates">Auto updates</string>
     <string name="updates">Updates</string>
 
+    <string name="vkme_notifs">Back notification tab to dock</string>
+    <string name="updateanddownload">Update</string>
+    <string name="newversion">New version</string>
+    <string name="changelog">Changelog</string>
+    <string name="downloaderr">Download error</string>
 
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />

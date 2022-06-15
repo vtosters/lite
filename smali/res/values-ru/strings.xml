@@ -4477,5 +4477,11 @@
     <string name="checkupdates">Авто обновления</string>
     <string name="updates">Обновления</string>
 
+    <string name="vkme_notifs">Вернуть вкладку уведомлений</string>
+    <string name="updateanddownload">Обновить</string>
+    <string name="newversion">Новая версия</string>
+    <string name="changelog">Список изменений</string>
+    <string name="downloaderr">Ошибка загрузки файла</string>
+
     <string name="empty_text" />
 </resources>
