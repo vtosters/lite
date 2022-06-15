@@ -1,8 +1,6 @@
-package ru.vtosters.lite.ui.fragments;
+package ru.vtosters.lite.ui.dialogs;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.widget.Toast;
 
 import com.vk.core.dialogs.VKProgressDialog;

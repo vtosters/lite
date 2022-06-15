@@ -14953,7 +14953,7 @@
     <public type="string" name="dockbar_save" id="0x7f11123b" />
     <public type="string" name="dockbar_selected_items" id="0x7f11123c" />
     <public type="string" name="dockbar_unselected_items" id="0x7f11123d" />
-    <public type="string" name="download_latest_vtl" id="0x7f11123e" />
+    <public type="string" name="checkforupdates" id="0x7f11123e" />
     <public type="string" name="other_fix_dynamic_colors" id="0x7f11123f" />
     <public type="string" name="other_reset_settings" id="0x7f111240" />
     <public type="string" name="other_reset_settings_summary" id="0x7f111241" />

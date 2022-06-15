@@ -4337,7 +4337,7 @@
 
     <string name="add_another_account">Добавить новый аккаунт</string>
 
-    <string name="download_latest_vtl">Скачать последнюю версию</string>
+    <string name="checkforupdates">Проверить обновления</string>
 
     <string name="debug_warning">Внимание!</string>
     <string name="debug_warning_summary">Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках (пожалуйста)</string>
@@ -4474,6 +4474,8 @@
     <string name="vtlhidesumm">Скрыть подписи в настройках</string>
 
     <string name="vtlssfssumm">Есть доступ</string>
+    <string name="checkupdates">Авто обновления</string>
+    <string name="updates">Обновления</string>
 
     <string name="empty_text" />
 </resources>
