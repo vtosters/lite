@@ -203,7 +203,7 @@
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
     .line 180
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getHeaderText()I
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getSTextAttr()I
 
     move-result v1
 
