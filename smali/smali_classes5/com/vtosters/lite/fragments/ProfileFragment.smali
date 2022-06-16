@@ -2499,6 +2499,10 @@
 
     aget-object p2, p2, v1
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
     invoke-virtual {p1, p2}, Landroid/support/v7/widget/Toolbar;->setOverflowIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 215

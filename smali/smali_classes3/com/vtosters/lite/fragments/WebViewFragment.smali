@@ -568,6 +568,10 @@
 
     invoke-static {v1, v2}, Landroid/support/v4/a/a/DrawableCompat;->a(Landroid/graphics/drawable/Drawable;I)V
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
     .line 627
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/Toolbar;->setOverflowIcon(Landroid/graphics/drawable/Drawable;)V
 

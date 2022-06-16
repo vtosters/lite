@@ -873,7 +873,7 @@
     const v3, 0x7f0803e3
 
     .line 333
-    invoke-virtual {p3, v3}, Landroid/support/v7/widget/Toolbar;->setNavigationIcon(I)V
+    invoke-virtual {p3, v3}, Landroid/support/v7/widget/Toolbar;->setNavigationIconAcent(I)V
 
     .line 334
     invoke-virtual {p3}, Landroid/support/v7/widget/Toolbar;->getMenu()Landroid/view/Menu;

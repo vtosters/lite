@@ -5556,6 +5556,31 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/support/v7/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public setNavigationIconAcent(I)V
+    .locals 1
+
+    .line 939
+    invoke-virtual {p0}, Landroid/support/v7/widget/Toolbar;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Landroid/support/v7/c/a/AppCompatResources;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
     invoke-virtual {p0, p1}, Landroid/support/v7/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -5629,7 +5654,7 @@
 
     if-eqz v3, :cond_228
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -5679,6 +5704,10 @@
 
     .line 1017
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar;->e:Landroid/support/v7/widget/ActionMenuView;
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/support/v7/widget/ActionMenuView;->setOverflowIcon(Landroid/graphics/drawable/Drawable;)V
 
