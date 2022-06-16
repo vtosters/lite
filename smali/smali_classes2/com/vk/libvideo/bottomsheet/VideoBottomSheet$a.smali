@@ -96,6 +96,13 @@
 
     move-result p2
 
+    .line 180
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTextAttr()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
 
     return-void
