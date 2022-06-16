@@ -502,6 +502,7 @@
     </string-array>
     <string-array name="lighttheme_value">
         <item>По умолчанию</item>
+        <item>Арктическая (Бета)</item>
     </string-array>
     <string-array name="commentssort_value">
         <item>По умолчанию</item>

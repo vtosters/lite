@@ -676,9 +676,11 @@
     </string-array>
     <string-array name="lighttheme_value">
         <item>Default</item>
+        <item>Arctic (Beta)</item>
     </string-array>
     <string-array name="lighttheme">
         <item>default</item>
+        <item>arctic</item>
     </string-array>
     <string-array name="darktheme_value">
         <item>Default</item>

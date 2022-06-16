@@ -10,8 +10,10 @@ import ru.vtosters.lite.utils.Themes;
 public enum ImTheme {
     VKAPP_LIGHT(0, VkIm_Theme_VkApp_Light),
     VKAPP_DARK(3, VkIm_Theme_VkApp_Dark),
+    VKAPP_ARCTIC(6, Themes.getArcticImTheme()),
     VKME_LIGHT(1, VkIm_Theme_VkMe_Light),
     VKME_DARK(2, VkIm_Theme_VkMe_Dark),
+    VKME_ARCTIC(7, Themes.getArcticMeTheme()),
     VKME_AMOLED(5, Themes.getAmoledMeTheme()),
     VKAPP_AMOLED(4, Themes.getAmoledImTheme());
 

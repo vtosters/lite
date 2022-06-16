@@ -88,6 +88,10 @@ public class Themes {
         return getIdentifier("BaseAmoledStyle", "style");
     } // Get Amoled theme id
 
+    public static int getArcticTheme() {
+        return getIdentifier("BaseArcticStyle", "style");
+    } // Get Arctic theme id
+
     public static int picFix() {
         return getIdentifier("ActionBarThemeFix", "style");
     } // Fix tabbar color in photo viewer
@@ -99,6 +103,14 @@ public class Themes {
     public static int getAmoledMeTheme() {
         return getIdentifier("VkIm.Theme.VkMe.Amoled", "style");
     } // Get Amoled theme id for messages with rounded msg
+
+    public static int getArcticImTheme() {
+        return getIdentifier("VkIm.Theme.VkApp.Arctic", "style");
+    } // Get Arctic theme id for messages
+
+    public static int getArcticMeTheme() {
+        return getIdentifier("VkIm.Theme.VkMe.Arctic", "style");
+    } // Get Arctic theme id for messages with rounded msg
 
     public static int getAttrId(String attr) {
         return getIdentifier(attr, "attr");
@@ -142,6 +154,8 @@ public class Themes {
 
     public static VKTheme getLightTheme() {
         switch (getPrefsValue("lighttheme")) {
+            case "arctic":
+                return VKTheme.ARCTIC;
             default:
                 return VKTheme.DEFAULT_LIGHT;
         }
@@ -149,6 +163,8 @@ public class Themes {
 
     public static ImTheme getImLightTheme() {
         switch (getPrefsValue("lighttheme")) {
+            case "arctic":
+                return roundedmsgs() ? VKME_ARCTIC : VKAPP_ARCTIC;
             default:
                 return roundedmsgs() ? VKME_LIGHT : VKAPP_LIGHT;
         }
