@@ -832,7 +832,11 @@
 
     sget v1, Lcom/vk/im/ui/R$e;->vkim_ic_verified:I
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/AppCompatImageView;->setImageResource(I)V
+    invoke-static {v1}, Lru/vtosters/lite/utils/Themes;->recolorDrawableInt(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 116
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->s:Landroid/support/v7/widget/AppCompatImageView;

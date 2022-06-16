@@ -14,6 +14,7 @@ import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -185,6 +186,11 @@ public class Themes {
         }
         return new RecoloredDrawable(drawable, getHeaderText());
     } // Recolor toolbar drawable to accent color
+
+    public static Drawable recolorDrawableInt(int drawable) {
+        @SuppressLint("UseCompatLoadingForDrawables") Drawable res = getResources().getDrawable(drawable);
+        return new RecoloredDrawable(res, getAccentColor());
+    } // Get res drawable via id and coloring to accent
 
     public static ColorStateList recolorCSL(ColorStateList colorStateList) {
         if (colorStateList == null) {
