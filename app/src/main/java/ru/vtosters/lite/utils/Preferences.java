@@ -364,12 +364,21 @@ public class Preferences {
         return getBoolValue("roundedmsgs", false);
     }
 
-    public static boolean checkupdates() throws PackageManager.NameNotFoundException, NoSuchAlgorithmException{
-        return getBoolValue("checkupdates", true) && validateAppSignature();
+    public static boolean checkupdates() {
+        return getBoolValue("checkupdates", true) && isValidSignature();
     }
 
     public static boolean disableanimstickers() {
         return getBoolValue("disableanimstickers", true);
+    }
+
+    public static boolean isValidSignature() {
+        try {
+            return validateAppSignature();
+        } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public static boolean disableSettingsSumms() {

@@ -43,5 +43,5 @@ public class SignatureChecker {
             return decode(APP_SIGNATURE).equals(sha1);
         }
         return false;
-    }
+    } // Sig check to detect actions builds and etc
 }
