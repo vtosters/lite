@@ -346,7 +346,7 @@
 
     move-result p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme_msg()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme()Z
 
     move-result p1
 
