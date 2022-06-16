@@ -4439,6 +4439,9 @@
     <string name="startbtn1">Новости</string>
     <string name="startbtn2">Продолжить</string>
 
+    <string name="vkiddisable">Отключить защиту</string>
+    <string name="vkidsumm">ВКонтакте начали блокировать использование сторонних приложений, поэтому для стабильной работы всех разделов приложения необходимо отключить Защиту от подозрительных приложений \n\nVK ID -> Безопасность и вход -> Защита от подозрительных приложений</string>
+
     <string name="videodownloaderr">Данное видео невозможно скачать</string>
 
     <string name="roundedmsgs">Круглые сообщения</string>

@@ -47,7 +47,6 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLConnection;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -57,6 +56,7 @@ import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
+import ru.vtosters.lite.ui.dialogs.VKIDProtection;
 
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
@@ -66,12 +66,13 @@ public class Globals {
         return preferences;
     }
 
-    public static void MainActivityInit(Activity activity) throws PackageManager.NameNotFoundException, NoSuchAlgorithmException{
+    public static void MainActivityInit(Activity activity){
         if(checkupdates())
             OTADialog.checkUpdates(activity);
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
+        VKIDProtection.alert(activity);
     }
 
     public static void componentSwitcher(String component, Boolean enabled) {
