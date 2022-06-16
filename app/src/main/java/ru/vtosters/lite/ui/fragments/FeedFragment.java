@@ -21,10 +21,10 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        a("officialnewssett").a(new FeedFragment.openofficialsett());
+        a("officialnewssett").a(new openofficialsett());
     }
 
-    public class openofficialsett implements Preference.c {
+    public static class openofficialsett implements Preference.c {
         openofficialsett() {
         }
 

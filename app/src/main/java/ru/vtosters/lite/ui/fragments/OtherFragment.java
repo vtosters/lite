@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.fragments;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.Globals.deleteCache;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
@@ -68,24 +69,27 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class e implements Preference.c {
+    public static class e implements Preference.c {
         e() {
         }
 
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
             prefs.edit().clear().commit();
+            prefs2.edit().clear().commit();
             VKImageLoader.b();
             ImEngineProvider.a().h();
             AudioMessageUtils.j();
             FileUtils.l();
+            deleteCache();
             ToastUtils.a(getString("cachecleaned"));
             return true;
         }
     }
 
-    public class b implements Preference.c {
+    public static class b implements Preference.c {
         b() {
         }
 
@@ -96,7 +100,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class d implements Preference.c {
+    public static class d implements Preference.c {
         d() {
         }
 
@@ -126,20 +130,23 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class f implements Preference.c {
+    public static class f implements Preference.c {
         f() {
         }
 
         @Override // android.support.v7.preference.Preference.c
         public boolean a(Preference preference) {
             SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+            SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
             prefs.edit().clear().commit();
-            restartApplication();
+            prefs2.edit().clear().commit();
+            deleteCache();
+            ToastUtils.a(getString("cachecleaned"));
             return true;
         }
     }
 
-    public class deleteprefs implements Preference.c {
+    public static class deleteprefs implements Preference.c {
         deleteprefs() {
         }
 
@@ -151,7 +158,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class saveprefs implements Preference.c {
+    public static class saveprefs implements Preference.c {
         saveprefs() {
         }
 
@@ -162,7 +169,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class restoreprefs implements Preference.c {
+    public static class restoreprefs implements Preference.c {
         restoreprefs() {
         }
 
