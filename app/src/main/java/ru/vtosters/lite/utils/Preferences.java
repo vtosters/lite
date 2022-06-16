@@ -216,7 +216,7 @@ public class Preferences {
     }
 
     public static boolean gcmfix() {
-        return getBoolValue("gcmfix", true);
+        return getBoolValue("gcmfix", true) && isValidSignature();
     }
 
     public static boolean hasMusicSubscription() {

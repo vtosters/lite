@@ -81,7 +81,7 @@ public class GCMFix {
                 Thread.sleep(100);
             }
             String token = sb.toString();
-            if (token.equals("EGISTRATION_ERROR")) {
+            if (token.equals("REGISTRATION_ERROR")) {
                 return requestToken();
             }
             rid = 0;
@@ -89,12 +89,7 @@ public class GCMFix {
             String sig2 = getSig(pub22);
             params.clear();
             fillParams(params, sig2, pub22, xappide, Long.parseLong(aid.split(" ")[1].split(":")[0]), true);
-            doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, new Callback() {
-                @Override
-                public void doCallback(String str) {
-                    GCMFix.lambda$requestToken$1(str);
-                }
-            });
+            doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, GCMFix::lambda$requestToken$1);
             return token;
         } catch (FileNotFoundException e2) {
             return requestToken();
