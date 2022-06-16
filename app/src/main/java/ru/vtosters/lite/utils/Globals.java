@@ -42,6 +42,7 @@ import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
+import java.io.File;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.URL;
@@ -50,11 +51,12 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
-import ru.vtosters.lite.ui.dialogs.Start;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
+import ru.vtosters.lite.ui.dialogs.Start;
 
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
@@ -200,7 +202,31 @@ public class Globals {
         return null;
     } // Getting the global context through reflection to use context on application initialization
 
+    public static void deleteCache() {
+        try {
+            File dir = getContext().getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i=0; i < Objects.requireNonNull(children).length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if(dir!= null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
+    }
     public static boolean isGmsInstalled() {
         try {
             getContext().getPackageManager().getPackageInfo("com.google.android.gms", 0);
