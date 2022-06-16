@@ -17,7 +17,6 @@
         android:textSize="12.0dip"
         android:textColor="#fffafafa"
         android:gravity="center"
-        android:layout_gravity="center"
         android:id="@id/counter"
         android:background="@drawable/bottom_navigation_counter_bg"
         android:paddingLeft="@dimen/bottom_navigation_counter_padding"
