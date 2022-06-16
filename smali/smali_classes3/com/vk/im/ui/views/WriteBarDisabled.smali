@@ -246,6 +246,10 @@
 
     move-result p1
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result p1
+
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WriteBarDisabled;->setBackgroundColor(I)V
 
     const/16 p1, 0x11
@@ -306,6 +310,10 @@
     invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/views/WriteBarDisabled;->a(Landroid/widget/ImageView;I)V
 
     const/4 p1, -0x1
+
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getTabbarBackground()I
+
+    move-result p1
 
     .line 57
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/WriteBarDisabled;->setBackgroundColor(I)V
