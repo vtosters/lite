@@ -861,7 +861,7 @@
 
     move-result v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkme_msg()Z
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->roundedmsgs()Z
 
     move-result v0
 

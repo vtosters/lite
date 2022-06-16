@@ -33,11 +33,6 @@
             android:defaultValue="false"
             android:key="vkme_notifs"
             android:title="@string/vkme_notifs" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="vkme_msg"
-            android:summary="TODO"
-            android:title="@string/debug_experimental_vk_me_mode" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
