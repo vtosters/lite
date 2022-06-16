@@ -40,7 +40,7 @@ public class FoafBase {
         if (!matcher.find()) {
             return 0;
         }
-        return (int) (new SimpleDateFormat(getDateFormat(), Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000);
+        return (int) (new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000);
     }
 
     public static long GetLastSeenLong(int i) throws ParseException, IOException {
