@@ -145,6 +145,10 @@
 
     move-result-object p5
 
+    invoke-static {p5}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p5
+
     invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p5
@@ -246,6 +250,10 @@
     aget-object p2, p3, p2
 
     check-cast p2, Landroid/graphics/drawable/Drawable;
+
+    invoke-static {p2}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/support/v7/widget/Toolbar;->setOverflowIcon(Landroid/graphics/drawable/Drawable;)V
 

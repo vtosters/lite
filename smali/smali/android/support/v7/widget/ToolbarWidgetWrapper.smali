@@ -542,6 +542,10 @@
     iget-object v1, p0, Landroid/support/v7/widget/ToolbarWidgetWrapper;->q:Landroid/graphics/drawable/Drawable;
 
     :goto_0
+    invoke-static {v1}, Lru/vtosters/lite/utils/Themes;->recolorDrawableToolbar(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1

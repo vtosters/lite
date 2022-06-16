@@ -117,9 +117,9 @@
         <item name="im_bubble_button_background_disabled">#66313233</item>
         <item name="im_bubble_button_foreground">@android:color/system_accent1_50</item>
         <item name="im_bubble_button_foreground_disabled">#66e1e3e6</item>
-        <item name="im_bubble_gift_background">@color/gold_300</item>
-        <item name="im_bubble_gift_text">@color/gold_100</item>
-        <item name="im_bubble_gift_text_secondary">@color/gold_150</item>
+        <item name="im_bubble_gift_background">@android:color/system_accent1_50</item>
+        <item name="im_bubble_gift_text">?text_primary</item>
+        <item name="im_bubble_gift_text_secondary">?text_secondary</item>
         <item name="im_bubble_incoming">@android:color/system_neutral1_900</item>
         <item name="im_bubble_incoming_alternate">@android:color/system_neutral1_900</item>
         <item name="im_bubble_incoming_alternate_highlighted">@android:color/system_neutral2_200
