@@ -200,7 +200,7 @@ public class Preferences {
     }
 
     public static boolean dockcounter() {
-        return getBoolValue("dockcounter", true) && !vkme();
+        return getBoolValue("dockcounter", true);
     }
 
     public static boolean feedcache() {
