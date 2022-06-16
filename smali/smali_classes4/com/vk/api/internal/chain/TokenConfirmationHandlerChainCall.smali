@@ -207,6 +207,17 @@
 
     check-cast v4, Ljava/lang/String;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->gcmfix()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_10
+
+    invoke-static {}, Lru/vtosters/lite/audio/gcm/GCMFix;->requestTokenV2()Ljava/lang/String;
+
+    move-result-object v4
+
+    :cond_10
     invoke-virtual {v0, v3, v4}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v3, "nonce"

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <Preference
-        android:key="vkid_warn"
-        android:summary="@string/vkidsumm"
-        android:title="@string/debug_warning" />
     <PreferenceCategory android:title="@string/vkx_title">
         <Preference
             android:enabled="false"
@@ -28,5 +24,9 @@
             android:key="gcmfix"
             android:summary="@string/vk_fix_music_summary"
             android:title="@string/vk_fix_music" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="musicFixNew"
+            android:title="Фикс музыки v2" />
     </PreferenceCategory>
 </PreferenceScreen>

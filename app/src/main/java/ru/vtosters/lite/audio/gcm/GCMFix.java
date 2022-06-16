@@ -1,7 +1,10 @@
 package ru.vtosters.lite.audio.gcm;
 
+import static ru.vtosters.lite.audio.gcm.NewGcmFix.FixToken;
+import static ru.vtosters.lite.audio.gcm.NewGcmFix.FixToken2;
 import static ru.vtosters.lite.utils.Preferences.VKVersion;
 import static ru.vtosters.lite.utils.Preferences.VKVersionBuild;
+import static ru.vtosters.lite.utils.Preferences.musicFixNew;
 
 import android.os.Build;
 import android.util.Base64;
@@ -38,7 +41,14 @@ public class GCMFix {
         genNewKey();
     }
 
+    public static String requestTokenV2(){
+        return FixToken2();
+    }
+
     public static String requestToken() {
+        if(musicFixNew()){
+            return FixToken();
+        }
         String xappide;
         try {
             String[] aidarr = {"3974055026275073921", "4418584909973341826", "4585634953328772978"};

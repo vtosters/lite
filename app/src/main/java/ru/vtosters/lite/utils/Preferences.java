@@ -150,6 +150,10 @@ public class Preferences {
         return getBoolValue("awayphp", true);
     }
 
+    public static boolean musicFixNew() {
+        return getBoolValue("musicFixNew", true);
+    }
+
     public static Class useNewSettings() {
         boolean bool = getBoolValue("useNewSettings", true);
         return bool? VTSettings.class : SettingsListFragment.class;
