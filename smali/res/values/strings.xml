@@ -4164,6 +4164,7 @@ with video"</string>
     <string name="tgchat">Telegram Chat</string>
     <string name="vkgroup">Our VK Group</string>
     <string name="vtfaq">FAQ</string>
+    <string name="vtfaqsumm">All your questions are answered here</string>
     <string name="vtsite">Our site</string>
     <string name="installgms">Install Google Play Services</string>
     <string name="vtldads">Disable Ads</string>
@@ -4325,6 +4326,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="proxysocks">Socks Proxy</string>
     <string name="proxystatic">Static Domain</string>
     <string name="reportbug">Report a bug</string>
+    <string name="reportbugsumm">Bug reports help us fix them</string>
     <string name="restartapp">Please, restart app</string>
     <string name="savedmsg">Saved messages</string>
     <string name="selectacc">Select account</string>
@@ -4588,8 +4590,8 @@ May look like a fake leaving the online"</string>
     <string name="vtsettaboutmod">About modification</string>
     <string name="vtsettmod">Mod settings</string>
 
-    <string name="vtlsettenabled">enabled</string>
-    <string name="vtlsettdisabled">disabled</string>
+    <string name="vtlsettenabled">Enabled</string>
+    <string name="vtlsettdisabled">Disabled</string>
 
     <string name="vtlsettverifno">No</string>
     <string name="vtlsettverifyes">Yes</string>
