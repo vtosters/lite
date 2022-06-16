@@ -56,7 +56,6 @@ import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
-import ru.vtosters.lite.ui.dialogs.VKIDProtection;
 
 public class Globals {
     private static final List<Activity> activities = new ArrayList<>();
@@ -72,7 +71,7 @@ public class Globals {
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
-        VKIDProtection.alert(activity);
+        // VKIDProtection.alert(activity);
     }
 
     public static void componentSwitcher(String component, Boolean enabled) {
