@@ -329,12 +329,12 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("vtfaq"), "", "ic_help_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("vtfaq"), getString("vtfaqsumm"), "ic_help_24", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/s/vtosters_faq")));
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", getString("reportbug"), "", "ic_bug_24", preference -> {
+        PreferencesUtil.addPreference(this, "", getString("reportbug"), getString("reportbugsumm"), "ic_bug_24", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/issues")));
             return false;
         });

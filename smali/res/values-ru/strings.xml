@@ -4039,6 +4039,7 @@
     <string name="tgchannel">Telegram Канал</string>
     <string name="tgchat">Telegram Чат</string>
     <string name="vkgroup">Наша группа в ВК</string>
+    <string name="vtfaqsumm">Ответы на все ваши вопросы здесь</string>
     <string name="vtsite">Наш сайт</string>
     <string name="installgms">Установите Сервисы Google Play</string>
     <string name="vtldads">Отключить рекламу</string>
@@ -4200,6 +4201,7 @@
     <string name="proxysocks">Socks Прокси</string>
     <string name="proxystatic">Static Домен</string>
     <string name="reportbug">Сообщить о баге</string>
+    <string name="reportbugsumm">Репорты багов помогают нам их исправлять</string>
     <string name="restartapp">Перезапустите приложение</string>
     <string name="savedmsg">Сохраненные сообщения</string>
     <string name="selectacc">Выберите аккаунт</string>
