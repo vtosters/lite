@@ -4482,6 +4482,7 @@
     <string name="newversion">Новая версия</string>
     <string name="changelog">Список изменений</string>
     <string name="downloaderr">Ошибка загрузки файла</string>
+    <string name="onlineNull">Онлайн скрыт</string>
 
     <string name="empty_text" />
 </resources>

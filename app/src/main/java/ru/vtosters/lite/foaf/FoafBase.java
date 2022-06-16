@@ -4,6 +4,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Preferences.getDateFormat;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
 import static ru.vtosters.lite.utils.Proxy.proxy;
 
@@ -39,7 +40,7 @@ public class FoafBase {
         if (!matcher.find()) {
             return 0;
         }
-        return (int) (new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000);
+        return (int) (new SimpleDateFormat(getDateFormat(), Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000);
     }
 
     public static long GetLastSeenLong(int i) throws ParseException, IOException {

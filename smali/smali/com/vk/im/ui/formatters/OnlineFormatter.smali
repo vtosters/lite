@@ -216,7 +216,9 @@
 
     if-gtz v4, :cond_1
 
-    const-string p1, ""
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->nullOnline()Ljava/lang/String;
+
+    move-result-object p1
 
     goto :goto_0
 

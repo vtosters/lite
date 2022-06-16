@@ -4616,6 +4616,8 @@ May look like a fake leaving the online"</string>
     <string name="newversion">New version</string>
     <string name="changelog">Changelog</string>
     <string name="downloaderr">Download error</string>
+    <string name="onlineNull">Online is hidden</string>
+
 
     <item type="string" name="APKTOOL_DUMMY_10be" />
     <item type="string" name="APKTOOL_DUMMY_10bf" />

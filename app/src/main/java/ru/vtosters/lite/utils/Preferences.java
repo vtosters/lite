@@ -16,7 +16,7 @@ import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
 import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
-import static ru.vtosters.lite.utils.SignatureChecker.*;
+import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
 import android.annotation.SuppressLint;
@@ -409,7 +409,6 @@ public class Preferences {
         return hasPrometheus(getUserId());
     }
 
-
     public static String getLocale() {
         String string = getPrefsValue("lang_value");
 
@@ -433,6 +432,14 @@ public class Preferences {
             default:
                 return getString("fulltime3");
         }
+    }
+
+    public static String nullOnline() {
+        return getString("onlineNull");
+    }
+
+    public static boolean isOnlineNull(int status) {
+        return status == 0;
     }
 
     @SuppressLint("SimpleDateFormat")
