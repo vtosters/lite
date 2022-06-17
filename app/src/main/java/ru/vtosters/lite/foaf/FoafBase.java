@@ -4,7 +4,6 @@ import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
-import static ru.vtosters.lite.utils.Preferences.getDateFormat;
 import static ru.vtosters.lite.utils.Proxy.getApiCom;
 import static ru.vtosters.lite.utils.Proxy.proxy;
 
@@ -15,7 +14,6 @@ import android.support.v7.app.AlertDialog;
 import androidx.exifinterface.media.ExifInterface;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
-import com.vtosters.lite.R;
 
 import java.io.IOException;
 import java.text.ParseException;

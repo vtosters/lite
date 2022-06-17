@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.deleteCache;
+import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 

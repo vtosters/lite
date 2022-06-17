@@ -45,6 +45,20 @@ public class PreferencesUtil {
         fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
+    public static void addListPreferenceIcon(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, String icon, CharSequence summary, CharSequence[] entries, CharSequence[] entriesValue) {
+        ListPreference preference = new ListPreference(getContext());
+        preference.a(entries);
+        preference.b(entriesValue);
+        preference.b(summary); // setSummary
+        preference.c(title); // setTitle
+        preference.a(title); // setDialogTitle
+        preference.d(key); // setKey
+        preference.b(def); // setDefaultValue
+        if (icon != null)
+            preference.a(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
+        fragment.ay().d(preference); // fragment.getPreferenceScreen().addPreference(preference)
+    }
+
     public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment materialPreferenceToolbarFragment, String key, CharSequence title, CharSequence summary, boolean defValue) {
         MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getContext());
         materialSwitchPreference.c(title); // setTitle
