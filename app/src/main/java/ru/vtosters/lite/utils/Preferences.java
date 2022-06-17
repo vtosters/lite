@@ -462,7 +462,7 @@ public class Preferences {
 
     public static int compress(int origquality) {
         if(!getBoolValue("compressPhotos", true)){
-            origquality = 100;
+            return 100;
         }
         return origquality;
     }
