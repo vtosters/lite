@@ -48,7 +48,7 @@
     <dimen name="notification_header_bottom_padding">4.0dip</dimen>
     <dimen name="notification_header_top_padding">17.0dip</dimen>
     <dimen name="picker_dimen">400.0dip</dimen>
-    <dimen name="post_side_padding">32.0dip</dimen>
+    <dimen name="post_side_padding">20.0dip</dimen>
     <dimen name="post_side_padding_btn">16.0dip</dimen>
     <dimen name="post_side_padding_info">56.0dip</dimen>
     <dimen name="post_side_padding_menu">20.0dip</dimen>
