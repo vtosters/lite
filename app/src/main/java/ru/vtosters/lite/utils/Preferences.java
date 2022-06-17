@@ -460,6 +460,13 @@ public class Preferences {
         }
     }
 
+    public static int compress(int origquality) {
+        if(!getBoolValue("compressPhotos", true)){
+            origquality = 100;
+        }
+        return origquality;
+    }
+
     public static String nullOnline() {
         return getString("onlineNull");
     }

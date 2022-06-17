@@ -100,6 +100,10 @@
 
     const/16 v6, 0x56
 
+    invoke-static {v6}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result v6
+
     invoke-virtual {p1, v5, v6, v4}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0

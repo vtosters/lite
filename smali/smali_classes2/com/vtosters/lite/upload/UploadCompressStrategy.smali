@@ -1036,6 +1036,10 @@
 
     check-cast v13, Ljava/io/OutputStream;
 
+    invoke-static {v10}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result v10
+
     invoke-virtual {v3, v6, v10, v13}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     .line 126
