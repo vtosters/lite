@@ -4326,7 +4326,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="proxysocks">Socks Proxy</string>
     <string name="proxystatic">Static Domain</string>
     <string name="reportbug">Report a bug</string>
-    <string name="autoclearcache">Auto-cleaning app cache</string>
+    <string name="autoclearcache">Auto cleaning app cache</string>
     <string name="autoclearcachesumm">Cache size:</string>
     <string name="autoclearcachedisabled">"Don't clear cache"</string>
     <string name="reportbugsumm">Bug reports help us fix them</string>
