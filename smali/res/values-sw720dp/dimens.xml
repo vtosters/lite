@@ -2,7 +2,7 @@
 <resources>
     <dimen name="_post_side_padding">-32.0dip</dimen>
     <dimen name="gift_min_size">128.0dip</dimen>
-    <dimen name="post_side_padding">32.0dip</dimen>
+    <dimen name="post_side_padding">20.0dip</dimen>
     <dimen name="post_side_padding_btn">16.0dip</dimen>
     <dimen name="post_side_padding_info">56.0dip</dimen>
     <dimen name="post_side_padding_menu">20.0dip</dimen>
