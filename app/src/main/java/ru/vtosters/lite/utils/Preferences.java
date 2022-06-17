@@ -461,9 +461,8 @@ public class Preferences {
     }
 
     public static int compress(int origquality) {
-        if(!getBoolValue("compressPhotos", true)){
-            return 100;
-        }
+        if(getBoolValue("shakal", false)) return 5;
+        if(!getBoolValue("compressPhotos", true)) return 100;
         return origquality;
     }
 

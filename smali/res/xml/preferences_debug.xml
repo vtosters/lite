@@ -69,6 +69,10 @@
             android:defaultValue="true"
             android:key="useNewSettings"
             android:title="Use New Settings" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="shakal"
+            android:title="shakalish pikchi da" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_developer_functions">
         <com.vtosters.lite.ui.MaterialSwitchPreference
