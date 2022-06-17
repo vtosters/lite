@@ -121,6 +121,10 @@
 
     const/16 v3, 0x64
 
+    invoke-static {v3}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result v3
+
     move-object v4, v1
 
     check-cast v4, Ljava/io/OutputStream;
