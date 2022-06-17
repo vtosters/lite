@@ -23,7 +23,6 @@
             <com.vk.imageloader.view.VKImageView
                 android:id="@id/iv_preview"
                 android:background="@drawable/picker_bg_graffiti_preview_top"
-                android:backgroundTint="?background_content"
                 android:paddingLeft="32.0dip"
                 android:paddingTop="32.0dip"
                 android:paddingRight="32.0dip"
@@ -35,11 +34,10 @@
 
             <TextView
                 android:textSize="14.0sp"
-                android:textColor="?header_text"
+                android:textColor="#ffffffff"
                 android:gravity="center"
                 android:id="@id/tv_send_button"
                 android:background="@drawable/picker_bg_graffiti_preview_bottom"
-                android:backgroundTint="?accent"
                 android:paddingLeft="24.0dip"
                 android:paddingRight="24.0dip"
                 android:paddingBottom="24.0dip"
