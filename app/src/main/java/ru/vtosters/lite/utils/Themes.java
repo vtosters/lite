@@ -187,7 +187,7 @@ public class Themes {
     } // Recolor drawable to accent color
 
     public static Drawable recolorVKIconMenu(Drawable drawable) {
-        int accent = R.color.white;
+        int accent = getHeaderText();
 
         if (drawable == null) return null;
 
