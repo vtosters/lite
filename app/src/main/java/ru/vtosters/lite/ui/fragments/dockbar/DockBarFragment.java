@@ -12,15 +12,11 @@ import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import me.grishka.appkit.fragments.ToolbarFragment;
-import ru.vtosters.lite.R;
 
 public class DockBarFragment extends ToolbarFragment {
 

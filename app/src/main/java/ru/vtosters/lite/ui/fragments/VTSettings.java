@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.fragments;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
 import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
-import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.getAccountPrefsCount;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.getCurrentAccount;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.withRegex;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.workingAccounts;
@@ -397,7 +396,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     }
 
     public static String getMultiAccsumm() {
-        if(disableSettingsSumms() || getAccountPrefsCount() <= 1) return "";
+        if(disableSettingsSumms() || workingAccounts() <= 1) return "";
 
         return getString("vtlmultiaccsumm") + ": " + workingAccounts();
     }

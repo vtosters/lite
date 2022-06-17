@@ -93,7 +93,7 @@ public class MultiAccountManager {
     }
 
     public static void addAccount() {
-        getPreferences().edit().putInt("account", workingAccounts()).commit();
+        getPreferences().edit().putInt("account", workingAccounts() + 1).commit();
     }
 
     public static void deleteAccount(int i) {
