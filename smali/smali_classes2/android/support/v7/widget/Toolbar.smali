@@ -5577,7 +5577,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->recolorVKIconMenu(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

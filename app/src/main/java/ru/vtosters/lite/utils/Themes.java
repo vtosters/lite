@@ -162,8 +162,11 @@ public class Themes {
         return color_grishka() && Build.VERSION.SDK_INT >= 31;
     }
 
-    public static boolean isColorRefAccented(int i) {
-        return i == R.color.cornflower_blue || i == R.color.cornflower_blue_two || i == R.color.dot_unread || i == R.color.music_action_button_blue || i == R.color.fave_promo_btn_pressed || i == R.color.im_back_to_vk_gradient_start || i == R.color.live_emoji_butt_hide || i == R.color.picker_tab_bg_selected || i == R.color.sky_300 || i == R.color.text_blue || i == R.color.tw__blue_default || i == R.color.tw__blue_pressed || i == R.color.white_blue32 || i == R.color.name || i == R.color.picker_blue || i == R.color.picker_blue_pressed || i == R.color.picker_tab_text_selected || i == R.color.sharing_blue_btn_pressed || i == R.color.sharing_blue_btn_normal || i == R.color.tip_background || i == R.color.vkim_msg_sending_ic || i == R.color.vkim_playing_drawable_rect || i == R.color.accent_blue || i == R.color.light_blue_gray || i == R.color.light_blue || i == R.color.blue_200 || i == R.color.header_blue || i == R.color.blue_200_muted || i == R.color.im_old_accent || i == R.color.im_old_accent_muted || i == R.color.im_dark_accent || i == R.color.im_dark_accent_muted || i == R.color.azure_A400 || i == R.color.blue || i == R.color.blue_400 || i == R.color.blue_300 || i == R.color.cool_blue;
+    public static boolean isColorRefAccented(int color) {
+        for (int accent : new int[]{R.color.accent_blue, R.color.azure_A400, R.color.blue, R.color.blue_200, R.color.blue_200_muted, R.color.blue_300, R.color.blue_400, R.color.cool_blue, R.color.cornflower_blue, R.color.cornflower_blue_two, R.color.dot_unread, R.color.fave_promo_btn_pressed, R.color.header_blue, R.color.im_back_to_vk_gradient_start, R.color.im_dark_accent, R.color.im_dark_accent_muted, R.color.im_old_accent, R.color.im_old_accent_muted, R.color.light_blue, R.color.light_blue_gray, R.color.live_emoji_butt_hide, R.color.music_action_button_blue, R.color.name, R.color.picker_blue, R.color.picker_blue_pressed, R.color.picker_tab_bg_selected, R.color.picker_tab_text_selected, R.color.sharing_blue_btn_normal, R.color.sharing_blue_btn_pressed, R.color.sky_300, R.color.text_blue, R.color.tip_background, R.color.tw__blue_default, R.color.tw__blue_pressed, R.color.vkim_msg_sending_ic, R.color.vkim_playing_drawable_rect, R.color.white_blue32}) {
+            if(color == accent) return true;
+        }
+        return false;
     } // Accent colors
 
     public static void themeMonetToolbar(ImageButton imageButton, Toolbar toolbar) {
@@ -174,11 +177,20 @@ public class Themes {
     }
 
     public static Drawable recolorDrawable(Drawable drawable) {
-        if (drawable == null) {
-            return null;
-        }
+        if (drawable == null) return null;
         return new RecoloredDrawable(drawable, getAccentColor());
     } // Recolor drawable to accent color
+
+    public static Drawable recolorVKIconMenu(Drawable drawable) {
+        int accent = R.color.white;
+
+        if(isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
+
+        if (drawable == null) return null;
+
+        return new RecoloredDrawable(drawable, accent);
+    } // Recolor vk icon to accent color
+
 
     public static Drawable recolorDrawableToolbar(Drawable drawable) {
         if (drawable == null) {
