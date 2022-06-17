@@ -8,14 +8,19 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.a.ItemTouchHelper;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
+import ru.vtosters.lite.R;
 
 public class DockBarFragment extends ToolbarFragment {
 
@@ -40,7 +45,7 @@ public class DockBarFragment extends ToolbarFragment {
         );
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
-        Button save = new Button(n());
+        TextView save = new TextView(new ContextThemeWrapper(n(), com.vtosters.lite.R.style.VKUIButton_Primary));
         save.setText(getString("dockbar_save"));
         save.setOnClickListener(v -> {
             DockBarManager.getInstance().save();
@@ -54,7 +59,7 @@ public class DockBarFragment extends ToolbarFragment {
         View divider = new View(n());
         buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
 
-        Button reset = new Button(n());
+        TextView reset = new TextView(new ContextThemeWrapper(n(), com.vtosters.lite.R.style.VKUIButton_Primary));
         reset.setText(getString("dockbar_reset"));
         reset.setOnClickListener(v -> {
             DockBarManager.getInstance().delete();
