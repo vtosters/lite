@@ -200,11 +200,19 @@ public class Themes {
     } // Recolor ColorStateList to accent color
 
     public static ColorStateList themeCSL(Context context, int color) {
+
         if (isColorRefAccented(color) && isAndroidMonet()) {
             return ColorStateList.valueOf(getAccentColor());
         }
 
-        ColorStateList csl = context.getColorStateList(color);
+        ColorStateList csl;
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            csl = context.getColorStateList(color);
+        } else {
+            csl = context.getResources().getColorStateList(color);
+        }
+
         try {
             int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
             int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
