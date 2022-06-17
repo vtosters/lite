@@ -2,7 +2,7 @@ package ru.vtosters.lite.ui.fragments;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.Globals.deleteCache;
+import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;

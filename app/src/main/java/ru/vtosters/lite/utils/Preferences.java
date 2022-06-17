@@ -1,9 +1,11 @@
 package ru.vtosters.lite.utils;
 
 import static android.os.Build.VERSION;
+import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
+import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
@@ -58,13 +60,16 @@ public class Preferences {
             LoadLibrary("vkopustest");
         }
         systemThemeChanger();
+        getInstance().autoCleaningCache();
     } // VK Init
 
     public static void forceOffline() {
+        setupFilters();
+        getInstance().autoCleaningCache();
+
         if (setoffline() && !offline()) {
             Users.b();
         }
-        setupFilters();
     }
 
     public static boolean getBoolValue(String key, Boolean value) {
@@ -435,6 +440,23 @@ public class Preferences {
                 return getString("fulltime");
             default:
                 return getString("fulltime3");
+        }
+    }
+
+    public static long getSizeForDelete() {
+        switch (getPrefsValue("clearcache")) {
+            case "100mb":
+                return 104857600L;
+            case "500mb":
+                return 524288000L;
+            case "1gb":
+                return 1073741824L;
+            case "2gb":
+                return 2147483648L;
+            case "5gb":
+                return 5368709120L;
+            default:
+                return MAX_VALUE;
         }
     }
 

@@ -8,6 +8,7 @@ import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.wit
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.workingAccounts;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
+import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getContext;
@@ -62,6 +63,7 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountFragment;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
+import ru.vtosters.lite.utils.CacheUtils;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
 
@@ -307,6 +309,13 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             context.startActivity(a2);
             return false;
         });
+
+        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", getString("autoclearcache"), "ic_delete_24", getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size), new CharSequence[]{
+                getString("autoclearcachedisabled"), "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"
+        }, new String[]{
+                "Default", "100mb", "500mb", "1gb", "2gb", "5gb"
+        });
+
 
         PreferencesUtil.addPreference(this, "", getString("vtlother"), othersumm, "ic_more_24", preference -> {
             Context context = getContext();
