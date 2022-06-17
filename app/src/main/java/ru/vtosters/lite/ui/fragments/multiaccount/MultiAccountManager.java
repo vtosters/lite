@@ -102,7 +102,7 @@ public class MultiAccountManager {
         prefs.edit().clear().commit();
         File file = new File(new File(getContext().getFilesDir().getParent(), "shared_prefs"), "pref_account_manager" + i);
         if (file.exists()) file.delete();
-        if (account == i && workingAccounts() > 0) {
+        if (account == i && getAccountPrefsCount() > 0) {
             List<MultiAccountItem> accounts = buildList();
             if (accounts.size() > 0)
                 switchAccount(buildList().get(0).index);
