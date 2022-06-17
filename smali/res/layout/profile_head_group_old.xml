@@ -71,7 +71,7 @@
 
             <TextView
                 android:textSize="14.0dip"
-                android:textColor="#ff8c8d8f"
+                android:textColor="?text_secondary"
                 android:ellipsize="marquee"
                 android:id="@id/label"
                 android:layout_width="fill_parent"

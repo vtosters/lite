@@ -67,7 +67,7 @@
                 style="@style/VKUIText.Title1" />
 
             <TextView
-                android:textColor="@color/gray_400"
+                android:textColor="?text_secondary"
                 android:id="@id/label"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

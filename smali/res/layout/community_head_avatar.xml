@@ -23,7 +23,7 @@
             style="@style/VKUIText.Title1" />
 
         <TextView
-            android:textColor="?text_primary"
+            android:textColor="?text_secondary"
             android:ellipsize="end"
             android:id="@id/label"
             android:layout_width="fill_parent"

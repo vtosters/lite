@@ -76,6 +76,7 @@
                 android:singleLine="true" />
 
             <TextView
+                android:textColor="?text_secondary"
                 android:textSize="14.0dip"
                 android:ellipsize="marquee"
                 android:id="@id/label"
