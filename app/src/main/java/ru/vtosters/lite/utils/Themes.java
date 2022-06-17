@@ -1,7 +1,12 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-import static com.vk.im.ui.themes.ImTheme.*;
+import static com.vk.im.ui.themes.ImTheme.VKAPP_AMOLED;
+import static com.vk.im.ui.themes.ImTheme.VKAPP_DARK;
+import static com.vk.im.ui.themes.ImTheme.VKAPP_LIGHT;
+import static com.vk.im.ui.themes.ImTheme.VKME_AMOLED;
+import static com.vk.im.ui.themes.ImTheme.VKME_DARK;
+import static com.vk.im.ui.themes.ImTheme.VKME_LIGHT;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
@@ -184,33 +189,39 @@ public class Themes {
     public static Drawable recolorVKIconMenu(Drawable drawable) {
         int accent = R.color.white;
 
-        if(isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
-
         if (drawable == null) return null;
+
+        if(isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
 
         return new RecoloredDrawable(drawable, accent);
     } // Recolor vk icon to accent color
 
 
     public static Drawable recolorDrawableToolbar(Drawable drawable) {
-        if (drawable == null) {
-            return null;
-        }
+        if (drawable == null) return null;
+
+        if(!isAndroidMonet()) return drawable;
+
         return new RecoloredDrawable(drawable, getHeaderText());
     } // Recolor toolbar drawable to accent color
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     public static Drawable recolorDrawableInt(int drawable) {
+        if(!isAndroidMonet()) return getResources().getDrawable(drawable);
+
         @SuppressLint("UseCompatLoadingForDrawables") Drawable res = getResources().getDrawable(drawable);
         return new RecoloredDrawable(res, getAccentColor());
     } // Get res drawable via id and coloring to accent
 
     public static ColorStateList recolorCSL(ColorStateList colorStateList) {
-        if (colorStateList == null) {
-            return null;
-        }
+        if (colorStateList == null) return null;
+
+        if(!isAndroidMonet()) return colorStateList;
+
         return ColorStateList.valueOf(getAccentColor());
     } // Recolor ColorStateList to accent color
 
+    @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {
 
         if (isColorRefAccented(color) && isAndroidMonet()) {
