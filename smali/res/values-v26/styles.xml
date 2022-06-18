@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <style name="BaseStyle" parent="@style/BaseTheme">
+    <style name="BaseStyle" parent="@style/BaseTheme">
         <item name="android:textColorSecondary">@color/prefs_subtitle</item>
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
