@@ -25,12 +25,12 @@
 
 
 # virtual methods
-.method protected b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+.method protected b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ")",
             "Lc/a/m<",
             "Lcom/vk/profile/adapter/counters/e$b;",
@@ -41,11 +41,11 @@
     .line 1
     new-instance v0, Lcom/vk/api/market/f;
 
-    iget-object v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    iget p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a1:I
+    iget p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a1:I
 
     const/4 v2, 0x0
 

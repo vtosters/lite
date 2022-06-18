@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/x$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ProfilesRecommendationsInfoItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/x;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .line 1
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-direct {p0, v0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/x$a;->c:Lcom/vk/newsfeed/holders/q;
 
@@ -77,7 +77,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

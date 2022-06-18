@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/StoryPrivacySettingsActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "StoryPrivacySettingsActivity.java"
 
 # interfaces
@@ -29,7 +29,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     return-void
 .end method
@@ -141,7 +141,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -188,7 +188,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/b;

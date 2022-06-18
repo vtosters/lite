@@ -1,12 +1,12 @@
 .class public final Lcom/vk/profile/adapter/holders/b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CommunityChatItemHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/chats/a;",
         ">;"
     }
@@ -38,7 +38,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     .line 2
     new-instance p1, Lcom/vk/profile/adapter/items/chats/ChatItemBinder;

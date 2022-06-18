@@ -66,7 +66,7 @@
 
     iget-object v0, p1, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     return-void
 .end method

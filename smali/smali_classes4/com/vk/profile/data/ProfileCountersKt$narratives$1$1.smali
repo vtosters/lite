@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)I
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
     .locals 0
 
     const/4 p1, 0x0
@@ -67,9 +67,9 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/data/ProfileCountersKt$narratives$1$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)I
+    invoke-virtual {p0, p1}, Lcom/vk/profile/data/ProfileCountersKt$narratives$1$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
 
     move-result p1
 

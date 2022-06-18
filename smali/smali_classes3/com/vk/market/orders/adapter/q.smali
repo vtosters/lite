@@ -519,13 +519,13 @@
     invoke-virtual {v3, v8}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 10
-    new-instance v4, Lcom/vkontakte/android/v;
+    new-instance v4, Lcom/vtosters/lite/v;
 
     new-instance v5, Lcom/vk/market/orders/adapter/q$c;
 
     invoke-direct {v5, v2, v0}, Lcom/vk/market/orders/adapter/q$c;-><init>(Lcom/vk/dto/common/OrderExtended;Lcom/vk/market/orders/adapter/q;)V
 
-    invoke-direct {v4, v5}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v4, v5}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     .line 11
     invoke-virtual {v4, v13}, Lcom/vk/core/view/links/a;->a(Z)V

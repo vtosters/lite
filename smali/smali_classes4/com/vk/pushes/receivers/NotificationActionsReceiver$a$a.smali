@@ -56,7 +56,7 @@
     const/4 p1, 0x1
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->c(Z)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->c(Z)V
 
     .line 2
     sget-object v0, Lcom/vk/pushes/receivers/NotificationActionsReceiver;->b:Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;

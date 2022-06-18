@@ -23,7 +23,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
         ">;>;",
         "Lcom/vk/lists/c;",
@@ -253,12 +253,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
             ">;I)V"
         }
@@ -267,7 +267,7 @@
     .line 4
     iget-object p2, p0, Lcom/vk/notifications/settings/a;->b:Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -498,9 +498,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/notifications/settings/a;->a(Lcom/vkontakte/android/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/notifications/settings/a;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -509,21 +509,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/notifications/settings/a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/notifications/settings/a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
             ">;"
         }

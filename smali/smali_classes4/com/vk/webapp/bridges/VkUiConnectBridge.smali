@@ -1100,7 +1100,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$b;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1155,7 +1155,7 @@
 
     invoke-direct {p1, v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$c;-><init>(Lcom/vk/webapp/o/b;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1366,7 +1366,7 @@
 
     invoke-direct {p1, p0, v0, v4}, Lcom/vk/webapp/bridges/VkUiConnectBridge$d;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Ljava/lang/String;Landroid/content/Intent;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2009,7 +2009,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$e;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2174,7 +2174,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$g;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2547,7 +2547,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$j;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2669,7 +2669,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$k;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2803,7 +2803,7 @@
 
     invoke-direct {v4, p0, p1, v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$l;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;ILjava/lang/String;)V
 
-    invoke-static {v4}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v4}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2873,7 +2873,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$m;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -2939,7 +2939,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$n;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -3052,7 +3052,7 @@
 
     invoke-direct {v5, p0, p1, v0, v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$o;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v5}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v5}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     goto :goto_1
 
@@ -3138,7 +3138,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkUiConnectBridge$p;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -3223,7 +3223,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$q;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3467,7 +3467,7 @@
 
     invoke-direct/range {v6 .. v11}, Lcom/vk/webapp/bridges/VkUiConnectBridge$r;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;ILjava/lang/String;J)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     goto :goto_1
 
@@ -3985,7 +3985,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$s;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/helpers/AdvMyTargetHelper$AdType;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
@@ -4160,7 +4160,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$t;-><init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

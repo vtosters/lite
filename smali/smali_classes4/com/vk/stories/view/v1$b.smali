@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/stories/view/v1;
 
-.field final synthetic b:Lcom/vkontakte/android/k0/b;
+.field final synthetic b:Lcom/vtosters/lite/k0/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/view/v1;Lcom/vkontakte/android/k0/b;)V
+.method constructor <init>(Lcom/vk/stories/view/v1;Lcom/vtosters/lite/k0/b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/view/v1$b;->a:Lcom/vk/stories/view/v1;
 
-    iput-object p2, p0, Lcom/vk/stories/view/v1$b;->b:Lcom/vkontakte/android/k0/b;
+    iput-object p2, p0, Lcom/vk/stories/view/v1$b;->b:Lcom/vtosters/lite/k0/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/stories/view/v1$b;->b:Lcom/vkontakte/android/k0/b;
+    iget-object p1, p0, Lcom/vk/stories/view/v1$b;->b:Lcom/vtosters/lite/k0/b;
 
     invoke-virtual {p1}, Lcom/vk/core/ui/v/j/f/a;->dismiss()V
 

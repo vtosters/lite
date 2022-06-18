@@ -131,11 +131,11 @@
 
     iget-object v1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vkontakte/android/ui/v;
+    invoke-static {v1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/v;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object v1
 
@@ -148,11 +148,11 @@
     .line 10
     iget-object p1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$b;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {p1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vkontakte/android/ui/v;
+    invoke-static {p1}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/v;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_1
     return-void

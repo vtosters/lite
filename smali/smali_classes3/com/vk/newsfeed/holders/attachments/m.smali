@@ -60,16 +60,16 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/StickerAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     if-eqz v0, :cond_4
 
     .line 3
     sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/StickerAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/StickerAttachment;
 
-    iget v1, p1, Lcom/vkontakte/android/attachments/StickerAttachment;->h:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
     invoke-virtual {v0, v1}, Lcom/vk/stickers/t;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
 
@@ -128,7 +128,7 @@
 
     if-eqz v0, :cond_4
 
-    iget p1, p1, Lcom/vkontakte/android/attachments/StickerAttachment;->h:I
+    iget p1, p1, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
     invoke-interface {v0, p1}, Lcom/vk/newsfeed/holders/attachments/m$a;->m(I)V
 
@@ -153,7 +153,7 @@
     move-result-object v0
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v4
 
@@ -165,7 +165,7 @@
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget p1, p1, Lcom/vkontakte/android/attachments/StickerAttachment;->h:I
+    iget p1, p1, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
     sget-object v1, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 
@@ -187,7 +187,7 @@
     move-result-object p1
 
     .line 13
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v3
 

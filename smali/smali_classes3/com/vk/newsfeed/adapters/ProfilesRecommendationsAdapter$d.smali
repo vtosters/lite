@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,7 +44,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;->a:Lcom/vk/newsfeed/holders/k;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;->a:Lcom/vk/newsfeed/holders/k;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     const/4 v0, 0x1
 
@@ -97,7 +97,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;->a:Lcom/vk/newsfeed/holders/k;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     const/4 v0, 0x0
 

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/ui/f0/b;)Z
+.method public final a(Lcom/vtosters/lite/ui/f0/b;)Z
     .locals 1
 
     const-string v0, "postDisplayItem"
@@ -64,7 +64,7 @@
     .line 1
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result p1
 
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/PostViewPresenter$setLikesInfo$position$1;->a(Lcom/vkontakte/android/ui/f0/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/PostViewPresenter$setLikesInfo$position$1;->a(Lcom/vtosters/lite/ui/f0/b;)Z
 
     move-result p1
 

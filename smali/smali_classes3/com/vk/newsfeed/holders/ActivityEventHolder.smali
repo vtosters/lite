@@ -174,7 +174,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -190,7 +190,7 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/c;
 
@@ -222,7 +222,7 @@
 
     iget-object v4, p0, Lcom/vk/newsfeed/holders/ActivityEventHolder;->K:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -277,7 +277,7 @@
     .line 1
     new-instance v0, Lcom/vk/profile/ui/c$z;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -302,7 +302,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/ui/c$z;->b(Ljava/lang/String;)Lcom/vk/profile/ui/c$z;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -317,15 +317,15 @@
     invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vkontakte/android/data/PostInteract$Type;->open_group:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v1, Lcom/vtosters/lite/data/PostInteract$Type;->open_group:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     :cond_0
     return-void
@@ -503,7 +503,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 

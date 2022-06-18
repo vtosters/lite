@@ -68,7 +68,7 @@
     if-nez p1, :cond_0
 
     .line 2
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$l;->a:Lcom/vk/stories/view/StoryView;
 
@@ -80,10 +80,10 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     const v0, 0x7f1301dd
 

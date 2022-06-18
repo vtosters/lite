@@ -8,7 +8,7 @@
         </LinearLayout>
         <TextView android:textSize="14.0sp" android:textColor="?accent" android:gravity="end" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/show_all" android:fontFamily="sans-serif-medium" android:layout_marginEnd="16.0dip" />
     </FrameLayout>
-    <com.vkontakte.android.ui.widget.RatioFrameLayout android:id="@id/image_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip">
+    <com.vtosters.lite.ui.widget.RatioFrameLayout android:id="@id/image_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip">
         <FrameLayout android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <com.vk.common.view.SolidColorView android:id="@id/color_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/overlay_text_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
@@ -17,7 +17,7 @@
         </LinearLayout>
         <View android:layout_gravity="center" android:id="@id/logo_background" android:background="@drawable/bg_place" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginTop="2.0dip" />
         <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/community_logo" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="2.0dip" />
-    </com.vkontakte.android.ui.widget.RatioFrameLayout>
+    </com.vtosters.lite.ui.widget.RatioFrameLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <ImageView android:id="@id/location_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_marginStart="@dimen/post_side_padding" />
         <TextView android:textColor="?text_subhead" android:ellipsize="end" android:id="@id/location_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:lines="1" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" style="VKUIText.New.Subhead2" />

@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -57,7 +57,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -66,9 +66,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/discover/holders/i$a;->a(Lcom/vkontakte/android/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/discover/holders/i$a;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -77,14 +77,14 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/discover/holders/i$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/discover/holders/i$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -97,7 +97,7 @@
     .line 2
     iget-object p2, p0, Lcom/vk/discover/holders/i$a;->c:Lcom/vk/discover/holders/i;
 
-    invoke-virtual {p2, p1}, Lcom/vk/discover/holders/i;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {p2, p1}, Lcom/vk/discover/holders/i;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 

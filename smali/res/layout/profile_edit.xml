@@ -25,13 +25,13 @@
             <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <com.vk.core.view.OverlayTextView android:id="@id/edit_bdate_chooser" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="date" android:drawableRight="@drawable/ic_dropdown_arrow" app:overlay="@drawable/highlight" app:padAsBackground="true" style="@style/CardTextEdit" />
                 <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/edit_bdate_visibility" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" app:padAsBackground="true" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/edit_bdate_visibility" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" app:padAsBackground="true" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_relation" android:layout_weight="1.0" style="@style/CardsSectionHeader" />
             <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/edit_relation" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/edit_relation" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" />
                 <View android:id="@id/edit_relation_divider" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
                 <LinearLayout android:gravity="center_vertical" android:id="@id/edit_relation_partner" android:background="@drawable/highlight" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
                     <com.vk.imageloader.view.VKCircleImageView android:id="@id/edit_relation_partner_photo" android:layout_width="48.0dip" android:layout_height="48.0dip" app:placeholderImage="@drawable/user_placeholder" />
@@ -43,7 +43,7 @@
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_city" android:layout_weight="1.0" style="@style/CardsSectionHeader" />
             <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/edit_country" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" app:padAsBackground="true" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/edit_country" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:overlay="@drawable/highlight" app:padAsBackground="true" />
                 <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
                 <com.vk.core.view.OverlayTextView android:textColor="#ff000000" android:textColorHint="@color/hint" android:id="@id/edit_city" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/edit_choose_city" android:drawableRight="@drawable/ic_dropdown_arrow" app:overlay="@drawable/highlight" app:padAsBackground="true" style="@style/CardTextEdit" />
             </LinearLayout>

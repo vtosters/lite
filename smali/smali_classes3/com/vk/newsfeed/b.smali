@@ -260,7 +260,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;Ljava/util/List;)Z
+.method public final a(Ljava/util/List;Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;Ljava/util/List;)Z
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -269,7 +269,7 @@
             "+",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             "Ljava/util/List<",
             "Lcom/vk/dto/newsfeed/PageHistory;",
             ">;)Z"
@@ -443,7 +443,7 @@
     sget-object v1, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
 
     .line 15
-    iget-object v5, v3, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->startFrom:Ljava/lang/String;
+    iget-object v5, v3, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->startFrom:Ljava/lang/String;
 
     .line 16
     invoke-virtual/range {p2 .. p2}, Lcom/vk/dto/common/data/VKFromList;->a()Ljava/lang/String;
@@ -451,10 +451,10 @@
     move-result-object v6
 
     .line 17
-    iget-wide v7, v3, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->requestedAt:J
+    iget-wide v7, v3, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->requestedAt:J
 
     .line 18
-    iget-wide v9, v3, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->createdAt:J
+    iget-wide v9, v3, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->createdAt:J
 
     move-object/from16 v2, p1
 

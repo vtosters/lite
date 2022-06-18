@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/data/d/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         ">;"
     }
 .end annotation
@@ -23,12 +23,12 @@
     return-void
 .end method
 
-.method private final a(ILcom/vkontakte/android/api/i;)Lc/a/m;
+.method private final a(ILcom/vtosters/lite/api/i;)Lc/a/m;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")",
             "Lc/a/m<",
             "+",
@@ -88,7 +88,7 @@
     :cond_0
     new-instance p1, Lcom/vk/api/narratives/NarrativeGetFromOwner;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -104,7 +104,7 @@
     .line 9
     new-instance v0, Lcom/vk/profile/data/d/a$i;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$i;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$i;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
 
@@ -116,7 +116,7 @@
     :cond_1
     new-instance p1, Lcom/vk/api/groups/j;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -132,7 +132,7 @@
     .line 12
     new-instance v0, Lcom/vk/profile/data/d/a$g;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$g;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$g;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -144,7 +144,7 @@
     :cond_2
     sget-object p1, Lcom/vk/api/articles/a;->F:Lcom/vk/api/articles/a$a;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -162,7 +162,7 @@
     .line 15
     new-instance v0, Lcom/vk/profile/data/d/a$f;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$f;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$f;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -174,7 +174,7 @@
     :cond_3
     new-instance p1, Lcom/vk/api/groups/k;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -202,7 +202,7 @@
     .line 18
     new-instance v0, Lcom/vk/profile/data/d/a$h;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$h;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$h;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -214,13 +214,13 @@
     :cond_4
     new-instance p1, Lcom/vk/api/market/f;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
     const/4 v3, 0x6
 
-    iget v5, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a1:I
+    iget v5, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a1:I
 
     invoke-direct {p1, v2, v4, v3, v5}, Lcom/vk/api/market/f;-><init>(IIII)V
 
@@ -232,7 +232,7 @@
     .line 21
     new-instance v0, Lcom/vk/profile/data/d/a$e;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$e;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$e;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -242,7 +242,7 @@
 
     .line 22
     :cond_5
-    iget-object p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -258,7 +258,7 @@
     .line 24
     new-instance v0, Lcom/vk/profile/data/d/a$d;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$d;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$d;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -270,7 +270,7 @@
     :cond_6
     new-instance p1, Lb/h/c/c/k0;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -284,7 +284,7 @@
     .line 27
     new-instance v0, Lcom/vk/profile/data/d/a$c;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$c;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$c;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -296,7 +296,7 @@
     :cond_7
     new-instance p1, Lcom/vk/api/board/g;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -312,7 +312,7 @@
     .line 30
     new-instance v0, Lcom/vk/profile/data/d/a$b;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$b;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$b;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -324,11 +324,11 @@
     :cond_8
     new-instance p1, Lcom/vk/api/execute/c;
 
-    iget-object v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
-    iget v3, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->v1:I
+    iget v3, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->v1:I
 
     invoke-direct {p1, v2, v3}, Lcom/vk/api/execute/c;-><init>(II)V
 
@@ -348,7 +348,7 @@
     .line 35
     new-instance v0, Lcom/vk/profile/data/d/a$a;
 
-    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$a;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p2}, Lcom/vk/profile/data/d/a$a;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
 
@@ -358,18 +358,18 @@
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/data/d/a;ILcom/vkontakte/android/api/i;)Lc/a/m;
+.method public static final synthetic a(Lcom/vk/profile/data/d/a;ILcom/vtosters/lite/api/i;)Lc/a/m;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/data/d/a;->a(ILcom/vkontakte/android/api/i;)Lc/a/m;
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/data/d/a;->a(ILcom/vtosters/lite/api/i;)Lc/a/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final c(Lcom/vkontakte/android/api/i;)I
+.method private final c(Lcom/vtosters/lite/api/i;)I
     .locals 9
 
     .line 1
@@ -394,7 +394,7 @@
     aget-object v6, v0, v3
 
     .line 3
-    iget-object v7, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object v7, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Lcom/vk/profile/data/CountersWrapper;->h()Ljava/lang/String;
 
@@ -466,15 +466,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/i;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation
@@ -484,14 +484,14 @@
 
     move-result v0
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/profile/data/d/a;->a(ILcom/vkontakte/android/api/i;)Lc/a/m;
+    invoke-direct {p0, v0, p1}, Lcom/vk/profile/data/d/a;->a(ILcom/vtosters/lite/api/i;)Lc/a/m;
 
     move-result-object v0
 
     .line 3
     new-instance v1, Lcom/vk/profile/data/d/a$j;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/data/d/a$j;-><init>(Lcom/vk/profile/data/d/a;Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/data/d/a$j;-><init>(Lcom/vk/profile/data/d/a;Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
 
@@ -500,7 +500,7 @@
     .line 4
     new-instance v1, Lcom/vk/profile/data/d/a$k;
 
-    invoke-direct {v1, p1}, Lcom/vk/profile/data/d/a$k;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v1, p1}, Lcom/vk/profile/data/d/a$k;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
 
@@ -509,7 +509,7 @@
     .line 5
     new-instance v1, Lcom/vk/profile/data/d/a$l;
 
-    invoke-direct {v1, p1}, Lcom/vk/profile/data/d/a$l;-><init>(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v1, p1}, Lcom/vk/profile/data/d/a$l;-><init>(Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {v0, v1}, Lc/a/m;->g(Lc/a/z/j;)Lc/a/m;
 
@@ -518,16 +518,16 @@
     return-object p1
 .end method
 
-.method public b(Lcom/vkontakte/android/api/i;)V
+.method public b(Lcom/vtosters/lite/api/i;)V
     .locals 1
 
     .line 1
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     invoke-virtual {p0, v0}, Lcom/vk/profile/data/d/b;->b(I)V
 
     .line 2
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->t1:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->t1:I
 
     invoke-virtual {p0, v0}, Lcom/vk/profile/data/d/b;->c(I)V
 
@@ -539,7 +539,7 @@
     if-gtz v0, :cond_0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/d/a;->c(Lcom/vkontakte/android/api/i;)I
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/d/a;->c(Lcom/vtosters/lite/api/i;)I
 
     move-result p1
 

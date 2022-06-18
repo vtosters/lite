@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/b0/a$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ProfileClosedForYoyStubItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/b0/a;",
         ">;"
     }
@@ -45,7 +45,7 @@
     const v0, 0x7f0d027a
 
     :goto_0
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -69,11 +69,11 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/a;->P()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/a;->P()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-boolean v0, v0, Lcom/vk/dto/user/UserProfile;->g:Z
 
@@ -110,11 +110,11 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/a;->P()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/a;->P()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->h:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->h:Ljava/lang/String;
 
     aput-object p1, v3, v4
 

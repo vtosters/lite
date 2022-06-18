@@ -23,7 +23,7 @@
 .method public abstract O()V
 .end method
 
-.method public abstract a(Ljava/lang/CharSequence;Lcom/vkontakte/android/attachments/PodcastAttachment;Lcom/vkontakte/android/u;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Ljava/lang/CharSequence;
+.method public abstract a(Ljava/lang/CharSequence;Lcom/vtosters/lite/attachments/PodcastAttachment;Lcom/vtosters/lite/u;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Ljava/lang/CharSequence;
 .end method
 
 .method public abstract a(Lcom/vk/dto/common/VideoFile;)V
@@ -32,7 +32,7 @@
 .method public abstract a(Lcom/vk/dto/common/VideoFile;Ljava/lang/String;)V
 .end method
 
-.method public abstract e()Lcom/vkontakte/android/ui/f0/a;
+.method public abstract e()Lcom/vtosters/lite/ui/f0/a;
 .end method
 
 .method public abstract finish()V

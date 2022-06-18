@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;I)Ljava/lang/String;
+.method public a(Lcom/vtosters/lite/ui/f0/b;I)Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -62,7 +62,7 @@
     return-object v0
 .end method
 
-.method public b(Lcom/vkontakte/android/ui/f0/b;)I
+.method public b(Lcom/vtosters/lite/ui/f0/b;)I
     .locals 0
 
     const/4 p1, 0x1
@@ -70,7 +70,7 @@
     return p1
 .end method
 
-.method public c(Lcom/vkontakte/android/ui/f0/b;)Ljava/lang/String;
+.method public c(Lcom/vtosters/lite/ui/f0/b;)Ljava/lang/String;
     .locals 2
 
     .line 1

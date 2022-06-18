@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/StoryViewActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "StoryViewActivity.java"
 
 # interfaces
@@ -40,7 +40,7 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
     sget-object v0, Lcom/vk/stories/StoriesController$SourceType;->SNIPPET:Lcom/vk/stories/StoriesController$SourceType;
@@ -249,7 +249,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -359,7 +359,7 @@
 
     .line 7
     :cond_0
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     return-void
 .end method
@@ -375,7 +375,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/b;
@@ -576,7 +576,7 @@
     invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/b;->b()V
 
     .line 3
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     return-void
 .end method
@@ -621,7 +621,7 @@
 
     .line 7
     :cond_1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     return-void
 .end method
@@ -630,7 +630,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
@@ -675,7 +675,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method

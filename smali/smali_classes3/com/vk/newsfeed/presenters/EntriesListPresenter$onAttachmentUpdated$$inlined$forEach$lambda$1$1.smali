@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentUpdated$$inlined$forEach$lambda$1;->a(Ljava/lang/Integer;Lcom/vkontakte/android/ui/f0/b;)V
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentUpdated$$inlined$forEach$lambda$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/c0$q;->a:Lb/h/g/k/a;
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     const v0, 0x7f120369
 

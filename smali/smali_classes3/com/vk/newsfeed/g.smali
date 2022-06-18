@@ -215,13 +215,13 @@
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v3}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/ui/WriteBar;->h()V
+    invoke-virtual {v3}, Lcom/vtosters/lite/ui/WriteBar;->h()V
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -257,13 +257,13 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/WriteBar;->h()V
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/WriteBar;->h()V
 
     goto :goto_1
 
@@ -432,7 +432,7 @@
 
     .line 18
     :cond_1
-    invoke-virtual {v3}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -454,11 +454,11 @@
     if-ne v4, v0, :cond_0
 
     .line 20
-    invoke-virtual {v3}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v3}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vkontakte/android/ui/WriteBar;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->a(IILandroid/content/Intent;)V
 
     nop
 

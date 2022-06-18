@@ -163,12 +163,12 @@
 
     if-eqz v7, :cond_1
 
-    sget-object v7, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v7, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
     goto :goto_0
 
     :cond_1
-    sget-object v7, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v7, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
     :goto_0
     new-array v8, v6, [Ljava/lang/Object;
@@ -182,7 +182,7 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v7}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p1, v7}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v10
 
@@ -197,7 +197,7 @@
     invoke-static {v8}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 31
-    invoke-static {p1, v7}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p1, v7}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v7
 
@@ -337,7 +337,7 @@
     .end annotation
 
     .line 40
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
     const/4 v1, 0x1
 
@@ -352,7 +352,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p1, v0}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v4
 
@@ -369,7 +369,7 @@
     invoke-static {v2}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 42
-    invoke-static {p1, v0}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p1, v0}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v0
 
@@ -853,9 +853,9 @@
     if-nez v4, :cond_6
 
     .line 8
-    sget-object v0, Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;
+    sget-object v0, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 

@@ -44,7 +44,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object v0
 
@@ -1126,7 +1126,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/sharing/target/o$a;-><init>(Lcom/vk/sharing/target/o;)V
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/Groups;->a(ILcom/vkontakte/android/data/Groups$e;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Groups;->a(ILcom/vtosters/lite/data/Groups$e;)V
 
     return-void
 .end method
@@ -1156,7 +1156,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/sharing/target/o$d;-><init>(Lcom/vk/sharing/target/o;)V
 
-    invoke-static {p1, v0, v1}, Lcom/vkontakte/android/data/Groups;->a(Ljava/lang/String;ILcom/vkontakte/android/data/Groups$f;)V
+    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/data/Groups;->a(Ljava/lang/String;ILcom/vtosters/lite/data/Groups$f;)V
 
     return-void
 .end method

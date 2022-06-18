@@ -26,7 +26,7 @@
 
 .field private final H:Landroid/view/View;
 
-.field private I:Lcom/vkontakte/android/ui/f0/b;
+.field private I:Lcom/vtosters/lite/ui/f0/b;
 
 
 # direct methods
@@ -104,7 +104,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -139,11 +139,11 @@
     .locals 8
 
     .line 6
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/u0;->I:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/u0;->I:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     move v5, v0
 
@@ -230,11 +230,11 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/u0;->I:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/u0;->I:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     goto :goto_0
 
@@ -283,7 +283,7 @@
     .line 1
     new-instance v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -325,7 +325,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -363,7 +363,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const/16 v2, 0x80
 
@@ -374,14 +374,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/u0;->I:Lcom/vkontakte/android/ui/f0/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/u0;->I:Lcom/vtosters/lite/ui/f0/b;
 
     .line 5
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method

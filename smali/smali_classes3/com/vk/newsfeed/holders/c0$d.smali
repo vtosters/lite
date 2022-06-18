@@ -52,7 +52,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v1
 
@@ -60,7 +60,7 @@
 
     move-result-object p1
 
-    iput-object p1, v1, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iput-object p1, v1, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
@@ -71,13 +71,13 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    iput v0, p1, Lcom/vkontakte/android/NewsComment;->B:I
+    iput v0, p1, Lcom/vtosters/lite/NewsComment;->B:I
 
     goto :goto_0
 

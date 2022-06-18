@@ -508,7 +508,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/PollAttachment;
 
     move-object v10, v2
 
@@ -521,7 +521,7 @@
     if-eqz v10, :cond_6
 
     .line 10
-    invoke-virtual {v10}, Lcom/vkontakte/android/attachments/PollAttachment;->b()I
+    invoke-virtual {v10}, Lcom/vtosters/lite/attachments/PollAttachment;->b()I
 
     move-result v1
 
@@ -564,7 +564,7 @@
 
     move-object v7, v1
 
-    invoke-direct/range {v7 .. v16}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vkontakte/android/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v16}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
 
     iput-object v1, v0, Lcom/vk/poll/fragments/PollEditorFragment;->F:Lcom/vk/poll/fragments/PollEditorScreen;
 
@@ -751,20 +751,20 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v1, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     .line 2
     :cond_1
@@ -904,18 +904,18 @@
 
     move-result-object p1
 
-    instance-of p2, p1, Lcom/vkontakte/android/VKActivity;
+    instance-of p2, p1, Lcom/vtosters/lite/VKActivity;
 
     if-nez p2, :cond_2
 
     move-object p1, v0
 
     :cond_2
-    check-cast p1, Lcom/vkontakte/android/VKActivity;
+    check-cast p1, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     .line 9
     :cond_3

@@ -14,7 +14,7 @@
 
 .field private final J:Lcom/vk/core/view/AdsButton;
 
-.field private K:Lcom/vkontakte/android/ui/f0/b;
+.field private K:Lcom/vtosters/lite/ui/f0/b;
 
 
 # direct methods
@@ -97,14 +97,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/n0;->K:Lcom/vkontakte/android/ui/f0/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/n0;->K:Lcom/vtosters/lite/ui/f0/b;
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -118,16 +118,16 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;
 
     if-eqz v0, :cond_5
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/n0;->H:Landroid/widget/TextView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->getTitle()Ljava/lang/String;
 
     move-result-object v1
 
@@ -136,7 +136,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/n0;->I:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->K1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->K1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -145,14 +145,14 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/n0;->J:Lcom/vk/core/view/AdsButton;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->J1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->J1()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 7
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -179,13 +179,13 @@
 
     .line 10
     :goto_0
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/n0;->K:Lcom/vkontakte/android/ui/f0/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/n0;->K:Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     goto :goto_1
 
@@ -247,7 +247,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/n0;->K:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/n0;->K:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
@@ -255,7 +255,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -281,7 +281,7 @@
 
     if-eqz v0, :cond_b
 
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;
 
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/n0;->J:Lcom/vk/core/view/AdsButton;
@@ -297,13 +297,13 @@
     if-eqz p1, :cond_5
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
 
     move-result-object v3
 
@@ -319,26 +319,26 @@
     move-object v3, v2
 
     :goto_0
-    invoke-virtual {p1, v3}, Lcom/vkontakte/android/data/PostInteract;->f(Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/data/PostInteract;->f(Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    sget-object v3, Lcom/vkontakte/android/data/PostInteract$Type;->snippet_button_action:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v3, Lcom/vtosters/lite/data/PostInteract$Type;->snippet_button_action:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v3}, Lcom/vkontakte/android/data/PostInteract;->b(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/data/PostInteract;->b(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     .line 5
     :cond_2
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->H1()Lcom/vk/dto/newsfeed/ButtonAction;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->H1()Lcom/vk/dto/newsfeed/ButtonAction;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -348,21 +348,21 @@
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->H1()Lcom/vk/dto/newsfeed/ButtonAction;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->H1()Lcom/vk/dto/newsfeed/ButtonAction;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Lcom/vkontakte/android/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;)V
 
     goto/16 :goto_3
 
     .line 7
     :cond_3
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->I1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->I1()Ljava/lang/String;
 
     move-result-object p1
 
@@ -373,7 +373,7 @@
     if-nez p1, :cond_a
 
     .line 8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -383,15 +383,15 @@
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->I1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->I1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->M1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->M1()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
 
     move-result-object v0
 
@@ -408,13 +408,13 @@
 
     .line 9
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_7
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
 
     move-result-object v3
 
@@ -430,19 +430,19 @@
     move-object v3, v2
 
     :goto_1
-    invoke-virtual {p1, v3}, Lcom/vkontakte/android/data/PostInteract;->f(Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/data/PostInteract;->f(Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_7
 
-    sget-object v3, Lcom/vkontakte/android/data/PostInteract$Type;->snippet_action:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v3, Lcom/vtosters/lite/data/PostInteract$Type;->snippet_action:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v3}, Lcom/vkontakte/android/data/PostInteract;->b(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/data/PostInteract;->b(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     .line 10
     :cond_7
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -452,7 +452,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
 
     move-result-object v1
 
@@ -468,11 +468,11 @@
     move-object v1, v2
 
     :goto_2
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->M1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->M1()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->L1()Lcom/vk/dto/newsfeed/AwayLink;
 
     move-result-object v0
 

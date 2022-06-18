@@ -68,7 +68,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation

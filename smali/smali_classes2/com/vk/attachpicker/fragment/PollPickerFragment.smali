@@ -42,7 +42,7 @@
     sget-object v0, Lcom/vk/poll/fragments/PollEditorFragment$a;->S0:Lcom/vk/poll/fragments/PollEditorFragment$a$a;
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

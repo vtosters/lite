@@ -10,10 +10,10 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation

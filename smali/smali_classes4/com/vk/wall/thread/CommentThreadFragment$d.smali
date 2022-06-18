@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadFragment;->a(Lcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+    value = Lcom/vk/wall/thread/CommentThreadFragment;->a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,20 +20,20 @@
 # instance fields
 .field final synthetic a:Lcom/vk/wall/thread/CommentThreadFragment;
 
-.field final synthetic b:Lcom/vkontakte/android/NewsComment;
+.field final synthetic b:Lcom/vtosters/lite/NewsComment;
 
-.field final synthetic c:Lcom/vkontakte/android/ui/b0/m/c;
+.field final synthetic c:Lcom/vtosters/lite/ui/b0/m/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/thread/CommentThreadFragment;Lcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+.method constructor <init>(Lcom/vk/wall/thread/CommentThreadFragment;Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->a:Lcom/vk/wall/thread/CommentThreadFragment;
 
-    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->b:Lcom/vkontakte/android/NewsComment;
+    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->b:Lcom/vtosters/lite/NewsComment;
 
-    iput-object p3, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->c:Lcom/vkontakte/android/ui/b0/m/c;
+    iput-object p3, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->c:Lcom/vtosters/lite/ui/b0/m/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,11 +61,11 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->c:Lcom/vkontakte/android/ui/b0/m/c;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadFragment$d;->c:Lcom/vtosters/lite/ui/b0/m/c;
 
-    invoke-interface {p1, p2, v0, v1}, Lcom/vk/wall/e;->a(ILcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+    invoke-interface {p1, p2, v0, v1}, Lcom/vk/wall/e;->a(ILcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
 
     :cond_0
     return-void

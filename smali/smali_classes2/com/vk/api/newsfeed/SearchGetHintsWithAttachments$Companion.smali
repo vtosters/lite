@@ -165,7 +165,7 @@
     if-eqz v5, :cond_3
 
     .line 12
-    invoke-static {v5, v2}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v5, v2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v5
 

@@ -45,7 +45,7 @@
 
     move-result v1
 
-    invoke-static {p1, p2}, Lcom/vkontakte/android/im/ImCompat;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/im/ImCompat;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -76,7 +76,7 @@
 
     move-result v1
 
-    invoke-static {p1, p2}, Lcom/vkontakte/android/im/ImCompat;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/im/ImCompat;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -115,9 +115,9 @@
 
     move-result-object v2
 
-    sget-object v0, Lcom/vkontakte/android/im/ImCompat;->d:Lcom/vkontakte/android/im/ImCompat;
+    sget-object v0, Lcom/vtosters/lite/im/ImCompat;->d:Lcom/vtosters/lite/im/ImCompat;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/im/ImCompat;->a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/ImCompat;->a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v3
 

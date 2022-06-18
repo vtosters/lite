@@ -30,7 +30,7 @@
     const-string v0, "catch_up_link_action"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -39,7 +39,7 @@
     const-string v2, "impression"
 
     .line 2
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/dto/profile/HeaderCatchUpLink;->s1()Ljava/lang/String;
@@ -48,10 +48,10 @@
 
     const-string v1, "track_code"
 
-    invoke-virtual {v0, v1, p0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     const-string v0, "catch_up_link_action"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
     const-string v2, "click"
 
     .line 2
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/dto/profile/HeaderCatchUpLink;->s1()Ljava/lang/String;
@@ -80,10 +80,10 @@
 
     const-string v1, "track_code"
 
-    invoke-virtual {v0, v1, p0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
     const-string v0, "catch_up_link_action"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     const-string v2, "hide"
 
     .line 2
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/dto/profile/HeaderCatchUpLink;->s1()Ljava/lang/String;
@@ -112,10 +112,10 @@
 
     const-string v1, "track_code"
 
-    invoke-virtual {v0, v1, p0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

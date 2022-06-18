@@ -69,7 +69,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$f;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vkontakte/android/ui/adapters/g;
+    invoke-static {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/g;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vkontakte/android/ui/adapters/g;->m(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lcom/vtosters/lite/ui/adapters/g;->m(Ljava/util/List;)V
 
     goto :goto_1
 
@@ -103,7 +103,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$f;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vkontakte/android/ui/adapters/g;
+    invoke-static {p1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/g;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/adapters/g;->m(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/adapters/g;->m(Ljava/util/List;)V
 
     :cond_2
     :goto_1

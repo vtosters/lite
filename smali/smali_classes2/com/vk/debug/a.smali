@@ -208,7 +208,7 @@
     invoke-virtual {p2, v0}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
-    invoke-static {p0, p2}, Lcom/vkontakte/android/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p2}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 6
     new-instance v0, Lcom/vk/debug/a$d;

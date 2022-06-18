@@ -53,15 +53,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/NewsComment;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/NewsComment;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/NewsComment;",
+            "Lcom/vtosters/lite/NewsComment;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -69,7 +69,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-static {v0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vkontakte/android/NewsComment;)V
+    invoke-static {v0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vtosters/lite/NewsComment;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->b:Lc/a/m;
@@ -81,9 +81,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/NewsComment;
+    check-cast p1, Lcom/vtosters/lite/NewsComment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$m;->a(Lcom/vkontakte/android/NewsComment;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$m;->a(Lcom/vtosters/lite/NewsComment;)Lc/a/m;
 
     move-result-object p1
 

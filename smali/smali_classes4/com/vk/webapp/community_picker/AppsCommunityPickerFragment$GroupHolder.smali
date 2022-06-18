@@ -1,5 +1,5 @@
 .class public final Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$GroupHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "AppsCommunityPickerFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/apps/AppsGroupsContainer;",
         ">;"
     }
@@ -48,7 +48,7 @@
 
     const p1, 0x7f0d0050
 
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -116,7 +116,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/apps/AppsGroupsContainer;
 

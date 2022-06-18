@@ -10,7 +10,7 @@
         value = {
             "(",
             "Lcom/vk/newsfeed/contracts/u<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;",
             "Lcom/vk/music/player/d;",
             ")V"

@@ -84,7 +84,7 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 5
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->b(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->b(Landroid/app/Dialog;)V
 
     .line 6
     iget-object v2, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;

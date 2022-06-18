@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder$width$2;->this$0:Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 

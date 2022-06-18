@@ -12,7 +12,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -23,10 +23,10 @@
         value = {
             "(I",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
             "Ljava/lang/String;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -51,10 +51,10 @@
 .method public abstract a(I)Z
 .end method
 
-.method public abstract a(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)Z
+.method public abstract a(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Z
 .end method
 
-.method public abstract b(I)Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+.method public abstract b(I)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 .end method
 
 .method public abstract c(I)V

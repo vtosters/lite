@@ -68,7 +68,7 @@
 .method public abstract a(Lcom/vk/sharing/l;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+.method public abstract a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
 .end method
 
 .method public abstract a(Lio/reactivex/disposables/b;)V
@@ -89,10 +89,10 @@
 .method public abstract c(ILjava/lang/String;)V
 .end method
 
-.method public abstract c(Lcom/vkontakte/android/NewsComment;)Z
+.method public abstract c(Lcom/vtosters/lite/NewsComment;)Z
 .end method
 
-.method public abstract d(Lcom/vkontakte/android/NewsComment;)V
+.method public abstract d(Lcom/vtosters/lite/NewsComment;)V
 .end method
 
 .method public abstract e3()Z

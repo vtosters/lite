@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const/16 v2, 0x64
 
@@ -70,7 +70,7 @@
     .line 1
     new-instance v0, Landroid/webkit/WebView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     invoke-direct {v0, v1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -106,7 +106,7 @@
     .line 3
     new-instance v1, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v4
 
@@ -188,7 +188,7 @@
     invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
 
     .line 5
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -250,7 +250,7 @@
     .line 1
     new-instance v0, Lcom/vk/api/adsint/AdsintHideAd;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -272,7 +272,7 @@
     move-result-object v3
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -316,7 +316,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -331,14 +331,14 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-static {v0, v1}, Lcom/vkontakte/android/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
 
     :cond_0
     return-void
@@ -358,7 +358,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     .line 3
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -366,7 +366,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v3, "item"
 
@@ -377,7 +377,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/webapp/fragments/j$a;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 

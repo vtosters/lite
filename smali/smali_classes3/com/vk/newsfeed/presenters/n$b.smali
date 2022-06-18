@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+        "Lcom/vtosters/lite/api/wall/WallGet$Result;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/WallGet$Result;)V
+.method public final a(Lcom/vtosters/lite/api/wall/WallGet$Result;)V
     .locals 0
 
     .line 1
@@ -61,9 +61,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/WallGet$Result;
+    check-cast p1, Lcom/vtosters/lite/api/wall/WallGet$Result;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/n$b;->a(Lcom/vkontakte/android/api/wall/WallGet$Result;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/n$b;->a(Lcom/vtosters/lite/api/wall/WallGet$Result;)V
 
     return-void
 .end method

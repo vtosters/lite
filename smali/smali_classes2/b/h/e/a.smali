@@ -296,7 +296,7 @@
 
     .line 13
     :cond_6
-    const-class v1, Lcom/vkontakte/android/fragments/y2/z;
+    const-class v1, Lcom/vtosters/lite/fragments/y2/z;
 
     invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
@@ -356,7 +356,7 @@
 
     .line 16
     :cond_9
-    const-class v1, Lcom/vkontakte/android/fragments/y2/x;
+    const-class v1, Lcom/vtosters/lite/fragments/y2/x;
 
     invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 
@@ -425,7 +425,7 @@
 
     .line 19
     :cond_a
-    const-class v1, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;
 
     invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
 

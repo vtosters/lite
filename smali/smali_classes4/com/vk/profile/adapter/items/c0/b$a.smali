@@ -15,11 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vkontakte/android/api/i;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/api/i;)V
     .locals 2
 
     .line 1
-    iget-object p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->q:Lcom/vk/dto/user/deactivation/Deactivation;
+    iget-object p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->q:Lcom/vk/dto/user/deactivation/Deactivation;
 
     invoke-interface {p1}, Lcom/vk/dto/user/deactivation/Deactivation;->m()Ljava/lang/String;
 

@@ -89,15 +89,15 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vkontakte/android/fragments/gifts/j$d;
+    new-instance v0, Lcom/vtosters/lite/fragments/gifts/j$d;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/gifts/j$d;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/gifts/j$d;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/gifts/j$d;->a(Lcom/vk/dto/user/UserProfileGift;)Lcom/vkontakte/android/fragments/gifts/j$d;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/j$d;->a(Lcom/vk/dto/user/UserProfileGift;)Lcom/vtosters/lite/fragments/gifts/j$d;
 
     iget-object p1, p1, Lcom/vk/dto/user/UserProfileGift;->i0:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/gifts/j$d;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/gifts/j$d;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/j$d;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/gifts/j$d;
 
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$t;->a:Landroid/content/Context;
 

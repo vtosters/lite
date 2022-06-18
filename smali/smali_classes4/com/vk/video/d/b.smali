@@ -6,7 +6,7 @@
 .implements Lcom/vk/navigation/b0/m;
 .implements Lcom/vk/navigation/b0/f;
 .implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$b;
+.implements Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;
 
 
 # annotations
@@ -20,7 +20,7 @@
 # instance fields
 .field private F:Landroid/webkit/WebView;
 
-.field private G:Lcom/vkontakte/android/ui/CircularProgressBar;
+.field private G:Lcom/vtosters/lite/ui/CircularProgressBar;
 
 .field private H:Lcom/vk/core/ui/FrameLayoutWithInterceptTouchEvent;
 
@@ -593,11 +593,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+.method public static final synthetic c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/video/d/b;->G:Lcom/vkontakte/android/ui/CircularProgressBar;
+    iget-object p0, p0, Lcom/vk/video/d/b;->G:Lcom/vtosters/lite/ui/CircularProgressBar;
 
     if-eqz p0, :cond_0
 
@@ -704,13 +704,13 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     iget-object v3, p0, Lcom/vk/video/d/b;->I:Lcom/vk/dto/common/VideoFile;
 
     if-eqz v3, :cond_0
 
-    invoke-direct {v2, v3}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v2, v3}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     invoke-interface {v0, v1, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
@@ -732,13 +732,13 @@
         value = {
             "(I)",
             "Lc/a/t<",
-            "Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;",
+            "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    new-instance p1, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     iget-object v0, p0, Lcom/vk/video/d/b;->I:Lcom/vk/dto/common/VideoFile;
 
@@ -758,7 +758,7 @@
 
     iget-object v0, v0, Lcom/vk/dto/common/VideoFile;->v0:Ljava/lang/String;
 
-    invoke-direct {p1, v3, v4, v0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v3, v4, v0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p1}, Lc/a/t;->b(Ljava/lang/Object;)Lc/a/t;
 
@@ -1087,9 +1087,9 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vkontakte/android/ui/CircularProgressBar;
+    check-cast p1, Lcom/vtosters/lite/ui/CircularProgressBar;
 
-    iput-object p1, p0, Lcom/vk/video/d/b;->G:Lcom/vkontakte/android/ui/CircularProgressBar;
+    iput-object p1, p0, Lcom/vk/video/d/b;->G:Lcom/vtosters/lite/ui/CircularProgressBar;
 
     .line 5
     iget-object p1, p0, Lcom/vk/video/d/b;->F:Landroid/webkit/WebView;
@@ -1168,7 +1168,7 @@
 
     .line 12
     :cond_0
-    iget-object p1, p0, Lcom/vk/video/d/b;->G:Lcom/vkontakte/android/ui/CircularProgressBar;
+    iget-object p1, p0, Lcom/vk/video/d/b;->G:Lcom/vtosters/lite/ui/CircularProgressBar;
 
     if-eqz p1, :cond_4
 

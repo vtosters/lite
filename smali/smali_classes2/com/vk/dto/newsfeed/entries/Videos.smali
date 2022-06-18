@@ -203,7 +203,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
@@ -211,7 +211,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
@@ -242,7 +242,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -265,7 +265,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
@@ -273,7 +273,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
@@ -304,7 +304,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -327,13 +327,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -436,21 +436,21 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
     iput p1, v1, Lcom/vk/dto/common/VideoFile;->P:I
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -472,13 +472,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -499,13 +499,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -521,14 +521,14 @@
     .locals 5
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -544,7 +544,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -560,14 +560,14 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v4
 
     if-eq v1, v4, :cond_2
 
     .line 7
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -646,13 +646,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -668,13 +668,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -690,13 +690,13 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -712,13 +712,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -801,13 +801,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -828,13 +828,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -936,7 +936,7 @@
     if-ne v0, v2, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
@@ -950,7 +950,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
@@ -962,7 +962,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -997,7 +997,7 @@
     if-ne v0, v2, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
@@ -1007,7 +1007,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
@@ -1019,7 +1019,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -1035,7 +1035,7 @@
     return-object v1
 .end method
 
-.method public final y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+.method public final y1()Lcom/vtosters/lite/attachments/VideoAttachment;
     .locals 3
 
     .line 1
@@ -1057,14 +1057,14 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v2, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     return-object v0
 .end method

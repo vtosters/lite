@@ -210,7 +210,7 @@
     :cond_2
     new-instance p0, Lcom/vk/api/stories/l;
 
-    invoke-static {}, Lcom/vkontakte/android/utils/b;->a()Lb/h/c/b/a;
+    invoke-static {}, Lcom/vtosters/lite/utils/b;->a()Lb/h/c/b/a;
 
     move-result-object v2
 
@@ -222,7 +222,7 @@
     :cond_3
     new-instance p0, Lcom/vk/api/stories/l;
 
-    invoke-static {}, Lcom/vkontakte/android/utils/b;->a()Lb/h/c/b/a;
+    invoke-static {}, Lcom/vtosters/lite/utils/b;->a()Lb/h/c/b/a;
 
     move-result-object v2
 

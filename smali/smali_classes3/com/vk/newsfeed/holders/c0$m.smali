@@ -3,12 +3,12 @@
 .source "InlineWriteBarHolder.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/upload/h$b;
+.implements Lcom/vtosters/lite/upload/h$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/c0;->a(Lcom/vkontakte/android/attachments/b;)V
+    value = Lcom/vk/newsfeed/holders/c0;->a(Lcom/vtosters/lite/attachments/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -65,7 +65,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/holders/c0$m;->b:Lb/h/g/k/a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     const p1, 0x7f120369
 
@@ -92,7 +92,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/holders/c0$m;->b:Lb/h/g/k/a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/newsfeed/holders/c0$m;->a:Lcom/vk/newsfeed/holders/c0;

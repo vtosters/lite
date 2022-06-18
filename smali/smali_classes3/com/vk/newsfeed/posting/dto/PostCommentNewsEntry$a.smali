@@ -79,7 +79,7 @@
     move-result-object v4
 
     .line 7
-    const-class v0, Lcom/vkontakte/android/NewsComment;
+    const-class v0, Lcom/vtosters/lite/NewsComment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -91,12 +91,12 @@
 
     move-object v5, p1
 
-    check-cast v5, Lcom/vkontakte/android/NewsComment;
+    check-cast v5, Lcom/vtosters/lite/NewsComment;
 
     move-object v0, v6
 
     .line 8
-    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;-><init>(IILjava/lang/String;Ljava/lang/String;Lcom/vkontakte/android/NewsComment;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;-><init>(IILjava/lang/String;Ljava/lang/String;Lcom/vtosters/lite/NewsComment;)V
 
     return-object v6
 .end method

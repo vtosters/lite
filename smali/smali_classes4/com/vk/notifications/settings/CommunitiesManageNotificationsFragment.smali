@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field private final F:Lcom/vkontakte/android/ui/adapters/a;
+.field private final F:Lcom/vtosters/lite/ui/adapters/a;
 
 .field private final G:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;
 
@@ -46,15 +46,15 @@
     invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/ui/adapters/a;
+    new-instance v0, Lcom/vtosters/lite/ui/adapters/a;
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    iput-object v0, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vkontakte/android/ui/adapters/a;
+    iput-object v0, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vtosters/lite/ui/adapters/a;
 
     .line 3
     new-instance v0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;
@@ -186,11 +186,11 @@
 
 
 # virtual methods
-.method public final P4()Lcom/vkontakte/android/ui/adapters/a;
+.method public final P4()Lcom/vtosters/lite/ui/adapters/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vkontakte/android/ui/adapters/a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vtosters/lite/ui/adapters/a;
 
     return-object v0
 .end method
@@ -380,7 +380,7 @@
 
     if-eqz p2, :cond_8
 
-    iget-object v2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vkontakte/android/ui/adapters/a;
+    iget-object v2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vtosters/lite/ui/adapters/a;
 
     invoke-virtual {p2, v2}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -390,12 +390,12 @@
     invoke-direct {p2, p0}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$a;-><init>(Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;)V
 
     .line 9
-    iget-object v2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vkontakte/android/ui/adapters/a;
+    iget-object v2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vtosters/lite/ui/adapters/a;
 
     invoke-virtual {v2, p2}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 10
-    iget-object p2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vkontakte/android/ui/adapters/a;
+    iget-object p2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vtosters/lite/ui/adapters/a;
 
     iget-object v2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->G:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;
 
@@ -438,7 +438,7 @@
 
     invoke-direct {v2}, Lcom/vk/core/ui/m;-><init>()V
 
-    iget-object v3, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vkontakte/android/ui/adapters/a;
+    iget-object v3, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->F:Lcom/vtosters/lite/ui/adapters/a;
 
     invoke-virtual {v2, v3}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
 

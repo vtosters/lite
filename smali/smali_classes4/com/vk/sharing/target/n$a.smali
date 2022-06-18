@@ -79,7 +79,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/sharing/target/n$a;->b:Lcom/vk/sharing/target/n;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

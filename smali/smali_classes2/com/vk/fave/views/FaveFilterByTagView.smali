@@ -241,16 +241,16 @@
     move-result-object p2
 
     .line 8
-    instance-of p3, p2, Lcom/vkontakte/android/VKActivity;
+    instance-of p3, p2, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p3, :cond_2
 
     if-eqz p1, :cond_2
 
     .line 9
-    check-cast p2, Lcom/vkontakte/android/VKActivity;
+    check-cast p2, Lcom/vtosters/lite/VKActivity;
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     :cond_2
     return-void

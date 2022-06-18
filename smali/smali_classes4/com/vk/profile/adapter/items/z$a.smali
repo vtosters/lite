@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/adapter/items/z$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ViewInfoItem.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/z;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/profile/adapter/items/z;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;"
     }
@@ -34,7 +34,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/c0/b$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StubMessageItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/c0/b;",
         ">;"
     }
@@ -31,7 +31,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-boolean p3, p0, Lcom/vk/profile/adapter/items/c0/b$b;->c:Z
 

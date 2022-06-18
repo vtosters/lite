@@ -106,7 +106,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/GeoAttachment;)Ljava/lang/CharSequence;
+.method private final a(Lcom/vtosters/lite/attachments/GeoAttachment;)Ljava/lang/CharSequence;
     .locals 4
 
     .line 2
@@ -116,7 +116,7 @@
     invoke-static {v0}, Lkotlin/text/l;->b(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     .line 4
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->g:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->g:Ljava/lang/String;
 
     const/4 v2, 0x0
 
@@ -145,13 +145,13 @@
     if-nez v1, :cond_2
 
     .line 5
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->g:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 6
     :cond_2
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->h:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->h:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
@@ -199,7 +199,7 @@
 
     .line 9
     :cond_6
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->h:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->h:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,7 +219,7 @@
     const p1, 0x7f120aca
 
     .line 11
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -260,16 +260,16 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/m0;->H:Landroid/widget/TextView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/attachments/m0;->a(Lcom/vkontakte/android/attachments/GeoAttachment;)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/attachments/m0;->a(Lcom/vtosters/lite/attachments/GeoAttachment;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -352,12 +352,12 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -369,9 +369,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vkontakte/android/attachments/GeoAttachment;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vtosters/lite/attachments/GeoAttachment;)V
 
     :cond_0
     return-void

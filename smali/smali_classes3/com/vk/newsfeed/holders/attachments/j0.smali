@@ -114,14 +114,14 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_e
 
     .line 4
     sget-object v0, Lcom/vk/newsfeed/holders/h;->E:Lcom/vk/newsfeed/holders/h$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -144,9 +144,9 @@
     .line 5
     move-object v1, p1
 
-    check-cast v1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object v2, v1, Lcom/vkontakte/android/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
+    iget-object v2, v1, Lcom/vtosters/lite/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
 
     const/4 v3, 0x0
 
@@ -224,7 +224,7 @@
 
     if-ne v2, v5, :cond_4
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
 
     if-eqz v1, :cond_3
 
@@ -280,7 +280,7 @@
     goto :goto_2
 
     :cond_6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -305,7 +305,7 @@
     goto :goto_3
 
     :cond_7
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -323,7 +323,7 @@
     div-float v1, v2, v1
 
     .line 14
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -400,7 +400,7 @@
     if-eqz v3, :cond_c
 
     .line 19
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -416,7 +416,7 @@
     if-eqz v3, :cond_d
 
     .line 20
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 

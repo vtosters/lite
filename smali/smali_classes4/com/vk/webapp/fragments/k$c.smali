@@ -184,7 +184,7 @@
 
     invoke-direct {p1, p0, v0}, Lcom/vk/webapp/fragments/k$c$a;-><init>(Lcom/vk/webapp/fragments/k$c;Lorg/json/JSONObject;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

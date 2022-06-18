@@ -157,7 +157,7 @@
 
     .line 9
     :goto_0
-    invoke-static {}, Lcom/vkontakte/android/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/w;->b()I
 
     move-result v3
 
@@ -406,7 +406,7 @@
     if-le p1, p2, :cond_6
 
     .line 12
-    invoke-static {}, Lcom/vkontakte/android/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/w;->b()I
 
     move-result p1
 

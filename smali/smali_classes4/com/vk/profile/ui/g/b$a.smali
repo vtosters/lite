@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/g/b$a;
-.super Lcom/vkontakte/android/fragments/y2/z$a;
+.super Lcom/vtosters/lite/fragments/y2/z$a;
 .source "ProfileVideoCatalogFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vk/profile/ui/g/b;
 
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vkontakte/android/fragments/y2/z$a;-><init>(Ljava/lang/Class;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vtosters/lite/fragments/y2/z$a;-><init>(Ljava/lang/Class;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

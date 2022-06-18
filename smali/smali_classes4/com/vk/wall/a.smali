@@ -20,17 +20,17 @@
 
 .field private h:I
 
-.field private final i:Lcom/vkontakte/android/NewsComment;
+.field private final i:Lcom/vtosters/lite/NewsComment;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/NewsComment;)V
+.method public constructor <init>(Lcom/vtosters/lite/NewsComment;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iput-object p1, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
     const/4 p1, 0x1
 
@@ -84,9 +84,9 @@
 
     .line 8
     :cond_0
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-boolean v4, v2, Lcom/vkontakte/android/NewsComment;->J:Z
+    iget-boolean v4, v2, Lcom/vtosters/lite/NewsComment;->J:Z
 
     const/4 v5, 0x0
 
@@ -94,23 +94,23 @@
 
     if-nez v4, :cond_3
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/NewsComment;->R0()Z
+    invoke-virtual {v2}, Lcom/vtosters/lite/NewsComment;->R0()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/NewsComment;->e1()Z
+    invoke-virtual {v2}, Lcom/vtosters/lite/NewsComment;->e1()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v2, v2, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iget-object v2, v2, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
@@ -187,7 +187,7 @@
 
     if-nez v2, :cond_6
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -198,9 +198,9 @@
     if-lez v2, :cond_6
 
     .line 15
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-boolean v2, v2, Lcom/vkontakte/android/NewsComment;->J:Z
+    iget-boolean v2, v2, Lcom/vtosters/lite/NewsComment;->J:Z
 
     if-nez v2, :cond_6
 
@@ -228,13 +228,13 @@
 
     .line 18
     :cond_6
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-boolean v4, v2, Lcom/vkontakte/android/NewsComment;->J:Z
+    iget-boolean v4, v2, Lcom/vtosters/lite/NewsComment;->J:Z
 
     if-nez v4, :cond_7
 
-    iget v2, v2, Lcom/vkontakte/android/NewsComment;->H:I
+    iget v2, v2, Lcom/vtosters/lite/NewsComment;->H:I
 
     if-lez v2, :cond_7
 
@@ -254,9 +254,9 @@
 
     const v4, 0x7f100011
 
-    iget-object v7, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v7, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget v7, v7, Lcom/vkontakte/android/NewsComment;->H:I
+    iget v7, v7, Lcom/vtosters/lite/NewsComment;->H:I
 
     new-array v8, v6, [Ljava/lang/Object;
 
@@ -274,18 +274,18 @@
 
     .line 21
     :cond_7
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-boolean v4, v2, Lcom/vkontakte/android/NewsComment;->D:Z
+    iget-boolean v4, v2, Lcom/vtosters/lite/NewsComment;->D:Z
 
     const/16 v7, 0x65
 
     if-nez v4, :cond_b
 
-    iget v2, v2, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v2, v2, Lcom/vtosters/lite/NewsComment;->h:I
 
     .line 22
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
@@ -298,7 +298,7 @@
     iget v2, p0, Lcom/vk/wall/a;->g:I
 
     .line 23
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
@@ -311,7 +311,7 @@
     iget v2, p0, Lcom/vk/wall/a;->h:I
 
     .line 24
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
@@ -323,7 +323,7 @@
 
     iget v2, p0, Lcom/vk/wall/a;->g:I
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
@@ -338,9 +338,9 @@
 
     if-eqz v2, :cond_9
 
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget v2, v2, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v2, v2, Lcom/vtosters/lite/NewsComment;->h:I
 
     if-eq v2, v7, :cond_9
 
@@ -349,16 +349,16 @@
     if-ne v2, v4, :cond_b
 
     :cond_9
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget v2, v2, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v2, v2, Lcom/vtosters/lite/NewsComment;->h:I
 
     if-gez v2, :cond_a
 
     neg-int v2, v2
 
     .line 25
-    invoke-static {v2}, Lcom/vkontakte/android/data/Groups;->a(I)I
+    invoke-static {v2}, Lcom/vtosters/lite/data/Groups;->a(I)I
 
     move-result v2
 
@@ -377,9 +377,9 @@
 
     .line 26
     :goto_3
-    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-boolean v3, v3, Lcom/vkontakte/android/NewsComment;->J:Z
+    iget-boolean v3, v3, Lcom/vtosters/lite/NewsComment;->J:Z
 
     if-nez v3, :cond_e
 
@@ -404,11 +404,11 @@
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 29
-    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget v3, v3, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v3, v3, Lcom/vtosters/lite/NewsComment;->h:I
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
@@ -418,15 +418,15 @@
 
     if-eq v3, v4, :cond_d
 
-    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget v3, v3, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v3, v3, Lcom/vtosters/lite/NewsComment;->h:I
 
     if-gez v3, :cond_c
 
     neg-int v3, v3
 
-    invoke-static {v3}, Lcom/vkontakte/android/data/Groups;->a(I)I
+    invoke-static {v3}, Lcom/vtosters/lite/data/Groups;->a(I)I
 
     move-result v3
 
@@ -451,9 +451,9 @@
 
     if-eqz v3, :cond_e
 
-    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v3, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/NewsComment;->t1()Z
+    invoke-virtual {v3}, Lcom/vtosters/lite/NewsComment;->t1()Z
 
     move-result v3
 
@@ -481,16 +481,16 @@
     if-nez v2, :cond_f
 
     .line 33
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget-boolean v3, v2, Lcom/vkontakte/android/NewsComment;->J:Z
+    iget-boolean v3, v2, Lcom/vtosters/lite/NewsComment;->J:Z
 
     if-nez v3, :cond_f
 
-    iget v2, v2, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v2, v2, Lcom/vtosters/lite/NewsComment;->h:I
 
     .line 34
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
@@ -501,7 +501,7 @@
     if-eq v2, v3, :cond_f
 
     .line 35
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -527,9 +527,9 @@
     if-eqz v3, :cond_11
 
     .line 37
-    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/a;->i:Lcom/vtosters/lite/NewsComment;
 
-    iget v2, v2, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v2, v2, Lcom/vtosters/lite/NewsComment;->h:I
 
     if-eq v2, v7, :cond_10
 

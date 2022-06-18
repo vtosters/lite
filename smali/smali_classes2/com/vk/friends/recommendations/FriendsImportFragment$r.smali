@@ -73,12 +73,12 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 4
-    new-instance v1, Lcom/vkontakte/android/utils/j;
+    new-instance v1, Lcom/vtosters/lite/utils/j;
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/utils/j;-><init>(Lcom/twitter/sdk/android/core/t;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/utils/j;-><init>(Lcom/twitter/sdk/android/core/t;)V
 
     .line 5
-    invoke-virtual {v1}, Lcom/vkontakte/android/utils/j;->b()Lcom/vkontakte/android/utils/TwitterService;
+    invoke-virtual {v1}, Lcom/vtosters/lite/utils/j;->b()Lcom/vtosters/lite/utils/TwitterService;
 
     move-result-object v2
 
@@ -88,7 +88,7 @@
 
     const/16 v3, 0x1388
 
-    invoke-interface {v2, v5, v6, v3}, Lcom/vkontakte/android/utils/TwitterService;->friendsList(JI)Lf/b;
+    invoke-interface {v2, v5, v6, v3}, Lcom/vtosters/lite/utils/TwitterService;->friendsList(JI)Lf/b;
 
     move-result-object v2
 
@@ -100,10 +100,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/utils/TwitterService$a;
+    check-cast v2, Lcom/vtosters/lite/utils/TwitterService$a;
 
     .line 6
-    invoke-virtual {v1}, Lcom/vkontakte/android/utils/j;->b()Lcom/vkontakte/android/utils/TwitterService;
+    invoke-virtual {v1}, Lcom/vtosters/lite/utils/j;->b()Lcom/vtosters/lite/utils/TwitterService;
 
     move-result-object v1
 
@@ -115,7 +115,7 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v8, v2, Lcom/vkontakte/android/utils/TwitterService$a;->a:Ljava/util/List;
+    iget-object v8, v2, Lcom/vtosters/lite/utils/TwitterService$a;->a:Ljava/util/List;
 
     if-eqz v8, :cond_0
 
@@ -131,7 +131,7 @@
     :goto_0
     sub-int/2addr v3, v8
 
-    invoke-interface {v1, v5, v6, v3}, Lcom/vkontakte/android/utils/TwitterService;->followersList(JI)Lf/b;
+    invoke-interface {v1, v5, v6, v3}, Lcom/vtosters/lite/utils/TwitterService;->followersList(JI)Lf/b;
 
     move-result-object v1
 
@@ -143,14 +143,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/utils/TwitterService$a;
+    check-cast v1, Lcom/vtosters/lite/utils/TwitterService$a;
 
     const/4 v3, 0x1
 
     if-eqz v2, :cond_1
 
     .line 7
-    iget-object v2, v2, Lcom/vkontakte/android/utils/TwitterService$a;->a:Ljava/util/List;
+    iget-object v2, v2, Lcom/vtosters/lite/utils/TwitterService$a;->a:Ljava/util/List;
 
     if-eqz v2, :cond_1
 
@@ -201,7 +201,7 @@
     if-eqz v1, :cond_2
 
     .line 10
-    iget-object v1, v1, Lcom/vkontakte/android/utils/TwitterService$a;->a:Ljava/util/List;
+    iget-object v1, v1, Lcom/vtosters/lite/utils/TwitterService$a;->a:Ljava/util/List;
 
     if-eqz v1, :cond_2
 

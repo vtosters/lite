@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_0
 

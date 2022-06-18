@@ -3,7 +3,7 @@
 .source "VkMeCallback.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$b;
+.implements Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Lcom/vk/photoviewer/c<",
         "Lcom/vk/im/engine/models/attaches/AttachWithImage;",
         ">;",
-        "Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$b;"
+        "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;"
     }
 .end annotation
 
@@ -48,7 +48,7 @@
 
 .field private final e:Landroid/content/Context;
 
-.field private f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+.field private f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
 .field private g:Lcom/vk/navigation/g;
 
@@ -103,9 +103,9 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/vkontakte/android/im/b;->a:Lcom/vkontakte/android/im/b;
+    sget-object v2, Lcom/vtosters/lite/im/b;->a:Lcom/vtosters/lite/im/b;
 
-    invoke-virtual {v2, p1}, Lcom/vkontakte/android/im/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v2, p1}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -272,7 +272,7 @@
         value = {
             "(I)",
             "Lc/a/t<",
-            "Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;",
+            "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;",
             ">;"
         }
     .end annotation
@@ -416,17 +416,17 @@
 
     .line 19
     :cond_2
-    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz v2, :cond_a
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->c()Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    invoke-virtual {v2}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->c()Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;->a()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;->a()I
 
     move-result v2
 
@@ -449,11 +449,11 @@
     if-eqz v2, :cond_5
 
     .line 20
-    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz v2, :cond_4
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->b()V
+    invoke-virtual {v2}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->b()V
 
     goto :goto_2
 
@@ -465,11 +465,11 @@
     .line 21
     :cond_5
     :goto_2
-    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz v2, :cond_9
 
-    new-instance v9, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    new-instance v9, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -485,9 +485,9 @@
 
     move-object v3, v9
 
-    invoke-direct/range {v3 .. v8}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz p2, :cond_8
 
@@ -511,11 +511,11 @@
     move-result-object v0
 
     :cond_7
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->a(Ljava/lang/Long;)Ljava/lang/String;
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->a(Ljava/lang/Long;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v2, v9, p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->a(Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;Ljava/lang/String;)V
+    invoke-virtual {v2, v9, p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->a(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;Ljava/lang/String;)V
 
     return-void
 
@@ -538,11 +538,11 @@
     .line 23
     :cond_b
     :goto_3
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz p1, :cond_c
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->b()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->b()V
 
     return-void
 
@@ -731,9 +731,9 @@
 
     .line 10
     :sswitch_1
-    new-instance p2, Lcom/vkontakte/android/im/ImContentOpenHelper;
+    new-instance p2, Lcom/vtosters/lite/im/ImContentOpenHelper;
 
-    invoke-direct {p2, v0}, Lcom/vkontakte/android/im/ImContentOpenHelper;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v0}, Lcom/vtosters/lite/im/ImContentOpenHelper;-><init>(Landroid/content/Context;)V
 
     invoke-interface {p1}, Lcom/vk/photoviewer/PhotoViewer$j;->c()Ljava/util/List;
 
@@ -747,7 +747,7 @@
 
     const/4 p3, 0x2
 
-    invoke-static {p2, p1, v3, p3, v3}, Lcom/vkontakte/android/im/ImContentOpenHelper;->a(Lcom/vkontakte/android/im/ImContentOpenHelper;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {p2, p1, v3, p3, v3}, Lcom/vtosters/lite/im/ImContentOpenHelper;->a(Lcom/vtosters/lite/im/ImContentOpenHelper;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     return v1
 
@@ -826,14 +826,14 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    new-instance v0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-direct {v0, p1, p0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;-><init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$b;)V
+    invoke-direct {v0, p1, p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;)V
 
-    iput-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iput-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     const/4 v0, 0x0
 
@@ -851,7 +851,7 @@
 
     move-result v2
 
-    invoke-virtual {p1, v2}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->a(Z)V
+    invoke-virtual {p1, v2}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->a(Z)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->F:Ljava/util/List;
@@ -863,11 +863,11 @@
     if-eqz p1, :cond_1
 
     .line 5
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->e()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->e()V
 
     goto :goto_0
 
@@ -879,11 +879,11 @@
     .line 6
     :cond_1
     :goto_0
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object p1
 

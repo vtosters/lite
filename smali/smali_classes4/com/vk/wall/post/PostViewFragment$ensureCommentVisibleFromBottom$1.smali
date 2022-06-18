@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/PostViewFragment;->d(Lcom/vkontakte/android/NewsComment;)V
+    value = Lcom/vk/wall/post/PostViewFragment;->d(Lcom/vtosters/lite/NewsComment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

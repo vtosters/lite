@@ -69,7 +69,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -105,10 +105,10 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -129,7 +129,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -165,13 +165,13 @@
         value = {
             "(I)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
 
     .line 6
-    new-instance v10, Lcom/vkontakte/android/api/wall/g;
+    new-instance v10, Lcom/vtosters/lite/api/wall/g;
 
     invoke-virtual {p0}, Lcom/vk/wall/g/c;->l()I
 
@@ -203,10 +203,10 @@
 
     move-object v0, v10
 
-    invoke-direct/range {v0 .. v9}, Lcom/vkontakte/android/api/wall/g;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vtosters/lite/api/wall/g;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
 
     .line 7
-    invoke-virtual {v10, p1}, Lcom/vkontakte/android/api/wall/g;->c(I)Lcom/vkontakte/android/api/wall/g;
+    invoke-virtual {v10, p1}, Lcom/vtosters/lite/api/wall/g;->c(I)Lcom/vtosters/lite/api/wall/g;
 
     const/4 p1, 0x0
 
@@ -239,7 +239,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -284,7 +284,7 @@
 
     .line 5
     :goto_0
-    new-instance v12, Lcom/vkontakte/android/api/wall/g;
+    new-instance v12, Lcom/vtosters/lite/api/wall/g;
 
     invoke-virtual {p0}, Lcom/vk/wall/g/c;->l()I
 
@@ -314,7 +314,7 @@
 
     move v8, v1
 
-    invoke-direct/range {v2 .. v11}, Lcom/vkontakte/android/api/wall/g;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vtosters/lite/api/wall/g;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -372,7 +372,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -414,7 +414,7 @@
 
     .line 4
     :goto_0
-    new-instance v0, Lcom/vkontakte/android/api/wall/g;
+    new-instance v0, Lcom/vtosters/lite/api/wall/g;
 
     invoke-virtual {p0}, Lcom/vk/wall/g/c;->l()I
 
@@ -442,7 +442,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v11}, Lcom/vkontakte/android/api/wall/g;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vtosters/lite/api/wall/g;-><init>(IIIIIZLjava/lang/String;ZLjava/lang/String;)V
 
     const/4 v2, 0x0
 

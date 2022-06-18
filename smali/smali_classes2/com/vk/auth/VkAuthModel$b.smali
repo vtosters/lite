@@ -57,16 +57,16 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/execute/i$a;)Lcom/vk/auth/api/models/b;
+.method public final a(Lcom/vtosters/lite/api/execute/i$a;)Lcom/vk/auth/api/models/b;
     .locals 3
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/execute/i$a;->d:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/execute/i$a;->d:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object p1, p1, Lcom/vkontakte/android/api/execute/i$a;->a:Lb/h/h/d/c;
+    iget-object p1, p1, Lcom/vtosters/lite/api/execute/i$a;->a:Lb/h/h/d/c;
 
     .line 3
     new-instance v1, Lcom/vk/auth/api/models/b;
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/execute/i$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/i$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$b;->a(Lcom/vkontakte/android/api/execute/i$a;)Lcom/vk/auth/api/models/b;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$b;->a(Lcom/vtosters/lite/api/execute/i$a;)Lcom/vk/auth/api/models/b;
 
     move-result-object p1
 

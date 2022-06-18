@@ -171,9 +171,9 @@
 
     if-eqz v1, :cond_3
 
-    new-instance v2, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {v2, v0}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v2, v0}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     invoke-interface {v1, v2}, Lcom/vk/articles/ArticleWebView$b;->b(Ljava/lang/Object;)V
 

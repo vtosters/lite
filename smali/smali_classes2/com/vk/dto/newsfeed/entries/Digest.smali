@@ -538,19 +538,19 @@
 
     .line 6
     :goto_1
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_3
 
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->F1()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->F1()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v2
 

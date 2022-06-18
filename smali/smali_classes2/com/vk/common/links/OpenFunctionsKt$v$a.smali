@@ -116,7 +116,7 @@
 
     iget-boolean v2, v2, Lcom/vk/common/links/OpenFunctionsKt$v;->c:Z
 
-    invoke-static {v0, v1, v3, v2}, Lcom/vkontakte/android/fragments/gifts/h;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Z)V
+    invoke-static {v0, v1, v3, v2}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Z)V
 
     goto :goto_1
 

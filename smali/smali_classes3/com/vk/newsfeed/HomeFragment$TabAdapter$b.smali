@@ -57,7 +57,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/w;->b()I
 
     move-result v0
 

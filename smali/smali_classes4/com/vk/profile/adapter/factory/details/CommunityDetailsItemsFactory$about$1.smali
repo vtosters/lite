@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/details/DetailsInfoItem;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
     .locals 2
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->F0:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->F0:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
@@ -74,7 +74,7 @@
     invoke-direct {v0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;-><init>()V
 
     .line 3
-    iget-object v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->O0:Ljava/lang/CharSequence;
+    iget-object v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->O0:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Ljava/lang/CharSequence;)V
 
@@ -94,7 +94,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->c(Z)V
 
     .line 7
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -122,9 +122,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$about$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$about$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 
     move-result-object p1
 

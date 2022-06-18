@@ -28,7 +28,7 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -37,7 +37,7 @@
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {p0}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {p0}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v1
 

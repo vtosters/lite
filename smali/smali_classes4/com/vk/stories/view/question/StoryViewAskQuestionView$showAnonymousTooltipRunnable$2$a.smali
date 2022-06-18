@@ -49,7 +49,7 @@
 
     iget-object v2, v2, Lcom/vk/stories/view/question/StoryViewAskQuestionView$showAnonymousTooltipRunnable$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-static {v2}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vkontakte/android/k0/b;
+    invoke-static {v2}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vtosters/lite/k0/b;
 
     move-result-object v2
 

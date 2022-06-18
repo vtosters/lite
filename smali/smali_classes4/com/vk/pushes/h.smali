@@ -64,29 +64,29 @@
     const-string v0, "push_stat"
 
     .line 3
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     const-string v1, "action"
 
     .line 4
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "type"
 
     .line 5
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "to_id"
 
     .line 6
-    invoke-virtual {v0, p1, p5}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p5}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "stat"
 
     .line 7
-    invoke-virtual {v0, p1, p3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 8
     sget-object p1, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
@@ -101,7 +101,7 @@
 
     const-string p2, "ts"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 9
     invoke-static {}, Lcom/vk/core/network/utils/e;->d()Ljava/lang/String;
@@ -110,21 +110,21 @@
 
     const-string p2, "network_type"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "stat_version"
 
     const-string p2, "v2"
 
     .line 10
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     if-eqz p4, :cond_0
 
     const-string p1, "error"
 
     .line 11
-    invoke-virtual {v0, p1, p4}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p4}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 12
     :cond_0
@@ -145,7 +145,7 @@
 
     const-string p2, "doze_mode_on_ts"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 14
     invoke-static {}, Lcom/vk/core/util/r0;->a()J
@@ -158,11 +158,11 @@
 
     const-string p2, "doze_mode_off_ts"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 15
     :cond_1
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

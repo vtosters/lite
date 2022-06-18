@@ -180,7 +180,7 @@
     .locals 9
 
     .line 22
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -244,7 +244,7 @@
     .locals 5
 
     .line 1
-    iput-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p1}, Lcom/vk/dto/discover/DiscoverItem;->u1()Lcom/vk/dto/discover/ads/AdsCompact;
@@ -310,7 +310,7 @@
 
     const v2, 0x7f1200df
 
-    invoke-virtual {p0, v2}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -320,7 +320,7 @@
     const v2, 0x7f1200de
 
     .line 9
-    invoke-virtual {p0, v2}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -362,7 +362,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -521,7 +521,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -536,7 +536,7 @@
     if-eqz p1, :cond_2
 
     .line 4
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -547,7 +547,7 @@
     if-eqz v0, :cond_2
 
     .line 5
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/discover/ads/AdsCompact;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/discover/ads/AdsCompact;)V
 
     :cond_2
     :goto_0

@@ -145,7 +145,7 @@
     if-eqz v3, :cond_1
 
     .line 98
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v4, :cond_1
 
@@ -158,19 +158,19 @@
 
     .line 100
     :cond_0
-    check-cast v3, Lcom/vkontakte/android/attachments/AudioAttachment;
+    check-cast v3, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    iput-object v1, v3, Lcom/vkontakte/android/attachments/AudioAttachment;->f:Ljava/util/ArrayList;
+    iput-object v1, v3, Lcom/vtosters/lite/attachments/AudioAttachment;->f:Ljava/util/ArrayList;
 
     .line 101
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    iput v4, v3, Lcom/vkontakte/android/attachments/AudioAttachment;->g:I
+    iput v4, v3, Lcom/vtosters/lite/attachments/AudioAttachment;->g:I
 
     .line 102
-    iget-object v3, v3, Lcom/vkontakte/android/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
+    iget-object v3, v3, Lcom/vtosters/lite/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -217,7 +217,7 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 108
-    instance-of v2, v2, Lcom/vkontakte/android/attachments/c;
+    instance-of v2, v2, Lcom/vtosters/lite/attachments/c;
 
     if-eqz v2, :cond_0
 
@@ -279,7 +279,7 @@
     if-ltz v0, :cond_6
 
     .line 112
-    new-instance v1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -289,7 +289,7 @@
 
     check-cast v2, Lcom/vk/dto/attachments/SnippetAttachment;
 
-    invoke-direct {v1, v2}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Lcom/vk/dto/attachments/SnippetAttachment;)V
+    invoke-direct {v1, v2}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Lcom/vk/dto/attachments/SnippetAttachment;)V
 
     invoke-virtual {p1, v0, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
@@ -335,7 +335,7 @@
 
     .line 116
     :cond_7
-    invoke-static {p1}, Lcom/vkontakte/android/attachments/a;->d(Ljava/util/List;)V
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->d(Ljava/util/List;)V
 
     .line 117
     :cond_8
@@ -866,7 +866,7 @@
     if-eqz v11, :cond_b
 
     .line 24
-    invoke-static {v11, v2, v1}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Ljava/lang/String;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v11, v2, v1}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Ljava/lang/String;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v11
 
@@ -1045,7 +1045,7 @@
     neg-int v11, v8
 
     .line 38
-    invoke-static {v11}, Lcom/vkontakte/android/data/Groups;->a(I)I
+    invoke-static {v11}, Lcom/vtosters/lite/data/Groups;->a(I)I
 
     move-result v11
 
@@ -1209,7 +1209,7 @@
     if-eqz v11, :cond_1d
 
     .line 51
-    invoke-static {v11}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-static {v11}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v11
 
@@ -1226,7 +1226,7 @@
     const/4 v5, 0x1
 
     .line 53
-    iput v5, v11, Lcom/vkontakte/android/attachments/GeoAttachment;->D:I
+    iput v5, v11, Lcom/vtosters/lite/attachments/GeoAttachment;->D:I
 
     .line 54
     :cond_1b
@@ -1449,7 +1449,7 @@
     move-result v8
 
     .line 75
-    new-instance v10, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance v10, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -1489,7 +1489,7 @@
 
     const-string v11, ""
 
-    invoke-direct {v10, v5, v8, v11}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v10, v5, v8, v11}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v2, :cond_26
 

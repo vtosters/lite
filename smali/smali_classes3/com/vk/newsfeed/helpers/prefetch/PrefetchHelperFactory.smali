@@ -777,7 +777,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/ui/f0/b;)Lcom/vk/newsfeed/helpers/prefetch/l;
+.method public final a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vk/newsfeed/helpers/prefetch/l;
     .locals 1
 
     .line 1
@@ -787,7 +787,7 @@
 
     check-cast p1, Lcom/vk/newsfeed/h0/a;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result p1
 
@@ -824,7 +824,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result p1
 

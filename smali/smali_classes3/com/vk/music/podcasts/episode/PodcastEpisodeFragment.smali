@@ -226,7 +226,7 @@
     .end annotation
 
     .line 23
-    invoke-static {}, Lcom/vkontakte/android/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
 
     move-result-object v0
 
@@ -1243,7 +1243,7 @@
     const v2, 0x7f080376
 
     .line 4
-    invoke-static {v0, v2}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, v2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     const-string v2, "toolbar"
 
@@ -1273,7 +1273,7 @@
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 8
-    invoke-static {p0, v0}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 9
     invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;

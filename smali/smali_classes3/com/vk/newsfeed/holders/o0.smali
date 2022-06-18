@@ -83,7 +83,7 @@
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 8
-    new-instance p1, Lcom/vkontakte/android/ui/g0/f;
+    new-instance p1, Lcom/vtosters/lite/ui/g0/f;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -99,7 +99,7 @@
 
     move-result v1
 
-    invoke-direct {p1, v2, v2, v1, v2}, Lcom/vkontakte/android/ui/g0/f;-><init>(IIII)V
+    invoke-direct {p1, v2, v2, v1, v2}, Lcom/vtosters/lite/ui/g0/f;-><init>(IIII)V
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -117,7 +117,7 @@
     .locals 8
 
     .line 14
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v1
 
@@ -160,7 +160,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v4, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v4, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -168,10 +168,10 @@
 
     move-result v4
 
-    invoke-static {v2, v3, v4}, Lcom/vkontakte/android/utils/b;->a(Ljava/util/List;Ljava/lang/String;Z)V
+    invoke-static {v2, v3, v4}, Lcom/vtosters/lite/utils/b;->a(Ljava/util/List;Ljava/lang/String;Z)V
 
     .line 17
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -179,7 +179,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -187,7 +187,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v3, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -195,10 +195,10 @@
 
     move-result v3
 
-    invoke-static {v0, v2, v3}, Lcom/vkontakte/android/utils/b;->a(Ljava/util/List;Ljava/lang/String;Z)V
+    invoke-static {v0, v2, v3}, Lcom/vtosters/lite/utils/b;->a(Ljava/util/List;Ljava/lang/String;Z)V
 
     .line 18
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -212,7 +212,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -226,7 +226,7 @@
 
     .line 19
     :cond_1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -253,7 +253,7 @@
 
     move-result-object v6
 
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -262,14 +262,14 @@
     move-result v7
 
     .line 21
-    invoke-static/range {v1 .. v7}, Lcom/vkontakte/android/utils/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static/range {v1 .. v7}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_1
 
     .line 22
     :cond_2
     :goto_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -285,7 +285,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, v0, v2, p1}, Lcom/vkontakte/android/utils/b;->a(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v1, v0, v2, p1}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
 
     :cond_3
     :goto_1
@@ -396,7 +396,7 @@
 
     .line 8
     :cond_5
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -407,7 +407,7 @@
     move-result v0
 
     .line 9
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -433,7 +433,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/vkontakte/android/utils/l;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v3}, Lcom/vtosters/lite/utils/l;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

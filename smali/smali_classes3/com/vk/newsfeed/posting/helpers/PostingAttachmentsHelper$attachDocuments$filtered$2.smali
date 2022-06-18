@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Lcom/vk/api/base/Document;",
-        "Lcom/vkontakte/android/attachments/DocumentAttachment;",
+        "Lcom/vtosters/lite/attachments/DocumentAttachment;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/base/Document;)Lcom/vkontakte/android/attachments/DocumentAttachment;
+.method public final a(Lcom/vk/api/base/Document;)Lcom/vtosters/lite/attachments/DocumentAttachment;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Lcom/vk/api/base/Document;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachDocuments$filtered$2;->a(Lcom/vk/api/base/Document;)Lcom/vkontakte/android/attachments/DocumentAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachDocuments$filtered$2;->a(Lcom/vk/api/base/Document;)Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     move-result-object p1
 

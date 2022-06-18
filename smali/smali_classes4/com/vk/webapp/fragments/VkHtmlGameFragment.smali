@@ -914,7 +914,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/fragments/w2/h$b;
+    new-instance v0, Lcom/vtosters/lite/fragments/w2/h$b;
 
     invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
 
@@ -924,18 +924,18 @@
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/fragments/w2/h$b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/w2/h$b;-><init>(I)V
 
     .line 2
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->i()Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->i()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->j()Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->j()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     const/4 v1, 0x0
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->d(Z)Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->d(Z)Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     const v1, 0x7f1204a2
 
@@ -948,7 +948,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     const/16 v1, 0x259
 
@@ -1263,7 +1263,7 @@
     .locals 12
 
     .line 26
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->a(I)Lcom/vk/dto/user/UserProfile;
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->a(I)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v0
 
@@ -1454,7 +1454,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -66,13 +66,13 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/items/m$c;->f:Lcom/vk/profile/adapter/items/m;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/m;->R()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/m;->R()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
     const-string v2, "profile_module"
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)V
 
     return-void
 .end method

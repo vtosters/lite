@@ -211,20 +211,20 @@
 
     .line 17
     :goto_3
-    sget-object p1, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object p1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     iget v0, v1, Lcom/vk/sharing/target/Target;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/im/i;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/im/i;->a(I)V
 
     .line 18
-    sget-object v4, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object v4, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     iget v6, v1, Lcom/vk/sharing/target/Target;->a:I
 
     const-string v5, "SharingService"
 
-    invoke-virtual/range {v4 .. v12}, Lcom/vkontakte/android/im/i;->a(Ljava/lang/Object;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/Attachment;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual/range {v4 .. v12}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/Attachment;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
 

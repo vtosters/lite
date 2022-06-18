@@ -30,7 +30,7 @@
 # instance fields
 .field private final F:Lcom/vk/imageloader/view/VKCircleImageView;
 
-.field private final G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+.field private final G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
 .field private final H:Landroid/widget/TextView;
 
@@ -103,9 +103,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    check-cast p1, Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -169,7 +169,7 @@
     invoke-static {p1, v0, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
     invoke-virtual {p1, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -212,7 +212,7 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -264,9 +264,9 @@
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -276,7 +276,7 @@
 
     move-result v3
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -286,7 +286,7 @@
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -323,9 +323,9 @@
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
     .line 9
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/Html5HeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -335,7 +335,7 @@
 
     move-result v3
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -348,7 +348,7 @@
     invoke-virtual {v1, v3, v4, v2, v4}, Landroid/widget/LinearLayout;->setPaddingRelative(IIII)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -384,7 +384,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const/16 v2, 0x64
 
@@ -399,7 +399,7 @@
     .line 1
     new-instance v0, Lcom/vk/api/adsint/AdsintHideAd;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -421,7 +421,7 @@
     move-result-object v3
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -465,7 +465,7 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -479,7 +479,7 @@
     invoke-static {v0}, Lcom/vk/newsfeed/b0;->a(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -487,7 +487,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -533,7 +533,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
 
     .line 3
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -541,7 +541,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v3, "item"
 
@@ -552,7 +552,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/webapp/fragments/j$a;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 

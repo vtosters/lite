@@ -66,11 +66,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/ui/c$u;->a:Lcom/vk/profile/ui/c;
 
-    iget-object p2, p1, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p2, p1, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/4 p3, 0x0
 
-    iput-boolean p3, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->o:Z
+    iput-boolean p3, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->o:Z
 
     .line 3
     invoke-virtual {p1}, Lcom/vk/newsfeed/EntriesListFragment;->q1()V
@@ -81,11 +81,11 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/profile/ui/c$u;->a:Lcom/vk/profile/ui/c;
 
-    iget-object p2, p1, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p2, p1, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/4 p3, 0x1
 
-    iput-boolean p3, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->o:Z
+    iput-boolean p3, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->o:Z
 
     .line 5
     invoke-virtual {p1}, Lcom/vk/newsfeed/EntriesListFragment;->q1()V

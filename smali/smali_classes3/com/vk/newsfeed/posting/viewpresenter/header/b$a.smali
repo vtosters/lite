@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/posting/viewpresenter/header/b$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PostingAuthorsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/sharing/target/Target;",
         ">;"
     }
@@ -39,7 +39,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/sharing/view/l;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -83,7 +83,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/sharing/target/Target;
 

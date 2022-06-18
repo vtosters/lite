@@ -154,12 +154,12 @@
     return v0
 .end method
 
-.method public final H(I)Lcom/vkontakte/android/ui/b0/i;
+.method public final H(I)Lcom/vtosters/lite/ui/b0/i;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/discover/DiscoverItem;",
             ">;"
         }
@@ -328,7 +328,7 @@
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -364,13 +364,13 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/dto/discover/DiscoverItem;->v1()Lcom/vkontakte/android/attachments/ArticleAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/discover/DiscoverItem;->v1()Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->K0()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->K0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -823,13 +823,13 @@
 
     .line 2
     :goto_0
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 

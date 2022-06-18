@@ -62,7 +62,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    sget-object p3, Lcom/vkontakte/android/a0;->SettingsView:[I
+    sget-object p3, Lcom/vtosters/lite/a0;->SettingsView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

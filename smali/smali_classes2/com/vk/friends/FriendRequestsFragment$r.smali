@@ -97,7 +97,7 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/vkontakte/android/data/Friends;->d()V
+    invoke-static {}, Lcom/vtosters/lite/data/Friends;->d()V
 
     .line 6
     iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment$r;->a:Lcom/vk/friends/FriendRequestsFragment;
@@ -106,12 +106,12 @@
 
     move-result v0
 
-    sget-object v1, Lcom/vkontakte/android/data/Friends$Request;->IN:Lcom/vkontakte/android/data/Friends$Request;
+    sget-object v1, Lcom/vtosters/lite/data/Friends$Request;->IN:Lcom/vtosters/lite/data/Friends$Request;
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/data/Friends;->a(ILcom/vkontakte/android/data/Friends$Request;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/data/Friends;->a(ILcom/vtosters/lite/data/Friends$Request;)V
 
     .line 7
-    invoke-static {v3}, Lcom/vkontakte/android/data/Friends;->c(Z)V
+    invoke-static {v3}, Lcom/vtosters/lite/data/Friends;->c(Z)V
 
     :cond_1
     if-nez p1, :cond_2

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/attachments/PollAttachment;",
+        "Lcom/vtosters/lite/attachments/PollAttachment;",
         "Lkotlin/m;",
         ">;"
     }
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 3
 
     .line 1
@@ -67,7 +67,7 @@
     .line 2
     sget-object v0, Lb/h/t/k/b;->a:Lb/h/t/k/b;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v1
 
@@ -95,9 +95,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$notifyPollChanged$1;->a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$notifyPollChanged$1;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

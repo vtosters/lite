@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/UserPresenter;->b(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    value = Lcom/vk/profile/presenter/UserPresenter;->b(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic $profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;->$profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/4 p1, 0x0
 
@@ -62,9 +62,9 @@
     .line 2
     sget-object v0, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
 
-    iget-object v1, p0, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;->$profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     const-string v2, "profile.profile"
 

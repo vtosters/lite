@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/clickable/views/StoryGradientEditText;
-.super Lcom/vkontakte/android/ui/EditText;
+.super Lcom/vtosters/lite/ui/EditText;
 .source "StoryGradientEditText.kt"
 
 
@@ -20,7 +20,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 2
     new-instance p1, Lcom/vk/stories/clickable/views/StoryGradientEditText$a;

@@ -224,7 +224,7 @@
     check-cast p1, Lcom/vk/dto/common/Attachment;
 
     .line 8
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/AlbumAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/AlbumAttachment;
 
     if-eqz v0, :cond_0
 
@@ -234,7 +234,7 @@
 
     .line 9
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_1
 
@@ -244,7 +244,7 @@
 
     .line 10
     :cond_1
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_2
 
@@ -254,7 +254,7 @@
 
     .line 11
     :cond_2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     if-eqz v0, :cond_3
 
@@ -264,13 +264,13 @@
 
     .line 12
     :cond_3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_5
 
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->A1()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->A1()Z
 
     move-result p1
 
@@ -429,16 +429,16 @@
     check-cast p1, Lcom/vk/dto/common/Attachment;
 
     .line 14
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_4
 
     .line 15
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-object p1, p1, Lcom/vk/dto/photo/Photo;->Q:Lcom/vk/dto/common/Image;
 
@@ -501,14 +501,14 @@
 
     .line 20
     :cond_4
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_7
 
     .line 21
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -516,7 +516,7 @@
 
     if-lez v0, :cond_5
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -531,7 +531,7 @@
     iput v0, p2, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     .line 22
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -539,7 +539,7 @@
 
     if-lez v0, :cond_6
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -557,16 +557,16 @@
 
     .line 23
     :cond_7
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     const/4 v2, 0x0
 
     if-eqz v0, :cond_d
 
     .line 24
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget-object p1, p1, Lcom/vk/dto/common/GoodAlbum;->d:Lcom/vk/dto/photo/Photo;
 
@@ -634,14 +634,14 @@
 
     .line 29
     :cond_d
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_13
 
     .line 30
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
+    iget-object v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
 
     if-eqz v0, :cond_e
 
@@ -664,7 +664,7 @@
     goto :goto_8
 
     :cond_f
-    iget v1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->F:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->F:I
 
     :goto_8
     if-eqz v0, :cond_10
@@ -677,7 +677,7 @@
     goto :goto_9
 
     :cond_10
-    iget p1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->G:I
+    iget p1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->G:I
 
     :goto_9
     if-lez v1, :cond_11

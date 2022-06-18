@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;
-.super Lcom/vkontakte/android/bridges/CommonImageViewer$a;
+.super Lcom/vtosters/lite/bridges/CommonImageViewer$a;
 .source "PhotoListFragmentNew.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-direct {p0}, Lcom/vkontakte/android/bridges/CommonImageViewer$a;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/bridges/CommonImageViewer$a;-><init>()V
 
     return-void
 .end method

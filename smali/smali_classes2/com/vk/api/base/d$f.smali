@@ -149,7 +149,7 @@
     .line 11
     sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    sget v5, Lcom/vkontakte/android/api/j;->err_text:I
+    sget v5, Lcom/vtosters/lite/api/j;->err_text:I
 
     invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

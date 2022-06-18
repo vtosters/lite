@@ -176,7 +176,7 @@
 
     invoke-direct {p1, p0, v0}, Lcom/vk/newsfeed/html5/c$b$a;-><init>(Lcom/vk/newsfeed/html5/c$b;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void

@@ -21,7 +21,7 @@
             "Lcom/vk/newsfeed/h0/a;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;",
+            "Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;",
             ">;"
         }
     .end annotation
@@ -41,18 +41,18 @@
     move-object p1, v0
 
     :goto_0
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment;
 
     if-nez v1, :cond_1
 
     move-object p1, v0
 
     :cond_1
-    check-cast p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment;
 
     if-eqz p1, :cond_2
 
-    iget-object v0, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment;->e:Ljava/util/List;
+    iget-object v0, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment;->e:Ljava/util/List;
 
     :cond_2
     return-object v0
@@ -60,7 +60,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;I)Ljava/lang/String;
+.method public a(Lcom/vtosters/lite/ui/f0/b;I)Ljava/lang/String;
     .locals 2
 
     .line 2
@@ -86,11 +86,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->g:Lcom/vk/dto/common/Image;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->g:Lcom/vk/dto/common/Image;
 
     if-eqz p1, :cond_1
 
@@ -114,7 +114,7 @@
     return-object v1
 .end method
 
-.method public b(Lcom/vkontakte/android/ui/f0/b;)I
+.method public b(Lcom/vtosters/lite/ui/f0/b;)I
     .locals 1
 
     .line 1

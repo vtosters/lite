@@ -20,7 +20,7 @@
 
 .field private final G:Lcom/vk/newsfeed/feedback/d$a;
 
-.field private final H:Lcom/vkontakte/android/ui/f0/a;
+.field private final H:Lcom/vtosters/lite/ui/f0/a;
 
 
 # direct methods
@@ -46,19 +46,19 @@
     iput-object v0, p0, Lcom/vk/newsfeed/feedback/d;->G:Lcom/vk/newsfeed/feedback/d$a;
 
     .line 5
-    new-instance v0, Lcom/vkontakte/android/ui/f0/a$a;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/a$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/ui/f0/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/f0/a$a;-><init>()V
 
     .line 6
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/a$a;->b()Lcom/vkontakte/android/ui/f0/a$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->b()Lcom/vtosters/lite/ui/f0/a$a;
 
     .line 7
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/a$a;->a()Lcom/vkontakte/android/ui/f0/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->a()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/feedback/d;->H:Lcom/vkontakte/android/ui/f0/a;
+    iput-object v0, p0, Lcom/vk/newsfeed/feedback/d;->H:Lcom/vtosters/lite/ui/f0/a;
 
     return-void
 .end method
@@ -203,7 +203,7 @@
     .line 3
     sget-object v0, Lcom/vk/newsfeed/x;->a:Lcom/vk/newsfeed/x;
 
-    iget-object v2, p0, Lcom/vk/newsfeed/feedback/d;->H:Lcom/vkontakte/android/ui/f0/a;
+    iget-object v2, p0, Lcom/vk/newsfeed/feedback/d;->H:Lcom/vtosters/lite/ui/f0/a;
 
     const/4 v5, 0x1
 
@@ -211,7 +211,7 @@
 
     const-string v4, "unknown"
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
 
     move-result-object p1
 

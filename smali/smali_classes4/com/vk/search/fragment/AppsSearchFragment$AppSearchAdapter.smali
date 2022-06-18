@@ -378,7 +378,7 @@
     .line 11
     check-cast p1, Lcom/vk/search/holder/a;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 

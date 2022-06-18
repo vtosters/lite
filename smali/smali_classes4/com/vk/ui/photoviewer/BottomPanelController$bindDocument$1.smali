@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vkontakte/android/attachments/DocumentAttachment;)V
+    value = Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vtosters/lite/attachments/DocumentAttachment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $attach:Lcom/vkontakte/android/attachments/DocumentAttachment;
+.field final synthetic $attach:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/attachments/DocumentAttachment;)V
+.method constructor <init>(Lcom/vtosters/lite/attachments/DocumentAttachment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$1;->$attach:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$1;->$attach:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     const/4 p1, 0x1
 
@@ -62,7 +62,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$1;->$attach:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$1;->$attach:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     invoke-interface {v0, p1, v1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 

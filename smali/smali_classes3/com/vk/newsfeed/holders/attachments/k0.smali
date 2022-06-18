@@ -32,7 +32,7 @@
     check-cast p1, Lcom/vk/core/view/ConstrainedFrameLayout;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/view/ConstrainedFrameLayout;->setMaxWidth(I)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 

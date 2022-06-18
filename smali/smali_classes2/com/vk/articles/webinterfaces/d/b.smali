@@ -204,24 +204,24 @@
     move-result-object v0
 
     .line 7
-    sget-object v1, Lcom/vkontakte/android/audio/player/x;->a:Lcom/vkontakte/android/audio/player/x$b;
+    sget-object v1, Lcom/vtosters/lite/audio/player/x;->a:Lcom/vtosters/lite/audio/player/x$b;
 
     iget-object v2, p0, Lcom/vk/articles/webinterfaces/d/b;->d:Landroid/content/Context;
 
-    invoke-virtual {v1, v2, v0}, Lcom/vkontakte/android/audio/player/x$b;->a(Landroid/content/Context;Ljava/util/List;)Lcom/vkontakte/android/audio/player/x$a;
+    invoke-virtual {v1, v2, v0}, Lcom/vtosters/lite/audio/player/x$b;->a(Landroid/content/Context;Ljava/util/List;)Lcom/vtosters/lite/audio/player/x$a;
 
     move-result-object v0
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/audio/player/x$a;->a(I)Lcom/vkontakte/android/audio/player/x$a;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/player/x$a;->a(I)Lcom/vtosters/lite/audio/player/x$a;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vkontakte/android/audio/player/x$a;->a()Lcom/vkontakte/android/audio/player/x$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/x$a;->a()Lcom/vtosters/lite/audio/player/x$a;
 
     .line 10
     sget-object p1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->x0:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/audio/player/x$a;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/player/x$a;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lio/reactivex/disposables/b;
 
     move-result-object p1
 

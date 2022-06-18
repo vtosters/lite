@@ -63,7 +63,7 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_0
 
@@ -83,9 +83,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->e:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -106,15 +106,15 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->C:I
+    iget p1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->C:I
 
     int-to-long v2, p1
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-static {v2, v3, p1}, Lcom/vkontakte/android/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v2, v3, p1}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -150,15 +150,15 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_2
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/DocumentAttachment;->f:Ljava/lang/String;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/DocumentAttachment;->f:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
@@ -184,7 +184,7 @@
 
     .line 3
     :try_start_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -200,9 +200,9 @@
 
     const-string v2, "android.intent.action.VIEW"
 
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->f:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->f:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

@@ -19,14 +19,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/ui/community/CommunityFragment;Landroid/view/View;Landroid/view/View;Lcom/vkontakte/android/api/i;I)V
+.method constructor <init>(Lcom/vk/profile/ui/community/CommunityFragment;Landroid/view/View;Landroid/view/View;Lcom/vtosters/lite/api/i;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "Landroid/view/View;",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             "I)V"
         }
     .end annotation
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/community/CommunityFragment$g;->d:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-direct {p0, p3, p4, p5}, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;-><init>(Landroid/view/View;Lcom/vkontakte/android/api/i;I)V
+    invoke-direct {p0, p3, p4, p5}, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;-><init>(Landroid/view/View;Lcom/vtosters/lite/api/i;I)V
 
     return-void
 .end method
@@ -65,11 +65,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityFragment$g;->d:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vkontakte/android/api/i;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vtosters/lite/api/i;
 
     move-result-object v1
 
-    iget-boolean v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->o:Z
+    iget-boolean v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->o:Z
 
     if-eqz v1, :cond_0
 
@@ -196,11 +196,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/ui/community/CommunityFragment$g;->d:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v1}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vkontakte/android/api/i;
+    invoke-static {v1}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vtosters/lite/api/i;
 
     move-result-object v1
 
-    iget-boolean v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Z)V
 

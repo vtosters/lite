@@ -81,11 +81,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/b;->b(Lcom/vkontakte/android/api/i;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/b;->b(Lcom/vtosters/lite/api/i;)V
 
     .line 4
     new-instance v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
@@ -110,11 +110,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/vkontakte/android/api/ExtendedUserProfile;->j:Ljava/lang/String;
+    iget-object v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->j:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder$onClick$1;->this$0:Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;
 
@@ -152,11 +152,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 

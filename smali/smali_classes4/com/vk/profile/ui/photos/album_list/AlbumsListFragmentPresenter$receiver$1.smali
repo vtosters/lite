@@ -111,13 +111,13 @@
 
     if-nez p2, :cond_3
 
-    sget-object p2, Lcom/vkontakte/android/bridges/h;->a:Lcom/vkontakte/android/bridges/h;
+    sget-object p2, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
     invoke-virtual {p1}, Lcom/vk/profile/ui/photos/PhotoUploadExtraParams;->b()I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vkontakte/android/bridges/h;->b(I)Z
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/bridges/h;->b(I)Z
 
     move-result p1
 

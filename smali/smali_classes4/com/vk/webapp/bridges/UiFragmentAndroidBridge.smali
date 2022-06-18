@@ -288,7 +288,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;-><init>(Lcom/vk/webapp/p/a/a;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -352,7 +352,7 @@
 
     invoke-direct {v1, v0, p0, p1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$l;-><init>(Lcom/vk/webapp/p/a/a;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -739,7 +739,7 @@
 
     invoke-direct {p1, p0, v1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$d;-><init>(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Lorg/json/JSONObject;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1001,7 +1001,7 @@
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     const-string v1, "url"
 
@@ -1009,13 +1009,13 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 5
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->p()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->p()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/webapp/bridges/a;->c()Landroid/content/Context;
@@ -1417,7 +1417,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$f;-><init>(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 

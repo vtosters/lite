@@ -57,7 +57,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/vk/newsfeed/views/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    sget-object p3, Lcom/vkontakte/android/a0;->TabTextView:[I
+    sget-object p3, Lcom/vtosters/lite/a0;->TabTextView:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

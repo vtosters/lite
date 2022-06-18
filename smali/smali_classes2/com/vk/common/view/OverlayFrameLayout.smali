@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/vkontakte/android/a0;->OverlayView:[I
+    sget-object v2, Lcom/vtosters/lite/a0;->OverlayView:[I
 
     const/4 v3, 0x0
 

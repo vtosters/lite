@@ -195,7 +195,7 @@
 
     const/16 v4, 0xc
 
-    invoke-static {v0, v4}, Lcom/vkontakte/android/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/vtosters/lite/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -220,7 +220,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v4}, Lcom/vkontakte/android/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/vtosters/lite/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -273,7 +273,7 @@
 
     const/16 v4, 0xc
 
-    invoke-static {v0, v4}, Lcom/vkontakte/android/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/vtosters/lite/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -377,7 +377,7 @@
 
     const/16 v4, 0xc
 
-    invoke-static {v0, v4}, Lcom/vkontakte/android/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/vtosters/lite/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
 
     move-result-object v4
 

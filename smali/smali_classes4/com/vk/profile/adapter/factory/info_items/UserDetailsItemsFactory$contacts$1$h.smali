@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1$h;->a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1$h;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1$h;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,9 +55,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1$h;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1$h;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v3, v3, Lcom/vkontakte/android/api/ExtendedUserProfile;->n0:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vtosters/lite/api/ExtendedUserProfile;->n0:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

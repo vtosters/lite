@@ -76,7 +76,7 @@
 
 .field private final T:Lcom/vk/newsfeed/html5/d;
 
-.field private final U:Lcom/vkontakte/android/ui/f0/a;
+.field private final U:Lcom/vtosters/lite/ui/f0/a;
 
 .field private final V:Lcom/vk/stickers/e;
 
@@ -262,17 +262,17 @@
     iput-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment;->T:Lcom/vk/newsfeed/html5/d;
 
     .line 6
-    new-instance v0, Lcom/vkontakte/android/ui/f0/a$a;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/a$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/ui/f0/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/f0/a$a;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/a$a;->e()Lcom/vkontakte/android/ui/f0/a$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->e()Lcom/vtosters/lite/ui/f0/a$a;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/a$a;->a()Lcom/vkontakte/android/ui/f0/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->a()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment;->U:Lcom/vkontakte/android/ui/f0/a;
+    iput-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment;->U:Lcom/vtosters/lite/ui/f0/a;
 
     .line 7
     new-instance v0, Lcom/vk/stickers/e;
@@ -546,7 +546,7 @@
     return v1
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/ArticleAttachment;)Z
+.method private final a(Lcom/vtosters/lite/attachments/ArticleAttachment;)Z
     .locals 9
 
     .line 42
@@ -563,7 +563,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object v2
 
@@ -587,19 +587,19 @@
     return p1
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/PodcastAttachment;)Z
+.method private final a(Lcom/vtosters/lite/attachments/PodcastAttachment;)Z
     .locals 3
 
     .line 34
     new-instance v0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$a;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v1
 
     iget v1, v1, Lcom/vk/dto/music/MusicTrack;->e:I
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v2
 
@@ -619,7 +619,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$a;->a(Ljava/lang/String;)Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$a;
 
     .line 36
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 
@@ -635,7 +635,7 @@
     return p1
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/VideoAttachment;)Z
+.method private final a(Lcom/vtosters/lite/attachments/VideoAttachment;)Z
     .locals 12
 
     .line 32
@@ -652,7 +652,7 @@
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 33
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -873,15 +873,15 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    sget-object v0, Lcom/vkontakte/android/data/PostInteract$Type;->open:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v0, Lcom/vtosters/lite/data/PostInteract$Type;->open:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     :cond_3
     return v4
@@ -906,9 +906,9 @@
     invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    new-instance v1, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance v1, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    invoke-static {}, Lcom/vkontakte/android/attachments/MarketAttachment;->x1()Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    invoke-static {}, Lcom/vtosters/lite/attachments/MarketAttachment;->x1()Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     move-result-object v2
 
@@ -920,7 +920,7 @@
 
     move-result p1
 
-    invoke-direct {v1, v2, v3, p1}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;II)V
+    invoke-direct {v1, v2, v3, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;II)V
 
     invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -984,20 +984,20 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;->fave:Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    sget-object v0, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->fave:Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     goto :goto_1
 
     .line 10
     :cond_2
     :goto_0
-    sget-object v0, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;->wall:Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    sget-object v0, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->wall:Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     .line 11
     :goto_1
-    new-instance v1, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance v1, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    invoke-direct {v1, v0, p1}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;Lcom/vk/dto/common/Good;)V
+    invoke-direct {v1, v0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;Lcom/vk/dto/common/Good;)V
 
     invoke-virtual {v1, p0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
@@ -1325,7 +1325,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1412,7 +1412,7 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
@@ -1420,7 +1420,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
@@ -1428,7 +1428,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$q;->b()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$q;->b()Z
 
     move-result v0
 
@@ -1890,7 +1890,7 @@
     invoke-virtual {v1}, Lcom/vk/newsfeed/z;->a()V
 
     .line 10
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v1
 
@@ -1898,7 +1898,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v1
 
@@ -1906,7 +1906,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$q;->b()Z
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$q;->b()Z
 
     move-result v1
 
@@ -2543,7 +2543,7 @@
     .locals 8
 
     .line 5
-    invoke-static {p1}, Lcom/vkontakte/android/api/newsfeed/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/api/newsfeed/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
 
     move-result v0
 
@@ -2674,11 +2674,11 @@
     return-void
 .end method
 
-.method public e()Lcom/vkontakte/android/ui/f0/a;
+.method public e()Lcom/vtosters/lite/ui/f0/a;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment;->U:Lcom/vkontakte/android/ui/f0/a;
+    iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment;->U:Lcom/vtosters/lite/ui/f0/a;
 
     return-object v0
 .end method
@@ -2970,13 +2970,13 @@
 
     .line 22
     :cond_14
-    instance-of v2, v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v2, v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v2, :cond_15
 
-    check-cast v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {p0, v1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vkontakte/android/attachments/ArticleAttachment;)Z
+    invoke-direct {p0, v1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vtosters/lite/attachments/ArticleAttachment;)Z
 
     move-result v1
 
@@ -3002,13 +3002,13 @@
 
     .line 24
     :cond_16
-    instance-of v2, v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v2, v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v2, :cond_17
 
-    check-cast v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {p0, v1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vkontakte/android/attachments/VideoAttachment;)Z
+    invoke-direct {p0, v1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)Z
 
     move-result v1
 
@@ -3018,13 +3018,13 @@
 
     .line 25
     :cond_17
-    instance-of v2, v1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v2, v1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v2, :cond_18
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-direct {p0, v1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vkontakte/android/attachments/PodcastAttachment;)Z
+    invoke-direct {p0, v1}, Lcom/vk/newsfeed/EntriesListFragment;->a(Lcom/vtosters/lite/attachments/PodcastAttachment;)Z
 
     move-result v1
 
@@ -3085,15 +3085,15 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-static {p1, v1}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_1a
 
-    sget-object v1, Lcom/vkontakte/android/data/PostInteract$Type;->open:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v1, Lcom/vtosters/lite/data/PostInteract$Type;->open:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3363,9 +3363,9 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onAttach(Landroid/app/Activity;)V
 
     .line 2
-    sget-object p1, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;->wall:Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    sget-object p1, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->wall:Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
-    invoke-static {p1}, Lcom/vkontakte/android/attachments/MarketAttachment;->a(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;)V
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/MarketAttachment;->a(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;)V
 
     return-void
 .end method
@@ -4027,7 +4027,7 @@
 
     .line 11
     :cond_4
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
@@ -4035,7 +4035,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
@@ -4043,7 +4043,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$q;->b()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$q;->b()Z
 
     move-result v0
 
@@ -4130,7 +4130,7 @@
 
     .line 8
     :cond_2
-    invoke-static {p0}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result p2
 
@@ -4139,7 +4139,7 @@
     const p2, 0x7f080376
 
     .line 9
-    invoke-static {p1, p2}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 10
     :cond_3
@@ -4151,7 +4151,7 @@
     invoke-virtual {p1, p2}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 11
-    invoke-static {p0, p1}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 12
     iget-boolean p2, p0, Lcom/vk/newsfeed/EntriesListFragment;->J:Z

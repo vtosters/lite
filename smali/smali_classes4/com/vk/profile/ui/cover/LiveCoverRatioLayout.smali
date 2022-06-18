@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/cover/LiveCoverRatioLayout;
-.super Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+.super Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 .source "LiveCoverRatioLayout.kt"
 
 
@@ -12,7 +12,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;-><init>(Landroid/content/Context;)V
 
     const/high16 p1, 0x3fa00000    # 1.25f
 
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/high16 p1, 0x3fa00000    # 1.25f
 
@@ -40,7 +40,7 @@
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/high16 p1, 0x3fa00000    # 1.25f
 
@@ -65,7 +65,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;->onMeasure(II)V
 
     .line 2
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
@@ -108,7 +108,7 @@
 
     move-result p2
 
-    invoke-super {p0, p1, p2}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;->onMeasure(II)V
 
     return-void
 .end method

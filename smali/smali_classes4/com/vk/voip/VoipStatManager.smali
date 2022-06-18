@@ -797,7 +797,7 @@
     const-string v0, "call_stat"
 
     .line 29
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -808,7 +808,7 @@
 
     const-string v3, "type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 31
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->k()Z
@@ -827,7 +827,7 @@
     :goto_2
     const-string v3, "result"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 32
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->g()Lcom/vk/voip/VoipStatManager$StatData$FailReason;
@@ -840,7 +840,7 @@
 
     const-string v3, "fail_reason"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 33
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->h()Ljava/lang/String;
@@ -849,7 +849,7 @@
 
     const-string v3, "network_type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 34
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->f()Lcom/vk/voip/VoipStatManager$StatData$ConnectionType;
@@ -858,7 +858,7 @@
 
     const-string v3, "connection_type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 35
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->d()Ljava/lang/String;
@@ -867,7 +867,7 @@
 
     const-string v3, "call_source"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 36
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->j()J
@@ -880,7 +880,7 @@
 
     const-string v3, "total_duration"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 37
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->i()Ljava/lang/String;
@@ -889,10 +889,10 @@
 
     const-string v3, "relay"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 38
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     .line 39
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->a()Z
@@ -904,7 +904,7 @@
     const-string v0, "calls_voice_msg"
 
     .line 40
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -915,7 +915,7 @@
 
     const-string v3, "call_type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 42
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->c()Z
@@ -934,7 +934,7 @@
     :goto_3
     const-string v3, "status"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 43
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->g()Lcom/vk/voip/VoipStatManager$StatData$FailReason;
@@ -970,7 +970,7 @@
     const-string v3, "reason"
 
     .line 45
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 46
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->b()J
@@ -983,10 +983,10 @@
 
     const-string v3, "duration"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 47
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     .line 48
     :cond_d

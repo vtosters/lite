@@ -23,7 +23,7 @@
 
 .field private final B:Ljava/lang/String;
 
-.field private final C:Lcom/vkontakte/android/NotificationUtils$Type;
+.field private final C:Lcom/vtosters/lite/NotificationUtils$Type;
 
 .field private final D:Ljava/lang/String;
 
@@ -217,9 +217,9 @@
     iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->B:Ljava/lang/String;
 
     .line 5
-    sget-object p2, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object p2, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->C:Lcom/vkontakte/android/NotificationUtils$Type;
+    iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->C:Lcom/vtosters/lite/NotificationUtils$Type;
 
     const-string p2, "message_group"
 
@@ -1802,11 +1802,11 @@
     return v0
 .end method
 
-.method protected s()Lcom/vkontakte/android/NotificationUtils$Type;
+.method protected s()Lcom/vtosters/lite/NotificationUtils$Type;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->C:Lcom/vkontakte/android/NotificationUtils$Type;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->C:Lcom/vtosters/lite/NotificationUtils$Type;
 
     return-object v0
 .end method

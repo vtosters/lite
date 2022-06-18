@@ -283,13 +283,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/n;->a(Landroid/app/Activity;Z)Z
+    invoke-static {v0, v1}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Z)Z
 
     :cond_0
     :goto_0

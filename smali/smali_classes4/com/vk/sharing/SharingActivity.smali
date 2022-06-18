@@ -1,5 +1,5 @@
 .class public Lcom/vk/sharing/SharingActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "SharingActivity.java"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private G:Lcom/vkontakte/android/activities/LogoutReceiver;
+.field private G:Lcom/vtosters/lite/activities/LogoutReceiver;
 
 .field private H:Lcom/vk/sharing/d;
 
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     const/4 v0, 0x0
 
@@ -342,16 +342,16 @@
     if-ne v2, v4, :cond_1
 
     .line 6
-    check-cast v1, Lcom/vkontakte/android/attachments/StoryAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/StoryAttachment;
 
     .line 7
     new-instance v2, Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/StoryAttachment;->x1()Lcom/vk/dto/stories/model/StoryEntry;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/StoryAttachment;->x1()Lcom/vk/dto/stories/model/StoryEntry;
 
     move-result-object v4
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/StoryAttachment;->y1()Lcom/vk/dto/stories/model/StoryOwner;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/StoryAttachment;->y1()Lcom/vk/dto/stories/model/StoryOwner;
 
     move-result-object v1
 
@@ -421,10 +421,10 @@
     if-ne v2, v4, :cond_4
 
     .line 12
-    check-cast v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     .line 13
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/PhotoAttachment;->z1()Lcom/vk/dto/photo/Photo;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/PhotoAttachment;->z1()Lcom/vk/dto/photo/Photo;
 
     move-result-object v1
 
@@ -445,12 +445,12 @@
     if-eqz v4, :cond_5
 
     .line 15
-    check-cast v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v1, :cond_7
 
     .line 16
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v1
 
@@ -473,9 +473,9 @@
 
     move-object v4, v1
 
-    check-cast v4, Lcom/vkontakte/android/attachments/AudioAttachment;
+    check-cast v4, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    iget-object v6, v4, Lcom/vkontakte/android/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
+    iget-object v6, v4, Lcom/vtosters/lite/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
 
     iget-boolean v4, v6, Lcom/vk/dto/music/MusicTrack;->V:Z
 
@@ -996,7 +996,7 @@
     new-array p1, p1, [I
 
     .line 11
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p2
 
@@ -1417,7 +1417,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     .line 2
     iget-boolean v0, p0, Lcom/vk/sharing/SharingActivity;->S:Z
@@ -1581,7 +1581,7 @@
     invoke-virtual {p0, v1, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     .line 10
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 11
     new-instance v0, Lcom/vk/core/view/FitSystemWindowsFrameLayout;
@@ -1875,7 +1875,7 @@
     invoke-virtual {p1, p0}, Lcom/vk/sharing/target/o;->a(Lcom/vk/sharing/target/o$e;)V
 
     .line 42
-    iput-boolean v1, p0, Lcom/vkontakte/android/VKActivity;->C:Z
+    iput-boolean v1, p0, Lcom/vtosters/lite/VKActivity;->C:Z
 
     return-void
 .end method
@@ -1891,7 +1891,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/sharing/target/o;->a(Lcom/vk/sharing/target/o$e;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     return-void
 .end method
@@ -1954,14 +1954,14 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStart()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 2
-    invoke-static {p0}, Lcom/vkontakte/android/activities/LogoutReceiver;->a(Landroid/app/Activity;)Lcom/vkontakte/android/activities/LogoutReceiver;
+    invoke-static {p0}, Lcom/vtosters/lite/activities/LogoutReceiver;->a(Landroid/app/Activity;)Lcom/vtosters/lite/activities/LogoutReceiver;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/sharing/SharingActivity;->G:Lcom/vkontakte/android/activities/LogoutReceiver;
+    iput-object v0, p0, Lcom/vk/sharing/SharingActivity;->G:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     return-void
 .end method
@@ -1970,17 +1970,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->G:Lcom/vkontakte/android/activities/LogoutReceiver;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->G:Lcom/vtosters/lite/activities/LogoutReceiver;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/activities/LogoutReceiver;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/activities/LogoutReceiver;->a()V
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/sharing/SharingActivity;->G:Lcom/vkontakte/android/activities/LogoutReceiver;
+    iput-object v0, p0, Lcom/vk/sharing/SharingActivity;->G:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     .line 3
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStop()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     return-void
 .end method

@@ -289,7 +289,7 @@
     const-string v0, "stories_editor_screen"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
 
     const-string v2, "type"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     if-eqz p1, :cond_0
 
@@ -317,7 +317,7 @@
     const-string v1, "action"
 
     .line 3
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 4
     new-instance p1, Lorg/json/JSONArray;
@@ -403,10 +403,10 @@
     const-string v1, "action_facts"
 
     .line 13
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->e()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/friends/recommendations/IconTextHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "IconTextHolder.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/friends/recommendations/SearchFriendsItem;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -64,7 +64,7 @@
     const p1, 0x7f0d01fc
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     const/4 p1, 0x3
 
@@ -452,7 +452,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -471,7 +471,7 @@
     if-eqz p1, :cond_5
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/friends/recommendations/SearchFriendsItem;
 
@@ -497,7 +497,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/friends/recommendations/SearchFriendsItem;
 

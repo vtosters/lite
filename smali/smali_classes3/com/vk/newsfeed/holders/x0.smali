@@ -115,7 +115,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -126,7 +126,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -136,7 +136,7 @@
 
     neg-int v0, v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
     move-result-object v1
 
     .line 3
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v3, "item"
 
@@ -161,7 +161,7 @@
     invoke-virtual {v1, v2, v0}, Lcom/vk/newsfeed/posting/l;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/group/Group;)Lcom/vk/newsfeed/posting/l;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -185,7 +185,7 @@
     .line 1
     new-instance v0, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -237,16 +237,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/x0;->G:Landroid/view/View;
 
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     const/4 v1, 0x1
 
@@ -280,7 +280,7 @@
     check-cast p1, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/c;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/c;
 
     if-eqz v1, :cond_0
 

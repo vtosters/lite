@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $att:Lcom/vkontakte/android/attachments/PodcastAttachment;
+.field final synthetic $att:Lcom/vtosters/lite/attachments/PodcastAttachment;
 
 .field final synthetic this$0:Lcom/vk/newsfeed/holders/attachments/PodcastHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/PodcastHolder;Lcom/vkontakte/android/attachments/PodcastAttachment;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/PodcastHolder;Lcom/vtosters/lite/attachments/PodcastAttachment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->this$0:Lcom/vk/newsfeed/holders/attachments/PodcastHolder;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->$att:Lcom/vkontakte/android/attachments/PodcastAttachment;
+    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->$att:Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     const/4 p1, 0x1
 
@@ -54,18 +54,18 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->$att:Lcom/vkontakte/android/attachments/PodcastAttachment;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->$att:Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->Y0()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->Y0()Z
 
     move-result p1
 
     xor-int/lit8 p1, p1, 0x1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->$att:Lcom/vkontakte/android/attachments/PodcastAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->$att:Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->h(Z)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->h(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$2;->this$0:Lcom/vk/newsfeed/holders/attachments/PodcastHolder;

@@ -63,7 +63,7 @@
 
     int-to-long p0, p1
 
-    invoke-static {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -89,7 +89,7 @@
     int-to-long p0, p1
 
     .line 7
-    invoke-static {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object p0
 

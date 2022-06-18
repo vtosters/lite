@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/adapter/items/m$c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "DetailsGiftsItem.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/m;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/profile/adapter/items/m;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/m;",
         ">;"
     }
@@ -48,7 +48,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/items/m$c;->f:Lcom/vk/profile/adapter/items/m;
 
-    invoke-direct {p0, p3, p4}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p3, p4}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -154,11 +154,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/items/m$c;->f:Lcom/vk/profile/adapter/items/m;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/m;->R()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/m;->R()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -229,11 +229,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/items/m$c;->d:Landroid/view/View;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/m;->R()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/m;->R()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 

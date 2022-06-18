@@ -135,7 +135,7 @@
     move-result-object v10
 
     .line 9
-    const-class v2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    const-class v2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -147,7 +147,7 @@
 
     move-object v11, v2
 
-    check-cast v11, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v11, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     .line 10
     const-class v2, Lcom/vk/dto/discover/Info;
@@ -280,7 +280,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v24}, Lcom/vk/dto/discover/DiscoverItem;-><init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;)V
+    invoke-direct/range {v3 .. v24}, Lcom/vk/dto/discover/DiscoverItem;-><init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;)V
 
     return-object v0
 

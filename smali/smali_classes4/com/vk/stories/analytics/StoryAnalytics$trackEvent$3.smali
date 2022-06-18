@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/data/n$l;",
+        "Lcom/vtosters/lite/data/n$l;",
         "Lkotlin/m;",
         ">;"
     }
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/n$l;)V
     .locals 2
 
     .line 1
@@ -73,7 +73,7 @@
 
     const-string v1, "loading_duration"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 3
     :cond_0
@@ -95,9 +95,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/analytics/StoryAnalytics$trackEvent$3;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/analytics/StoryAnalytics$trackEvent$3;->a(Lcom/vtosters/lite/data/n$l;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

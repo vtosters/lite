@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/MenuCounterUpdater;->d()V
+    invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->d()V
 
     .line 2
     sget-object p1, Lcom/vk/notifications/NotificationsFragment;->O:Lcom/vk/notifications/NotificationsFragment$a;

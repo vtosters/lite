@@ -30,7 +30,7 @@
         value = {
             "Lcom/vk/attachpicker/base/g<",
             "TT;",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "TT;>;>;"
         }
     .end annotation
@@ -45,7 +45,7 @@
             "(",
             "Lcom/vk/attachpicker/base/g<",
             "TT;+",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "TT;>;>;)V"
         }
     .end annotation

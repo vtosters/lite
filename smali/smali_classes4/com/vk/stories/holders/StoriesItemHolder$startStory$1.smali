@@ -64,7 +64,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/holders/StoriesItemHolder$startStory$1;->a:Lcom/vk/stories/holders/StoriesItemHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/c<",
-        "Lcom/vkontakte/android/attachments/PollAttachment;",
+        "Lcom/vtosters/lite/attachments/PollAttachment;",
         "Ljava/lang/String;",
         "Lkotlin/m;",
         ">;"
@@ -51,18 +51,18 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     check-cast p2, Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/poll/fragments/PollEditorFragment$onCreateView$4;->a(Lcom/vkontakte/android/attachments/PollAttachment;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/poll/fragments/PollEditorFragment$onCreateView$4;->a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;Ljava/lang/String;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)V
     .locals 1
 
     .line 2
@@ -71,7 +71,7 @@
     invoke-direct {p2}, Landroid/content/Intent;-><init>()V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object p1
 

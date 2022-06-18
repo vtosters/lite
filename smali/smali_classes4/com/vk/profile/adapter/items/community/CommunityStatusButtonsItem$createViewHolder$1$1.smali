@@ -58,11 +58,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vkontakte/android/api/i;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;Lcom/vkontakte/android/api/i;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;Lcom/vtosters/lite/api/i;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -90,11 +90,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vkontakte/android/api/i;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 

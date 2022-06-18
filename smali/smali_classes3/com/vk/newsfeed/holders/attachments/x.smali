@@ -93,32 +93,32 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/x;->I:Landroid/widget/TextView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->g:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/x;->J:Landroid/widget/TextView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->h:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/x;->H:Lcom/vk/core/view/StaticMapView;
 
-    iget-wide v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->e:D
+    iget-wide v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->e:D
 
-    iget-wide v3, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->f:D
+    iget-wide v3, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->f:D
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/core/view/StaticMapView;->b(DD)V
 
@@ -146,12 +146,12 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -163,9 +163,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vkontakte/android/attachments/GeoAttachment;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vtosters/lite/attachments/GeoAttachment;)V
 
     :cond_0
     return-void

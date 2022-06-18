@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/a;
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic $community$inlined:Lcom/vkontakte/android/api/i;
+.field final synthetic $community$inlined:Lcom/vtosters/lite/api/i;
 
 .field final synthetic $link$inlined:Ljava/lang/String;
 
@@ -35,14 +35,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;Ljava/lang/String;Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;Ljava/lang/String;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;->$link$inlined:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vkontakte/android/api/i;
+    iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vtosters/lite/api/i;
 
     const/4 p1, 0x0
 

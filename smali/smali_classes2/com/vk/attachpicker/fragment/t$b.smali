@@ -1,5 +1,5 @@
 .class Lcom/vk/attachpicker/fragment/t$b;
-.super Lcom/vkontakte/android/api/l;
+.super Lcom/vtosters/lite/api/l;
 .source "GraffitiFragment.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/api/l<",
+        "Lcom/vtosters/lite/api/l<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/api/base/Document;",
         ">;>;"
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/attachpicker/fragment/t$b;->c:Lcom/vk/attachpicker/fragment/t;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/l;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/l;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     iput-object v1, v0, Lcom/vk/attachpicker/fragment/t;->z0:Lio/reactivex/disposables/b;
 
     .line 6
-    invoke-super {p0, p1}, Lcom/vkontakte/android/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     return-void
 .end method

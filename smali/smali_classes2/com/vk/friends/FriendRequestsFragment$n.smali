@@ -456,15 +456,15 @@
     move-result p1
 
     .line 27
-    invoke-static {p1}, Lcom/vkontakte/android/w;->e(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/w;->e(I)V
 
     .line 28
-    invoke-static {v0}, Lcom/vkontakte/android/w;->g(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/w;->g(I)V
 
     .line 29
-    sget-object v0, Lcom/vkontakte/android/data/Friends$Request;->IN:Lcom/vkontakte/android/data/Friends$Request;
+    sget-object v0, Lcom/vtosters/lite/data/Friends$Request;->IN:Lcom/vtosters/lite/data/Friends$Request;
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/Friends;->a(ILcom/vkontakte/android/data/Friends$Request;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Friends;->a(ILcom/vtosters/lite/data/Friends$Request;)V
 
     .line 30
     iget-object p1, p0, Lcom/vk/friends/FriendRequestsFragment$n;->a:Lcom/vk/friends/FriendRequestsFragment;

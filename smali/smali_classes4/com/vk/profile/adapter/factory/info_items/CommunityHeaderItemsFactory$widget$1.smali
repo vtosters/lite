@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/a0;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/a0;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/a0;
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->c()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->c()Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
     .line 2
     new-instance v0, Lcom/vk/profile/adapter/items/a0;
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/a0;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/a0;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-object v0
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$widget$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/a0;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$widget$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/a0;
 
     move-result-object p1
 

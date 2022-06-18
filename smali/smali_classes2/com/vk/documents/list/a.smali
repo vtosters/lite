@@ -23,9 +23,9 @@
 # instance fields
 .field private B:I
 
-.field private final C:Lcom/vkontakte/android/fragments/p2/c;
+.field private final C:Lcom/vtosters/lite/fragments/p2/c;
 
-.field private final D:Lcom/vkontakte/android/fragments/p2/d;
+.field private final D:Lcom/vtosters/lite/fragments/p2/d;
 
 .field private final h:Lcom/vk/common/i/a;
     .annotation system Ldalvik/annotation/Signature;
@@ -51,15 +51,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;)V
+.method public constructor <init>(Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/lists/m;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/documents/list/a;->C:Lcom/vkontakte/android/fragments/p2/c;
+    iput-object p1, p0, Lcom/vk/documents/list/a;->C:Lcom/vtosters/lite/fragments/p2/c;
 
-    iput-object p2, p0, Lcom/vk/documents/list/a;->D:Lcom/vkontakte/android/fragments/p2/d;
+    iput-object p2, p0, Lcom/vk/documents/list/a;->D:Lcom/vtosters/lite/fragments/p2/d;
 
     .line 2
     new-instance p1, Lcom/vk/common/i/a;
@@ -165,11 +165,11 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/documents/list/a;->C:Lcom/vkontakte/android/fragments/p2/c;
+    iget-object v0, p0, Lcom/vk/documents/list/a;->C:Lcom/vtosters/lite/fragments/p2/c;
 
-    iget-object v1, p0, Lcom/vk/documents/list/a;->D:Lcom/vkontakte/android/fragments/p2/d;
+    iget-object v1, p0, Lcom/vk/documents/list/a;->D:Lcom/vtosters/lite/fragments/p2/d;
 
-    invoke-direct {p2, p1, v0, v1}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;)V
+    invoke-direct {p2, p1, v0, v1}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;)V
 
     return-object p2
 
@@ -202,7 +202,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void

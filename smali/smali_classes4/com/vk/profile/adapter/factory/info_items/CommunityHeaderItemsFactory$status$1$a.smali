@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/d;
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/i;
+.field final synthetic b:Lcom/vtosters/lite/api/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->b:Lcom/vkontakte/android/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->b:Lcom/vtosters/lite/api/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->b:Lcom/vkontakte/android/api/i;
+    iget-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->b:Lcom/vtosters/lite/api/i;
 
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->U0:Lcom/vk/dto/music/MusicTrack;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->U0:Lcom/vk/dto/music/MusicTrack;
 
     if-eqz v0, :cond_0
 
@@ -69,7 +69,7 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1;->$presenter:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->m:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->m:Ljava/lang/String;
 
     const-string v2, "profile.activity"
 
@@ -80,9 +80,9 @@
     .line 4
     new-instance p1, Lcom/vk/profile/e/b;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->b:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$status$1$a;->b:Lcom/vtosters/lite/api/i;
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 

@@ -63,7 +63,7 @@
     .line 2
     iget-object p2, p0, Lcom/vk/newsfeed/holders/i$a;->a:Lcom/vk/newsfeed/holders/i;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p2
 

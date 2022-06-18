@@ -1,5 +1,5 @@
 .class public final Lcom/vk/common/links/LinkProcessorKt$a;
-.super Lcom/vkontakte/android/api/l;
+.super Lcom/vtosters/lite/api/l;
 .source "LinkProcessor.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/api/l<",
+        "Lcom/vtosters/lite/api/l<",
         "Lcom/vk/api/execute/ExecuteGetAccountSettings$Result;",
         ">;"
     }
@@ -37,7 +37,7 @@
 
     iput-object p2, p0, Lcom/vk/common/links/LinkProcessorKt$a;->d:Landroid/content/Context;
 
-    invoke-direct {p0, p3}, Lcom/vkontakte/android/api/l;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p3}, Lcom/vtosters/lite/api/l;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     iget-object v1, p0, Lcom/vk/common/links/LinkProcessorKt$a;->d:Landroid/content/Context;
 
-    const-class v2, Lcom/vkontakte/android/ValidationActivity;
+    const-class v2, Lcom/vtosters/lite/ValidationActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

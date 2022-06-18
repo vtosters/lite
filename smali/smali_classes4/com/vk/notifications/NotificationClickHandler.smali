@@ -119,7 +119,7 @@
     const-string p2, "notification_feed_birthday"
 
     .line 106
-    invoke-static {p1, v0, p2}, Lcom/vkontakte/android/fragments/gifts/h;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;)V
+    invoke-static {p1, v0, p2}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -476,11 +476,11 @@
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+.method private final a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
     .locals 9
 
     .line 66
-    invoke-static {p4, p5}, Lcom/vkontakte/android/data/Groups;->a(Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)Lc/a/m;
+    invoke-static {p4, p5}, Lcom/vtosters/lite/data/Groups;->a(Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)Lc/a/m;
 
     move-result-object v0
 
@@ -510,7 +510,7 @@
     .line 68
     new-instance v0, Lcom/vk/notifications/NotificationClickHandler$a;
 
-    invoke-direct {v0, p5, p2, p4, p3}, Lcom/vk/notifications/NotificationClickHandler$a;-><init>(Lcom/vkontakte/android/data/Groups$JoinType;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/group/Group;Lcom/vk/notifications/i;)V
+    invoke-direct {v0, p5, p2, p4, p3}, Lcom/vk/notifications/NotificationClickHandler$a;-><init>(Lcom/vtosters/lite/data/Groups$JoinType;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/group/Group;Lcom/vk/notifications/i;)V
 
     .line 69
     sget-object p2, Lcom/vk/notifications/NotificationClickHandler$b;->a:Lcom/vk/notifications/NotificationClickHandler$b;
@@ -644,7 +644,7 @@
     if-eqz v7, :cond_0
 
     .line 91
-    invoke-static {v7, v3}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v7, v3}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v7
 
@@ -673,7 +673,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {v0}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-static {v0}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v3
 
@@ -723,7 +723,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/data/Groups;->c(I)Lc/a/m;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Groups;->c(I)Lc/a/m;
 
     move-result-object v0
 
@@ -917,11 +917,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/notifications/NotificationClickHandler;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+.method public static final synthetic a(Lcom/vk/notifications/NotificationClickHandler;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+    invoke-direct/range {p0 .. p5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 
     return-void
 .end method
@@ -1197,13 +1197,13 @@
     if-eqz v1, :cond_2
 
     .line 14
-    sget-object v1, Lcom/vkontakte/android/data/Groups$JoinType;->ACCEPT:Lcom/vkontakte/android/data/Groups$JoinType;
+    sget-object v1, Lcom/vtosters/lite/data/Groups$JoinType;->ACCEPT:Lcom/vtosters/lite/data/Groups$JoinType;
 
     goto :goto_0
 
     .line 15
     :cond_2
-    sget-object v1, Lcom/vkontakte/android/data/Groups$JoinType;->DECLINE:Lcom/vkontakte/android/data/Groups$JoinType;
+    sget-object v1, Lcom/vtosters/lite/data/Groups$JoinType;->DECLINE:Lcom/vtosters/lite/data/Groups$JoinType;
 
     :goto_0
     move-object v5, v1
@@ -1217,7 +1217,7 @@
     move-object v4, v7
 
     .line 16
-    invoke-direct/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 
     :cond_3
     :goto_1
@@ -1712,7 +1712,7 @@
 
     const-string v0, "feedback"
 
-    invoke-static {p1, v0, v0, p2}, Lcom/vkontakte/android/GameCardActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-static {p1, v0, v0, p2}, Lcom/vtosters/lite/GameCardActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/data/ApiApplication;)V
 
     :cond_5
     :goto_0
@@ -1817,11 +1817,11 @@
 
     if-eqz p2, :cond_1
 
-    new-instance p2, Lcom/vkontakte/android/fragments/money/o$e;
+    new-instance p2, Lcom/vtosters/lite/fragments/money/o$e;
 
-    invoke-direct {p2}, Lcom/vkontakte/android/fragments/money/o$e;-><init>()V
+    invoke-direct {p2}, Lcom/vtosters/lite/fragments/money/o$e;-><init>()V
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/fragments/money/o$e;->j()Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/money/o$e;->j()Lcom/vtosters/lite/fragments/money/o$e;
 
     invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2053,7 +2053,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vkontakte/android/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -2073,7 +2073,7 @@
 
     if-eqz p2, :cond_1
 
-    sget-object v0, Lcom/vkontakte/android/fragments/money/l;->c:Lcom/vkontakte/android/fragments/money/l$a;
+    sget-object v0, Lcom/vtosters/lite/fragments/money/l;->c:Lcom/vtosters/lite/fragments/money/l$a;
 
     new-instance v1, Lcom/vk/dto/money/MoneyTransfer;
 
@@ -2089,7 +2089,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vkontakte/android/fragments/money/l$a;->a(Lcom/vkontakte/android/fragments/money/l$a;Lcom/vk/dto/money/MoneyTransfer;Landroid/content/Context;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vtosters/lite/fragments/money/l$a;->a(Lcom/vtosters/lite/fragments/money/l$a;Lcom/vk/dto/money/MoneyTransfer;Landroid/content/Context;ZILjava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -2159,7 +2159,7 @@
 
     check-cast p1, Landroid/app/Activity;
 
-    invoke-static {p3, p1, v2}, Lcom/vkontakte/android/fragments/money/m;->b(Lcom/vk/dto/money/MoneyTransfer;Landroid/app/Activity;Lcom/vkontakte/android/api/l;)V
+    invoke-static {p3, p1, v2}, Lcom/vtosters/lite/fragments/money/m;->b(Lcom/vk/dto/money/MoneyTransfer;Landroid/app/Activity;Lcom/vtosters/lite/api/l;)V
 
     goto :goto_0
 
@@ -2243,7 +2243,7 @@
 
     check-cast p1, Landroid/app/Activity;
 
-    invoke-static {p3, p1, v2}, Lcom/vkontakte/android/fragments/money/m;->a(Lcom/vk/dto/money/MoneyTransfer;Landroid/app/Activity;Lcom/vkontakte/android/api/l;)V
+    invoke-static {p3, p1, v2}, Lcom/vtosters/lite/fragments/money/m;->a(Lcom/vk/dto/money/MoneyTransfer;Landroid/app/Activity;Lcom/vtosters/lite/api/l;)V
 
     goto :goto_0
 

@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/attachments/PollAttachment;",
+        "Lcom/vtosters/lite/attachments/PollAttachment;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 2
 
     .line 1
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$d;->a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$d;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     return-void
 .end method

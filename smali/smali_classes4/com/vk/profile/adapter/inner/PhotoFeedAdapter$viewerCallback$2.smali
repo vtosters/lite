@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    value = Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

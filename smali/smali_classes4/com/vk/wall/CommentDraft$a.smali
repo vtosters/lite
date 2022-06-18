@@ -49,7 +49,7 @@
     new-instance v0, Lcom/vk/wall/CommentDraft;
 
     .line 3
-    const-class v1, Lcom/vkontakte/android/NewsComment;
+    const-class v1, Lcom/vtosters/lite/NewsComment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -61,7 +61,7 @@
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vkontakte/android/NewsComment;
+    check-cast v1, Lcom/vtosters/lite/NewsComment;
 
     .line 4
     const-class v2, Landroid/os/Bundle;
@@ -75,7 +75,7 @@
     move-result-object p1
 
     .line 5
-    invoke-direct {v0, v1, p1}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;)V
 
     return-object v0
 

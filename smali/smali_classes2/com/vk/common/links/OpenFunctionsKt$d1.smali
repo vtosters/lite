@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/NewsComment;",
+        "Lcom/vtosters/lite/NewsComment;",
         ">;"
     }
 .end annotation
@@ -66,7 +66,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/NewsComment;)V
+.method public final a(Lcom/vtosters/lite/NewsComment;)V
     .locals 4
 
     .line 1
@@ -91,12 +91,12 @@
     invoke-virtual {v0, v1}, Lcom/vk/wall/thread/CommentThreadFragment$a;->d(I)Lcom/vk/wall/thread/CommentThreadFragment$a;
 
     .line 4
-    iget-boolean v1, p1, Lcom/vkontakte/android/NewsComment;->F:Z
+    iget-boolean v1, p1, Lcom/vtosters/lite/NewsComment;->F:Z
 
     invoke-virtual {v0, v1}, Lcom/vk/wall/thread/CommentThreadFragment$a;->d(Z)Lcom/vk/wall/thread/CommentThreadFragment$a;
 
     .line 5
-    iget-boolean p1, p1, Lcom/vkontakte/android/NewsComment;->G:Z
+    iget-boolean p1, p1, Lcom/vtosters/lite/NewsComment;->G:Z
 
     invoke-virtual {v0, p1}, Lcom/vk/wall/thread/CommentThreadFragment$a;->c(Z)Lcom/vk/wall/thread/CommentThreadFragment$a;
 
@@ -129,9 +129,9 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcom/vkontakte/android/NewsComment;
+    check-cast p1, Lcom/vtosters/lite/NewsComment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$d1;->a(Lcom/vkontakte/android/NewsComment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$d1;->a(Lcom/vtosters/lite/NewsComment;)V
 
     return-void
 .end method

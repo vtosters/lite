@@ -182,7 +182,7 @@
     if-nez p1, :cond_1
 
     .line 5
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
 
     move-result v1
 
-    invoke-static {}, Lcom/vkontakte/android/utils/b;->a()Lb/h/c/b/a;
+    invoke-static {}, Lcom/vtosters/lite/utils/b;->a()Lb/h/c/b/a;
 
     move-result-object v2
 
@@ -261,13 +261,13 @@
 
 
 # virtual methods
-.method public final a()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final a()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/data/c;->h:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 

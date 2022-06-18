@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PostTopicsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -25,7 +25,7 @@
 # instance fields
 .field private final c:Lcom/vk/core/view/links/LinkedTextView;
 
-.field private final d:Lcom/vkontakte/android/v;
+.field private final d:Lcom/vtosters/lite/v;
 
 
 # direct methods
@@ -35,7 +35,7 @@
     const v0, 0x7f0d03ec
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -61,7 +61,7 @@
     const p1, 0x7f120931
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
     const p1, 0x7f120932
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -98,16 +98,16 @@
     invoke-virtual {v0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 10
-    new-instance p1, Lcom/vkontakte/android/v;
+    new-instance p1, Lcom/vtosters/lite/v;
 
     const-string v3, "https://vk.com/@-182611749-faq-eksperty-vkontakte"
 
-    invoke-direct {p1, v3}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v3}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;->d:Lcom/vkontakte/android/v;
+    iput-object p1, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;->d:Lcom/vtosters/lite/v;
 
     .line 11
-    iget-object p1, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;->d:Lcom/vkontakte/android/v;
+    iget-object p1, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;->d:Lcom/vtosters/lite/v;
 
     const/16 v3, 0x21
 
@@ -132,7 +132,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;->d:Lcom/vkontakte/android/v;
+    iget-object v0, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$b;->d:Lcom/vtosters/lite/v;
 
     check-cast p1, Lcom/vk/core/view/links/a$a;
 

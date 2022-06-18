@@ -125,7 +125,7 @@
     .line 6
     sget-object v2, Lcom/vk/navigation/q;->E:Ljava/lang/String;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 

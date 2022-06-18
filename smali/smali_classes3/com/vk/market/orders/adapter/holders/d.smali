@@ -135,9 +135,9 @@
 
     .line 13
     :cond_0
-    new-instance v1, Lcom/vkontakte/android/ui/t;
+    new-instance v1, Lcom/vtosters/lite/ui/t;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/ui/t;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/t;-><init>()V
 
     invoke-virtual {v0}, Lkotlin/t/b;->a()I
 
@@ -152,9 +152,9 @@
     invoke-virtual {p2, v1, v5, v6, v4}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     .line 14
-    new-instance v1, Lcom/vkontakte/android/ui/t;
+    new-instance v1, Lcom/vtosters/lite/ui/t;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/ui/t;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/t;-><init>()V
 
     invoke-virtual {v0}, Lkotlin/t/b;->b()I
 
@@ -222,21 +222,21 @@
 
     .line 1
     :cond_0
-    new-instance p1, Lcom/vkontakte/android/v;
+    new-instance p1, Lcom/vtosters/lite/v;
 
     const-string v0, "https://vk.com/terms/market_contract"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 2
     :cond_1
-    new-instance p1, Lcom/vkontakte/android/v;
+    new-instance p1, Lcom/vtosters/lite/v;
 
     const-string v0, "https://vk.com/terms/market_agreement"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     :goto_0
     return-object p1

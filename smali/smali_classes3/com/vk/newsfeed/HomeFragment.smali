@@ -277,7 +277,7 @@
 
     iget-object v3, p0, Lcom/vk/newsfeed/HomeFragment;->M:Lcom/vk/newsfeed/NewsListsAdapter;
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/NewsListsAdapter;->j()Lcom/vkontakte/android/NewsfeedList;
+    invoke-virtual {v3}, Lcom/vk/newsfeed/NewsListsAdapter;->j()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v3
 
@@ -307,7 +307,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/vkontakte/android/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/w;->b()I
 
     move-result v2
 
@@ -330,7 +330,7 @@
     if-eqz v0, :cond_a
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/w;->k()I
 
     move-result v0
 
@@ -806,7 +806,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsfeedList;",
+            "Lcom/vtosters/lite/NewsfeedList;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/vk/newsfeed/r;",
@@ -868,16 +868,16 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/vkontakte/android/NewsfeedList;
+    check-cast v7, Lcom/vtosters/lite/NewsfeedList;
 
     .line 6
-    invoke-virtual {v7}, Lcom/vkontakte/android/NewsfeedList;->getId()I
+    invoke-virtual {v7}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result v8
 
     if-gtz v8, :cond_0
 
-    invoke-virtual {v7}, Lcom/vkontakte/android/NewsfeedList;->u1()Z
+    invoke-virtual {v7}, Lcom/vtosters/lite/NewsfeedList;->u1()Z
 
     move-result v8
 
@@ -885,13 +885,13 @@
 
     .line 7
     :cond_0
-    invoke-virtual {v7}, Lcom/vkontakte/android/NewsfeedList;->u1()Z
+    invoke-virtual {v7}, Lcom/vtosters/lite/NewsfeedList;->u1()Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    invoke-virtual {v7}, Lcom/vkontakte/android/NewsfeedList;->t1()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/vtosters/lite/NewsfeedList;->t1()Ljava/lang/String;
 
     move-result-object v8
 
@@ -928,7 +928,7 @@
     :goto_2
     new-instance v9, Lcom/vk/newsfeed/r;
 
-    invoke-direct {v9, v7, v8}, Lcom/vk/newsfeed/r;-><init>(Lcom/vkontakte/android/NewsfeedList;I)V
+    invoke-direct {v9, v7, v8}, Lcom/vk/newsfeed/r;-><init>(Lcom/vtosters/lite/NewsfeedList;I)V
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -955,16 +955,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/NewsfeedList;
+    check-cast v0, Lcom/vtosters/lite/NewsfeedList;
 
     .line 11
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsfeedList;->getId()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result v6
 
     if-gtz v6, :cond_7
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsfeedList;->u1()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsfeedList;->u1()Z
 
     move-result v6
 
@@ -972,13 +972,13 @@
 
     .line 12
     :cond_7
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsfeedList;->u1()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsfeedList;->u1()Z
 
     move-result v6
 
     if-eqz v6, :cond_a
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsfeedList;->t1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsfeedList;->t1()Ljava/lang/String;
 
     move-result-object v6
 
@@ -1015,7 +1015,7 @@
     :goto_5
     new-instance v7, Lcom/vk/newsfeed/r;
 
-    invoke-direct {v7, v0, v6}, Lcom/vk/newsfeed/r;-><init>(Lcom/vkontakte/android/NewsfeedList;I)V
+    invoke-direct {v7, v0, v6}, Lcom/vk/newsfeed/r;-><init>(Lcom/vtosters/lite/NewsfeedList;I)V
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1745,7 +1745,7 @@
 
     const-wide/16 v1, 0xc8
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :cond_0
     return-void
@@ -2378,7 +2378,7 @@
 
     iget-object v3, p0, Lcom/vk/newsfeed/HomeFragment;->R:Lcom/vk/newsfeed/HomeFragment$receiver$1;
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v3, v0, v4, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

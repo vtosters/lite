@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/adapters/PostTopicsAdapter$c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PostTopicsAdapter.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/newsfeed/PostTopic;",
         ">;",
         "Landroid/widget/CompoundButton$OnCheckedChangeListener;"
@@ -48,7 +48,7 @@
 
     const p1, 0x7f0d03ed
 
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

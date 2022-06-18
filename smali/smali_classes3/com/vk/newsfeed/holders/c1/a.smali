@@ -129,19 +129,19 @@
 
     move-result-object v0
 
-    instance-of v2, v0, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v2, v0, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vkontakte/android/attachments/AudioAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v0, :cond_2
 
     .line 6
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
 
     goto :goto_0
 
@@ -272,7 +272,7 @@
     check-cast v7, Lcom/vk/dto/common/Attachment;
 
     .line 13
-    instance-of v7, v7, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v7, v7, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v7, :cond_9
 
@@ -294,7 +294,7 @@
     .line 14
     iget-object v0, p0, Lcom/vk/newsfeed/holders/c1/a;->P:Landroid/text/SpannableStringBuilder;
 
-    invoke-static {p1}, Lcom/vkontakte/android/attachments/a;->b(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->b(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -465,7 +465,7 @@
 
     const v0, 0x7f12011e
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 

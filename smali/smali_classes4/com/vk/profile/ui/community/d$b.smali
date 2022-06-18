@@ -145,17 +145,17 @@
 
     move-result-object p1
 
-    new-instance v1, Lcom/vkontakte/android/u;
+    new-instance v1, Lcom/vtosters/lite/u;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/u;-><init>()V
 
     const/16 v2, 0x70
 
     .line 4
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 5
-    invoke-static {p1, v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {p1, v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object p1
 

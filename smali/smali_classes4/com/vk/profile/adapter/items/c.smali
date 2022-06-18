@@ -14,25 +14,25 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field private final D:I
 
-.field private E:Lcom/vkontakte/android/api/c;
+.field private E:Lcom/vtosters/lite/api/c;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;ILcom/vkontakte/android/api/c;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;ILcom/vtosters/lite/api/c;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/c;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/c;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput p2, p0, Lcom/vk/profile/adapter/items/c;->D:I
 
-    iput-object p3, p0, Lcom/vk/profile/adapter/items/c;->E:Lcom/vkontakte/android/api/c;
+    iput-object p3, p0, Lcom/vk/profile/adapter/items/c;->E:Lcom/vtosters/lite/api/c;
 
     const/16 p1, -0x15
 
@@ -61,20 +61,20 @@
     return v0
 .end method
 
-.method public final P()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final P()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/c;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/c;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object v0
 .end method
 
-.method public final Q()Lcom/vkontakte/android/api/c;
+.method public final Q()Lcom/vtosters/lite/api/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/c;->E:Lcom/vkontakte/android/api/c;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/c;->E:Lcom/vtosters/lite/api/c;
 
     return-object v0
 .end method
@@ -99,7 +99,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 1

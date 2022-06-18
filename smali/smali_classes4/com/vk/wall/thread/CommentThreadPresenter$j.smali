@@ -89,7 +89,7 @@
     if-eqz v3, :cond_0
 
     .line 3
-    invoke-virtual {v3}, Lcom/vk/wall/b;->a()Lcom/vkontakte/android/q;
+    invoke-virtual {v3}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
 
     move-result-object v3
 
@@ -99,26 +99,26 @@
     move-object v3, v2
 
     :goto_1
-    instance-of v4, v3, Lcom/vkontakte/android/NewsComment;
+    instance-of v4, v3, Lcom/vtosters/lite/NewsComment;
 
     if-nez v4, :cond_1
 
     move-object v3, v2
 
     :cond_1
-    check-cast v3, Lcom/vkontakte/android/NewsComment;
+    check-cast v3, Lcom/vtosters/lite/NewsComment;
 
     if-eqz v3, :cond_2
 
     .line 4
-    iget v4, v3, Lcom/vkontakte/android/NewsComment;->g:I
+    iget v4, v3, Lcom/vtosters/lite/NewsComment;->g:I
 
     iget v5, p0, Lcom/vk/wall/thread/CommentThreadPresenter$j;->b:I
 
     if-ne v4, v5, :cond_2
 
     .line 5
-    iput-boolean v0, v3, Lcom/vkontakte/android/NewsComment;->K:Z
+    iput-boolean v0, v3, Lcom/vtosters/lite/NewsComment;->K:Z
 
     .line 6
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$j;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
@@ -143,7 +143,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$j;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1, v3}, Lcom/vk/wall/thread/CommentThreadPresenter;->l(Lcom/vkontakte/android/q;)V
+    invoke-virtual {p1, v3}, Lcom/vk/wall/thread/CommentThreadPresenter;->l(Lcom/vtosters/lite/q;)V
 
     goto :goto_2
 

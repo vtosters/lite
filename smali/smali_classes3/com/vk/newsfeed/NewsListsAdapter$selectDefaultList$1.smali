@@ -60,11 +60,11 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vkontakte/android/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/NewsfeedList;->getId()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result p1
 

@@ -1,5 +1,5 @@
 .class public Lcom/vk/attachpicker/PhotoVideoAttachActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "PhotoVideoAttachActivity.java"
 
 # interfaces
@@ -57,7 +57,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/attachpicker/p;
@@ -99,7 +99,7 @@
 
     .line 7
     :try_start_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v0
 
@@ -279,7 +279,7 @@
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 
@@ -303,7 +303,7 @@
     invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :goto_0
     return-void
@@ -371,7 +371,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :goto_0
     return-void
@@ -400,7 +400,7 @@
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super/range {p0 .. p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1018,7 +1018,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;

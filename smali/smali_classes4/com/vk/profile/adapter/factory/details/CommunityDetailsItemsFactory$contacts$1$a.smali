@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->a(Lcom/vkontakte/android/api/i;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
     .locals 4
 
     .line 1
-    iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;
+    iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;
 
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->a:Lcom/vk/dto/user/UserProfile;
 
     if-eqz v0, :cond_0
 
@@ -64,7 +64,7 @@
 
     .line 2
     :cond_0
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;->c:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->c:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
@@ -90,9 +90,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;
 
-    iget-object v3, v3, Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;->c:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->c:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -123,9 +123,9 @@
 
     .line 8
     :cond_1
-    iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;
+    iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;->d:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->d:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
@@ -149,9 +149,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;
 
-    iget-object v3, v3, Lcom/vkontakte/android/api/ExtendedUserProfile$Contact;->d:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->d:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

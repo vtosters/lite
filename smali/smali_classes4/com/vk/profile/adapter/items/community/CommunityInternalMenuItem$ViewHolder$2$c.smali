@@ -46,7 +46,7 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -54,7 +54,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     iget-object v3, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2$c;->a:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;
 
@@ -68,7 +68,7 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
 
     invoke-interface {v0, v1, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 

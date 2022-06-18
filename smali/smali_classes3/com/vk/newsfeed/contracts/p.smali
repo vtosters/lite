@@ -49,7 +49,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsfeedList;",
+            "Lcom/vtosters/lite/NewsfeedList;",
             ">;Z)V"
         }
     .end annotation

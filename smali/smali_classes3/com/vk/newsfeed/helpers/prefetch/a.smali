@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;I)Ljava/lang/String;
+.method public a(Lcom/vtosters/lite/ui/f0/b;I)Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of p2, p1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -54,7 +54,7 @@
     return-object v0
 .end method
 
-.method public b(Lcom/vkontakte/android/ui/f0/b;)I
+.method public b(Lcom/vtosters/lite/ui/f0/b;)I
     .locals 0
 
     const/4 p1, 0x1

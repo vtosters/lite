@@ -76,7 +76,7 @@
 
     iget-object v0, p1, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/StoryAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/StoryAttachment;
 
     iget-object v2, p1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -86,7 +86,7 @@
 
     move-result-object p1
 
-    invoke-direct {v1, v2, p1}, Lcom/vkontakte/android/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;)V
+    invoke-direct {v1, v2, p1}, Lcom/vtosters/lite/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;)V
 
     invoke-interface {v0, v1}, Lcom/vk/stories/view/StoryView$u0;->b(Ljava/lang/Object;)V
 
@@ -98,16 +98,16 @@
 
     iget-object v0, v0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
     invoke-interface {v0, v1}, Lcom/vk/stories/view/StoryView$u0;->b(Ljava/lang/Object;)V
 
     const-string v0, "narrative_share"
 
     .line 6
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
 
     const-string v2, "owner_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 8
     invoke-virtual {p1}, Lcom/vk/dto/narratives/Narrative;->getId()I
@@ -135,10 +135,10 @@
 
     const-string v1, "narrative_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     :goto_0

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/common/a$b;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "InstalledAppsTracker.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/api/k;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/api/k;-><init>()V
 
     return-void
 .end method

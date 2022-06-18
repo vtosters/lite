@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     return p1
 .end method

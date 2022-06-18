@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/poll/adapters/RecyclerHolderSelection;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "RecyclerHolderSelection.kt"
 
 
@@ -9,7 +9,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "TT;>;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p3, p0, Lcom/vk/poll/adapters/RecyclerHolderSelection;->f:Lkotlin/u/g;
 
@@ -130,7 +130,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     return-object p0
 .end method

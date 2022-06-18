@@ -397,14 +397,14 @@
     if-eqz p2, :cond_4
 
     .line 9
-    new-instance p3, Lcom/vkontakte/android/ui/r;
+    new-instance p3, Lcom/vtosters/lite/ui/r;
 
-    invoke-direct {p3, p2}, Lcom/vkontakte/android/ui/r;-><init>(I)V
+    invoke-direct {p3, p2}, Lcom/vtosters/lite/ui/r;-><init>(I)V
 
     const/4 p2, 0x0
 
     .line 10
-    invoke-virtual {p3, p2}, Lcom/vkontakte/android/ui/r;->a(Z)V
+    invoke-virtual {p3, p2}, Lcom/vtosters/lite/ui/r;->a(Z)V
 
     .line 11
     iget-object p2, p0, Lcom/vk/profile/ui/header/BaseHeaderView;->C:Lcom/vk/imageloader/view/VKImageView;
@@ -475,7 +475,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 1
 
     .line 21

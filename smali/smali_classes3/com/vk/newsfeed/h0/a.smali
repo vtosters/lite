@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/h0/a;
-.super Lcom/vkontakte/android/ui/f0/b;
+.super Lcom/vtosters/lite/ui/f0/b;
 .source "AttachmentPostDisplayItem.kt"
 
 
@@ -14,7 +14,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     iput-object p4, p0, Lcom/vk/newsfeed/h0/a;->n:Lcom/vk/dto/common/Attachment;
 
@@ -57,11 +57,11 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/ui/holder/video/BaseAutoPlayHolder;->u(I)Z
+    invoke-static {v0}, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;->u(I)Z
 
     move-result v0
 
@@ -76,13 +76,13 @@
     iget-object v0, p0, Lcom/vk/newsfeed/h0/a;->n:Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v2, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v2, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v2, :cond_1
 
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v1
 
@@ -90,13 +90,13 @@
 
     .line 4
     :cond_1
-    instance-of v2, v0, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v2, v0, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v2, :cond_2
 
-    check-cast v0, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v1
 

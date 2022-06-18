@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/h$a;",
+        "Lcom/vtosters/lite/api/wall/h$a;",
         ">;"
     }
 .end annotation
@@ -66,7 +66,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/h$a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/h$a;)V
     .locals 9
 
     .line 1
@@ -87,7 +87,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$s;->b:Lcom/vk/dto/newsfeed/c;
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/h$a;->a:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/h$a;->a:I
 
     invoke-interface {v0, v1}, Lcom/vk/dto/newsfeed/c;->b(I)V
 
@@ -96,7 +96,7 @@
 
     if-eqz v0, :cond_0
 
-    iget p1, p1, Lcom/vkontakte/android/api/wall/h$a;->b:I
+    iget p1, p1, Lcom/vtosters/lite/api/wall/h$a;->b:I
 
     if-ltz p1, :cond_0
 
@@ -174,7 +174,7 @@
 
     const-string v0, "like_post"
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -219,9 +219,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/h$a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/h$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/controllers/PostsController$s;->a(Lcom/vkontakte/android/api/wall/h$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/controllers/PostsController$s;->a(Lcom/vtosters/lite/api/wall/h$a;)V
 
     return-void
 .end method

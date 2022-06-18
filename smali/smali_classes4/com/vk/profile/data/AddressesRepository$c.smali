@@ -97,7 +97,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/data/AddressesRepository$c$a;-><init>(Lcom/vk/profile/data/AddressesRepository$c;Ljava/util/List;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

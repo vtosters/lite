@@ -85,7 +85,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     .line 2
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -108,7 +108,7 @@
     .line 3
     iget v4, v3, Lcom/vk/dto/photo/Photo;->a:I
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/PhotoAttachment;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/PhotoAttachment;->getId()I
 
     move-result v5
 
@@ -116,7 +116,7 @@
 
     iget v4, v3, Lcom/vk/dto/photo/Photo;->c:I
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/PhotoAttachment;->b()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/PhotoAttachment;->b()I
 
     move-result v5
 
@@ -164,9 +164,9 @@
     check-cast v1, Lcom/vk/dto/photo/Photo;
 
     .line 9
-    new-instance v2, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-direct {v2, v1}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v2, v1}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 

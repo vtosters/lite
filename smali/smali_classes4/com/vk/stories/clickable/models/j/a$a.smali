@@ -88,7 +88,7 @@
     .end annotation
 
     .line 33
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     const/4 v1, 0x0
 
@@ -110,7 +110,7 @@
 
     .line 34
     :cond_1
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/NoteAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/NoteAttachment;
 
     const v2, 0x7f08034e
 
@@ -124,7 +124,7 @@
 
     .line 35
     :cond_2
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/AudioMessageAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/AudioMessageAttachment;
 
     const v3, 0x7f0805f5
 
@@ -138,7 +138,7 @@
 
     .line 36
     :cond_3
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
     if-eqz v0, :cond_4
 
@@ -150,9 +150,9 @@
     move-result-object v0
 
     .line 38
-    check-cast p2, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/NarrativeAttachment;->x1()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/NarrativeAttachment;->x1()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object p2
 
@@ -168,7 +168,7 @@
 
     .line 39
     :cond_4
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     const v4, 0x7f0806cc
 
@@ -180,9 +180,9 @@
     move-result-object v0
 
     .line 41
-    check-cast p2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p2
 
@@ -206,7 +206,7 @@
 
     .line 42
     :cond_5
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;
 
     if-eqz v0, :cond_6
 
@@ -216,9 +216,9 @@
     move-result-object v0
 
     .line 44
-    check-cast p2, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/VideoAttachment;->p1()Lcom/vk/dto/common/Image;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/VideoAttachment;->p1()Lcom/vk/dto/common/Image;
 
     move-result-object p2
 
@@ -242,7 +242,7 @@
 
     .line 45
     :cond_6
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v0, :cond_7
 
@@ -254,9 +254,9 @@
     move-result-object v0
 
     .line 47
-    check-cast p2, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p2
 
@@ -272,7 +272,7 @@
 
     .line 48
     :cond_7
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v0, :cond_8
 
@@ -282,9 +282,9 @@
     move-result-object v0
 
     .line 50
-    check-cast p2, Lcom/vkontakte/android/attachments/AudioAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    iget-object p2, p2, Lcom/vkontakte/android/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
+    iget-object p2, p2, Lcom/vtosters/lite/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
 
     invoke-static {}, Lcom/vk/stories/clickable/models/j/a;->m()I
 
@@ -298,7 +298,7 @@
 
     .line 51
     :cond_8
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
     if-eqz v0, :cond_9
 
@@ -310,9 +310,9 @@
     move-result-object v0
 
     .line 53
-    check-cast p2, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
 
     move-result-object p2
 
@@ -340,7 +340,7 @@
 
     .line 54
     :cond_9
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/AlbumAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/AlbumAttachment;
 
     const v3, 0x7f0806db
 
@@ -352,13 +352,13 @@
     move-result-object v0
 
     .line 56
-    check-cast p2, Lcom/vkontakte/android/attachments/AlbumAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/AlbumAttachment;
 
     invoke-static {}, Lcom/vk/stories/clickable/models/j/a;->m()I
 
     move-result v2
 
-    invoke-virtual {p2, v2}, Lcom/vkontakte/android/attachments/PhotoAttachment;->i(I)Ljava/lang/String;
+    invoke-virtual {p2, v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;->i(I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -366,7 +366,7 @@
 
     .line 57
     :cond_a
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-eqz v0, :cond_b
 
@@ -376,9 +376,9 @@
     move-result-object v0
 
     .line 59
-    check-cast p2, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object p2
 
@@ -398,7 +398,7 @@
 
     .line 60
     :cond_b
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_c
 
@@ -408,9 +408,9 @@
     move-result-object v0
 
     .line 62
-    check-cast p2, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p2
 
@@ -426,7 +426,7 @@
 
     .line 63
     :cond_c
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v0, :cond_e
 
@@ -438,9 +438,9 @@
     move-result-object v0
 
     .line 65
-    check-cast p2, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object p2
 
@@ -483,7 +483,7 @@
 
     .line 66
     :cond_e
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_f
 
@@ -495,9 +495,9 @@
     move-result-object v0
 
     .line 68
-    check-cast p2, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object p2, p2, Lcom/vkontakte/android/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
+    iget-object p2, p2, Lcom/vtosters/lite/attachments/DocumentAttachment;->J:Lcom/vk/dto/common/Image;
 
     if-eqz p2, :cond_0
 
@@ -519,7 +519,7 @@
 
     .line 69
     :cond_f
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     const v2, 0x7f080580
 
@@ -531,9 +531,9 @@
     move-result-object v0
 
     .line 71
-    check-cast p2, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/MarketAttachment;
 
-    iget-object p2, p2, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object p2, p2, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     iget-object p2, p2, Lcom/vk/dto/common/Good;->I:Lcom/vk/dto/common/Image;
 
@@ -557,7 +557,7 @@
 
     .line 72
     :cond_10
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     if-eqz v0, :cond_11
 
@@ -567,9 +567,9 @@
     move-result-object v0
 
     .line 74
-    check-cast p2, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
-    iget-object p2, p2, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object p2, p2, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     if-eqz p2, :cond_0
 
@@ -658,7 +658,7 @@
 
     .line 78
     :cond_13
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/LinkAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     if-eqz v0, :cond_14
 
@@ -666,7 +666,7 @@
 
     .line 79
     :cond_14
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/MiniAppAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/MiniAppAttachment;
 
     if-eqz v0, :cond_15
 
@@ -674,7 +674,7 @@
 
     .line 80
     :cond_15
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/PrettyCardAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/PrettyCardAttachment;
 
     if-eqz v0, :cond_16
 
@@ -682,7 +682,7 @@
 
     .line 81
     :cond_16
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
     if-eqz v0, :cond_17
 
@@ -690,7 +690,7 @@
 
     .line 82
     :cond_17
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/StickerAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     if-eqz v0, :cond_18
 
@@ -698,7 +698,7 @@
 
     .line 83
     :cond_18
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/WikiAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/WikiAttachment;
 
     if-eqz v0, :cond_19
 
@@ -712,7 +712,7 @@
 
     .line 85
     :cond_19
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_1a
 
@@ -844,7 +844,7 @@
     check-cast v7, Lcom/vk/dto/common/Attachment;
 
     .line 5
-    instance-of v8, v7, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v8, v7, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     const/4 v9, 0x0
 
@@ -853,9 +853,9 @@
     .line 6
     move-object v8, v7
 
-    check-cast v8, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v8, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v8, v8, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v8, v8, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-object v8, v8, Lcom/vk/dto/photo/Photo;->Q:Lcom/vk/dto/common/Image;
 

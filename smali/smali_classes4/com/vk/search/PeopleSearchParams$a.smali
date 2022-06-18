@@ -79,11 +79,11 @@
     return v0
 .end method
 
-.method public final e()Lcom/vkontakte/android/Relation;
+.method public final e()Lcom/vtosters/lite/Relation;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/search/PeopleSearchParams;->K1()Lcom/vkontakte/android/Relation;
+    invoke-static {}, Lcom/vk/search/PeopleSearchParams;->K1()Lcom/vtosters/lite/Relation;
 
     move-result-object v0
 

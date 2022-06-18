@@ -14,7 +14,7 @@
     value = {
         "Lcom/vk/lists/i0<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;>;"
     }
@@ -111,12 +111,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/stories/model/StoriesContainer;",
             ">;I)V"
         }
@@ -130,7 +130,7 @@
     check-cast v0, Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 2
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/view/z1/a;->e:Lkotlin/jvm/b/c;
@@ -183,9 +183,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/view/z1/a;->a(Lcom/vkontakte/android/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/view/z1/a;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -194,21 +194,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/view/z1/a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/view/z1/a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/stories/model/StoriesContainer;",
             ">;"
         }

@@ -52,11 +52,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vkontakte/android/Relation;)V
+.method public static final synthetic a(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/Relation;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/search/view/PeopleSearchParamsView;->setRelationship(Lcom/vkontakte/android/Relation;)V
+    invoke-direct {p0, p1}, Lcom/vk/search/view/PeopleSearchParamsView;->setRelationship(Lcom/vtosters/lite/Relation;)V
 
     return-void
 .end method
@@ -612,7 +612,7 @@
     if-eqz v0, :cond_8
 
     .line 7
-    check-cast v0, Lcom/vkontakte/android/ui/adapters/l;
+    check-cast v0, Lcom/vtosters/lite/ui/adapters/l;
 
     sget-object v3, Lcom/vk/search/PeopleSearchParams;->N:Lcom/vk/search/PeopleSearchParams$a;
 
@@ -628,7 +628,7 @@
     const/4 v1, 0x0
 
     :goto_3
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/adapters/l;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/adapters/l;->a(Z)V
 
     goto :goto_4
 
@@ -649,7 +649,7 @@
     return-void
 .end method
 
-.method private final setRelationship(Lcom/vkontakte/android/Relation;)V
+.method private final setRelationship(Lcom/vtosters/lite/Relation;)V
     .locals 2
 
     .line 1
@@ -676,12 +676,12 @@
     :cond_1
     sget-object p1, Lcom/vk/search/PeopleSearchParams;->N:Lcom/vk/search/PeopleSearchParams$a;
 
-    invoke-virtual {p1}, Lcom/vk/search/PeopleSearchParams$a;->e()Lcom/vkontakte/android/Relation;
+    invoke-virtual {p1}, Lcom/vk/search/PeopleSearchParams$a;->e()Lcom/vtosters/lite/Relation;
 
     move-result-object p1
 
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/search/PeopleSearchParams;->a(Lcom/vkontakte/android/Relation;)V
+    invoke-virtual {v0, p1}, Lcom/vk/search/PeopleSearchParams;->a(Lcom/vtosters/lite/Relation;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/search/view/PeopleSearchParamsView;->I:Landroid/widget/Spinner;
@@ -694,13 +694,13 @@
 
     check-cast v0, Lcom/vk/search/PeopleSearchParams;
 
-    invoke-virtual {v0}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vkontakte/android/Relation;
+    invoke-virtual {v0}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vtosters/lite/Relation;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/search/PeopleSearchParams;->N:Lcom/vk/search/PeopleSearchParams$a;
 
-    invoke-virtual {v1}, Lcom/vk/search/PeopleSearchParams$a;->e()Lcom/vkontakte/android/Relation;
+    invoke-virtual {v1}, Lcom/vk/search/PeopleSearchParams$a;->e()Lcom/vtosters/lite/Relation;
 
     move-result-object v1
 
@@ -992,7 +992,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vkontakte/android/Relation;
+    invoke-virtual {p1}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vtosters/lite/Relation;
 
     move-result-object p1
 
@@ -1017,13 +1017,13 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/ui/adapters/l;
+    new-instance v0, Lcom/vtosters/lite/ui/adapters/l;
 
     invoke-virtual {p0}, Lcom/vk/search/view/BaseSearchParamsView;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vkontakte/android/Relation;->values()[Lcom/vkontakte/android/Relation;
+    invoke-static {}, Lcom/vtosters/lite/Relation;->values()[Lcom/vtosters/lite/Relation;
 
     move-result-object v2
 
@@ -1031,7 +1031,7 @@
 
     const v4, 0x7f0d01a3
 
-    invoke-direct {v0, v3, v1, v4, v2}, Lcom/vkontakte/android/ui/adapters/l;-><init>(ZLandroid/content/Context;I[Lcom/vkontakte/android/Relation;)V
+    invoke-direct {v0, v3, v1, v4, v2}, Lcom/vtosters/lite/ui/adapters/l;-><init>(ZLandroid/content/Context;I[Lcom/vtosters/lite/Relation;)V
 
     const v1, 0x7f0d01a2
 
@@ -1053,7 +1053,7 @@
 
     new-instance v2, Lcom/vk/search/view/PeopleSearchParamsView$d;
 
-    invoke-direct {v2, p0, v0}, Lcom/vk/search/view/PeopleSearchParamsView$d;-><init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vkontakte/android/ui/adapters/l;)V
+    invoke-direct {v2, p0, v0}, Lcom/vk/search/view/PeopleSearchParamsView$d;-><init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/ui/adapters/l;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 

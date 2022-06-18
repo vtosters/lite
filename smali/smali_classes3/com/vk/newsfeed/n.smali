@@ -777,7 +777,7 @@
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStop()V
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/data/n;->m()V
+    invoke-static {}, Lcom/vtosters/lite/data/n;->m()V
 
     return-void
 .end method

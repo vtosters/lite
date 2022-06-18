@@ -26,7 +26,7 @@
 
 .field private final J:Lcom/vk/core/utils/e;
 
-.field private final K:Lcom/vkontakte/android/audio/utils/f;
+.field private final K:Lcom/vtosters/lite/audio/utils/f;
 
 .field private L:Ljava/lang/Integer;
 
@@ -274,7 +274,7 @@
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->b()V
 
     .line 25
-    new-instance p1, Lcom/vkontakte/android/audio/utils/f;
+    new-instance p1, Lcom/vtosters/lite/audio/utils/f;
 
     iget-object p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->b:Landroid/app/Activity;
 
@@ -284,9 +284,9 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p5, v0}, Lcom/vkontakte/android/audio/utils/f;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p1, p5, v0}, Lcom/vtosters/lite/audio/utils/f;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vkontakte/android/audio/utils/f;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vtosters/lite/audio/utils/f;
 
     .line 26
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->Q:Lcom/vk/profile/presenter/CommunityPresenter;
@@ -1231,9 +1231,9 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vkontakte/android/audio/utils/f;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vtosters/lite/audio/utils/f;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/audio/utils/f;->b()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/utils/f;->b()V
 
     .line 2
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->h()V

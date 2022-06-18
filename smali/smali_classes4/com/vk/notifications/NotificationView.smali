@@ -2462,7 +2462,7 @@
     const-string v1, "notify"
 
     .line 97
-    invoke-static {v1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v1
 
@@ -2471,12 +2471,12 @@
     const-string v3, "click"
 
     .line 98
-    invoke-virtual {v1, v2, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "region"
 
     .line 99
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 100
     invoke-virtual {v0}, Lcom/vk/dto/notifications/NotificationItem;->getId()Ljava/lang/String;
@@ -2485,10 +2485,10 @@
 
     const-string v0, "notify_id"
 
-    invoke-virtual {v1, v0, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v0, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 101
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->e()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
 
     :cond_0
     return-void

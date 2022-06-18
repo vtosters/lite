@@ -367,7 +367,7 @@
     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 7
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -514,7 +514,7 @@
     const v0, 0x7f080376
 
     .line 3
-    invoke-static {p2, v0}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     const-string v0, "toolbar"
 

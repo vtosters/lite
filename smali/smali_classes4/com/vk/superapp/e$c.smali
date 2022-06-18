@@ -82,12 +82,12 @@
     .end annotation
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/j0/b;->e()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/b;->e()Ljava/util/List;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lcom/vkontakte/android/j0/b;->f()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/b;->f()Ljava/util/List;
 
     move-result-object v1
 

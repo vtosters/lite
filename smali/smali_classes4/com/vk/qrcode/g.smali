@@ -78,12 +78,12 @@
 
     move-result-wide v2
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vkontakte/android/attachments/a;->a(DD)Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-static {v0, v1, v2, v3}, Lcom/vtosters/lite/attachments/a;->a(DD)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v0
 
     .line 2
-    invoke-static {p1, v0}, Lcom/vkontakte/android/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vkontakte/android/attachments/GeoAttachment;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vtosters/lite/attachments/GeoAttachment;)V
 
     return-void
 .end method

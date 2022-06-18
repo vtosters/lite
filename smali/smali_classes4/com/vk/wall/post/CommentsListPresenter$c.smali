@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vkontakte/android/q;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vtosters/lite/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/wall/post/CommentsListPresenter;
 
-.field final synthetic b:Lcom/vkontakte/android/NewsComment;
+.field final synthetic b:Lcom/vtosters/lite/NewsComment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vkontakte/android/NewsComment;)V
+.method constructor <init>(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/NewsComment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    iput-object p2, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->b:Lcom/vkontakte/android/NewsComment;
+    iput-object p2, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->b:Lcom/vtosters/lite/NewsComment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,9 +56,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    iget-object v1, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v1, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->b:Lcom/vtosters/lite/NewsComment;
 
-    invoke-static {v0, v1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vkontakte/android/NewsComment;)I
+    invoke-static {v0, v1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/NewsComment;)I
 
     move-result v0
 

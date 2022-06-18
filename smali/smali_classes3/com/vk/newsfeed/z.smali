@@ -1164,7 +1164,7 @@
     invoke-virtual {v5, v4}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
     .line 6
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v5
 
@@ -1172,7 +1172,7 @@
 
     invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v5}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v5
 
@@ -1180,7 +1180,7 @@
 
     invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/data/n$q;->b()Z
+    invoke-virtual {v5}, Lcom/vtosters/lite/data/n$q;->b()Z
 
     move-result v5
 

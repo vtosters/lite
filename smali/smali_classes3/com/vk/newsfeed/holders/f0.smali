@@ -73,7 +73,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
     if-eqz v1, :cond_2
 
     :goto_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -138,7 +138,7 @@
     if-eq p1, v5, :cond_9
 
     :cond_3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -165,7 +165,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -195,7 +195,7 @@
 
     if-ne v1, v5, :cond_6
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -223,7 +223,7 @@
 
     if-ne v1, v6, :cond_7
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -256,7 +256,7 @@
 
     move-result-object v1
 
-    instance-of v1, v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_9
 
@@ -271,9 +271,9 @@
 
     if-eqz p1, :cond_8
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -290,7 +290,7 @@
     if-eqz p1, :cond_9
 
     .line 13
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 

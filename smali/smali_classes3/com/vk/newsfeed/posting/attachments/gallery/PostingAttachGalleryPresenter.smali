@@ -741,7 +741,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     .line 9
     new-instance p2, Landroid/content/Intent;

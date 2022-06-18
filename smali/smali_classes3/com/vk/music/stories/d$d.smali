@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/r;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;)V
+    value = Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/r;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,11 +37,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;)V
+.method public a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;)V
     .locals 1
 
     .line 10
-    invoke-super {p0, p1}, Lcom/vk/music/stories/a;->a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;)V
+    invoke-super {p0, p1}, Lcom/vk/music/stories/a;->a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/music/stories/d$d;->c:Lcom/vk/music/stories/d;
@@ -76,11 +76,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener$ErrorType;)V
+.method public a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener$ErrorType;)V
     .locals 5
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/music/stories/a;->a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener$ErrorType;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/music/stories/a;->a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener$ErrorType;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/stories/d$d;->c:Lcom/vk/music/stories/d;
@@ -205,11 +205,11 @@
     return-void
 .end method
 
-.method public b(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;I)V
+.method public b(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;I)V
     .locals 5
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/music/stories/a;->b(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;I)V
+    invoke-super {p0, p1, p2}, Lcom/vk/music/stories/a;->b(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;I)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/stories/d$d;->c:Lcom/vk/music/stories/d;
@@ -230,7 +230,7 @@
     if-nez v0, :cond_1
 
     .line 4
-    invoke-interface {p1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->getDuration()J
+    invoke-interface {p1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->getDuration()J
 
     move-result-wide v0
 
@@ -247,7 +247,7 @@
     :cond_0
     int-to-float p2, p2
 
-    invoke-interface {p1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->getDuration()J
+    invoke-interface {p1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->getDuration()J
 
     move-result-wide v0
 

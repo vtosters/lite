@@ -60,9 +60,9 @@
     .locals 1
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     const/4 v0, 0x0
 

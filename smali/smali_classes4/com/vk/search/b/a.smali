@@ -219,7 +219,7 @@
 
     check-cast p2, Lcom/vk/dto/discover/b/c;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -244,7 +244,7 @@
 
     check-cast p2, Lcom/vk/dto/discover/b/h;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 

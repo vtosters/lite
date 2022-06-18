@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/clickable/dialogs/question/b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoryCreateQuestionColorsAdapter.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/stories/clickable/dialogs/question/a;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -71,7 +71,7 @@
 
     invoke-direct {v0, p1, v1, v2}, Lcom/vk/attachpicker/widget/ColorSelectorView$b;-><init>(Landroid/content/Context;IZ)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/stories/clickable/dialogs/question/b;->d:Lcom/vk/stories/clickable/dialogs/question/c;
 

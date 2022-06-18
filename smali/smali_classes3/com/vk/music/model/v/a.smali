@@ -223,7 +223,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/audio/AudioFacade;->a(Ljava/util/Collection;Z)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/AudioFacade;->a(Ljava/util/Collection;Z)V
 
     :goto_0
     return-void
@@ -816,7 +816,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->c(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->c(Ljava/lang/String;)Z
 
     move-result p1
 

@@ -1,12 +1,12 @@
 .class public final Lcom/vk/fave/fragments/holders/TagCreateNewHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "TagCreateNewHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lkotlin/m;",
         ">;"
     }
@@ -43,7 +43,7 @@
     const v0, 0x7f0d056b
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p2, p0, Lcom/vk/fave/fragments/holders/TagCreateNewHolder;->d:Lkotlin/jvm/b/a;
 

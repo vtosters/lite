@@ -403,7 +403,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 4
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a;->g()I

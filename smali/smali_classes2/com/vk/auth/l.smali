@@ -76,7 +76,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/auth/l;->a:Lb/h/h/d/c;
 
-    invoke-static {v0}, Lcom/vkontakte/android/i0/c;->c(Lb/h/h/d/c;)Z
+    invoke-static {v0}, Lcom/vtosters/lite/i0/c;->c(Lb/h/h/d/c;)Z
 
     move-result v0
 

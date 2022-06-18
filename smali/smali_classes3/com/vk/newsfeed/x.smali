@@ -30,17 +30,17 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;)Ljava/util/ArrayList;
+.method private final a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/lang/String;",
             ")",
             "Ljava/util/ArrayList<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;"
         }
     .end annotation
@@ -51,27 +51,27 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 44
-    new-instance v1, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v1, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v2, 0x5e
 
-    invoke-direct {v1, p1, v2}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v1, p1, v2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 45
-    iput-object p3, v1, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iput-object p3, v1, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     const/4 p1, 0x6
 
     .line 46
-    iput p1, v1, Lcom/vkontakte/android/ui/f0/b;->d:I
+    iput p1, v1, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     const/4 p1, 0x0
 
     .line 47
-    iput-boolean p1, v1, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean p1, v1, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     .line 48
-    iput-object p2, v1, Lcom/vkontakte/android/ui/f0/b;->k:Lcom/vkontakte/android/ui/f0/a;
+    iput-object p2, v1, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
 
     .line 49
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -79,7 +79,7 @@
     return-object v0
 .end method
 
-.method public static synthetic a(Lcom/vk/newsfeed/x;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/util/ArrayList;
+.method public static synthetic a(Lcom/vk/newsfeed/x;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/util/ArrayList;
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -107,7 +107,7 @@
     move-object v4, p4
 
     .line 3
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -121,7 +121,7 @@
             "(",
             "Lcom/vk/dto/discover/carousel/Carousel;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -140,11 +140,11 @@
     if-eqz v0, :cond_0
 
     .line 110
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x17f
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -159,7 +159,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -178,20 +178,20 @@
     if-eqz v0, :cond_0
 
     .line 77
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x6b
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 78
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x6a
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -206,17 +206,17 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/AnimatedBlockEntry;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
 
     .line 105
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x68
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -230,7 +230,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/Digest;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -266,11 +266,11 @@
     if-nez v2, :cond_6
 
     .line 61
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v3, 0x55
 
-    invoke-direct {v2, p1, v3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, p1, v3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -326,7 +326,7 @@
     check-cast v2, Lcom/vk/dto/newsfeed/entries/Digest$DigestItem;
 
     .line 65
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     invoke-virtual {v2}, Lcom/vk/dto/newsfeed/entries/Digest$DigestItem;->s()Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -334,10 +334,10 @@
 
     const/16 v5, 0x57
 
-    invoke-direct {v4, v2, p1, v5}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v2, p1, v5}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 66
-    iput v1, v4, Lcom/vkontakte/android/ui/f0/b;->f:I
+    iput v1, v4, Lcom/vtosters/lite/ui/f0/b;->f:I
 
     .line 67
     invoke-interface {p2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -364,22 +364,22 @@
 
     if-eqz v0, :cond_5
 
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x56
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 70
     :cond_5
     :goto_3
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x58
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -394,22 +394,22 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/FeedbackPoll;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
 
     .line 98
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x64
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     const/4 p1, 0x0
 
     .line 99
-    iput-boolean p1, v0, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean p1, v0, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     .line 100
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -424,26 +424,26 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/Html5Entry;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
 
     .line 101
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x67
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 102
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x66
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -455,11 +455,11 @@
     if-eqz v0, :cond_0
 
     .line 104
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x69
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -474,7 +474,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/LatestNews;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -510,11 +510,11 @@
     if-nez v2, :cond_3
 
     .line 52
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v3, 0x1f
 
-    invoke-direct {v2, p1, v3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, p1, v3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 53
     invoke-interface {p2, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -538,11 +538,11 @@
     check-cast v2, Lcom/vk/dto/newsfeed/entries/LatestNewsItem;
 
     .line 55
-    new-instance v3, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v3, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v4, 0x1e
 
-    invoke-direct {v3, v2, p1, v4}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v3, v2, p1, v4}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -550,14 +550,14 @@
 
     .line 56
     :cond_2
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v2, 0x11
 
-    invoke-direct {v0, p1, v2}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 57
-    iput-boolean v1, v0, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean v1, v0, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     .line 58
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -566,25 +566,25 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
 
     .line 130
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -595,18 +595,18 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/f0/a;->a()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/f0/a;->a()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
     .line 132
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v0, 0x4
 
-    invoke-direct {p2, p1, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p3, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -621,7 +621,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -646,11 +646,11 @@
     if-nez v2, :cond_0
 
     .line 170
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x49
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -668,7 +668,7 @@
 
     neg-int v0, v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/data/Groups;->a(I)I
+    invoke-static {v0}, Lcom/vtosters/lite/data/Groups;->a(I)I
 
     move-result v0
 
@@ -677,11 +677,11 @@
     if-lt v0, v1, :cond_1
 
     .line 172
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0xa
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     const/4 p1, 0x1
 
@@ -689,7 +689,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -698,17 +698,17 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/PhotoTags;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/PhotoTags;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/PhotoTags;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             "Z",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -729,7 +729,7 @@
 
     move-object v5, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vkontakte/android/data/PostInteract;)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vtosters/lite/data/PostInteract;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -738,17 +738,17 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/Photos;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/Photos;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/Photos;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             "Z",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -769,7 +769,7 @@
 
     move-object v5, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vkontakte/android/data/PostInteract;)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vtosters/lite/data/PostInteract;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -778,17 +778,17 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/util/List;)V
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/Post;",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -817,21 +817,21 @@
     if-ne v4, v5, :cond_0
 
     .line 134
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v6, 0x59
 
-    invoke-direct {v4, v0, v1, v6}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v0, v1, v6}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 135
     :cond_0
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v6, 0x1
 
-    invoke-direct {v4, v0, v1, v6}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v0, v1, v6}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -874,11 +874,11 @@
 
     if-ne v10, v6, :cond_4
 
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v4, 0x38
 
-    invoke-direct {v2, v0, v1, v4}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, v0, v1, v4}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -971,11 +971,11 @@
 
     .line 140
     :goto_7
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v4, 0x39
 
-    invoke-direct {v2, v0, v1, v4}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, v0, v1, v4}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1016,11 +1016,11 @@
 
     if-nez v5, :cond_11
 
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v4, 0x12
 
-    invoke-direct {v2, v0, v1, v4}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, v0, v1, v4}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1040,13 +1040,13 @@
 
     if-ne v5, v6, :cond_13
 
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v5, 0x13
 
-    invoke-direct {v4, v0, v1, v5}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v0, v1, v5}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
-    iput-object v2, v4, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iput-object v2, v4, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1068,7 +1068,7 @@
 
     if-ne v4, v5, :cond_3
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v4
 
@@ -1169,17 +1169,17 @@
     move-result v6
 
     .line 151
-    new-instance v13, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v13, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-direct {v13, v0, v1, v6}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v13, v0, v1, v6}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 152
-    iput-object v2, v13, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iput-object v2, v13, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     add-int/2addr v12, v11
 
     .line 153
-    iput v12, v13, Lcom/vkontakte/android/ui/f0/b;->f:I
+    iput v12, v13, Lcom/vtosters/lite/ui/f0/b;->f:I
 
     .line 154
     invoke-interface {v3, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1219,11 +1219,11 @@
     if-eqz v2, :cond_1b
 
     .line 157
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v4, 0x41
 
-    invoke-direct {v2, v0, v1, v4}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, v0, v1, v4}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1238,11 +1238,11 @@
     if-eqz v16, :cond_3
 
     .line 158
-    new-instance v2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v4, 0x11
 
-    invoke-direct {v2, v0, v1, v4}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v2, v0, v1, v4}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1256,16 +1256,16 @@
 
     if-eqz v4, :cond_1c
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vkontakte/android/ui/f0/a;->a()Z
+    invoke-virtual/range {p3 .. p3}, Lcom/vtosters/lite/ui/f0/a;->a()Z
 
     move-result v4
 
     if-eqz v4, :cond_1c
 
     .line 160
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-direct {v4, v1, v8}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v1, v8}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1278,11 +1278,11 @@
     if-eqz v4, :cond_1d
 
     .line 162
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v5, 0x5c
 
-    invoke-direct {v4, v0, v1, v5}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v0, v1, v5}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1337,13 +1337,13 @@
 
     if-eqz v4, :cond_20
 
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v5, 0x63
 
-    invoke-direct {v4, v0, v1, v5}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v0, v1, v5}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
-    iput-boolean v9, v4, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean v9, v4, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1359,13 +1359,13 @@
 
     if-eqz v4, :cond_20
 
-    new-instance v4, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v5, 0x62
 
-    invoke-direct {v4, v0, v1, v5}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v4, v0, v1, v5}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
-    iput-boolean v9, v4, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean v9, v4, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1382,7 +1382,7 @@
             "Lcom/vk/dto/newsfeed/entries/Post;",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             "Ljava/util/ArrayList<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1396,7 +1396,7 @@
 
     neg-int p1, p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->a(I)I
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->a(I)I
 
     move-result p1
 
@@ -1405,11 +1405,11 @@
     if-lt p1, v0, :cond_0
 
     .line 174
-    new-instance p1, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v0, 0xa
 
-    invoke-direct {p1, p2, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p1, p2, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-virtual {p3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1417,18 +1417,18 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/Post;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             "Z",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1450,7 +1450,7 @@
 
     move-object v7, p2
 
-    invoke-virtual/range {v0 .. v7}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZLjava/lang/String;Lcom/vkontakte/android/data/PostInteract;Lcom/vkontakte/android/ui/f0/a;)V
+    invoke-virtual/range {v0 .. v7}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZLjava/lang/String;Lcom/vtosters/lite/data/PostInteract;Lcom/vtosters/lite/ui/f0/a;)V
 
     .line 118
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->V1()Lcom/vk/dto/newsfeed/Owner;
@@ -1460,11 +1460,11 @@
     if-eqz p2, :cond_0
 
     .line 119
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0x8
 
-    invoke-direct {p2, p1, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p6, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1477,11 +1477,11 @@
     if-eqz p2, :cond_1
 
     .line 121
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0x15
 
-    invoke-direct {p2, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p6, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1494,11 +1494,11 @@
     if-eqz p2, :cond_2
 
     .line 123
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0x54
 
-    invoke-direct {p2, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p6, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1513,7 +1513,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1532,11 +1532,11 @@
     if-eqz v0, :cond_0
 
     .line 75
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0xd
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1552,20 +1552,20 @@
             "Lcom/vk/dto/newsfeed/entries/PromoButton;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
 
     .line 106
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x20
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 107
-    iput-object p2, v0, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iput-object p2, v0, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     .line 108
     invoke-interface {p3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1573,18 +1573,18 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/PromoPost;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/PromoPost;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/PromoPost;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             "Z",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1613,7 +1613,7 @@
 
     move-object v7, p2
 
-    invoke-virtual/range {v0 .. v7}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZLjava/lang/String;Lcom/vkontakte/android/data/PostInteract;Lcom/vkontakte/android/ui/f0/a;)V
+    invoke-virtual/range {v0 .. v7}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZLjava/lang/String;Lcom/vtosters/lite/data/PostInteract;Lcom/vtosters/lite/ui/f0/a;)V
 
     :cond_0
     if-eqz v8, :cond_1
@@ -1632,11 +1632,11 @@
     if-eqz p2, :cond_2
 
     .line 127
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0x8
 
-    invoke-direct {p2, v8, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, v8, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p6, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1663,11 +1663,11 @@
     if-eqz p2, :cond_4
 
     .line 129
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0x15
 
-    invoke-direct {p2, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p6, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1675,16 +1675,16 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/ShitAttachment;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;Ljava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/ShitAttachment;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;Ljava/util/List;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/ShitAttachment;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1720,14 +1720,14 @@
     if-eqz v0, :cond_6
 
     .line 83
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 84
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->R1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->R1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
@@ -1737,7 +1737,7 @@
 
     const/16 v4, 0x32
 
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->R1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->R1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v5
 
@@ -1761,18 +1761,18 @@
 
     .line 85
     :cond_2
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
     .line 86
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->B1()Lcom/vk/dto/newsfeed/entries/ShitAttachment;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->B1()Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
     move-result-object v0
 
@@ -1797,13 +1797,13 @@
     if-eqz v0, :cond_4
 
     .line 87
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object p2
 
     const-string v0, "ad"
 
-    invoke-virtual {p2, v0, p3}, Lcom/vkontakte/android/attachments/VideoAttachment;->a(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-virtual {p2, v0, p3}, Lcom/vtosters/lite/attachments/VideoAttachment;->a(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 88
     new-instance p2, Lcom/vk/newsfeed/h0/a;
@@ -1811,7 +1811,7 @@
     const/16 v4, 0x47
 
     .line 89
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v5
 
@@ -1836,11 +1836,11 @@
 
     .line 91
     :cond_4
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2, p3}, Lcom/vkontakte/android/attachments/VideoAttachment;->a(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-virtual {v0, p2, p3}, Lcom/vtosters/lite/attachments/VideoAttachment;->a(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 92
     new-instance p2, Lcom/vk/newsfeed/h0/a;
@@ -1848,7 +1848,7 @@
     const/16 v4, 0x3a
 
     .line 93
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v5
 
@@ -1872,11 +1872,11 @@
     .line 95
     :cond_5
     :goto_3
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0xe
 
-    invoke-direct {p2, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p4, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1884,18 +1884,18 @@
 
     .line 96
     :cond_6
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-direct {p2, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p4, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 97
-    new-instance p2, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p2, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p3, 0xf
 
-    invoke-direct {p2, p1, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p2, p1, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-interface {p4, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1910,7 +1910,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/Stories;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1923,26 +1923,26 @@
     if-eqz v0, :cond_0
 
     .line 72
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x5a
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean v1, v0, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 73
-    new-instance v0, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v2, 0x5b
 
-    invoke-direct {v0, p1, v2}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v0, p1, v2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
-    iput-boolean v1, v0, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean v1, v0, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1950,17 +1950,17 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/newsfeed/entries/Videos;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+.method private final a(Lcom/vk/dto/newsfeed/entries/Videos;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/Videos;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             "Z",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -1981,7 +1981,7 @@
 
     move-object v5, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vkontakte/android/data/PostInteract;)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vtosters/lite/data/PostInteract;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -1997,7 +1997,7 @@
             "(",
             "Lcom/vk/dto/newsfeed/entries/widget/Widget;",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -2010,13 +2010,13 @@
     move-result v0
 
     .line 80
-    new-instance v1, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-direct {v1, p1, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v1, p1, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     const/4 p1, 0x0
 
-    iput-boolean p1, v1, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean p1, v1, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     invoke-interface {p2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -2030,7 +2030,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -2052,9 +2052,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v3, Lcom/vtosters/lite/ui/f0/b;
 
-    iput v1, v3, Lcom/vkontakte/android/ui/f0/b;->d:I
+    iput v1, v3, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     add-int/lit8 v2, v2, 0x1
 
@@ -2064,18 +2064,18 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/List;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+.method private final a(Ljava/util/List;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/PostInteract;",
+            "Lcom/vtosters/lite/data/PostInteract;",
             ")V"
         }
     .end annotation
@@ -2103,22 +2103,22 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v2, Lcom/vtosters/lite/ui/f0/b;
 
     .line 179
-    iget-object v3, v2, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iget-object v3, v2, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     if-nez v3, :cond_0
 
     .line 180
-    iput-object p3, v2, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iput-object p3, v2, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     .line 181
     :cond_0
-    iput-object p4, v2, Lcom/vkontakte/android/ui/f0/b;->j:Lcom/vkontakte/android/data/PostInteract;
+    iput-object p4, v2, Lcom/vtosters/lite/ui/f0/b;->j:Lcom/vtosters/lite/data/PostInteract;
 
     .line 182
-    iput-object p2, v2, Lcom/vkontakte/android/ui/f0/b;->k:Lcom/vkontakte/android/ui/f0/a;
+    iput-object p2, v2, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
 
     add-int/lit8 v0, v0, 0x1
 
@@ -2141,22 +2141,22 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     .line 184
-    iget-object v1, v0, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iget-object v1, v0, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
     .line 185
-    iput-object p3, v0, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iput-object p3, v0, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     .line 186
     :cond_2
-    iput-object p4, v0, Lcom/vkontakte/android/ui/f0/b;->j:Lcom/vkontakte/android/data/PostInteract;
+    iput-object p4, v0, Lcom/vtosters/lite/ui/f0/b;->j:Lcom/vtosters/lite/data/PostInteract;
 
     .line 187
-    iput-object p2, v0, Lcom/vkontakte/android/ui/f0/b;->k:Lcom/vkontakte/android/ui/f0/a;
+    iput-object p2, v0, Lcom/vtosters/lite/ui/f0/b;->k:Lcom/vtosters/lite/ui/f0/a;
 
     goto :goto_1
 
@@ -2217,7 +2217,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -2238,12 +2238,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v1, 0x0
 
     .line 4
-    iput-boolean v1, v0, Lcom/vkontakte/android/ui/f0/b;->e:Z
+    iput-boolean v1, v0, Lcom/vtosters/lite/ui/f0/b;->e:Z
 
     goto :goto_0
 
@@ -2299,7 +2299,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -2320,11 +2320,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v0, 0x6
 
-    iput v0, p1, Lcom/vkontakte/android/ui/f0/b;->d:I
+    iput v0, p1, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     goto :goto_0
 
@@ -2343,11 +2343,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v1, 0x2
 
-    iput v1, v0, Lcom/vkontakte/android/ui/f0/b;->d:I
+    iput v1, v0, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     .line 9
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -2360,11 +2360,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v0, 0x4
 
-    iput v0, p1, Lcom/vkontakte/android/ui/f0/b;->d:I
+    iput v0, p1, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     :cond_1
     :goto_0
@@ -2957,18 +2957,18 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
+.method public final a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
-            "Lcom/vkontakte/android/ui/f0/a;",
+            "Lcom/vtosters/lite/ui/f0/a;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Z)",
             "Ljava/util/ArrayList<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;"
         }
     .end annotation
@@ -2981,7 +2981,7 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-direct {p0, p1, p2, p4}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-direct {p0, p1, p2, p4}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -2989,7 +2989,7 @@
 
     .line 6
     :cond_0
-    invoke-static {p1, p4}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-static {p1, p4}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v7
 
@@ -3021,9 +3021,9 @@
 
     .line 10
     :goto_0
-    new-instance v1, Lcom/vkontakte/android/ui/f0/b;
+    new-instance v1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-direct {v1, p1, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {v1, p1, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-virtual {v8, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3049,7 +3049,7 @@
 
     move-object v6, v8
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
 
     goto/16 :goto_1
 
@@ -3075,7 +3075,7 @@
 
     move-object v6, v8
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/PromoPost;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/PromoPost;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
 
     goto/16 :goto_1
 
@@ -3099,7 +3099,7 @@
 
     move-object v5, v8
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Photos;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Photos;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
 
     goto/16 :goto_1
 
@@ -3123,7 +3123,7 @@
 
     move-object v5, v8
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/PhotoTags;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/PhotoTags;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
 
     goto/16 :goto_1
 
@@ -3147,7 +3147,7 @@
 
     move-object v5, v8
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Videos;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;ZLjava/util/List;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Videos;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;ZLjava/util/List;)V
 
     goto/16 :goto_1
 
@@ -3161,7 +3161,7 @@
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
-    invoke-direct {p0, v0, p3, v7, v8}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/ShitAttachment;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;Ljava/util/List;)V
+    invoke-direct {p0, v0, p3, v7, v8}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/ShitAttachment;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;Ljava/util/List;)V
 
     goto/16 :goto_1
 
@@ -3345,7 +3345,7 @@
 
     move-object v5, v8
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_2
 
@@ -3378,7 +3378,7 @@
 
     if-eqz p3, :cond_17
 
-    invoke-direct {p0, p1, p2, v8}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/util/List;)V
+    invoke-direct {p0, p1, p2, v8}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/util/List;)V
 
     goto :goto_2
 
@@ -3390,17 +3390,17 @@
 
     if-eqz p3, :cond_18
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/f0/a;->a()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/f0/a;->a()Z
 
     move-result p3
 
     if-eqz p3, :cond_18
 
-    new-instance p3, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p3, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v0, 0x4
 
-    invoke-direct {p3, p1, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p3, p1, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-virtual {v8, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3414,11 +3414,11 @@
 
     if-eqz p3, :cond_1a
 
-    new-instance p3, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p3, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v0, 0x11
 
-    invoke-direct {p3, p1, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p3, p1, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     invoke-virtual {v8, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3462,14 +3462,14 @@
 
     .line 40
     :cond_1d
-    invoke-direct {p0, v8, p2, p4, v7}, Lcom/vk/newsfeed/x;->a(Ljava/util/List;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-direct {p0, v8, p2, p4, v7}, Lcom/vk/newsfeed/x;->a(Ljava/util/List;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 41
     instance-of p3, p1, Lcom/vk/statistic/Statistic;
 
     if-eqz p3, :cond_1e
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/f0/a;->d()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/f0/a;->d()Z
 
     move-result p2
 
@@ -3480,17 +3480,17 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz p2, :cond_1e
 
     check-cast p1, Lcom/vk/statistic/Statistic;
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/Statistic;)Lcom/vkontakte/android/ui/f0/b$a;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/Statistic;)Lcom/vtosters/lite/ui/f0/b$a;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vkontakte/android/ui/f0/b;->a(Lcom/vkontakte/android/ui/f0/b$a;)V
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/f0/b;->a(Lcom/vtosters/lite/ui/f0/b$a;)V
 
     :cond_1e
     return-object v8

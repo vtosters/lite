@@ -64,7 +64,7 @@
 
     iget-object p2, p1, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     :cond_0
     return-void
@@ -93,7 +93,7 @@
 
     iget-object p2, p1, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p1, p2}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     :cond_0
     return-void

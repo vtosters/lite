@@ -77,7 +77,7 @@
 
     .line 3
     :cond_1
-    const-class v0, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class v0, Lcom/vtosters/lite/fragments/t2/c/b;
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 

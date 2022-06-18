@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/i;
+.field final synthetic b:Lcom/vtosters/lite/api/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1$a;->a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1$a;->b:Lcom/vkontakte/android/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1$a;->b:Lcom/vtosters/lite/api/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,9 +48,9 @@
 
     iget-object v1, p1, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1;->$context:Landroid/content/Context;
 
-    iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1$a;->b:Lcom/vkontakte/android/api/i;
+    iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$website$1$a;->b:Lcom/vtosters/lite/api/i;
 
-    iget-object v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->M:Ljava/lang/String;
+    iget-object v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->M:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 

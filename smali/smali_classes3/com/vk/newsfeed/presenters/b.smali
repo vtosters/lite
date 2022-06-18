@@ -81,13 +81,13 @@
     .end annotation
 
     .line 7
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/c;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/c;
 
     invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
 
     move-result p2
 
-    invoke-direct {v0, p1, p2}, Lcom/vkontakte/android/api/newsfeed/c;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, p2}, Lcom/vtosters/lite/api/newsfeed/c;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, 0x0
 

@@ -1,5 +1,5 @@
 .class final Lcom/vk/notifications/settings/a$f;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CategorySettingsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
         ">;"
     }
@@ -35,7 +35,7 @@
 
     invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     return-void
 .end method

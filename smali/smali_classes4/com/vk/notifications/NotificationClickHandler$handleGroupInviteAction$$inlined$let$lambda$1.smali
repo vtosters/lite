@@ -90,9 +90,9 @@
 
     iget-object v4, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$1;->$it:Lcom/vk/dto/group/Group;
 
-    sget-object v5, Lcom/vkontakte/android/data/Groups$JoinType;->ACCEPT:Lcom/vkontakte/android/data/Groups$JoinType;
+    sget-object v5, Lcom/vtosters/lite/data/Groups$JoinType;->ACCEPT:Lcom/vtosters/lite/data/Groups$JoinType;
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Lcom/vk/notifications/NotificationClickHandler;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Lcom/vk/notifications/NotificationClickHandler;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 
     return-void
 .end method

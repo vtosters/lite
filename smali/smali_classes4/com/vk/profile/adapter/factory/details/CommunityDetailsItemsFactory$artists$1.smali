@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -48,12 +48,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Ljava/util/List;
+.method public final a(Lcom/vtosters/lite/api/i;)Ljava/util/List;
     .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -66,7 +66,7 @@
     move-object/from16 v1, p1
 
     .line 1
-    invoke-virtual/range {p1 .. p1}, Lcom/vkontakte/android/api/i;->i()Ljava/util/ArrayList;
+    invoke-virtual/range {p1 .. p1}, Lcom/vtosters/lite/api/i;->i()Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -190,12 +190,12 @@
     .line 12
     new-instance v13, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1$a;
 
-    invoke-direct {v13, v5, v0, v1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1$a;-><init>(Lcom/vk/dto/music/Artist;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v13, v5, v0, v1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1$a;-><init>(Lcom/vk/dto/music/Artist;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;Lcom/vtosters/lite/api/i;)V
 
     const/4 v14, 0x0
 
     .line 13
-    iget-object v5, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v5, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v5, v5, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -236,9 +236,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;->a(Lcom/vkontakte/android/api/i;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/List;
 
     move-result-object p1
 

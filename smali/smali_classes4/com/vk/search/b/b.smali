@@ -1,5 +1,5 @@
 .class public final Lcom/vk/search/b/b;
-.super Lcom/vkontakte/android/ui/adapters/a;
+.super Lcom/vtosters/lite/ui/adapters/a;
 .source "NewsSearchMergeAdapter.kt"
 
 # interfaces
@@ -19,7 +19,7 @@
     new-array v0, v0, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     iput-boolean p1, p0, Lcom/vk/search/b/b;->f:Z
 
@@ -35,14 +35,14 @@
     iget-boolean v0, p0, Lcom/vk/search/b/b;->f:Z
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/ui/adapters/a;->i(I)I
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/a;->i(I)I
 
     move-result v1
 
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0, v2, v1, p1}, Lcom/vkontakte/android/ui/adapters/c;->a(ZZII)I
+    invoke-static {v0, v2, v1, p1}, Lcom/vtosters/lite/ui/adapters/c;->a(ZZII)I
 
     move-result p1
 

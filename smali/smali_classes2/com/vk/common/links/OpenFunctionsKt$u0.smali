@@ -79,9 +79,9 @@
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vkontakte/android/im/ImCompat;->d:Lcom/vkontakte/android/im/ImCompat;
+    sget-object v0, Lcom/vtosters/lite/im/ImCompat;->d:Lcom/vtosters/lite/im/ImCompat;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/im/ImCompat;->b(Lcom/vk/im/engine/models/j;)Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/ImCompat;->b(Lcom/vk/im/engine/models/j;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v2
 

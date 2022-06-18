@@ -160,23 +160,23 @@
     .locals 1
 
     .line 43
-    new-instance v0, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/j2$g;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 44
-    invoke-virtual {v0, p2}, Lcom/vkontakte/android/fragments/j2$g;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0, p2}, Lcom/vtosters/lite/fragments/j2$g;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 45
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->j()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->j()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 46
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     const/4 p1, 0x1
 
     .line 47
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/j2$g;->d(Z)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/j2$g;->d(Z)Lcom/vtosters/lite/fragments/j2$g;
 
     invoke-virtual {v0, p0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -512,7 +512,7 @@
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 51
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     const p0, 0x7f120365
 
@@ -749,10 +749,10 @@
     invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
 
     .line 8
-    invoke-static {p3}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p3}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 9
-    invoke-static {p0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {p0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object p0
 
@@ -775,7 +775,7 @@
     .locals 5
 
     .line 10
-    invoke-static {p0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {p0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 

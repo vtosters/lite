@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$autor$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$autor$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/user/UserProfile;Lcom/vk/profile/adapter/items/details/DetailsInfoItem;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$autor$1;Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vk/dto/user/UserProfile;Lcom/vk/profile/adapter/items/details/DetailsInfoItem;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$autor$1;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$autor$1$a;->a:Lcom/vk/dto/user/UserProfile;

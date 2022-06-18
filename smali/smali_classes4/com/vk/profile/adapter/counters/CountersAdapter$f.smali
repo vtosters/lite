@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/counters/CountersAdapter$c<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
 .end annotation
@@ -140,14 +140,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 3
 
     .line 1
     invoke-super {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$c;->c(Ljava/lang/Object;)V
 
     .line 2
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
@@ -180,11 +180,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->B:Lcom/vk/profile/adapter/counters/CountersAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersAdapter;->k()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersAdapter;->k()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_2
 
@@ -201,11 +201,11 @@
     .line 5
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->B:Lcom/vk/profile/adapter/counters/CountersAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersAdapter;->k()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersAdapter;->k()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -266,9 +266,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-void
 .end method

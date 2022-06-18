@@ -48,9 +48,9 @@
 
     iget-object v0, p0, Lcom/vk/articles/ArticleFragment$g;->a:Lcom/vk/articles/ArticleFragment;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/articles/ArticleFragment;->b(Ljava/lang/Object;)V
 

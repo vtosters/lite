@@ -254,7 +254,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/components/ComponentsFragment;->G:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, v1}, Lcom/vkontakte/android/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     new-instance v1, Lcom/vk/components/ComponentsFragment$b;

@@ -88,7 +88,7 @@
 
     if-eqz v0, :cond_0
 
-    const-class v0, Lcom/vkontakte/android/fragments/ProfileFragment;
+    const-class v0, Lcom/vtosters/lite/fragments/ProfileFragment;
 
     goto :goto_0
 

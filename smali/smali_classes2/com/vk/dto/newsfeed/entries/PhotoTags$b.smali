@@ -136,13 +136,13 @@
     if-eqz v8, :cond_1
 
     .line 9
-    new-instance v9, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v9, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     new-instance v10, Lcom/vk/dto/photo/Photo;
 
     invoke-direct {v10, v8}, Lcom/vk/dto/photo/Photo;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-direct {v9, v10}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v9, v10}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

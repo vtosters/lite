@@ -387,7 +387,7 @@
     check-cast v1, Lcom/vk/statistic/StatisticUrl;
 
     .line 2
-    invoke-static {v1}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_0
 

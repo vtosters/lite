@@ -18,7 +18,7 @@
 
 .field private a:Lcom/vk/wall/h/a;
 
-.field private b:Lcom/vkontakte/android/ui/WriteBar;
+.field private b:Lcom/vtosters/lite/ui/WriteBar;
 
 .field private c:Landroid/widget/EditText;
 
@@ -130,7 +130,7 @@
     move-result-object v0
 
     .line 66
-    iget-object v1, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v1, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v1, :cond_0
 
@@ -144,7 +144,7 @@
     invoke-direct {p1, v0}, Lcom/vk/wall/h/d$g;-><init>(Lb/h/g/k/a;)V
 
     .line 68
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/ui/WriteBar;->a(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/ui/WriteBar;->a(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -231,11 +231,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/wall/h/d;)Lcom/vkontakte/android/ui/WriteBar;
+.method public static final synthetic e(Lcom/vk/wall/h/d;)Lcom/vtosters/lite/ui/WriteBar;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object p0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     return-object p0
 .end method
@@ -263,11 +263,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -288,11 +288,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->b()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->b()V
 
     :cond_0
     return-void
@@ -320,21 +320,21 @@
     .locals 2
 
     .line 55
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
     const-string v1, ""
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/WriteBar;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/WriteBar;->setText(Ljava/lang/CharSequence;)V
 
     .line 56
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->c()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->c()V
 
     .line 57
     :cond_1
@@ -386,11 +386,11 @@
     .locals 1
 
     .line 63
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vkontakte/android/ui/WriteBar;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->a(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -444,11 +444,11 @@
     .locals 1
 
     .line 61
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->g()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->g()V
 
     .line 62
     :cond_0
@@ -482,16 +482,16 @@
     if-eqz v3, :cond_5
 
     .line 5
-    new-instance v4, Lcom/vkontakte/android/ui/WriteBar;
+    new-instance v4, Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-direct {v4, v3}, Lcom/vkontakte/android/ui/WriteBar;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v3}, Lcom/vtosters/lite/ui/WriteBar;-><init>(Landroid/content/Context;)V
 
     .line 6
     new-instance v5, Lcom/vk/wall/h/d$b;
 
     invoke-direct {v5, v0, v3, v1}, Lcom/vk/wall/h/d$b;-><init>(Lcom/vk/wall/h/d;Landroid/app/Activity;Landroid/view/View;)V
 
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/ui/WriteBar;->a(Landroid/view/View$OnKeyListener;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/view/View$OnKeyListener;)V
 
     const v5, 0x7f0a0ff4
 
@@ -620,7 +620,7 @@
     invoke-direct {v6, v3, v1, v5}, Lcom/vk/stickers/f0/a;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;)V
 
     .line 24
-    invoke-virtual {v4}, Lcom/vkontakte/android/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
+    invoke-virtual {v4}, Lcom/vtosters/lite/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
 
     move-result-object v7
 
@@ -638,7 +638,7 @@
     .line 28
     iget-object v5, v0, Lcom/vk/wall/h/d;->D:Lcom/vk/wall/h/d$e;
 
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/ui/WriteBar;->setAutoSuggestPopupListener(Lcom/vk/stickers/b0$k;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ui/WriteBar;->setAutoSuggestPopupListener(Lcom/vk/stickers/b0$k;)V
 
     .line 29
     invoke-virtual/range {p0 .. p0}, Lcom/vk/wall/h/d;->getPresenter()Lcom/vk/wall/h/a;
@@ -652,44 +652,44 @@
 
     move-result-object v6
 
-    invoke-virtual {v4, v6}, Lcom/vkontakte/android/ui/WriteBar;->setFragment(Lcom/vk/navigation/a;)V
+    invoke-virtual {v4, v6}, Lcom/vtosters/lite/ui/WriteBar;->setFragment(Lcom/vk/navigation/a;)V
 
     .line 31
     invoke-interface {v5}, Lcom/vk/wall/h/a;->b()I
 
     move-result v6
 
-    invoke-virtual {v4, v15, v6}, Lcom/vkontakte/android/ui/WriteBar;->a(ZI)V
+    invoke-virtual {v4, v15, v6}, Lcom/vtosters/lite/ui/WriteBar;->a(ZI)V
 
     .line 32
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/ui/WriteBar;->setAutoSuggestTextProvider(Lcom/vk/stickers/AutoSuggestStickersPopupWindow$d;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ui/WriteBar;->setAutoSuggestTextProvider(Lcom/vk/stickers/AutoSuggestStickersPopupWindow$d;)V
 
     :cond_1
     const/4 v5, 0x2
 
     .line 33
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/ui/WriteBar;->setAttachLimits(I)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ui/WriteBar;->setAttachLimits(I)V
 
     .line 34
-    invoke-virtual {v4, v15}, Lcom/vkontakte/android/ui/WriteBar;->setGraffitiAllowed(Z)V
+    invoke-virtual {v4, v15}, Lcom/vtosters/lite/ui/WriteBar;->setGraffitiAllowed(Z)V
 
     .line 35
-    invoke-virtual {v4, v9}, Lcom/vkontakte/android/ui/WriteBar;->setLocationAllowed(Z)V
+    invoke-virtual {v4, v9}, Lcom/vtosters/lite/ui/WriteBar;->setLocationAllowed(Z)V
 
     .line 36
     iget-object v5, v0, Lcom/vk/wall/h/d;->E:Lcom/vk/wall/h/d$h;
 
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/ui/WriteBar;->setWriteBarListener(Lcom/vkontakte/android/ui/WriteBar$i0;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ui/WriteBar;->setWriteBarListener(Lcom/vtosters/lite/ui/WriteBar$i0;)V
 
     .line 37
-    invoke-virtual {v4, v3}, Lcom/vkontakte/android/ui/WriteBar;->a(Landroid/app/Activity;)V
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/app/Activity;)V
 
     .line 38
     invoke-direct {v0, v3}, Lcom/vk/wall/h/d;->a(Landroid/content/Context;)Landroid/view/View;
 
     move-result-object v3
 
-    invoke-virtual {v4, v3}, Lcom/vkontakte/android/ui/WriteBar;->a(Landroid/view/View;)V
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/view/View;)V
 
     .line 39
     invoke-static {v4, v9}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
@@ -708,7 +708,7 @@
 
     .line 42
     :cond_2
-    iput-object v4, v0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iput-object v4, v0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     .line 43
     instance-of v3, v1, Landroid/view/ViewGroup;
@@ -718,7 +718,7 @@
     .line 44
     check-cast v1, Landroid/view/ViewGroup;
 
-    iget-object v3, v0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v3, v0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -751,7 +751,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/NewsComment;)V
+.method public a(Lcom/vtosters/lite/NewsComment;)V
     .locals 2
 
     const/4 v0, 0x1
@@ -764,21 +764,21 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p1, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 74
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->c()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->c()V
 
     .line 75
     :cond_1
-    iget-object p1, p1, Lcom/vkontakte/android/NewsComment;->Q:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/NewsComment;->Q:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_3
 
@@ -802,11 +802,11 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 77
-    iget-object v1, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v1, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/ui/WriteBar;->a(Lcom/vk/dto/common/Attachment;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/WriteBar;->a(Lcom/vk/dto/common/Attachment;)V
 
     goto :goto_0
 
@@ -843,7 +843,7 @@
     .end annotation
 
     .line 69
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
@@ -884,11 +884,11 @@
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/WriteBar;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/WriteBar;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void
@@ -898,7 +898,7 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     const/4 v1, 0x0
 
@@ -922,7 +922,7 @@
     move-result v0
 
     .line 4
-    iget-object v2, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v2, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v2, :cond_1
 
@@ -930,7 +930,7 @@
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_2
 
@@ -954,7 +954,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
@@ -984,11 +984,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->h()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->h()V
 
     :cond_0
     return-void
@@ -998,11 +998,11 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/ui/WriteBar;->a(ZZ)Z
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/ui/WriteBar;->a(ZZ)Z
 
     move-result p1
 
@@ -1084,7 +1084,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
@@ -1148,13 +1148,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->k()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->k()Z
 
     move-result v0
 
@@ -1173,11 +1173,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->l()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->l()V
 
     :cond_0
     return-void
@@ -1208,7 +1208,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
@@ -1275,11 +1275,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->o()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->o()V
 
     :cond_0
     return-void
@@ -1289,11 +1289,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->a()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->a()Z
 
     move-result v0
 
@@ -1344,11 +1344,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vkontakte/android/ui/WriteBar;
+    iget-object v0, p0, Lcom/vk/wall/h/d;->b:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/WriteBar;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/WriteBar;->a(I)V
 
     :cond_0
     return-void

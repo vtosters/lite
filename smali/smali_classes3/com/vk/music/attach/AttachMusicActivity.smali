@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/attach/AttachMusicActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "AttachMusicActivity.java"
 
 # interfaces
@@ -106,7 +106,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
     sget-object v0, Lcom/vk/music/common/c;->e:Lcom/vk/music/common/c;
@@ -309,7 +309,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     return-void
 .end method
@@ -1274,7 +1274,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -1406,7 +1406,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vkontakte/android/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     const/4 v0, -0x1
 
@@ -1531,7 +1531,7 @@
 
     .line 9
     :cond_2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     return-void
 .end method
@@ -1589,7 +1589,7 @@
     invoke-virtual {p0, p1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :cond_0
     return-void
@@ -1599,7 +1599,7 @@
     .locals 6
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->n()I
@@ -1654,7 +1654,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/f0;->a(Landroid/view/Window;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     const v0, 0x7f0a08da
 

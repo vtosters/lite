@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/data/Groups$JoinType;
+.field final synthetic a:Lcom/vtosters/lite/data/Groups$JoinType;
 
 .field final synthetic b:Lcom/vk/dto/notifications/NotificationItem;
 
@@ -40,10 +40,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/data/Groups$JoinType;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/group/Group;Lcom/vk/notifications/i;)V
+.method constructor <init>(Lcom/vtosters/lite/data/Groups$JoinType;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/group/Group;Lcom/vk/notifications/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->a:Lcom/vkontakte/android/data/Groups$JoinType;
+    iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->a:Lcom/vtosters/lite/data/Groups$JoinType;
 
     iput-object p2, p0, Lcom/vk/notifications/NotificationClickHandler$a;->b:Lcom/vk/dto/notifications/NotificationItem;
 
@@ -62,16 +62,16 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/data/Groups;->a()V
+    invoke-static {}, Lcom/vtosters/lite/data/Groups;->a()V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->a:Lcom/vkontakte/android/data/Groups$JoinType;
+    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->a:Lcom/vtosters/lite/data/Groups$JoinType;
 
-    sget-object v0, Lcom/vkontakte/android/data/Groups$JoinType;->ACCEPT:Lcom/vkontakte/android/data/Groups$JoinType;
+    sget-object v0, Lcom/vtosters/lite/data/Groups$JoinType;->ACCEPT:Lcom/vtosters/lite/data/Groups$JoinType;
 
     if-eq p1, v0, :cond_2
 
-    sget-object v0, Lcom/vkontakte/android/data/Groups$JoinType;->UNSURE:Lcom/vkontakte/android/data/Groups$JoinType;
+    sget-object v0, Lcom/vtosters/lite/data/Groups$JoinType;->UNSURE:Lcom/vtosters/lite/data/Groups$JoinType;
 
     if-ne p1, v0, :cond_0
 

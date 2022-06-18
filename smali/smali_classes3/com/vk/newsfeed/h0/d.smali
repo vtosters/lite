@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/h0/d;
-.super Lcom/vkontakte/android/ui/f0/b;
+.super Lcom/vtosters/lite/ui/f0/b;
 .source "TextPostDisplayItem.kt"
 
 
@@ -16,7 +16,7 @@
     const/4 v0, 0x2
 
     .line 1
-    invoke-direct {p0, p1, p2, v0}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     iput-boolean p3, p0, Lcom/vk/newsfeed/h0/d;->n:Z
 

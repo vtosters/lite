@@ -187,7 +187,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;ZLjava/lang/Runnable;)V
+    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;ZLjava/lang/Runnable;)V
 
     return-void
 .end method

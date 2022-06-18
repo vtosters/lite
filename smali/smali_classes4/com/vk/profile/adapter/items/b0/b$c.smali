@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/b0/b$c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StubCountersItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/b0/b$a;",
         ">;"
     }
@@ -39,7 +39,7 @@
 
     const v0, 0x7f0d04a6
 
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/content/Context;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/content/Context;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -201,7 +201,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {v0}, Lcom/vtosters/lite/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v0
 

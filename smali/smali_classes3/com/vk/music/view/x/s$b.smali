@@ -171,7 +171,7 @@
     :cond_5
     iget-object p1, p0, Lcom/vk/music/view/x/s$b;->a:Lcom/vk/music/view/x/s;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object p1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/holders/l;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoryQuestionHeaderHolder.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/stories/model/GetQuestionsResponse;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -38,7 +38,7 @@
     const v0, 0x7f0d0297
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p2, p0, Lcom/vk/stories/holders/l;->g:Lcom/vk/stories/view/StoryView;
 
@@ -121,7 +121,7 @@
 
     new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
@@ -181,21 +181,21 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/k0/b;
+    new-instance v0, Lcom/vtosters/lite/k0/b;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     const v2, 0x7f1301df
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/k0/b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/k0/b;-><init>(Landroid/content/Context;I)V
 
     .line 2
     new-instance v1, Lcom/vk/stories/view/o1;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -222,10 +222,10 @@
     div-int/lit8 v2, v2, 0x64
 
     .line 8
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 9
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;)V
 
     .line 10
     invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -242,7 +242,7 @@
     const/4 v1, 0x3
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/k0/b;->e(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/k0/b;->e(I)V
 
     .line 12
     iget-object v1, p0, Lcom/vk/stories/holders/l;->g:Lcom/vk/stories/view/StoryView;

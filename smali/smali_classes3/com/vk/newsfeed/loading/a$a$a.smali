@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/loading/a$a;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
+    value = Lcom/vk/newsfeed/loading/a$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,14 +33,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+.field final synthetic a:Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+.method constructor <init>(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/loading/a$a$a;->a:Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    iput-object p1, p0, Lcom/vk/newsfeed/loading/a$a$a;->a:Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,13 +57,13 @@
             "Lcom/vk/dto/stories/model/GetStoriesResponse;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/a$a$a;->a:Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/a$a$a;->a:Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
     const-string v1, "response"
 
@@ -199,7 +199,7 @@
 
     .line 9
     :cond_3
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/a$a$a;->a:Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/a$a$a;->a:Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
     invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
 

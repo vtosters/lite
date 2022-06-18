@@ -46,9 +46,9 @@
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     .line 22
-    new-instance v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -337,9 +337,9 @@
 
     iput v7, v12, Lcom/vk/dto/photo/Photo;->U:I
 
-    new-instance v11, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v11, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-direct {v11, v12}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v11, v12}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-virtual {v3, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -405,9 +405,9 @@
 
     invoke-direct {v11, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-direct {v0, v2}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v0, v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

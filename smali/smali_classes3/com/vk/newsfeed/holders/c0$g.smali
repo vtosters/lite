@@ -85,17 +85,17 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iput-object v1, v0, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/c0$g;->a:Lcom/vk/newsfeed/holders/c0;
@@ -104,17 +104,17 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vkontakte/android/NewsComment;->Q:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/vtosters/lite/NewsComment;->Q:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lcom/vkontakte/android/NewsComment;->Q:Ljava/util/ArrayList;
+    iput-object v1, v0, Lcom/vtosters/lite/NewsComment;->Q:Ljava/util/ArrayList;
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/c0$g;->a:Lcom/vk/newsfeed/holders/c0;
@@ -123,17 +123,17 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object p1
 
-    iget p1, p1, Lcom/vkontakte/android/NewsComment;->B:I
+    iget p1, p1, Lcom/vtosters/lite/NewsComment;->B:I
 
-    iput p1, v0, Lcom/vkontakte/android/NewsComment;->B:I
+    iput p1, v0, Lcom/vtosters/lite/NewsComment;->B:I
 
     :cond_0
     return-void

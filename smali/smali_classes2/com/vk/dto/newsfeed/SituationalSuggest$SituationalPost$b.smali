@@ -80,7 +80,7 @@
     invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v5, v0}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v5, v0}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v5
 
@@ -109,7 +109,7 @@
     move-object v1, v0
 
     :goto_1
-    invoke-static {v1}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-static {v1}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v1
 

@@ -71,7 +71,7 @@
     invoke-virtual {v0, p1, p3, p0, p2}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     .line 37
-    new-instance p0, Lcom/vkontakte/android/utils/k;
+    new-instance p0, Lcom/vtosters/lite/utils/k;
 
     sget-object p1, Lcom/vk/core/ui/Font;->Companion:Lcom/vk/core/ui/Font$a;
 
@@ -79,7 +79,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/utils/k;-><init>(Landroid/graphics/Typeface;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/utils/k;-><init>(Landroid/graphics/Typeface;)V
 
     invoke-virtual {v0}, Landroid/text/SpannableString;->length()I
 
@@ -674,7 +674,7 @@
     invoke-virtual {v0, p2, v3, v1, v2}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     .line 44
-    new-instance p2, Lcom/vkontakte/android/utils/k;
+    new-instance p2, Lcom/vtosters/lite/utils/k;
 
     sget-object v1, Lcom/vk/core/ui/Font;->Companion:Lcom/vk/core/ui/Font$a;
 
@@ -682,7 +682,7 @@
 
     move-result-object v1
 
-    invoke-direct {p2, v1}, Lcom/vkontakte/android/utils/k;-><init>(Landroid/graphics/Typeface;)V
+    invoke-direct {p2, v1}, Lcom/vtosters/lite/utils/k;-><init>(Landroid/graphics/Typeface;)V
 
     invoke-virtual {v0}, Landroid/text/SpannableString;->length()I
 

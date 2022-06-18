@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,18 +34,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field final synthetic c:Lcom/vk/profile/adapter/items/w;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/w;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/w;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->c:Lcom/vk/profile/adapter/items/w;
 
@@ -69,7 +69,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     instance-of v1, p1, Ljava/util/ArrayList;
 
@@ -80,12 +80,12 @@
     :cond_0
     check-cast p1, Ljava/util/ArrayList;
 
-    iput-object p1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
+    iput-object p1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_1
 
@@ -100,7 +100,7 @@
 
     iget-object p1, p1, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->c:Lcom/vk/profile/adapter/items/w;
 
@@ -108,7 +108,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;

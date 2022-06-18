@@ -497,7 +497,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/f;->b([Lcom/vk/music/common/a;)V
+    invoke-static {v0}, Lcom/vtosters/lite/utils/f;->b([Lcom/vk/music/common/a;)V
 
     return-void
 .end method

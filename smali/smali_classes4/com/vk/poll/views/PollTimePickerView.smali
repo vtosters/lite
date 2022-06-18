@@ -8,7 +8,7 @@
 
 .field private final b:Landroid/widget/TextView;
 
-.field private final c:Lcom/vkontakte/android/ui/s;
+.field private final c:Lcom/vtosters/lite/ui/s;
 
 
 # direct methods
@@ -115,7 +115,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 8
-    new-instance p1, Lcom/vkontakte/android/ui/s;
+    new-instance p1, Lcom/vtosters/lite/ui/s;
 
     .line 9
     iget-object v2, p0, Lcom/vk/poll/views/PollTimePickerView;->a:Landroid/widget/TextView;
@@ -165,9 +165,9 @@
     move-object v1, p1
 
     .line 14
-    invoke-direct/range {v1 .. v11}, Lcom/vkontakte/android/ui/s;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/app/Activity;ZJJLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v11}, Lcom/vtosters/lite/ui/s;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/app/Activity;ZJJLjava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iput-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
     .line 15
     sget-object p1, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
@@ -189,9 +189,9 @@
     add-int/2addr p1, v0
 
     .line 16
-    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/s;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/s;->a(I)V
 
     return-void
 
@@ -309,7 +309,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 25
-    new-instance p1, Lcom/vkontakte/android/ui/s;
+    new-instance p1, Lcom/vtosters/lite/ui/s;
 
     .line 26
     iget-object v1, p0, Lcom/vk/poll/views/PollTimePickerView;->a:Landroid/widget/TextView;
@@ -359,9 +359,9 @@
     move-object v0, p1
 
     .line 31
-    invoke-direct/range {v0 .. v10}, Lcom/vkontakte/android/ui/s;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/app/Activity;ZJJLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vtosters/lite/ui/s;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/app/Activity;ZJJLjava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iput-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
     .line 32
     sget-object p1, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
@@ -383,9 +383,9 @@
     add-int/2addr p2, p1
 
     .line 33
-    iget-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iget-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/s;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/s;->a(I)V
 
     return-void
 
@@ -503,7 +503,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 42
-    new-instance p1, Lcom/vkontakte/android/ui/s;
+    new-instance p1, Lcom/vtosters/lite/ui/s;
 
     .line 43
     iget-object v1, p0, Lcom/vk/poll/views/PollTimePickerView;->a:Landroid/widget/TextView;
@@ -553,9 +553,9 @@
     move-object v0, p1
 
     .line 48
-    invoke-direct/range {v0 .. v10}, Lcom/vkontakte/android/ui/s;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/app/Activity;ZJJLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vtosters/lite/ui/s;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/app/Activity;ZJJLjava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iput-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
     .line 49
     sget-object p1, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
@@ -577,9 +577,9 @@
     add-int/2addr p2, p1
 
     .line 50
-    iget-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iget-object p1, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/s;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/s;->a(I)V
 
     return-void
 
@@ -600,9 +600,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/s;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/s;->a()V
 
     return-void
 .end method
@@ -611,9 +611,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/s;->b()Ljava/util/Calendar;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/s;->b()Ljava/util/Calendar;
 
     move-result-object v0
 
@@ -638,11 +638,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vkontakte/android/ui/s;
+    iget-object v0, p0, Lcom/vk/poll/views/PollTimePickerView;->c:Lcom/vtosters/lite/ui/s;
 
     long-to-int p2, p1
 
-    invoke-virtual {v0, p2}, Lcom/vkontakte/android/ui/s;->a(I)V
+    invoke-virtual {v0, p2}, Lcom/vtosters/lite/ui/s;->a(I)V
 
     return-void
 .end method

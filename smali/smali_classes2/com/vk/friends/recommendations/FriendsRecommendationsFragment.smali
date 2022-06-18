@@ -619,7 +619,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/w;->d()I
+    invoke-static {}, Lcom/vtosters/lite/w;->d()I
 
     move-result v0
 
@@ -1370,7 +1370,7 @@
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     goto :goto_0
 

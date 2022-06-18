@@ -203,7 +203,7 @@
 
     .line 8
     :try_start_3
-    invoke-static {v2, v3}, Lcom/vkontakte/android/attachments/a;->a(Ljava/io/DataOutputStream;Lcom/vk/dto/common/Attachment;)V
+    invoke-static {v2, v3}, Lcom/vtosters/lite/attachments/a;->a(Ljava/io/DataOutputStream;Lcom/vk/dto/common/Attachment;)V
 
     .line 9
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

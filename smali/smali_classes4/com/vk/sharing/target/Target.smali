@@ -283,7 +283,7 @@
     const/4 v0, 0x4
 
     .line 25
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -314,7 +314,7 @@
     .line 30
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -370,7 +370,7 @@
     iput v0, p0, Lcom/vk/sharing/target/Target;->a:I
 
     .line 14
-    invoke-static {p1, p2}, Lcom/vkontakte/android/im/ImCompat;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/im/ImCompat;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -382,7 +382,7 @@
     iput-object v0, p0, Lcom/vk/sharing/target/Target;->c:Ljava/lang/String;
 
     .line 16
-    invoke-static {p1, p2}, Lcom/vkontakte/android/im/ImCompat;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/im/ImCompat;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object p2
 

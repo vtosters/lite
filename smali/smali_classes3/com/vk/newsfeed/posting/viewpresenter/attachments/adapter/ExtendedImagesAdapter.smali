@@ -189,7 +189,7 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 5
-    invoke-static {v1}, Lcom/vkontakte/android/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {v1}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
 
     move-result v1
 
@@ -228,7 +228,7 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 7
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     if-eqz v1, :cond_0
 
@@ -238,7 +238,7 @@
 
     .line 8
     :cond_0
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     if-eqz v1, :cond_1
 
@@ -248,7 +248,7 @@
 
     .line 9
     :cond_1
-    instance-of v0, v0, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    instance-of v0, v0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     if-eqz v0, :cond_2
 
@@ -383,14 +383,14 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 12
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     if-eqz v1, :cond_2
 
     .line 13
-    check-cast v0, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
-    iget p1, v0, Lcom/vkontakte/android/attachments/DocumentAttachment;->F:I
+    iget p1, v0, Lcom/vtosters/lite/attachments/DocumentAttachment;->F:I
 
     if-lez p1, :cond_0
 
@@ -407,7 +407,7 @@
     iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     .line 14
-    iget p1, v0, Lcom/vkontakte/android/attachments/DocumentAttachment;->G:I
+    iget p1, v0, Lcom/vtosters/lite/attachments/DocumentAttachment;->G:I
 
     if-lez p1, :cond_1
 
@@ -427,20 +427,20 @@
 
     .line 15
     :cond_2
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     if-eqz v1, :cond_5
 
     .line 16
-    check-cast v0, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getWidth()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getWidth()I
 
     move-result p1
 
     if-lez p1, :cond_3
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getWidth()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getWidth()I
 
     move-result p1
 
@@ -457,13 +457,13 @@
     iput p1, p2, Lcom/vk/im/ui/views/image_zhukov/j;->a:I
 
     .line 17
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getHeight()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getHeight()I
 
     move-result p1
 
     if-lez p1, :cond_4
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getHeight()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getHeight()I
 
     move-result p1
 
@@ -483,18 +483,18 @@
 
     .line 18
     :cond_5
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     if-eqz v1, :cond_6
 
     .line 19
-    check-cast v0, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PendingVideoAttachment;->getWidth()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->getWidth()I
 
     move-result p1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PendingVideoAttachment;->getHeight()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->getHeight()I
 
     move-result v0
 
@@ -504,14 +504,14 @@
 
     .line 20
     :cond_6
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_a
 
     .line 21
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -546,11 +546,11 @@
 
     .line 23
     :cond_9
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->getWidth()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->getWidth()I
 
     move-result p1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->getHeight()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->getHeight()I
 
     move-result v0
 

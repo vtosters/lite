@@ -31,7 +31,7 @@
 
 .field private final J:Lcom/vk/stories/view/t1;
 
-.field private a:Lcom/vkontakte/android/k0/b;
+.field private a:Lcom/vtosters/lite/k0/b;
 
 .field private b:Landroid/view/ViewGroup;
 
@@ -186,11 +186,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vkontakte/android/k0/b;
+.method public static final synthetic b(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vtosters/lite/k0/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vkontakte/android/k0/b;
+    iget-object p0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vtosters/lite/k0/b;
 
     return-object p0
 .end method
@@ -580,7 +580,7 @@
     iput v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->C:I
 
     .line 31
-    new-instance v0, Lcom/vkontakte/android/k0/b;
+    new-instance v0, Lcom/vtosters/lite/k0/b;
 
     iget-object v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->J:Lcom/vk/stories/view/t1;
 
@@ -588,25 +588,25 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/vkontakte/android/k0/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lcom/vtosters/lite/k0/b;-><init>(Landroid/content/Context;)V
 
     .line 32
     iget-object v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->b:Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;)V
 
     .line 33
     iget v1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->C:I
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 34
     invoke-virtual {v0, p0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 35
-    iput-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vkontakte/android/k0/b;
+    iput-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vtosters/lite/k0/b;
 
     return-void
 
@@ -1351,7 +1351,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vkontakte/android/k0/b;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vtosters/lite/k0/b;
 
     if-eqz v0, :cond_0
 
@@ -1361,7 +1361,7 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vkontakte/android/k0/b;
+    iput-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vtosters/lite/k0/b;
 
     return-void
 .end method
@@ -1953,14 +1953,14 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vkontakte/android/k0/b;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vtosters/lite/k0/b;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x3
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/k0/b;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/k0/b;->a(I)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->J:Lcom/vk/stories/view/t1;
@@ -1988,7 +1988,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vkontakte/android/k0/b;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a:Lcom/vtosters/lite/k0/b;
 
     if-eqz v0, :cond_1
 

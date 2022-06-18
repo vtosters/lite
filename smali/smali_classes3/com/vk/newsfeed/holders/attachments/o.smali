@@ -24,7 +24,7 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v0, :cond_0
 
@@ -44,9 +44,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->g:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;->h:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;->h:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -83,12 +83,12 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -100,9 +100,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vkontakte/android/attachments/GeoAttachment;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/attachments/GeoAttachment;->a(Landroid/content/Context;Lcom/vtosters/lite/attachments/GeoAttachment;)V
 
     :cond_0
     return-void

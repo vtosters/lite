@@ -41,15 +41,15 @@
     .line 1
     new-instance v0, Lcom/vk/newsfeed/holders/zhukov/i;
 
-    new-instance v1, Lcom/vkontakte/android/ui/holder/video/j;
+    new-instance v1, Lcom/vtosters/lite/ui/holder/video/j;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Lcom/vkontakte/android/ui/holder/video/j;-><init>(Landroid/view/ViewGroup;Z)V
+    invoke-direct {v1, p1, v2}, Lcom/vtosters/lite/ui/holder/video/j;-><init>(Landroid/view/ViewGroup;Z)V
 
     const/4 p1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/newsfeed/holders/zhukov/i;-><init>(Lcom/vkontakte/android/ui/holder/video/j;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/newsfeed/holders/zhukov/i;-><init>(Lcom/vtosters/lite/ui/holder/video/j;Lkotlin/jvm/internal/i;)V
 
     return-object v0
 .end method

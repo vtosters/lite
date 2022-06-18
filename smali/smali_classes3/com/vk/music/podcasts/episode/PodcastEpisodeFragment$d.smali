@@ -52,7 +52,7 @@
     const/4 p1, 0x1
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->b(Z)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->b(Z)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$d;->a:Lkotlin/jvm/b/a;

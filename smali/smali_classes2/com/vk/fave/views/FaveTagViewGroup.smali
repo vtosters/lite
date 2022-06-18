@@ -151,7 +151,7 @@
     iput-object p3, p0, Lcom/vk/fave/views/FaveTagViewGroup;->H:Landroid/view/View$OnClickListener;
 
     .line 5
-    sget-object p3, Lcom/vkontakte/android/a0;->FaveTagViewGroup:[I
+    sget-object p3, Lcom/vtosters/lite/a0;->FaveTagViewGroup:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

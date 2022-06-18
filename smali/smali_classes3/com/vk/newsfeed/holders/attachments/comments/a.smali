@@ -34,7 +34,7 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/c;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/c;
 
     const/4 v1, 0x0
 
@@ -43,10 +43,10 @@
     move-object p1, v1
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/attachments/c;
+    check-cast p1, Lcom/vtosters/lite/attachments/c;
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_1
 
@@ -55,11 +55,11 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -97,7 +97,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vkontakte/android/attachments/c;->m1()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vtosters/lite/attachments/c;->m1()Ljava/lang/String;
 
     move-result-object v1
 

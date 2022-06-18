@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private final h:Lcom/vkontakte/android/ui/holder/video/i;
+.field private final h:Lcom/vtosters/lite/ui/holder/video/i;
 
 .field private final i:Landroid/view/View;
 
 .field private final j:Landroid/view/View;
 
-.field private final k:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+.field private final k:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
 .field private final l:Landroid/view/View;
 
@@ -23,15 +23,15 @@
     invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;-><init>(Landroid/view/ViewGroup;)V
 
     .line 2
-    new-instance p1, Lcom/vkontakte/android/ui/holder/video/i;
+    new-instance p1, Lcom/vtosters/lite/ui/holder/video/i;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->b()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/ui/holder/video/i;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/ui/holder/video/i;-><init>(Landroid/view/ViewGroup;)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vkontakte/android/ui/holder/video/i;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->b()Landroid/view/ViewGroup;
@@ -54,7 +54,7 @@
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setClipToOutline(Z)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vkontakte/android/ui/holder/video/i;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -104,9 +104,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    check-cast v2, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
-    iput-object v2, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iput-object v2, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     const v2, 0x7f0a0c54
 
@@ -126,7 +126,7 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     if-eqz p1, :cond_0
 
@@ -134,7 +134,7 @@
 
     .line 14
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     if-eqz p1, :cond_1
 
@@ -150,11 +150,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->k:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     return-object p0
 .end method
@@ -180,7 +180,7 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vkontakte/android/ui/holder/video/i;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -188,7 +188,7 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    instance-of v0, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-static {v1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -198,14 +198,14 @@
     return-void
 .end method
 
-.method protected a(Lcom/vkontakte/android/attachments/VideoAttachment;)V
+.method protected a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
     .locals 1
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/newsfeed/holders/digest/grid/b;->a()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vkontakte/android/ui/holder/video/i;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->h:Lcom/vtosters/lite/ui/holder/video/i;
 
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
 

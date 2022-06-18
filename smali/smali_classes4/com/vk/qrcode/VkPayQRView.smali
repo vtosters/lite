@@ -208,14 +208,14 @@
     move-object p2, p3
 
     :goto_2
-    instance-of v0, p2, Lcom/vkontakte/android/VKActivity;
+    instance-of v0, p2, Lcom/vtosters/lite/VKActivity;
 
     if-nez v0, :cond_3
 
     move-object p2, p3
 
     :cond_3
-    check-cast p2, Lcom/vkontakte/android/VKActivity;
+    check-cast p2, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p2, :cond_4
 
@@ -224,7 +224,7 @@
     .line 14
     invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     :cond_4
     return-void

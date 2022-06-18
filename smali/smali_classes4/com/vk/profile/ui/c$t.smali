@@ -71,7 +71,7 @@
 
     iget v1, v1, Lcom/vk/profile/ui/c;->q0:I
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -99,9 +99,9 @@
 
     iget v2, v1, Lcom/vk/profile/ui/c;->q0:I
 
-    iget-object v1, v1, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, v1, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/newsfeed/posting/l;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/newsfeed/posting/l;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/newsfeed/posting/l;
 
     :goto_1
     return-object v0
@@ -134,9 +134,9 @@
 
     iget-object v3, p0, Lcom/vk/profile/ui/c$t;->H:Lcom/vk/profile/ui/c;
 
-    iget-object v3, v3, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v3, v3, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v3, v3, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v3, v3, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v4, v3, Lcom/vk/dto/user/UserProfile;->b:I
 

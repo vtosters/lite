@@ -46,7 +46,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/f0$a$b;->a:Lcom/vk/newsfeed/holders/attachments/f0$a;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/holders/attachments/f0$a;->a(Lcom/vk/newsfeed/holders/attachments/f0$a;)Lcom/vkontakte/android/attachments/PollAttachment;
+    invoke-static {v1}, Lcom/vk/newsfeed/holders/attachments/f0$a;->a(Lcom/vk/newsfeed/holders/attachments/f0$a;)Lcom/vtosters/lite/attachments/PollAttachment;
 
     move-result-object v1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/y$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "UserHeaderItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/y;",
         ">;"
     }
@@ -31,7 +31,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/y$b;->c:Lcom/vk/profile/ui/header/UserHeaderView;
 
@@ -66,11 +66,11 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -89,11 +89,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/adapter/items/y$b;->c:Lcom/vk/profile/ui/header/UserHeaderView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/header/UserHeaderView;->setProfile(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/header/UserHeaderView;->setProfile(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-void
 .end method

@@ -68,13 +68,13 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/newsfeed/HomeFragment$d;->a:Lcom/vk/newsfeed/NewsListsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter;->j()Lcom/vkontakte/android/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/NewsListsAdapter;->j()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/NewsfeedList;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/NewsfeedList;->getTitle()Ljava/lang/String;
 
     move-result-object p1
 

@@ -695,11 +695,11 @@
     .line 53
     iget-object p1, p0, Lcom/vk/newsfeed/posting/helpers/a;->M:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
 
-    new-instance p2, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance p2, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    invoke-direct {p2, p5, v0, v0}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2, p5, v0, v0}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
 
     :cond_f
     return-void

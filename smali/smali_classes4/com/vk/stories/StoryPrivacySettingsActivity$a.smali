@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/StoryPrivacySettingsActivity$a;
-.super Lcom/vkontakte/android/api/l;
+.super Lcom/vtosters/lite/api/l;
 .source "StoryPrivacySettingsActivity.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/api/l<",
+        "Lcom/vtosters/lite/api/l<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/common/data/d;",
         ">;>;"
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity$a;->c:Lcom/vk/stories/StoryPrivacySettingsActivity;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/l;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/l;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -45,12 +45,12 @@
     .locals 0
 
     .line 14
-    invoke-super {p0, p1}, Lcom/vkontakte/android/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity$a;->c:Lcom/vk/stories/StoryPrivacySettingsActivity;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -269,7 +269,7 @@
     .line 12
     iget-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity$a;->c:Lcom/vk/stories/StoryPrivacySettingsActivity;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-virtual {p1}, Lcom/vtosters/lite/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object p1
 
@@ -298,7 +298,7 @@
     :cond_4
     iget-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity$a;->c:Lcom/vk/stories/StoryPrivacySettingsActivity;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method

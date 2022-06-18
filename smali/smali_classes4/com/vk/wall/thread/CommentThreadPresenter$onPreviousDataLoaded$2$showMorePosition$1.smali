@@ -64,9 +64,9 @@
 
     move-result p1
 
-    sget-object v0, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v0, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/o0/a$a;->g()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/o0/a$a;->g()I
 
     move-result v0
 

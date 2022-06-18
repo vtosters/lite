@@ -1,0 +1,34 @@
+.class public interface abstract Lcom/vtosters/lite/data/Groups$e;
+.super Ljava/lang/Object;
+.source "Groups.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/vtosters/lite/data/Groups;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "e"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Ljava/util/List;)V
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/vk/dto/group/Group;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract onError()V
+.end method

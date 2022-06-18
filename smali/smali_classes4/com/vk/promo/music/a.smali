@@ -264,7 +264,7 @@
     const/4 v0, 0x3
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -304,7 +304,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->c()Lcom/vk/auth/l;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
 
     move-result-object v0
 

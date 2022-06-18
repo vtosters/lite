@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static final a(Lcom/vkontakte/android/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vkontakte/android/data/n$l;
+.method public static final a(Lcom/vtosters/lite/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vtosters/lite/data/n$l;
     .locals 3
 
     .line 1
@@ -52,7 +52,7 @@
     const-string p2, "story_type"
 
     .line 3
-    invoke-virtual {p0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_2
     return-object p0

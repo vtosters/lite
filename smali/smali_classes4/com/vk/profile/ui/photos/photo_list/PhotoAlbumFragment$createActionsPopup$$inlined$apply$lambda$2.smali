@@ -64,13 +64,13 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/photos/c$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/photos/c$f;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/photos/c$f;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/photos/c$f;-><init>()V
 
     iget-object v1, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$createActionsPopup$$inlined$apply$lambda$2;->$album:Lcom/vk/dto/photo/PhotoAlbum;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/photos/c$f;->a(Lcom/vk/dto/photo/PhotoAlbum;)Lcom/vkontakte/android/fragments/photos/c$f;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/photos/c$f;->a(Lcom/vk/dto/photo/PhotoAlbum;)Lcom/vtosters/lite/fragments/photos/c$f;
 
     iget-object v1, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$createActionsPopup$$inlined$apply$lambda$2;->this$0:Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment;
 

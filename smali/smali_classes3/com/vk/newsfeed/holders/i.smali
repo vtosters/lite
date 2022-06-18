@@ -121,7 +121,7 @@
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -212,7 +212,7 @@
     .line 26
     new-instance v0, Lcom/vk/api/friends/FriendsGetRecommendations;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations;
 
@@ -234,7 +234,7 @@
     invoke-virtual {v0, p1}, Lcom/vk/api/friends/FriendsGetRecommendations;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendations;
 
     .line 28
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations;
 
@@ -249,7 +249,7 @@
     invoke-virtual {v0, p1}, Lcom/vk/api/friends/FriendsGetRecommendations;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendations;
 
     .line 29
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations;
 
@@ -285,7 +285,7 @@
     .end annotation
 
     .line 32
-    iget-object p2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p2, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations;
 
@@ -537,11 +537,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
@@ -555,12 +555,12 @@
     move-result-object v0
 
     .line 3
-    iget v1, p1, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v1, p1, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations$TrackData;->h(I)V
 
     .line 4
-    iget-object v1, p1, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations$TrackData;->d(Ljava/lang/String;)V
 
@@ -573,7 +573,7 @@
 
     .line 6
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -602,7 +602,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->h0()Lcom/vkontakte/android/ui/f0/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->h0()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v0
 
@@ -610,7 +610,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/a;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a;->d()Z
 
     move-result v0
 
@@ -633,7 +633,7 @@
 
     invoke-direct {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$a;-><init>()V
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations;
 
@@ -643,7 +643,7 @@
 
     invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$a;->a(Ljava/lang/String;)Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 

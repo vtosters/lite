@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/u;
-.super Lcom/vkontakte/android/fragments/o1;
+.super Lcom/vtosters/lite/fragments/o1;
 .source "NewsfeedSettingsFragment.kt"
 
 # interfaces
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/o1;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/o1;-><init>()V
 
     return-void
 .end method
@@ -52,23 +52,23 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/fragments/MaterialPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     const p1, 0x7f15000d
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/fragments/u2/b;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->addPreferencesFromResource(I)V
 
     const-string p1, "newsfeed_order"
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    check-cast p1, Lcom/vkontakte/android/ui/SummaryListPreference;
+    check-cast p1, Lcom/vtosters/lite/ui/SummaryListPreference;
 
     .line 4
     sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
@@ -87,7 +87,7 @@
     const-string v0, "recent"
 
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/SummaryListPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/SummaryListPreference;->setValue(Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
@@ -95,7 +95,7 @@
     const-string p1, "new_posts"
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
 
@@ -107,7 +107,7 @@
     const-string p1, "hide_from_news"
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
 
@@ -119,7 +119,7 @@
     const-string p1, "hide_from_stories"
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
 
@@ -219,7 +219,7 @@
 
     new-instance p1, Lcom/vk/navigation/o;
 
-    const-class v0, Lcom/vkontakte/android/fragments/p1;
+    const-class v0, Lcom/vtosters/lite/fragments/p1;
 
     invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 

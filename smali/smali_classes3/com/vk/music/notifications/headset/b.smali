@@ -37,7 +37,7 @@
     iput-object v0, p0, Lcom/vk/music/notifications/headset/b;->b:Lcom/vk/music/player/d;
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -169,7 +169,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vkontakte/android/fragments/z1;
+    instance-of v0, v0, Lcom/vtosters/lite/fragments/z1;
 
     if-nez v0, :cond_0
 
@@ -195,7 +195,7 @@
     .line 6
     new-instance v1, Lcom/vk/navigation/o;
 
-    const-class v2, Lcom/vkontakte/android/fragments/z1;
+    const-class v2, Lcom/vtosters/lite/fragments/z1;
 
     invoke-direct {v1, v2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 

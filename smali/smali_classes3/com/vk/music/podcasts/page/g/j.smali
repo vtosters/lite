@@ -174,7 +174,7 @@
 
     const v0, 0x7f120ae0
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -256,7 +256,7 @@
     :goto_1
     iget-object v1, p0, Lcom/vk/music/podcasts/page/g/j;->c:Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -265,7 +265,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/podcasts/page/g/j;->c:Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->l(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->l(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -344,7 +344,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/podcast/PodcastInfo;
 

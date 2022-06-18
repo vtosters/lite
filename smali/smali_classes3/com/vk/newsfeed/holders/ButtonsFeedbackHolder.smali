@@ -31,7 +31,7 @@
 
 .field private final H:Landroid/widget/LinearLayout;
 
-.field private I:Lcom/vkontakte/android/ui/f0/b;
+.field private I:Lcom/vtosters/lite/ui/f0/b;
 
 .field private final J:Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
@@ -144,7 +144,7 @@
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -212,11 +212,11 @@
     .locals 7
 
     .line 5
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder;->I:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder;->I:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     move v5, v0
 
@@ -299,11 +299,11 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder;->I:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder;->I:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     goto :goto_0
 
@@ -352,7 +352,7 @@
     .line 1
     new-instance v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -394,7 +394,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -432,7 +432,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const/16 v2, 0x80
 
@@ -443,14 +443,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder;->I:Lcom/vkontakte/android/ui/f0/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder;->I:Lcom/vtosters/lite/ui/f0/b;
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -605,7 +605,7 @@
 
     check-cast v11, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a;
 
-    invoke-virtual {v11, v9}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v11, v9}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 18
     iget-object v10, v10, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -693,7 +693,7 @@
 
     check-cast v9, Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a;
 
-    invoke-virtual {v9, v2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v9, v2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 26
     iget-object v8, v8, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

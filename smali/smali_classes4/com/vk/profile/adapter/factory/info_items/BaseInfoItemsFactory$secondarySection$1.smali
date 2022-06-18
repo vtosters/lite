@@ -48,7 +48,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/util/List;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -102,7 +102,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;I)Ljava/util/List;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;I)Ljava/util/List;
 
     move-result-object p1
 
@@ -113,9 +113,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$secondarySection$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$secondarySection$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/util/List;
 
     move-result-object p1
 

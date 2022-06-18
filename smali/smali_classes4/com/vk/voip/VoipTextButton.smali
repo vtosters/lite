@@ -155,7 +155,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setImportantForAccessibility(I)V
 
     .line 12
-    sget-object v1, Lcom/vkontakte/android/a0;->VoipButton:[I
+    sget-object v1, Lcom/vtosters/lite/a0;->VoipButton:[I
 
     const/4 v3, 0x0
 

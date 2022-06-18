@@ -4505,7 +4505,7 @@ to start searching"</string>
     <string name="vk_auth_wrong_code">Incorrect confirmation code.</string>
     <string name="vk_captcha_hint">Please enter the code from the picture</string>
     <string name="vk_confirm">Please confirm</string>
-    <string name="vk_file_provider_authority">com.vk.common.VKFileProvider</string>
+    <string name="vk_file_provider_authority">com.vtosters.lite.common.VKFileProvider</string>
     <string name="vk_mini_app">Mini app</string>
     <string name="vk_mini_app_added_to_community">Mini app added to community</string>
     <string name="vk_mini_app_added_to_favorites">Mini app added to favorites</string>

@@ -50,7 +50,7 @@
     new-instance v0, Lcom/vk/newsfeed/r;
 
     .line 2
-    new-instance v1, Lcom/vkontakte/android/NewsfeedList;
+    new-instance v1, Lcom/vtosters/lite/NewsfeedList;
 
     sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
@@ -58,10 +58,10 @@
 
     move-result-object p2
 
-    invoke-direct {v1, p1, p2}, Lcom/vkontakte/android/NewsfeedList;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, p1, p2}, Lcom/vtosters/lite/NewsfeedList;-><init>(ILjava/lang/String;)V
 
     .line 3
-    invoke-direct {v0, v1, p3}, Lcom/vk/newsfeed/r;-><init>(Lcom/vkontakte/android/NewsfeedList;I)V
+    invoke-direct {v0, v1, p3}, Lcom/vk/newsfeed/r;-><init>(Lcom/vtosters/lite/NewsfeedList;I)V
 
     return-object v0
 .end method

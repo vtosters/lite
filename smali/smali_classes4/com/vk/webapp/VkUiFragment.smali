@@ -1340,7 +1340,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p0}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -1547,7 +1547,7 @@
 
     const-wide/16 p2, 0xc8
 
-    invoke-static {p1, p2, p3}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p1, p2, p3}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     .line 15
     new-instance p1, Landroid/view/View;
@@ -2378,20 +2378,20 @@
 
     move-result-object v0
 
-    instance-of v2, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v2, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v2, :cond_3
 
     move-object v0, v1
 
     :cond_3
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_4
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     .line 10
     :cond_4
@@ -2654,20 +2654,20 @@
 
     move-result-object p1
 
-    instance-of p2, p1, Lcom/vkontakte/android/VKActivity;
+    instance-of p2, p1, Lcom/vtosters/lite/VKActivity;
 
     if-nez p2, :cond_4
 
     move-object p1, v1
 
     :cond_4
-    check-cast p1, Lcom/vkontakte/android/VKActivity;
+    check-cast p1, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p1, :cond_5
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     :cond_5
     return-void

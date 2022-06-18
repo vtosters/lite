@@ -65,7 +65,7 @@
 
     iget p1, p1, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->f(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->f(I)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/video/d/c$h;->a:Lcom/vk/video/d/c;

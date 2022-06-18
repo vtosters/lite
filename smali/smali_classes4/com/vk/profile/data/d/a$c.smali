@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/d/a;->a(ILcom/vkontakte/android/api/i;)Lc/a/m;
+    value = Lcom/vk/profile/data/d/a;->a(ILcom/vtosters/lite/api/i;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,14 +31,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/i;
+.field final synthetic a:Lcom/vtosters/lite/api/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vtosters/lite/api/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/data/d/a$c;->a:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/data/d/a$c;->a:Lcom/vtosters/lite/api/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,21 +47,21 @@
 
 
 # virtual methods
-.method public final a(Lb/h/c/c/k0$a;)Lcom/vkontakte/android/api/i;
+.method public final a(Lb/h/c/c/k0$a;)Lcom/vtosters/lite/api/i;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/d/a$c;->a:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/data/d/a$c;->a:Lcom/vtosters/lite/api/i;
 
     .line 2
     iget-object v1, p1, Lb/h/c/c/k0$a;->a:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->d1:Ljava/util/ArrayList;
+    iput-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->d1:Ljava/util/ArrayList;
 
     .line 3
     iget-object p1, p1, Lb/h/c/c/k0$a;->b:Ljava/util/ArrayList;
 
-    iput-object p1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
+    iput-object p1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
     .line 1
     check-cast p1, Lb/h/c/c/k0$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/data/d/a$c;->a(Lb/h/c/c/k0$a;)Lcom/vkontakte/android/api/i;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/data/d/a$c;->a(Lb/h/c/c/k0$a;)Lcom/vtosters/lite/api/i;
 
     move-result-object p1
 

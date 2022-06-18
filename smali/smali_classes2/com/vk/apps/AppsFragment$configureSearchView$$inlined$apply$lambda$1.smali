@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/apps/AppsFragment$configureSearchView$$inlined$apply$lambda$1;->this$0:Lcom/vk/apps/AppsFragment;
 
-    invoke-static {v0}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {v0}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method

@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/newsfeed/d$a;",
+        "Lcom/vtosters/lite/api/newsfeed/d$a;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/newsfeed/d$a;)V
+.method public final a(Lcom/vtosters/lite/api/newsfeed/d$a;)V
     .locals 3
 
     .line 1
-    iget v0, p1, Lcom/vkontakte/android/api/newsfeed/d$a;->a:I
+    iget v0, p1, Lcom/vtosters/lite/api/newsfeed/d$a;->a:I
 
     if-lez v0, :cond_0
 
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$q;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/newsfeed/d$a;->b:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/newsfeed/d$a;->b:Ljava/lang/String;
 
     invoke-static {v0, v1, p1}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
 
@@ -184,9 +184,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/newsfeed/d$a;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/d$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/controllers/PostsController$q;->a(Lcom/vkontakte/android/api/newsfeed/d$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/controllers/PostsController$q;->a(Lcom/vtosters/lite/api/newsfeed/d$a;)V
 
     return-void
 .end method

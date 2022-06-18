@@ -229,9 +229,9 @@
     .locals 5
 
     .line 1
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->CommunityMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->CommunityMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NotificationUtils$Type;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NotificationUtils$Type;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -366,9 +366,9 @@
     move-result-object v1
 
     .line 3
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NotificationUtils$Type;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NotificationUtils$Type;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -438,9 +438,9 @@
     move-result-object v1
 
     .line 3
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->CommunityMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->CommunityMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NotificationUtils$Type;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NotificationUtils$Type;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -685,9 +685,9 @@
     move-result-object v1
 
     .line 3
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NotificationUtils$Type;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NotificationUtils$Type;->toString()Ljava/lang/String;
 
     move-result-object v0
 

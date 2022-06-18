@@ -67,7 +67,7 @@
     move-result-object v2
 
     .line 3
-    sget-object v3, Lcom/vkontakte/android/api/newsfeed/a;->H:Lcom/vkontakte/android/api/newsfeed/a$a;
+    sget-object v3, Lcom/vtosters/lite/api/newsfeed/a;->H:Lcom/vtosters/lite/api/newsfeed/a$a;
 
     const-string v4, "initial_discover_full"
 
@@ -79,7 +79,7 @@
     const-string v5, "discover_full"
 
     .line 5
-    invoke-virtual {v3, v4, v5, v2}, Lcom/vkontakte/android/api/newsfeed/a$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Lcom/vk/discover/NewsEntriesContainer;
+    invoke-virtual {v3, v4, v5, v2}, Lcom/vtosters/lite/api/newsfeed/a$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Lcom/vk/discover/NewsEntriesContainer;
 
     move-result-object v10
 

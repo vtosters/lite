@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/posting/newposter/c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "NewPosterColorAdapter.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Ljava/lang/Integer;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -73,7 +73,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/newsfeed/posting/newposter/a;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/newsfeed/posting/newposter/c;->d:Lcom/vk/core/util/k0;
 
@@ -203,7 +203,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/newposter/c;->d:Lcom/vk/core/util/k0;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
@@ -218,7 +218,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/posting/newposter/c;->e:Lcom/vk/attachpicker/base/e;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 

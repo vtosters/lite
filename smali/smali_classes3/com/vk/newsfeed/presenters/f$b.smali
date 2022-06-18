@@ -57,13 +57,13 @@
             "Ljava/lang/Long;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos;
+    new-instance p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos;
 
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/f$b;->a:Lcom/vk/newsfeed/presenters/f;
 
@@ -93,7 +93,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     const/4 v0, 0x0
 

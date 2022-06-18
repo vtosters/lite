@@ -1,5 +1,5 @@
 .class Lcom/vk/profile/ui/c$l;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "BaseProfileFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/c$l;->c:Lcom/vk/profile/ui/c;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/k;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

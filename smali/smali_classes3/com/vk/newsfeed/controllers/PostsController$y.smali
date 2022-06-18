@@ -60,7 +60,7 @@
 
     if-eq p1, p2, :cond_0
 
-    new-instance p1, Lcom/vkontakte/android/api/wall/e;
+    new-instance p1, Lcom/vtosters/lite/api/wall/e;
 
     iget-object p2, p0, Lcom/vk/newsfeed/controllers/PostsController$y;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
@@ -92,7 +92,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/api/wall/e;-><init>(IIIILjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/wall/e;-><init>(IIIILjava/lang/String;)V
 
     goto :goto_0
 
@@ -186,7 +186,7 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$y;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {p1}, Lcom/vkontakte/android/api/wall/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vkontakte/android/api/wall/d;
+    invoke-static {p1}, Lcom/vtosters/lite/api/wall/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vtosters/lite/api/wall/d;
 
     move-result-object p1
 
@@ -194,7 +194,7 @@
 
     .line 7
     :cond_3
-    invoke-static {p1}, Lcom/vkontakte/android/api/wall/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vkontakte/android/api/wall/d;
+    invoke-static {p1}, Lcom/vtosters/lite/api/wall/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vtosters/lite/api/wall/d;
 
     move-result-object p1
 

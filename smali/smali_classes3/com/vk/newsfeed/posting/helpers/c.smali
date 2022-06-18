@@ -660,7 +660,7 @@
     const/4 v2, 0x0
 
     :goto_7
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v5
 
@@ -734,7 +734,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v2}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v2
 

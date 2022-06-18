@@ -143,7 +143,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/music/subscription/d/a$a$a;-><init>(Lcom/vk/music/subscription/d/a$a;)V
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/data/PurchasesManager;->b(Ljava/util/Map;Lcom/vkontakte/android/data/PurchasesManager$p;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/data/PurchasesManager;->b(Ljava/util/Map;Lcom/vtosters/lite/data/PurchasesManager$p;)V
 
     return-void
 .end method

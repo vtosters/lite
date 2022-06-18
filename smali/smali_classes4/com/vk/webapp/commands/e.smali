@@ -242,7 +242,7 @@
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     .line 4
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->a(Ljava/util/List;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->a(Ljava/util/List;)V
 
     .line 5
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -355,7 +355,7 @@
 
     invoke-direct {v0, p0, v2, v4, p1}, Lcom/vk/webapp/commands/e$b;-><init>(Lcom/vk/webapp/commands/e;[Ljava/lang/String;[ZLjava/util/ArrayList;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     goto :goto_3
 
@@ -365,7 +365,7 @@
 
     invoke-direct {p1, p0, v0}, Lcom/vk/webapp/commands/e$c;-><init>(Lcom/vk/webapp/commands/e;Lorg/json/JSONObject;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     :goto_3
     return-void

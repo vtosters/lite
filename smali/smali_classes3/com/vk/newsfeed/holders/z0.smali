@@ -36,7 +36,7 @@
 
 .field private final K:Lcom/vk/common/k/a;
 
-.field private final L:Lcom/vkontakte/android/u;
+.field private final L:Lcom/vtosters/lite/u;
 
 .field private final M:Landroid/view/View$OnClickListener;
 
@@ -131,22 +131,22 @@
     iput-object v1, p0, Lcom/vk/newsfeed/holders/z0;->K:Lcom/vk/common/k/a;
 
     .line 6
-    new-instance p1, Lcom/vkontakte/android/u;
+    new-instance p1, Lcom/vtosters/lite/u;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/u;-><init>()V
 
     .line 7
     iget-object v1, p0, Lcom/vk/newsfeed/holders/z0;->K:Lcom/vk/common/k/a;
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/u;->a(Lcom/vk/common/k/b;)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/u;->a(Lcom/vk/common/k/b;)V
 
     const/16 v1, 0x80
 
     .line 8
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 9
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/z0;->L:Lcom/vkontakte/android/u;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/z0;->L:Lcom/vtosters/lite/u;
 
     .line 10
     new-instance p1, Lcom/vk/newsfeed/holders/z0$b;
@@ -212,7 +212,7 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 14
-    instance-of v1, v1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v1, v1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v1, :cond_0
 
@@ -225,7 +225,7 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 15
-    instance-of p2, v0, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of p2, v0, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz p2, :cond_2
 
@@ -248,9 +248,9 @@
     .line 18
     iget-object v1, p0, Lcom/vk/newsfeed/holders/z0;->K:Lcom/vk/common/k/a;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v2
 
@@ -261,20 +261,20 @@
     invoke-virtual {v1, v2, p2}, Lcom/vk/common/k/a;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lcom/vk/common/k/a;
 
     .line 19
-    iget-object p2, p0, Lcom/vk/newsfeed/holders/z0;->L:Lcom/vkontakte/android/u;
+    iget-object p2, p0, Lcom/vk/newsfeed/holders/z0;->L:Lcom/vtosters/lite/u;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
     iget v0, v0, Lcom/vk/dto/music/MusicTrack;->h:I
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/u;->a(I)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/u;->a(I)V
 
     .line 20
-    iget-object p2, p0, Lcom/vk/newsfeed/holders/z0;->L:Lcom/vkontakte/android/u;
+    iget-object p2, p0, Lcom/vk/newsfeed/holders/z0;->L:Lcom/vtosters/lite/u;
 
-    invoke-static {p1, p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {p1, p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -308,7 +308,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -378,7 +378,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 4
@@ -409,7 +409,7 @@
 
     .line 8
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -480,13 +480,13 @@
 
     move-result v4
 
-    const-class v5, Lcom/vkontakte/android/t;
+    const-class v5, Lcom/vtosters/lite/t;
 
     invoke-interface {v1, v3, v4, v5}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, [Lcom/vkontakte/android/t;
+    check-cast v1, [Lcom/vtosters/lite/t;
 
     if-eqz v1, :cond_2
 
@@ -494,7 +494,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/t;
+    check-cast v1, Lcom/vtosters/lite/t;
 
     goto :goto_1
 
@@ -507,7 +507,7 @@
     .line 9
     iget-object v3, p0, Lcom/vk/newsfeed/holders/z0;->M:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v1, v3}, Lcom/vkontakte/android/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v3}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_3
     if-eqz v1, :cond_4
@@ -647,7 +647,7 @@
     .line 19
     iget-object p1, p0, Lcom/vk/newsfeed/holders/z0;->G:Lcom/vk/core/view/links/LinkedTextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -695,7 +695,7 @@
     .line 22
     iget-object p1, p0, Lcom/vk/newsfeed/holders/z0;->G:Lcom/vk/core/view/links/LinkedTextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 

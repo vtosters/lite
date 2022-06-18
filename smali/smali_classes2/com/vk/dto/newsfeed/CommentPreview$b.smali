@@ -162,7 +162,7 @@
     if-eqz v8, :cond_2
 
     .line 9
-    invoke-static {v8, p2}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v8, p2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v8
 

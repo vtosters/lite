@@ -40,11 +40,11 @@
 
     invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/vkontakte/android/audio/player/r;
+    new-instance v2, Lcom/vtosters/lite/audio/player/r;
 
     const/4 v0, 0x2
 
-    invoke-direct {v2, v0}, Lcom/vkontakte/android/audio/player/r;-><init>(I)V
+    invoke-direct {v2, v0}, Lcom/vtosters/lite/audio/player/r;-><init>(I)V
 
     const/4 v3, 0x0
 
@@ -54,7 +54,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/r;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/r;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;ILkotlin/jvm/internal/i;)V
 
     iput-object v6, p0, Lcom/vk/music/stories/f;->b:Lcom/vk/music/stories/d;
 
@@ -689,7 +689,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v1, v2, v3}, Lcom/vkontakte/android/audio/player/r$a$a;->a(Lcom/vkontakte/android/audio/player/r$a;ZZILjava/lang/Object;)Z
+    invoke-static {v0, v1, v1, v2, v3}, Lcom/vtosters/lite/audio/player/r$a$a;->a(Lcom/vtosters/lite/audio/player/r$a;ZZILjava/lang/Object;)Z
 
     return-void
 .end method

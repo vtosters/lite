@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-static {p1}, Lcom/vkontakte/android/attachments/a;->b(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->b(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object p1
 

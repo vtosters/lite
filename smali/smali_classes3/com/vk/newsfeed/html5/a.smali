@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)Lcom/vk/dto/newsfeed/entries/Html5Entry;
+.method public a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vk/dto/newsfeed/entries/Html5Entry;
     .locals 1
 
     .line 1
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v0, p1, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -33,7 +33,7 @@
     return-object p1
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;I)Ljava/lang/String;
+.method public a(Lcom/vtosters/lite/ui/f0/b;I)Ljava/lang/String;
     .locals 4
 
     const/4 v0, 0x0
@@ -50,7 +50,7 @@
     move-result p2
 
     .line 3
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     if-eqz p1, :cond_0
 
@@ -94,7 +94,7 @@
     move-result p2
 
     .line 5
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     if-eqz p1, :cond_3
 
@@ -130,7 +130,7 @@
     throw p1
 .end method
 
-.method public b(Lcom/vkontakte/android/ui/f0/b;)I
+.method public b(Lcom/vtosters/lite/ui/f0/b;)I
     .locals 0
 
     const/4 p1, 0x2

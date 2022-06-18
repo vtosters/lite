@@ -157,7 +157,7 @@
 
     .line 7
     :cond_0
-    sget-object v30, Lcom/vkontakte/android/fragments/messages/chat_invite/accept/a;->H:Lcom/vkontakte/android/fragments/messages/chat_invite/accept/a$c;
+    sget-object v30, Lcom/vtosters/lite/fragments/messages/chat_invite/accept/a;->H:Lcom/vtosters/lite/fragments/messages/chat_invite/accept/a$c;
 
     invoke-virtual {v1}, Lcom/vk/dto/group/GroupChat;->H()Ljava/lang/String;
 
@@ -195,7 +195,7 @@
 
     move-object/from16 v34, v2
 
-    invoke-virtual/range {v30 .. v36}, Lcom/vkontakte/android/fragments/messages/chat_invite/accept/a$c;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;Z)V
+    invoke-virtual/range {v30 .. v36}, Lcom/vtosters/lite/fragments/messages/chat_invite/accept/a$c;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;Z)V
 
     :goto_0
     return-void

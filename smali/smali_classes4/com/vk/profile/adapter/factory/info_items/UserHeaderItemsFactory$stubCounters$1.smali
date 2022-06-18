@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/items/b0/b;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/b;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/b;
     .locals 3
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     const-string v1, "profile.counters"
 
@@ -110,7 +110,7 @@
     .line 4
     new-instance v0, Lcom/vk/profile/adapter/items/b0/b;
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/b0/b;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/b0/b;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-object v0
 
@@ -124,9 +124,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$stubCounters$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/b;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$stubCounters$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/b;
 
     move-result-object p1
 

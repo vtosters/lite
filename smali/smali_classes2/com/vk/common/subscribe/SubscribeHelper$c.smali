@@ -78,7 +78,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/Groups;->a(II)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Groups;->a(II)V
 
     return-void
 .end method

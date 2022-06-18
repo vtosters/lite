@@ -1,12 +1,12 @@
 .class public final Lcom/vk/fave/fragments/holders/FaveTagHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "FaveTagHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/fave/entities/FaveTag;",
         ">;"
     }
@@ -64,7 +64,7 @@
     const v0, 0x7f0d01c6
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p2, p0, Lcom/vk/fave/fragments/holders/FaveTagHolder;->e:Lkotlin/jvm/b/b;
 
@@ -131,7 +131,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/fave/entities/FaveTag;
 

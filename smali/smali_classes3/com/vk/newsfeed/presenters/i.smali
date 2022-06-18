@@ -11,13 +11,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
         "Lcom/vk/newsfeed/presenters/EntriesListPresenter;",
         "Lcom/vk/newsfeed/contracts/ProfileContract$Presenter<",
         "TT;>;",
         "Lcom/vk/lists/t$p<",
-        "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+        "Lcom/vtosters/lite/api/wall/WallGet$Result;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 .field private T:Ljava/lang/String;
 
-.field private U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private U:Lcom/vtosters/lite/api/ExtendedUserProfile;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -108,11 +108,11 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->h(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/d;->h(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -209,7 +209,7 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;)Lcom/vkontakte/android/api/wall/WallGet$Mode;
+.method private final b(Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;)Lcom/vtosters/lite/api/wall/WallGet$Mode;
     .locals 1
 
     .line 1
@@ -230,19 +230,19 @@
     if-eq p1, v0, :cond_0
 
     .line 2
-    sget-object p1, Lcom/vkontakte/android/api/wall/WallGet$Mode;->ALL:Lcom/vkontakte/android/api/wall/WallGet$Mode;
+    sget-object p1, Lcom/vtosters/lite/api/wall/WallGet$Mode;->ALL:Lcom/vtosters/lite/api/wall/WallGet$Mode;
 
     goto :goto_0
 
     .line 3
     :cond_0
-    sget-object p1, Lcom/vkontakte/android/api/wall/WallGet$Mode;->ARCHIVED:Lcom/vkontakte/android/api/wall/WallGet$Mode;
+    sget-object p1, Lcom/vtosters/lite/api/wall/WallGet$Mode;->ARCHIVED:Lcom/vtosters/lite/api/wall/WallGet$Mode;
 
     goto :goto_0
 
     .line 4
     :cond_1
-    sget-object p1, Lcom/vkontakte/android/api/wall/WallGet$Mode;->OWNER:Lcom/vkontakte/android/api/wall/WallGet$Mode;
+    sget-object p1, Lcom/vtosters/lite/api/wall/WallGet$Mode;->OWNER:Lcom/vtosters/lite/api/wall/WallGet$Mode;
 
     :goto_0
     return-object p1
@@ -342,7 +342,7 @@
     return-void
 .end method
 
-.method public final I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final I()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -351,7 +351,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object v0
 .end method
@@ -472,15 +472,15 @@
             "Lcom/vk/lists/t;",
             "Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
 
     .line 8
-    sget-object v0, Lcom/vkontakte/android/MenuCounterUpdater;->e:Lcom/vkontakte/android/MenuCounterUpdater;
+    sget-object v0, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/MenuCounterUpdater;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/MenuCounterUpdater;->a()V
 
     .line 9
     invoke-interface {p0}, Lcom/vk/newsfeed/contracts/ProfileContract$Presenter;->j1()Lc/a/m;
@@ -511,13 +511,13 @@
             "Lcom/vk/lists/t;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
 
     .line 47
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/4 v1, 0x0
 
@@ -526,7 +526,7 @@
     if-eqz v0, :cond_0
 
     .line 48
-    iget-boolean v3, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->G1:Z
+    iget-boolean v3, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->G1:Z
 
     if-ne v3, v2, :cond_0
 
@@ -540,7 +540,7 @@
     if-eqz v0, :cond_2
 
     .line 49
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->h(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/d;->h(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -550,7 +550,7 @@
 
     .line 50
     :cond_1
-    new-instance v0, Lcom/vkontakte/android/api/wall/WallGet;
+    new-instance v0, Lcom/vtosters/lite/api/wall/WallGet;
 
     iget v4, p0, Lcom/vk/newsfeed/presenters/i;->Q:I
 
@@ -560,7 +560,7 @@
 
     iget-object p2, p0, Lcom/vk/newsfeed/presenters/i;->V:Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/presenters/i;->b(Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;)Lcom/vkontakte/android/api/wall/WallGet$Mode;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/presenters/i;->b(Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;)Lcom/vtosters/lite/api/wall/WallGet$Mode;
 
     move-result-object v7
 
@@ -572,7 +572,7 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v3 .. v8}, Lcom/vkontakte/android/api/wall/WallGet;-><init>(ILjava/lang/String;ILcom/vkontakte/android/api/wall/WallGet$Mode;Ljava/lang/String;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/api/wall/WallGet;-><init>(ILjava/lang/String;ILcom/vtosters/lite/api/wall/WallGet$Mode;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -628,7 +628,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;Z",
             "Lcom/vk/lists/t;",
             ")V"
@@ -690,7 +690,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -699,34 +699,34 @@
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/wall/WallGet$Result;Z)V
+.method public final a(Lcom/vtosters/lite/api/wall/WallGet$Result;Z)V
     .locals 7
 
     if-eqz p2, :cond_2
 
     .line 14
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     if-eqz v0, :cond_0
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->postponedCount:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->postponedCount:I
 
-    iput v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->H1:I
+    iput v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->H1:I
 
     .line 15
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/newsfeed/presenters/i;->U:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     if-eqz v0, :cond_1
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->suggestedCount:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->suggestedCount:I
 
-    iput v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->I1:I
+    iput v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->I1:I
 
     .line 16
     :cond_1
@@ -835,7 +835,7 @@
 
     .line 27
     :cond_5
-    iget v0, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->total:I
+    iget v0, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->total:I
 
     iput v0, p0, Lcom/vk/newsfeed/presenters/i;->X:I
 
@@ -853,7 +853,7 @@
 
     .line 30
     :cond_6
-    iget v0, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->total:I
+    iget v0, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->total:I
 
     if-nez v0, :cond_8
 
@@ -867,7 +867,7 @@
 
     iget v2, p0, Lcom/vk/newsfeed/presenters/i;->Q:I
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
@@ -909,7 +909,7 @@
 
     if-eqz v0, :cond_a
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -931,7 +931,7 @@
 
     move-result-object v0
 
-    iget v2, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->postponedCount:I
+    iget v2, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->postponedCount:I
 
     const-string v3, "postponed_count"
 
@@ -1007,7 +1007,7 @@
     :cond_e
     iget-object p2, p0, Lcom/vk/newsfeed/presenters/i;->b0:Lcom/vk/newsfeed/contracts/u;
 
-    iget v0, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->total:I
+    iget v0, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->total:I
 
     invoke-interface {p2, v0}, Lcom/vk/newsfeed/contracts/u;->C(I)V
 
@@ -1019,7 +1019,7 @@
     if-nez p2, :cond_f
 
     .line 45
-    iget-object p2, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->next_from:Ljava/lang/String;
+    iget-object p2, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->next_from:Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Ljava/util/List;Ljava/lang/String;)V
 

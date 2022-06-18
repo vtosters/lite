@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vkontakte/android/data/v/a;
+.field private final a:Lcom/vtosters/lite/data/v/a;
 
 
 # direct methods
@@ -68,11 +68,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lcom/vkontakte/android/data/v/a;->a(Landroid/content/Context;)Lcom/vkontakte/android/data/v/a;
+    invoke-static {p1}, Lcom/vtosters/lite/data/v/a;->a(Landroid/content/Context;)Lcom/vtosters/lite/data/v/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/i0/c;->a:Lcom/vkontakte/android/data/v/a;
+    iput-object p1, p0, Lcom/vk/newsfeed/i0/c;->a:Lcom/vtosters/lite/data/v/a;
 
     return-void
 .end method
@@ -88,11 +88,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/i0/c;)Lcom/vkontakte/android/data/v/a;
+.method public static final synthetic a(Lcom/vk/newsfeed/i0/c;)Lcom/vtosters/lite/data/v/a;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/newsfeed/i0/c;->a:Lcom/vkontakte/android/data/v/a;
+    iget-object p0, p0, Lcom/vk/newsfeed/i0/c;->a:Lcom/vtosters/lite/data/v/a;
 
     return-object p0
 .end method
@@ -170,7 +170,7 @@
     .line 17
     :pswitch_0
     :try_start_0
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/MarketAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/MarketAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/MarketAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/MarketAttachment;
 
     move-result-object v5
 
@@ -178,9 +178,9 @@
 
     .line 18
     :pswitch_1
-    sget-object v4, Lcom/vkontakte/android/attachments/EventAttachment;->G:Lcom/vkontakte/android/attachments/EventAttachment$b;
+    sget-object v4, Lcom/vtosters/lite/attachments/EventAttachment;->G:Lcom/vtosters/lite/attachments/EventAttachment$b;
 
-    invoke-virtual {v4, v3}, Lcom/vkontakte/android/attachments/EventAttachment$b;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/EventAttachment;
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/attachments/EventAttachment$b;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/EventAttachment;
 
     move-result-object v5
 
@@ -188,7 +188,7 @@
 
     .line 19
     :pswitch_2
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/PollAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PollAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/PollAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PollAttachment;
 
     move-result-object v5
 
@@ -196,7 +196,7 @@
 
     .line 20
     :pswitch_3
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     move-result-object v5
 
@@ -204,7 +204,7 @@
 
     .line 21
     :pswitch_4
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/DocumentAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/DocumentAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/DocumentAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     move-result-object v5
 
@@ -212,7 +212,7 @@
 
     .line 22
     :pswitch_5
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/PendingVideoAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     move-result-object v5
 
@@ -220,7 +220,7 @@
 
     .line 23
     :pswitch_6
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/VideoAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/VideoAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v5
 
@@ -228,7 +228,7 @@
 
     .line 24
     :pswitch_7
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/AudioAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/AudioAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/AudioAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/AudioAttachment;
 
     move-result-object v5
 
@@ -236,7 +236,7 @@
 
     .line 25
     :pswitch_8
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     move-result-object v5
 
@@ -244,7 +244,7 @@
 
     .line 26
     :pswitch_9
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/PhotoAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/PhotoAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v5
 
@@ -252,7 +252,7 @@
 
     .line 27
     :pswitch_a
-    invoke-static {v3}, Lcom/vkontakte/android/attachments/GeoAttachment;->b(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-static {v3}, Lcom/vtosters/lite/attachments/GeoAttachment;->b(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v5
     :try_end_0
@@ -426,7 +426,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/c;->d()Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/c;->d()Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v1
 
@@ -434,7 +434,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/GeoAttachment;->P0()Lorg/json/JSONObject;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/GeoAttachment;->P0()Lorg/json/JSONObject;
 
     move-result-object v1
 

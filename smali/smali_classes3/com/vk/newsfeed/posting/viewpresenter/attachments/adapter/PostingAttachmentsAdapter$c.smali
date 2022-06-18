@@ -76,7 +76,7 @@
     if-eqz p2, :cond_0
 
     .line 3
-    invoke-static {p1, p2}, Lcom/vkontakte/android/attachments/a;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {p1, p2}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/dto/common/Attachment;)Z
 
     move-result p1
 

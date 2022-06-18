@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private a:Lcom/vkontakte/android/audio/player/c0/a;
+.field private a:Lcom/vtosters/lite/audio/player/c0/a;
 
 
 # direct methods
@@ -50,9 +50,9 @@
     sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     .line 4
-    new-instance v0, Lcom/vkontakte/android/audio/player/u;
+    new-instance v0, Lcom/vtosters/lite/audio/player/u;
 
-    sget-object v4, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+    sget-object v4, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
     const/4 v3, 0x0
 
@@ -60,19 +60,19 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vkontakte/android/audio/player/u;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/u$h;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/a;Lcom/vk/music/stats/d;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/u;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/u$h;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/a;Lcom/vk/music/stats/d;Z)V
 
     .line 5
-    new-instance v1, Lcom/vkontakte/android/audio/player/PlayerAdapter;
+    new-instance v1, Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/audio/player/PlayerAdapter;-><init>(Lcom/vkontakte/android/audio/player/u;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;-><init>(Lcom/vtosters/lite/audio/player/u;)V
 
     .line 6
-    iget-object v2, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vkontakte/android/audio/player/c0/a;
+    iget-object v2, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/a;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/audio/player/c0/a;->b()Lcom/vk/audioipc/player/f;
+    invoke-virtual {v2}, Lcom/vtosters/lite/audio/player/c0/a;->b()Lcom/vk/audioipc/player/f;
 
     move-result-object v2
 
@@ -88,10 +88,10 @@
 
     invoke-direct {v2, v1, v3}, Lcom/vk/audioipc/communication/c;-><init>(Lcom/vk/audioipc/core/d;Lkotlin/jvm/b/a;)V
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/audio/player/u;->a(Lcom/vk/music/h/a$d;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/h/a$d;)V
 
     .line 8
-    invoke-virtual {v0}, Lcom/vkontakte/android/audio/player/u;->h()Landroid/support/v4/media/session/MediaSessionCompat;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->h()Landroid/support/v4/media/session/MediaSessionCompat;
 
     move-result-object v0
 
@@ -136,9 +136,9 @@
     sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
     .line 4
-    new-instance v8, Lcom/vkontakte/android/audio/player/u;
+    new-instance v8, Lcom/vtosters/lite/audio/player/u;
 
-    sget-object v4, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+    sget-object v4, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
     const/4 v3, 0x0
 
@@ -148,7 +148,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vkontakte/android/audio/player/u;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/u$h;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/a;Lcom/vk/music/stats/d;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/u;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/u$h;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/a;Lcom/vk/music/stats/d;Z)V
 
     const-string v1, "connectivity"
 
@@ -171,39 +171,39 @@
     invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    new-instance v3, Lcom/vkontakte/android/audio/player/c0/a;
+    new-instance v3, Lcom/vtosters/lite/audio/player/c0/a;
 
     const-string v4, "context"
 
     invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v3, v0, v8}, Lcom/vkontakte/android/audio/player/c0/a;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/u;)V
+    invoke-direct {v3, v0, v8}, Lcom/vtosters/lite/audio/player/c0/a;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/u;)V
 
-    iput-object v3, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vkontakte/android/audio/player/c0/a;
+    iput-object v3, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/a;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vkontakte/android/audio/player/c0/a;
+    iget-object v0, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/a;
 
     const/4 v3, 0x0
 
     if-eqz v0, :cond_1
 
     .line 9
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/audio/player/c0/a;->a(Landroid/net/ConnectivityManager;)Lcom/vkontakte/android/audio/player/c0/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/a;->a(Landroid/net/ConnectivityManager;)Lcom/vtosters/lite/audio/player/c0/a;
 
     .line 10
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/audio/player/c0/a;->a(Ljava/lang/String;)Lcom/vkontakte/android/audio/player/c0/a;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/audio/player/c0/a;->a(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/c0/a;
 
     const/4 v1, 0x1
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/audio/player/c0/a;->a(Z)Lcom/vkontakte/android/audio/player/c0/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/a;->a(Z)Lcom/vtosters/lite/audio/player/c0/a;
 
     .line 12
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/audio/player/c0/a;->b(Z)Lcom/vkontakte/android/audio/player/c0/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/a;->b(Z)Lcom/vtosters/lite/audio/player/c0/a;
 
     .line 13
-    invoke-virtual {v0}, Lcom/vkontakte/android/audio/player/c0/a;->a()Lcom/vk/audioipc/core/d;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/c0/a;->a()Lcom/vk/audioipc/core/d;
 
     move-result-object v0
 
@@ -214,10 +214,10 @@
 
     invoke-direct {v1, v0, v2}, Lcom/vk/audioipc/communication/c;-><init>(Lcom/vk/audioipc/core/d;Lkotlin/jvm/b/a;)V
 
-    invoke-virtual {v8, v1}, Lcom/vkontakte/android/audio/player/u;->a(Lcom/vk/music/h/a$d;)V
+    invoke-virtual {v8, v1}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/h/a$d;)V
 
     .line 15
-    invoke-virtual {v8}, Lcom/vkontakte/android/audio/player/u;->h()Landroid/support/v4/media/session/MediaSessionCompat;
+    invoke-virtual {v8}, Lcom/vtosters/lite/audio/player/u;->h()Landroid/support/v4/media/session/MediaSessionCompat;
 
     move-result-object v1
 

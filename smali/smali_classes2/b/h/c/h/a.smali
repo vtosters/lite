@@ -120,7 +120,7 @@
     new-array p1, v2, [Ljava/lang/String;
 
     .line 12
-    invoke-static {p1}, Lcom/vkontakte/android/utils/l;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/utils/l;->b([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -147,7 +147,7 @@
     invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 15
-    invoke-static {}, Lcom/vkontakte/android/utils/l;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/l;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
     invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 16
-    invoke-static {}, Lcom/vkontakte/android/utils/l;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/l;->a()Ljava/lang/String;
 
     move-result-object p1
 

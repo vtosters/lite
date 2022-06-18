@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/a<",
         "Ljava/util/ArrayList<",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         ">;>;"
     }
 .end annotation
@@ -73,7 +73,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;"
         }
     .end annotation

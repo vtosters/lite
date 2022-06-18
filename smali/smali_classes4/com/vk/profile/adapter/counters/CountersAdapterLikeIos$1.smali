@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+    value = Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -60,7 +60,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$1;->this$0:Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->j()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->j()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v0
 

@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         ">;"
     }
 .end annotation
@@ -18,7 +18,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -28,7 +28,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -38,7 +38,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -48,7 +48,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -58,7 +58,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -68,7 +68,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -78,7 +78,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -88,7 +88,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -98,7 +98,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -118,7 +118,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -128,7 +128,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -138,7 +138,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -171,7 +171,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -181,7 +181,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -191,7 +191,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -201,7 +201,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -211,7 +211,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -221,7 +221,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -231,7 +231,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -241,7 +241,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -251,7 +251,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -261,7 +261,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -271,7 +271,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -281,7 +281,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -618,16 +618,16 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
+.method public static final synthetic a(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;ZILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;ZILjava/lang/Object;)V
     .locals 0
 
     if-nez p5, :cond_1
@@ -640,7 +640,7 @@
 
     .line 42
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
 
     return-void
 
@@ -655,11 +655,11 @@
     throw p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
+.method private final a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Z)V
     .locals 2
 
     .line 44
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     const-string v1, "friends_members"
 
@@ -669,7 +669,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -680,7 +680,7 @@
 
     .line 45
     :goto_0
-    iget-boolean v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->x:Z
+    iget-boolean v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->x:Z
 
     if-nez v1, :cond_1
 
@@ -725,7 +725,7 @@
     :goto_1
     new-instance p2, Lcom/vk/profile/e/b;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -753,7 +753,7 @@
         value = {
             "(Z)[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -871,15 +871,15 @@
     return-object p0
 .end method
 
-.method private final b(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+.method private final b(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -1106,7 +1106,7 @@
     invoke-direct {v1, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
 
     .line 25
-    iget v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     const/16 v3, 0x2b
 
@@ -1126,7 +1126,7 @@
 
     .line 26
     :cond_0
-    iget-object v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
+    iget-object v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
 
@@ -1173,7 +1173,7 @@
     invoke-direct {v1, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
 
     .line 29
-    iget v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->t1:I
+    iget v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->t1:I
 
     if-eq v2, v7, :cond_6
 
@@ -1187,7 +1187,7 @@
 
     .line 30
     :cond_4
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_5
 
@@ -1258,15 +1258,15 @@
     return-object p0
 .end method
 
-.method private final c(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+.method private final c(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -1469,7 +1469,7 @@
     invoke-direct {v1, p0, v3}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
 
     .line 23
-    iget v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     const/16 v4, 0x8
 
@@ -1483,11 +1483,11 @@
 
     .line 24
     :cond_0
-    iget v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     if-ne v3, v8, :cond_2
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
+    iget-object v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_1
 
@@ -1523,7 +1523,7 @@
     invoke-direct {v2, p0, v3}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
 
     .line 26
-    iget v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     if-ne v3, v7, :cond_3
 
@@ -1535,11 +1535,11 @@
 
     .line 27
     :cond_3
-    iget v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     if-ne v3, v8, :cond_5
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_4
 
@@ -1599,21 +1599,21 @@
     return-object p0
 .end method
 
-.method private final d(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+.method private final d(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
 
     .line 2
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v0
 
@@ -1627,7 +1627,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vtosters/lite/api/i;)Z
 
     move-result v0
 
@@ -1641,7 +1641,7 @@
 
     .line 4
     :cond_1
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -1655,7 +1655,7 @@
 
     .line 5
     :cond_2
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -1669,7 +1669,7 @@
 
     .line 6
     :cond_3
-    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->c(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->c(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
 
     move-result-object p1
 
@@ -1764,7 +1764,7 @@
         value = {
             "()[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -1806,7 +1806,7 @@
         value = {
             "()[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -1908,7 +1908,7 @@
         value = {
             "()[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -1987,7 +1987,7 @@
         value = {
             "()[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -2029,7 +2029,7 @@
         value = {
             "()[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -2076,7 +2076,7 @@
 
 
 # virtual methods
-.method protected a(Ljava/util/List;Lcom/vkontakte/android/api/i;)V
+.method protected a(Ljava/util/List;Lcom/vtosters/lite/api/i;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2085,7 +2085,7 @@
             "+",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
             ">;",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")V"
         }
     .end annotation
@@ -2286,13 +2286,13 @@
 
     if-ne v4, v5, :cond_6
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/i;->k()Lcom/vkontakte/android/api/d;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/i;->k()Lcom/vtosters/lite/api/d;
 
     move-result-object v4
 
     if-nez v4, :cond_5
 
-    iget-boolean v4, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->U:Z
+    iget-boolean v4, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->U:Z
 
     if-eqz v4, :cond_6
 
@@ -2359,22 +2359,22 @@
     .locals 0
 
     .line 4
-    check-cast p2, Lcom/vkontakte/android/api/i;
+    check-cast p2, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Ljava/util/List;Lcom/vkontakte/android/api/i;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Ljava/util/List;Lcom/vtosters/lite/api/i;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+.method public a(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -2387,7 +2387,7 @@
     if-eqz v0, :cond_5
 
     .line 6
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v0
 
@@ -2401,7 +2401,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vtosters/lite/api/i;)Z
 
     move-result v0
 
@@ -2415,13 +2415,13 @@
 
     .line 8
     :cond_1
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    iget p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v0, 0x1
 
@@ -2441,7 +2441,7 @@
 
     .line 9
     :cond_3
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -2455,7 +2455,7 @@
 
     .line 10
     :cond_4
-    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->b(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->b(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
 
     move-result-object p1
 
@@ -2463,7 +2463,7 @@
 
     .line 11
     :cond_5
-    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->d(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->d(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
 
     move-result-object p1
 
@@ -2475,9 +2475,9 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->a(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
 
     move-result-object p1
 

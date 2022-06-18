@@ -150,7 +150,7 @@
     const v1, 0x7f1200c5
 
     .line 7
-    invoke-virtual {p0, v1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -182,7 +182,7 @@
     const v0, 0x7f1200c4
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -208,7 +208,7 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     move-object v0, p1
 
@@ -224,7 +224,7 @@
     .line 3
     new-instance v0, Lcom/vk/webapp/VkUiFragment$a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/utils/b;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/utils/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -238,7 +238,7 @@
 
     invoke-direct {v0, p1, v1, v2, v1}, Lcom/vk/webapp/VkUiFragment$a;-><init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

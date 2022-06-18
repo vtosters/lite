@@ -168,21 +168,21 @@
 
     .line 7
     :cond_3
-    new-instance p1, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p2, 0x39
 
-    invoke-direct {p1, v0, p2}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p1, v0, p2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     goto :goto_1
 
     .line 8
     :cond_4
-    new-instance p1, Lcom/vkontakte/android/ui/f0/b;
+    new-instance p1, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 p2, 0x38
 
-    invoke-direct {p1, v0, p2}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p1, v0, p2}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     .line 9
     :goto_1
@@ -200,7 +200,7 @@
     .line 11
     new-instance v0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;
 
-    invoke-direct {v0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;-><init>(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-direct {v0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$2;-><init>(Lcom/vtosters/lite/ui/f0/b;)V
 
     .line 12
     invoke-virtual {p2, p3, v0}, Lcom/vk/lists/o;->b(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V

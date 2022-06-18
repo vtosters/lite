@@ -69,7 +69,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity$j;->a:Lcom/vk/stories/StoryChooseReceiversActivity;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :goto_0
     return-void

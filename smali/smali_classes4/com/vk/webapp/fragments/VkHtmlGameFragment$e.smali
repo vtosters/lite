@@ -94,7 +94,7 @@
 
     const-wide/16 v1, 0x3e8
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     goto :goto_0
 

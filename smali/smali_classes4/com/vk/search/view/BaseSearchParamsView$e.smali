@@ -3,7 +3,7 @@
 .source "BaseSearchParamsView.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/fragments/c1$c;
+.implements Lcom/vtosters/lite/fragments/c1$c;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vkontakte/android/fragments/c1$c<",
+        "Lcom/vtosters/lite/fragments/c1$c<",
         "Lcom/vk/dto/common/City;",
         ">;"
     }

@@ -883,7 +883,7 @@
 
     iget-object v0, v0, Lcom/vk/dto/music/Section;->e:Ljava/lang/String;
 
-    invoke-static {v1, v2, v3, v0}, Lcom/vkontakte/android/fragments/y2/t;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Lcom/vk/navigation/o;
+    invoke-static {v1, v2, v3, v0}, Lcom/vtosters/lite/fragments/y2/t;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Lcom/vk/navigation/o;
 
     move-result-object v0
 
@@ -1104,7 +1104,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/Section;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->f:Landroid/widget/TextView;
@@ -1113,7 +1113,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/music/sections/types/MusicSectionHolder;->h:Landroidx/recyclerview/widget/RecyclerView;

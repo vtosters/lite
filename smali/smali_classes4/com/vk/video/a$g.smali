@@ -201,9 +201,9 @@
     if-eqz v3, :cond_3
 
     .line 9
-    sget-object v6, Lcom/vkontakte/android/data/PrivacyRules;->a:Lcom/vkontakte/android/data/PrivacyRules$PredefinedSet;
+    sget-object v6, Lcom/vtosters/lite/data/PrivacyRules;->a:Lcom/vtosters/lite/data/PrivacyRules$PredefinedSet;
 
-    invoke-virtual {v6}, Lcom/vkontakte/android/data/PrivacyRules$PredefinedSet;->t1()Ljava/util/List;
+    invoke-virtual {v6}, Lcom/vtosters/lite/data/PrivacyRules$PredefinedSet;->t1()Ljava/util/List;
 
     move-result-object v6
 

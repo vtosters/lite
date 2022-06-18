@@ -196,13 +196,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/String;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s0:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s0:Ljava/lang/String;
 
     goto :goto_0
 
@@ -226,7 +226,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s0:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s0:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

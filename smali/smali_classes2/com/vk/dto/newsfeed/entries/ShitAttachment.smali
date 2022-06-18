@@ -66,9 +66,9 @@
 
 .field private final S:Lcom/vk/dto/common/Image;
 
-.field private final T:Lcom/vkontakte/android/attachments/PhotoAttachment;
+.field private final T:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-.field private final U:Lcom/vkontakte/android/attachments/VideoAttachment;
+.field private final U:Lcom/vtosters/lite/attachments/VideoAttachment;
 
 .field private final V:Ljava/lang/String;
 
@@ -122,7 +122,7 @@
     return-void
 .end method
 
-.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vkontakte/android/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;)V
+.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vtosters/lite/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -148,8 +148,8 @@
             "I",
             "Ljava/lang/String;",
             "Lcom/vk/dto/common/Image;",
-            "Lcom/vkontakte/android/attachments/PhotoAttachment;",
-            "Lcom/vkontakte/android/attachments/VideoAttachment;",
+            "Lcom/vtosters/lite/attachments/PhotoAttachment;",
+            "Lcom/vtosters/lite/attachments/VideoAttachment;",
             "Ljava/lang/String;",
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;",
@@ -259,11 +259,11 @@
 
     move-object/from16 v1, p24
 
-    iput-object v1, v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iput-object v1, v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-object/from16 v1, p25
 
-    iput-object v1, v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iput-object v1, v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-object/from16 v1, p26
 
@@ -284,7 +284,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vkontakte/android/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vtosters/lite/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
     .locals 31
 
     const/high16 v0, 0x10000000
@@ -364,7 +364,7 @@
 
     move-object/from16 v29, p28
 
-    invoke-direct/range {v1 .. v30}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vkontakte/android/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;)V
+    invoke-direct/range {v1 .. v30}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vtosters/lite/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;)V
 
     return-void
 .end method
@@ -532,11 +532,11 @@
     return v0
 .end method
 
-.method public final R1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+.method public final R1()Lcom/vtosters/lite/attachments/PhotoAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     return-object v0
 .end method
@@ -595,11 +595,11 @@
     return v0
 .end method
 
-.method public final X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+.method public final X1()Lcom/vtosters/lite/attachments/VideoAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     return-object v0
 .end method
@@ -632,7 +632,7 @@
     check-cast v2, Lcom/vk/statistic/StatisticUrl;
 
     .line 2
-    invoke-static {v2}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v2}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_0
 
@@ -683,7 +683,7 @@
     check-cast v3, Lcom/vk/statistic/StatisticUrl;
 
     .line 6
-    invoke-static {v3}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v3}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_1
 
@@ -854,12 +854,12 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 24
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 25
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
@@ -1239,7 +1239,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->T:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1247,7 +1247,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->U:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

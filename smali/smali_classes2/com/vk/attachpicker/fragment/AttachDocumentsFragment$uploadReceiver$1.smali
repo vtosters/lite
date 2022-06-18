@@ -61,14 +61,14 @@
     move-result-object p1
 
     .line 3
-    instance-of p2, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of p2, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz p2, :cond_2
 
     .line 4
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->D1()Lcom/vk/api/base/Document;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->D1()Lcom/vk/api/base/Document;
 
     move-result-object p1
 

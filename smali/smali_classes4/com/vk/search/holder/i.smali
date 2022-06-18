@@ -1,12 +1,12 @@
 .class public final Lcom/vk/search/holder/i;
-.super Lcom/vkontakte/android/ui/b0/l;
+.super Lcom/vtosters/lite/ui/b0/l;
 .source "SearchRestoreUserHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/l<",
+        "Lcom/vtosters/lite/ui/b0/l<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -41,14 +41,14 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/ui/b0/l;-><init>(Landroid/view/ViewGroup;IZZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/ui/b0/l;-><init>(Landroid/view/ViewGroup;IZZZ)V
 
     .line 2
     new-instance p1, Lcom/vk/search/holder/i$a;
 
     invoke-direct {p1, p0, p2}, Lcom/vk/search/holder/i$a;-><init>(Lcom/vk/search/holder/i;Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vkontakte/android/ui/b0/l;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
 
     return-void
 .end method
@@ -57,7 +57,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/user/UserProfile;
 
@@ -74,7 +74,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
     .locals 1
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vkontakte/android/ui/b0/l;->a(Lcom/vk/dto/user/UserProfile;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/b0/l;->a(Lcom/vk/dto/user/UserProfile;)V
 
     .line 4
     iget-object v0, p1, Lcom/vk/dto/user/UserProfile;->K:Ljava/lang/String;
@@ -95,7 +95,7 @@
     if-nez v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/l;->g:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/l;->g:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
@@ -105,7 +105,7 @@
 
     .line 6
     :cond_0
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/l;->g:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/l;->g:Landroid/widget/TextView;
 
     if-eqz p1, :cond_2
 
@@ -117,7 +117,7 @@
 
     .line 7
     :cond_1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/l;->g:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/l;->g:Landroid/widget/TextView;
 
     if-eqz p1, :cond_2
 

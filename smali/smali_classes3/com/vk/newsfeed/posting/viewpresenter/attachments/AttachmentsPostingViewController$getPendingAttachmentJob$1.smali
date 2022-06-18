@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vkontakte/android/attachments/b;)Lcom/vkontakte/android/upload/j;
+    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vtosters/lite/attachments/b;)Lcom/vtosters/lite/upload/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/attachments/b;)V
+.method constructor <init>(Lcom/vtosters/lite/attachments/b;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -85,7 +85,7 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/b;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
     .line 2
     invoke-static {v0}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;

@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$e;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$e;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

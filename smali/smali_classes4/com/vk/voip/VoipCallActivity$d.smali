@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/voip/VoipCallActivity$d;->a:Lcom/vk/voip/VoipCallActivity;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/StoryPrivacySettingsActivity$b;
-.super Lcom/vkontakte/android/fragments/v2/a;
+.super Lcom/vtosters/lite/fragments/v2/a;
 .source "StoryPrivacySettingsActivity.java"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/v2/a;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/v2/a;-><init>()V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/fragments/v2/a;->U4()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/v2/a;->U4()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -105,7 +105,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 6
-    iget-object v2, p0, Lcom/vkontakte/android/fragments/v2/a;->u0:Lcom/vk/dto/common/data/PrivacySetting;
+    iget-object v2, p0, Lcom/vtosters/lite/fragments/v2/a;->u0:Lcom/vk/dto/common/data/PrivacySetting;
 
     iget-object v2, v2, Lcom/vk/dto/common/data/PrivacySetting;->b:Ljava/lang/String;
 
@@ -131,7 +131,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/fragments/v2/a;->i5()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/v2/a;->i5()V
 
     .line 2
     invoke-static {}, Lcom/vk/stories/analytics/CameraAnalytics;->b()V
@@ -157,7 +157,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vkontakte/android/fragments/z0;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/z0;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;

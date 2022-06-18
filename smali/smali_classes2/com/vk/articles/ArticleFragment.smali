@@ -1569,9 +1569,9 @@
 
     .line 14
     :goto_2
-    new-instance v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     .line 15
     new-instance v10, Lcom/vk/fave/entities/e;
@@ -4611,9 +4611,9 @@
     .line 65
     sget-object v0, Lcom/vk/fave/FaveController;->a:Lcom/vk/fave/FaveController;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/a;)V
 
@@ -4707,7 +4707,7 @@
 
     .line 62
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_1
 
@@ -5591,18 +5591,18 @@
 
     move-result-object p2
 
-    instance-of p3, p2, Lcom/vkontakte/android/VKActivity;
+    instance-of p3, p2, Lcom/vtosters/lite/VKActivity;
 
     if-nez p3, :cond_14
 
     move-object p2, v0
 
     :cond_14
-    check-cast p2, Lcom/vkontakte/android/VKActivity;
+    check-cast p2, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p2, :cond_15
 
-    invoke-virtual {p2, v2}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {p2, v2}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     :cond_15
     return-object p1
@@ -5648,20 +5648,20 @@
 
     move-result-object v1
 
-    instance-of v2, v1, Lcom/vkontakte/android/VKActivity;
+    instance-of v2, v1, Lcom/vtosters/lite/VKActivity;
 
     if-nez v2, :cond_0
 
     move-object v1, v0
 
     :cond_0
-    check-cast v1, Lcom/vkontakte/android/VKActivity;
+    check-cast v1, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v1, :cond_1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     .line 3
     :cond_1

@@ -134,7 +134,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/newsfeed/holders/a1$b;->a:Lcom/vk/newsfeed/holders/a1;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     .line 7
     sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;

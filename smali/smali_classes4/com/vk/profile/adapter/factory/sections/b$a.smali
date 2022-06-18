@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/sections/b;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;I)Ljava/util/List;
+    value = Lcom/vk/profile/adapter/factory/sections/b;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;I)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

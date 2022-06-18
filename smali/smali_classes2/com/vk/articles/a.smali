@@ -26,7 +26,7 @@
             "Z",
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/attachments/PollAttachment;",
+            "Lcom/vtosters/lite/attachments/PollAttachment;",
             "Lkotlin/m;",
             ">;)V"
         }

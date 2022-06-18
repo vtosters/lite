@@ -52,7 +52,7 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/k0/b;
+    instance-of v0, p1, Lcom/vtosters/lite/k0/b;
 
     if-eqz v0, :cond_0
 

@@ -7,7 +7,7 @@
             <ImageView android:id="@id/writebar_play" android:background="@drawable/highlight_circle_white" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_24" android:scaleType="center" android:contentDescription="@null" />
             <ImageView android:id="@id/writebar_pause" android:background="@drawable/highlight_circle_white" android:padding="4.0dip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pause_24" android:scaleType="center" android:contentDescription="@null" />
         </FrameLayout>
-        <com.vkontakte.android.ui.widget.WaveformView android:id="@id/writebar_waveform" android:layout_width="0.0dip" android:layout_height="24.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="0.0dip" android:layout_weight="1.0" app:primaryColor="@color/white" app:progressColor="#ffcdd3da" />
+        <com.vtosters.lite.ui.widget.WaveformView android:id="@id/writebar_waveform" android:layout_width="0.0dip" android:layout_height="24.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="0.0dip" android:layout_weight="1.0" app:primaryColor="@color/white" app:progressColor="#ffcdd3da" />
         <TextView android:textSize="16.0dip" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/writebar_waveform_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="1.0dip" />
     </LinearLayout>
 </LinearLayout>

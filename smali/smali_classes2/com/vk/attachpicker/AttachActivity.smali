@@ -1,12 +1,12 @@
 .class public Lcom/vk/attachpicker/AttachActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "AttachActivity.java"
 
 # interfaces
 .implements Lcom/vk/navigation/u;
 .implements Lcom/vk/attachpicker/p$b;
 .implements Lcom/vk/attachpicker/j;
-.implements Lcom/vkontakte/android/fragments/location/LocationFragment$a;
+.implements Lcom/vtosters/lite/fragments/location/LocationFragment$a;
 .implements Lb/h/k/b;
 
 
@@ -149,7 +149,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/attachpicker/p;
@@ -510,7 +510,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/f0;->a(Landroid/view/Window;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     const v0, 0x7f0d0433
 
@@ -726,7 +726,7 @@
     .line 27
     new-instance v0, Lcom/vk/attachpicker/AttachActivity$v;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v1
 
@@ -1483,7 +1483,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/Window;I)V
+    invoke-static {v1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     .line 20
     :goto_3
@@ -1494,14 +1494,14 @@
     move-result-object v0
 
     .line 21
-    instance-of v1, v0, Lcom/vkontakte/android/fragments/location/c;
+    instance-of v1, v0, Lcom/vtosters/lite/fragments/location/c;
 
     if-eqz v1, :cond_5
 
     .line 22
-    check-cast v0, Lcom/vkontakte/android/fragments/location/c;
+    check-cast v0, Lcom/vtosters/lite/fragments/location/c;
 
-    invoke-interface {v0, p1}, Lcom/vkontakte/android/fragments/location/c;->a(F)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/location/c;->a(F)V
 
     :cond_5
     return-void
@@ -1828,7 +1828,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     const/4 v0, 0x0
 
@@ -1982,7 +1982,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vkontakte/android/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity;->r0:Ljava/util/List;
@@ -2043,7 +2043,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :goto_0
     return-void
@@ -2053,7 +2053,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
@@ -2117,7 +2117,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 5
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     const/4 p1, 0x0
 
@@ -2401,7 +2401,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {p0, v0, v2, v4, v3}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
@@ -2479,7 +2479,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     invoke-static {p0}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroidx/localbroadcastmanager/content/LocalBroadcastManager;
@@ -2535,7 +2535,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/attachpicker/AttachActivity;->F1()V

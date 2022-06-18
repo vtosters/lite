@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
         <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/body" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="200.0dip" android:layout_centerHorizontal="true">
-            <com.vkontakte.android.ui.RoundedImageView2 android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:cornerRadius="2.0dip" />
+            <com.vtosters.lite.ui.RoundedImageView2 android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:cornerRadius="2.0dip" />
             <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="#ff232426" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:maxLines="1" />
             <TextView android:textSize="14.0dip" android:textColor="#ff71757a" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:maxLines="3" />
             <View android:background="#1f000000" android:layout_width="fill_parent" android:layout_height="0.100000024px" android:layout_marginTop="16.0dip" />

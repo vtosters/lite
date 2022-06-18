@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vkontakte/android/data/Groups$JoinType;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

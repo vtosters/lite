@@ -1,5 +1,5 @@
 .class public Lcom/vk/attachpicker/PhotoEditorActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "PhotoEditorActivity.java"
 
 # interfaces
@@ -18,7 +18,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     goto :goto_0
 
@@ -56,7 +56,7 @@
     invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :goto_0
     return-void
@@ -97,7 +97,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :cond_0
     return-void
@@ -107,7 +107,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/app/Activity;)V
@@ -182,7 +182,7 @@
     if-nez p1, :cond_0
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     goto :goto_0
 
@@ -208,7 +208,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/PhotoEditorActivity;->H:Lcom/vk/core/simplescreen/ScreenContainer;
@@ -222,7 +222,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -231,7 +231,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/PhotoEditorActivity;->H:Lcom/vk/core/simplescreen/ScreenContainer;
@@ -245,7 +245,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/PhotoEditorActivity;->H:Lcom/vk/core/simplescreen/ScreenContainer;

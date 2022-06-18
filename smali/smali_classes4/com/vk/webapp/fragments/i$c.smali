@@ -79,7 +79,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/fragments/i$c$a;-><init>(Lcom/vk/webapp/fragments/i$c;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

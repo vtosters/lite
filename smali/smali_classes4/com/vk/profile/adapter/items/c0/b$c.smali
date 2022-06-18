@@ -15,13 +15,13 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Z)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
     .locals 2
 
     .line 1
     sget-object v0, Lcom/vk/profile/presenter/UserPresenter;->q0:Lcom/vk/profile/presenter/UserPresenter$a;
 
-    iget-object p2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p2, p2, Lcom/vk/dto/user/UserProfile;->b:I
 

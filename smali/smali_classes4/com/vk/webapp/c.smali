@@ -64,25 +64,25 @@
     if-eqz p2, :cond_0
 
     .line 3
-    new-instance p2, Lcom/vkontakte/android/upload/tasks/cover/CoverVideoUploadTask;
+    new-instance p2, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask;
 
     iget v0, p0, Lcom/vk/webapp/c;->a:I
 
-    invoke-direct {p2, v0, p1}, Lcom/vkontakte/android/upload/tasks/cover/CoverVideoUploadTask;-><init>(ILandroid/net/Uri;)V
+    invoke-direct {p2, v0, p1}, Lcom/vtosters/lite/upload/tasks/cover/CoverVideoUploadTask;-><init>(ILandroid/net/Uri;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    new-instance p2, Lcom/vkontakte/android/upload/tasks/cover/a;
+    new-instance p2, Lcom/vtosters/lite/upload/tasks/cover/a;
 
     iget v0, p0, Lcom/vk/webapp/c;->a:I
 
-    invoke-direct {p2, v0, p1}, Lcom/vkontakte/android/upload/tasks/cover/a;-><init>(ILandroid/net/Uri;)V
+    invoke-direct {p2, v0, p1}, Lcom/vtosters/lite/upload/tasks/cover/a;-><init>(ILandroid/net/Uri;)V
 
     .line 5
     :goto_0
-    invoke-static {p2}, Lcom/vkontakte/android/upload/Upload;->c(Lcom/vkontakte/android/upload/j;)I
+    invoke-static {p2}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     return-void
 .end method

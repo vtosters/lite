@@ -231,7 +231,7 @@
     const-string v4, "account_name"
 
     .line 132
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v5
 
@@ -1753,7 +1753,7 @@
     if-nez v25, :cond_1e
 
     .line 107
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

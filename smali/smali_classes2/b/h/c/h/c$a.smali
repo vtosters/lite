@@ -727,7 +727,7 @@
 
     const/16 v46, 0x0
 
-    invoke-direct/range {v23 .. v46}, Lcom/vk/dto/discover/DiscoverItem;-><init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v23 .. v46}, Lcom/vk/dto/discover/DiscoverItem;-><init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 39
     invoke-virtual {v6}, Lcom/vk/dto/discover/DiscoverItem;->H1()Lcom/vk/discover/DiscoverLayoutParams;
@@ -892,7 +892,7 @@
     new-array p2, v3, [Ljava/lang/String;
 
     .line 11
-    invoke-static {p2}, Lcom/vkontakte/android/utils/l;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/vtosters/lite/utils/l;->b([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -919,7 +919,7 @@
     invoke-virtual {p1, p3, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 14
-    invoke-static {}, Lcom/vkontakte/android/utils/l;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/l;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -928,7 +928,7 @@
     invoke-virtual {p1, p3, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
 
     .line 15
-    invoke-static {}, Lcom/vkontakte/android/utils/l;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/l;->a()Ljava/lang/String;
 
     move-result-object p2
 

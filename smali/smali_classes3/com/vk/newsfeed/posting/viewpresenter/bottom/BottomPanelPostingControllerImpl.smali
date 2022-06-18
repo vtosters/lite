@@ -1731,7 +1731,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;)V
+    invoke-static {v2}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;)V
 
     .line 45
     sget v2, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->V:I

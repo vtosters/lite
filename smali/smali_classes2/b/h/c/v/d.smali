@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/api/base/d<",
-        "Lcom/vkontakte/android/attachments/PollAttachment;",
+        "Lcom/vtosters/lite/attachments/PollAttachment;",
         ">;"
     }
 .end annotation
@@ -265,11 +265,11 @@
 
 
 # virtual methods
-.method public a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PollAttachment;
+.method public a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PollAttachment;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PollAttachment;
 
     const-string v1, "response"
 
@@ -277,7 +277,7 @@
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lorg/json/JSONObject;)V
 
     return-object v0
 .end method
@@ -286,7 +286,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lb/h/c/v/d;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PollAttachment;
+    invoke-virtual {p0, p1}, Lb/h/c/v/d;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PollAttachment;
 
     move-result-object p1
 

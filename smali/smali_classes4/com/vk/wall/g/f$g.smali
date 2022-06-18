@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/a;",
+        "Lcom/vtosters/lite/api/wall/a;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/a;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/wall/g/f$g;->a:Lcom/vk/wall/g/f;
 
-    iget-object v1, p1, Lcom/vkontakte/android/api/wall/a;->d:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/api/wall/a;->d:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/vk/wall/g/f;->b(Lcom/vk/wall/g/f;Ljava/lang/String;)V
 
@@ -63,7 +63,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/wall/g/f;->a(Lcom/vk/wall/g/f;Lcom/vkontakte/android/api/wall/a;)V
+    invoke-static {v0, p1}, Lcom/vk/wall/g/f;->a(Lcom/vk/wall/g/f;Lcom/vtosters/lite/api/wall/a;)V
 
     return-void
 .end method
@@ -72,9 +72,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/g/f$g;->a(Lcom/vkontakte/android/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/g/f$g;->a(Lcom/vtosters/lite/api/wall/a;)V
 
     return-void
 .end method

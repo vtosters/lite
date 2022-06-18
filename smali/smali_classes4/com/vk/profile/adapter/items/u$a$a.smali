@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/i;
+.field final synthetic a:Lcom/vtosters/lite/api/i;
 
 .field final synthetic b:Lcom/vk/profile/adapter/items/u;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/i;Lcom/vk/profile/adapter/items/u;)V
+.method constructor <init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/adapter/items/u;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/u$a$a;->a:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/u$a$a;->a:Lcom/vtosters/lite/api/i;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/u$a$a;->b:Lcom/vk/profile/adapter/items/u;
 
@@ -42,9 +42,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/u$a$a;->a:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/u$a$a;->a:Lcom/vtosters/lite/api/i;
 
-    iget v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     const/4 v1, 0x1
 

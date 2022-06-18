@@ -16,7 +16,7 @@
         "<T::",
         "Lcom/vk/core/serialize/Serializer$StreamParcelable;",
         "VH:",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "TT;>;>",
         "Lcom/vk/lists/m<",
         "TT;>;"
@@ -202,7 +202,7 @@
 
     iget-object v1, p0, Lcom/vk/attachpicker/base/a;->G:Lcom/vk/attachpicker/base/f;
 
-    invoke-interface {v0, p1, p2, v1}, Lcom/vk/attachpicker/base/g;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vkontakte/android/ui/b0/i;
+    invoke-interface {v0, p1, p2, v1}, Lcom/vk/attachpicker/base/g;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
@@ -222,13 +222,13 @@
     if-eqz p1, :cond_0
 
     .line 3
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
     invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 

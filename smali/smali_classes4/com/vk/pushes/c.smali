@@ -193,16 +193,16 @@
     .end annotation
 
     .line 43
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/NotificationUtils;->g(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p1, v0}, Lcom/vtosters/lite/NotificationUtils;->g(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 44
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -232,21 +232,21 @@
     invoke-direct {v1, v3, v2, v0}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
     .line 46
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-direct {p0, v1, p1, v0}, Lcom/vk/pushes/c;->a(Landroid/app/NotificationChannel;Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)V
+    invoke-direct {p0, v1, p1, v0}, Lcom/vk/pushes/c;->a(Landroid/app/NotificationChannel;Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)V
 
     return-object v1
 .end method
 
-.method private final a(Landroid/app/NotificationChannel;Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)V
+.method private final a(Landroid/app/NotificationChannel;Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)V
     .locals 2
     .annotation build Landroid/annotation/TargetApi;
         value = 0x1a
     .end annotation
 
     .line 51
-    invoke-static {p2, p3}, Lcom/vkontakte/android/NotificationUtils;->e(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Landroid/net/Uri;
+    invoke-static {p2, p3}, Lcom/vtosters/lite/NotificationUtils;->e(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -255,14 +255,14 @@
     invoke-virtual {p1, v0, v1}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
 
     .line 52
-    invoke-static {p2, p3}, Lcom/vkontakte/android/NotificationUtils;->h(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p2, p3}, Lcom/vtosters/lite/NotificationUtils;->h(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/app/NotificationChannel;->enableVibration(Z)V
 
     .line 53
-    invoke-static {p2, p3}, Lcom/vkontakte/android/NotificationUtils;->f(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p2, p3}, Lcom/vtosters/lite/NotificationUtils;->f(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v0
 
@@ -274,7 +274,7 @@
     invoke-virtual {p1, v0}, Landroid/app/NotificationChannel;->enableLights(Z)V
 
     .line 55
-    invoke-static {p2, p3}, Lcom/vkontakte/android/NotificationUtils;->c(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)I
+    invoke-static {p2, p3}, Lcom/vtosters/lite/NotificationUtils;->c(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)I
 
     move-result p2
 
@@ -566,9 +566,9 @@
     invoke-virtual {v0, v5, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 31
-    sget-object v5, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v5, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-static {v1, v5, v3}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;Z)V
+    invoke-static {v1, v5, v3}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;Z)V
 
     const/4 v7, 0x1
 
@@ -640,9 +640,9 @@
     invoke-virtual {v0, v3, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 36
-    sget-object v3, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v3, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-static {v1, v3, v2}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;Z)V
+    invoke-static {v1, v3, v2}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;Z)V
 
     const/4 v7, 0x1
 
@@ -695,16 +695,16 @@
     .end annotation
 
     .line 39
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/NotificationUtils;->g(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {p1, v0}, Lcom/vtosters/lite/NotificationUtils;->g(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 40
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -734,9 +734,9 @@
     invoke-direct {v1, v3, v2, v0}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
     .line 42
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-direct {p0, v1, p1, v0}, Lcom/vk/pushes/c;->a(Landroid/app/NotificationChannel;Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)V
+    invoke-direct {p0, v1, p1, v0}, Lcom/vk/pushes/c;->a(Landroid/app/NotificationChannel;Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)V
 
     return-object v1
 .end method
@@ -970,7 +970,7 @@
     invoke-virtual {v14, v10}, Landroid/app/NotificationChannel;->setGroup(Ljava/lang/String;)V
 
     .line 29
-    invoke-static {v1}, Lcom/vkontakte/android/NotificationUtils;->b(Landroid/content/Context;)Landroid/net/Uri;
+    invoke-static {v1}, Lcom/vtosters/lite/NotificationUtils;->b(Landroid/content/Context;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -979,14 +979,14 @@
     invoke-virtual {v14, v0, v6}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
 
     .line 30
-    invoke-static {v1}, Lcom/vkontakte/android/NotificationUtils;->d(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/vtosters/lite/NotificationUtils;->d(Landroid/content/Context;)Z
 
     move-result v0
 
     invoke-virtual {v14, v0}, Landroid/app/NotificationChannel;->enableVibration(Z)V
 
     .line 31
-    invoke-static {v1}, Lcom/vkontakte/android/NotificationUtils;->c(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/vtosters/lite/NotificationUtils;->c(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -998,7 +998,7 @@
     invoke-virtual {v14, v0}, Landroid/app/NotificationChannel;->enableLights(Z)V
 
     .line 33
-    invoke-static {v1}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;)I
 
     move-result v0
 

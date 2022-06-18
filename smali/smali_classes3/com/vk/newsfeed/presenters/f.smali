@@ -19,7 +19,7 @@
         "Lcom/vk/newsfeed/presenters/EntriesListPresenter;",
         "Lcom/vk/newsfeed/contracts/j;",
         "Lcom/vk/lists/t$p<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
         ">;"
     }
 .end annotation
@@ -533,9 +533,9 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v6, Lcom/vtosters/lite/ui/f0/b;
 
-    iget-object v6, v6, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v6, v6, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-virtual {v0, v6}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
@@ -764,7 +764,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     .line 36
     invoke-virtual {v1}, Ljava/util/LinkedHashSet;->iterator()Ljava/util/Iterator;
@@ -786,7 +786,7 @@
     check-cast v4, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     .line 37
-    iget-object v5, v0, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v5, v0, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -799,7 +799,7 @@
     .line 38
     invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/b;->a()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/b;->a()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object v4
 
@@ -915,10 +915,10 @@
 
     move-object v6, v5
 
-    check-cast v6, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v6, Lcom/vtosters/lite/ui/f0/b;
 
     .line 15
-    iget-object v6, v6, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v6, v6, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v7, "it.entry"
 
@@ -1147,7 +1147,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_1
 
@@ -1162,9 +1162,9 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -1218,7 +1218,7 @@
             "Lcom/vk/lists/t;",
             "Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
             ">;"
         }
     .end annotation
@@ -1259,13 +1259,13 @@
             "Lcom/vk/lists/t;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
             ">;"
         }
     .end annotation
 
     .line 46
-    new-instance p2, Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos;
+    new-instance p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/f;->v0()Ljava/lang/String;
 
@@ -1287,7 +1287,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     const/4 p1, 0x0
 
@@ -1307,7 +1307,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
             ">;Z",
             "Lcom/vk/lists/t;",
             ")V"
@@ -1346,7 +1346,7 @@
     if-eqz p1, :cond_0
 
     .line 3
-    sget-object v0, Lcom/vkontakte/android/fragments/lives/c;->r0:Ljava/lang/String;
+    sget-object v0, Lcom/vtosters/lite/fragments/lives/c;->r0:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 

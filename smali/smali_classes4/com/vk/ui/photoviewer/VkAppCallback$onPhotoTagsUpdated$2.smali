@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/attachments/PhotoAttachment;",
+        "Lcom/vtosters/lite/attachments/PhotoAttachment;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PhotoAttachment;)Z
+.method public final a(Lcom/vtosters/lite/attachments/PhotoAttachment;)Z
     .locals 3
 
     .line 1
-    iget v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->f:I
+    iget v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->f:I
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$2;->$photo:Lcom/vk/dto/photo/Photo;
 
@@ -58,7 +58,7 @@
 
     if-ne v0, v2, :cond_0
 
-    iget p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->e:I
+    iget p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->e:I
 
     iget v0, v1, Lcom/vk/dto/photo/Photo;->a:I
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$2;->a(Lcom/vkontakte/android/attachments/PhotoAttachment;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$2;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)Z
 
     move-result p1
 

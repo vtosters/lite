@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/c<",
         "Ljava/lang/Integer;",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         "Lkotlin/m;",
         ">;"
     }
@@ -57,16 +57,16 @@
     .line 1
     check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->a(Ljava/lang/Integer;Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vkontakte/android/ui/f0/b;)V
+.method public final a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
     .locals 9
 
     .line 2
@@ -107,19 +107,19 @@
 
     new-instance v8, Lcom/vk/newsfeed/h0/a;
 
-    iget-object v3, p2, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v3, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v2, "displayItem.entry"
 
     invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v4, p2, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v4, p2, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string p2, "displayItem.rootEntry"
 
     invoke-static {v4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v5
 

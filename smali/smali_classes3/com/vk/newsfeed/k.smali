@@ -257,7 +257,7 @@
     if-eqz p1, :cond_3
 
     .line 83
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -318,7 +318,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -344,7 +344,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -374,7 +374,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -444,7 +444,7 @@
     move-result v0
 
     .line 3
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -558,7 +558,7 @@
     move-result v0
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -775,7 +775,7 @@
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/NewsEntryActionsAdapter;->a(Lcom/vk/core/dialogs/actionspopup/a;)V
 
     .line 10
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -1164,7 +1164,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/data/Groups;->a(I)I
+    invoke-static {v1}, Lcom/vtosters/lite/data/Groups;->a(I)I
 
     move-result v1
 

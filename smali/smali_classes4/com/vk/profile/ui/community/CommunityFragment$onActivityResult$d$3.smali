@@ -72,11 +72,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_1
 
@@ -88,7 +88,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/api/i;->d(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/i;->d(I)V
 
     .line 3
     :cond_1

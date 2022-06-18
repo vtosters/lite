@@ -1,12 +1,12 @@
 .class public final Lcom/vk/stories/holders/n;
-.super Lcom/vkontakte/android/ui/b0/l;
+.super Lcom/vtosters/lite/ui/b0/l;
 .source "StoryUserProfileHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/l<",
+        "Lcom/vtosters/lite/ui/b0/l<",
         "Lcom/vk/dto/stories/entities/StoryUserProfile;",
         ">;"
     }
@@ -34,7 +34,7 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/ui/b0/l;-><init>(Landroid/view/ViewGroup;IZZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/ui/b0/l;-><init>(Landroid/view/ViewGroup;IZZZ)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/ui/b0/l;->a(Lcom/vk/dto/user/UserProfile;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/b0/l;->a(Lcom/vk/dto/user/UserProfile;)V
 
     if-eqz p1, :cond_0
 

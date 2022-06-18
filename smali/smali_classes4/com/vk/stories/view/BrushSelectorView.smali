@@ -80,7 +80,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    sget-object p3, Lcom/vkontakte/android/a0;->BrushSelectorView:[I
+    sget-object p3, Lcom/vtosters/lite/a0;->BrushSelectorView:[I
 
     const/4 v0, 0x0
 

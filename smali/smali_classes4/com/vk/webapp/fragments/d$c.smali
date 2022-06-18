@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/fragments/d$c;->a:Lcom/vk/webapp/fragments/d;
 
-    invoke-static {p1}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p1}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method

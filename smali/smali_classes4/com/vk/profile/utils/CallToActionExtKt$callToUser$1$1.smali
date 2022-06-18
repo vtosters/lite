@@ -67,7 +67,7 @@
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v0}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v0}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v0
 

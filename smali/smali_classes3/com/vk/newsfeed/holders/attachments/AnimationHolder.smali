@@ -26,9 +26,9 @@
 
 .field private final O:Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
-.field private final P:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+.field private final P:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
-.field private Q:Lcom/vkontakte/android/attachments/DocumentAttachment;
+.field private Q:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
 .field private R:Lcom/vk/dto/common/ImageSize;
 
@@ -93,14 +93,14 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    check-cast v1, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
-    iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iput-object v1, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     .line 5
     new-instance v1, Lcom/vk/newsfeed/holders/zhukov/k;
 
-    iget-object v2, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iget-object v2, v0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     new-instance v3, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$c;
 
@@ -419,11 +419,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v2, :cond_1
 
-    iget v2, v2, Lcom/vkontakte/android/attachments/DocumentAttachment;->C:I
+    iget v2, v2, Lcom/vtosters/lite/attachments/DocumentAttachment;->C:I
 
     int-to-long v2, v2
 
@@ -433,7 +433,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/vkontakte/android/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -520,11 +520,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/DocumentAttachment;F)V
+.method public final a(Lcom/vtosters/lite/attachments/DocumentAttachment;F)V
     .locals 6
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->a1()Lcom/vk/dto/common/Image$ConvertToImage$Type;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->a1()Lcom/vk/dto/common/Image$ConvertToImage$Type;
 
     move-result-object v0
 
@@ -533,12 +533,12 @@
     if-ne v0, v1, :cond_5
 
     .line 4
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     .line 5
     new-instance v0, Lcom/vk/dto/common/ImageSize;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     const-string v2, "docAttach"
 
@@ -546,15 +546,15 @@
 
     if-eqz v1, :cond_4
 
-    iget-object v4, v1, Lcom/vkontakte/android/attachments/DocumentAttachment;->g:Ljava/lang/String;
+    iget-object v4, v1, Lcom/vtosters/lite/attachments/DocumentAttachment;->g:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    iget v5, v1, Lcom/vkontakte/android/attachments/DocumentAttachment;->F:I
+    iget v5, v1, Lcom/vtosters/lite/attachments/DocumentAttachment;->F:I
 
     if-eqz v1, :cond_2
 
-    iget v1, v1, Lcom/vkontakte/android/attachments/DocumentAttachment;->G:I
+    iget v1, v1, Lcom/vtosters/lite/attachments/DocumentAttachment;->G:I
 
     invoke-direct {v0, v4, v5, v1}, Lcom/vk/dto/common/ImageSize;-><init>(Ljava/lang/String;II)V
 
@@ -563,7 +563,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->I:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
@@ -607,9 +607,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/newsfeed/FrescoImageView;->setRemoteImage(Lcom/vk/dto/common/ImageSize;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->P:Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;->setRatio(F)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;->setRatio(F)V
 
     .line 11
     invoke-direct {p0}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->q0()V
@@ -664,14 +664,14 @@
     move-result-object p1
 
     .line 4
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_1
 
     .line 5
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->F:I
+    iget v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->F:I
 
     if-nez v0, :cond_0
 
@@ -680,7 +680,7 @@
     goto :goto_0
 
     :cond_0
-    iget v1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->G:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->G:I
 
     int-to-float v1, v1
 
@@ -695,7 +695,7 @@
     move-result v0
 
     :goto_0
-    invoke-virtual {p0, p1, v0}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->a(Lcom/vkontakte/android/attachments/DocumentAttachment;F)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->a(Lcom/vtosters/lite/attachments/DocumentAttachment;F)V
 
     :cond_1
     return-void
@@ -777,7 +777,7 @@
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->Q:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v2, :cond_0
 

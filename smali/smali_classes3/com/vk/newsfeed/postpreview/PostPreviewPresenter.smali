@@ -51,7 +51,7 @@
     move-object/from16 v6, p0
 
     .line 17
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v7
 
@@ -471,11 +471,11 @@
     sget-object v0, Lcom/vk/newsfeed/x;->a:Lcom/vk/newsfeed/x;
 
     .line 41
-    new-instance v1, Lcom/vkontakte/android/ui/f0/a$a;
+    new-instance v1, Lcom/vtosters/lite/ui/f0/a$a;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/ui/f0/a$a;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/f0/a$a;-><init>()V
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/f0/a$a;->a()Lcom/vkontakte/android/ui/f0/a;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/f0/a$a;->a()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v2
 
@@ -488,7 +488,7 @@
     move-object v1, p1
 
     .line 42
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/x;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -642,7 +642,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/postpreview/PostPreviewPresenter;->d:Lcom/vk/newsfeed/postpreview/b;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

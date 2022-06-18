@@ -90,9 +90,9 @@
 
     if-eqz p1, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 

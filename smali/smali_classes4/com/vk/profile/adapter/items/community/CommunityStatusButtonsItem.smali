@@ -14,7 +14,7 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vkontakte/android/api/i;
+.field private final C:Lcom/vtosters/lite/api/i;
 
 .field private final D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -32,13 +32,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vtosters/lite/api/i;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -69,31 +69,31 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vkontakte/android/api/i;
+.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vkontakte/android/api/i;
+    iget-object p0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vtosters/lite/api/i;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;Lcom/vkontakte/android/api/i;)Ljava/lang/String;
+.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;Lcom/vtosters/lite/api/i;)Ljava/lang/String;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vkontakte/android/api/i;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vtosters/lite/api/i;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/i;)Ljava/lang/String;
+.method private final a(Lcom/vtosters/lite/api/i;)Ljava/lang/String;
     .locals 4
 
     .line 7
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v1, 0x1
 
@@ -128,14 +128,14 @@
     .line 8
     :cond_3
     :goto_1
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q:I
 
     const-string v3, "join"
 
     if-ne v0, v2, :cond_4
 
     .line 9
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vtosters/lite/api/i;)Z
 
     move-result p1
 
@@ -145,7 +145,7 @@
 
     .line 10
     :cond_4
-    iget p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     if-nez p1, :cond_5
 
@@ -250,14 +250,14 @@
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;",
             ">;"
         }

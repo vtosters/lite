@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->s()Lcom/vk/dto/profile/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->s()Lcom/vk/dto/profile/a;
 
     move-result-object p1
 
@@ -93,9 +93,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityMenu$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityMenu$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
 
     move-result-object p1
 

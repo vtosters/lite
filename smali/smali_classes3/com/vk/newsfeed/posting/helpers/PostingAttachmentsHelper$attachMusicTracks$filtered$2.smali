@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/music/MusicTrack;",
-        "Lcom/vkontakte/android/attachments/AudioAttachment;",
+        "Lcom/vtosters/lite/attachments/AudioAttachment;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/music/MusicTrack;)Lcom/vkontakte/android/attachments/AudioAttachment;
+.method public final a(Lcom/vk/dto/music/MusicTrack;)Lcom/vtosters/lite/attachments/AudioAttachment;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/attachments/AudioAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/AudioAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/AudioAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachMusicTracks$filtered$2;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vkontakte/android/attachments/AudioAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachMusicTracks$filtered$2;->a(Lcom/vk/dto/music/MusicTrack;)Lcom/vtosters/lite/attachments/AudioAttachment;
 
     move-result-object p1
 

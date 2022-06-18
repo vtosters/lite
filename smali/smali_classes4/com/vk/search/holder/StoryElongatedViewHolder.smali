@@ -1,12 +1,12 @@
 .class public final Lcom/vk/search/holder/StoryElongatedViewHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoryElongatedViewHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;"
     }
@@ -76,7 +76,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/stories/view/a2/f;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
-    invoke-direct {p0, v6}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v6}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/search/holder/StoryElongatedViewHolder;->d:Lcom/vk/search/b/c;
 
@@ -129,7 +129,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/stories/model/StoriesContainer;
 

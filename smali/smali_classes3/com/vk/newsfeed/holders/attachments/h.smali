@@ -6,7 +6,7 @@
 # instance fields
 .field private final H:Landroid/widget/FrameLayout;
 
-.field private final I:Lcom/vkontakte/android/o;
+.field private final I:Lcom/vtosters/lite/o;
 
 
 # direct methods
@@ -48,15 +48,15 @@
     iput-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->H:Landroid/widget/FrameLayout;
 
     .line 3
-    new-instance v0, Lcom/vkontakte/android/o;
+    new-instance v0, Lcom/vtosters/lite/o;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/o;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/o;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iput-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
     .line 4
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
@@ -73,7 +73,7 @@
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
     .line 7
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/h;->H:Landroid/widget/FrameLayout;
 
-    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
     invoke-virtual {v1, v2, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -106,24 +106,24 @@
     .locals 2
 
     .line 8
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/o;->setPostingMode(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/o;->setPostingMode(Z)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/o;->setRemoveButtonVisible(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/o;->setRemoveButtonVisible(Z)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/o;->setRemoveClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/o;->setRemoveClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
     const/4 v0, 0x0
 
@@ -141,41 +141,41 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/AudioAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/o;->setData(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/o;->setData(Lcom/vk/dto/music/MusicTrack;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vkontakte/android/o;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/h;->I:Lcom/vtosters/lite/o;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/AudioAttachment;->f:Ljava/util/ArrayList;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/AudioAttachment;->f:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lcom/vkontakte/android/o;->c:Ljava/util/ArrayList;
+    iput-object v1, v0, Lcom/vtosters/lite/o;->c:Ljava/util/ArrayList;
 
     .line 6
-    iget v1, p1, Lcom/vkontakte/android/attachments/AudioAttachment;->g:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/AudioAttachment;->g:I
 
-    iput v1, v0, Lcom/vkontakte/android/o;->d:I
+    iput v1, v0, Lcom/vtosters/lite/o;->d:I
 
     .line 7
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioAttachment;->F()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioAttachment;->F()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioAttachment;->x1()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioAttachment;->x1()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/o;->a(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/o;->a(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     :cond_0
     return-void

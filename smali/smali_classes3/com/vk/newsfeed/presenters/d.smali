@@ -13,7 +13,7 @@
         "Lcom/vk/newsfeed/presenters/EntriesListPresenter;",
         "Lcom/vk/newsfeed/contracts/g;",
         "Lcom/vk/lists/t$p<",
-        "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+        "Lcom/vtosters/lite/api/wall/WallGet$Result;",
         ">;"
     }
 .end annotation
@@ -147,7 +147,7 @@
             "Lcom/vk/lists/t;",
             "Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
@@ -195,7 +195,7 @@
             "Lcom/vk/lists/t;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
@@ -218,13 +218,13 @@
 
     .line 12
     :cond_0
-    new-instance v6, Lcom/vkontakte/android/api/wall/WallGet;
+    new-instance v6, Lcom/vtosters/lite/api/wall/WallGet;
 
     invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
 
     move-result v3
 
-    sget-object v4, Lcom/vkontakte/android/api/wall/WallGet$Mode;->OWNER:Lcom/vkontakte/android/api/wall/WallGet$Mode;
+    sget-object v4, Lcom/vtosters/lite/api/wall/WallGet$Mode;->OWNER:Lcom/vtosters/lite/api/wall/WallGet$Mode;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/d;->v0()Ljava/lang/String;
 
@@ -234,7 +234,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/api/wall/WallGet;-><init>(ILjava/lang/String;ILcom/vkontakte/android/api/wall/WallGet$Mode;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/wall/WallGet;-><init>(ILjava/lang/String;ILcom/vtosters/lite/api/wall/WallGet$Mode;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -254,7 +254,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;Z",
             "Lcom/vk/lists/t;",
             ")V"

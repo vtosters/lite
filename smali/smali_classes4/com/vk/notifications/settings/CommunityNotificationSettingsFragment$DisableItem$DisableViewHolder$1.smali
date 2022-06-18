@@ -88,7 +88,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -75,7 +75,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/ui/c$a0;->f:Lcom/vk/profile/ui/c;
 
-    iget-object v1, v1, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, v1, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     if-eqz v1, :cond_0
 

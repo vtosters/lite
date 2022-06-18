@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/execute/DocsGetTypes$c;",
+        "Lcom/vtosters/lite/api/execute/DocsGetTypes$c;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/execute/DocsGetTypes$c;)V
+.method public final a(Lcom/vtosters/lite/api/execute/DocsGetTypes$c;)V
     .locals 13
 
     .line 1
     iget-object v0, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$e;->a:Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v1
 
@@ -60,7 +60,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v2
 
@@ -77,7 +77,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vkontakte/android/api/execute/DocsGetTypes$c;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vtosters/lite/api/execute/DocsGetTypes$c;)Ljava/util/List;
 
     move-result-object p1
 
@@ -129,9 +129,9 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    check-cast v4, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v4}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v4}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v5
 
@@ -174,9 +174,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    check-cast v5, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->a()I
+    invoke-virtual {v5}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->a()I
 
     move-result v5
 
@@ -193,9 +193,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    check-cast v3, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-static {v4, v3}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-static {v4, v3}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object v3
 
@@ -237,9 +237,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;
+    check-cast p1, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$e;->a(Lcom/vkontakte/android/api/execute/DocsGetTypes$c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$e;->a(Lcom/vtosters/lite/api/execute/DocsGetTypes$c;)V
 
     return-void
 .end method

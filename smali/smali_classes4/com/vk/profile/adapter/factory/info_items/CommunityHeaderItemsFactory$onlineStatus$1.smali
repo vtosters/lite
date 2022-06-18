@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/community/e;",
         ">;"
     }
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/e;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/e;
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->v()Lcom/vk/dto/profile/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->v()Lcom/vk/dto/profile/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->v()Lcom/vk/dto/profile/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->v()Lcom/vk/dto/profile/b;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$onlineStatus$1;->$presenter:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/community/e;-><init>(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/community/e;-><init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
 
     return-object v0
 
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$onlineStatus$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/e;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$onlineStatus$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/e;
 
     move-result-object p1
 

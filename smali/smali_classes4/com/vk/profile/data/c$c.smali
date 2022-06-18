@@ -57,7 +57,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/data/c$c;->a:Lcom/vk/profile/data/c;
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/c;->a()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/data/c;->a()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
     if-eqz p1, :cond_4
 
     .line 3
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_4
 

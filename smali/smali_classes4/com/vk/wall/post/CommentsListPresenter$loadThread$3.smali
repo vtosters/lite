@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vkontakte/android/q;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vtosters/lite/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/a;",
+        "Lcom/vtosters/lite/api/wall/a;",
         ">;"
     }
 .end annotation
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/wall/post/CommentsListPresenter;
 
-.field final synthetic b:Lcom/vkontakte/android/NewsComment;
+.field final synthetic b:Lcom/vtosters/lite/NewsComment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vkontakte/android/NewsComment;)V
+.method constructor <init>(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/NewsComment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    iput-object p2, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vkontakte/android/NewsComment;
+    iput-object p2, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vtosters/lite/NewsComment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/a;)V
     .locals 3
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     if-eqz v0, :cond_1
 
@@ -65,7 +65,7 @@
     if-nez v0, :cond_1
 
     .line 2
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     const-string v1, "result.comments"
 
@@ -78,11 +78,11 @@
     invoke-static {v0, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v0, v0, Lcom/vkontakte/android/NewsComment;->S:Ljava/util/List;
+    iget-object v0, v0, Lcom/vtosters/lite/NewsComment;->S:Ljava/util/List;
 
-    iget-object v2, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v2, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -95,13 +95,13 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v2, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2, p1}, Lcom/vk/wall/c;->a(Lcom/vkontakte/android/NewsComment;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v2, p1}, Lcom/vk/wall/c;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
@@ -113,9 +113,9 @@
     .line 6
     iget-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vtosters/lite/NewsComment;
 
-    invoke-static {p1, v0}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vkontakte/android/NewsComment;)I
+    invoke-static {p1, v0}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/NewsComment;)I
 
     move-result p1
 
@@ -143,11 +143,11 @@
     invoke-virtual {v0, v1}, Lcom/vk/wall/b;->a(Ljava/lang/Object;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget v1, v0, Lcom/vkontakte/android/NewsComment;->R:I
+    iget v1, v0, Lcom/vtosters/lite/NewsComment;->R:I
 
-    iget-object v0, v0, Lcom/vkontakte/android/NewsComment;->S:Ljava/util/List;
+    iget-object v0, v0, Lcom/vtosters/lite/NewsComment;->S:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -182,9 +182,9 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->b:Lcom/vtosters/lite/NewsComment;
 
-    invoke-static {p1, v0}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vkontakte/android/NewsComment;)I
+    invoke-static {p1, v0}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/NewsComment;)I
 
     move-result p1
 
@@ -208,9 +208,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->a(Lcom/vkontakte/android/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$loadThread$3;->a(Lcom/vtosters/lite/api/wall/a;)V
 
     return-void
 .end method

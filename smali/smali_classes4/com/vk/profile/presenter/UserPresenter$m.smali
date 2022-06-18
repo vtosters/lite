@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/UserPresenter;->e(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    value = Lcom/vk/profile/presenter/UserPresenter;->e(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -89,7 +89,7 @@
 
     check-cast p2, Lcom/vk/stories/a1/b;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 

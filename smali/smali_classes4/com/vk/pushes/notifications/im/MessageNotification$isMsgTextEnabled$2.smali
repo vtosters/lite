@@ -72,11 +72,11 @@
 
     iget-object v1, p0, Lcom/vk/pushes/notifications/im/MessageNotification$isMsgTextEnabled$2;->this$0:Lcom/vk/pushes/notifications/im/MessageNotification;
 
-    invoke-virtual {v1}, Lcom/vk/pushes/notifications/im/MessageNotification;->s()Lcom/vkontakte/android/NotificationUtils$Type;
+    invoke-virtual {v1}, Lcom/vk/pushes/notifications/im/MessageNotification;->s()Lcom/vtosters/lite/NotificationUtils$Type;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/NotificationUtils;->i(Landroid/content/Context;Lcom/vkontakte/android/NotificationUtils$Type;)Z
+    invoke-static {v0, v1}, Lcom/vtosters/lite/NotificationUtils;->i(Landroid/content/Context;Lcom/vtosters/lite/NotificationUtils$Type;)Z
 
     move-result v0
 

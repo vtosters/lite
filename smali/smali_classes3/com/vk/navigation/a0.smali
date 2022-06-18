@@ -39,7 +39,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -56,13 +56,13 @@
         value = {
             "()",
             "Ljava/lang/Class<",
-            "Lcom/vkontakte/android/MainActivity;",
+            "Lcom/vtosters/lite/MainActivity;",
             ">;"
         }
     .end annotation
 
     .line 1
-    const-class v0, Lcom/vkontakte/android/MainActivity;
+    const-class v0, Lcom/vtosters/lite/MainActivity;
 
     return-object v0
 .end method
@@ -73,13 +73,13 @@
         value = {
             "()",
             "Ljava/lang/Class<",
-            "Lcom/vkontakte/android/FragmentWrapperActivity;",
+            "Lcom/vtosters/lite/FragmentWrapperActivity;",
             ">;"
         }
     .end annotation
 
     .line 1
-    const-class v0, Lcom/vkontakte/android/FragmentWrapperActivity;
+    const-class v0, Lcom/vtosters/lite/FragmentWrapperActivity;
 
     return-object v0
 .end method

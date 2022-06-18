@@ -168,7 +168,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

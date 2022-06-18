@@ -237,7 +237,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -273,7 +273,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

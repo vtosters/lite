@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;I)Ljava/util/List;
+    value = Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;I)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;->a:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,9 +63,9 @@
     .line 3
     new-instance p1, Lcom/vk/profile/e/b;
 
-    iget-object p3, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;->a:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p3, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object p3, p3, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p3, p3, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p3, p3, Lcom/vk/dto/user/UserProfile;->b:I
 

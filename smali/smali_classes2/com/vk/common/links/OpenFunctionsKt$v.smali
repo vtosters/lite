@@ -3,7 +3,7 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/data/Friends$f;
+.implements Lcom/vtosters/lite/data/Friends$f;
 
 
 # annotations
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$v$a;-><init>(Lcom/vk/common/links/OpenFunctionsKt$v;Ljava/util/ArrayList;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

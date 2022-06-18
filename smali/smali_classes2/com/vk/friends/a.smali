@@ -244,7 +244,7 @@
     .locals 1
 
     .line 1
-    new-instance p2, Lcom/vkontakte/android/ui/b0/f;
+    new-instance p2, Lcom/vtosters/lite/ui/b0/f;
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -252,13 +252,13 @@
 
     move-result-object v0
 
-    invoke-direct {p2, p1, v0}, Lcom/vkontakte/android/ui/b0/f;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/f;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/vk/friends/a;->G:Lcom/vk/common/g/g;
 
     iget-object v0, p0, Lcom/vk/friends/a;->H:Lcom/vk/common/g/j;
 
-    invoke-virtual {p2, p1, v0}, Lcom/vkontakte/android/ui/b0/f;->a(Lcom/vk/common/g/g;Lcom/vk/common/g/j;)Lcom/vkontakte/android/ui/b0/f;
+    invoke-virtual {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/f;->a(Lcom/vk/common/g/g;Lcom/vk/common/g/j;)Lcom/vtosters/lite/ui/b0/f;
 
     const-string p1, "FriendRequestHolder(pare\u2026Listener, acceptListener)"
 
@@ -271,18 +271,18 @@
     .locals 1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/ui/b0/f;
+    instance-of v0, p1, Lcom/vtosters/lite/ui/b0/f;
 
     if-eqz v0, :cond_0
 
     .line 3
-    check-cast p1, Lcom/vkontakte/android/ui/b0/f;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/f;
 
     invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void

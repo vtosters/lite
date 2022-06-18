@@ -64,7 +64,7 @@
     .line 1
     sget-object p2, Lkotlin/m;->a:Lkotlin/m;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

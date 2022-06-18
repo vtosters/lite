@@ -169,7 +169,7 @@
 
     .line 29
     :goto_0
-    const-class v0, Lcom/vkontakte/android/live/LivePlayerActivity;
+    const-class v0, Lcom/vtosters/lite/live/LivePlayerActivity;
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 

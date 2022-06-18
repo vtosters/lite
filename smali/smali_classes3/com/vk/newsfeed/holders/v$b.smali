@@ -58,7 +58,7 @@
 
     iget-object p1, p0, Lcom/vk/newsfeed/holders/v$b;->a:Lcom/vk/newsfeed/holders/v;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/data/c$a;->a:Lcom/vk/profile/data/c;
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/c;->a()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/profile/data/c;->a()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/stories/model/GetStoriesResponse;->b:Ljava/util/ArrayList;
 
-    iput-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iput-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     .line 2
     :cond_0

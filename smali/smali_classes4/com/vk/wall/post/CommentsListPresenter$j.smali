@@ -61,7 +61,7 @@
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation

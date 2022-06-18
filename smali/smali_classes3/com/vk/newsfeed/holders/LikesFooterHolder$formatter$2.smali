@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/a<",
-        "Lcom/vkontakte/android/ui/y/b;",
+        "Lcom/vtosters/lite/ui/y/b;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vkontakte/android/ui/y/b;
+.method public final invoke()Lcom/vtosters/lite/ui/y/b;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/ui/y/b;
+    new-instance v0, Lcom/vtosters/lite/ui/y/b;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/ui/y/b;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/y/b;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/LikesFooterHolder$formatter$2;->invoke()Lcom/vkontakte/android/ui/y/b;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/LikesFooterHolder$formatter$2;->invoke()Lcom/vtosters/lite/ui/y/b;
 
     move-result-object v0
 

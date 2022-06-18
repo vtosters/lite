@@ -180,7 +180,7 @@
     invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/AlbumAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/AlbumAttachment;
 
     if-eqz v0, :cond_0
 
@@ -189,9 +189,9 @@
 
     move-object v1, p1
 
-    check-cast v1, Lcom/vkontakte/android/attachments/AlbumAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/AlbumAttachment;
 
-    iget-object v2, v1, Lcom/vkontakte/android/attachments/PhotoAttachment;->E:Ljava/lang/String;
+    iget-object v2, v1, Lcom/vtosters/lite/attachments/PhotoAttachment;->E:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -210,7 +210,7 @@
 
     const v3, 0x7f100093
 
-    iget v4, v1, Lcom/vkontakte/android/attachments/AlbumAttachment;->L:I
+    iget v4, v1, Lcom/vtosters/lite/attachments/AlbumAttachment;->L:I
 
     const/4 v5, 0x1
 
@@ -237,7 +237,7 @@
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    iget v1, v1, Lcom/vkontakte/android/attachments/AlbumAttachment;->L:I
+    iget v1, v1, Lcom/vtosters/lite/attachments/AlbumAttachment;->L:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

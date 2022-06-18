@@ -102,7 +102,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController$createView$$inlined$apply$lambda$1;->this$0:Lcom/vk/promo/music/MusicPromoSlide2ViewController;
 
-    invoke-static {v1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vkontakte/android/fragments/money/r/a;
+    invoke-static {v1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vtosters/lite/fragments/money/r/a;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, p1, v2}, Lcom/vkontakte/android/fragments/money/r/a;->a(Landroid/app/Activity;Lcom/vk/dto/common/data/e;Lcom/vkontakte/android/data/PurchasesManager$o;)V
+    invoke-virtual {v1, v0, p1, v2}, Lcom/vtosters/lite/fragments/money/r/a;->a(Landroid/app/Activity;Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 
     :cond_2
     return-void

@@ -33,21 +33,21 @@
     return-void
 .end method
 
-.method private final a(Landroid/os/Bundle;)Lcom/vkontakte/android/u;
+.method private final a(Landroid/os/Bundle;)Lcom/vtosters/lite/u;
     .locals 2
 
     .line 6
-    new-instance v0, Lcom/vkontakte/android/u;
+    new-instance v0, Lcom/vtosters/lite/u;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/u;-><init>()V
 
     const/16 v1, 0x30b
 
     .line 7
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/u;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/u;->a(Landroid/os/Bundle;)V
 
     return-object v0
 .end method
@@ -58,7 +58,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/common/links/i$a;->a(Landroid/os/Bundle;)Lcom/vkontakte/android/u;
+    invoke-direct {p0, p2}, Lcom/vk/common/links/i$a;->a(Landroid/os/Bundle;)Lcom/vtosters/lite/u;
 
     move-result-object p2
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {p1, p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object p2
 

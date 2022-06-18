@@ -108,7 +108,7 @@
     :cond_0
     sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 

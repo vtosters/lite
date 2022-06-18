@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vkontakte.android.ui.widget.RatioFrameLayout android:id="@id/video_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" app:orientation="horizontal" app:ratio="0.5625">
+    <com.vtosters.lite.ui.widget.RatioFrameLayout android:id="@id/video_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" app:orientation="horizontal" app:ratio="0.5625">
         <com.vk.media.player.video.view.VideoTextureView android:layout_gravity="center" android:id="@id/video_display" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <FrameLayout android:id="@id/video_inline_live_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <com.vk.newsfeed.FrescoImageView android:layout_gravity="center" android:id="@id/video_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
@@ -9,7 +9,7 @@
         <ProgressBar android:layout_gravity="bottom" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.5dip" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/progress_video_feed" />
         <View android:layout_gravity="center" android:id="@id/overlay" android:background="#99000000" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/play" android:visibility="invisible" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_attachment_video_play" android:contentDescription="@null" />
-        <com.vkontakte.android.ui.CircularProgressView android:layout_gravity="center" android:id="@id/progress_view" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" app:cpv_animAutostart="true" app:cpv_animSwoopDuration="0" app:cpv_color="@color/white" app:cpv_indeterminate="true" app:cpv_thickness="2.5dip" />
+        <com.vtosters.lite.ui.CircularProgressView android:layout_gravity="center" android:id="@id/progress_view" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" app:cpv_animAutostart="true" app:cpv_animSwoopDuration="0" app:cpv_color="@color/white" app:cpv_indeterminate="true" app:cpv_thickness="2.5dip" />
         <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/post_side_padding" android:layout_marginEnd="@dimen/post_side_padding">
             <com.vk.libvideo.ui.PlayButton android:id="@id/replay" android:background="@drawable/video_snippet_button" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/ic_replay_24" android:scaleType="center" />
             <FrameLayout android:id="@id/action_button" android:background="@drawable/video_snippet_button" android:layout_width="wrap_content" android:layout_height="52.0dip" android:paddingStart="12.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="64.0dip">
@@ -24,5 +24,5 @@
         <com.vk.libvideo.ui.VideoErrorView android:layout_gravity="center" android:id="@id/error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         <com.vk.libvideo.ad.VideoAdLayout android:id="@id/video_instream_ad_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <com.vk.libvideo.ui.VideoRestrictionView android:id="@id/restriction_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:vrv_size="medium" />
-    </com.vkontakte.android.ui.widget.RatioFrameLayout>
+    </com.vtosters.lite.ui.widget.RatioFrameLayout>
 </RelativeLayout>

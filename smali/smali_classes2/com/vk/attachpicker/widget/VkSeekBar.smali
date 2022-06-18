@@ -157,7 +157,7 @@
     iput-boolean v0, p0, Lcom/vk/attachpicker/widget/VkSeekBar;->H:Z
 
     .line 13
-    sget-object v2, Lcom/vkontakte/android/a0;->VkSeekBar:[I
+    sget-object v2, Lcom/vtosters/lite/a0;->VkSeekBar:[I
 
     const/4 v3, 0x0
 

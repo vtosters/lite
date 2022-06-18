@@ -400,7 +400,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -416,7 +416,7 @@
 
     neg-int p2, p2
 
-    invoke-static {p2}, Lcom/vkontakte/android/data/Groups;->d(I)Z
+    invoke-static {p2}, Lcom/vtosters/lite/data/Groups;->d(I)Z
 
     move-result p2
 
@@ -525,10 +525,10 @@
     const v0, 0x7f080376
 
     .line 3
-    invoke-static {p2, v0}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 4
-    invoke-static {p0, p2}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p2}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     const v0, 0x7f1200d1
 
@@ -831,18 +831,18 @@
     .line 4
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/photos/c;
+    const-class v1, Lcom/vtosters/lite/fragments/photos/c;
 
     invoke-direct {v0, v1, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     .line 5
-    new-instance p1, Lcom/vkontakte/android/TabletDialogActivity$b;
+    new-instance p1, Lcom/vtosters/lite/TabletDialogActivity$b;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/TabletDialogActivity$b;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
 
     const/16 v1, 0x11
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/TabletDialogActivity$b;->b(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/TabletDialogActivity$b;->b(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const-string v1, "TabletDialogActivity.Bui\u2026etGravity(Gravity.CENTER)"
 

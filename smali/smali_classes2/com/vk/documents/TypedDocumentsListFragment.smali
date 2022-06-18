@@ -3,7 +3,7 @@
 .source "TypedDocumentsListFragment.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/fragments/p2/d;
+.implements Lcom/vtosters/lite/fragments/p2/d;
 
 
 # annotations
@@ -384,9 +384,9 @@
     move-result v0
 
     .line 6
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ALL:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ALL:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -398,9 +398,9 @@
 
     .line 7
     :cond_0
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->TEXTS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->TEXTS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -412,9 +412,9 @@
 
     .line 8
     :cond_1
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ARCHIVES:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ARCHIVES:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -426,9 +426,9 @@
 
     .line 9
     :cond_2
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->GIFS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->GIFS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -440,9 +440,9 @@
 
     .line 10
     :cond_3
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->IMAGES:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->IMAGES:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -454,9 +454,9 @@
 
     .line 11
     :cond_4
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->MUSIC:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->MUSIC:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -468,9 +468,9 @@
 
     .line 12
     :cond_5
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->VIDEOS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->VIDEOS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -482,9 +482,9 @@
 
     .line 13
     :cond_6
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->EBOOKS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->EBOOKS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 
@@ -496,9 +496,9 @@
 
     .line 14
     :cond_7
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->OTHERS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->OTHERS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v1
 

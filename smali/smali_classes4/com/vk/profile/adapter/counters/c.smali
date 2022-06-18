@@ -50,12 +50,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ")",
             "Lc/a/m<",
             "TT;>;"
@@ -73,7 +73,7 @@
     iput-boolean v0, p0, Lcom/vk/profile/adapter/counters/c;->b:Z
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/c;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/c;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
 
     move-result-object p1
 
@@ -107,11 +107,11 @@
     return-void
 .end method
 
-.method protected abstract b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+.method protected abstract b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ")",
             "Lc/a/m<",
             "TT;>;"

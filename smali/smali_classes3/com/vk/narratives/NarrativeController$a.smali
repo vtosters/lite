@@ -147,9 +147,9 @@
 
     const/16 v4, 0x78
 
-    new-instance v5, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    new-instance v5, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
-    invoke-direct {v5, v2}, Lcom/vkontakte/android/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v5, v2}, Lcom/vtosters/lite/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
     invoke-virtual {v3, v4, v5}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 

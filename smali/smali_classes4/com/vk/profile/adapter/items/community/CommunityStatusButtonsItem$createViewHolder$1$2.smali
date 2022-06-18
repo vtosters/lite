@@ -73,11 +73,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vkontakte/android/api/i;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -95,11 +95,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vkontakte/android/api/i;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/utils/b;->a(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;)Z
 
     move-result v0
 

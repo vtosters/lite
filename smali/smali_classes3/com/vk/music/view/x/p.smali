@@ -1,5 +1,5 @@
 .class public Lcom/vk/music/view/x/p;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ControlsHolder.java"
 
 # interfaces
@@ -12,7 +12,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/music/dto/a;",
         ">;",
         "Landroid/view/View$OnClickListener;",
@@ -146,7 +146,7 @@
     const p8, 0x7f0d037b
 
     .line 1
-    invoke-direct {p0, p8, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p8, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     const/4 p1, 0x1
 
@@ -207,7 +207,7 @@
     const p8, 0x7f0a035a
 
     .line 12
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -219,7 +219,7 @@
     invoke-virtual {p8, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object p8
 
@@ -232,7 +232,7 @@
     iput p8, p0, Lcom/vk/music/view/x/p;->S:I
 
     .line 15
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p8
 
@@ -247,7 +247,7 @@
     const p8, 0x7f0a049c
 
     .line 16
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -276,7 +276,7 @@
     const p8, 0x7f0a049b
 
     .line 19
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -310,7 +310,7 @@
     const p8, 0x7f0a0d80
 
     .line 23
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -321,7 +321,7 @@
     const p8, 0x7f0a00ba
 
     .line 24
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -337,7 +337,7 @@
     const p8, 0x7f0a0385
 
     .line 26
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -355,7 +355,7 @@
     const p8, 0x7f0a0d76
 
     .line 28
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -371,7 +371,7 @@
     const p8, 0x7f0a057f
 
     .line 30
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -382,7 +382,7 @@
     const p8, 0x7f0a0bd4
 
     .line 31
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -408,7 +408,7 @@
     const p8, 0x7f0a043f
 
     .line 35
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -424,7 +424,7 @@
     const p8, 0x7f0a05e6
 
     .line 37
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -443,7 +443,7 @@
     const p8, 0x7f0a006d
 
     .line 40
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -466,7 +466,7 @@
     const p8, 0x7f0a0c62
 
     .line 43
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -482,7 +482,7 @@
     const p8, 0x7f0a0aa7
 
     .line 45
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -505,7 +505,7 @@
     const p8, 0x7f0a09c7
 
     .line 48
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -533,7 +533,7 @@
     const p8, 0x7f0a090c
 
     .line 52
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -556,7 +556,7 @@
     const p8, 0x7f0a083d
 
     .line 55
-    invoke-virtual {p0, p8}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p8}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p8
 
@@ -577,7 +577,7 @@
     invoke-virtual {p8, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 58
-    new-instance p8, Lcom/vkontakte/android/ui/r;
+    new-instance p8, Lcom/vtosters/lite/ui/r;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -591,10 +591,10 @@
 
     move-result v0
 
-    invoke-direct {p8, v0}, Lcom/vkontakte/android/ui/r;-><init>(I)V
+    invoke-direct {p8, v0}, Lcom/vtosters/lite/ui/r;-><init>(I)V
 
     .line 59
-    invoke-virtual {p8, p1}, Lcom/vkontakte/android/ui/r;->a(Z)V
+    invoke-virtual {p8, p1}, Lcom/vtosters/lite/ui/r;->a(Z)V
 
     const/high16 p1, 0x3f000000    # 0.5f
 
@@ -603,7 +603,7 @@
 
     move-result p1
 
-    invoke-virtual {p8, p1}, Lcom/vkontakte/android/ui/r;->b(I)V
+    invoke-virtual {p8, p1}, Lcom/vtosters/lite/ui/r;->b(I)V
 
     .line 61
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -618,7 +618,7 @@
 
     move-result p1
 
-    invoke-virtual {p8, p1}, Lcom/vkontakte/android/ui/r;->a(I)V
+    invoke-virtual {p8, p1}, Lcom/vtosters/lite/ui/r;->a(I)V
 
     .line 62
     iget-object p1, p0, Lcom/vk/music/view/x/p;->j0:Landroid/widget/FrameLayout;
@@ -1876,7 +1876,7 @@
 
     sget-object v5, Lcom/vk/music/ui/common/formatting/c;->a:Lcom/vk/music/ui/common/formatting/c;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -1972,7 +1972,7 @@
 
     const v3, 0x7f120070
 
-    invoke-virtual {p0, v3}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1990,7 +1990,7 @@
 
     const v3, 0x7f12006f
 
-    invoke-virtual {p0, v3}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2057,7 +2057,7 @@
 
     .line 61
     :cond_9
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -2072,7 +2072,7 @@
     .line 62
     :cond_a
     :goto_6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -2098,7 +2098,7 @@
 
     const v3, 0x7f120887
 
-    invoke-virtual {p0, v3}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2116,7 +2116,7 @@
 
     const v3, 0x7f12088d
 
-    invoke-virtual {p0, v3}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2220,7 +2220,7 @@
     const p1, 0x7f120888
 
     .line 82
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2230,7 +2230,7 @@
     const p1, 0x7f120889
 
     .line 83
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3073,7 +3073,7 @@
 
     .line 37
     :sswitch_7
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/music/dto/a;
 
@@ -3085,7 +3085,7 @@
 
     if-eqz p1, :cond_7
 
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/music/dto/a;
 
@@ -3113,7 +3113,7 @@
     .line 39
     new-instance p1, Lcom/vk/music/podcasts/page/PodcastFragment$a;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/music/dto/a;
 
@@ -3141,7 +3141,7 @@
     :cond_6
     new-instance p1, Lcom/vk/profile/ui/c$z;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/music/dto/a;
 
@@ -3161,7 +3161,7 @@
 
     .line 43
     :cond_7
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/music/dto/a;
 
@@ -3171,7 +3171,7 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/music/dto/a;
 
@@ -3183,7 +3183,7 @@
 
     .line 44
     :sswitch_8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -3193,7 +3193,7 @@
 
     if-eqz p1, :cond_a
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -3208,7 +3208,7 @@
     if-eqz p1, :cond_a
 
     .line 45
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -3394,7 +3394,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3409,7 +3409,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->H:Landroid/graphics/drawable/Drawable;
 
     .line 2
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3434,7 +3434,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->I:Landroid/graphics/drawable/Drawable;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3447,7 +3447,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->J:Landroid/graphics/drawable/Drawable;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3460,7 +3460,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->L:Landroid/graphics/drawable/Drawable;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3473,7 +3473,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->F:Landroid/graphics/drawable/Drawable;
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3486,7 +3486,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->G:Landroid/graphics/drawable/Drawable;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3499,7 +3499,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->K:Landroid/graphics/drawable/Drawable;
 
     .line 8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3512,7 +3512,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->M:Landroid/graphics/drawable/Drawable;
 
     .line 9
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3525,7 +3525,7 @@
     iput-object v0, p0, Lcom/vk/music/view/x/p;->N:Landroid/graphics/drawable/Drawable;
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

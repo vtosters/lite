@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 2
 
     .line 1
@@ -60,14 +60,14 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/c;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/c;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 2
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->g(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/dto/user/UserProfile;
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->g(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->b(Lcom/vk/dto/user/UserProfile;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->b(Lcom/vk/dto/user/UserProfile;)V
 
     return-void
 .end method
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/UserPresenter$i;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/UserPresenter$i;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-void
 .end method

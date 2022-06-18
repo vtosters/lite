@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

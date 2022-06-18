@@ -62,12 +62,12 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->c()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->c()I
 
     move-result v0
 
@@ -77,7 +77,7 @@
     if-ge v1, v0, :cond_0
 
     .line 3
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/ui/f0/b;->a(I)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/f0/b;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->b()Lcom/vk/dto/newsfeed/entries/Html5Entry;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->b()Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
     move-result-object p1
 

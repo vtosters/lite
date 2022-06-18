@@ -6,6 +6,6 @@
         <include android:id="@id/loading" layout="@layout/appkit_loading" />
         <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
         <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/ic_ab_write" app:layout_behavior="com.vkontakte.android.ui.widget.ScrollAwareFABBehavior" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/ic_ab_write" app:layout_behavior="com.vtosters.lite.ui.widget.ScrollAwareFABBehavior" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

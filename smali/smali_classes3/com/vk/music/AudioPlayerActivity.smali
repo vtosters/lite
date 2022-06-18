@@ -117,7 +117,7 @@
 
     move-result v0
 
-    invoke-static {v1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/Window;I)V
+    invoke-static {v1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
 
     const v0, 0x1020002
 
@@ -196,7 +196,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     const v0, 0x7f01002a
 
@@ -256,7 +256,7 @@
     move-result-object v0
 
     .line 9
-    iget-boolean v1, p0, Lcom/vkontakte/android/VKActivity;->B:Z
+    iget-boolean v1, p0, Lcom/vtosters/lite/VKActivity;->B:Z
 
     if-eqz v1, :cond_3
 

@@ -91,7 +91,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$1;->this$0:Lcom/vk/profile/ui/community/CatchUpButtonController;

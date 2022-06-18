@@ -67,7 +67,7 @@
     invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/audio/utils/e;->a()Z
+    invoke-static {}, Lcom/vtosters/lite/audio/utils/e;->a()Z
 
     move-result p1
 

@@ -30,7 +30,7 @@
 
 .field private final L:Landroid/widget/TextView;
 
-.field private final M:Lcom/vkontakte/android/ui/RatingView;
+.field private final M:Lcom/vtosters/lite/ui/RatingView;
 
 .field private final N:Landroid/widget/TextView;
 
@@ -171,9 +171,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/RatingView;
+    check-cast p1, Lcom/vtosters/lite/ui/RatingView;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->M:Lcom/vkontakte/android/ui/RatingView;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->M:Lcom/vtosters/lite/ui/RatingView;
 
     .line 8
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -278,7 +278,7 @@
     .line 16
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->J:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 18
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->M:Lcom/vkontakte/android/ui/RatingView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->M:Lcom/vtosters/lite/ui/RatingView;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -347,7 +347,7 @@
 
     sget v0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->V:I
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -366,7 +366,7 @@
     .line 25
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->H:Lcom/vk/newsfeed/FrescoImageView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -378,7 +378,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -448,21 +448,21 @@
     move-result-object p1
 
     .line 32
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz v0, :cond_0
 
     .line 33
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     const-string p1, "att.good"
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -558,7 +558,7 @@
     const v1, 0x7f120398
 
     :goto_0
-    invoke-virtual {p0, v1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -599,14 +599,14 @@
     move-result-object p1
 
     .line 4
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz v0, :cond_4
 
     .line 5
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
-    iget-object v0, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object v0, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     const-string v1, "item.good"
 
@@ -804,7 +804,7 @@
     .line 30
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/MarketHolder;->H:Lcom/vk/newsfeed/FrescoImageView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     iget-object v1, v1, Lcom/vk/dto/common/Good;->R:[Lcom/vk/dto/photo/Photo;
 
@@ -831,7 +831,7 @@
     goto :goto_2
 
     :cond_3
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     iget-object p1, p1, Lcom/vk/dto/common/Good;->I:Lcom/vk/dto/common/Image;
 
@@ -896,25 +896,25 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    invoke-static {}, Lcom/vkontakte/android/attachments/MarketAttachment;->x1()Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    invoke-static {}, Lcom/vtosters/lite/attachments/MarketAttachment;->x1()Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     move-result-object v1
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     iget v2, p1, Lcom/vk/dto/common/Good;->b:I
 
     iget p1, p1, Lcom/vk/dto/common/Good;->a:I
 
-    invoke-direct {v0, v1, v2, p1}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;II)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;II)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

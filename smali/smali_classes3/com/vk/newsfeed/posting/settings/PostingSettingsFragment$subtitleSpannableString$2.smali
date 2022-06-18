@@ -122,13 +122,13 @@
     invoke-virtual {v2, v3, v6, v4, v5}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     .line 9
-    new-instance v3, Lcom/vkontakte/android/v;
+    new-instance v3, Lcom/vtosters/lite/v;
 
     new-instance v4, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2$b;
 
     invoke-direct {v4, p0, v0, v1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2$b;-><init>(Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v3, v4}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     const v4, 0x7f040022
 

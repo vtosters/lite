@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/a<",
-        "Lcom/vkontakte/android/audio/player/h;",
+        "Lcom/vtosters/lite/audio/player/h;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vkontakte/android/audio/player/h;
+.method public final invoke()Lcom/vtosters/lite/audio/player/h;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/audio/player/h;
+    new-instance v0, Lcom/vtosters/lite/audio/player/h;
 
     iget-object v1, p0, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->this$0:Lcom/vk/music/model/DefaultPlayerModelFactory;
 
@@ -59,7 +59,7 @@
 
     iget-object v2, p0, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->this$0:Lcom/vk/music/model/DefaultPlayerModelFactory;
 
-    invoke-static {v2}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vkontakte/android/audio/player/a0;
+    invoke-static {v2}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vtosters/lite/audio/player/a0;
 
     move-result-object v2
 
@@ -69,7 +69,7 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vkontakte/android/audio/player/h;-><init>(Lcom/vk/audioipc/core/d;Lcom/vkontakte/android/audio/player/a0;Lcom/vk/audioipc/core/exception/a;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/audio/player/h;-><init>(Lcom/vk/audioipc/core/d;Lcom/vtosters/lite/audio/player/a0;Lcom/vk/audioipc/core/exception/a;)V
 
     return-object v0
 .end method
@@ -78,7 +78,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->invoke()Lcom/vkontakte/android/audio/player/h;
+    invoke-virtual {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory$audioPlayerListenerAdapter$2;->invoke()Lcom/vtosters/lite/audio/player/h;
 
     move-result-object v0
 

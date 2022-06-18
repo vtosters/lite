@@ -1,5 +1,5 @@
 .class public Lcom/vk/documents/list/a$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "DocumentsListAdapter.kt"
 
 # interfaces
@@ -19,7 +19,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/api/base/Document;",
         ">;",
         "Landroid/view/View$OnClickListener;",
@@ -37,23 +37,23 @@
 
 .field private final f:Lcom/vk/imageloader/view/VKImageView;
 
-.field private final g:Lcom/vkontakte/android/fragments/p2/c;
+.field private final g:Lcom/vtosters/lite/fragments/p2/c;
 
-.field private final h:Lcom/vkontakte/android/fragments/p2/d;
+.field private final h:Lcom/vtosters/lite/fragments/p2/d;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;)V
     .locals 2
 
     const v0, 0x7f0d0230
 
     .line 2
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p2, p0, Lcom/vk/documents/list/a$b;->g:Lcom/vkontakte/android/fragments/p2/c;
+    iput-object p2, p0, Lcom/vk/documents/list/a$b;->g:Lcom/vtosters/lite/fragments/p2/c;
 
-    iput-object p3, p0, Lcom/vk/documents/list/a$b;->h:Lcom/vkontakte/android/fragments/p2/d;
+    iput-object p3, p0, Lcom/vk/documents/list/a$b;->h:Lcom/vtosters/lite/fragments/p2/d;
 
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -134,7 +134,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;ILkotlin/jvm/internal/i;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -154,7 +154,7 @@
 
     .line 1
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;)V
 
     return-void
 .end method
@@ -199,11 +199,11 @@
 
     int-to-long v2, v2
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/vkontakte/android/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -361,11 +361,11 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/documents/list/a$b;->h:Lcom/vkontakte/android/fragments/p2/d;
+    iget-object p1, p0, Lcom/vk/documents/list/a$b;->h:Lcom/vtosters/lite/fragments/p2/d;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
@@ -377,19 +377,19 @@
 
     move-result v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vkontakte/android/fragments/p2/d;->a(Lcom/vk/api/base/Document;I)V
+    invoke-interface {p1, v0, v1}, Lcom/vtosters/lite/fragments/p2/d;->a(Lcom/vk/api/base/Document;I)V
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/documents/list/a$b;->g:Lcom/vkontakte/android/fragments/p2/c;
+    iget-object p1, p0, Lcom/vk/documents/list/a$b;->g:Lcom/vtosters/lite/fragments/p2/c;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/api/base/Document;
 
-    invoke-interface {p1, v0}, Lcom/vkontakte/android/fragments/p2/c;->a(Lcom/vk/api/base/Document;)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/p2/c;->a(Lcom/vk/api/base/Document;)V
 
     :cond_1
     return-void
@@ -399,15 +399,15 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/documents/list/a$b;->g:Lcom/vkontakte/android/fragments/p2/c;
+    iget-object p1, p0, Lcom/vk/documents/list/a$b;->g:Lcom/vtosters/lite/fragments/p2/c;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/api/base/Document;
 
-    invoke-interface {p1, v0}, Lcom/vkontakte/android/fragments/p2/c;->b(Lcom/vk/api/base/Document;)Z
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/p2/c;->b(Lcom/vk/api/base/Document;)Z
 
     move-result p1
 

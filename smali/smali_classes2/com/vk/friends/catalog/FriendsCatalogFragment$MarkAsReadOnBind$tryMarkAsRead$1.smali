@@ -71,7 +71,7 @@
     invoke-static {p1, v0, v1, v2}, Lcom/vk/notifications/NotificationsFragment$a;->a(Lcom/vk/notifications/NotificationsFragment$a;ZILjava/lang/Object;)V
 
     .line 2
-    invoke-static {v0}, Lcom/vkontakte/android/w;->g(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/w;->g(I)V
 
     return-void
 .end method

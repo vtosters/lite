@@ -291,7 +291,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ZhukovHolder$a;->d:Lcom/vk/newsfeed/holders/attachments/ZhukovHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -393,7 +393,7 @@
     if-eqz v0, :cond_3
 
     .line 6
-    const-class v3, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    const-class v3, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-static {v0, v3}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/Class;)Ljava/util/List;
 

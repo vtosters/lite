@@ -112,7 +112,7 @@
     .line 7
     invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/dialogs/question/b;->g(Z)V
 
     .line 9
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -145,7 +145,7 @@
     .line 11
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/c;->d:Lcom/vk/core/util/k0;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -198,7 +198,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

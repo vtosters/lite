@@ -79,7 +79,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$onBind$1;->this$0:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v1
 

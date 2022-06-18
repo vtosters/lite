@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->a(Lcom/vkontakte/android/attachments/VideoAttachment;)V
+    value = Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $attachment:Lcom/vkontakte/android/attachments/VideoAttachment;
+.field final synthetic $attachment:Lcom/vtosters/lite/attachments/VideoAttachment;
 
 .field final synthetic this$0:Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;Lcom/vkontakte/android/attachments/VideoAttachment;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;Lcom/vtosters/lite/attachments/VideoAttachment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder$bindImage$1;->this$0:Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder$bindImage$1;->$attachment:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder$bindImage$1;->$attachment:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     const/4 p1, 0x1
 
@@ -87,9 +87,9 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder$bindImage$1;->$attachment:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder$bindImage$1;->$attachment:Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->m1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->m1()Ljava/lang/String;
 
     move-result-object v0
 

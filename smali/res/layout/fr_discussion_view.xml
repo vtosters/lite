@@ -6,7 +6,7 @@
     </LinearLayout>
     <TextView android:textSize="16.0dip" android:textColor="?text_muted" android:gravity="center" android:id="@id/createHint" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/create_topic_explain" android:layout_above="@id/commentBar" android:layout_centerInParent="true" />
     <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/commentBar" />
-    <com.vkontakte.android.ui.WriteBar android:id="@id/commentBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <com.vtosters.lite.ui.WriteBar android:id="@id/commentBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
     <View android:id="@id/commentBarShadow" android:background="@drawable/bottom_shadow_comments" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_above="@id/commentBar" />
-    <com.vkontakte.android.ui.PaginationView android:id="@id/paginationView" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" />
+    <com.vtosters.lite.ui.PaginationView android:id="@id/paginationView" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" />
 </RelativeLayout>

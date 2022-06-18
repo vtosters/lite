@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "HeaderPhotosItem.kt"
 
 
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/HeaderPhotosItem<",
         "TT;>;>;"
     }
@@ -118,7 +118,7 @@
 
     const v0, 0x7f0d04b8
 
-    invoke-direct {p0, v0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -212,7 +212,7 @@
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 9
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p2
 
@@ -224,7 +224,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result p2
 
@@ -319,7 +319,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;
 
@@ -613,7 +613,7 @@
 
     .line 6
     :cond_0
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -625,7 +625,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -647,11 +647,11 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 8
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 

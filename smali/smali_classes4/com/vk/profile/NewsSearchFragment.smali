@@ -1,5 +1,5 @@
 .class public Lcom/vk/profile/NewsSearchFragment;
-.super Lcom/vkontakte/android/fragments/y0;
+.super Lcom/vtosters/lite/fragments/y0;
 .source "NewsSearchFragment.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/fragments/y0<",
+        "Lcom/vtosters/lite/fragments/y0<",
         "Lcom/vk/newsfeed/contracts/l;",
         ">;"
     }
@@ -51,7 +51,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/y0;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/y0;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/profile/NewsSearchFragment$d;

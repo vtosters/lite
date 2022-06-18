@@ -100,30 +100,30 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ChronicleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ChronicleAttachment;
 
     if-eqz v0, :cond_2
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/p;->J:Landroid/widget/TextView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/ChronicleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ChronicleAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->e:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/p;->I:Landroid/widget/TextView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->h:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/p;->I:Landroid/widget/TextView;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->C:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->C:Ljava/lang/String;
 
     const-string v1, "item.srcBig"
 
@@ -178,16 +178,16 @@
     move-result-object v0
 
     .line 2
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/ChronicleAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/ChronicleAttachment;
 
     if-eqz v1, :cond_1
 
     .line 3
     move-object v1, v0
 
-    check-cast v1, Lcom/vkontakte/android/attachments/ChronicleAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/ChronicleAttachment;
 
-    iget-object v2, v1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->g:Ljava/lang/String;
+    iget-object v2, v1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->g:Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -211,26 +211,26 @@
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 5
-    iget-object v0, v1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->g:Ljava/lang/String;
+    iget-object v0, v1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 6
-    iget v0, v1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->D:I
+    iget v0, v1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->D:I
 
     const-string v2, "SECRET_MESSAGE_ID"
 
     invoke-virtual {p1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 7
-    iget v0, v1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->E:I
+    iget v0, v1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->E:I
 
     const-string v1, "SECRET_MESSAGE_OWNER_ID"
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
     .line 9
     :cond_0
     :try_start_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -267,9 +267,9 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/ChronicleAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/ChronicleAttachment;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/ChronicleAttachment;->g:Ljava/lang/String;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/ChronicleAttachment;->g:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -291,7 +291,7 @@
 
     .line 10
     :catch_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -311,7 +311,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/ChronicleAttachment;->g:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/ChronicleAttachment;->g:Ljava/lang/String;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

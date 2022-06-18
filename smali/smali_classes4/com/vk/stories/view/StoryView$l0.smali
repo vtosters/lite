@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/view/StoryView$l0;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "StoryView.java"
 
 
@@ -41,7 +41,7 @@
 
     iput-object p6, p0, Lcom/vk/stories/view/StoryView$l0;->f:Landroid/content/Context;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/k;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 
     neg-int v0, v0
 
-    invoke-static {v0, v2}, Lcom/vkontakte/android/data/Groups;->a(II)V
+    invoke-static {v0, v2}, Lcom/vtosters/lite/data/Groups;->a(II)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$l0;->e:Lcom/vk/common/g/a;

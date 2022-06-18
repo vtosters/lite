@@ -597,7 +597,7 @@
     move-object p1, p3
 
     :cond_1
-    invoke-static {p2, p4, p1}, Lcom/vkontakte/android/fragments/stickers/StickersDetailsFragment;->a(ILjava/lang/String;Landroid/content/Context;)V
+    invoke-static {p2, p4, p1}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->a(ILjava/lang/String;Landroid/content/Context;)V
 
     .line 50
     :goto_0
@@ -646,19 +646,19 @@
     if-eqz v0, :cond_0
 
     .line 75
-    const-class v0, Lcom/vkontakte/android/fragments/gifts/g;
+    const-class v0, Lcom/vtosters/lite/fragments/gifts/g;
 
     goto :goto_0
 
     .line 76
     :cond_0
-    const-class v0, Lcom/vkontakte/android/fragments/gifts/f;
+    const-class v0, Lcom/vtosters/lite/fragments/gifts/f;
 
     :goto_0
     move-object v2, v0
 
     .line 77
-    new-instance v0, Lcom/vkontakte/android/fragments/gifts/f$d;
+    new-instance v0, Lcom/vtosters/lite/fragments/gifts/f$d;
 
     if-eqz p3, :cond_1
 
@@ -706,17 +706,17 @@
     move v3, p2
 
     .line 79
-    invoke-direct/range {v1 .. v6}, Lcom/vkontakte/android/fragments/gifts/f$d;-><init>(Ljava/lang/Class;ILjava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/fragments/gifts/f$d;-><init>(Ljava/lang/Class;ILjava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/gifts/f$d;->c(Landroid/content/Context;)Lcom/vkontakte/android/fragments/gifts/f$d;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/f$d;->c(Landroid/content/Context;)Lcom/vtosters/lite/fragments/gifts/f$d;
 
     move-result-object p2
 
     .line 81
-    sget-object p3, Lcom/vkontakte/android/fragments/gifts/f;->P0:Lcom/vkontakte/android/fragments/gifts/f$e;
+    sget-object p3, Lcom/vtosters/lite/fragments/gifts/f;->P0:Lcom/vtosters/lite/fragments/gifts/f$e;
 
-    invoke-virtual {p3, p1, p2, p5}, Lcom/vkontakte/android/fragments/gifts/f$e;->a(Landroid/content/Context;Lcom/vk/navigation/o;Ljava/lang/String;)V
+    invoke-virtual {p3, p1, p2, p5}, Lcom/vtosters/lite/fragments/gifts/f$e;->a(Landroid/content/Context;Lcom/vk/navigation/o;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -799,7 +799,7 @@
 
     .line 58
     :cond_0
-    invoke-static {p2, p4, p1, v1}, Lcom/vkontakte/android/fragments/stickers/StickersDetailsFragment;->a(ILjava/lang/String;Landroid/content/Context;Z)V
+    invoke-static {p2, p4, p1, v1}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->a(ILjava/lang/String;Landroid/content/Context;Z)V
 
     :goto_0
     return-void
@@ -872,7 +872,7 @@
 
     .line 45
     :cond_1
-    invoke-static {p2, p1}, Lcom/vkontakte/android/fragments/stickers/StickersDetailsFragment;->a(Lcom/vk/dto/stickers/StickerStockItem;Landroid/content/Context;)V
+    invoke-static {p2, p1}, Lcom/vtosters/lite/fragments/stickers/StickersDetailsFragment;->a(Lcom/vk/dto/stickers/StickerStockItem;Landroid/content/Context;)V
 
     .line 46
     :goto_0
@@ -925,19 +925,19 @@
     if-eqz v0, :cond_0
 
     .line 69
-    const-class v0, Lcom/vkontakte/android/fragments/gifts/g;
+    const-class v0, Lcom/vtosters/lite/fragments/gifts/g;
 
     goto :goto_0
 
     .line 70
     :cond_0
-    const-class v0, Lcom/vkontakte/android/fragments/gifts/f;
+    const-class v0, Lcom/vtosters/lite/fragments/gifts/f;
 
     :goto_0
     move-object v2, v0
 
     .line 71
-    new-instance v0, Lcom/vkontakte/android/fragments/gifts/f$c;
+    new-instance v0, Lcom/vtosters/lite/fragments/gifts/f$c;
 
     if-eqz p2, :cond_1
 
@@ -973,17 +973,17 @@
 
     move v5, p4
 
-    invoke-direct/range {v1 .. v7}, Lcom/vkontakte/android/fragments/gifts/f$c;-><init>(Ljava/lang/Class;Ljava/util/ArrayList;Lcom/vk/dto/gift/CatalogedGift;ILjava/lang/String;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/fragments/gifts/f$c;-><init>(Ljava/lang/Class;Ljava/util/ArrayList;Lcom/vk/dto/gift/CatalogedGift;ILjava/lang/String;Z)V
 
     .line 72
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/gifts/f$c;->c(Landroid/content/Context;)Lcom/vkontakte/android/fragments/gifts/f$c;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/gifts/f$c;->c(Landroid/content/Context;)Lcom/vtosters/lite/fragments/gifts/f$c;
 
     move-result-object p2
 
     .line 73
-    sget-object p3, Lcom/vkontakte/android/fragments/gifts/f;->P0:Lcom/vkontakte/android/fragments/gifts/f$e;
+    sget-object p3, Lcom/vtosters/lite/fragments/gifts/f;->P0:Lcom/vtosters/lite/fragments/gifts/f$e;
 
-    invoke-virtual {p3, p1, p2, p5}, Lcom/vkontakte/android/fragments/gifts/f$e;->a(Landroid/content/Context;Lcom/vk/navigation/o;Ljava/lang/String;)V
+    invoke-virtual {p3, p1, p2, p5}, Lcom/vtosters/lite/fragments/gifts/f$e;->a(Landroid/content/Context;Lcom/vk/navigation/o;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1012,22 +1012,22 @@
     if-eqz v0, :cond_1
 
     .line 61
-    const-class v0, Lcom/vkontakte/android/fragments/stickers/b;
+    const-class v0, Lcom/vtosters/lite/fragments/stickers/b;
 
     goto :goto_1
 
     .line 62
     :cond_1
-    const-class v0, Lcom/vkontakte/android/fragments/stickers/a;
+    const-class v0, Lcom/vtosters/lite/fragments/stickers/a;
 
     .line 63
     :goto_1
-    new-instance v1, Lcom/vkontakte/android/fragments/stickers/a$d;
+    new-instance v1, Lcom/vtosters/lite/fragments/stickers/a$d;
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/fragments/stickers/a$d;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/stickers/a$d;-><init>(Ljava/lang/Class;)V
 
     .line 64
-    invoke-virtual {v1, p1}, Lcom/vkontakte/android/fragments/stickers/a$d;->c(Landroid/content/Context;)Lcom/vkontakte/android/fragments/stickers/a$d;
+    invoke-virtual {v1, p1}, Lcom/vtosters/lite/fragments/stickers/a$d;->c(Landroid/content/Context;)Lcom/vtosters/lite/fragments/stickers/a$d;
 
     move-result-object p1
 
@@ -1087,18 +1087,18 @@
     if-eqz v0, :cond_1
 
     .line 17
-    new-instance v0, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;-><init>()V
 
     .line 18
-    invoke-virtual {v0, p3}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/util/Collection;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p3}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/util/Collection;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 19
-    invoke-virtual {v0, p5}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 20
-    invoke-virtual {v0, p4}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Lcom/vk/dto/stickers/StickerStockItem;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Lcom/vk/dto/stickers/StickerStockItem;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 21
     invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
@@ -1107,15 +1107,15 @@
 
     .line 22
     :cond_1
-    new-instance v0, Lcom/vkontakte/android/fragments/stickers/c$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/stickers/c$g;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/fragments/stickers/c$g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/stickers/c$g;-><init>(Landroid/content/Context;)V
 
     .line 23
-    invoke-virtual {v0, p3}, Lcom/vkontakte/android/fragments/stickers/c$g;->a(Ljava/util/List;)Lcom/vkontakte/android/fragments/stickers/c$g;
+    invoke-virtual {v0, p3}, Lcom/vtosters/lite/fragments/stickers/c$g;->a(Ljava/util/List;)Lcom/vtosters/lite/fragments/stickers/c$g;
 
     .line 24
-    invoke-virtual {v0, p5}, Lcom/vkontakte/android/fragments/stickers/c$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/c$g;
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/fragments/stickers/c$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/c$g;
 
     .line 25
     invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
@@ -1173,15 +1173,15 @@
     if-eqz v0, :cond_1
 
     .line 5
-    new-instance v0, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;-><init>()V
 
     .line 6
-    invoke-virtual {v0, p3}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/util/Collection;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p3}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/util/Collection;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 7
-    invoke-virtual {v0, p4}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 8
     invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
@@ -1190,15 +1190,15 @@
 
     .line 9
     :cond_1
-    new-instance v0, Lcom/vkontakte/android/fragments/stickers/c$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/stickers/c$g;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/fragments/stickers/c$g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/stickers/c$g;-><init>(Landroid/content/Context;)V
 
     .line 10
-    invoke-virtual {v0, p3}, Lcom/vkontakte/android/fragments/stickers/c$g;->a(Ljava/util/List;)Lcom/vkontakte/android/fragments/stickers/c$g;
+    invoke-virtual {v0, p3}, Lcom/vtosters/lite/fragments/stickers/c$g;->a(Ljava/util/List;)Lcom/vtosters/lite/fragments/stickers/c$g;
 
     .line 11
-    invoke-virtual {v0, p4}, Lcom/vkontakte/android/fragments/stickers/c$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/c$g;
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/fragments/stickers/c$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/c$g;
 
     .line 12
     invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
@@ -1257,18 +1257,18 @@
     if-eqz v0, :cond_1
 
     .line 30
-    new-instance v0, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;-><init>()V
 
     .line 31
-    invoke-virtual {v0, p3}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/util/Collection;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p3}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/util/Collection;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 32
-    invoke-virtual {v0, p5}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 33
-    invoke-virtual {v0, p4}, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;->b(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment$a;
+    invoke-virtual {v0, p4}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;->b(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$a;
 
     .line 34
     invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
@@ -1277,15 +1277,15 @@
 
     .line 35
     :cond_1
-    new-instance v0, Lcom/vkontakte/android/fragments/stickers/c$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/stickers/c$g;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/fragments/stickers/c$g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/stickers/c$g;-><init>(Landroid/content/Context;)V
 
     .line 36
-    invoke-virtual {v0, p3}, Lcom/vkontakte/android/fragments/stickers/c$g;->a(Ljava/util/List;)Lcom/vkontakte/android/fragments/stickers/c$g;
+    invoke-virtual {v0, p3}, Lcom/vtosters/lite/fragments/stickers/c$g;->a(Ljava/util/List;)Lcom/vtosters/lite/fragments/stickers/c$g;
 
     .line 37
-    invoke-virtual {v0, p5}, Lcom/vkontakte/android/fragments/stickers/c$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/stickers/c$g;
+    invoke-virtual {v0, p5}, Lcom/vtosters/lite/fragments/stickers/c$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/stickers/c$g;
 
     .line 38
     invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;

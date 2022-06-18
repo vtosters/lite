@@ -498,7 +498,7 @@
 
     iget-object v0, p1, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$e;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
@@ -507,7 +507,7 @@
 
     iget-object v0, p1, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     return-void
 .end method

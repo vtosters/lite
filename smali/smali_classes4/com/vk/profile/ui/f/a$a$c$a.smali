@@ -171,7 +171,7 @@
 
     iget-object p1, p1, Lcom/vk/profile/ui/f/a$a$c;->e:Lcom/vk/profile/ui/f/a$a;
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/f/a$a;->getDialog()Lcom/vkontakte/android/k0/b;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/f/a$a;->getDialog()Lcom/vtosters/lite/k0/b;
 
     move-result-object p1
 
@@ -186,7 +186,7 @@
 
     iget-object v0, v0, Lcom/vk/profile/ui/f/a$a$c;->e:Lcom/vk/profile/ui/f/a$a;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/f/a$a;->getDialog()Lcom/vkontakte/android/k0/b;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/f/a$a;->getDialog()Lcom/vtosters/lite/k0/b;
 
     move-result-object v0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;
-.super Lcom/vkontakte/android/TabletDialogActivity;
+.super Lcom/vtosters/lite/TabletDialogActivity;
 .source "PostingAttachActivity.kt"
 
 # interfaces
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/TabletDialogActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/TabletDialogActivity;-><init>()V
 
     .line 2
     sget-object v0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$AttachType;->Photo:Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$AttachType;
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     const/4 v0, 0x0
 
@@ -432,7 +432,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/TabletDialogActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/TabletDialogActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
     iget v0, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->g0:I
@@ -478,22 +478,22 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/TabletDialogActivity$b;
+    new-instance v0, Lcom/vtosters/lite/TabletDialogActivity$b;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/TabletDialogActivity$b;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
 
     .line 3
     sget-object v2, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
 
-    invoke-virtual {v2, v0, p0}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vkontakte/android/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {v2, v0, p0}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const/16 v2, 0x20
 
     .line 4
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/TabletDialogActivity$b;->c(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/TabletDialogActivity$b;->c(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/TabletDialogActivity$b;->h(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/TabletDialogActivity$b;->h(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 6
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -546,7 +546,7 @@
     invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/app/Activity;)V
 
     .line 12
-    invoke-super {p0, p1}, Lcom/vkontakte/android/TabletDialogActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/TabletDialogActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 13
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -591,7 +591,7 @@
     iput p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->g0:I
 
     .line 17
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     .line 18
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
@@ -603,14 +603,14 @@
 
     const v1, 0x7f0d0028
 
-    iget-object v2, p0, Lcom/vkontakte/android/TabletDialogActivity;->X:Lcom/vk/core/view/a;
+    iget-object v2, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     const/4 v3, 0x1
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 20
-    iget-object p1, p0, Lcom/vkontakte/android/TabletDialogActivity;->X:Lcom/vk/core/view/a;
+    iget-object p1, p0, Lcom/vtosters/lite/TabletDialogActivity;->X:Lcom/vk/core/view/a;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/view/a;->setStatusBarBackgroundColor(I)V
 
@@ -824,9 +824,9 @@
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {v0, v1, v4}, Lcom/vk/poll/fragments/PollEditorFragment$a$a;->a(Lcom/vkontakte/android/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+    invoke-virtual {v0, v1, v4}, Lcom/vk/poll/fragments/PollEditorFragment$a$a;->a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
 
     move-result-object v0
 
@@ -1020,7 +1020,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->e0:Lcom/vk/core/fragments/FragmentImpl;
 
     .line 68
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v0
 

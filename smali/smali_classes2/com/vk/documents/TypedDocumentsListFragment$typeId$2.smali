@@ -59,9 +59,9 @@
 
     sget-object v1, Lcom/vk/navigation/q;->O:Ljava/lang/String;
 
-    sget-object v2, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ALL:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v2, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ALL:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v2
 

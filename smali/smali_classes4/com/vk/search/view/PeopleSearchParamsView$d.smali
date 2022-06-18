@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/search/view/PeopleSearchParamsView;
 
-.field final synthetic b:Lcom/vkontakte/android/ui/adapters/l;
+.field final synthetic b:Lcom/vtosters/lite/ui/adapters/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vkontakte/android/ui/adapters/l;)V
+.method constructor <init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/ui/adapters/l;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/adapters/l;",
+            "Lcom/vtosters/lite/ui/adapters/l;",
             ")V"
         }
     .end annotation
@@ -37,7 +37,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->a:Lcom/vk/search/view/PeopleSearchParamsView;
 
-    iput-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vkontakte/android/ui/adapters/l;
+    iput-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vtosters/lite/ui/adapters/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,15 +61,15 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->a:Lcom/vk/search/view/PeopleSearchParamsView;
 
-    iget-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vkontakte/android/ui/adapters/l;
+    iget-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vtosters/lite/ui/adapters/l;
 
     invoke-virtual {p2, p3}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vkontakte/android/Relation;
+    check-cast p2, Lcom/vtosters/lite/Relation;
 
-    invoke-static {p1, p2}, Lcom/vk/search/view/PeopleSearchParamsView;->a(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vkontakte/android/Relation;)V
+    invoke-static {p1, p2}, Lcom/vk/search/view/PeopleSearchParamsView;->a(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/Relation;)V
 
     return-void
 .end method

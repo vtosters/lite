@@ -97,7 +97,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/BaseFooterHolder$b;->a:Lcom/vk/newsfeed/holders/BaseFooterHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -120,13 +120,13 @@
     move-result-object v0
 
     .line 6
-    instance-of v2, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v2, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v2, :cond_2
 
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 

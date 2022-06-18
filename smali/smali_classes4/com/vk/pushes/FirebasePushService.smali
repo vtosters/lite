@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final a:Lcom/vkontakte/android/im/notifications/c;
+.field private static final a:Lcom/vtosters/lite/im/notifications/c;
 
 .field public static final b:Lcom/vk/pushes/FirebasePushService$a;
 
@@ -30,13 +30,13 @@
     sput-object v0, Lcom/vk/pushes/FirebasePushService;->b:Lcom/vk/pushes/FirebasePushService$a;
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/im/notifications/c;
+    new-instance v0, Lcom/vtosters/lite/im/notifications/c;
 
     sget-object v1, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/im/notifications/c;-><init>(Lcom/vk/im/engine/models/Source;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/c;-><init>(Lcom/vk/im/engine/models/Source;)V
 
-    sput-object v0, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vkontakte/android/im/notifications/c;
+    sput-object v0, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/c;
 
     return-void
 .end method
@@ -1121,13 +1121,13 @@
 
     .line 11
     :cond_5
-    sget-object v4, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vkontakte/android/im/notifications/c;
+    sget-object v4, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/c;
 
     invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6, v2, v1}, Lcom/vkontakte/android/im/notifications/c;->a(Lcom/vk/im/engine/a;II)Z
+    invoke-virtual {v4, v6, v2, v1}, Lcom/vtosters/lite/im/notifications/c;->a(Lcom/vk/im/engine/a;II)Z
 
     move-result v1
 
@@ -1379,7 +1379,7 @@
     invoke-virtual {v3, v0}, Lcom/vk/notifications/NotificationsFragment$a;->a(Z)V
 
     .line 13
-    invoke-static {}, Lcom/vkontakte/android/MenuCounterUpdater;->d()V
+    invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->d()V
 
     :cond_2
     const-string v0, "erase"
@@ -1481,7 +1481,7 @@
     if-eqz v0, :cond_a
 
     .line 20
-    sget-object v0, Lcom/vkontakte/android/im/bridge/contentprovider/ImPushHelper;->b:Lcom/vkontakte/android/im/bridge/contentprovider/ImPushHelper;
+    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->b:Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;
 
     invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
@@ -1491,7 +1491,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/im/bridge/contentprovider/ImPushHelper;->a(Ljava/lang/String;I)Z
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->a(Ljava/lang/String;I)Z
 
     move-result v0
 
@@ -1766,13 +1766,13 @@
 
     .line 16
     :cond_7
-    sget-object v1, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vkontakte/android/im/notifications/c;
+    sget-object v1, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/c;
 
     invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
 
     move-result-object v6
 
-    invoke-virtual {v1, v6, v2, v4}, Lcom/vkontakte/android/im/notifications/c;->a(Lcom/vk/im/engine/a;II)Z
+    invoke-virtual {v1, v6, v2, v4}, Lcom/vtosters/lite/im/notifications/c;->a(Lcom/vk/im/engine/a;II)Z
 
     move-result v1
 

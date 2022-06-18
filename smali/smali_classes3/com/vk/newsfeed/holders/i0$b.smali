@@ -71,7 +71,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -80,13 +80,13 @@
     const-string v1, "view_block"
 
     .line 5
-    invoke-static {v1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->a()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->f()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->f()Lcom/vtosters/lite/data/n$l;
 
     .line 6
     new-instance v2, Ljava/lang/StringBuilder;
@@ -127,15 +127,15 @@
 
     const-string v2, "blocks"
 
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 7
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     const-wide/16 v1, 0x3e8
 
     .line 8
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;J)V
 
     :cond_0
     return-void

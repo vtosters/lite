@@ -155,9 +155,9 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v2, p1}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {v2, p1}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
 
     invoke-interface {v0, v1, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 

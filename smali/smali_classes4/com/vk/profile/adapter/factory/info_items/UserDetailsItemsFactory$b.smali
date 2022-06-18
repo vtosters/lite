@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/StatusInfoItem;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/StatusInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/p;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/p;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;)V
 
     :cond_1
     return-void
@@ -144,7 +144,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/c$a;-><init>(Lcom/vk/webapp/bridges/c;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -424,7 +424,7 @@
 
     invoke-direct {v2, p0, p1, v1, v0}, Lcom/vk/webapp/bridges/c$b;-><init>(Lcom/vk/webapp/bridges/c;ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v2}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

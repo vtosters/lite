@@ -159,7 +159,7 @@
     move-result v11
 
     .line 12
-    new-instance v12, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v12, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     sget-object v3, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->Z:Lcom/vk/dto/newsfeed/entries/ShitAttachment$b;
 
@@ -177,7 +177,7 @@
 
     move-result-object v0
 
-    invoke-direct {v12, v0}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v12, v0}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     const/4 v13, 0x0
 
@@ -212,7 +212,7 @@
     move-object/from16 v14, v16
 
     .line 13
-    invoke-direct/range {v0 .. v14}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
 
     return-object v15
 .end method

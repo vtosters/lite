@@ -26,7 +26,7 @@
 # instance fields
 .field private final B:Ljava/lang/String;
 
-.field private final C:Lcom/vkontakte/android/NewsComment;
+.field private final C:Lcom/vtosters/lite/NewsComment;
 
 .field private final f:I
 
@@ -56,13 +56,13 @@
     return-void
 .end method
 
-.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Lcom/vkontakte/android/NewsComment;)V
+.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Lcom/vtosters/lite/NewsComment;)V
     .locals 3
 
     if-eqz p5, :cond_0
 
     .line 1
-    iget v0, p5, Lcom/vkontakte/android/NewsComment;->h:I
+    iget v0, p5, Lcom/vtosters/lite/NewsComment;->h:I
 
     goto :goto_0
 
@@ -72,7 +72,7 @@
     :goto_0
     if-eqz p5, :cond_1
 
-    iget-object v1, p5, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iget-object v1, p5, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
@@ -84,7 +84,7 @@
     :goto_1
     if-eqz p5, :cond_2
 
-    iget-object v2, p5, Lcom/vkontakte/android/NewsComment;->Q:Ljava/util/ArrayList;
+    iget-object v2, p5, Lcom/vtosters/lite/NewsComment;->Q:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_2
 
@@ -106,7 +106,7 @@
 
     iput-object p4, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->B:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C:Lcom/vkontakte/android/NewsComment;
+    iput-object p5, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C:Lcom/vtosters/lite/NewsComment;
 
     return-void
 .end method
@@ -131,11 +131,11 @@
     return-object v0
 .end method
 
-.method public final C1()Lcom/vkontakte/android/NewsComment;
+.method public final C1()Lcom/vtosters/lite/NewsComment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C:Lcom/vtosters/lite/NewsComment;
 
     return-object v0
 .end method
@@ -164,7 +164,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/String;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C:Lcom/vtosters/lite/NewsComment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 

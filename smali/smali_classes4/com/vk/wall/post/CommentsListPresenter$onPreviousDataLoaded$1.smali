@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/a;",
+        "Lcom/vtosters/lite/api/wall/a;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/a;)V
     .locals 12
 
     .line 1
@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    iget-object v5, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v5, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
@@ -102,27 +102,27 @@
 
     move-result-object v5
 
-    iget v6, p1, Lcom/vkontakte/android/api/wall/a;->i:I
+    iget v6, p1, Lcom/vtosters/lite/api/wall/a;->i:I
 
-    iget v7, p1, Lcom/vkontakte/android/api/wall/a;->k:I
+    iget v7, p1, Lcom/vtosters/lite/api/wall/a;->k:I
 
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v0}, Lcom/vk/dto/common/data/VKList;->a()I
 
     move-result v8
 
-    iget v9, p1, Lcom/vkontakte/android/api/wall/a;->b:I
+    iget v9, p1, Lcom/vtosters/lite/api/wall/a;->b:I
 
-    iget v10, p1, Lcom/vkontakte/android/api/wall/a;->j:I
+    iget v10, p1, Lcom/vtosters/lite/api/wall/a;->j:I
 
-    iget-boolean v11, p1, Lcom/vkontakte/android/api/wall/a;->l:Z
+    iget-boolean v11, p1, Lcom/vtosters/lite/api/wall/a;->l:Z
 
     invoke-interface/range {v5 .. v11}, Lcom/vk/wall/post/b;->a(IIIIIZ)V
 
     .line 6
     :cond_0
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->h:Ljava/util/List;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->h:Ljava/util/List;
 
     const-string v5, "it"
 
@@ -140,7 +140,7 @@
 
     .line 7
     :cond_1
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->f:Lcom/vk/api/comments/CommentsOrder;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->f:Lcom/vk/api/comments/CommentsOrder;
 
     if-eqz v0, :cond_2
 
@@ -167,7 +167,7 @@
     move-result v0
 
     .line 9
-    iget-object v5, p1, Lcom/vkontakte/android/api/wall/a;->d:Ljava/lang/String;
+    iget-object v5, p1, Lcom/vtosters/lite/api/wall/a;->d:Ljava/lang/String;
 
     if-eqz v5, :cond_4
 
@@ -207,7 +207,7 @@
 
     if-eqz v3, :cond_7
 
-    iget v3, p1, Lcom/vkontakte/android/api/wall/a;->b:I
+    iget v3, p1, Lcom/vtosters/lite/api/wall/a;->b:I
 
     if-le v3, v0, :cond_7
 
@@ -261,7 +261,7 @@
 
     move-result-object v0
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -282,7 +282,7 @@
 
     .line 18
     :cond_8
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -293,7 +293,7 @@
     invoke-static {v0, v5}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 19
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->d:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->d:Ljava/lang/String;
 
     if-eqz v0, :cond_a
 
@@ -338,7 +338,7 @@
 
     if-eqz v0, :cond_d
 
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -351,9 +351,9 @@
     if-eqz v0, :cond_d
 
     .line 22
-    iget v0, p1, Lcom/vkontakte/android/api/wall/a;->c:I
+    iget v0, p1, Lcom/vtosters/lite/api/wall/a;->c:I
 
-    iget-object v5, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v5, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -362,7 +362,7 @@
     add-int/2addr v0, v5
 
     .line 23
-    iget v5, p1, Lcom/vkontakte/android/api/wall/a;->b:I
+    iget v5, p1, Lcom/vtosters/lite/api/wall/a;->b:I
 
     sub-int/2addr v5, v0
 
@@ -407,7 +407,7 @@
 
     .line 27
     :goto_4
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -426,7 +426,7 @@
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v0, v2, v1}, Ljava/util/ArrayList;->addAll(ILjava/util/Collection;)Z
 
@@ -437,7 +437,7 @@
 
     move-result-object v0
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -492,9 +492,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$onPreviousDataLoaded$1;->a(Lcom/vkontakte/android/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$onPreviousDataLoaded$1;->a(Lcom/vtosters/lite/api/wall/a;)V
 
     return-void
 .end method

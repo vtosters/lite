@@ -1352,11 +1352,11 @@
     return-void
 .end method
 
-.method public final a(Lb/h/h/d/c;Lcom/vkontakte/android/api/execute/i$a;)V
+.method public final a(Lb/h/h/d/c;Lcom/vtosters/lite/api/execute/i$a;)V
     .locals 1
 
     .line 11
-    iget-object p2, p2, Lcom/vkontakte/android/api/execute/i$a;->a:Lb/h/h/d/c;
+    iget-object p2, p2, Lcom/vtosters/lite/api/execute/i$a;->a:Lb/h/h/d/c;
 
     const-string v0, "result.vkAccount"
 

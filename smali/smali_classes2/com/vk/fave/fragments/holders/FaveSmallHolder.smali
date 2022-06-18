@@ -476,14 +476,14 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/newsfeed/entries/FaveEntry;)V
+.method private final a(Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/newsfeed/entries/FaveEntry;)V
     .locals 11
 
     .line 10
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -654,14 +654,14 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_0
 
     .line 4
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/fave/fragments/holders/FaveSmallHolder;->a(Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/newsfeed/entries/FaveEntry;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/fave/fragments/holders/FaveSmallHolder;->a(Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/newsfeed/entries/FaveEntry;)V
 
     goto :goto_0
 
@@ -883,13 +883,13 @@
 
     .line 4
     :cond_1
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -898,7 +898,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -915,7 +915,7 @@
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -960,13 +960,13 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -998,15 +998,15 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->X0()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->X0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1086,13 +1086,13 @@
 
     .line 5
     :cond_2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -1168,7 +1168,7 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     const v1, 0x7f04044f
 
@@ -1216,15 +1216,15 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
@@ -1359,14 +1359,14 @@
 
     .line 18
     :cond_2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_7
 
     .line 19
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -1588,13 +1588,13 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
@@ -1637,13 +1637,13 @@
 
     .line 5
     :cond_3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_6
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -1652,7 +1652,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -1668,7 +1668,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -1695,7 +1695,7 @@
 
     .line 7
     :cond_5
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -1737,7 +1737,7 @@
     move-result-object p1
 
     .line 2
-    instance-of p1, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of p1, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     return p1
 .end method

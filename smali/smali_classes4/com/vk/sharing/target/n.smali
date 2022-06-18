@@ -85,7 +85,7 @@
     .line 1
     iget v0, p0, Lcom/vk/sharing/target/n;->b:I
 
-    invoke-static {v0}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v0}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v0
 

@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field private final b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field private final c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;I)V
+.method public constructor <init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;I)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/ui/components/a;-><init>(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/ui/components/a;-><init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    iput-object p2, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput p3, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->c:I
 
@@ -29,7 +29,7 @@
     .line 1
     iget v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->c:I
 
-    invoke-static {v0}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v0}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v0
 
@@ -64,7 +64,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -95,7 +95,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -107,18 +107,18 @@
 
     if-eq v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->o:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->o:Z
 
     if-nez v0, :cond_1
 
@@ -226,9 +226,9 @@
     invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
 
     .line 13
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->Z:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->Z:Z
 
     if-eqz v0, :cond_4
 
@@ -291,17 +291,17 @@
 
     .line 18
     :cond_6
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v1, 0x3
 
@@ -335,9 +335,9 @@
     if-nez v0, :cond_b
 
     .line 21
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v0
 
@@ -346,7 +346,7 @@
     iget v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->c:I
 
     .line 22
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -356,32 +356,32 @@
 
     if-eq v0, v1, :cond_b
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
     if-eqz v1, :cond_8
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->X0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->X0:Z
 
     if-eqz v0, :cond_b
 
     :cond_8
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->F1:Z
+    iget-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->F1:Z
 
     if-nez v1, :cond_9
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->X0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->X0:Z
 
     if-eqz v0, :cond_b
 
     .line 23
     :cond_9
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->X0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->X0:Z
 
     if-eqz v0, :cond_a
 
@@ -423,16 +423,16 @@
 
     if-nez v0, :cond_e
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->V0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->V0:Z
 
     if-eqz v0, :cond_e
 
     iget v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->c:I
 
     .line 27
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -442,21 +442,21 @@
 
     if-eq v0, v1, :cond_e
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
     if-eqz v1, :cond_c
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->W0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->W0:Z
 
     if-eqz v0, :cond_e
 
     .line 28
     :cond_c
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->W0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->W0:Z
 
     if-eqz v0, :cond_d
 
@@ -492,7 +492,7 @@
 
     .line 31
     :cond_e
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -566,7 +566,7 @@
 
     .line 35
     :cond_10
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -578,11 +578,11 @@
 
     if-ne v0, v1, :cond_12
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const-string v1, "followers"
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -590,7 +590,7 @@
 
     if-ge v0, v1, :cond_11
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

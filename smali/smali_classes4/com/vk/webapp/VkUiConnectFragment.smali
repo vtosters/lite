@@ -400,7 +400,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1198,7 +1198,7 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -4052,7 +4052,7 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-static {p2, v0, v1}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p2, v0, v1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :goto_2
     return-object p1
@@ -4398,29 +4398,29 @@
     .locals 1
 
     .line 56
-    new-instance p2, Lcom/vkontakte/android/fragments/friends/h/j$a;
+    new-instance p2, Lcom/vtosters/lite/fragments/friends/h/j$a;
 
-    invoke-direct {p2}, Lcom/vkontakte/android/fragments/friends/h/j$a;-><init>()V
+    invoke-direct {p2}, Lcom/vtosters/lite/fragments/friends/h/j$a;-><init>()V
 
     .line 57
-    invoke-virtual {p2}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->i()Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->i()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     const/4 v0, 0x0
 
     .line 58
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->d(Z)Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->d(Z)Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     if-eqz p1, :cond_0
 
     .line 59
-    invoke-virtual {p2}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->j()Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->j()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     .line 60
     :cond_0
-    invoke-virtual {p2}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->h()Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->h()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     .line 61
-    invoke-virtual {p2}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->k()Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->k()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     const p1, 0x7f1210ed
 

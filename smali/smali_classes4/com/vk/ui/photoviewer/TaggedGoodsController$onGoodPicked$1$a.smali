@@ -99,13 +99,13 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1$a;->a:Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;
 
     iget-object v1, v1, Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;->$photo:Lcom/vk/dto/photo/Photo;
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/dto/common/AttachmentWithMedia;)V
 

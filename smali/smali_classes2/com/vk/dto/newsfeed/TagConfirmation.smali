@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+.field private final a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
 .field private final b:Lcom/vk/dto/user/UserProfile;
 
@@ -52,13 +52,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/dto/user/UserProfile;I)V
+.method public constructor <init>(Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/dto/user/UserProfile;I)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iput-object p1, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     iput-object p2, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->b:Lcom/vk/dto/user/UserProfile;
 
@@ -73,7 +73,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
@@ -101,9 +101,9 @@
 
     check-cast p1, Lcom/vk/dto/newsfeed/TagConfirmation;
 
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v1, p1, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v1, p1, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -144,13 +144,13 @@
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PhotoAttachment;->hashCode()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PhotoAttachment;->hashCode()I
 
     move-result v0
 
@@ -182,11 +182,11 @@
     return v0
 .end method
 
-.method public final t1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+.method public final t1()Lcom/vtosters/lite/attachments/PhotoAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     return-object v0
 .end method
@@ -202,7 +202,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v1, p0, Lcom/vk/dto/newsfeed/TagConfirmation;->a:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

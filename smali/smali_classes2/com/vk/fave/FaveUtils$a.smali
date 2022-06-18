@@ -1,5 +1,5 @@
 .class public final Lcom/vk/fave/FaveUtils$a;
-.super Lcom/vkontakte/android/v;
+.super Lcom/vtosters/lite/v;
 .source "FaveUtils.kt"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/fave/FaveUtils$a;->C:Lkotlin/jvm/b/a;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

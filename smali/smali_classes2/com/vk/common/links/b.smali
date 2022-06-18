@@ -132,17 +132,17 @@
     .locals 2
 
     .line 203
-    new-instance v0, Lcom/vkontakte/android/u;
+    new-instance v0, Lcom/vtosters/lite/u;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/u;-><init>()V
 
     const/16 v1, 0x30b
 
     .line 204
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 205
-    invoke-static {p0, v0}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {p0, v0}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -166,22 +166,22 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/u;
+    new-instance v0, Lcom/vtosters/lite/u;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/u;-><init>()V
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 3
-    invoke-static {p0, v0}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {p0, v0}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+.method public static a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
     .locals 20
 
     move-object/from16 v0, p0
@@ -196,17 +196,17 @@
 
     .line 4
     :cond_0
-    invoke-virtual/range {p1 .. p1}, Lcom/vkontakte/android/u;->c()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vtosters/lite/u;->c()I
 
     move-result v2
 
     .line 5
-    invoke-virtual/range {p1 .. p1}, Lcom/vkontakte/android/u;->e()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual/range {p1 .. p1}, Lcom/vtosters/lite/u;->e()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v3
 
     .line 6
-    invoke-virtual/range {p1 .. p1}, Lcom/vkontakte/android/u;->d()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vtosters/lite/u;->d()I
 
     move-result v4
 
@@ -409,7 +409,7 @@
 
     .line 28
     :cond_7
-    new-instance v11, Lcom/vkontakte/android/v;
+    new-instance v11, Lcom/vtosters/lite/v;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -429,7 +429,7 @@
 
     move-result-object v12
 
-    invoke-direct {v11, v12, v3}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-direct {v11, v12, v3}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 29
     sget v12, Lcom/vk/core/view/links/a;->h:I
@@ -444,7 +444,7 @@
     invoke-virtual {v11, v12}, Lcom/vk/core/view/links/a;->a(Landroid/graphics/Typeface;)V
 
     .line 31
-    invoke-virtual {v1, v11}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v11}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     const/4 v12, 0x2
 
@@ -570,7 +570,7 @@
 
     .line 45
     :cond_b
-    new-instance v9, Lcom/vkontakte/android/v;
+    new-instance v9, Lcom/vtosters/lite/v;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -590,10 +590,10 @@
 
     move-result-object v11
 
-    invoke-direct {v9, v11, v3}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-direct {v9, v11, v3}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 46
-    invoke-virtual {v1, v9}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v9}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     move/from16 v11, v17
 
@@ -758,12 +758,12 @@
     move-result-object v9
 
     .line 66
-    new-instance v13, Lcom/vkontakte/android/v;
+    new-instance v13, Lcom/vtosters/lite/v;
 
-    invoke-direct {v13, v9, v3}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-direct {v13, v9, v3}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 67
-    invoke-virtual {v1, v13}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v13}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     if-eqz v11, :cond_13
 
@@ -901,7 +901,7 @@
     sub-int v15, v13, v14
 
     .line 84
-    new-instance v10, Lcom/vkontakte/android/v;
+    new-instance v10, Lcom/vtosters/lite/v;
 
     move-object/from16 v19, v3
 
@@ -913,10 +913,10 @@
 
     move-result-object v3
 
-    invoke-direct {v10, v3}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {v10, v3}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     .line 85
-    invoke-virtual {v1, v10}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v10}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     .line 86
     sget v3, Lcom/vk/core/view/links/a;->h:I
@@ -1045,7 +1045,7 @@
     sub-int v12, v8, v9
 
     .line 100
-    new-instance v13, Lcom/vkontakte/android/v;
+    new-instance v13, Lcom/vtosters/lite/v;
 
     const/4 v14, 0x1
 
@@ -1053,10 +1053,10 @@
 
     move-result-object v15
 
-    invoke-direct {v13, v15}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {v13, v15}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     .line 101
-    invoke-virtual {v1, v13}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v13}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     if-eqz v11, :cond_1c
 
@@ -1110,7 +1110,7 @@
 
     .line 108
     :cond_1e
-    invoke-static {v6, v1, v5}, Lcom/vk/common/links/b;->a(Landroid/text/SpannableStringBuilder;Lcom/vkontakte/android/u;Ljava/util/ArrayList;)V
+    invoke-static {v6, v1, v5}, Lcom/vk/common/links/b;->a(Landroid/text/SpannableStringBuilder;Lcom/vtosters/lite/u;Ljava/util/ArrayList;)V
 
     :cond_1f
     and-int/lit8 v3, v2, 0x8
@@ -1172,7 +1172,7 @@
     if-nez v7, :cond_23
 
     .line 114
-    new-instance v4, Lcom/vkontakte/android/v;
+    new-instance v4, Lcom/vtosters/lite/v;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1194,10 +1194,10 @@
 
     move-object/from16 v8, v19
 
-    invoke-direct {v4, v7, v8}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-direct {v4, v7, v8}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 115
-    invoke-virtual {v1, v4}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v4}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     .line 116
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->start()I
@@ -1220,7 +1220,7 @@
     move-object/from16 v8, v19
 
     .line 117
-    new-instance v4, Lcom/vkontakte/android/v;
+    new-instance v4, Lcom/vtosters/lite/v;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1262,10 +1262,10 @@
 
     move-result-object v7
 
-    invoke-direct {v4, v7, v8}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-direct {v4, v7, v8}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 118
-    invoke-virtual {v1, v4}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {v1, v4}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     if-eqz v11, :cond_24
 
@@ -1423,12 +1423,12 @@
     if-lez v2, :cond_2f
 
     .line 135
-    invoke-virtual/range {p1 .. p1}, Lcom/vkontakte/android/u;->b()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vtosters/lite/u;->b()I
 
     move-result v2
 
     .line 136
-    invoke-virtual/range {p1 .. p1}, Lcom/vkontakte/android/u;->f()Lcom/vk/common/k/b;
+    invoke-virtual/range {p1 .. p1}, Lcom/vtosters/lite/u;->f()Lcom/vk/common/k/b;
 
     move-result-object v1
 
@@ -1541,13 +1541,13 @@
 
     .line 145
     :cond_2e
-    new-instance v7, Lcom/vkontakte/android/v;
+    new-instance v7, Lcom/vtosters/lite/v;
 
     new-instance v8, Lcom/vk/common/links/b$a;
 
     invoke-direct {v8, v1, v10}, Lcom/vk/common/links/b$a;-><init>(Lcom/vk/common/k/b;I)V
 
-    invoke-direct {v7, v8}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v7, v8}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     const/4 v8, 0x1
 
@@ -1802,9 +1802,9 @@
     move-result-object p0
 
     .line 199
-    new-instance p1, Lcom/vkontakte/android/t;
+    new-instance p1, Lcom/vtosters/lite/t;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/t;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/t;-><init>()V
 
     .line 200
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
@@ -1988,13 +1988,13 @@
     return-void
 .end method
 
-.method private static a(Landroid/text/SpannableStringBuilder;Lcom/vkontakte/android/u;Ljava/util/ArrayList;)V
+.method private static a(Landroid/text/SpannableStringBuilder;Lcom/vtosters/lite/u;Ljava/util/ArrayList;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/text/SpannableStringBuilder;",
-            "Lcom/vkontakte/android/u;",
+            "Lcom/vtosters/lite/u;",
             "Ljava/util/ArrayList<",
             "Lcom/vk/common/links/b$b;",
             ">;)V"
@@ -2002,17 +2002,17 @@
     .end annotation
 
     .line 155
-    invoke-virtual {p1}, Lcom/vkontakte/android/u;->e()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p1}, Lcom/vtosters/lite/u;->e()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
     .line 156
-    invoke-virtual {p1}, Lcom/vkontakte/android/u;->a()Landroid/os/Bundle;
+    invoke-virtual {p1}, Lcom/vtosters/lite/u;->a()Landroid/os/Bundle;
 
     move-result-object v1
 
     .line 157
-    invoke-virtual {p1}, Lcom/vkontakte/android/u;->d()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/u;->d()I
 
     move-result v2
 
@@ -2093,12 +2093,12 @@
     move-result-object v7
 
     .line 166
-    new-instance v8, Lcom/vkontakte/android/v;
+    new-instance v8, Lcom/vtosters/lite/v;
 
-    invoke-direct {v8, v7, v0, v1}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;Landroid/os/Bundle;)V
+    invoke-direct {v8, v7, v0, v1}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;Landroid/os/Bundle;)V
 
     .line 167
-    invoke-virtual {p1, v8}, Lcom/vkontakte/android/u;->a(Lcom/vkontakte/android/v;)V
+    invoke-virtual {p1, v8}, Lcom/vtosters/lite/u;->a(Lcom/vtosters/lite/v;)V
 
     if-eqz v2, :cond_3
 
@@ -2119,13 +2119,13 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    const-class v0, Lcom/vkontakte/android/v;
+    const-class v0, Lcom/vtosters/lite/v;
 
     invoke-virtual {p0, v5, p1, v0}, Landroid/text/SpannableStringBuilder;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, [Lcom/vkontakte/android/v;
+    check-cast p1, [Lcom/vtosters/lite/v;
 
     const/16 v0, 0x28
 

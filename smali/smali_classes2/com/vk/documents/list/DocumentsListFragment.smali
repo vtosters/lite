@@ -3,8 +3,8 @@
 .source "DocumentsListFragment.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/fragments/p2/c;
-.implements Lcom/vkontakte/android/fragments/p2/d;
+.implements Lcom/vtosters/lite/fragments/p2/c;
+.implements Lcom/vtosters/lite/fragments/p2/d;
 
 
 # annotations
@@ -365,7 +365,7 @@
 
     neg-int v1, v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/data/Groups;->d(I)Z
+    invoke-static {v1}, Lcom/vtosters/lite/data/Groups;->d(I)Z
 
     move-result v1
 
@@ -481,7 +481,7 @@
     .line 2
     new-instance p1, Lcom/vk/documents/list/a;
 
-    invoke-direct {p1, p0, p0}, Lcom/vk/documents/list/a;-><init>(Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;)V
+    invoke-direct {p1, p0, p0}, Lcom/vk/documents/list/a;-><init>(Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;)V
 
     iput-object p1, p0, Lcom/vk/documents/list/DocumentsListFragment;->F:Lcom/vk/documents/list/a;
 

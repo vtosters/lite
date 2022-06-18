@@ -1,5 +1,5 @@
 .class public final Lcom/vk/music/subscription/d/a$a$a;
-.super Lcom/vkontakte/android/data/PurchasesManager$p;
+.super Lcom/vtosters/lite/data/PurchasesManager$p;
 .source "DefaultBuyMusicSubscriptionButtonModel.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/subscription/d/a$a$a;->a:Lcom/vk/music/subscription/d/a$a;
 
-    invoke-direct {p0}, Lcom/vkontakte/android/data/PurchasesManager$p;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/data/PurchasesManager$p;-><init>()V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/music/subscription/d/a$a$a$a;-><init>(Lcom/vk/music/subscription/d/a$a$a;Lcom/vk/dto/common/data/e;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method

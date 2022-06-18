@@ -74,7 +74,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/fragments/y0;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/y0;->setArguments(Landroid/os/Bundle;)V
 
     return-object p1
 .end method

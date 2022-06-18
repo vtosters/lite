@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/holders/StoriesBlockHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoriesBlockHolder.kt"
 
 # interfaces
@@ -16,7 +16,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;>;",
@@ -79,7 +79,7 @@
 
     invoke-direct {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p5, p0, Lcom/vk/stories/holders/StoriesBlockHolder;->f:Lcom/vk/stories/StoriesController$SourceType;
 
@@ -768,7 +768,7 @@
     invoke-virtual {v0, v2}, Lcom/vk/stories/holders/StoriesBlockHolder$b;->b(Z)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     return-void
 .end method
@@ -1013,11 +1013,11 @@
     const-string p1, "stories_discover_seen_in_feed"
 
     .line 20
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     :cond_b
     return-void
@@ -1247,7 +1247,7 @@
     if-eqz v4, :cond_1
 
     .line 6
-    invoke-virtual {v4}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v5
 

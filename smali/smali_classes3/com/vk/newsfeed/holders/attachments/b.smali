@@ -52,7 +52,7 @@
 
     sget v0, Lcom/vk/stickers/v;->d:I
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -84,7 +84,7 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/StickerAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     if-eqz v0, :cond_2
 
@@ -114,9 +114,9 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/b;->I:Lcom/vk/stickers/views/animation/VKAnimationView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/StickerAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/StickerAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/StickerAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/StickerAttachment;->x1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -126,7 +126,7 @@
 
     const/4 v2, 0x0
 
-    iget p1, p1, Lcom/vkontakte/android/attachments/StickerAttachment;->e:I
+    iget p1, p1, Lcom/vtosters/lite/attachments/StickerAttachment;->e:I
 
     invoke-virtual {v0, v1, v2, p1}, Lcom/vk/stickers/views/animation/VKAnimationView;->a(Ljava/lang/String;ZI)V
 

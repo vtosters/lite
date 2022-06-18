@@ -15,7 +15,7 @@
     value = {
         "Lcom/vk/lists/i0<",
         "Lcom/vk/dto/common/RecommendedProfile;",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "*>;>;"
     }
 .end annotation
@@ -112,14 +112,14 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method private final a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
@@ -144,14 +144,14 @@
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/newsfeed/holders/k;)Lcom/vkontakte/android/ui/b0/i;
+.method private final a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/newsfeed/holders/k;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/common/RecommendedProfile;",
             ">;"
         }
@@ -303,12 +303,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;I)V"
         }
     .end annotation
@@ -357,7 +357,7 @@
 
     iget-object p2, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->c:Lcom/vk/dto/newsfeed/entries/AbstractProfilesRecommendations$InfoCard;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -677,9 +677,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vkontakte/android/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -688,21 +688,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;"
         }
     .end annotation
@@ -726,7 +726,7 @@
 
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/k0;-><init>(Landroid/view/ViewGroup;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vkontakte/android/ui/b0/i;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
 
     goto :goto_0
 
@@ -744,7 +744,7 @@
 
     invoke-direct {p2, p1}, Lcom/vk/newsfeed/holders/n;-><init>(Landroid/view/ViewGroup;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vkontakte/android/ui/b0/i;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
 
     goto :goto_0
 
@@ -762,7 +762,7 @@
 
     .line 6
     :cond_3
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p2
 

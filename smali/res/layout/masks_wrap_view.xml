@@ -10,7 +10,7 @@
         <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center|top" android:id="@id/masks_wrap_action_text" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="134.0dip" android:shadowColor="#99000000" android:shadowDy="2.0" android:shadowRadius="8.0" android:textAllCaps="true" />
     </FrameLayout>
     <FrameLayout android:layout_gravity="center" android:id="@id/masks_wrap_progress" android:background="@drawable/bg_mask_load_progress" android:padding="2.0dip" android:visibility="gone" android:layout_width="68.0dip" android:layout_height="68.0dip" android:foreground="@drawable/highlight_circle_white">
-        <com.vkontakte.android.ui.CircularProgressView android:layout_gravity="center" android:id="@id/masks_wrap_progress_circular" android:layout_width="64.0dip" android:layout_height="64.0dip" app:cpv_animAutostart="true" app:cpv_animSwoopDuration="0" app:cpv_color="#ffffffff" app:cpv_indeterminate="false" app:cpv_maxProgress="1.0" app:cpv_thickness="2.5dip" />
+        <com.vtosters.lite.ui.CircularProgressView android:layout_gravity="center" android:id="@id/masks_wrap_progress_circular" android:layout_width="64.0dip" android:layout_height="64.0dip" app:cpv_animAutostart="true" app:cpv_animSwoopDuration="0" app:cpv_color="#ffffffff" app:cpv_indeterminate="false" app:cpv_maxProgress="1.0" app:cpv_thickness="2.5dip" />
         <ImageView android:layout_gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close_shadow_48" android:tint="#ffffffff" />
     </FrameLayout>
 </merge>

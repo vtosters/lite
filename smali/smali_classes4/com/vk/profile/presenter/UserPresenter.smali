@@ -14,7 +14,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/presenter/BaseProfilePresenter<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
 .end annotation
@@ -154,7 +154,7 @@
         value = {
             "(",
             "Lcom/vk/newsfeed/contracts/u<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;",
             "Lcom/vk/music/player/d;",
             ")V"
@@ -246,11 +246,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->c(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->c(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-void
 .end method
@@ -303,11 +303,11 @@
     return-void
 .end method
 
-.method private final c(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method private final c(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 9
 
     .line 17
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/ExtendedUserProfile;->b()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/ExtendedUserProfile;->b()Z
 
     move-result v0
 
@@ -317,7 +317,7 @@
 
     .line 18
     :cond_0
-    iget-object v0, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object v0, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
@@ -343,7 +343,7 @@
     move-result-object v2
 
     .line 20
-    iget-object v3, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object v3, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     const-string p2, "container"
 
@@ -497,20 +497,20 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 35
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/profile/presenter/UserPresenter;->e(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/profile/presenter/UserPresenter;->e(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     goto :goto_0
 
@@ -526,13 +526,13 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)V
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)V
     .locals 0
 
     .line 7
-    iget-object p2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
-    invoke-static {p1, p2, p3}, Lcom/vkontakte/android/fragments/gifts/h;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
+    invoke-static {p1, p2, p3}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -552,7 +552,7 @@
     return-void
 .end method
 
-.method public final a(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final a(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 11
 
     .line 9
@@ -561,7 +561,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -569,7 +569,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/ExtendedUserProfile;->b()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/ExtendedUserProfile;->b()Z
 
     move-result v1
 
@@ -584,24 +584,24 @@
 
     .line 12
     :cond_0
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-boolean v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/ExtendedUserProfile;->b()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/ExtendedUserProfile;->b()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 13
-    iget-boolean p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Z)V
 
@@ -616,7 +616,7 @@
     invoke-direct {v1, v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 15
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -651,7 +651,7 @@
     .line 18
     new-instance v3, Lcom/vk/profile/presenter/UserPresenter$d;
 
-    invoke-direct {v3, p0, p1, p2, v0}, Lcom/vk/profile/presenter/UserPresenter$d;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/content/Context;)V
+    invoke-direct {v3, p0, p1, p2, v0}, Lcom/vk/profile/presenter/UserPresenter$d;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/content/Context;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -659,7 +659,7 @@
 
     .line 19
     :cond_2
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/ExtendedUserProfile;->b()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/ExtendedUserProfile;->b()Z
 
     move-result v2
 
@@ -671,7 +671,7 @@
 
     if-eqz v2, :cond_3
 
-    iget-boolean v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     if-eqz v2, :cond_3
 
@@ -710,7 +710,7 @@
     .line 24
     new-instance v3, Lcom/vk/profile/presenter/UserPresenter$e;
 
-    invoke-direct {v3, p0, p1, p2, v0}, Lcom/vk/profile/presenter/UserPresenter$e;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/content/Context;)V
+    invoke-direct {v3, p0, p1, p2, v0}, Lcom/vk/profile/presenter/UserPresenter$e;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/content/Context;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -718,13 +718,13 @@
 
     .line 25
     :cond_3
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/ExtendedUserProfile;->b()Z
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/ExtendedUserProfile;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    iget-boolean v2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean v2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     if-nez v2, :cond_4
 
@@ -749,7 +749,7 @@
     .line 28
     new-instance v0, Lcom/vk/profile/presenter/UserPresenter$f;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter$f;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter$f;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     invoke-virtual {v1, v2, v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -797,7 +797,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -805,7 +805,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
+    iput-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
     .line 2
     :cond_0
@@ -825,7 +825,7 @@
     invoke-super {p0, p1}, Lcom/vk/newsfeed/presenters/i;->b(Landroid/os/Bundle;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -836,7 +836,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->c(I)Lcom/vk/dto/user/UserProfile;
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->c(I)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 
@@ -845,19 +845,19 @@
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
     .line 6
-    iput-boolean v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->G1:Z
+    iput-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->G1:Z
 
     .line 7
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-interface {v1, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 8
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
@@ -867,10 +867,10 @@
     invoke-interface {v1}, Lcom/vk/newsfeed/contracts/u;->a1()V
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 10
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result p1
 
@@ -895,7 +895,7 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -913,7 +913,7 @@
 
     .line 13
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -921,19 +921,19 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
     .line 14
-    iput-boolean v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->G1:Z
+    iput-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->G1:Z
 
     .line 15
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 16
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
@@ -943,13 +943,13 @@
     invoke-interface {v0}, Lcom/vk/newsfeed/contracts/u;->a1()V
 
     .line 17
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     :cond_2
     return-void
 .end method
 
-.method public final b(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final b(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 8
 
     .line 18
@@ -976,7 +976,7 @@
 
     new-instance v4, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;
 
-    invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$1;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     const v1, 0x7f1212ee
 
@@ -1000,7 +1000,7 @@
 
     new-instance v4, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;
 
-    invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v4, p2}, Lcom/vk/profile/presenter/UserPresenter$openCalls$2;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     const v1, 0x7f1212ef
 
@@ -1074,11 +1074,11 @@
     return-void
 .end method
 
-.method public final c(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final c(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 5
 
     .line 1
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->e(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/d;->e(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -1110,7 +1110,7 @@
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, p2, p1, v3}, Lcom/vk/profile/presenter/UserPresenter$j;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v2, p2, p1, v3}, Lcom/vk/profile/presenter/UserPresenter$j;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/content/Context;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {v0, v1, v2}, Lcom/vk/hints/HintsManager$b;-><init>(Ljava/lang/String;Lcom/vk/hints/HintsManager$a;)V
@@ -1171,26 +1171,26 @@
 
     .line 8
     :cond_1
-    new-instance v0, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;-><init>()V
 
     .line 9
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->c(I)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->c(I)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 10
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->A1:Lcom/vk/dto/money/MoneyReceiverInfo;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->A1:Lcom/vk/dto/money/MoneyReceiverInfo;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->a(Lcom/vk/dto/money/MoneyReceiverInfo;)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->a(Lcom/vk/dto/money/MoneyReceiverInfo;)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 11
-    iget-object p2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
-    invoke-virtual {v0, p2}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v0, p2}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 12
     invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -1234,7 +1234,7 @@
     return-void
 .end method
 
-.method public final d(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final d(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 2
 
     .line 3
@@ -1244,7 +1244,7 @@
 
     move-result-object v0
 
-    iget-object p2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p2, p2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -1288,7 +1288,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/api/friends/b;->e(Ljava/lang/String;)Lcom/vk/api/friends/b;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -1296,7 +1296,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->C1:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->C1:Z
 
     if-eq v0, v1, :cond_0
 
@@ -1312,7 +1312,7 @@
     return-object p1
 .end method
 
-.method public final e(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public final e(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 4
 
     .line 11
@@ -1434,13 +1434,13 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/api/execute/h;
+    new-instance v0, Lcom/vtosters/lite/api/execute/h;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
 
@@ -1454,7 +1454,7 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vkontakte/android/api/execute/h;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/api/execute/h;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;

@@ -212,7 +212,7 @@
     .line 11
     iget-object v1, p0, Lcom/vk/newsfeed/holders/c1/c;->P:Landroid/text/SpannableStringBuilder;
 
-    invoke-static {p1}, Lcom/vkontakte/android/attachments/a;->b(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->b(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -22,9 +22,9 @@
     iput-boolean v0, p0, Lcom/vk/wall/c;->a:Z
 
     .line 3
-    sget-object v0, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v0, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/o0/a$a;->d()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/o0/a$a;->d()I
 
     move-result v0
 
@@ -33,12 +33,12 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/NewsComment;)Ljava/util/List;
+.method private final a(Lcom/vtosters/lite/NewsComment;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/NewsComment;",
+            "Lcom/vtosters/lite/NewsComment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/wall/b;",
@@ -47,13 +47,13 @@
     .end annotation
 
     .line 14
-    iget-object v0, p1, Lcom/vkontakte/android/NewsComment;->S:Ljava/util/List;
+    iget-object v0, p1, Lcom/vtosters/lite/NewsComment;->S:Ljava/util/List;
 
     const-string v1, "parent.thread"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/wall/c;->a(Lcom/vkontakte/android/NewsComment;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/wall/c;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
@@ -80,15 +80,15 @@
     return-object p0
 .end method
 
-.method public final a(Lcom/vkontakte/android/NewsComment;Ljava/util/List;)Ljava/util/List;
+.method public final a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/NewsComment;",
+            "Lcom/vtosters/lite/NewsComment;",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsComment;",
+            "Lcom/vtosters/lite/NewsComment;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/vk/wall/b;",
@@ -116,14 +116,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/NewsComment;
+    check-cast v3, Lcom/vtosters/lite/NewsComment;
 
     .line 18
     new-instance v4, Lcom/vk/wall/b;
 
     iget v5, p0, Lcom/vk/wall/c;->b:I
 
-    invoke-direct {v4, v3, p1, v5}, Lcom/vk/wall/b;-><init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;I)V
+    invoke-direct {v4, v3, p1, v5}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;I)V
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -142,7 +142,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsComment;",
+            "Lcom/vtosters/lite/NewsComment;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/vk/wall/b;",
@@ -176,16 +176,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/NewsComment;
+    check-cast v1, Lcom/vtosters/lite/NewsComment;
 
     .line 5
-    iget-boolean v2, v1, Lcom/vkontakte/android/NewsComment;->J:Z
+    iget-boolean v2, v1, Lcom/vtosters/lite/NewsComment;->J:Z
 
     if-eqz v2, :cond_1
 
-    sget-object v2, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v2, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/o0/a$a;->b()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/o0/a$a;->b()I
 
     move-result v2
 
@@ -193,9 +193,9 @@
 
     .line 6
     :cond_1
-    sget-object v2, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v2, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/o0/a$a;->c()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/o0/a$a;->c()I
 
     move-result v2
 
@@ -215,12 +215,12 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/wall/b;-><init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;IILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 8
-    iget-object v2, v1, Lcom/vkontakte/android/NewsComment;->S:Ljava/util/List;
+    iget-object v2, v1, Lcom/vtosters/lite/NewsComment;->S:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -229,7 +229,7 @@
     if-lez v2, :cond_0
 
     .line 9
-    invoke-direct {p0, v1}, Lcom/vk/wall/c;->a(Lcom/vkontakte/android/NewsComment;)Ljava/util/List;
+    invoke-direct {p0, v1}, Lcom/vk/wall/c;->a(Lcom/vtosters/lite/NewsComment;)Ljava/util/List;
 
     move-result-object v3
 
@@ -240,7 +240,7 @@
 
     if-eqz v3, :cond_2
 
-    iget v3, v1, Lcom/vkontakte/android/NewsComment;->R:I
+    iget v3, v1, Lcom/vtosters/lite/NewsComment;->R:I
 
     if-le v3, v2, :cond_2
 
@@ -249,9 +249,9 @@
 
     const/4 v4, 0x0
 
-    sget-object v2, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v2, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/o0/a$a;->h()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/o0/a$a;->h()I
 
     move-result v5
 
@@ -263,13 +263,13 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/wall/b;-><init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;IILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 12
     :cond_2
-    iget-boolean v2, v1, Lcom/vkontakte/android/NewsComment;->T:Z
+    iget-boolean v2, v1, Lcom/vtosters/lite/NewsComment;->T:Z
 
     if-eqz v2, :cond_0
 
@@ -278,9 +278,9 @@
 
     const/4 v4, 0x0
 
-    sget-object v2, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v2, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/o0/a$a;->e()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/o0/a$a;->e()I
 
     move-result v5
 
@@ -292,7 +292,7 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/wall/b;-><init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;IILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

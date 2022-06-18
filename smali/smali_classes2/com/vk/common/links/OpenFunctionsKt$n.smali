@@ -58,7 +58,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/j2$g;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -76,18 +76,18 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p1, Lcom/vk/dto/group/Group;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->j()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->j()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 5
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->b:Landroid/content/Context;

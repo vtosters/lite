@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/items/t;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/t;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/t;
     .locals 2
 
     .line 1
@@ -58,7 +58,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/t;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/t;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/view/View$OnClickListener;)V
 
     return-object v0
 .end method
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$headerButtons$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/t;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$headerButtons$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/t;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(Lcom/vkontakte/android/api/d;Lcom/vk/core/fragments/b;Lcom/vkontakte/android/api/i;Ljava/lang/String;)V
+    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(Lcom/vtosters/lite/api/d;Lcom/vk/core/fragments/b;Lcom/vtosters/lite/api/i;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,16 +27,16 @@
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vkontakte/android/api/i;
+.field final synthetic $profile:Lcom/vtosters/lite/api/i;
 
 .field final synthetic $source:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/i;Ljava/lang/String;)V
+.method constructor <init>(Lcom/vtosters/lite/api/i;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vtosters/lite/api/i;
 
     iput-object p2, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$source:Ljava/lang/String;
 
@@ -63,9 +63,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vtosters/lite/api/i;
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 

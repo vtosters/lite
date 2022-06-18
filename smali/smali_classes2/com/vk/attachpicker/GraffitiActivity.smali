@@ -1,5 +1,5 @@
 .class public Lcom/vk/attachpicker/GraffitiActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "GraffitiActivity.java"
 
 
@@ -58,7 +58,7 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/core/util/j1;
@@ -604,7 +604,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -1058,10 +1058,10 @@
     const-string v2, "result_new_graffiti"
 
     .line 7
-    new-instance v10, Lcom/vkontakte/android/attachments/PendingGraffitiAttachment;
+    new-instance v10, Lcom/vtosters/lite/attachments/PendingGraffitiAttachment;
 
     .line 8
-    invoke-static {}, Lcom/vkontakte/android/upload/Upload;->a()I
+    invoke-static {}, Lcom/vtosters/lite/upload/Upload;->a()I
 
     move-result v4
 
@@ -1087,7 +1087,7 @@
 
     move-object v3, v10
 
-    invoke-direct/range {v3 .. v9}, Lcom/vkontakte/android/attachments/PendingGraffitiAttachment;-><init>(IILjava/lang/String;IILjava/lang/String;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vtosters/lite/attachments/PendingGraffitiAttachment;-><init>(IILjava/lang/String;IILjava/lang/String;)V
 
     .line 9
     invoke-virtual {v1, v2, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
@@ -1098,7 +1098,7 @@
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 11
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1229,7 +1229,7 @@
 
     .line 13
     :cond_2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :goto_0
     return-void
@@ -1250,7 +1250,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     const p1, 0x7f0d0434
 
@@ -1729,7 +1729,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->M:Landroid/view/OrientationEventListener;
@@ -1743,7 +1743,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/attachpicker/GraffitiActivity;->M:Landroid/view/OrientationEventListener;

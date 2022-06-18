@@ -138,23 +138,23 @@
     if-eqz v0, :cond_3
 
     .line 9
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     const-string v0, "https://m.vk.com/privacy"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->h()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->h()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->l()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->l()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 12
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 13
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->k()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->k()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 14
     iget-object v0, p0, Lb/h/a/a$e;->a:Lb/h/a/a;
@@ -182,23 +182,23 @@
     if-eqz v0, :cond_4
 
     .line 16
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     const-string v0, "https://m.vk.com/terms"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 17
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->h()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->h()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 18
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->l()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->l()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 19
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 20
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->k()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->k()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 21
     iget-object v0, p0, Lb/h/a/a$e;->a:Lb/h/a/a;
@@ -226,11 +226,11 @@
     if-eqz v0, :cond_5
 
     .line 23
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     const-string v0, "file:///android_asset/license.html"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 24
     iget-object v0, p0, Lb/h/a/a$e;->a:Lb/h/a/a;
@@ -241,7 +241,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 25
     iget-object v0, p0, Lb/h/a/a$e;->a:Lb/h/a/a;
@@ -269,23 +269,23 @@
     if-eqz v0, :cond_6
 
     .line 27
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     const-string v0, "https://m.vk.com/privacy/cookies"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 28
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->l()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->l()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 29
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 30
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->h()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->h()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 31
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->j()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->j()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 32
     iget-object v0, p0, Lb/h/a/a$e;->a:Lb/h/a/a;
@@ -313,20 +313,20 @@
     if-eqz p1, :cond_7
 
     .line 34
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     const-string v0, "https://vk.com/data_protection"
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 35
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->l()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->l()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 36
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 37
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/j2$g;->k()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/j2$g;->k()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 38
     iget-object v0, p0, Lb/h/a/a$e;->a:Lb/h/a/a;

@@ -285,7 +285,7 @@
     const v14, 0x7f080967
 
     .line 11
-    invoke-static {v13, v14}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v13, v14}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     const-string v14, "toolbar"
 
@@ -461,7 +461,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v3, v2}, Lcom/vk/common/view/h$a;->a(Landroid/content/Context;I)Lcom/vkontakte/android/ui/widget/v;
+    invoke-virtual {v1, v3, v2}, Lcom/vk/common/view/h$a;->a(Landroid/content/Context;I)Lcom/vtosters/lite/ui/widget/v;
 
     move-result-object v1
 
@@ -477,7 +477,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 26
-    invoke-interface {v1, v0}, Lcom/vkontakte/android/ui/widget/g;->a(Lcom/vk/dto/newsfeed/entries/widget/Widget;)V
+    invoke-interface {v1, v0}, Lcom/vtosters/lite/ui/widget/g;->a(Lcom/vk/dto/newsfeed/entries/widget/Widget;)V
 
     const v0, 0x7f0a02c7
 

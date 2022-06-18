@@ -621,7 +621,7 @@
 
     if-eqz v0, :cond_2
 
-    check-cast v0, Lcom/vkontakte/android/TabletDialogActivity;
+    check-cast v0, Lcom/vtosters/lite/TabletDialogActivity;
 
     .line 4
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
@@ -666,10 +666,10 @@
 
     .line 6
     :goto_1
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/TabletDialogActivity;->f(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/TabletDialogActivity;->f(I)V
 
     .line 7
-    invoke-virtual {v0}, Lcom/vkontakte/android/TabletDialogActivity;->z1()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/TabletDialogActivity;->z1()V
 
     goto :goto_2
 
@@ -732,7 +732,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->G:Ljava/util/ArrayList;
 
     .line 5
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1291,20 +1291,20 @@
 
     move-result-object v0
 
-    instance-of v2, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v2, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_2
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     .line 5
     :cond_2
@@ -1417,7 +1417,7 @@
 
     move-result-object p2
 
-    instance-of p2, p2, Lcom/vkontakte/android/TabletDialogActivity;
+    instance-of p2, p2, Lcom/vtosters/lite/TabletDialogActivity;
 
     iput-boolean p2, p0, Lcom/vk/newsfeed/posting/PostingFragment;->I:Z
 
@@ -1504,20 +1504,20 @@
 
     move-result-object p1
 
-    instance-of p2, p1, Lcom/vkontakte/android/VKActivity;
+    instance-of p2, p1, Lcom/vtosters/lite/VKActivity;
 
     if-nez p2, :cond_1
 
     move-object p1, v0
 
     :cond_1
-    check-cast p1, Lcom/vkontakte/android/VKActivity;
+    check-cast p1, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p1, :cond_2
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/VKActivity;->h(Z)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/VKActivity;->h(Z)V
 
     :cond_2
     return-void

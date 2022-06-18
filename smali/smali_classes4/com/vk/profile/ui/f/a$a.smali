@@ -44,11 +44,11 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/vkontakte/android/k0/b;
+.field private final d:Lcom/vtosters/lite/k0/b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;Lcom/vkontakte/android/k0/b;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;Lcom/vtosters/lite/k0/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -62,7 +62,7 @@
             "Lcom/vk/profile/ui/f/a$c;",
             "Lkotlin/m;",
             ">;",
-            "Lcom/vkontakte/android/k0/b;",
+            "Lcom/vtosters/lite/k0/b;",
             ")V"
         }
     .end annotation
@@ -74,12 +74,12 @@
 
     iput-object p3, p0, Lcom/vk/profile/ui/f/a$a;->c:Lkotlin/jvm/b/b;
 
-    iput-object p4, p0, Lcom/vk/profile/ui/f/a$a;->d:Lcom/vkontakte/android/k0/b;
+    iput-object p4, p0, Lcom/vk/profile/ui/f/a$a;->d:Lcom/vtosters/lite/k0/b;
 
     const p2, 0x7f0d0306
 
     .line 2
-    invoke-static {p0, p2}, Lcom/vkontakte/android/f0;->b(Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-static {p0, p2}, Lcom/vtosters/lite/f0;->b(Landroid/view/ViewGroup;I)Landroid/view/View;
 
     const/4 p2, 0x1
 
@@ -150,11 +150,11 @@
 
 
 # virtual methods
-.method public final getDialog()Lcom/vkontakte/android/k0/b;
+.method public final getDialog()Lcom/vtosters/lite/k0/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/f/a$a;->d:Lcom/vkontakte/android/k0/b;
+    iget-object v0, p0, Lcom/vk/profile/ui/f/a$a;->d:Lcom/vtosters/lite/k0/b;
 
     return-object v0
 .end method

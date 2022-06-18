@@ -58,7 +58,7 @@
             "Landroid/location/Location;",
             ">;)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation

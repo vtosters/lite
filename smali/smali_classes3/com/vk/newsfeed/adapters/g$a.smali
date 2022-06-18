@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public static a(Lcom/vk/newsfeed/adapters/g;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vkontakte/android/ui/f0/b;)V
+.method public static a(Lcom/vk/newsfeed/adapters/g;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
     return-void

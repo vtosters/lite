@@ -3,7 +3,7 @@
 .source "NewsSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/ui/x$i;
+.implements Lcom/vtosters/lite/ui/x$i;
 
 
 # annotations

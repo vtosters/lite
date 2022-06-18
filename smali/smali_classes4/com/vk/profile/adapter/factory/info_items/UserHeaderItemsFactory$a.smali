@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Lcom/vk/profile/presenter/UserPresenter;
 
-.field final synthetic c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vk/profile/presenter/UserPresenter;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vk/profile/presenter/UserPresenter;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$a;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$a;->b:Lcom/vk/profile/presenter/UserPresenter;
 
-    iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$a;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$a;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,11 +54,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$a;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$a;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const-string v2, "profile_button"
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1043,7 +1043,7 @@
 
     const p2, 0x7f080376
 
-    invoke-static {p1, p2}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/notifications/NotificationsFragment;->G:Landroidx/appcompat/widget/Toolbar;
@@ -1060,7 +1060,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/notifications/NotificationsFragment;->G:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, p1}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     return-void
 .end method

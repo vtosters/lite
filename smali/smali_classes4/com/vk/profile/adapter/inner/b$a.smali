@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/inner/b$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "GoodsAdapter.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/common/Good;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$f;"
@@ -73,7 +73,7 @@
 
     move-result-object p2
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     .line 3
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -322,15 +322,15 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    sget-object v1, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;->group_module:Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    sget-object v1, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->group_module:Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     iget-object v2, p0, Lcom/vk/profile/adapter/inner/b$a;->g:Lcom/vk/dto/common/Good;
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;Lcom/vk/dto/common/Good;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;Lcom/vk/dto/common/Good;)V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

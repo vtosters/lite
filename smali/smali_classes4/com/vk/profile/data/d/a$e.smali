@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/d/a;->a(ILcom/vkontakte/android/api/i;)Lc/a/m;
+    value = Lcom/vk/profile/data/d/a;->a(ILcom/vtosters/lite/api/i;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,14 +31,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/i;
+.field final synthetic a:Lcom/vtosters/lite/api/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vtosters/lite/api/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/data/d/a$e;->a:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/data/d/a$e;->a:Lcom/vtosters/lite/api/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/VKList;)Lcom/vkontakte/android/api/i;
+.method public final a(Lcom/vk/dto/common/data/VKList;)Lcom/vtosters/lite/api/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,14 +55,14 @@
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/common/Good;",
             ">;)",
-            "Lcom/vkontakte/android/api/i;"
+            "Lcom/vtosters/lite/api/i;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/d/a$e;->a:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/data/d/a$e;->a:Lcom/vtosters/lite/api/i;
 
-    iput-object p1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->c1:Lcom/vk/dto/common/data/VKList;
+    iput-object p1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->c1:Lcom/vk/dto/common/data/VKList;
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/common/data/VKList;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/data/d/a$e;->a(Lcom/vk/dto/common/data/VKList;)Lcom/vkontakte/android/api/i;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/data/d/a$e;->a(Lcom/vk/dto/common/data/VKList;)Lcom/vtosters/lite/api/i;
 
     move-result-object p1
 

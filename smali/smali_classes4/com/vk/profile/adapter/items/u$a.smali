@@ -1,5 +1,5 @@
 .class final Lcom/vk/profile/adapter/items/u$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "InvitedByItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/u;",
         ">;"
     }
@@ -39,7 +39,7 @@
     const v0, 0x7f0d04b2
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -100,12 +100,12 @@
     .locals 14
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/u;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/u;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
     .line 2
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->z1:Lcom/vk/dto/common/e;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->z1:Lcom/vk/dto/common/e;
 
     .line 3
     instance-of v2, v1, Lcom/vk/dto/user/UserProfile;
@@ -134,7 +134,7 @@
     iget-object v2, v1, Lcom/vk/dto/user/UserProfile;->f:Ljava/lang/String;
 
     .line 5
-    iget v11, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget v11, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     if-nez v11, :cond_1
 
@@ -196,17 +196,17 @@
     aput-object v1, v10, v9
 
     .line 9
-    invoke-virtual {p0, v11, v10}, Lcom/vkontakte/android/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v11, v10}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 10
-    new-instance v7, Lcom/vkontakte/android/u;
+    new-instance v7, Lcom/vtosters/lite/u;
 
-    invoke-direct {v7}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v7}, Lcom/vtosters/lite/u;-><init>()V
 
     .line 11
-    invoke-virtual {v7, v6}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {v7, v6}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 12
     iget-object v6, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -223,10 +223,10 @@
 
     move-result v3
 
-    invoke-virtual {v7, v3}, Lcom/vkontakte/android/u;->c(I)V
+    invoke-virtual {v7, v3}, Lcom/vtosters/lite/u;->c(I)V
 
     .line 13
-    invoke-static {v1, v7}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {v1, v7}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -279,17 +279,17 @@
     aput-object v1, v10, v9
 
     .line 17
-    invoke-virtual {p0, v11, v10}, Lcom/vkontakte/android/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v11, v10}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 18
-    new-instance v7, Lcom/vkontakte/android/u;
+    new-instance v7, Lcom/vtosters/lite/u;
 
-    invoke-direct {v7}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v7}, Lcom/vtosters/lite/u;-><init>()V
 
     .line 19
-    invoke-virtual {v7, v6}, Lcom/vkontakte/android/u;->b(I)V
+    invoke-virtual {v7, v6}, Lcom/vtosters/lite/u;->b(I)V
 
     .line 20
     iget-object v6, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -306,10 +306,10 @@
 
     move-result v3
 
-    invoke-virtual {v7, v3}, Lcom/vkontakte/android/u;->c(I)V
+    invoke-virtual {v7, v3}, Lcom/vtosters/lite/u;->c(I)V
 
     .line 21
-    invoke-static {v1, v7}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {v1, v7}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -358,7 +358,7 @@
     .line 26
     iget-object v1, p0, Lcom/vk/profile/adapter/items/u$a;->d:Landroid/widget/TextView;
 
-    iget v2, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     if-nez v2, :cond_5
 
@@ -377,7 +377,7 @@
 
     new-instance v2, Lcom/vk/profile/adapter/items/u$a$a;
 
-    invoke-direct {v2, v0, p1}, Lcom/vk/profile/adapter/items/u$a$a;-><init>(Lcom/vkontakte/android/api/i;Lcom/vk/profile/adapter/items/u;)V
+    invoke-direct {v2, v0, p1}, Lcom/vk/profile/adapter/items/u$a$a;-><init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/adapter/items/u;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

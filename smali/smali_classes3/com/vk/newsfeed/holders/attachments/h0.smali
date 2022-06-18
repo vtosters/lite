@@ -99,7 +99,7 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment;
 
     if-eqz v0, :cond_0
 
@@ -110,9 +110,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment;->e:Ljava/util/List;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment;->e:Ljava/util/List;
 
     if-eq v0, p1, :cond_0
 

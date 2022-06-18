@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vkontakte/android/attachments/DocumentAttachment;)V
+    value = Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vtosters/lite/attachments/DocumentAttachment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $attach:Lcom/vkontakte/android/attachments/DocumentAttachment;
+.field final synthetic $attach:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
 .field final synthetic this$0:Lcom/vk/ui/photoviewer/BottomPanelController;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vkontakte/android/attachments/DocumentAttachment;)V
+.method constructor <init>(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vtosters/lite/attachments/DocumentAttachment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;->this$0:Lcom/vk/ui/photoviewer/BottomPanelController;
 
-    iput-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;->$attach:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iput-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;->$attach:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     const/4 p1, 0x1
 
@@ -56,9 +56,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;->this$0:Lcom/vk/ui/photoviewer/BottomPanelController;
 
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;->$attach:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;->$attach:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vkontakte/android/attachments/DocumentAttachment;Landroid/view/View;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vtosters/lite/attachments/DocumentAttachment;Landroid/view/View;)V
 
     return-void
 .end method

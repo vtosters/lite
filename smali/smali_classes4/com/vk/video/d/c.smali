@@ -9,7 +9,7 @@
 .implements Lcom/vk/navigation/c;
 .implements Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;
 .implements Lcom/vk/navigation/k;
-.implements Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$b;
+.implements Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;
 
 
 # annotations
@@ -86,7 +86,7 @@
 
 .field private X:Lcom/vk/libvideo/bottomsheet/ModalDialogsController;
 
-.field private Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+.field private Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
 .field private Z:Landroid/view/ViewGroup;
 
@@ -835,9 +835,9 @@
     invoke-direct {p0}, Lcom/vk/video/d/c;->q1()V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v0, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    new-instance v1, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    new-instance v1, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     iget v2, p1, Lcom/vk/dto/common/VideoFile;->a:I
 
@@ -845,9 +845,9 @@
 
     iget-object v4, p1, Lcom/vk/dto/common/VideoFile;->v0:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v2, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     const-wide/16 v3, 0x3e8
 
@@ -861,11 +861,11 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->a(Ljava/lang/Long;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->a(Ljava/lang/Long;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->a(Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->a(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1057,7 +1057,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vkontakte/android/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
 
     move-result-object v0
 
@@ -1314,11 +1314,11 @@
     return-void
 .end method
 
-.method static synthetic h(Lcom/vk/video/d/c;)Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+.method static synthetic h(Lcom/vk/video/d/c;)Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p0, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     return-object p0
 .end method
@@ -1637,10 +1637,10 @@
 
     aput-object v6, v4, v0
 
-    iget-object v6, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v6, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     .line 12
-    invoke-virtual {v6}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {v6}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object v6
 
@@ -1730,10 +1730,10 @@
 
     aput-object v6, v4, v0
 
-    iget-object v6, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v6, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     .line 24
-    invoke-virtual {v6}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {v6}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object v6
 
@@ -1860,11 +1860,11 @@
 
     iget-object v1, p0, Lcom/vk/video/d/c;->N:Landroid/content/Context;
 
-    new-instance v2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     iget-object v3, p0, Lcom/vk/video/d/c;->O:Lcom/vk/dto/common/VideoFile;
 
-    invoke-direct {v2, v3}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v2, v3}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     invoke-interface {v0, v1, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
@@ -1945,13 +1945,13 @@
         value = {
             "(I)",
             "Lc/a/t<",
-            "Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;",
+            "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    new-instance p1, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     iget-object v0, p0, Lcom/vk/video/d/c;->O:Lcom/vk/dto/common/VideoFile;
 
@@ -1961,7 +1961,7 @@
 
     iget-object v0, v0, Lcom/vk/dto/common/VideoFile;->v0:Ljava/lang/String;
 
-    invoke-direct {p1, v1, v2, v0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v2, v0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p1}, Lc/a/t;->b(Ljava/lang/Object;)Lc/a/t;
 
@@ -2084,17 +2084,17 @@
     if-eqz p1, :cond_0
 
     .line 6
-    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->e()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->e()V
 
     goto :goto_0
 
     .line 7
     :cond_0
-    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->a()V
 
     :goto_0
     return-void
@@ -2415,13 +2415,13 @@
     .end param
 
     .line 1
-    new-instance p2, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    new-instance p2, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-direct {p2, p1, p0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;-><init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$b;)V
+    invoke-direct {p2, p1, p0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;)V
 
-    iput-object p2, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iput-object p2, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     const/4 p1, 0x1
 
@@ -2438,9 +2438,9 @@
     check-cast p2, Landroid/view/ViewGroup;
 
     .line 4
-    iget-object v0, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object v0, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object v0
 
@@ -2906,9 +2906,9 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
     .line 58
-    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object p1
 
@@ -2925,9 +2925,9 @@
     invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
 
     .line 61
-    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    iget-object p1, p0, Lcom/vk/video/d/c;->Y:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object p1
 

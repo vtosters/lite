@@ -401,7 +401,7 @@
     const-string v2, "share_post"
 
     .line 13
-    invoke-static {v1, v2}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
 
     goto :goto_3
 

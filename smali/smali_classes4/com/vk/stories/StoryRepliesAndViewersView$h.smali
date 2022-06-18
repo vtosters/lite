@@ -68,7 +68,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$h$a;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView$h;)V
 
-    invoke-virtual {p2, p1}, Lcom/vkontakte/android/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vkontakte/android/ui/b0/l;
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
 
     return-object p2
 .end method

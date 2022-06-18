@@ -61,7 +61,7 @@
             "Lcom/vk/api/apps/o$b;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation

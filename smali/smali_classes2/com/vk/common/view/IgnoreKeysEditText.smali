@@ -1,5 +1,5 @@
 .class public final Lcom/vk/common/view/IgnoreKeysEditText;
-.super Lcom/vkontakte/android/ui/EditText;
+.super Lcom/vtosters/lite/ui/EditText;
 .source "IgnoreKeysEditText.kt"
 
 
@@ -22,7 +22,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/ui/EditText;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/EditText;-><init>(Landroid/content/Context;)V
 
     .line 2
     new-instance p1, Landroidx/collection/ArraySet;
@@ -38,7 +38,7 @@
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 4
     new-instance p1, Landroidx/collection/ArraySet;
@@ -54,7 +54,7 @@
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3}, Lcom/vkontakte/android/ui/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 6
     new-instance p1, Landroidx/collection/ArraySet;

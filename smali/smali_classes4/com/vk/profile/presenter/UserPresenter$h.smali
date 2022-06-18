@@ -47,15 +47,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/execute/g$a;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final a(Lcom/vtosters/lite/api/execute/g$a;)Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/execute/g$a<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/execute/g$a<",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;)",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;"
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;"
         }
     .end annotation
 
@@ -67,7 +67,7 @@
     invoke-static {v0, v1}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Z)V
 
     .line 2
-    iget-object p1, p1, Lcom/vkontakte/android/api/execute/g$a;->a:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/execute/g$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object p1
 .end method
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/execute/g$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/g$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/UserPresenter$h;->a(Lcom/vkontakte/android/api/execute/g$a;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/UserPresenter$h;->a(Lcom/vtosters/lite/api/execute/g$a;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 

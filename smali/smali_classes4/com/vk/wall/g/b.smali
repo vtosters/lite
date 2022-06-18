@@ -9,7 +9,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -21,10 +21,10 @@
             "(I",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsComment;",
+            "Lcom/vtosters/lite/NewsComment;",
             ">;)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -35,10 +35,10 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -49,7 +49,7 @@
         value = {
             "(ZZ)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -66,7 +66,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -77,7 +77,7 @@
         value = {
             "(I)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -90,7 +90,7 @@
             "Ljava/lang/String;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -119,7 +119,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation
@@ -130,7 +130,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/a;",
+            "Lcom/vtosters/lite/api/wall/a;",
             ">;"
         }
     .end annotation

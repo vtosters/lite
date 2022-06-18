@@ -234,7 +234,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
@@ -242,7 +242,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -263,7 +263,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
@@ -271,7 +271,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -300,7 +300,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
@@ -308,7 +308,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -329,13 +329,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -451,13 +451,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -471,13 +471,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -496,13 +496,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -516,13 +516,13 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -583,13 +583,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -609,13 +609,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -629,13 +629,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -825,13 +825,13 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -881,13 +881,13 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -915,7 +915,7 @@
     return-object v1
 .end method
 
-.method public final y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+.method public final y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
     .locals 3
 
     .line 1
@@ -937,14 +937,14 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v2, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     return-object v0
 .end method

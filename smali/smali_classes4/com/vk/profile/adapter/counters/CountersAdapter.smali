@@ -47,13 +47,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field private final e:Lcom/vk/profile/presenter/BaseProfilePresenter;
     .annotation system Ldalvik/annotation/Signature;
@@ -89,15 +89,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+.method public constructor <init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Lcom/vk/profile/presenter/BaseProfilePresenter<",
             "*>;)V"
         }
@@ -108,7 +108,7 @@
 
     iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->c:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput-object p3, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->e:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
@@ -131,7 +131,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->c:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     new-instance v3, Lcom/vk/profile/adapter/counters/CountersAdapter$1;
 
@@ -143,16 +143,16 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/e;
 
-    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iget-object p3, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -192,7 +192,7 @@
     check-cast p2, Lcom/vk/profile/data/CountersWrapper;
 
     .line 2
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 3
     invoke-virtual {p2}, Lcom/vk/profile/data/CountersWrapper;->h()Ljava/lang/String;
@@ -211,9 +211,9 @@
     .line 5
     check-cast p1, Lcom/vk/profile/adapter/counters/CountersAdapter$f;
 
-    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-void
 
@@ -227,18 +227,18 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->f(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 7
-    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object p2, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->b1:Ljava/util/List;
+    iget-object p2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->b1:Ljava/util/List;
 
     if-eqz p2, :cond_2
 
@@ -255,9 +255,9 @@
     .line 8
     new-instance p2, Lcom/vk/profile/adapter/counters/e$a;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->b1:Ljava/util/List;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->b1:Ljava/util/List;
 
     const/4 v2, 0x0
 
@@ -339,9 +339,9 @@
     .line 11
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/e;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p1, v1, p2}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p1, v1, p2}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
 
     move-result-object p1
 
@@ -613,11 +613,11 @@
     return-object v0
 .end method
 
-.method public final k()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final k()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object v0
 .end method

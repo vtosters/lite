@@ -421,13 +421,13 @@
     invoke-virtual {v2, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 10
-    new-instance v4, Lcom/vkontakte/android/v;
+    new-instance v4, Lcom/vtosters/lite/v;
 
     new-instance v5, Lcom/vk/market/orders/adapter/p$c;
 
     invoke-direct {v5, v0, v1}, Lcom/vk/market/orders/adapter/p$c;-><init>(Lcom/vk/market/orders/adapter/p;Lcom/vk/dto/common/OrderExtended;)V
 
-    invoke-direct {v4, v5}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v4, v5}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     const/4 v5, 0x1
 
@@ -435,13 +435,13 @@
     invoke-virtual {v4, v5}, Lcom/vk/core/view/links/a;->a(Z)V
 
     .line 12
-    new-instance v6, Lcom/vkontakte/android/v;
+    new-instance v6, Lcom/vtosters/lite/v;
 
     new-instance v7, Lcom/vk/market/orders/adapter/p$b;
 
     invoke-direct {v7, v0, v1}, Lcom/vk/market/orders/adapter/p$b;-><init>(Lcom/vk/market/orders/adapter/p;Lcom/vk/dto/common/OrderExtended;)V
 
-    invoke-direct {v6, v7}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v6, v7}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     .line 13
     invoke-virtual {v6, v5}, Lcom/vk/core/view/links/a;->a(Z)V

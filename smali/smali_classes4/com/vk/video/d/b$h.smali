@@ -178,7 +178,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/video/d/b$h;->h:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object p1
 
@@ -191,16 +191,16 @@
     .line 2
     iget-object p1, p0, Lcom/vk/video/d/b$h;->h:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vkontakte/android/ui/CircularProgressBar;->setProgress(D)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/ui/CircularProgressBar;->setProgress(D)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/video/d/b$h;->h:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object v0
 
@@ -233,7 +233,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/video/d/b$h;->h:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object p1
 
@@ -256,7 +256,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/video/d/b$h;->h:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object v2
 
@@ -277,7 +277,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/video/d/b$h;->h:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object p1
 
@@ -285,7 +285,7 @@
 
     div-double/2addr v2, v0
 
-    invoke-virtual {p1, v2, v3}, Lcom/vkontakte/android/ui/CircularProgressBar;->setProgress(D)V
+    invoke-virtual {p1, v2, v3}, Lcom/vtosters/lite/ui/CircularProgressBar;->setProgress(D)V
 
     :cond_1
     :goto_0

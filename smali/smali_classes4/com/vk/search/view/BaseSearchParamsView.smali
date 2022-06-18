@@ -33,10 +33,10 @@
 
 .field private b:Lcom/vk/dto/common/City;
 
-.field private final c:Lcom/vkontakte/android/fragments/c1$c;
+.field private final c:Lcom/vtosters/lite/fragments/c1$c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vkontakte/android/fragments/c1$c<",
+            "Lcom/vtosters/lite/fragments/c1$c<",
             "Lcom/vk/dto/common/City;",
             ">;"
         }
@@ -110,7 +110,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/search/view/BaseSearchParamsView$e;-><init>(Lcom/vk/search/view/BaseSearchParamsView;)V
 
-    iput-object p2, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vkontakte/android/fragments/c1$c;
+    iput-object p2, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vtosters/lite/fragments/c1$c;
 
     .line 4
     iput-boolean p1, p0, Lcom/vk/search/view/BaseSearchParamsView;->a:Z
@@ -299,9 +299,9 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/fragments/b1;
+    new-instance v0, Lcom/vtosters/lite/fragments/b1;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/b1;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/b1;-><init>()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/search/view/BaseSearchParamsView;->getCityListArguments()Landroid/os/Bundle;
@@ -312,9 +312,9 @@
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vkontakte/android/fragments/c1$c;
+    iget-object v1, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vtosters/lite/fragments/c1$c;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/c1;->a(Lcom/vkontakte/android/fragments/c1$c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/c1;->a(Lcom/vtosters/lite/fragments/c1$c;)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/search/view/BaseSearchParamsView;->B:Landroid/app/Activity;

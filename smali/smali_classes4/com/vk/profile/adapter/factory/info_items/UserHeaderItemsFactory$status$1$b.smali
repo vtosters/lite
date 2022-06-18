@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,9 +48,9 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1;->$presenter:Lcom/vk/profile/presenter/UserPresenter;
 
-    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$status$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v2, v2, Lcom/vkontakte/android/api/ExtendedUserProfile;->m:Ljava/lang/String;
+    iget-object v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->m:Ljava/lang/String;
 
     const-string v3, "profile.activity"
 

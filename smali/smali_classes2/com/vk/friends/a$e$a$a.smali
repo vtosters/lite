@@ -38,9 +38,9 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/fragments/friends/h/b$a;
+    new-instance p1, Lcom/vtosters/lite/fragments/friends/h/b$a;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/fragments/friends/h/b$a;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/fragments/friends/h/b$a;-><init>()V
 
     iget-object v0, p0, Lcom/vk/friends/a$e$a$a;->a:Lcom/vk/friends/a$e$a;
 

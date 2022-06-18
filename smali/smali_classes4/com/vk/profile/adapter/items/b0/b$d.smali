@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/b0/b$d;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StubCountersItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/b0/b;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/b0/b$d;->d:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -62,11 +62,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/items/b0/b$d;->c:Lcom/vk/profile/adapter/items/b0/b$b;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/b;->P()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/b;->P()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     const-string v1, "item.profile.counters"
 

@@ -237,7 +237,7 @@
     .line 9
     iget-object v1, p0, Lcom/vk/newsfeed/holders/s;->F:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -278,7 +278,7 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -289,7 +289,7 @@
     .line 2
     new-instance v0, Lcom/vk/webapp/VkUiFragment$a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/utils/b;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/utils/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -303,7 +303,7 @@
 
     invoke-direct {v0, p1, v1, v2, v1}, Lcom/vk/webapp/VkUiFragment$a;-><init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

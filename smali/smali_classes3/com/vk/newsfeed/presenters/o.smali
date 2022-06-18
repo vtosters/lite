@@ -11,7 +11,7 @@
     value = {
         "Lcom/vk/newsfeed/presenters/EntriesListPresenter;",
         "Lcom/vk/lists/t$o<",
-        "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+        "Lcom/vtosters/lite/api/wall/WallGet$Result;",
         ">;"
     }
 .end annotation
@@ -54,13 +54,13 @@
             "Lcom/vk/lists/t;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
 
     .line 5
-    new-instance v6, Lcom/vkontakte/android/api/wall/WallGet;
+    new-instance v6, Lcom/vtosters/lite/api/wall/WallGet;
 
     iget v1, p0, Lcom/vk/newsfeed/presenters/o;->Q:I
 
@@ -78,7 +78,7 @@
 
     move v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/api/wall/WallGet;-><init>(IIILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/wall/WallGet;-><init>(IIILjava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -99,7 +99,7 @@
             "Lcom/vk/lists/t;",
             "Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
@@ -137,7 +137,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;Z",
             "Lcom/vk/lists/t;",
             ")V"

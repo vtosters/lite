@@ -469,9 +469,9 @@
 
     move-result-object p2
 
-    new-instance v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
-    invoke-direct {v0, p3}, Lcom/vkontakte/android/attachments/MarketAttachment;-><init>(Lcom/vk/dto/common/Good;)V
+    invoke-direct {v0, p3}, Lcom/vtosters/lite/attachments/MarketAttachment;-><init>(Lcom/vk/dto/common/Good;)V
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
         "Ljava/lang/Object;",
         "Lcom/vk/newsfeed/contracts/e;"

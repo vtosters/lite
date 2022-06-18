@@ -214,7 +214,7 @@
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     .line 11
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v5
 
@@ -239,9 +239,9 @@
 
     if-eqz v6, :cond_3
 
-    new-instance v8, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v8, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v8, v6}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {v8, v6}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
 
     move-object v9, v8
 
@@ -297,7 +297,7 @@
     move-object v15, v2
 
     .line 16
-    invoke-direct/range {v6 .. v15}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vkontakte/android/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v15}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
 
     .line 17
     invoke-static/range {v16 .. v16}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;

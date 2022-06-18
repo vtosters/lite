@@ -1240,13 +1240,13 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 15
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v4, :cond_2
 
-    check-cast v3, Lcom/vkontakte/android/attachments/EventAttachment;
+    check-cast v3, Lcom/vtosters/lite/attachments/EventAttachment;
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
+    invoke-virtual {v3}, Lcom/vtosters/lite/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v3
 

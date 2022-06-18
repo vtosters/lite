@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/c<",
         "Landroid/content/Context;",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/lang/String;",
         ">;"
     }
@@ -53,16 +53,16 @@
     .line 1
     check-cast p1, Landroid/content/Context;
 
-    check-cast p2, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p2, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/data/CountersWrapper$defaultTitleCreator$1;->a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/data/CountersWrapper$defaultTitleCreator$1;->a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/String;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
     .locals 0
 
     .line 2

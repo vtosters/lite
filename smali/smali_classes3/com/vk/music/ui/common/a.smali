@@ -163,13 +163,13 @@
 
     move-result v3
 
-    const-class v4, Lcom/vkontakte/android/t;
+    const-class v4, Lcom/vtosters/lite/t;
 
     invoke-interface {v0, v2, v3, v4}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/vkontakte/android/t;
+    check-cast v0, [Lcom/vtosters/lite/t;
 
     if-eqz v0, :cond_2
 
@@ -190,7 +190,7 @@
 
     invoke-direct {v6, p0}, Lcom/vk/music/ui/common/a$b;-><init>(Lcom/vk/music/ui/common/a;)V
 
-    invoke-virtual {v5, v6}, Lcom/vkontakte/android/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v5, v6}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_1
     add-int/lit8 v4, v4, 0x1

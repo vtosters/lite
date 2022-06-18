@@ -47,20 +47,20 @@
 
     move-result-object p1
 
-    instance-of p2, p1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    instance-of p2, p1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-nez p2, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-eqz p1, :cond_1
 
     iget-object p2, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$a;->a:Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;
 
-    invoke-static {p2, p1}, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;->a(Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;)V
+    invoke-static {p2, p1}, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;->a(Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;)V
 
     :cond_1
     return-void

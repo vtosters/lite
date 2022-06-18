@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         "Lcom/vk/music/podcasts/page/e;",
         "Lcom/vk/lists/t$o<",
-        "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+        "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
         ">;"
     }
 .end annotation
@@ -111,10 +111,10 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+            "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
             ">;)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+            "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
             ">;"
         }
     .end annotation
@@ -244,11 +244,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/podcasts/page/d;Ljava/util/ArrayList;Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;Z)V
+.method public static final synthetic a(Lcom/vk/music/podcasts/page/d;Ljava/util/ArrayList;Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;Z)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/podcasts/page/d;->a(Ljava/util/ArrayList;Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;Z)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/podcasts/page/d;->a(Ljava/util/ArrayList;Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;Z)V
 
     return-void
 .end method
@@ -271,7 +271,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/ArrayList;Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;Z)V
+.method private final a(Ljava/util/ArrayList;Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -279,7 +279,7 @@
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;",
-            "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+            "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
             "Z)V"
         }
     .end annotation
@@ -290,7 +290,7 @@
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     .line 40
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->a()Lcom/vk/dto/podcast/PodcastInfo;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->a()Lcom/vk/dto/podcast/PodcastInfo;
 
     move-result-object p3
 
@@ -306,7 +306,7 @@
 
     .line 41
     :cond_0
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object p3
 
@@ -316,7 +316,7 @@
 
     .line 42
     :cond_1
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->c()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->c()Lcom/vk/dto/common/data/VKList;
 
     move-result-object p2
 
@@ -383,22 +383,22 @@
     return p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/podcasts/page/d;Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Z
+.method public static final synthetic a(Lcom/vk/music/podcasts/page/d;Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Z
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/music/podcasts/page/d;->a(Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Z
+    invoke-direct {p0, p1}, Lcom/vk/music/podcasts/page/d;->a(Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Z
+.method private final a(Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Z
     .locals 3
 
     .line 38
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->c()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->c()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v0
 
@@ -428,7 +428,7 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object p1
 
@@ -759,13 +759,13 @@
             "Lcom/vk/lists/t;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+            "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
             ">;"
         }
     .end annotation
 
     .line 12
-    new-instance v0, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo;
+    new-instance v0, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo;
 
     iget v1, p0, Lcom/vk/music/podcasts/page/d;->a:I
 
@@ -773,7 +773,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p1, p2}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo;-><init>(III)V
+    invoke-direct {v0, v1, p1, p2}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo;-><init>(III)V
 
     const/4 p1, 0x0
 
@@ -794,7 +794,7 @@
             "Lcom/vk/lists/t;",
             "Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+            "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
             ">;"
         }
     .end annotation
@@ -828,7 +828,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
+            "Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;",
             ">;Z",
             "Lcom/vk/lists/t;",
             ")V"
@@ -925,7 +925,7 @@
     .end annotation
 
     .line 19
-    new-instance v0, Lcom/vkontakte/android/api/podcasts/e;
+    new-instance v0, Lcom/vtosters/lite/api/podcasts/e;
 
     iget v1, p0, Lcom/vk/music/podcasts/page/d;->a:I
 
@@ -933,7 +933,7 @@
 
     iget-boolean v2, p0, Lcom/vk/music/podcasts/page/d;->b:Z
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/api/podcasts/e;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/api/podcasts/e;-><init>(IZ)V
 
     const/4 v1, 0x0
 
@@ -951,7 +951,7 @@
     invoke-static {v1, v2}, Lcom/vk/music/i/a;->a(IZ)V
 
     .line 21
-    invoke-static {}, Lcom/vkontakte/android/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
 
     move-result-object v1
 
@@ -1074,11 +1074,11 @@
     xor-int/2addr v0, v1
 
     .line 7
-    new-instance v2, Lcom/vkontakte/android/api/podcasts/d;
+    new-instance v2, Lcom/vtosters/lite/api/podcasts/d;
 
     iget v3, p0, Lcom/vk/music/podcasts/page/d;->a:I
 
-    invoke-direct {v2, v3, v0}, Lcom/vkontakte/android/api/podcasts/d;-><init>(IZ)V
+    invoke-direct {v2, v3, v0}, Lcom/vtosters/lite/api/podcasts/d;-><init>(IZ)V
 
     const/4 v3, 0x0
 

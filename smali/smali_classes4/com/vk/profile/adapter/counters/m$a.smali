@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/counters/m;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+    value = Lcom/vk/profile/adapter/counters/m;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -72,9 +72,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/api/c;
+    check-cast v1, Lcom/vtosters/lite/api/c;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/c;->b:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/api/c;->b:Ljava/lang/String;
 
     .line 3
     iget-object p1, p1, Lcom/vk/api/board/g$b;->a:Lcom/vk/dto/common/data/VKList;
@@ -83,9 +83,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/api/c;
+    check-cast p1, Lcom/vtosters/lite/api/c;
 
-    iget p1, p1, Lcom/vkontakte/android/api/c;->e:I
+    iget p1, p1, Lcom/vtosters/lite/api/c;->e:I
 
     invoke-static {p1}, Lcom/vk/core/util/i1;->b(I)Ljava/lang/String;
 

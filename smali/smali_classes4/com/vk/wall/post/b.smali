@@ -57,13 +57,13 @@
 .method public abstract a(I)Z
 .end method
 
-.method public abstract e(Lcom/vkontakte/android/q;)V
+.method public abstract e(Lcom/vtosters/lite/q;)V
 .end method
 
 .method public abstract e(I)Z
 .end method
 
-.method public abstract f(Lcom/vkontakte/android/q;)V
+.method public abstract f(Lcom/vtosters/lite/q;)V
 .end method
 
 .method public abstract p()V

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/x;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/x;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

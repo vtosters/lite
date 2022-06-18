@@ -336,7 +336,7 @@
     :goto_0
     const/4 v2, 0x1
 
-    invoke-static {v1, v0, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v1, v0, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     return-void
 .end method

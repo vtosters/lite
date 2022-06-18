@@ -90,7 +90,7 @@
 .method public abstract a(Lcom/vk/newsfeed/posting/dto/b;I)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+.method public abstract a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
 .end method
 
 .method public abstract a(Lio/reactivex/disposables/b;)V
@@ -140,7 +140,7 @@
 .method public abstract c(Z)V
 .end method
 
-.method public abstract c0()Lcom/vkontakte/android/attachments/GeoAttachment;
+.method public abstract c0()Lcom/vtosters/lite/attachments/GeoAttachment;
 .end method
 
 .method public abstract d(Ljava/lang/CharSequence;)V

@@ -1,12 +1,12 @@
 .class public final Lcom/vk/feedlikes/viewholders/a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "FeedLikesFilterViewHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lkotlin/m;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/feedlikes/views/a;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

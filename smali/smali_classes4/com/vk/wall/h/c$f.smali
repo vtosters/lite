@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/h/c;->a(Lcom/vkontakte/android/attachments/b;)V
+    value = Lcom/vk/wall/h/c;->a(Lcom/vtosters/lite/attachments/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/upload/j;
+.field final synthetic a:Lcom/vtosters/lite/upload/j;
 
-.field final synthetic b:Lcom/vkontakte/android/upload/h;
+.field final synthetic b:Lcom/vtosters/lite/upload/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/upload/j;Lcom/vkontakte/android/upload/h;)V
+.method constructor <init>(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/h;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/wall/h/c$f;->a:Lcom/vkontakte/android/upload/j;
+    iput-object p1, p0, Lcom/vk/wall/h/c$f;->a:Lcom/vtosters/lite/upload/j;
 
-    iput-object p2, p0, Lcom/vk/wall/h/c$f;->b:Lcom/vkontakte/android/upload/h;
+    iput-object p2, p0, Lcom/vk/wall/h/c$f;->b:Lcom/vtosters/lite/upload/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,18 +42,18 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/wall/h/c$f;->a:Lcom/vkontakte/android/upload/j;
+    iget-object p1, p0, Lcom/vk/wall/h/c$f;->a:Lcom/vtosters/lite/upload/j;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/j;->m()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/upload/Upload;->a(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/upload/Upload;->a(I)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/wall/h/c$f;->b:Lcom/vkontakte/android/upload/h;
+    iget-object p1, p0, Lcom/vk/wall/h/c$f;->b:Lcom/vtosters/lite/upload/h;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/h;->b()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/h;->b()V
 
     return-void
 .end method

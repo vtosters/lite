@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
-        "Lcom/vkontakte/android/attachments/PendingPhotoAttachment;",
+        "Lcom/vtosters/lite/attachments/PendingPhotoAttachment;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+.method public final a(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachPhotosAndVideosFromDevice$2;->a(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachPhotosAndVideosFromDevice$2;->a(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     move-result-object p1
 

@@ -1721,7 +1721,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->G:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vkontakte/android/w;->d()I
+    invoke-static {}, Lcom/vtosters/lite/w;->d()I
 
     move-result v1
 
@@ -1739,7 +1739,7 @@
     :goto_0
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 5
     invoke-virtual {p0}, Lcom/vk/discover/ThemedFeedFragment;->p()V

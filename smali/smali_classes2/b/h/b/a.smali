@@ -68,7 +68,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/data/n$l;)Lcom/vkontakte/android/data/n$l;
+.method public final a(Lcom/vtosters/lite/data/n$l;)Lcom/vtosters/lite/data/n$l;
     .locals 4
 
     .line 1
@@ -84,7 +84,7 @@
 
     const-string v1, "battery"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 2
     invoke-direct {p0}, Lb/h/b/a;->a()Lorg/json/JSONObject;
@@ -93,7 +93,7 @@
 
     const-string v1, "signal_info"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 3
     invoke-static {}, Lcom/vk/utils/g/a;->c()J
@@ -112,7 +112,7 @@
 
     const-string v1, "time"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 4
     sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
@@ -130,7 +130,7 @@
 
     const-string v1, "brightness"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_0
     return-object p1

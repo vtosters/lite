@@ -85,18 +85,18 @@
     .line 5
     new-instance v1, Lcom/vk/navigation/o;
 
-    const-class v2, Lcom/vkontakte/android/fragments/photos/c;
+    const-class v2, Lcom/vtosters/lite/fragments/photos/c;
 
     invoke-direct {v1, v2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     .line 6
-    new-instance v0, Lcom/vkontakte/android/TabletDialogActivity$b;
+    new-instance v0, Lcom/vtosters/lite/TabletDialogActivity$b;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/TabletDialogActivity$b;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
 
     const/16 v2, 0x11
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/TabletDialogActivity$b;->b(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/TabletDialogActivity$b;->b(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const-string v2, "TabletDialogActivity.Bui\u2026etGravity(Gravity.CENTER)"
 

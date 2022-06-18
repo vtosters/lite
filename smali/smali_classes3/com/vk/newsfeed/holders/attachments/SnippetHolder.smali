@@ -31,7 +31,7 @@
 
 .field private final L:Landroid/widget/TextView;
 
-.field private final M:Lcom/vkontakte/android/ui/RatingView;
+.field private final M:Lcom/vtosters/lite/ui/RatingView;
 
 .field private final N:Landroid/widget/TextView;
 
@@ -172,9 +172,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/RatingView;
+    check-cast p1, Lcom/vtosters/lite/ui/RatingView;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vkontakte/android/ui/RatingView;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vtosters/lite/ui/RatingView;
 
     .line 8
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -318,7 +318,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v0, v0, Lcom/vk/dto/newsfeed/entries/FaveEntry;
 
@@ -402,7 +402,7 @@
     const v0, 0x7f120398
 
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -491,9 +491,9 @@
     if-lt v5, v6, :cond_1
 
     .line 25
-    new-instance v4, Lcom/vkontakte/android/fragments/k2$c;
+    new-instance v4, Lcom/vtosters/lite/fragments/k2$c;
 
-    invoke-direct {v4}, Lcom/vkontakte/android/fragments/k2$c;-><init>()V
+    invoke-direct {v4}, Lcom/vtosters/lite/fragments/k2$c;-><init>()V
 
     .line 26
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -506,7 +506,7 @@
 
     move-result v2
 
-    invoke-virtual {v4, v2}, Lcom/vkontakte/android/fragments/k2$c;->d(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v4, v2}, Lcom/vtosters/lite/fragments/k2$c;->d(I)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 27
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -519,18 +519,18 @@
 
     move-result v0
 
-    invoke-virtual {v4, v0}, Lcom/vkontakte/android/fragments/k2$c;->e(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v4, v0}, Lcom/vtosters/lite/fragments/k2$c;->e(I)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 28
     iget-object p1, p1, Lcom/vk/dto/attachments/SnippetAttachment;->K:Ljava/lang/String;
 
-    invoke-virtual {v4, p1}, Lcom/vkontakte/android/fragments/k2$c;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v4, p1}, Lcom/vtosters/lite/fragments/k2$c;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 29
-    invoke-virtual {v4, v3}, Lcom/vkontakte/android/fragments/k2$c;->c(Z)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/fragments/k2$c;->c(Z)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 30
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -564,7 +564,7 @@
 
     .line 32
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
@@ -576,15 +576,15 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/data/PostInteract;->f(Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/data/PostInteract;->f(Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    sget-object v2, Lcom/vkontakte/android/data/PostInteract$Type;->snippet_button_action:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v2, Lcom/vtosters/lite/data/PostInteract$Type;->snippet_button_action:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/data/PostInteract;->b(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/data/PostInteract;->b(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     .line 33
     :cond_3
@@ -593,7 +593,7 @@
     if-eqz v0, :cond_4
 
     .line 34
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -605,11 +605,11 @@
 
     iget-object p1, p1, Lcom/vk/dto/attachments/SnippetAttachment;->L:Lcom/vk/dto/newsfeed/ButtonAction;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v1
 
-    invoke-static {v0, p1, v1}, Lcom/vkontakte/android/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;)V
 
     goto :goto_1
 
@@ -655,7 +655,7 @@
     invoke-direct/range {v2 .. v12}, Lcom/vk/common/links/c$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 37
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -688,7 +688,7 @@
     move-object/from16 v0, p0
 
     .line 1
-    iget-object v1, v0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, v0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v2, v1, Lcom/vk/dto/newsfeed/c;
 
@@ -711,7 +711,7 @@
     move-object v7, v3
 
     .line 2
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -1005,7 +1005,7 @@
     if-lez v0, :cond_7
 
     .line 16
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vkontakte/android/ui/RatingView;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vtosters/lite/ui/RatingView;
 
     if-eqz v0, :cond_6
 
@@ -1013,17 +1013,17 @@
 
     .line 17
     :cond_6
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vkontakte/android/ui/RatingView;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vtosters/lite/ui/RatingView;
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/RatingView;->setRating(F)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/RatingView;->setRating(F)V
 
     goto :goto_3
 
     .line 18
     :cond_7
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vkontakte/android/ui/RatingView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/SnippetHolder;->M:Lcom/vtosters/lite/ui/RatingView;
 
     if-eqz p1, :cond_8
 
@@ -1075,7 +1075,7 @@
 
     .line 2
     :cond_0
-    iget-object v2, v0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, v0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v3, v2, Lcom/vk/dto/newsfeed/c;
 
@@ -1152,7 +1152,7 @@
     sget-object v1, Lcom/vk/articles/ArticleFragment;->l0:Lcom/vk/articles/ArticleFragment$a;
 
     .line 9
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v3
 
@@ -1229,7 +1229,7 @@
     sget-object v1, Lcom/vk/articles/ArticleFragment;->l0:Lcom/vk/articles/ArticleFragment$a;
 
     .line 17
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v3
 
@@ -1302,7 +1302,7 @@
 
     .line 23
     :cond_c
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v1
 
@@ -1314,15 +1314,15 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/data/PostInteract;->f(Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/data/PostInteract;->f(Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v1
 
     if-eqz v1, :cond_d
 
-    sget-object v2, Lcom/vkontakte/android/data/PostInteract$Type;->snippet_action:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v2, Lcom/vtosters/lite/data/PostInteract$Type;->snippet_action:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/data/PostInteract;->b(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/data/PostInteract;->b(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     .line 24
     :cond_d
@@ -1357,7 +1357,7 @@
     invoke-direct/range {v9 .. v19}, Lcom/vk/common/links/c$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 25
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -1455,7 +1455,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 

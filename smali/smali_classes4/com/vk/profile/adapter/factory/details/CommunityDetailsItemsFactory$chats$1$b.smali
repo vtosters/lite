@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$chats$1;->a(Lcom/vkontakte/android/api/i;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$chats$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vkontakte/android/fragments/messages/chat_invite/accept/a;->H:Lcom/vkontakte/android/fragments/messages/chat_invite/accept/a$c;
+    sget-object v0, Lcom/vtosters/lite/fragments/messages/chat_invite/accept/a;->H:Lcom/vtosters/lite/fragments/messages/chat_invite/accept/a$c;
 
     iget-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$chats$1$b;->b:Lcom/vk/dto/group/GroupChat;
 
@@ -70,7 +70,7 @@
 
     const/4 v6, 0x1
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vkontakte/android/fragments/messages/chat_invite/accept/a$c;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;Z)V
+    invoke-virtual/range {v0 .. v6}, Lcom/vtosters/lite/fragments/messages/chat_invite/accept/a$c;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;Z)V
 
     return-void
 .end method

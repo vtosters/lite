@@ -102,7 +102,7 @@
 
     const/4 p1, 0x2
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/Groups;->a(ILcom/vkontakte/android/data/Groups$e;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Groups;->a(ILcom/vtosters/lite/data/Groups$e;)V
 
     return-void
 .end method

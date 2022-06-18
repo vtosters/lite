@@ -2,7 +2,7 @@
 <merge
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView android:background="?background_content" android:paddingBottom="48.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
-        <com.vkontakte.android.ui.ConstrainedLinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" app:max_width="400.0dip">
+        <com.vtosters.lite.ui.ConstrainedLinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" app:max_width="400.0dip">
             <TextView android:text="@string/discover_search_sort" style="@style/VKUIFormHeader" />
             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="8.0dip">
                 <include android:id="@id/spinner_sort" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/discover_search_spinner" />
@@ -20,7 +20,7 @@
             <com.vk.common.view.settings.SettingsCheckBoxView android:id="@id/cb_safe_search" android:layout_width="fill_parent" android:layout_height="48.0dip" />
             <com.vk.common.view.settings.SettingsCheckBoxView android:id="@id/cb_only_future" android:layout_width="fill_parent" android:layout_height="48.0dip" />
             <Space android:layout_width="1.0px" android:layout_height="56.0dip" />
-        </com.vkontakte.android.ui.ConstrainedLinearLayout>
+        </com.vtosters.lite.ui.ConstrainedLinearLayout>
     </ScrollView>
     <TextView android:textAppearance="@style/VKUIText.Title2" android:textSize="16.0sp" android:textColor="?button_primary_foreground" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_apply_params" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:text="@string/discover_search_show_result" style="@style/VKUIButton.Primary.Big" />
 </merge>

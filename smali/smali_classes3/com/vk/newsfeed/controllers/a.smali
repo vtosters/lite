@@ -263,7 +263,7 @@
     .locals 2
 
     .line 18
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -294,7 +294,7 @@
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -339,13 +339,13 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsfeedList;",
+            "Lcom/vtosters/lite/NewsfeedList;",
             ">;)V"
         }
     .end annotation
 
     .line 15
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -408,7 +408,7 @@
 
     .line 14
     :cond_0
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -466,7 +466,7 @@
     if-eqz v2, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -564,7 +564,7 @@
     .end annotation
 
     .line 3
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -589,7 +589,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -723,7 +723,7 @@
             "()",
             "Lc/a/m<",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/NewsfeedList;",
+            "Lcom/vtosters/lite/NewsfeedList;",
             ">;>;"
         }
     .end annotation

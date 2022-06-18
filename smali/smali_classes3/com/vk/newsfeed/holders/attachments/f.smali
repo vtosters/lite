@@ -117,19 +117,19 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
     if-eqz v0, :cond_0
 
     .line 4
-    check-cast p1, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
 
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f;->I:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioArtistAttachment;->z1()Lcom/vk/dto/music/Thumb;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioArtistAttachment;->z1()Lcom/vk/dto/music/Thumb;
 
     move-result-object v1
 
@@ -138,7 +138,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f;->J:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
 
     move-result-object p1
 
@@ -179,7 +179,7 @@
     move-result-object v0
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
     if-eqz v1, :cond_0
 
@@ -191,9 +191,9 @@
     invoke-direct {v1}, Lcom/vk/music/fragment/k$g;-><init>()V
 
     .line 5
-    check-cast v0, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/AudioArtistAttachment;->x1()Lcom/vk/dto/music/Artist;
 
     move-result-object v0
 

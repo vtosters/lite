@@ -17,7 +17,7 @@
         value = {
             "Lkotlin/jvm/b/c<",
             "Landroid/content/Context;",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
             ">;"
         }
@@ -28,7 +28,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lkotlin/jvm/b/b<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -42,7 +42,7 @@
             "-",
             "Landroid/content/Context;",
             "-",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
             ">;"
         }
@@ -54,7 +54,7 @@
         value = {
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -169,7 +169,7 @@
         value = {
             "()",
             "Lkotlin/jvm/b/b<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -197,7 +197,7 @@
             "(",
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;)V"
         }
@@ -218,7 +218,7 @@
             "-",
             "Landroid/content/Context;",
             "-",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -245,7 +245,7 @@
         value = {
             "()",
             "Lkotlin/jvm/b/b<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -345,7 +345,7 @@
             "()",
             "Lkotlin/jvm/b/c<",
             "Landroid/content/Context;",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
             ">;"
         }

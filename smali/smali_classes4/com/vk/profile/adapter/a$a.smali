@@ -1,5 +1,5 @@
 .class final Lcom/vk/profile/adapter/a$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "InfoItemsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;"
     }
@@ -35,7 +35,7 @@
 
     invoke-direct {v0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     return-void
 .end method

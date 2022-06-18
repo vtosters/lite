@@ -571,9 +571,9 @@
     invoke-static {v0, v1, v2}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 3
-    sget-object v1, Lcom/vkontakte/android/im/bridge/contentprovider/ImCompanionHelper;->d:Lcom/vkontakte/android/im/bridge/contentprovider/ImCompanionHelper;
+    sget-object v1, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->d:Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/im/bridge/contentprovider/ImCompanionHelper;->c()Z
+    invoke-virtual {v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->c()Z
 
     move-result v1
 

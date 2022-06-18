@@ -189,7 +189,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p0}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -394,7 +394,7 @@
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStart()V
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -467,7 +467,7 @@
 
     const-wide/16 v3, 0x64
 
-    invoke-static {v0, v3, v4}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v3, v4}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     .line 11
     :cond_1

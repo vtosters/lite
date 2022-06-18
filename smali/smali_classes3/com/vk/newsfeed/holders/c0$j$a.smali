@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/c0$j;->a(Lcom/vkontakte/android/NewsComment;)V
+    value = Lcom/vk/newsfeed/holders/c0$j;->a(Lcom/vtosters/lite/NewsComment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/holders/c0$j;->a:Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -71,11 +71,11 @@
 
     iget-object v1, v1, Lcom/vk/newsfeed/holders/c0$j;->a:Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
 
     move-result-object v1
 

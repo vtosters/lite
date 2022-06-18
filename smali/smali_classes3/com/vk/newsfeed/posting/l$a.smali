@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/newsfeed/posting/l$a;Lcom/vkontakte/android/TabletDialogActivity$b;Landroid/content/Context;ILjava/lang/Object;)Lcom/vkontakte/android/TabletDialogActivity$b;
+.method public static synthetic a(Lcom/vk/newsfeed/posting/l$a;Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;ILjava/lang/Object;)Lcom/vtosters/lite/TabletDialogActivity$b;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -44,7 +44,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vkontakte/android/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     return-object p1
 .end method
@@ -111,7 +111,7 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vkontakte/android/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vkontakte/android/TabletDialogActivity$b;
+.method public final a(Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;)Lcom/vtosters/lite/TabletDialogActivity$b;
     .locals 4
 
     if-eqz p2, :cond_0
@@ -151,17 +151,17 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/TabletDialogActivity$b;->h(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/TabletDialogActivity$b;->h(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const/16 v0, 0x11
 
     .line 7
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/TabletDialogActivity$b;->b(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/TabletDialogActivity$b;->b(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const/16 v0, 0x10
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/TabletDialogActivity$b;->c(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/TabletDialogActivity$b;->c(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const/high16 v0, 0x44160000    # 600.0f
 
@@ -170,25 +170,25 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/TabletDialogActivity$b;->d(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/TabletDialogActivity$b;->d(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 10
     invoke-static {}, Lcom/vk/newsfeed/posting/l;->j()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/TabletDialogActivity$b;->e(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/TabletDialogActivity$b;->e(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vkontakte/android/TabletDialogActivity$b;->c()Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/TabletDialogActivity$b;->c()Lcom/vtosters/lite/TabletDialogActivity$b;
 
     .line 12
-    invoke-virtual {p1}, Lcom/vkontakte/android/TabletDialogActivity$b;->b()Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/TabletDialogActivity$b;->b()Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const/4 v0, 0x0
 
     .line 13
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/TabletDialogActivity$b;->a(F)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/TabletDialogActivity$b;->a(F)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     if-nez p2, :cond_2
 
@@ -217,7 +217,7 @@
 
     double-to-int p2, v0
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/TabletDialogActivity$b;->f(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/TabletDialogActivity$b;->f(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     goto :goto_2
 
@@ -235,7 +235,7 @@
 
     double-to-int p2, v0
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/TabletDialogActivity$b;->f(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/TabletDialogActivity$b;->f(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     :goto_2
     const-string p2, "navigator.windowBackgrou\u2026  }\n                    }"
@@ -250,9 +250,9 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/TabletDialogActivity$b;
+    new-instance v0, Lcom/vtosters/lite/TabletDialogActivity$b;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/TabletDialogActivity$b;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/TabletDialogActivity$b;-><init>()V
 
     const v1, 0x7f040095
 
@@ -261,7 +261,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/TabletDialogActivity$b;->h(I)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/TabletDialogActivity$b;->h(I)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     const-string v1, "TabletDialogActivity.Bui\u2026attr.background_content))"
 
@@ -272,7 +272,7 @@
     const/4 v2, 0x2
 
     .line 3
-    invoke-static {p0, v0, v1, v2, v1}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vk/newsfeed/posting/l$a;Lcom/vkontakte/android/TabletDialogActivity$b;Landroid/content/Context;ILjava/lang/Object;)Lcom/vkontakte/android/TabletDialogActivity$b;
+    invoke-static {p0, v0, v1, v2, v1}, Lcom/vk/newsfeed/posting/l$a;->a(Lcom/vk/newsfeed/posting/l$a;Lcom/vtosters/lite/TabletDialogActivity$b;Landroid/content/Context;ILjava/lang/Object;)Lcom/vtosters/lite/TabletDialogActivity$b;
 
     return-object v0
 .end method

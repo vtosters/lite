@@ -281,18 +281,18 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v1, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_1
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     :cond_1
     return-void
@@ -907,7 +907,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v2, v0, v4, v3}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

@@ -81,7 +81,7 @@
     if-nez p2, :cond_2
 
     .line 5
-    new-instance p2, Lcom/vkontakte/android/upload/l/g;
+    new-instance p2, Lcom/vtosters/lite/upload/l/g;
 
     invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
@@ -103,9 +103,9 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vkontakte/android/upload/l/g;-><init>(Ljava/lang/String;IZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/upload/l/g;-><init>(Ljava/lang/String;IZZILkotlin/jvm/internal/i;)V
 
-    invoke-static {p2}, Lcom/vkontakte/android/upload/Upload;->c(Lcom/vkontakte/android/upload/j;)I
+    invoke-static {p2}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     goto :goto_1
 
@@ -153,9 +153,9 @@
 
     move-result-object p1
 
-    new-instance v1, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     invoke-interface {p1, p2, v1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 

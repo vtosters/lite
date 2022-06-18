@@ -44,11 +44,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/adapter/items/y$b$a;->b:Lcom/vk/profile/adapter/items/y;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 
@@ -63,11 +63,11 @@
 
     iget-object v0, p0, Lcom/vk/profile/adapter/items/y$b$a;->b:Lcom/vk/profile/adapter/items/y;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/y;->Q()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     invoke-virtual {p1, v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Z)V
 

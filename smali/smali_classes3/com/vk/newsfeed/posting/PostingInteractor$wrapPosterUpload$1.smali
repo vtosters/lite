@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/upload/UploadNotification$b;",
+        "Lcom/vtosters/lite/upload/UploadNotification$b;",
         "Lkotlin/m;",
         ">;"
     }
@@ -58,11 +58,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/upload/UploadNotification$b;)V
+.method public final a(Lcom/vtosters/lite/upload/UploadNotification$b;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->e()Lcom/vkontakte/android/upload/UploadNotification$State;
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->e()Lcom/vtosters/lite/upload/UploadNotification$State;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->d()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->d()Landroid/os/Parcelable;
 
     move-result-object p1
 
@@ -147,7 +147,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->$subject:Lio/reactivex/subjects/PublishSubject;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->a()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->a()Ljava/lang/Throwable;
 
     move-result-object p1
 
@@ -172,9 +172,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/upload/UploadNotification$b;
+    check-cast p1, Lcom/vtosters/lite/upload/UploadNotification$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->a(Lcom/vkontakte/android/upload/UploadNotification$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;->a(Lcom/vtosters/lite/upload/UploadNotification$b;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

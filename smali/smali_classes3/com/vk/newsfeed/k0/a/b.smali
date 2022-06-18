@@ -12,7 +12,7 @@
     value = {
         "Lcom/vk/lists/i0<",
         "Ljava/lang/Integer;",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Ljava/lang/Integer;",
         ">;>;",
         "Lcom/vk/core/ui/o;",
@@ -39,12 +39,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Ljava/lang/Integer;",
             ">;I)V"
         }
@@ -57,7 +57,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -109,9 +109,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/k0/a/b;->a(Lcom/vkontakte/android/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/k0/a/b;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method

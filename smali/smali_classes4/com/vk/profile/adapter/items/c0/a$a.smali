@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vkontakte/android/api/i;)Ljava/lang/CharSequence;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/api/i;)Ljava/lang/CharSequence;
     .locals 5
 
     .line 1
@@ -50,9 +50,9 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 2
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->a:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -60,13 +60,13 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget v2, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->b:I
+    iget v2, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->b:I
 
     if-nez v2, :cond_0
 
-    iget v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->c:I
+    iget v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->c:I
 
     if-eqz v1, :cond_5
 
@@ -77,9 +77,9 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 4
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->c:I
+    iget v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->c:I
 
     const-string v2, ":/e "
 
@@ -110,9 +110,9 @@
 
     move-result-object v1
 
-    iget-object v4, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v4, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget v4, v4, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->c:I
+    iget v4, v4, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->c:I
 
     aget-object v1, v1, v4
 
@@ -120,9 +120,9 @@
 
     .line 6
     :cond_1
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->b:I
+    iget v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->b:I
 
     const/16 v4, 0xa
 
@@ -158,9 +158,9 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->b:I
+    iget v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->b:I
 
     invoke-static {v1}, Lcom/vk/core/util/i1;->b(I)Ljava/lang/String;
 
@@ -170,9 +170,9 @@
 
     .line 10
     :cond_3
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->a:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -210,11 +210,11 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->Y0:Lcom/vkontakte/android/api/ExtendedUserProfile$c;
+    iget-object p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->Y0:Lcom/vtosters/lite/api/ExtendedUserProfile$c;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile$c;->a:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile$c;->a:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vkontakte/android/d0;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/d0;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vtosters/lite/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object p1
 

@@ -83,7 +83,7 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vkontakte/android/fragments/p2/c;Lcom/vkontakte/android/fragments/p2/d;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/documents/list/a$b;-><init>(Landroid/view/ViewGroup;Lcom/vtosters/lite/fragments/p2/c;Lcom/vtosters/lite/fragments/p2/d;ILkotlin/jvm/internal/i;)V
 
     iput-object p3, p0, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment$c;->C:Lcom/vk/core/util/k0;
 
@@ -232,7 +232,7 @@
 
     if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
@@ -249,7 +249,7 @@
 
     if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/api/base/Document;
 

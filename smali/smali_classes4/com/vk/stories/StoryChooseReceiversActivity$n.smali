@@ -3,7 +3,7 @@
 .source "StoryChooseReceiversActivity.java"
 
 # interfaces
-.implements Lcom/vkontakte/android/ui/x$j;
+.implements Lcom/vtosters/lite/ui/x$j;
 
 
 # annotations

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/items/w;",
         ">;"
     }
@@ -54,13 +54,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
     .locals 13
 
     const-string v0, "friends"
 
     .line 1
-    invoke-static {p1, v0}, Lcom/vk/profile/utils/d;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/vk/profile/utils/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -68,7 +68,7 @@
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v1
 
@@ -80,7 +80,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -88,12 +88,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v0
 
     .line 3
-    iget-object v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     const-string v3, "mutual_friends"
 
@@ -105,7 +105,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p1, v3}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v1
 
@@ -178,7 +178,7 @@
     invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/w;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/i;)V
 
     .line 7
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -190,19 +190,19 @@
     :cond_3
     new-instance v3, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$a;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     invoke-virtual {v0, v3}, Lcom/vk/profile/adapter/items/w;->a(Ljava/lang/Runnable;)V
 
     .line 9
     :cond_4
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
+    iget-object v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
 
     if-nez v3, :cond_5
 
@@ -211,7 +211,7 @@
     .line 10
     new-instance v1, Lcom/vk/api/friends/f;
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v3, v3, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -227,7 +227,7 @@
     .line 12
     new-instance v2, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/w;)V
+    invoke-direct {v2, p0, p1, v0}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/w;)V
 
     invoke-virtual {v1, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
 
@@ -244,7 +244,7 @@
 
     .line 14
     :cond_5
-    iget-object v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
+    iget-object v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->H:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_6
 
@@ -261,7 +261,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, p1, v2}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
+    invoke-static {v1, p1, v2}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
 
     :cond_6
     return-object v0
@@ -274,9 +274,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
 
     move-result-object p1
 

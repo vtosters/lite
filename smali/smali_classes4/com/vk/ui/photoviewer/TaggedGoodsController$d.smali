@@ -102,11 +102,11 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     iget-object v3, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController$d;->b:Lcom/vk/dto/photo/Photo;
 
-    invoke-direct {v1, v3}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v1, v3}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/dto/common/AttachmentWithMedia;)V
 

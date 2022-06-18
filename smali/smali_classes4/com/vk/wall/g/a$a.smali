@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/a;",
+        "Lcom/vtosters/lite/api/wall/a;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/a;)V
     .locals 4
 
     .line 1
@@ -56,9 +56,9 @@
 
     move-result-object v0
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/a;->b:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/a;->b:I
 
-    iget v2, p1, Lcom/vkontakte/android/api/wall/a;->c:I
+    iget v2, p1, Lcom/vtosters/lite/api/wall/a;->c:I
 
     sub-int/2addr v1, v2
 
@@ -77,11 +77,11 @@
 
     move-result-object v0
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/a;->c:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/a;->c:I
 
     if-lez v1, :cond_0
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v3, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -92,7 +92,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -112,7 +112,7 @@
 
     move-result v0
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/a;->b:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/a;->b:I
 
     if-lt v0, v1, :cond_1
 
@@ -159,7 +159,7 @@
     :goto_2
     if-nez v0, :cond_4
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -185,9 +185,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/g/a$a;->a(Lcom/vkontakte/android/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/g/a$a;->a(Lcom/vtosters/lite/api/wall/a;)V
 
     return-void
 .end method

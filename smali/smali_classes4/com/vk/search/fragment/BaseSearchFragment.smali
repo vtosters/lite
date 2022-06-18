@@ -306,7 +306,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {p1, v0, v1, v3, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vkontakte/android/NewsfeedList;Z)V
+.method public abstract a(Lcom/vtosters/lite/NewsfeedList;Z)V
 .end method

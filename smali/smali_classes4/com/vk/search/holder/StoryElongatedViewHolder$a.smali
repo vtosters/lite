@@ -52,7 +52,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/search/holder/StoryElongatedViewHolder$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -82,7 +82,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedViewHolder$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

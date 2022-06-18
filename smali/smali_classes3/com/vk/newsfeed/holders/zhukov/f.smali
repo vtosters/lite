@@ -135,18 +135,18 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/b;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/b;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/b;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vkontakte/android/attachments/b;->V()I
+    invoke-interface {v0}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v0
 
@@ -193,7 +193,7 @@
     .locals 4
 
     .line 1
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     if-eqz v0, :cond_0
 
@@ -204,17 +204,17 @@
 
     new-instance v1, Lcom/vk/dto/common/ImageSize;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getWidth()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getWidth()I
 
     move-result v3
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getHeight()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getHeight()I
 
     move-result p1
 
@@ -239,14 +239,14 @@
 
     .line 4
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_1
 
     .line 5
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/zhukov/j;->a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/zhukov/j;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     :cond_1
     :goto_0

@@ -60,7 +60,7 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/market/u$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/u$f;
 
     iget-object v1, p0, Lcom/vk/market/orders/MarketCartFragment$onCreateView$6;->this$0:Lcom/vk/market/orders/MarketCartFragment;
 
@@ -70,7 +70,7 @@
 
     neg-int v1, v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/fragments/market/u$f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/market/u$f;-><init>(I)V
 
     iget-object v1, p0, Lcom/vk/market/orders/MarketCartFragment$onCreateView$6;->this$0:Lcom/vk/market/orders/MarketCartFragment;
 

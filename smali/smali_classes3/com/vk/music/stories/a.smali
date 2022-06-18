@@ -3,7 +3,7 @@
 .source "LoggingListener.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;
+.implements Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;
 
 
 # direct methods
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;)V
+.method public a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;)V
     .locals 2
 
     const/4 p1, 0x1
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;I)V
+.method public a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;I)V
     .locals 2
 
     const/4 p1, 0x2
@@ -83,13 +83,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;IJJ)V
+.method public a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;IJJ)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener$ErrorType;)V
+.method public a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener$ErrorType;)V
     .locals 2
 
     const/4 p1, 0x3
@@ -122,7 +122,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;I)V
+.method public b(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;I)V
     .locals 0
 
     return-void

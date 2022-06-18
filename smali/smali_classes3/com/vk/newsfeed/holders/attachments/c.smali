@@ -143,7 +143,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/discover/carousel/Carousel;
 
@@ -154,7 +154,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->h0()Lcom/vkontakte/android/ui/f0/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->h0()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/a;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a;->d()Z
 
     move-result v0
 
@@ -231,15 +231,15 @@
     const-string v0, "view_block"
 
     .line 6
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->a()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
 
     .line 8
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->f()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->f()Lcom/vtosters/lite/data/n$l;
 
     .line 9
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,10 +284,10 @@
 
     const-string v1, "blocks"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     return-void

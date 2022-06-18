@@ -14,7 +14,7 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field private final D:Lcom/vk/profile/presenter/UserPresenter;
 
@@ -32,13 +32,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/UserPresenter;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/UserPresenter;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/s;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/s;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/s;->D:Lcom/vk/profile/presenter/UserPresenter;
 
@@ -54,9 +54,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/s;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/s;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -165,11 +165,11 @@
     throw p1
 .end method
 
-.method public static final synthetic c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public static final synthetic c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/adapter/items/s;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p0, p0, Lcom/vk/profile/adapter/items/s;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object p0
 .end method
@@ -185,14 +185,14 @@
     return v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/profile/adapter/items/s;",
             ">;"
         }

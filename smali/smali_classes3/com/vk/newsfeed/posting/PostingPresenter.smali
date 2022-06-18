@@ -937,7 +937,7 @@
 
     move-result-object v12
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/newsfeed/posting/PostingPresenter;->c0()Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/newsfeed/posting/PostingPresenter;->c0()Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v13
 
@@ -1063,7 +1063,7 @@
     move-object/from16 v22, v26
 
     .line 11
-    invoke-direct/range {v1 .. v24}, Lcom/vk/newsfeed/posting/dto/d;-><init>(Ljava/lang/String;Ljava/util/List;Lcom/vk/sharing/target/Target;ZZZZZLjava/util/Date;Lcom/vkontakte/android/attachments/GeoAttachment;ZIZZLcom/vk/newsfeed/posting/dto/a;Ljava/lang/Integer;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZZLcom/vk/dto/group/Group;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v1 .. v24}, Lcom/vk/newsfeed/posting/dto/d;-><init>(Ljava/lang/String;Ljava/util/List;Lcom/vk/sharing/target/Target;ZZZZZLjava/util/Date;Lcom/vtosters/lite/attachments/GeoAttachment;ZIZZLcom/vk/newsfeed/posting/dto/a;Ljava/lang/Integer;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZZLcom/vk/dto/group/Group;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-object v25
 
@@ -1256,7 +1256,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;)Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-interface {v0, p1, p2}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object p1
 
@@ -4841,7 +4841,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -5155,7 +5155,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     .line 43
     iget-object v2, v0, Lcom/vk/newsfeed/posting/PostingPresenter;->a:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
@@ -5164,7 +5164,7 @@
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+    invoke-virtual {v2, v1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     goto/16 :goto_c
 
@@ -5666,7 +5666,7 @@
 
     .line 90
     :goto_a
-    new-instance v3, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    new-instance v3, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     .line 91
     invoke-virtual {v7}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -5683,7 +5683,7 @@
     const/4 v14, 0x0
 
     .line 93
-    invoke-static {}, Lcom/vkontakte/android/upload/Upload;->a()I
+    invoke-static {}, Lcom/vtosters/lite/upload/Upload;->a()I
 
     move-result v15
 
@@ -5697,7 +5697,7 @@
     move-object v9, v3
 
     .line 95
-    invoke-direct/range {v9 .. v16}, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IILjava/lang/String;)V
+    invoke-direct/range {v9 .. v16}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IILjava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -5752,11 +5752,11 @@
     .line 101
     iget-object v2, v0, Lcom/vk/newsfeed/posting/PostingPresenter;->a:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
 
-    new-instance v3, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v3, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v3, v1}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {v3, v1}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-virtual {v2, v3}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     goto :goto_c
 
@@ -5799,11 +5799,11 @@
     .line 106
     iget-object v2, v0, Lcom/vk/newsfeed/posting/PostingPresenter;->a:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
 
-    new-instance v3, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v3, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v3, v1}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {v3, v1}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-virtual {v2, v3}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     .line 107
     :cond_24
@@ -6218,13 +6218,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+.method public a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
     .locals 1
 
     .line 122
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter;->a:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
 
     return-void
 .end method
@@ -7439,7 +7439,7 @@
     invoke-static {p1, v4, v4, v6, v1}, Lcom/vk/newsfeed/posting/f$a;->a(Lcom/vk/newsfeed/posting/f;ZZILjava/lang/Object;)V
 
     .line 47
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 
@@ -7461,7 +7461,7 @@
 
     move-result v2
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v6
 
@@ -7474,7 +7474,7 @@
     .line 49
     new-instance v2, Lcom/vk/sharing/target/Target;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v6
 
@@ -7962,7 +7962,7 @@
 
     .line 119
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -7973,7 +7973,7 @@
     if-nez v0, :cond_6
 
     .line 120
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -8338,7 +8338,7 @@
     return v0
 .end method
 
-.method public c0()Lcom/vkontakte/android/attachments/GeoAttachment;
+.method public c0()Lcom/vtosters/lite/attachments/GeoAttachment;
     .locals 4
 
     .line 1
@@ -8369,7 +8369,7 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v3, v3, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v3, v3, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v3, :cond_0
 
@@ -8380,14 +8380,14 @@
 
     .line 4
     :goto_0
-    instance-of v0, v1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, v1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-nez v0, :cond_2
 
     move-object v1, v2
 
     :cond_2
-    check-cast v1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     return-object v1
 .end method

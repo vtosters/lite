@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/Integer;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/Integer;
     .locals 1
 
     .line 1
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper$defaultCountCreator$1;->this$0:Lcom/vk/profile/data/CountersWrapper;
 
@@ -80,9 +80,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/data/CountersWrapper$defaultCountCreator$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/data/CountersWrapper$defaultCountCreator$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/Integer;
 
     move-result-object p1
 

@@ -635,7 +635,7 @@
     const v2, 0x7f080376
 
     .line 2
-    invoke-static {v0, v2}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, v2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 3
     sget-object v2, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
@@ -664,7 +664,7 @@
     invoke-virtual {v0, v2}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 5
-    invoke-static {p0, v0}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_0
 
@@ -899,13 +899,13 @@
     iput-boolean v1, p0, Lcom/vk/identity/fragments/IdentityEditFragment;->V:Z
 
     .line 5
-    new-instance v1, Lcom/vkontakte/android/fragments/b1$b;
+    new-instance v1, Lcom/vtosters/lite/fragments/b1$b;
 
     if-eqz v0, :cond_1
 
     iget v0, v0, Lcom/vk/dto/common/Country;->a:I
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/fragments/b1$b;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/b1$b;-><init>(I)V
 
     const/16 v0, 0x2eb
 

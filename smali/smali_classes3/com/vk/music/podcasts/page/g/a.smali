@@ -227,13 +227,13 @@
 
     move-result v0
 
-    const-class v2, Lcom/vkontakte/android/t;
+    const-class v2, Lcom/vtosters/lite/t;
 
     invoke-interface {p1, v1, v0, v2}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, [Lcom/vkontakte/android/t;
+    check-cast p1, [Lcom/vtosters/lite/t;
 
     if-eqz p1, :cond_2
 
@@ -241,7 +241,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/t;
+    check-cast p1, Lcom/vtosters/lite/t;
 
     goto :goto_1
 
@@ -254,7 +254,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/music/podcasts/page/g/a;->f:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_3
     return-void

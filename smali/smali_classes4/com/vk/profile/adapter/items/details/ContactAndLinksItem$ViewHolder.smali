@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ContactAndLinksItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;",
         ">;"
     }
@@ -43,7 +43,7 @@
     const v0, 0x7f0d028d
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -586,7 +586,7 @@
     if-eqz v0, :cond_6
 
     .line 33
-    new-instance v0, Lcom/vkontakte/android/ui/r;
+    new-instance v0, Lcom/vtosters/lite/ui/r;
 
     const v4, 0x7f04044d
 
@@ -594,10 +594,10 @@
 
     move-result v4
 
-    invoke-direct {v0, v4}, Lcom/vkontakte/android/ui/r;-><init>(I)V
+    invoke-direct {v0, v4}, Lcom/vtosters/lite/ui/r;-><init>(I)V
 
     .line 34
-    invoke-virtual {v0, v3}, Lcom/vkontakte/android/ui/r;->a(Z)V
+    invoke-virtual {v0, v3}, Lcom/vtosters/lite/ui/r;->a(Z)V
 
     const/16 v4, 0x30
 
@@ -637,7 +637,7 @@
 
     if-eqz v4, :cond_5
 
-    invoke-virtual {v0, v4}, Lcom/vkontakte/android/ui/r;->a(Landroid/graphics/drawable/Drawable;)Lcom/vkontakte/android/ui/r;
+    invoke-virtual {v0, v4}, Lcom/vtosters/lite/ui/r;->a(Landroid/graphics/drawable/Drawable;)Lcom/vtosters/lite/ui/r;
 
     goto :goto_3
 

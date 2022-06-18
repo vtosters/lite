@@ -270,7 +270,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
@@ -328,7 +328,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p0}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -382,7 +382,7 @@
     .line 16
     iget-object v0, p0, Ld/a/a/a/h;->F:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -765,7 +765,7 @@
 
     const v0, 0x7f080376
 
-    invoke-static {p2, v0}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     goto :goto_0
 
@@ -782,7 +782,7 @@
 
     const v0, 0x7f080318
 
-    invoke-static {p2, v0}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 27
     :cond_7
@@ -897,7 +897,7 @@
     .line 1
     iget-object v0, p0, Ld/a/a/a/h;->F:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     return-void
 .end method

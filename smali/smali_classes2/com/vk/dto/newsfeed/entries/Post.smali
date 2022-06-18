@@ -1715,7 +1715,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v0, v0, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     return v0
 .end method
@@ -1803,13 +1803,13 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 4
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object p1, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     const/4 v0, 0x0
 
@@ -1819,14 +1819,14 @@
 
     .line 5
     :cond_0
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_3
 
     .line 6
-    check-cast v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -1842,11 +1842,11 @@
 
     .line 9
     :cond_1
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v4
 
@@ -1865,7 +1865,7 @@
     if-eq v1, v4, :cond_3
 
     .line 10
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->x1()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 

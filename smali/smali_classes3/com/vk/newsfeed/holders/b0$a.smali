@@ -42,7 +42,7 @@
     move-result v0
 
     .line 3
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -82,19 +82,19 @@
     const-string p2, "open_user"
 
     .line 5
-    invoke-static {p2}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p2}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/data/n$l;->a()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/data/n$l;->f()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2}, Lcom/vtosters/lite/data/n$l;->f()Lcom/vtosters/lite/data/n$l;
 
     const-string v0, "user_ids"
 
-    invoke-virtual {p2, v0, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2, v0, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -117,7 +117,7 @@
     move-result v0
 
     .line 3
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -155,7 +155,7 @@
     move-result-object v2
 
     .line 5
-    invoke-static {v2}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -195,24 +195,24 @@
     const-string p2, "show_user_rec"
 
     .line 7
-    invoke-static {p2}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p2}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/data/n$l;->a()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/data/n$l;->f()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2}, Lcom/vtosters/lite/data/n$l;->f()Lcom/vtosters/lite/data/n$l;
 
     const-string v0, "user_ids"
 
-    invoke-virtual {p2, v0, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2, v0, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p2}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     const-wide/32 p1, 0x5265c00
 
     .line 8
-    invoke-static {v2, p1, p2}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;J)V
+    invoke-static {v2, p1, p2}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;J)V
 
     :cond_0
     return-void

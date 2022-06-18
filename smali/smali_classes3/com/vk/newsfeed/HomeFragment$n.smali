@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/NewsfeedList;Z)V
+.method public a(Lcom/vtosters/lite/NewsfeedList;Z)V
     .locals 2
 
     .line 1

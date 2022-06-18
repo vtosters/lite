@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/c<",
         "Ljava/lang/Integer;",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         "Lkotlin/m;",
         ">;"
     }
@@ -57,16 +57,16 @@
     .line 1
     check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentUpdated$$inlined$forEach$lambda$1;->a(Ljava/lang/Integer;Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$onAttachmentUpdated$$inlined$forEach$lambda$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vkontakte/android/ui/f0/b;)V
+.method public final a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
     .locals 13
 
     .line 2
@@ -111,15 +111,15 @@
 
     new-instance v12, Lcom/vk/newsfeed/h0/a;
 
-    iget-object v7, p2, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v7, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {v7, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v8, p2, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v8, p2, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {v8, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v9
 
@@ -183,16 +183,16 @@
     .line 8
     new-instance v5, Lcom/vk/newsfeed/h0/b;
 
-    iget-object v6, p2, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v6, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p2, p2, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p2, p2, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v0
 

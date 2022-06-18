@@ -157,7 +157,7 @@
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/j;->P:Lcom/vk/music/model/t;
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -193,11 +193,11 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
+.method private final a(Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
     .locals 0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->y1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->y1()Ljava/lang/String;
 
     move-result-object p1
 
@@ -239,14 +239,14 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-eqz v0, :cond_5
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->I:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -262,15 +262,15 @@
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v4
 
     iget-object v4, v4, Lcom/vk/dto/music/Playlist;->g:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v5
 
@@ -287,7 +287,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->N:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -300,7 +300,7 @@
 
     sget-object v1, Lcom/vk/music/ui/common/formatting/d;->a:Lcom/vk/music/ui/common/formatting/d;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v4
 
@@ -312,7 +312,7 @@
 
     invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v5
 
@@ -332,7 +332,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -340,7 +340,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -353,7 +353,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->K:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -377,7 +377,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->K:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -391,7 +391,7 @@
 
     const v3, 0x7f100064
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v4
 
@@ -407,7 +407,7 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->L:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -415,7 +415,7 @@
 
     if-nez v1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -440,7 +440,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->L:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -500,7 +500,7 @@
     invoke-static {v0, v1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 14
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -511,7 +511,7 @@
     .line 15
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->H:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object p1
 
@@ -525,7 +525,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/j;->H:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object p1
 
@@ -612,14 +612,14 @@
     move-result-object v0
 
     .line 4
-    instance-of v4, v0, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    instance-of v4, v0, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-eqz v4, :cond_5
 
     .line 5
-    check-cast v0, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v4
 
@@ -679,7 +679,7 @@
     new-array v4, v4, [Ljava/lang/Object;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v5
 
@@ -687,7 +687,7 @@
 
     aput-object v5, v4, v3
 
-    invoke-virtual {p0, p1, v4}, Lcom/vkontakte/android/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p1, v4}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -704,13 +704,13 @@
     .line 12
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/j;->P:Lcom/vk/music/model/t;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
     invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/newsfeed/holders/attachments/j;->a(Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-direct {p0, v0}, Lcom/vk/newsfeed/holders/attachments/j;->a(Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -727,7 +727,7 @@
     :goto_1
     new-instance p1, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -735,7 +735,7 @@
 
     invoke-direct {p1, v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;-><init>(Lcom/vk/dto/music/Playlist;)V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 

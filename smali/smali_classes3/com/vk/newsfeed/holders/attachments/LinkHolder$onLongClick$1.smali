@@ -57,7 +57,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/LinkHolder$onLongClick$1;->this$0:Lcom/vk/newsfeed/holders/attachments/LinkHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -80,23 +80,23 @@
 
     move-object v1, v0
 
-    check-cast v1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/LinkAttachment;->B:Lcom/vkontakte/android/data/PostInteract;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/LinkAttachment;->B:Lcom/vtosters/lite/data/PostInteract;
 
     if-eqz v1, :cond_0
 
-    sget-object v2, Lcom/vkontakte/android/data/PostInteract$Type;->link_click:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v2, Lcom/vtosters/lite/data/PostInteract$Type;->link_click:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/LinkAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
 
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/AwayLink;->u1()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v0}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;Ljava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x0

@@ -64,14 +64,14 @@
 
     .line 1
     :cond_0
-    instance-of p1, p3, Lcom/vkontakte/android/NewsfeedList;
+    instance-of p1, p3, Lcom/vtosters/lite/NewsfeedList;
 
     if-eqz p1, :cond_3
 
     .line 2
-    check-cast p3, Lcom/vkontakte/android/NewsfeedList;
+    check-cast p3, Lcom/vtosters/lite/NewsfeedList;
 
-    invoke-virtual {p3}, Lcom/vkontakte/android/NewsfeedList;->u1()Z
+    invoke-virtual {p3}, Lcom/vtosters/lite/NewsfeedList;->u1()Z
 
     move-result p1
 
@@ -80,7 +80,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/l$c;->a:Lcom/vk/newsfeed/presenters/l;
 
-    invoke-static {p1, p3}, Lcom/vk/newsfeed/presenters/l;->a(Lcom/vk/newsfeed/presenters/l;Lcom/vkontakte/android/NewsfeedList;)V
+    invoke-static {p1, p3}, Lcom/vk/newsfeed/presenters/l;->a(Lcom/vk/newsfeed/presenters/l;Lcom/vtosters/lite/NewsfeedList;)V
 
     .line 4
     :cond_1
@@ -90,7 +90,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p3}, Lcom/vkontakte/android/NewsfeedList;->getId()I
+    invoke-virtual {p3}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result p2
 

@@ -166,7 +166,7 @@
     .locals 11
 
     .line 200
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/e;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/e;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -188,7 +188,7 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, p3, v3}, Lcom/vkontakte/android/api/newsfeed/e;-><init>(IIILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, p3, v3}, Lcom/vtosters/lite/api/newsfeed/e;-><init>(IIILjava/lang/String;)V
 
     const/4 p3, 0x0
 
@@ -367,13 +367,13 @@
     .locals 2
 
     .line 188
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Photos;->y1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz p1, :cond_0
 
@@ -1007,7 +1007,7 @@
     neg-int v0, v0
 
     .line 96
-    invoke-static {v0}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v2
 
@@ -1166,15 +1166,15 @@
     .locals 11
 
     .line 50
-    invoke-static {p2, p3}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-static {p2, p3}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vkontakte/android/data/PostInteract$Type;->hide:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v1, Lcom/vtosters/lite/data/PostInteract$Type;->hide:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     .line 51
     :cond_0
@@ -1545,28 +1545,28 @@
     .locals 11
 
     .line 19
-    invoke-static {p2}, Lcom/vkontakte/android/api/newsfeed/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
+    invoke-static {p2}, Lcom/vtosters/lite/api/newsfeed/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 20
-    invoke-static {p2, p3}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-static {p2, p3}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vkontakte/android/data/PostInteract$Type;->hide:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v1, Lcom/vtosters/lite/data/PostInteract$Type;->hide:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     .line 21
     :cond_0
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/d;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/d;
 
-    invoke-direct {v0, p2, p3}, Lcom/vkontakte/android/api/newsfeed/d;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
+    invoke-direct {v0, p2, p3}, Lcom/vtosters/lite/api/newsfeed/d;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
 
     const/4 p3, 0x1
 
@@ -1624,7 +1624,7 @@
     const-string p1, "digest_hide"
 
     .line 29
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
@@ -1637,10 +1637,10 @@
 
     const-string p3, "track_code"
 
-    invoke-virtual {p1, p3, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, p3, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 31
-    invoke-virtual {p1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     return-void
@@ -1673,7 +1673,7 @@
     if-eqz v0, :cond_1
 
     .line 34
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -1744,7 +1744,7 @@
     .locals 11
 
     .line 42
-    new-instance v0, Lcom/vkontakte/android/api/wall/c;
+    new-instance v0, Lcom/vtosters/lite/api/wall/c;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -1754,7 +1754,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vkontakte/android/api/wall/c;-><init>(II)V
+    invoke-direct {v0, v1, p2}, Lcom/vtosters/lite/api/wall/c;-><init>(II)V
 
     const/4 p2, 0x0
 
@@ -2059,13 +2059,13 @@
     .line 145
     check-cast p2, Lcom/vk/dto/newsfeed/entries/Videos;
 
-    invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object p2
 
     if-eqz p2, :cond_4
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p2
 
@@ -2211,7 +2211,7 @@
     move-object/from16 v1, p6
 
     .line 168
-    invoke-static/range {p3 .. p3}, Lcom/vkontakte/android/i0/d;->a(Landroid/content/Context;)Z
+    invoke-static/range {p3 .. p3}, Lcom/vtosters/lite/i0/d;->a(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -2354,7 +2354,7 @@
     :goto_3
     if-eqz v2, :cond_7
 
-    invoke-static {v9, v8}, Lcom/vkontakte/android/api/wall/h;->a(Lcom/vk/dto/newsfeed/c;Z)Lcom/vkontakte/android/api/wall/h;
+    invoke-static {v9, v8}, Lcom/vtosters/lite/api/wall/h;->a(Lcom/vk/dto/newsfeed/c;Z)Lcom/vtosters/lite/api/wall/h;
 
     move-result-object v1
 
@@ -2362,7 +2362,7 @@
 
     .line 181
     :cond_7
-    invoke-static {v9, v8, v1}, Lcom/vkontakte/android/api/wall/h;->a(Lcom/vk/dto/newsfeed/c;ZLjava/lang/String;)Lcom/vkontakte/android/api/wall/h;
+    invoke-static {v9, v8, v1}, Lcom/vtosters/lite/api/wall/h;->a(Lcom/vk/dto/newsfeed/c;ZLjava/lang/String;)Lcom/vtosters/lite/api/wall/h;
 
     move-result-object v1
 
@@ -2549,7 +2549,7 @@
     .locals 21
 
     .line 125
-    new-instance v0, Lcom/vkontakte/android/api/wall/d;
+    new-instance v0, Lcom/vtosters/lite/api/wall/d;
 
     invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -2563,7 +2563,7 @@
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vkontakte/android/api/wall/d;-><init>(III)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/api/wall/d;-><init>(III)V
 
     const/4 v1, 0x0
 
@@ -2718,7 +2718,7 @@
 
     .line 207
     :cond_0
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/b;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/b;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -2732,7 +2732,7 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3, p2}, Lcom/vkontakte/android/api/newsfeed/b;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3, p2}, Lcom/vtosters/lite/api/newsfeed/b;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -3023,7 +3023,7 @@
     .locals 11
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/api/wall/j;
+    new-instance v0, Lcom/vtosters/lite/api/wall/j;
 
     invoke-virtual {p2}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -3033,7 +3033,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, p2}, Lcom/vkontakte/android/api/wall/j;-><init>(II)V
+    invoke-direct {v0, v1, p2}, Lcom/vtosters/lite/api/wall/j;-><init>(II)V
 
     const/4 p2, 0x0
 
@@ -3094,7 +3094,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/g;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/g;
 
     move-object v2, p1
 
@@ -3112,7 +3112,7 @@
 
     move-result v4
 
-    invoke-direct {v0, v3, v2, v4}, Lcom/vkontakte/android/api/newsfeed/g;-><init>(III)V
+    invoke-direct {v0, v3, v2, v4}, Lcom/vtosters/lite/api/newsfeed/g;-><init>(III)V
 
     goto/16 :goto_2
 
@@ -3127,13 +3127,13 @@
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Videos;
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
@@ -3146,7 +3146,7 @@
     if-eqz v0, :cond_6
 
     .line 11
-    new-instance v2, Lcom/vkontakte/android/api/newsfeed/g;
+    new-instance v2, Lcom/vtosters/lite/api/newsfeed/g;
 
     iget v3, v0, Lcom/vk/dto/common/VideoFile;->a:I
 
@@ -3156,7 +3156,7 @@
 
     move-result v4
 
-    invoke-direct {v2, v3, v0, v4}, Lcom/vkontakte/android/api/newsfeed/g;-><init>(III)V
+    invoke-direct {v2, v3, v0, v4}, Lcom/vtosters/lite/api/newsfeed/g;-><init>(III)V
 
     move-object v0, v2
 
@@ -3168,7 +3168,7 @@
 
     if-eqz v0, :cond_6
 
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/g;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/g;
 
     move-object v2, p1
 
@@ -3186,7 +3186,7 @@
 
     move-result v5
 
-    invoke-direct {v0, v3, v4, v5}, Lcom/vkontakte/android/api/newsfeed/g;-><init>(III)V
+    invoke-direct {v0, v3, v4, v5}, Lcom/vtosters/lite/api/newsfeed/g;-><init>(III)V
 
     .line 13
     invoke-virtual {v2}, Lcom/vk/dto/newsfeed/entries/Post;->k0()Ljava/lang/String;

@@ -10,7 +10,7 @@
 .method static synthetic constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcom/vkontakte/android/upload/UploadNotification$State;->values()[Lcom/vkontakte/android/upload/UploadNotification$State;
+    invoke-static {}, Lcom/vtosters/lite/upload/UploadNotification$State;->values()[Lcom/vtosters/lite/upload/UploadNotification$State;
 
     move-result-object v0
 
@@ -22,7 +22,7 @@
 
     sget-object v0, Lcom/vk/newsfeed/posting/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/upload/UploadNotification$State;->PROGRESS:Lcom/vkontakte/android/upload/UploadNotification$State;
+    sget-object v1, Lcom/vtosters/lite/upload/UploadNotification$State;->PROGRESS:Lcom/vtosters/lite/upload/UploadNotification$State;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -34,7 +34,7 @@
 
     sget-object v0, Lcom/vk/newsfeed/posting/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/upload/UploadNotification$State;->FAILED:Lcom/vkontakte/android/upload/UploadNotification$State;
+    sget-object v1, Lcom/vtosters/lite/upload/UploadNotification$State;->FAILED:Lcom/vtosters/lite/upload/UploadNotification$State;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -46,7 +46,7 @@
 
     sget-object v0, Lcom/vk/newsfeed/posting/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/upload/UploadNotification$State;->DONE:Lcom/vkontakte/android/upload/UploadNotification$State;
+    sget-object v1, Lcom/vtosters/lite/upload/UploadNotification$State;->DONE:Lcom/vtosters/lite/upload/UploadNotification$State;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

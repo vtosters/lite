@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)Lcom/vk/dto/newsfeed/entries/Html5Entry;
+.method public a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vk/dto/newsfeed/entries/Html5Entry;
     .locals 0
 
     const/4 p1, 0x0
@@ -23,13 +23,13 @@
     return-object p1
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/ui/f0/b;I)Ljava/lang/String;
+.method public abstract a(Lcom/vtosters/lite/ui/f0/b;I)Ljava/lang/String;
 .end method
 
-.method public abstract b(Lcom/vkontakte/android/ui/f0/b;)I
+.method public abstract b(Lcom/vtosters/lite/ui/f0/b;)I
 .end method
 
-.method public c(Lcom/vkontakte/android/ui/f0/b;)Ljava/lang/String;
+.method public c(Lcom/vtosters/lite/ui/f0/b;)Ljava/lang/String;
     .locals 0
 
     const/4 p1, 0x0

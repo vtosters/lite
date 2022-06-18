@@ -1,5 +1,5 @@
 .class Lcom/vk/video/d/c$e;
-.super Lcom/vkontakte/android/api/l;
+.super Lcom/vtosters/lite/api/l;
 .source "VideoYoutubeFragment.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/api/l<",
+        "Lcom/vtosters/lite/api/l<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/video/d/c$e;->c:Lcom/vk/video/d/c;
 
-    invoke-direct {p0}, Lcom/vkontakte/android/api/l;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/api/l;-><init>()V
 
     return-void
 .end method

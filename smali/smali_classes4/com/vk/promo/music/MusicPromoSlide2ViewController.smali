@@ -30,10 +30,10 @@
 # instance fields
 .field private a:Lcom/vk/promo/f;
 
-.field private final b:Lcom/vkontakte/android/fragments/money/r/a;
+.field private final b:Lcom/vtosters/lite/fragments/money/r/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vkontakte/android/fragments/money/r/a<",
+            "Lcom/vtosters/lite/fragments/money/r/a<",
             "Lcom/vk/dto/common/data/Subscription;",
             ">;"
         }
@@ -104,11 +104,11 @@
     iput-object p2, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->e:Lcom/vk/promo/music/MusicPromoStat;
 
     .line 2
-    new-instance p1, Lcom/vkontakte/android/fragments/money/r/a;
+    new-instance p1, Lcom/vtosters/lite/fragments/money/r/a;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/fragments/money/r/a;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/fragments/money/r/a;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vkontakte/android/fragments/money/r/a;
+    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vtosters/lite/fragments/money/r/a;
 
     .line 3
     new-instance p1, Lcom/vk/promo/music/MusicPromoSlide2ViewController$f;
@@ -120,11 +120,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vkontakte/android/fragments/money/r/a;
+.method public static final synthetic a(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vtosters/lite/fragments/money/r/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vkontakte/android/fragments/money/r/a;
+    iget-object p0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vtosters/lite/fragments/money/r/a;
 
     return-object p0
 .end method

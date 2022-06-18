@@ -1,5 +1,5 @@
 .class final Lcom/vk/notifications/settings/a$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CategorySettingsAdapter.kt"
 
 
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
         ">;"
     }
@@ -168,7 +168,7 @@
     const v0, 0x7f0d022e
 
     .line 1
-    invoke-direct {p0, v0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     new-instance p2, Ljava/lang/ref/WeakReference;
@@ -369,7 +369,7 @@
     move/from16 v1, p1
 
     .line 1
-    iget-object v2, v0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, v0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
 

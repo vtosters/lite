@@ -34,9 +34,9 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ALL:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v0, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ALL:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v0
 
@@ -331,7 +331,7 @@
             "Landroid/content/Intent;",
             "I)",
             "Ljava/util/ArrayList<",
-            "Lcom/vkontakte/android/attachments/PendingDocumentAttachment;",
+            "Lcom/vtosters/lite/attachments/PendingDocumentAttachment;",
             ">;"
         }
     .end annotation
@@ -517,7 +517,7 @@
     invoke-static {v8, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 41
-    new-instance v1, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     .line 42
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
@@ -547,14 +547,14 @@
     const/4 v9, 0x0
 
     .line 45
-    invoke-static {}, Lcom/vkontakte/android/upload/Upload;->a()I
+    invoke-static {}, Lcom/vtosters/lite/upload/Upload;->a()I
 
     move-result v10
 
     move-object v4, v1
 
     .line 46
-    invoke-direct/range {v4 .. v11}, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IILjava/lang/String;)V
+    invoke-direct/range {v4 .. v11}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IILjava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -608,7 +608,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 51
-    invoke-static {v1}, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;->e(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    invoke-static {v1}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;->e(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     move-result-object v1
 
@@ -623,19 +623,19 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/execute/DocsGetTypes$c;)Ljava/util/List;
+.method public final a(Lcom/vtosters/lite/api/execute/DocsGetTypes$c;)Ljava/util/List;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/execute/DocsGetTypes$c;",
+            "Lcom/vtosters/lite/api/execute/DocsGetTypes$c;",
             ")",
             "Ljava/util/List<",
             "Lkotlin/Pair<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/api/base/Document;",
             ">;",
-            "Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;",
+            "Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;",
             ">;>;"
         }
     .end annotation
@@ -646,7 +646,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 70
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -666,14 +666,14 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;
+    check-cast v2, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;
 
     .line 72
-    invoke-virtual {v2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;->b()Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    invoke-virtual {v2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->b()Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v3
 
@@ -684,7 +684,7 @@
 
     if-ne v3, v4, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v4
 
@@ -695,7 +695,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-virtual {v2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;->a()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->a()I
 
     move-result v4
 
@@ -705,7 +705,7 @@
 
     sget-object v6, Lcom/vk/documents/list/DocumentsUtils;->a:Lcom/vk/documents/list/DocumentsUtils;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v7
 
@@ -713,7 +713,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;->b()Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    invoke-virtual {v2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->b()Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     move-result-object v2
 
@@ -727,12 +727,12 @@
     return-object v0
 .end method
 
-.method public final a(ILcom/vkontakte/android/api/execute/DocsGetTypes$c;Z)Lkotlin/Pair;
+.method public final a(ILcom/vtosters/lite/api/execute/DocsGetTypes$c;Z)Lkotlin/Pair;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vkontakte/android/api/execute/DocsGetTypes$c;",
+            "Lcom/vtosters/lite/api/execute/DocsGetTypes$c;",
             "Z)",
             "Lkotlin/Pair<",
             "Ljava/util/ArrayList<",
@@ -755,7 +755,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 54
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->b()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->b()Ljava/util/List;
 
     move-result-object v2
 
@@ -775,14 +775,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;
+    check-cast v3, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;
 
     .line 56
-    invoke-virtual {v3}, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;->b()Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    invoke-virtual {v3}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->b()Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v4}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v4
 
@@ -793,7 +793,7 @@
 
     if-ne v4, v5, :cond_0
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v5
 
@@ -804,7 +804,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-virtual {v3}, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;->a()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->a()I
 
     move-result v5
 
@@ -812,7 +812,7 @@
     :goto_1
     sget-object v6, Lcom/vk/documents/list/DocumentsUtils;->a:Lcom/vk/documents/list/DocumentsUtils;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$c;->c()Lcom/vk/api/base/VkPaginationList;
 
     move-result-object v7
 
@@ -855,11 +855,11 @@
     .line 66
     sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/api/execute/DocsGetTypes$b;->b()Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    invoke-virtual {v3}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->b()Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->a()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->a()I
 
     move-result v3
 
@@ -1063,14 +1063,14 @@
     if-eqz v0, :cond_2
 
     .line 14
-    new-instance p3, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p3, Lcom/vtosters/lite/fragments/j2$g;
 
     iget-object v0, p1, Lcom/vk/api/base/Document;->B:Ljava/lang/String;
 
-    invoke-direct {p3, v0}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p3, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 15
-    invoke-virtual {p3, p1}, Lcom/vkontakte/android/fragments/j2$g;->a(Lcom/vk/api/base/Document;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {p3, p1}, Lcom/vtosters/lite/fragments/j2$g;->a(Lcom/vk/api/base/Document;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 16
     invoke-virtual {p3, p2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -1095,9 +1095,9 @@
 
     move-result-object p3
 
-    new-instance v0, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     invoke-static {v0}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1141,14 +1141,14 @@
     .locals 3
 
     .line 28
-    new-instance v0, Lcom/vkontakte/android/fragments/x2/a$d;
+    new-instance v0, Lcom/vtosters/lite/fragments/x2/a$d;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/x2/a$d;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/x2/a$d;-><init>()V
 
     const-wide/32 v1, 0xc800000
 
     .line 29
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/fragments/x2/a$d;->a(J)Lcom/vkontakte/android/fragments/x2/a$d;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/fragments/x2/a$d;->a(J)Lcom/vtosters/lite/fragments/x2/a$d;
 
     const/16 v1, 0x67
 

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/items/c0/b;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/b;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/b;
     .locals 4
 
     .line 1
@@ -54,7 +54,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$banMessage$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->b(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->b(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$banMessage$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/b;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$banMessage$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/b;
 
     move-result-object p1
 

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/community/b;",
         ">;"
     }
@@ -50,23 +50,23 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/b;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/b;
     .locals 9
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->p()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->p()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     const/16 v1, 0x2b
 
     if-eq v0, v1, :cond_2
 
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->t1:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->t1:I
 
     if-eq v0, v1, :cond_2
 
@@ -91,7 +91,7 @@
 
     const v3, 0x7f100035
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->o()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->o()I
 
     move-result v4
 
@@ -107,7 +107,7 @@
 
     new-array v4, v3, [Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->o()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->o()I
 
     move-result v5
 
@@ -136,7 +136,7 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 5
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->n()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->n()I
 
     move-result v2
 
@@ -156,13 +156,13 @@
 
     const v4, 0x7f100037
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->n()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->n()I
 
     move-result v5
 
     new-array v7, v3, [Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->n()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->n()I
 
     move-result v8
 
@@ -193,7 +193,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->h(I)V
 
     .line 11
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->n()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->n()I
 
     move-result v1
 
@@ -210,7 +210,7 @@
     .line 12
     new-instance v1, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1;Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1;Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Landroid/view/View$OnClickListener;)V
 
@@ -226,9 +226,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/b;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$chats$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/b;
 
     move-result-object p1
 

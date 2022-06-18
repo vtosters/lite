@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter$onPreviousDataLoaded$1;->a(Lcom/vkontakte/android/api/wall/a;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter$onPreviousDataLoaded$1;->a(Lcom/vtosters/lite/api/wall/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/NewsComment;",
+        "Lcom/vtosters/lite/NewsComment;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/NewsComment;)Z
+.method public final a(Lcom/vtosters/lite/NewsComment;)Z
     .locals 1
 
     .line 1
@@ -69,9 +69,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/NewsComment;
+    check-cast p1, Lcom/vtosters/lite/NewsComment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$onPreviousDataLoaded$1$3;->a(Lcom/vkontakte/android/NewsComment;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$onPreviousDataLoaded$1$3;->a(Lcom/vtosters/lite/NewsComment;)Z
 
     move-result p1
 

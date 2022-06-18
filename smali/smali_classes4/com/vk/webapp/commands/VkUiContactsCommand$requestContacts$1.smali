@@ -64,7 +64,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/commands/VkUiContactsCommand$requestContacts$1$a;-><init>(Lcom/vk/webapp/commands/VkUiContactsCommand$requestContacts$1;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
