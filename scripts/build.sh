@@ -36,8 +36,8 @@ else
 	exit 1
 fi
 
-echo -e "${BOLD}${UNDERLINE}Перенос dex8 в папку с исходным кодом..${NC}"
-mv app/classes8.dex smali/
+echo -e "${BOLD}${UNDERLINE}Перенос dex7 в папку с исходным кодом..${NC}"
+mv app/classes7.dex smali/
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
@@ -76,7 +76,7 @@ echo -e "${BOLD}VTosters Lite успешно собран! APK находитс�
 
 cd ../smali
 rm classes6.dex
-rm classes8.dex
+rm classes7.dex
 
 echo -n "Желаете установить VTosters через adb? (y/n) "
 read -n 1 prompt
