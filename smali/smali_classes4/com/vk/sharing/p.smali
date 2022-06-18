@@ -107,7 +107,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/sharing/p;->e:Lcom/vk/sharing/view/m;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -120,7 +120,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/sharing/p;->e:Lcom/vk/sharing/view/m;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

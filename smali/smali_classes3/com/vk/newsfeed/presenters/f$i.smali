@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;)V
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;)V
     .locals 0
 
     .line 1
@@ -61,9 +61,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/f$i;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/f$i;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGetRecommendedLiveVideos$Response;)V
 
     return-void
 .end method

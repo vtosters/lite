@@ -30,7 +30,7 @@
 
 .field private Q:Landroid/view/View;
 
-.field private R:Lcom/vkontakte/android/o0/a;
+.field private R:Lcom/vtosters/lite/o0/a;
 
 .field private S:Lcom/vk/wall/e;
 
@@ -56,15 +56,15 @@
     invoke-direct {v0, p0}, Lcom/vk/wall/thread/CommentThreadPresenter;-><init>(Lcom/vk/wall/f;)V
 
     .line 3
-    new-instance v1, Lcom/vkontakte/android/o0/a;
+    new-instance v1, Lcom/vtosters/lite/o0/a;
 
     invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->t()Lcom/vk/lists/o;
 
     move-result-object v2
 
-    invoke-direct {v1, v0, v2}, Lcom/vkontakte/android/o0/a;-><init>(Lcom/vk/wall/e;Lcom/vk/lists/o;)V
+    invoke-direct {v1, v0, v2}, Lcom/vtosters/lite/o0/a;-><init>(Lcom/vk/wall/e;Lcom/vk/lists/o;)V
 
-    iput-object v1, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vkontakte/android/o0/a;
+    iput-object v1, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vtosters/lite/o0/a;
 
     .line 4
     invoke-virtual {p0, v0}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/e;)V
@@ -203,9 +203,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vkontakte/android/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vtosters/lite/o0/a;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/o0/a;->H(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/o0/a;->H(I)V
 
     return-void
 .end method
@@ -229,7 +229,7 @@
     return-object p1
 .end method
 
-.method public a(Lcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+.method public a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
     .locals 3
 
     .line 2
@@ -247,7 +247,7 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-interface {v1, p1}, Lcom/vk/wall/e;->a(Lcom/vkontakte/android/NewsComment;)Lcom/vk/wall/a;
+    invoke-interface {v1, p1}, Lcom/vk/wall/e;->a(Lcom/vtosters/lite/NewsComment;)Lcom/vk/wall/a;
 
     move-result-object v1
 
@@ -260,7 +260,7 @@
 
     new-instance v2, Lcom/vk/wall/thread/CommentThreadFragment$d;
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/vk/wall/thread/CommentThreadFragment$d;-><init>(Lcom/vk/wall/thread/CommentThreadFragment;Lcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/vk/wall/thread/CommentThreadFragment$d;-><init>(Lcom/vk/wall/thread/CommentThreadFragment;Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
 
     invoke-virtual {v1, v0, v2}, Lcom/vk/wall/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
 
@@ -275,7 +275,7 @@
     return-void
 .end method
 
-.method public c(Lcom/vkontakte/android/NewsComment;)Z
+.method public c(Lcom/vtosters/lite/NewsComment;)Z
     .locals 8
 
     .line 1
@@ -334,11 +334,11 @@
     return p1
 .end method
 
-.method public d(Lcom/vkontakte/android/NewsComment;)V
+.method public d(Lcom/vtosters/lite/NewsComment;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vkontakte/android/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vtosters/lite/o0/a;
 
     invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
 
@@ -370,7 +370,7 @@
     check-cast v2, Lcom/vk/wall/b;
 
     .line 4
-    invoke-virtual {v2}, Lcom/vk/wall/b;->a()Lcom/vkontakte/android/q;
+    invoke-virtual {v2}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
 
     move-result-object v2
 
@@ -501,7 +501,7 @@
 
     move-result-object v0
 
-    invoke-interface {v2, v3, v4, v0}, Lcom/vk/wall/e;->a(ILjava/lang/String;Ljava/util/ArrayList;)Lcom/vkontakte/android/q;
+    invoke-interface {v2, v3, v4, v0}, Lcom/vk/wall/e;->a(ILjava/lang/String;Ljava/util/ArrayList;)Lcom/vtosters/lite/q;
 
     goto :goto_0
 
@@ -1167,7 +1167,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vkontakte/android/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vtosters/lite/o0/a;
 
     invoke-virtual {p0, v0}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/lists/i0;)V
 
@@ -1333,7 +1333,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vkontakte/android/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vtosters/lite/o0/a;
 
     invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
 

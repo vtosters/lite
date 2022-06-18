@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/data/n$l;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vkontakte/android/data/n$l;
+.method private final a(Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vtosters/lite/data/n$l;
     .locals 2
 
     if-eqz p2, :cond_1
@@ -106,7 +106,7 @@
 
     const-string v1, "story_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 23
     iget v0, p2, Lcom/vk/dto/stories/model/StoryEntry;->c:I
@@ -117,7 +117,7 @@
 
     const-string v1, "story_owner_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 24
     iget-boolean v0, p2, Lcom/vk/dto/stories/model/StoryEntry;->L:Z
@@ -134,20 +134,20 @@
     :goto_0
     const-string v1, "is_pinned"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 25
     iget-object p2, p2, Lcom/vk/dto/stories/model/StoryEntry;->O:Ljava/lang/String;
 
     const-string v0, "track_code"
 
-    invoke-virtual {p1, v0, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     return-object p1
 .end method
 
-.method private final a(Lcom/vkontakte/android/data/n$l;Lcom/vk/stories/analytics/b;)Lcom/vkontakte/android/data/n$l;
+.method private final a(Lcom/vtosters/lite/data/n$l;Lcom/vk/stories/analytics/b;)Lcom/vtosters/lite/data/n$l;
     .locals 2
 
     if-eqz p2, :cond_1
@@ -163,7 +163,7 @@
 
     const-string v1, "stories_author_before"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 27
     invoke-virtual {p2}, Lcom/vk/stories/analytics/b;->b()I
@@ -176,7 +176,7 @@
 
     const-string v1, "stories_author_after"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 28
     invoke-virtual {p2}, Lcom/vk/stories/analytics/b;->a()J
@@ -189,7 +189,7 @@
 
     const-string v1, "view_event_timeline_position"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 29
     invoke-virtual {p2}, Lcom/vk/stories/analytics/b;->d()Z
@@ -208,7 +208,7 @@
     :goto_0
     const-string v0, "is_grouped"
 
-    invoke-virtual {p1, v0, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     return-object p1
@@ -341,7 +341,7 @@
             "Lcom/vk/stories/analytics/c;",
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/data/n$l;",
+            "Lcom/vtosters/lite/data/n$l;",
             "Lkotlin/m;",
             ">;)V"
         }
@@ -404,7 +404,7 @@
             "Lcom/vk/stories/analytics/b;",
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/data/n$l;",
+            "Lcom/vtosters/lite/data/n$l;",
             "Lkotlin/m;",
             ">;)V"
         }
@@ -413,7 +413,7 @@
     const-string v0, "story_view"
 
     .line 3
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -436,7 +436,7 @@
 
     const-string v3, "event_type"
 
-    invoke-virtual {v0, v3, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 5
     sget-object p1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
@@ -451,12 +451,12 @@
 
     const-string v3, "volume"
 
-    invoke-virtual {v0, v3, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v3, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "nav_screen"
 
     .line 6
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 7
     invoke-virtual {p3}, Ljava/lang/Enum;->toString()Ljava/lang/String;
@@ -473,22 +473,22 @@
 
     const-string p2, "view_entry_point"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "Analytics.track(\"story_v\u2026toString().toLowerCase())"
 
     invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-direct {p0, v0, p4}, Lcom/vk/stories/analytics/StoryAnalytics;->a(Lcom/vkontakte/android/data/n$l;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vkontakte/android/data/n$l;
+    invoke-direct {p0, v0, p4}, Lcom/vk/stories/analytics/StoryAnalytics;->a(Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vtosters/lite/data/n$l;
 
     .line 9
-    invoke-direct {p0, v0, p5}, Lcom/vk/stories/analytics/StoryAnalytics;->a(Lcom/vkontakte/android/data/n$l;Lcom/vk/stories/analytics/b;)Lcom/vkontakte/android/data/n$l;
+    invoke-direct {p0, v0, p5}, Lcom/vk/stories/analytics/StoryAnalytics;->a(Lcom/vtosters/lite/data/n$l;Lcom/vk/stories/analytics/b;)Lcom/vtosters/lite/data/n$l;
 
     .line 10
     sget-object p1, Lb/h/b/a;->a:Lb/h/b/a;
 
-    invoke-virtual {p1, v0}, Lb/h/b/a;->a(Lcom/vkontakte/android/data/n$l;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v0}, Lb/h/b/a;->a(Lcom/vtosters/lite/data/n$l;)Lcom/vtosters/lite/data/n$l;
 
     if-eqz p6, :cond_0
 
@@ -501,7 +501,7 @@
 
     .line 12
     :cond_0
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 

@@ -38,7 +38,7 @@
 # instance fields
 .field private final F:Lcom/vk/imageloader/view/VKCircleImageView;
 
-.field private final G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+.field private final G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
 .field private final H:Landroid/widget/TextView;
 
@@ -118,9 +118,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    check-cast p1, Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/ActionableProfilesRecommendationsHeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/ActionableProfilesRecommendationsHeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -168,7 +168,7 @@
     iput-object p1, p0, Lcom/vk/newsfeed/holders/ActionableProfilesRecommendationsHeaderHolder;->J:Landroid/widget/ImageView;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/ActionableProfilesRecommendationsHeaderHolder;->G:Lcom/vkontakte/android/ui/OverlayLinearLayout;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/ActionableProfilesRecommendationsHeaderHolder;->G:Lcom/vtosters/lite/ui/OverlayLinearLayout;
 
     invoke-virtual {p1, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -282,7 +282,7 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -291,9 +291,9 @@
     move-result v0
 
     .line 2
-    new-instance v1, Lcom/vkontakte/android/api/newsfeed/d;
+    new-instance v1, Lcom/vtosters/lite/api/newsfeed/d;
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations;
 
@@ -317,7 +317,7 @@
     :goto_0
     const-string v3, "holiday_friends"
 
-    invoke-direct {v1, v3, v0, v0, v2}, Lcom/vkontakte/android/api/newsfeed/d;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v1, v3, v0, v0, v2}, Lcom/vtosters/lite/api/newsfeed/d;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
 
@@ -332,7 +332,7 @@
 
     const/16 v1, 0x64
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     invoke-virtual {v0, v1, v2}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 
@@ -343,7 +343,7 @@
     .locals 12
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ActionableProfilesRecommendations;
 
@@ -361,7 +361,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v3
 
@@ -388,7 +388,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 

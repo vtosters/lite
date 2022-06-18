@@ -80,7 +80,7 @@
     invoke-virtual {p1, v1, v2}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 
     .line 3
-    new-instance p1, Lcom/vkontakte/android/api/newsfeed/d;
+    new-instance p1, Lcom/vtosters/lite/api/newsfeed/d;
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$l;->b:Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -102,7 +102,7 @@
 
     const-string v4, "category"
 
-    invoke-direct {p1, v4, v1, v2, v3}, Lcom/vkontakte/android/api/newsfeed/d;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {p1, v4, v1, v2, v3}, Lcom/vtosters/lite/api/newsfeed/d;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     const/4 v1, 0x1
 

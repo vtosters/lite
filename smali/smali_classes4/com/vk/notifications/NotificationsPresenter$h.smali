@@ -161,7 +161,7 @@
     const/4 p1, 0x0
 
     .line 9
-    invoke-static {p1}, Lcom/vkontakte/android/w;->k(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/w;->k(I)V
 
     :cond_2
     return-void

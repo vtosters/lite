@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$b;
-.super Lcom/vkontakte/android/v;
+.super Lcom/vtosters/lite/v;
 .source "ContactAndLinksItem.kt"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$b;->C:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

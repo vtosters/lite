@@ -15,7 +15,7 @@
         "<ItemType:",
         "Ljava/lang/Object;",
         "ItemHolder:",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "TItemType;>;>",
         "Lcom/vk/discover/holders/d;"
     }
@@ -153,7 +153,7 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public abstract a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

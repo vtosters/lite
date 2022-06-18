@@ -28,7 +28,7 @@
 
 .field private final I:Lcom/vk/core/view/AdsButton;
 
-.field private J:Lcom/vkontakte/android/ui/f0/b;
+.field private J:Lcom/vtosters/lite/ui/f0/b;
 
 
 # direct methods
@@ -280,13 +280,13 @@
     invoke-virtual {v0, p1}, Lcom/vk/core/view/VkRatingView;->setRating(F)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/p0;->J:Lcom/vkontakte/android/ui/f0/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/p0;->J:Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_5
 
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     goto :goto_5
 
@@ -331,14 +331,14 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/p0;->J:Lcom/vkontakte/android/ui/f0/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/p0;->J:Lcom/vtosters/lite/ui/f0/b;
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -358,7 +358,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/p0;->J:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/p0;->J:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
@@ -366,7 +366,7 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iput-object p1, v0, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -376,7 +376,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -391,14 +391,14 @@
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
 
     :cond_0
     return-void

@@ -249,7 +249,7 @@
 
     .line 3
     :cond_2
-    instance-of p1, v3, Lcom/vkontakte/android/attachments/c;
+    instance-of p1, v3, Lcom/vtosters/lite/attachments/c;
 
     const/16 v0, 0x3c
 
@@ -262,7 +262,7 @@
 
     .line 4
     :cond_3
-    instance-of p1, v3, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of p1, v3, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz p1, :cond_4
 
@@ -274,13 +274,13 @@
 
     .line 5
     :cond_4
-    instance-of p1, v3, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of p1, v3, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz p1, :cond_9
 
-    check-cast v3, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast v3, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/attachments/DocumentAttachment;->B1()Z
+    invoke-virtual {v3}, Lcom/vtosters/lite/attachments/DocumentAttachment;->B1()Z
 
     move-result p1
 

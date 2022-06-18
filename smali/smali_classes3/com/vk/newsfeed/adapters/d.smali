@@ -17,7 +17,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/lists/i0<",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;",
         "Lcom/vk/core/ui/o;",
@@ -128,7 +128,7 @@
         value = {
             "(",
             "Lcom/vk/lists/o<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;)V"
         }
     .end annotation
@@ -313,11 +313,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result p1
 
@@ -338,13 +338,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/ui/f0/b;->d:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->d:I
 
     goto :goto_0
 
@@ -363,7 +363,7 @@
     :cond_1
     iget-boolean v2, p0, Lcom/vk/newsfeed/adapters/d;->I:Z
 
-    invoke-static {v2, v1, v0, p1}, Lcom/vkontakte/android/ui/adapters/c;->a(ZZII)I
+    invoke-static {v2, v1, v0, p1}, Lcom/vtosters/lite/ui/adapters/c;->a(ZZII)I
 
     move-result v0
 
@@ -410,7 +410,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
 
     .line 5
     instance-of v1, p1, Lcom/vk/newsfeed/holders/attachments/b;
@@ -442,7 +442,7 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v2, p2, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v2, p2, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-virtual {v2}, Lcom/vk/dto/newsfeed/entries/NewsEntry;->w1()Ljava/lang/String;
 
@@ -485,13 +485,13 @@
 
     invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, p1, p2}, Lcom/vk/newsfeed/adapters/g;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/newsfeed/adapters/g;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
 
     .line 10
     :cond_3
     invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-virtual {v0, p2}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     :cond_4
     return-void
@@ -967,9 +967,9 @@
 
     .line 49
     :pswitch_2e
-    new-instance v0, Lcom/vkontakte/android/ui/holder/video/VideoSnippetAutoPlayHolder;
+    new-instance v0, Lcom/vtosters/lite/ui/holder/video/VideoSnippetAutoPlayHolder;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/ui/holder/video/VideoSnippetAutoPlayHolder;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/holder/video/VideoSnippetAutoPlayHolder;-><init>(Landroid/view/ViewGroup;)V
 
     goto/16 :goto_0
 
@@ -1072,9 +1072,9 @@
 
     .line 60
     :pswitch_39
-    new-instance v0, Lcom/vkontakte/android/ui/holder/video/i;
+    new-instance v0, Lcom/vtosters/lite/ui/holder/video/i;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/ui/holder/video/i;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/holder/video/i;-><init>(Landroid/view/ViewGroup;)V
 
     goto/16 :goto_0
 
@@ -1120,9 +1120,9 @@
 
     .line 66
     :pswitch_3f
-    new-instance v0, Lcom/vkontakte/android/ui/holder/video/j;
+    new-instance v0, Lcom/vtosters/lite/ui/holder/video/j;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/ui/holder/video/j;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/ui/holder/video/j;-><init>(Landroid/view/ViewGroup;)V
 
     goto/16 :goto_0
 

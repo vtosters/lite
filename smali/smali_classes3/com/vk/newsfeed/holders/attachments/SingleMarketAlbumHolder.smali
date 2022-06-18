@@ -152,7 +152,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/SingleMarketAlbumHolder;->H:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -209,7 +209,7 @@
     move-result-object v0
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     if-eqz v1, :cond_9
 
@@ -228,16 +228,16 @@
 
     .line 5
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
-    iget-object v1, v0, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object v1, v0, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget-object v1, v1, Lcom/vk/dto/common/GoodAlbum;->d:Lcom/vk/dto/photo/Photo;
 
     .line 6
     sget-object v2, Lcom/vk/newsfeed/holders/h;->E:Lcom/vk/newsfeed/holders/h$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v3
 
@@ -359,12 +359,12 @@
     if-eqz v1, :cond_5
 
     .line 14
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->x1()F
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->x1()F
 
     move-result v5
 
     .line 15
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -415,7 +415,7 @@
     if-eqz v3, :cond_6
 
     .line 18
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -433,7 +433,7 @@
     if-eqz v3, :cond_7
 
     .line 19
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -473,7 +473,7 @@
     :goto_2
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/SingleMarketAlbumHolder;->I:Landroid/widget/TextView;
 
-    iget-object v2, v0, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object v2, v0, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget-object v2, v2, Lcom/vk/dto/common/GoodAlbum;->c:Ljava/lang/String;
 
@@ -494,7 +494,7 @@
 
     const v3, 0x7f100034
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget v0, v0, Lcom/vk/dto/common/GoodAlbum;->e:I
 
@@ -563,30 +563,30 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vkontakte/android/fragments/market/u$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/u$f;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget v1, v1, Lcom/vk/dto/common/GoodAlbum;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/fragments/market/u$f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/market/u$f;-><init>(I)V
 
     .line 4
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget p1, p1, Lcom/vk/dto/common/GoodAlbum;->a:I
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/market/u$f;->c(I)Lcom/vkontakte/android/fragments/market/u$f;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/u$f;->c(I)Lcom/vtosters/lite/fragments/market/u$f;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

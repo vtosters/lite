@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/execute/i$a;",
+        "Lcom/vtosters/lite/api/execute/i$a;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/execute/i$a;)V
+.method public final a(Lcom/vtosters/lite/api/execute/i$a;)V
     .locals 3
 
     .line 1
@@ -62,7 +62,7 @@
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, p1}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vkontakte/android/api/execute/i$a;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/auth/VkAuthModel$a;->a:Lcom/vk/auth/VkAuthModel;
@@ -73,7 +73,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, v1}, Lcom/vkontakte/android/NetworkStateReceiver;->a(Landroid/content/Context;Lcom/vkontakte/android/api/execute/i$a;Z)V
+    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/NetworkStateReceiver;->a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/i$a;Z)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/auth/VkAuthModel$a;->a:Lcom/vk/auth/VkAuthModel;
@@ -89,9 +89,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/execute/i$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/i$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$a;->a(Lcom/vkontakte/android/api/execute/i$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$a;->a(Lcom/vtosters/lite/api/execute/i$a;)V
 
     return-void
 .end method

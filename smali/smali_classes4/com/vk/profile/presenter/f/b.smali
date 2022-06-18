@@ -166,7 +166,7 @@
     return-void
 .end method
 
-.method public final a(Landroid/location/Location;Lcom/vkontakte/android/api/i;)V
+.method public final a(Landroid/location/Location;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     if-eqz p1, :cond_1
@@ -174,7 +174,7 @@
     if-eqz p2, :cond_0
 
     .line 9
-    invoke-virtual {p2}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p2}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object p1
 
@@ -199,11 +199,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/i;)V
+.method public final a(Lcom/vtosters/lite/api/i;)V
     .locals 1
 
     .line 6
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result p1
 
@@ -277,17 +277,17 @@
     return-object v0
 .end method
 
-.method public final b(Lcom/vkontakte/android/api/i;)V
+.method public final b(Lcom/vtosters/lite/api/i;)V
     .locals 2
 
     .line 2
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s1:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s1:I
 
     const/16 v1, 0x23
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result p1
 

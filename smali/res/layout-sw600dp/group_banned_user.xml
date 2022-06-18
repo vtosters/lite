@@ -12,11 +12,11 @@
         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
                 <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_ban_duration" style="@style/CardsSectionHeader" />
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/group_ban_duration" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" app:overlay="@drawable/highlight" app:padAsBackground="true" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/group_ban_duration" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" app:overlay="@drawable/highlight" app:padAsBackground="true" />
             </LinearLayout>
             <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
                 <TextView android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/group_ban_reason" android:layout_weight="1.0" style="@style/CardsSectionHeader" />
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/group_ban_reason" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" app:overlay="@drawable/highlight" app:padAsBackground="true" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/group_ban_reason" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" app:overlay="@drawable/highlight" app:padAsBackground="true" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">

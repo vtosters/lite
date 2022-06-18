@@ -63,7 +63,7 @@
     if-ne p1, p3, :cond_0
 
     .line 3
-    instance-of p1, p2, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of p1, p2, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz p1, :cond_0
 
@@ -74,9 +74,9 @@
 
     move-result-object p1
 
-    check-cast p2, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p2}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p2
 

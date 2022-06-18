@@ -265,14 +265,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
             ")",
             "Lc/a/m<",
@@ -313,7 +313,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2, p1}, Lcom/vk/profile/adapter/counters/c;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+    invoke-virtual {p2, p1}, Lcom/vk/profile/adapter/counters/c;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
 
     move-result-object p1
 
@@ -337,12 +337,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/util/ArrayList<",
             "Lcom/vk/profile/data/CountersWrapper;",
             ">;)V"
@@ -380,7 +380,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -394,7 +394,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
 
     goto :goto_0
 

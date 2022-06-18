@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vkontakte/android/attachments/PollAttachment;)Landroid/view/View$OnClickListener;
+    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vtosters/lite/attachments/PollAttachment;)Landroid/view/View$OnClickListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Lcom/vk/newsfeed/holders/attachments/f0;
 
-.field final synthetic c:Lcom/vkontakte/android/attachments/PollAttachment;
+.field final synthetic c:Lcom/vtosters/lite/attachments/PollAttachment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method constructor <init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;->a:Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;
 
     iput-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;->b:Lcom/vk/newsfeed/holders/attachments/f0;
 
-    iput-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;->c:Lcom/vkontakte/android/attachments/PollAttachment;
+    iput-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;->c:Lcom/vtosters/lite/attachments/PollAttachment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -78,9 +78,9 @@
     invoke-interface {p1, v1, v1, v1, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;->c:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;->c:Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object p1
 

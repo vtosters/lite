@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vkontakte/android/q;
+.field private final a:Lcom/vtosters/lite/q;
 
 .field private final b:I
 
@@ -12,13 +12,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/q;II)V
+.method public constructor <init>(Lcom/vtosters/lite/q;II)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/wall/d;->a:Lcom/vkontakte/android/q;
+    iput-object p1, p0, Lcom/vk/wall/d;->a:Lcom/vtosters/lite/q;
 
     iput p2, p0, Lcom/vk/wall/d;->b:I
 
@@ -29,11 +29,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vkontakte/android/q;
+.method public final a()Lcom/vtosters/lite/q;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/d;->a:Lcom/vkontakte/android/q;
+    iget-object v0, p0, Lcom/vk/wall/d;->a:Lcom/vtosters/lite/q;
 
     return-object v0
 .end method
@@ -67,9 +67,9 @@
 
     check-cast p1, Lcom/vk/wall/d;
 
-    iget-object v0, p0, Lcom/vk/wall/d;->a:Lcom/vkontakte/android/q;
+    iget-object v0, p0, Lcom/vk/wall/d;->a:Lcom/vtosters/lite/q;
 
-    iget-object v1, p1, Lcom/vk/wall/d;->a:Lcom/vkontakte/android/q;
+    iget-object v1, p1, Lcom/vk/wall/d;->a:Lcom/vtosters/lite/q;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -106,7 +106,7 @@
 .method public hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lcom/vk/wall/d;->a:Lcom/vkontakte/android/q;
+    iget-object v0, p0, Lcom/vk/wall/d;->a:Lcom/vtosters/lite/q;
 
     if-eqz v0, :cond_0
 
@@ -146,7 +146,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/wall/d;->a:Lcom/vkontakte/android/q;
+    iget-object v1, p0, Lcom/vk/wall/d;->a:Lcom/vtosters/lite/q;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

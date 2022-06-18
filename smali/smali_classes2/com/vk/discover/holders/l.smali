@@ -172,7 +172,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/discover/holders/l;->h:Landroid/widget/TextView;
@@ -190,7 +190,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/discover/holders/l;->B:Landroid/widget/TextView;
@@ -202,7 +202,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -343,7 +343,7 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -356,7 +356,7 @@
     .line 2
     sget-object v0, Lcom/vk/discover/holders/d;->d:Lcom/vk/discover/holders/d$a;
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/discover/DiscoverItem;
 

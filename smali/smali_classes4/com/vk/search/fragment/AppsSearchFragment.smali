@@ -462,7 +462,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/p;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/p;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void

@@ -51,7 +51,7 @@
     iput-boolean v1, p0, Lcom/vk/sharing/action/ActionsInfo$b;->c:Z
 
     .line 5
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

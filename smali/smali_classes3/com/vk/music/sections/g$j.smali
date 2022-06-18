@@ -89,7 +89,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
 
     return-void
 .end method

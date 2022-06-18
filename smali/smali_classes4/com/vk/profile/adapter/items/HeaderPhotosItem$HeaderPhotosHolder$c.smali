@@ -130,13 +130,13 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->E:Lcom/vk/profile/adapter/items/HeaderPhotosItem;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     const-string v1, "photos"
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v0
 

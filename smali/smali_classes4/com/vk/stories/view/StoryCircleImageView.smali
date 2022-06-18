@@ -1054,7 +1054,7 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vkontakte/android/a0;->StoryCircleImageView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->StoryCircleImageView:[I
 
     const/4 v1, 0x0
 

@@ -243,7 +243,7 @@
     .line 1
     new-instance v0, Lcom/vk/api/stories/l;
 
-    invoke-static {}, Lcom/vkontakte/android/utils/b;->a()Lb/h/c/b/a;
+    invoke-static {}, Lcom/vtosters/lite/utils/b;->a()Lb/h/c/b/a;
 
     move-result-object v1
 
@@ -533,7 +533,7 @@
     neg-int p1, p1
 
     .line 144
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object p1
 
@@ -565,7 +565,7 @@
     if-eqz p1, :cond_2
 
     .line 147
-    sget-object p1, Lcom/vkontakte/android/bridges/h;->a:Lcom/vkontakte/android/bridges/h;
+    sget-object p1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
     invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
@@ -575,7 +575,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 
@@ -813,7 +813,7 @@
     .line 89
     new-instance p2, Lcom/vk/dto/stories/model/StoryOwner;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -986,7 +986,7 @@
 
     .line 101
     :cond_a
-    sget-object p3, Lcom/vkontakte/android/bridges/h;->a:Lcom/vkontakte/android/bridges/h;
+    sget-object p3, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
     invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
@@ -996,7 +996,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p3, v1}, Lcom/vkontakte/android/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {p3, v1}, Lcom/vtosters/lite/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p3
 
@@ -1077,7 +1077,7 @@
 
     .line 110
     :cond_e
-    sget-object v1, Lcom/vkontakte/android/bridges/h;->a:Lcom/vkontakte/android/bridges/h;
+    sget-object v1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
     invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
 
@@ -1087,7 +1087,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v1, v4}, Lcom/vkontakte/android/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {v1, v4}, Lcom/vtosters/lite/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v1
 
@@ -1212,7 +1212,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -1228,7 +1228,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -2313,7 +2313,7 @@
     const-string v0, "stories_preview"
 
     .line 274
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -2322,7 +2322,7 @@
     const-string v2, "view"
 
     .line 275
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 276
     invoke-static {p1}, Lcom/vk/stories/StoriesController$SourceType;->a(Lcom/vk/stories/StoriesController$SourceType;)Ljava/lang/String;
@@ -2331,18 +2331,18 @@
 
     const-string v1, "source"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 277
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->a()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "story_ids"
 
     .line 278
-    invoke-virtual {v0, p1, p0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 279
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     :cond_1
     :goto_0
@@ -2409,7 +2409,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/upload/Upload;->a(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/upload/Upload;->a(I)V
 
     .line 191
     sget-object v0, Lcom/vk/stories/StoriesController;->g:Ljava/util/LinkedList;
@@ -2881,18 +2881,18 @@
     move-result v2
 
     .line 225
-    new-instance v3, Lcom/vkontakte/android/upload/l/q;
+    new-instance v3, Lcom/vtosters/lite/upload/l/q;
 
-    invoke-direct {v3, v1, v2, v0}, Lcom/vkontakte/android/upload/l/q;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
+    invoke-direct {v3, v1, v2, v0}, Lcom/vtosters/lite/upload/l/q;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
 
     .line 226
-    new-instance v0, Lcom/vkontakte/android/fragments/t2/c/b$h;
+    new-instance v0, Lcom/vtosters/lite/fragments/t2/c/b$h;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/t2/c/b$h;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/t2/c/b$h;-><init>()V
 
     sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/t2/c/b$h;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/t2/c/b$h;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -2908,7 +2908,7 @@
     move-result-object v0
 
     .line 228
-    new-instance v1, Lcom/vkontakte/android/upload/UploadNotification$a;
+    new-instance v1, Lcom/vtosters/lite/upload/UploadNotification$a;
 
     sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
@@ -2920,19 +2920,19 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v4, v0}, Lcom/vkontakte/android/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
+    invoke-direct {v1, v2, v4, v0}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {v3, v1}, Lcom/vkontakte/android/upload/Upload;->a(Lcom/vkontakte/android/upload/j;Lcom/vkontakte/android/upload/UploadNotification$a;)Lcom/vkontakte/android/upload/UploadNotification$a;
+    invoke-static {v3, v1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 229
-    invoke-static {v3}, Lcom/vkontakte/android/upload/Upload;->c(Lcom/vkontakte/android/upload/j;)I
+    invoke-static {v3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     .line 230
     invoke-virtual {p0}, Lcom/vk/stories/util/CameraVideoEncoder$Parameters;->H1()Ljava/io/File;
 
     move-result-object v0
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/upload/j;->m()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result v1
 
@@ -3089,13 +3089,13 @@
     move-result v1
 
     .line 212
-    new-instance v2, Lcom/vkontakte/android/fragments/t2/c/b$h;
+    new-instance v2, Lcom/vtosters/lite/fragments/t2/c/b$h;
 
-    invoke-direct {v2}, Lcom/vkontakte/android/fragments/t2/c/b$h;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/fragments/t2/c/b$h;-><init>()V
 
     sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-virtual {v2, v3}, Lcom/vkontakte/android/fragments/t2/c/b$h;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Lcom/vtosters/lite/fragments/t2/c/b$h;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -3111,16 +3111,16 @@
     move-result-object v2
 
     .line 214
-    new-instance v3, Lcom/vkontakte/android/upload/l/l;
+    new-instance v3, Lcom/vtosters/lite/upload/l/l;
 
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4, v1, v0}, Lcom/vkontakte/android/upload/l/l;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
+    invoke-direct {v3, v4, v1, v0}, Lcom/vtosters/lite/upload/l/l;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
 
     .line 215
-    new-instance v0, Lcom/vkontakte/android/upload/UploadNotification$a;
+    new-instance v0, Lcom/vtosters/lite/upload/UploadNotification$a;
 
     sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
@@ -3132,15 +3132,15 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v4, v2}, Lcom/vkontakte/android/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
+    invoke-direct {v0, v1, v4, v2}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {v3, v0}, Lcom/vkontakte/android/upload/Upload;->a(Lcom/vkontakte/android/upload/j;Lcom/vkontakte/android/upload/UploadNotification$a;)Lcom/vkontakte/android/upload/UploadNotification$a;
+    invoke-static {v3, v0}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 216
-    invoke-static {v3}, Lcom/vkontakte/android/upload/Upload;->c(Lcom/vkontakte/android/upload/j;)I
+    invoke-static {v3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     .line 217
-    invoke-virtual {v3}, Lcom/vkontakte/android/upload/j;->m()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result v0
 
@@ -4496,7 +4496,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/upload/Upload;->b(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/upload/Upload;->b(I)V
 
     .line 5
     invoke-static {p0}, Lcom/vk/stories/StoriesController;->b(Lcom/vk/stories/StoriesController$j;)V
@@ -4579,7 +4579,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -4631,7 +4631,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

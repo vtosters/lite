@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/t$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "HeaderButtonsItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/t;",
         ">;"
     }
@@ -36,7 +36,7 @@
     const p1, 0x7f0d04b4
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -72,7 +72,7 @@
     invoke-virtual {p1, v2}, Lcom/vk/profile/ui/components/HeaderActionButtons;->setSecondaryButtonTextColor(I)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p2
 
@@ -121,7 +121,7 @@
     check-cast v0, Lcom/vk/profile/ui/components/HeaderActionButtons;
 
     .line 2
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/t;->b(Lcom/vk/profile/adapter/items/t;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/t;->b(Lcom/vk/profile/adapter/items/t;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
@@ -146,7 +146,7 @@
     invoke-virtual {v0, p1}, Lcom/vk/profile/ui/components/HeaderActionButtons;->setOnButtonClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 5
-    invoke-static {v1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 
@@ -154,7 +154,7 @@
 
     if-nez p1, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -164,13 +164,13 @@
 
     if-eqz p1, :cond_0
 
-    iget p1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget p1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v4, -0x1
 
     if-eq p1, v4, :cond_0
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result p1
 
@@ -184,7 +184,7 @@
 
     .line 7
     :cond_1
-    invoke-static {v1}, Lcom/vk/profile/utils/d;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v1}, Lcom/vk/profile/utils/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 
@@ -207,7 +207,7 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 11
-    invoke-static {v1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v5
 
@@ -243,7 +243,7 @@
     invoke-direct {v5, v7, v8}, Lcom/vk/profile/ui/components/HeaderActionButtons$a;-><init>(ILjava/lang/String;)V
 
     .line 16
-    iget-boolean v7, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->U:Z
+    iget-boolean v7, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->U:Z
 
     if-nez v7, :cond_4
 
@@ -254,7 +254,7 @@
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 18
-    iget v3, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget v3, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     if-nez v3, :cond_7
 
@@ -262,7 +262,7 @@
     new-instance p1, Lcom/vk/profile/ui/components/HeaderActionButtons$a;
 
     .line 20
-    iget-boolean v2, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->B1:Z
+    iget-boolean v2, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->B1:Z
 
     if-eqz v2, :cond_5
 
@@ -272,7 +272,7 @@
 
     .line 21
     :cond_5
-    iget-boolean v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->b0:Z
+    iget-boolean v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->b0:Z
 
     if-nez v1, :cond_6
 
@@ -338,7 +338,7 @@
 
     .line 25
     :cond_a
-    iget-boolean v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->b0:Z
+    iget-boolean v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->b0:Z
 
     if-eqz v1, :cond_b
 

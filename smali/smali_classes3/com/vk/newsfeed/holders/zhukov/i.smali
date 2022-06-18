@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Lcom/vkontakte/android/ui/holder/video/j;)V
+.method private constructor <init>(Lcom/vtosters/lite/ui/holder/video/j;)V
     .locals 3
 
     const/4 v0, 0x1
@@ -45,7 +45,7 @@
     const/4 v1, 0x7
 
     .line 2
-    invoke-direct {p0, p1, v1, v0}, Lcom/vk/newsfeed/holders/zhukov/l;-><init>(Lcom/vkontakte/android/ui/holder/video/j;IZ)V
+    invoke-direct {p0, p1, v1, v0}, Lcom/vk/newsfeed/holders/zhukov/l;-><init>(Lcom/vtosters/lite/ui/holder/video/j;IZ)V
 
     .line 3
     new-instance p1, Lcom/vk/newsfeed/holders/zhukov/h;
@@ -89,11 +89,11 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vkontakte/android/ui/holder/video/j;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/holder/video/j;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/zhukov/i;-><init>(Lcom/vkontakte/android/ui/holder/video/j;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/zhukov/i;-><init>(Lcom/vtosters/lite/ui/holder/video/j;)V
 
     return-void
 .end method
@@ -108,18 +108,18 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/b;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/b;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/b;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vkontakte/android/attachments/b;->V()I
+    invoke-interface {v0}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v0
 
@@ -163,49 +163,49 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vkontakte/android/ui/holder/video/j;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vtosters/lite/ui/holder/video/j;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/holder/video/j;->k(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/holder/video/j;->k(Z)V
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vkontakte/android/ui/holder/video/j;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vtosters/lite/ui/holder/video/j;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vkontakte/android/ui/holder/video/j;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vtosters/lite/ui/holder/video/j;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/ui/holder/video/j;->g(Z)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/holder/video/j;->g(Z)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    instance-of p1, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of p1, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz p1, :cond_1
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vkontakte/android/ui/holder/video/j;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/zhukov/l;->c()Lcom/vtosters/lite/ui/holder/video/j;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/holder/video/j;->g(Z)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/holder/video/j;->g(Z)V
 
     :cond_1
     :goto_0

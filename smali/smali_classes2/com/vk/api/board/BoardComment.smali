@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/dto/common/data/h;
-.implements Lcom/vkontakte/android/q;
+.implements Lcom/vtosters/lite/q;
 
 
 # static fields
@@ -691,7 +691,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, p2}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v4, p2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v4
 
@@ -705,7 +705,7 @@
     :cond_6
     iget-object p2, p0, Lcom/vk/api/board/BoardComment;->d:Ljava/util/ArrayList;
 
-    invoke-static {p2}, Lcom/vkontakte/android/attachments/a;->d(Ljava/util/List;)V
+    invoke-static {p2}, Lcom/vtosters/lite/attachments/a;->d(Ljava/util/List;)V
 
     const-string p2, "likes"
 
@@ -835,7 +835,7 @@
     .end annotation
 
     .line 19
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -853,7 +853,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -888,7 +888,7 @@
 
     .line 25
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -1006,7 +1006,7 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 4
-    instance-of v2, v2, Lcom/vkontakte/android/attachments/StickerAttachment;
+    instance-of v2, v2, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     if-eqz v2, :cond_0
 
@@ -1190,7 +1190,7 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 4
-    instance-of v2, v2, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    instance-of v2, v2, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
     if-eqz v2, :cond_0
 
@@ -1615,13 +1615,13 @@
 
     sub-int/2addr v0, v4
 
-    const-class v3, Lcom/vkontakte/android/v;
+    const-class v3, Lcom/vtosters/lite/v;
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/text/SpannableStringBuilder;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/vkontakte/android/v;
+    check-cast v0, [Lcom/vtosters/lite/v;
 
     .line 20
     array-length v1, v0
@@ -1733,7 +1733,7 @@
     if-eqz v5, :cond_7
 
     .line 30
-    new-instance v5, Lcom/vkontakte/android/v;
+    new-instance v5, Lcom/vtosters/lite/v;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1753,7 +1753,7 @@
 
     move-result-object v6
 
-    invoke-direct {v5, v6}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     .line 31
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I

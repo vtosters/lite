@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/a<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vkontakte/android/api/i;
+.method public final invoke()Lcom/vtosters/lite/api/i;
     .locals 1
 
     .line 2
@@ -55,11 +55,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/community/CommunityFragment$dataScope$1;->invoke()Lcom/vkontakte/android/api/i;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/community/CommunityFragment$dataScope$1;->invoke()Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 

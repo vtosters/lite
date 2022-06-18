@@ -66,7 +66,7 @@
 
 .field private final L:Ljava/lang/String;
 
-.field private final M:Lcom/vkontakte/android/attachments/VideoAttachment;
+.field private final M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
 .field private final N:Lcom/vk/dto/discover/Info;
 
@@ -110,7 +110,7 @@
 
 .field private final e:Lcom/vk/dto/common/Attachment;
 
-.field private final f:Lcom/vkontakte/android/attachments/ArticleAttachment;
+.field private final f:Lcom/vtosters/lite/attachments/ArticleAttachment;
 
 .field private final g:Ljava/lang/CharSequence;
 
@@ -140,7 +140,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;)V
+.method public constructor <init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -156,7 +156,7 @@
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             "Lcom/vk/dto/common/VerifyInfo;",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/attachments/VideoAttachment;",
+            "Lcom/vtosters/lite/attachments/VideoAttachment;",
             "Lcom/vk/dto/discover/Info;",
             "Landroid/graphics/RectF;",
             "Ljava/lang/String;",
@@ -209,7 +209,7 @@
 
     move-object/from16 v1, p8
 
-    iput-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iput-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-object/from16 v1, p9
 
@@ -271,7 +271,7 @@
     .line 6
     sget-object v2, Lcom/vk/core/serialize/Serializer;->c:Lcom/vk/core/serialize/Serializer$b;
 
-    iget-object v4, v0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v4, v0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v4, :cond_0
 
@@ -374,7 +374,7 @@
     check-cast v5, Lcom/vk/dto/common/Attachment;
 
     .line 14
-    instance-of v5, v5, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v5, v5, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v5, :cond_4
 
@@ -400,9 +400,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    iput-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vkontakte/android/attachments/ArticleAttachment;
+    iput-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     goto :goto_4
 
@@ -411,7 +411,7 @@
     iput-object v3, v0, Lcom/vk/dto/discover/DiscoverItem;->e:Lcom/vk/dto/common/Attachment;
 
     .line 18
-    iput-object v3, v0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vkontakte/android/attachments/ArticleAttachment;
+    iput-object v3, v0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     .line 19
     :goto_4
@@ -518,21 +518,21 @@
     .line 29
     iget-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->e:Lcom/vk/dto/common/Attachment;
 
-    instance-of v4, v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v4, v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-nez v4, :cond_f
 
     move-object v1, v3
 
     :cond_f
-    check-cast v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_10
 
     .line 30
     iget-object v4, v0, Lcom/vk/dto/discover/DiscoverItem;->Y:Ljava/lang/String;
 
-    invoke-virtual {v1, v4, v3}, Lcom/vkontakte/android/attachments/VideoAttachment;->a(Ljava/lang/String;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-virtual {v1, v4, v3}, Lcom/vtosters/lite/attachments/VideoAttachment;->a(Ljava/lang/String;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 31
     :cond_10
@@ -544,7 +544,7 @@
 
     if-eqz v1, :cond_11
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -760,13 +760,13 @@
 
     move-result v1
 
-    const-class v5, Lcom/vkontakte/android/v;
+    const-class v5, Lcom/vtosters/lite/v;
 
     invoke-interface {v2, v4, v1, v5}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, [Lcom/vkontakte/android/v;
+    check-cast v1, [Lcom/vtosters/lite/v;
 
     if-eqz v1, :cond_1a
 
@@ -781,7 +781,7 @@
     aget-object v6, v1, v5
 
     .line 46
-    instance-of v7, v6, Lcom/vkontakte/android/t;
+    instance-of v7, v6, Lcom/vtosters/lite/t;
 
     if-nez v7, :cond_18
 
@@ -849,7 +849,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
     .locals 24
 
     move/from16 v0, p22
@@ -1171,7 +1171,7 @@
     move-object/from16 p23, v0
 
     .line 3
-    invoke-direct/range {p2 .. p23}, Lcom/vk/dto/discover/DiscoverItem;-><init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vkontakte/android/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;)V
+    invoke-direct/range {p2 .. p23}, Lcom/vk/dto/discover/DiscoverItem;-><init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;)V
 
     return-void
 .end method
@@ -1363,7 +1363,7 @@
     return v0
 .end method
 
-.method public final L1()Lcom/vkontakte/android/attachments/PodcastAttachment;
+.method public final L1()Lcom/vtosters/lite/attachments/PodcastAttachment;
     .locals 4
 
     .line 1
@@ -1409,7 +1409,7 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v3, v3, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v3, v3, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v3, :cond_1
 
@@ -1427,7 +1427,7 @@
     :cond_3
     if-eqz v2, :cond_4
 
-    check-cast v2, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     return-object v2
 
@@ -1572,7 +1572,7 @@
 
     .line 3
     :pswitch_1
-    invoke-virtual {p0}, Lcom/vk/dto/discover/DiscoverItem;->L1()Lcom/vkontakte/android/attachments/PodcastAttachment;
+    invoke-virtual {p0}, Lcom/vk/dto/discover/DiscoverItem;->L1()Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     move-result-object v0
 
@@ -1658,7 +1658,7 @@
 
     .line 8
     :pswitch_6
-    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vkontakte/android/attachments/ArticleAttachment;
+    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_6
 
@@ -1718,7 +1718,7 @@
     :pswitch_a
     iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->e:Lcom/vk/dto/common/Attachment;
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     goto :goto_7
 
@@ -1909,7 +1909,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/String;)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
@@ -2085,9 +2085,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -2361,11 +2361,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v2, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v2, :cond_7
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/attachments/VideoAttachment;->hashCode()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/attachments/VideoAttachment;->hashCode()I
 
     move-result v2
 
@@ -2674,7 +2674,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vkontakte/android/attachments/VideoAttachment;
+    iget-object v1, p0, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2794,11 +2794,11 @@
     return-object v0
 .end method
 
-.method public final v1()Lcom/vkontakte/android/attachments/ArticleAttachment;
+.method public final v1()Lcom/vtosters/lite/attachments/ArticleAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vkontakte/android/attachments/ArticleAttachment;
+    iget-object v0, p0, Lcom/vk/dto/discover/DiscoverItem;->f:Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     return-object v0
 .end method

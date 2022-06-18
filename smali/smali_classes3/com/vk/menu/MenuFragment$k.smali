@@ -1,5 +1,5 @@
 .class public Lcom/vk/menu/MenuFragment$k;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "MenuFragment.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/menu/d;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -50,7 +50,7 @@
     .end annotation
 
     .line 7
-    invoke-direct {p0, p2, p3}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p2, p3}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p1, p0, Lcom/vk/menu/MenuFragment$k;->g:Lcom/vk/menu/MenuFragment;
 
@@ -141,7 +141,7 @@
     const v0, 0x7f0d0324
 
     .line 1
-    invoke-direct {p0, v0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p1, p0, Lcom/vk/menu/MenuFragment$k;->g:Lcom/vk/menu/MenuFragment;
 
@@ -526,7 +526,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/menu/d;
 
@@ -539,7 +539,7 @@
     if-ne v0, v1, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/menu/d;
 
@@ -557,7 +557,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/menu/d;
 

@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
     .locals 2
 
     .line 2
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, v1}, Lcom/vk/poll/fragments/PollEditorFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
 
-    invoke-static {v0, p1}, Lcom/vk/poll/fragments/PollEditorFragment$a;->a(Lcom/vk/poll/fragments/PollEditorFragment$a;Lcom/vkontakte/android/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+    invoke-static {v0, p1}, Lcom/vk/poll/fragments/PollEditorFragment$a;->a(Lcom/vk/poll/fragments/PollEditorFragment$a;Lcom/vtosters/lite/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
 
     invoke-static {v0, p2}, Lcom/vk/poll/fragments/PollEditorFragment$a;->a(Lcom/vk/poll/fragments/PollEditorFragment$a;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
 

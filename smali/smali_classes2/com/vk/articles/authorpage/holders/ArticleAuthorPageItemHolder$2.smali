@@ -68,9 +68,9 @@
     move-result-object v1
 
     .line 3
-    new-instance v2, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {v2, p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v2, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     .line 4
     new-instance v0, Lcom/vk/fave/entities/e;

@@ -60,9 +60,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vkontakte/android/im/a;->a:Lcom/vkontakte/android/im/a;
+    sget-object v0, Lcom/vtosters/lite/im/a;->a:Lcom/vtosters/lite/im/a;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/im/a;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/a;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 

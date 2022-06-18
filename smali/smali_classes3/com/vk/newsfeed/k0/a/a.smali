@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/k0/a/a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "NewsfeedPlaceholder.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Ljava/lang/Integer;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -50,7 +50,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/newsfeed/k0/a/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
-    invoke-direct {p0, v6, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v6, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -291,7 +291,7 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Integer;
 
@@ -315,7 +315,7 @@
 
     invoke-virtual {p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$a;->k()Lcom/vk/search/fragment/DiscoverSearchFragment$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -349,7 +349,7 @@
 
     invoke-direct {p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$a;-><init>()V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -381,11 +381,11 @@
 
     new-instance p1, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/d2;
+    const-class v1, Lcom/vtosters/lite/fragments/d2;
 
     invoke-direct {p1, v1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 

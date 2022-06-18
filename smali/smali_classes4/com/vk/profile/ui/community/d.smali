@@ -164,7 +164,7 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/i;)V
+.method public final a(Lcom/vtosters/lite/api/i;)V
     .locals 5
 
     .line 5
@@ -179,19 +179,19 @@
     if-eqz p1, :cond_0
 
     .line 6
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->y()Lb/h/h/e/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->y()Lb/h/h/e/a;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 7
-    iget-object v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
     .line 8
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 

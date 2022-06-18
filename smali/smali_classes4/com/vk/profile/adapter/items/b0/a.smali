@@ -14,17 +14,17 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/b0/a;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/b0/a;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/16 p1, -0x21
 
@@ -45,11 +45,11 @@
     return v0
 .end method
 
-.method public final P()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final P()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/b0/a;->C:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/b0/a;->C:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object v0
 .end method
@@ -65,7 +65,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 1

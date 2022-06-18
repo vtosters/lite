@@ -44,7 +44,7 @@
 
     .line 3
     :cond_0
-    const-class v0, Lcom/vkontakte/android/audio/player/PlayerService;
+    const-class v0, Lcom/vtosters/lite/audio/player/PlayerService;
 
     :goto_0
     return-object v0

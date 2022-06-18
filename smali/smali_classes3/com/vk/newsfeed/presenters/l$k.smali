@@ -73,13 +73,13 @@
             "Lorg/json/JSONObject;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v13, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;
+    new-instance v13, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;
 
     .line 2
     iget-object v1, p0, Lcom/vk/newsfeed/presenters/l$k;->b:Ljava/lang/String;
@@ -155,12 +155,12 @@
     move-object v12, p1
 
     .line 11
-    invoke-direct/range {v0 .. v12}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/Boolean;IIIIZLjava/lang/String;Lorg/json/JSONObject;)V
+    invoke-direct/range {v0 .. v12}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/Boolean;IIIIZLjava/lang/String;Lorg/json/JSONObject;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/l$k;->e:Ljava/lang/String;
 
-    invoke-virtual {v13, p1}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;->d(Ljava/lang/String;)Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;
+    invoke-virtual {v13, p1}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;->d(Ljava/lang/String;)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;
 
     const/4 p1, 0x0
 

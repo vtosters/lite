@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public final a([Ljava/lang/Object;)Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+.method public final a([Ljava/lang/Object;)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
     .locals 8
 
     const/4 v0, 0x0
@@ -135,9 +135,9 @@
 
     .line 5
     :goto_2
-    new-instance v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    new-instance v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
-    invoke-direct {v7, v2}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;-><init>(Ljava/lang/String;)V
 
     .line 6
     sget-object v2, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
@@ -220,7 +220,7 @@
 
     check-cast v2, Ljava/util/List;
 
-    iput-object v2, v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->lists:Ljava/util/List;
+    iput-object v2, v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->lists:Ljava/util/List;
 
     const/4 v2, 0x2
 
@@ -231,14 +231,14 @@
 
     check-cast v2, Ljava/util/List;
 
-    iput-object v2, v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->notifications:Ljava/util/List;
+    iput-object v2, v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->notifications:Ljava/util/List;
 
     .line 18
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    iput-object v2, v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->isSmartNews:Ljava/lang/Boolean;
+    iput-object v2, v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->isSmartNews:Ljava/lang/Boolean;
 
     const/4 v2, 0x3
 
@@ -255,7 +255,7 @@
 
     check-cast p1, Lcom/vk/dto/newsfeed/SituationalSuggest;
 
-    iput-object p1, v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->situationalSuggest:Lcom/vk/dto/newsfeed/SituationalSuggest;
+    iput-object p1, v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->situationalSuggest:Lcom/vk/dto/newsfeed/SituationalSuggest;
 
     if-eqz v1, :cond_6
 
@@ -280,12 +280,12 @@
     move-result-object p1
 
     :goto_4
-    iput-object p1, v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->history:Ljava/util/List;
+    iput-object p1, v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->history:Ljava/util/List;
 
     .line 21
     iget p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$e;->b:I
 
-    iput p1, v7, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->reqListId:I
+    iput p1, v7, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->reqListId:I
 
     goto :goto_5
 
@@ -347,7 +347,7 @@
     .line 1
     check-cast p1, [Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$e;->a([Ljava/lang/Object;)Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$e;->a([Ljava/lang/Object;)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
     move-result-object p1
 

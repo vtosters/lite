@@ -78,7 +78,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/i0/c$b;->a:Lcom/vk/newsfeed/i0/c;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/i0/c;->a(Lcom/vk/newsfeed/i0/c;)Lcom/vkontakte/android/data/v/a;
+    invoke-static {v1}, Lcom/vk/newsfeed/i0/c;->a(Lcom/vk/newsfeed/i0/c;)Lcom/vtosters/lite/data/v/a;
 
     move-result-object v1
 

@@ -33,7 +33,7 @@
 
 .field private static final L:I
 
-.field private static final M:Lcom/vkontakte/android/Relation;
+.field private static final M:Lcom/vtosters/lite/Relation;
 
 .field public static final N:Lcom/vk/search/PeopleSearchParams$a;
 
@@ -43,7 +43,7 @@
 
 .field private C:I
 
-.field private D:Lcom/vkontakte/android/Relation;
+.field private D:Lcom/vtosters/lite/Relation;
 
 .field private h:I
 
@@ -93,9 +93,9 @@
     sput v1, Lcom/vk/search/PeopleSearchParams;->K:I
 
     .line 7
-    sget-object v0, Lcom/vkontakte/android/Relation;->none:Lcom/vkontakte/android/Relation;
+    sget-object v0, Lcom/vtosters/lite/Relation;->none:Lcom/vtosters/lite/Relation;
 
-    sput-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vkontakte/android/Relation;
+    sput-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vtosters/lite/Relation;
 
     return-void
 .end method
@@ -120,9 +120,9 @@
     iput v0, p0, Lcom/vk/search/PeopleSearchParams;->C:I
 
     .line 5
-    sget-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vkontakte/android/Relation;
+    sget-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vtosters/lite/Relation;
 
-    iput-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iput-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
     return-void
 .end method
@@ -163,11 +163,11 @@
     return v0
 .end method
 
-.method public static final synthetic K1()Lcom/vkontakte/android/Relation;
+.method public static final synthetic K1()Lcom/vtosters/lite/Relation;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vkontakte/android/Relation;
+    sget-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vtosters/lite/Relation;
 
     return-object v0
 .end method
@@ -228,11 +228,11 @@
     return v0
 .end method
 
-.method public final E1()Lcom/vkontakte/android/Relation;
+.method public final E1()Lcom/vtosters/lite/Relation;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iget-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
     return-object v0
 .end method
@@ -434,9 +434,9 @@
     .line 16
     :cond_5
     :goto_1
-    iget-object v1, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iget-object v1, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
-    sget-object v2, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vkontakte/android/Relation;
+    sget-object v2, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vtosters/lite/Relation;
 
     if-eq v1, v2, :cond_7
 
@@ -457,7 +457,7 @@
     const/4 v3, 0x0
 
     :goto_2
-    invoke-virtual {v1, v2, v3}, Lcom/vkontakte/android/Relation;->a(Landroid/content/Context;Z)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/Relation;->a(Landroid/content/Context;Z)Ljava/lang/String;
 
     move-result-object v1
 
@@ -507,18 +507,18 @@
     iput v0, p0, Lcom/vk/search/PeopleSearchParams;->C:I
 
     .line 6
-    iget-object p1, p1, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iget-object p1, p1, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
-    iput-object p1, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iput-object p1, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/Relation;)V
+.method public final a(Lcom/vtosters/lite/Relation;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iput-object p1, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
     return-void
 .end method
@@ -590,9 +590,9 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iget-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
-    sget-object v1, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vkontakte/android/Relation;
+    sget-object v1, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vtosters/lite/Relation;
 
     if-ne v0, v1, :cond_0
 
@@ -627,9 +627,9 @@
     iput v0, p0, Lcom/vk/search/PeopleSearchParams;->C:I
 
     .line 5
-    sget-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vkontakte/android/Relation;
+    sget-object v0, Lcom/vk/search/PeopleSearchParams;->M:Lcom/vtosters/lite/Relation;
 
-    iput-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vkontakte/android/Relation;
+    iput-object v0, p0, Lcom/vk/search/PeopleSearchParams;->D:Lcom/vtosters/lite/Relation;
 
     return-void
 .end method

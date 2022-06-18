@@ -27,7 +27,7 @@
 
 .field public b:I
 
-.field public c:Lcom/vkontakte/android/attachments/PollAttachment;
+.field public c:Lcom/vtosters/lite/attachments/PollAttachment;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field

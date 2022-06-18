@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/CreateStoryActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "CreateStoryActivity.java"
 
 # interfaces
@@ -17,7 +17,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     return-void
 .end method
@@ -271,7 +271,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -301,7 +301,7 @@
     invoke-virtual {v0, p1, p2, p3}, Lcom/vk/cameraui/BaseCameraUIView;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    invoke-super {p0, p1, p2, p3}, Lcom/vkontakte/android/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -319,7 +319,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :cond_0
     return-void
@@ -332,7 +332,7 @@
     invoke-direct {p0}, Lcom/vk/stories/CreateStoryActivity;->w1()V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/stories/CreateStoryActivity;->x1()I
@@ -449,7 +449,7 @@
     invoke-virtual {v0}, Lcom/vk/cameraui/BaseCameraUIView;->d()V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     return-void
 .end method
@@ -463,7 +463,7 @@
     invoke-virtual {v0}, Lcom/vk/cameraui/BaseCameraUIView;->onPause()V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     return-void
 .end method
@@ -494,7 +494,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/stories/CreateStoryActivity;->z1()V
@@ -520,7 +520,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStart()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/CreateStoryActivity;->G:Lcom/vk/cameraui/BaseCameraUIView;
@@ -534,7 +534,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStop()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/CreateStoryActivity;->G:Lcom/vk/cameraui/BaseCameraUIView;
@@ -560,7 +560,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     const/4 v0, 0x0
 

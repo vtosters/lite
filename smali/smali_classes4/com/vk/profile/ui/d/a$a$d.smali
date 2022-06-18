@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    value = Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Lcom/vk/profile/data/CountersWrapper;
 
-.field final synthetic c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/profile/data/CountersWrapper;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/ui/d/a$a$d;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
     iput-object p2, p0, Lcom/vk/profile/ui/d/a$a$d;->b:Lcom/vk/profile/data/CountersWrapper;
 
-    iput-object p3, p0, Lcom/vk/profile/ui/d/a$a$d;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p3, p0, Lcom/vk/profile/ui/d/a$a$d;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,9 +59,9 @@
     .line 2
     new-instance v0, Lcom/vk/profile/e/b;
 
-    iget-object v1, p0, Lcom/vk/profile/ui/d/a$a$d;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/ui/d/a$a$d;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 

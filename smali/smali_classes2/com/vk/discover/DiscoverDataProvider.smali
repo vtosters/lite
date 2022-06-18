@@ -1608,7 +1608,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1635,7 +1635,7 @@
 
     .line 2
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1658,7 +1658,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1682,7 +1682,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1709,7 +1709,7 @@
 
     .line 2
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1732,7 +1732,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1777,7 +1777,7 @@
 
     .line 2
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1801,7 +1801,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1828,7 +1828,7 @@
 
     .line 2
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1853,7 +1853,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1879,7 +1879,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1906,7 +1906,7 @@
 
     .line 2
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1931,7 +1931,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -2052,7 +2052,7 @@
     .end annotation
 
     .line 104
-    new-instance v6, Lcom/vkontakte/android/api/newsfeed/a;
+    new-instance v6, Lcom/vtosters/lite/api/newsfeed/a;
 
     if-eqz p2, :cond_0
 
@@ -2082,7 +2082,7 @@
     move-object v0, v6
 
     .line 106
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/api/newsfeed/a;-><init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/newsfeed/a;-><init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
     const/4 p2, 0x1
 
@@ -2922,7 +2922,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

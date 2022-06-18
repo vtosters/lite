@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
-.super Lcom/vkontakte/android/ui/adapters/b;
+.super Lcom/vtosters/lite/ui/adapters/b;
 .source "PhotoFeedAdapter.kt"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/adapters/b<",
+        "Lcom/vtosters/lite/ui/adapters/b<",
         "Lcom/vk/dto/photo/Photo;",
         "Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$c;",
         ">;"
@@ -39,7 +39,7 @@
 
 .field private final f:Lkotlin/e;
 
-.field private g:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private g:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
@@ -75,17 +75,17 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 2
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->b1:Ljava/util/List;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->b1:Ljava/util/List;
 
     const/16 v1, 0x32
 
-    invoke-direct {p0, v0, v1}, Lcom/vkontakte/android/ui/adapters/b;-><init>(Ljava/util/List;I)V
+    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/ui/adapters/b;-><init>(Ljava/util/List;I)V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->g:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->g:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     .line 2
     new-instance p1, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$viewerCallback$2;
@@ -105,7 +105,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/adapters/b;->a:Ld/a/a/c/c;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/b;->a:Ld/a/a/c/c;
 
     return-object p0
 .end method
@@ -123,7 +123,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/adapters/b;->d:Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/b;->d:Ljava/lang/ref/WeakReference;
 
     return-object p0
 .end method
@@ -181,7 +181,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/adapters/b;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/b;->a:Ld/a/a/c/c;
 
     invoke-virtual {v0}, Ld/a/a/c/c;->e()V
 
@@ -194,13 +194,13 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vkontakte/android/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -209,7 +209,7 @@
     .locals 2
 
     .line 2
-    iget-object p2, p0, Lcom/vkontakte/android/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -261,11 +261,11 @@
     return-object p1
 .end method
 
-.method protected final j()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method protected final j()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->g:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->g:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object v0
 .end method
@@ -340,7 +340,7 @@
     if-nez v2, :cond_0
 
     .line 3
-    iget-object v2, p0, Lcom/vkontakte/android/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -356,7 +356,7 @@
 
     .line 5
     :cond_2
-    iget-object p1, p0, Lcom/vkontakte/android/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 

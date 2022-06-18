@@ -54,7 +54,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;>;Z",
             "Lcom/vk/lists/t;",

@@ -8,18 +8,18 @@
     .locals 1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/VKActivity;
+    instance-of v0, p1, Lcom/vtosters/lite/VKActivity;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/VKActivity;
+    check-cast p1, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p1, :cond_1
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p0, p1}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     :cond_1
     return-object p0
@@ -64,11 +64,11 @@
     return-object p0
 .end method
 
-.method public static final a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+.method public static final a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
     .locals 0
 
     .line 1
-    invoke-virtual {p1, p0}, Lcom/vkontakte/android/VKActivity;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p0}, Lcom/vtosters/lite/VKActivity;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
 
     return-object p0
 .end method

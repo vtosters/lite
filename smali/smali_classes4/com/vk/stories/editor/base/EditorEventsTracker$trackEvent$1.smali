@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/data/n$l;",
+        "Lcom/vtosters/lite/data/n$l;",
         "Lkotlin/m;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/n$l;)V
     .locals 2
 
     .line 1
@@ -68,7 +68,7 @@
     :goto_0
     const-string v1, "story_type"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -77,9 +77,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->a(Lcom/vtosters/lite/data/n$l;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

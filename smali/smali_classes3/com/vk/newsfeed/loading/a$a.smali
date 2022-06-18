@@ -59,15 +59,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -136,7 +136,7 @@
 
     new-instance v1, Lcom/vk/newsfeed/loading/a$a$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/newsfeed/loading/a$a$a;-><init>(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+    invoke-direct {v1, p1}, Lcom/vk/newsfeed/loading/a$a$a;-><init>(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 
     invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
 
@@ -162,9 +162,9 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/a$a;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/a$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
 
     move-result-object p1
 

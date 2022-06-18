@@ -101,7 +101,7 @@
     move-result v11
 
     .line 13
-    const-class v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    const-class v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -113,7 +113,7 @@
 
     move-object v12, v1
 
-    check-cast v12, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v12, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     const/4 v13, 0x0
 
@@ -124,7 +124,7 @@
     move-object/from16 v1, v16
 
     .line 14
-    invoke-direct/range {v1 .. v15}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v15}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
 
     .line 15
     invoke-virtual/range {v16 .. v16}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E1()Lcom/vk/statistic/Statistic$a;

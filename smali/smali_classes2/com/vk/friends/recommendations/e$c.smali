@@ -1,5 +1,5 @@
 .class public final Lcom/vk/friends/recommendations/e$c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ImportHolder.kt"
 
 # interfaces
@@ -24,7 +24,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/friends/recommendations/Item;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -61,7 +61,7 @@
     const v0, 0x7f0d01fe
 
     .line 1
-    invoke-direct {p0, v0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p1, p0, Lcom/vk/friends/recommendations/e$c;->e:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
@@ -209,7 +209,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -238,7 +238,7 @@
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -317,7 +317,7 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/friends/recommendations/Item;
 

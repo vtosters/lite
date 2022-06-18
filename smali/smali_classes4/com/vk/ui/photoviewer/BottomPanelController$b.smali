@@ -195,11 +195,11 @@
 
     invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     iget-object v2, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->a:Lcom/vk/dto/photo/Photo;
 
-    invoke-direct {v1, v2}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v1, v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     invoke-interface {v0, p1, v1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 

@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
 .end annotation
@@ -25,7 +25,7 @@
             "(",
             "Landroid/content/Context;",
             "Lcom/vk/profile/presenter/BaseProfilePresenter<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;)V"
         }
     .end annotation
@@ -40,12 +40,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/api/ExtendedUserProfile;I)Ljava/util/List;
+.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;I)Ljava/util/List;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "I)",
             "Ljava/util/List<",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -54,14 +54,14 @@
     .end annotation
 
     .line 1
-    iget-boolean p2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->u1:Z
+    iget-boolean p2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->u1:Z
 
     const/4 v0, 0x0
 
     if-nez p2, :cond_1
 
     .line 2
-    iget-object p2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object p2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     const-string v1, "photos"
 
@@ -71,14 +71,14 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result p2
 
     if-lez p2, :cond_1
 
     .line 3
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result p2
 
@@ -132,7 +132,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vkontakte/android/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {p2}, Lcom/vtosters/lite/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -173,7 +173,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 11
     new-instance p1, Landroidx/recyclerview/widget/LinearLayoutManager;

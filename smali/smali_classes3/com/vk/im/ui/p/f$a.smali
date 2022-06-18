@@ -45,7 +45,7 @@
     .line 3
     new-instance v0, Landroid/content/ComponentName;
 
-    const-string v1, "com.vkontakte.android"
+    const-string v1, "com.vtosters.lite"
 
     const-string v2, "com.vkontakte.android.MainActivity"
 

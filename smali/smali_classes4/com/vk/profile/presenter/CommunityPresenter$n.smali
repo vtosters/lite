@@ -59,11 +59,11 @@
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$n;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_0
 
@@ -71,7 +71,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->o1:Lcom/vk/dto/common/data/VKList;
+    iput-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->o1:Lcom/vk/dto/common/data/VKList;
 
     .line 2
     :cond_0
@@ -83,11 +83,11 @@
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$n;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_1
 
@@ -95,7 +95,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/api/i;->a(Lcom/vk/dto/common/data/VKList;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/api/i;->a(Lcom/vk/dto/common/data/VKList;)V
 
     :cond_1
     return-void

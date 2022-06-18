@@ -70,11 +70,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-void
 .end method

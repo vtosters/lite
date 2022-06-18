@@ -26,19 +26,19 @@
 
 .field private g:J
 
-.field private final h:Lcom/vkontakte/android/audio/player/i;
+.field private final h:Lcom/vtosters/lite/audio/player/i;
 
 .field private final i:Lcom/vk/music/stats/d;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/audio/player/i;Lcom/vk/music/stats/d;)V
+.method public constructor <init>(Lcom/vtosters/lite/audio/player/i;Lcom/vk/music/stats/d;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/stats/a;->h:Lcom/vkontakte/android/audio/player/i;
+    iput-object p1, p0, Lcom/vk/music/stats/a;->h:Lcom/vtosters/lite/audio/player/i;
 
     iput-object p2, p0, Lcom/vk/music/stats/a;->i:Lcom/vk/music/stats/d;
 
@@ -576,9 +576,9 @@
     .line 21
     :cond_8
     :try_start_0
-    iget-object p1, p0, Lcom/vk/music/stats/a;->h:Lcom/vkontakte/android/audio/player/i;
+    iget-object p1, p0, Lcom/vk/music/stats/a;->h:Lcom/vtosters/lite/audio/player/i;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/audio/player/i;->b()J
+    invoke-virtual {p1}, Lcom/vtosters/lite/audio/player/i;->b()J
 
     move-result-wide v1
 

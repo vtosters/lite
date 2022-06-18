@@ -57,13 +57,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+            "Lcom/vtosters/lite/api/wall/WallGet$Result;",
             ">;"
         }
     .end annotation
@@ -82,13 +82,13 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
     goto :goto_0
 
@@ -97,7 +97,7 @@
 
     .line 3
     :goto_0
-    iget-object v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
+    iget-object v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
     if-nez v2, :cond_1
 
@@ -105,18 +105,18 @@
 
     iget-object v2, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    iget-boolean v2, v2, Lcom/vkontakte/android/api/ExtendedUserProfile;->B1:Z
+    iget-boolean v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->B1:Z
 
     if-nez v2, :cond_1
 
     .line 4
-    iput-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
+    iput-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->J:Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;
 
     .line 5
     :cond_1
@@ -131,27 +131,27 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 7
-    iget v2, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->H1:I
+    iget v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->H1:I
 
-    iput v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->H1:I
+    iput v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->H1:I
 
     .line 8
-    iget v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->I1:I
+    iget v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->I1:I
 
-    iput v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->I1:I
+    iput v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->I1:I
 
     .line 9
     :cond_2
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
@@ -160,18 +160,18 @@
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     if-eqz v0, :cond_3
 
@@ -203,13 +203,13 @@
     .line 13
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/i$e;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    iget-boolean p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a0:Z
+    iget-boolean p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a0:Z
 
     if-nez p1, :cond_4
 
@@ -279,9 +279,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i$e;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i$e;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
 
     move-result-object p1
 

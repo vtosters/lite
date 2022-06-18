@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;",
+            "Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;",
             ">;"
         }
     .end annotation
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;)V
+.method public constructor <init>(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)V
     .locals 1
 
     .line 1
@@ -55,11 +55,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    check-cast v0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;->setOnRefreshListener(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->setOnRefreshListener(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;)V
 
     :cond_0
     return-void
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    check-cast v0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     if-eqz v0, :cond_0
 
@@ -95,11 +95,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    check-cast v0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;->setRefreshing(Z)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->setRefreshing(Z)V
 
     :cond_0
     return-void

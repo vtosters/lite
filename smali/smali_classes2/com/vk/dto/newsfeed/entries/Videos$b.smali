@@ -97,9 +97,9 @@
 
     invoke-direct {v4, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -300,9 +300,9 @@
 
     .line 14
     :cond_3
-    new-instance v4, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v4, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {v4, v3}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v4, v3}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     .line 15
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -344,9 +344,9 @@
 
     invoke-direct {v8, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance v2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {v2, v4}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v2, v4}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

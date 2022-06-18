@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vkontakte/android/api/c;",
+            "Lcom/vtosters/lite/api/c;",
             ">;"
         }
     .end annotation

@@ -16,7 +16,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     .line 1
@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 1

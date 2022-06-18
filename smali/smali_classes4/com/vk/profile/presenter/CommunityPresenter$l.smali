@@ -49,15 +49,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/i;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation
@@ -65,7 +65,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$l;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vkontakte/android/api/i;)Lc/a/m;
+    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/i;)Lc/a/m;
 
     move-result-object p1
 
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$l;->a(Lcom/vkontakte/android/api/i;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$l;->a(Lcom/vtosters/lite/api/i;)Lc/a/m;
 
     move-result-object p1
 

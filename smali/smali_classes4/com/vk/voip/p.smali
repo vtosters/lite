@@ -120,14 +120,14 @@
     .line 7
     sget-object p1, Lcom/vk/voip/p;->g:Ljava/lang/Runnable;
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->b(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->b(Ljava/lang/Runnable;)V
 
     .line 8
     sget-object p1, Lcom/vk/voip/p;->g:Ljava/lang/Runnable;
 
     sget-wide v0, Lcom/vk/voip/p;->b:J
 
-    invoke-static {p1, v0, v1}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :cond_0
     return-void

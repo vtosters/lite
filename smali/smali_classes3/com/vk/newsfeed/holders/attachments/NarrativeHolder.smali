@@ -167,7 +167,7 @@
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
 
     .line 12
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -684,7 +684,7 @@
     invoke-direct {v7, p0}, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder$a;-><init>(Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;)V
 
     .line 11
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v1, v1, Lcom/vk/dto/newsfeed/entries/FaveEntry;
 
@@ -738,7 +738,7 @@
     const-string v0, "narrative_open"
 
     .line 17
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -753,7 +753,7 @@
 
     const-string v2, "owner_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 19
     invoke-virtual {p1}, Lcom/vk/dto/narratives/Narrative;->getId()I
@@ -766,10 +766,10 @@
 
     const-string v1, "narrative_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 20
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -845,7 +845,7 @@
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -1019,18 +1019,18 @@
 
     move-result-object p1
 
-    instance-of v2, p1, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    instance-of v2, p1, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
     if-nez v2, :cond_2
 
     move-object p1, v1
 
     :cond_2
-    check-cast p1, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/NarrativeAttachment;->x1()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/NarrativeAttachment;->x1()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object p1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/receivers/StoryChooseReceiversActivity2;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "StoryChooseReceiversActivity2.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -162,7 +162,7 @@
     const/4 v0, 0x0
 
     .line 7
-    iput-boolean v0, p0, Lcom/vkontakte/android/VKActivity;->C:Z
+    iput-boolean v0, p0, Lcom/vtosters/lite/VKActivity;->C:Z
 
     return-void
 .end method
@@ -184,7 +184,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :cond_0
     return-void
@@ -211,7 +211,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -257,7 +257,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/receivers/StoryChooseReceiversActivity2;->G:Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;

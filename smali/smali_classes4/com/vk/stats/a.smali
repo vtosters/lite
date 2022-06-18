@@ -72,7 +72,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 9
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/h;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/h;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_ALL:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -89,14 +89,14 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 11
-    const-class v1, Lcom/vkontakte/android/fragments/s2/f;
+    const-class v1, Lcom/vtosters/lite/fragments/s2/f;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GROUPS_LIST:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 12
-    const-class v1, Lcom/vkontakte/android/fragments/friends/FriendsFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/FriendsFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -111,14 +111,14 @@
 
     .line 14
     :goto_1
-    const-class v1, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class v1, Lcom/vtosters/lite/fragments/t2/c/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->IM:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 15
-    const-class v1, Lcom/vkontakte/android/fragments/t2/c/c;
+    const-class v1, Lcom/vtosters/lite/fragments/t2/c/c;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->IM_FRIENDS_SEND:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -139,7 +139,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 18
-    const-class v1, Lcom/vkontakte/android/fragments/lives/LivesTabsFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FEED_LIVES_TAB:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -167,14 +167,14 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 22
-    const-class v1, Lcom/vkontakte/android/fragments/y2/y;
+    const-class v1, Lcom/vtosters/lite/fragments/y2/y;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->VIDEO_EDIT_VIDEO:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 23
-    const-class v1, Lcom/vkontakte/android/fragments/y2/x;
+    const-class v1, Lcom/vtosters/lite/fragments/y2/x;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->VIDEO_CATALOG:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -216,7 +216,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 29
-    const-class v1, Lcom/vkontakte/android/fragments/p2/f;
+    const-class v1, Lcom/vtosters/lite/fragments/p2/f;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->DOCS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -272,7 +272,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 37
-    const-class v1, Lcom/vkontakte/android/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MUSIC_SUBSCRIPTION:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -300,7 +300,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 41
-    const-class v1, Lcom/vkontakte/android/fragments/gifts/f;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/f;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GIFT_SEND:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -314,7 +314,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 43
-    const-class v1, Lcom/vkontakte/android/fragments/location/b;
+    const-class v1, Lcom/vtosters/lite/fragments/location/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->LOCATION:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -342,35 +342,35 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 47
-    const-class v1, Lcom/vkontakte/android/fragments/k2;
+    const-class v1, Lcom/vtosters/lite/fragments/k2;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->WIKI:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 48
-    const-class v1, Lcom/vkontakte/android/fragments/x2/a;
+    const-class v1, Lcom/vtosters/lite/fragments/x2/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FILE_PICKER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 49
-    const-class v1, Lcom/vkontakte/android/fragments/y2/s;
+    const-class v1, Lcom/vtosters/lite/fragments/y2/s;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->ALBUM_VIDEO_EDIT:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 50
-    const-class v1, Lcom/vkontakte/android/fragments/friends/d;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/d;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 51
-    const-class v1, Lcom/vkontakte/android/fragments/gifts/d;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/d;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_BIRTHDAYS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -420,7 +420,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 57
-    const-class v1, Lcom/vkontakte/android/fragments/q2/c;
+    const-class v1, Lcom/vtosters/lite/fragments/q2/c;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FEED_COMMENTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -462,28 +462,28 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 63
-    const-class v1, Lcom/vkontakte/android/fragments/messages/chat_settings/ChatSettingsFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/messages/chat_settings/ChatSettingsFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->IM_CHAT_SETTINGS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 64
-    const-class v1, Lcom/vkontakte/android/im/fragments/b;
+    const-class v1, Lcom/vtosters/lite/im/fragments/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->IM_CHAT_SEARCH:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 65
-    const-class v1, Lcom/vkontakte/android/fragments/t2/a;
+    const-class v1, Lcom/vtosters/lite/fragments/t2/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->IM_CHAT_ATTACHMENTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 66
-    const-class v1, Lcom/vkontakte/android/fragments/ProfileFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/ProfileFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -497,21 +497,21 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 68
-    const-class v1, Lcom/vkontakte/android/fragments/gifts/j;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/j;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GIFTS_PROFILE_CATALOG:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 69
-    const-class v1, Lcom/vkontakte/android/fragments/w2/c;
+    const-class v1, Lcom/vtosters/lite/fragments/w2/c;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE_FOLLOWERS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 70
-    const-class v1, Lcom/vkontakte/android/fragments/w2/i;
+    const-class v1, Lcom/vtosters/lite/fragments/w2/i;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE_SUBSCRIPTIONS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -525,7 +525,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 72
-    const-class v1, Lcom/vkontakte/android/fragments/y2/z;
+    const-class v1, Lcom/vtosters/lite/fragments/y2/z;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->VIDEO_USER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -539,7 +539,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 74
-    const-class v1, Lcom/vkontakte/android/fragments/l1;
+    const-class v1, Lcom/vtosters/lite/fragments/l1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GROUP_MEMBERS_LIST:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -588,35 +588,35 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 81
-    const-class v1, Lcom/vkontakte/android/fragments/photos/c;
+    const-class v1, Lcom/vtosters/lite/fragments/photos/c;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PHOTO_EDIT_ALBUM:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 82
-    const-class v1, Lcom/vkontakte/android/fragments/market/u;
+    const-class v1, Lcom/vtosters/lite/fragments/market/u;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MARKET:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 83
-    const-class v1, Lcom/vkontakte/android/fragments/market/GoodFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/market/GoodFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MARKET_ITEM:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 84
-    const-class v1, Lcom/vkontakte/android/fragments/market/t;
+    const-class v1, Lcom/vtosters/lite/fragments/market/t;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MARKET_FILTER_PRICE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 85
-    const-class v1, Lcom/vkontakte/android/fragments/market/s;
+    const-class v1, Lcom/vtosters/lite/fragments/market/s;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MARKET_ITEM_ALBUM:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -728,49 +728,49 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 101
-    const-class v1, Lcom/vkontakte/android/fragments/v2/b/b;
+    const-class v1, Lcom/vtosters/lite/fragments/v2/b/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_PRIVACY_PHOTO:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 102
-    const-class v1, Lcom/vkontakte/android/fragments/v2/b/a;
+    const-class v1, Lcom/vtosters/lite/fragments/v2/b/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_PRIVACY_PHOTO_COMMENTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 103
-    const-class v1, Lcom/vkontakte/android/fragments/v2/c/b;
+    const-class v1, Lcom/vtosters/lite/fragments/v2/c/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_PRIVACY_VIDEO:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 104
-    const-class v1, Lcom/vkontakte/android/fragments/v2/c/a;
+    const-class v1, Lcom/vtosters/lite/fragments/v2/c/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_PRIVACY_VIDEO_COMMENTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 105
-    const-class v1, Lcom/vkontakte/android/fragments/o2/d;
+    const-class v1, Lcom/vtosters/lite/fragments/o2/d;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->BOARD_TOPIC_ALL:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 106
-    const-class v1, Lcom/vkontakte/android/fragments/o2/c;
+    const-class v1, Lcom/vtosters/lite/fragments/o2/c;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->BOARD_TOPIC_VIEW:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 107
-    const-class v1, Lcom/vkontakte/android/fragments/o2/b;
+    const-class v1, Lcom/vtosters/lite/fragments/o2/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->BOARD_TOPIC_EDIT:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -840,7 +840,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 117
-    const-class v1, Lcom/vkontakte/android/fragments/h1;
+    const-class v1, Lcom/vtosters/lite/fragments/h1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GAMES:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -854,35 +854,35 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 119
-    const-class v1, Lcom/vkontakte/android/fragments/g1;
+    const-class v1, Lcom/vtosters/lite/fragments/g1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GAMES_FRIENDS_ACTIVITY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 120
-    const-class v1, Lcom/vkontakte/android/fragments/MyGamesListFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/MyGamesListFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GAMES_MY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 121
-    const-class v1, Lcom/vkontakte/android/fragments/f1;
+    const-class v1, Lcom/vtosters/lite/fragments/f1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GAMES_ACHIEVEMENTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 122
-    const-class v1, Lcom/vkontakte/android/fragments/a1;
+    const-class v1, Lcom/vtosters/lite/fragments/a1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GAMES_CATEGORY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 123
-    const-class v1, Lcom/vkontakte/android/fragments/v1;
+    const-class v1, Lcom/vtosters/lite/fragments/v1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GAMES_RECOMMENDED:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -931,63 +931,63 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 130
-    const-class v1, Lcom/vkontakte/android/fragments/money/o;
+    const-class v1, Lcom/vtosters/lite/fragments/money/o;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MONEY_TRANSFERS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 131
-    const-class v1, Lcom/vkontakte/android/fragments/money/createtransfer/chat/c;
+    const-class v1, Lcom/vtosters/lite/fragments/money/createtransfer/chat/c;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->CREATE_MONEY_CHAT_REQUEST:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 132
-    const-class v1, Lcom/vkontakte/android/fragments/money/n;
+    const-class v1, Lcom/vtosters/lite/fragments/money/n;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MONEY_TRANSFERS_LINK:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 133
-    const-class v1, Lcom/vkontakte/android/fragments/money/p;
+    const-class v1, Lcom/vtosters/lite/fragments/money/p;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MONEY_BROWSER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 134
-    const-class v1, Lcom/vkontakte/android/fragments/w2/h;
+    const-class v1, Lcom/vtosters/lite/fragments/w2/h;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_GAME_INVITE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 135
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/f;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/f;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MONEY_FRIENDS_REQUEST:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 136
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/g;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/g;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->MONEY_FRIENDS_SEND:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 137
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/j;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/j;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->VKUI_FRIENDS_PICKER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 138
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/i;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/i;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_PRIVACY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1001,21 +1001,21 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 140
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/b;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/b;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS_ALL:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 141
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/e;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/e;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GROUP_FRIENDS_INVITE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 142
-    const-class v1, Lcom/vkontakte/android/fragments/friends/h/a;
+    const-class v1, Lcom/vtosters/lite/fragments/friends/h/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1078,14 +1078,14 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 151
-    const-class v1, Lcom/vkontakte/android/fragments/location/LocationFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/location/LocationFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->ATTACH_LOCATION:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 152
-    const-class v1, Lcom/vkontakte/android/fragments/gifts/h;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/h;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->GIFTS_CATALOG:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1106,7 +1106,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 155
-    const-class v1, Lcom/vkontakte/android/fragments/l2/a;
+    const-class v1, Lcom/vtosters/lite/fragments/l2/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->ATTACH_VK_PHOTO:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1127,14 +1127,14 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 158
-    const-class v1, Lcom/vkontakte/android/fragments/SettingsListFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 159
-    const-class v1, Lcom/vkontakte/android/fragments/z1;
+    const-class v1, Lcom/vtosters/lite/fragments/z1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_GENERAL:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1148,28 +1148,28 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 161
-    const-class v1, Lcom/vkontakte/android/fragments/w2/a;
+    const-class v1, Lcom/vtosters/lite/fragments/w2/a;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_BLACKLIST:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 162
-    const-class v1, Lcom/vkontakte/android/fragments/w1;
+    const-class v1, Lcom/vtosters/lite/fragments/w1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_ACCOUNT:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 163
-    const-class v1, Lcom/vkontakte/android/fragments/p1;
+    const-class v1, Lcom/vtosters/lite/fragments/p1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS_FILTER_NEWSFEED:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 164
-    const-class v1, Lcom/vkontakte/android/fragments/n2/q0;
+    const-class v1, Lcom/vtosters/lite/fragments/n2/q0;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->DEBUG:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1197,14 +1197,14 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 168
-    const-class v1, Lcom/vkontakte/android/fragments/t1;
+    const-class v1, Lcom/vtosters/lite/fragments/t1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->NOWHERE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 169
-    const-class v1, Lcom/vkontakte/android/fragments/y1;
+    const-class v1, Lcom/vtosters/lite/fragments/y1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->NOWHERE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1367,14 +1367,14 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->a(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 188
-    const-class v1, Lcom/vkontakte/android/ValidationActivity;
+    const-class v1, Lcom/vtosters/lite/ValidationActivity;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->USER_VALIDATION:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->a(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 189
-    const-class v1, Lcom/vkontakte/android/CaptchaActivity;
+    const-class v1, Lcom/vtosters/lite/CaptchaActivity;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->CAPTCHA:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1471,7 +1471,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->a(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 202
-    const-class v1, Lcom/vkontakte/android/LinkRedirActivity;
+    const-class v1, Lcom/vtosters/lite/LinkRedirActivity;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->NOWHERE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -1512,21 +1512,21 @@
     invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/v/h;->a(Lcom/vk/core/ui/v/h;Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;ILjava/lang/Object;)V
 
     .line 207
-    const-class v1, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->NOWHERE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 208
-    const-class v1, Lcom/vkontakte/android/fragments/l1;
+    const-class v1, Lcom/vtosters/lite/fragments/l1;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->NOWHERE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/h;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 209
-    const-class v3, Lcom/vkontakte/android/fragments/n1;
+    const-class v3, Lcom/vtosters/lite/fragments/n1;
 
     move-object v1, p0
 
@@ -1542,7 +1542,7 @@
     if-eqz v1, :cond_2
 
     .line 211
-    const-class v3, Lcom/vkontakte/android/fragments/friends/d;
+    const-class v3, Lcom/vtosters/lite/fragments/friends/d;
 
     const/4 v4, 0x0
 
@@ -1560,7 +1560,7 @@
 
     .line 212
     :cond_2
-    const-class v3, Lcom/vkontakte/android/fragments/friends/FriendsFragment;
+    const-class v3, Lcom/vtosters/lite/fragments/friends/FriendsFragment;
 
     const/4 v4, 0x0
 

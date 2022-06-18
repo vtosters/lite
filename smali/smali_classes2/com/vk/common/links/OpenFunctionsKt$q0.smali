@@ -74,35 +74,35 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/api/c;
+    check-cast p1, Lcom/vtosters/lite/api/c;
 
     if-eqz p1, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/o2/c$q;
+    new-instance v0, Lcom/vtosters/lite/fragments/o2/c$q;
 
     iget v1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->a:I
 
     iget v2, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->b:I
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/c;->b:Ljava/lang/String;
+    iget-object v3, p1, Lcom/vtosters/lite/api/c;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vkontakte/android/fragments/o2/c$q;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/fragments/o2/c$q;-><init>(IILjava/lang/String;)V
 
     .line 3
     iget v1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->c:I
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/o2/c$q;->c(I)Lcom/vkontakte/android/fragments/o2/c$q;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/o2/c$q;->c(I)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 4
-    iget v1, p1, Lcom/vkontakte/android/api/c;->c:I
+    iget v1, p1, Lcom/vtosters/lite/api/c;->c:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/fragments/o2/c$q;->a(ZI)Lcom/vkontakte/android/fragments/o2/c$q;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/fragments/o2/c$q;->a(ZI)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 5
-    iget p1, p1, Lcom/vkontakte/android/api/c;->f:I
+    iget p1, p1, Lcom/vtosters/lite/api/c;->f:I
 
     and-int/2addr p1, v2
 
@@ -114,7 +114,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/fragments/o2/c$q;->d(Z)Lcom/vkontakte/android/fragments/o2/c$q;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/fragments/o2/c$q;->d(Z)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 6
     iget p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->b:I
@@ -123,11 +123,11 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->d(I)Z
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->d(I)Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/o2/c$q;->c(Z)Lcom/vkontakte/android/fragments/o2/c$q;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/o2/c$q;->c(Z)Lcom/vtosters/lite/fragments/o2/c$q;
 
     .line 7
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$q0;->d:Landroid/content/Context;

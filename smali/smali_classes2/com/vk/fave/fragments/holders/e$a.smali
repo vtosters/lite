@@ -46,7 +46,7 @@
 
     iget-object v0, p0, Lcom/vk/fave/fragments/holders/e$a;->a:Lcom/vk/fave/fragments/holders/e;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v0
 

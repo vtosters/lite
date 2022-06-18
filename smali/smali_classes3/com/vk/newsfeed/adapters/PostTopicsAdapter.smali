@@ -201,7 +201,7 @@
 
     check-cast p1, Lcom/vk/newsfeed/adapters/PostTopicsAdapter$c;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -215,7 +215,7 @@
 
     iget-object p2, p0, Lcom/vk/newsfeed/adapters/PostTopicsAdapter;->e:Lcom/vk/core/view/links/a$a;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_1
     :goto_0

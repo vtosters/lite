@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/data/n$l;",
+        "Lcom/vtosters/lite/data/n$l;",
         "Lkotlin/m;",
         ">;"
     }
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/n$l;)V
     .locals 2
 
     .line 1
@@ -58,7 +58,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/util/ClickableStickerDelegate$trackClickOnTooltip$1;->$sticker:Lcom/vk/dto/stories/model/clickable/ClickableSticker;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vkontakte/android/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+    invoke-static {v0, p1, v1}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
 
     return-void
 .end method
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$trackClickOnTooltip$1;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$trackClickOnTooltip$1;->a(Lcom/vtosters/lite/data/n$l;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

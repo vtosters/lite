@@ -53,7 +53,7 @@
     .end annotation
 .end field
 
-.field private H:Lcom/vkontakte/android/ui/x;
+.field private H:Lcom/vtosters/lite/ui/x;
 
 .field private I:Z
 
@@ -1045,14 +1045,14 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz v0, :cond_1
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/x;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/x;->b(Z)V
 
     :cond_0
     const/4 v0, 0x1
@@ -1231,7 +1231,7 @@
     iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->J:Lcom/vk/lists/RecyclerPaginatedView;
 
     .line 14
-    new-instance p2, Lcom/vkontakte/android/ui/x;
+    new-instance p2, Lcom/vtosters/lite/ui/x;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1241,12 +1241,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$k;-><init>(Lcom/vk/friends/recommendations/FriendsImportFragment;)V
 
-    invoke-direct {p2, p3, v2}, Lcom/vkontakte/android/ui/x;-><init>(Landroid/app/Activity;Lcom/vkontakte/android/ui/x$i;)V
+    invoke-direct {p2, p3, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
 
-    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vkontakte/android/ui/x;
+    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vtosters/lite/ui/x;
 
     .line 15
-    iget-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz p2, :cond_5
 
@@ -1254,11 +1254,11 @@
 
     invoke-direct {p3, p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$l;-><init>(Lcom/vk/friends/recommendations/FriendsImportFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vkontakte/android/ui/x;->a(Lcom/vkontakte/android/ui/x$j;)V
+    invoke-virtual {p2, p3}, Lcom/vtosters/lite/ui/x;->a(Lcom/vtosters/lite/ui/x$j;)V
 
     .line 16
     :cond_5
-    iget-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz p2, :cond_8
 
@@ -1288,7 +1288,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, p3, v0}, Lcom/vkontakte/android/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {p2, p3, v0}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     goto :goto_2
 

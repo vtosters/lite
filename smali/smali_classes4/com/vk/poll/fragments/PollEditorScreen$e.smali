@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/attachments/PollAttachment;",
+        "Lcom/vtosters/lite/attachments/PollAttachment;",
         ">;"
     }
 .end annotation
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 5
 
     .line 1
     iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen$e;->a:Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v0}, Lcom/vk/poll/fragments/PollEditorScreen;->n(Lcom/vk/poll/fragments/PollEditorScreen;)Lcom/vkontakte/android/attachments/PollAttachment;
+    invoke-static {v0}, Lcom/vk/poll/fragments/PollEditorScreen;->n(Lcom/vk/poll/fragments/PollEditorScreen;)Lcom/vtosters/lite/attachments/PollAttachment;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
 
     invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v3
 
@@ -119,7 +119,7 @@
     invoke-virtual {v2, v3}, Lb/h/t/k/b;->a(Lcom/vk/dto/polls/Poll;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v2
 
@@ -194,7 +194,7 @@
 
     .line 10
     :cond_6
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object p1
 
@@ -209,9 +209,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/poll/fragments/PollEditorScreen$e;->a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/poll/fragments/PollEditorScreen$e;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/navigation/NavigationDelegateActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "NavigationDelegateActivity.kt"
 
 # interfaces
@@ -51,7 +51,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 
     sget-object v0, Lcom/vk/navigation/NavigationDelegateActivity;->H:Lcom/vk/navigation/NavigationDelegateActivity$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/NavigationDelegateActivity$a;->b(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vkontakte/android/ui/e0/a;
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/NavigationDelegateActivity$a;->b(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vtosters/lite/ui/e0/a;
 
     move-result-object p1
 
@@ -228,7 +228,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -294,7 +294,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vkontakte/android/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -352,7 +352,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :cond_1
     return-void
@@ -362,7 +362,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -378,7 +378,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-direct {p0, p0}, Lcom/vk/navigation/NavigationDelegateActivity;->a(Lcom/vk/navigation/NavigationDelegateActivity;)Lcom/vk/navigation/y;
@@ -444,7 +444,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -509,7 +509,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result p1
 
@@ -534,7 +534,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -616,7 +616,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -662,7 +662,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStart()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -678,7 +678,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStop()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
@@ -706,7 +706,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/vkontakte/android/ui/e0/a;
+    instance-of v0, v0, Lcom/vtosters/lite/ui/e0/a;
 
     if-eqz v0, :cond_1
 
@@ -717,9 +717,9 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vkontakte/android/ui/e0/a;
+    check-cast v0, Lcom/vtosters/lite/ui/e0/a;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/e0/a;->y()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/e0/a;->y()V
 
     goto :goto_0
 

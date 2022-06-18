@@ -109,7 +109,7 @@
     goto :goto_0
 
     :cond_1
-    const-class p0, Lcom/vkontakte/android/fragments/ProfileFragment;
+    const-class p0, Lcom/vtosters/lite/fragments/ProfileFragment;
 
     :goto_0
     return-object p0
@@ -251,7 +251,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v2
 

@@ -88,9 +88,9 @@
     invoke-direct {p0}, Lcom/vk/newsfeed/holders/g;->p0()V
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/d;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/d;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
@@ -98,7 +98,7 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/api/newsfeed/d;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/api/newsfeed/d;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
 
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const/16 v2, 0x64
 
@@ -180,7 +180,7 @@
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -203,7 +203,7 @@
     iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     .line 7
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/attachpicker/fragment/n$c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "AttachMusicFragment.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;",
         "Lcom/vk/core/ui/k<",
@@ -89,7 +89,7 @@
     const v0, 0x7f0d034f
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p3, p0, Lcom/vk/attachpicker/fragment/n$c;->f:Lcom/vk/attachpicker/base/b;
 
@@ -219,7 +219,7 @@
     .locals 1
 
     .line 5
-    iget-object p2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     if-nez p2, :cond_0
 
@@ -256,7 +256,7 @@
     move-result-object p1
 
     .line 8
-    iget-object p2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p2, Lcom/vk/dto/music/MusicTrack;
 

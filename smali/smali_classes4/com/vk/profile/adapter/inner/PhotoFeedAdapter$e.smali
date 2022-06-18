@@ -89,7 +89,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -203,11 +203,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->j()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->j()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -234,7 +234,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
 
     .line 10
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/photo/Photo;
 

@@ -368,7 +368,7 @@
     .line 70
     new-instance p2, Landroid/content/Intent;
 
-    const-class v3, Lcom/vkontakte/android/LinkRedirActivity;
+    const-class v3, Lcom/vtosters/lite/LinkRedirActivity;
 
     invoke-direct {p2, v0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -657,7 +657,7 @@
         }
     .end annotation
 
-    const-string v0, "com.vkontakte.android"
+    const-string v0, "com.vtosters.lite"
 
     const-string v1, "com.vk.im"
 
@@ -729,14 +729,14 @@
     const-string v1, "ui_click_link"
 
     .line 108
-    invoke-static {v1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v1
 
     const-string v2, "url"
 
     .line 109
-    invoke-virtual {v1, v2, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 110
     invoke-direct {p0}, Lcom/vk/common/links/BrowserUtils$Companion;->d()Z
@@ -751,7 +751,7 @@
 
     const-string v2, "browser_type"
 
-    invoke-virtual {v1, v2, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 111
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -760,18 +760,18 @@
 
     const-string v2, "auto"
 
-    invoke-virtual {v1, v2, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     if-eqz v0, :cond_1
 
     const-string p2, "auto_browser_name"
 
     .line 112
-    invoke-virtual {v1, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 113
     :cond_1
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1336,7 +1336,7 @@
     .line 7
     new-instance p3, Landroid/content/Intent;
 
-    const-class p4, Lcom/vkontakte/android/ValidationActivity;
+    const-class p4, Lcom/vtosters/lite/ValidationActivity;
 
     invoke-direct {p3, p1, p4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -1670,7 +1670,7 @@
     .line 32
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/vkontakte/android/MainActivity;
+    const-class v1, Lcom/vtosters/lite/MainActivity;
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -1680,7 +1680,7 @@
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/vkontakte/android/SendActivity;
+    const-class v1, Lcom/vtosters/lite/SendActivity;
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

@@ -1189,7 +1189,7 @@
 
     move-result-object v0
 
-    instance-of v2, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v2, v0, Lcom/vtosters/lite/VKActivity;
 
     const/4 v3, 0x0
 
@@ -1198,7 +1198,7 @@
     move-object v0, v3
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_1
 
@@ -1212,7 +1212,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->m:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$a0;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
 
     .line 4
     invoke-static {v0}, Lcom/vk/core/utils/i;->a(Landroid/app/Activity;)Z
@@ -2037,20 +2037,20 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v1, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->m:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$a0;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->a(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/c;)V
 
     :cond_1
     return-void

@@ -6,7 +6,7 @@
             <Spinner android:id="@id/signup_phone_countries" android:layout_width="fill_parent" android:layout_height="wrap_content" android:dropDownWidth="fill_parent" android:dropDownVerticalOffset="-4.0dip" style="@style/EditTextStandard" />
             <LinearLayout android:orientation="horizontal" android:id="@id/signup_phone_number_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <EditText android:enabled="false" android:id="@id/signup_phone_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:minWidth="48.0dip" android:inputType="phone" style="@style/EditTextStandard" />
-                <com.vkontakte.android.ui.XEditText android:id="@id/signup_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_phone_hint" android:inputType="phone" style="@style/EditTextStandard" />
+                <com.vtosters.lite.ui.XEditText android:id="@id/signup_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/signup_phone_hint" android:inputType="phone" style="@style/EditTextStandard" />
             </LinearLayout>
             <TextView android:textSize="14.0sp" android:gravity="start" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:text="@string/signup_enter_number" style="@style/RegistrationTextInfo" />
         </LinearLayout>

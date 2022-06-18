@@ -133,7 +133,7 @@
 
     .line 16
     :cond_0
-    sget-object v2, Lcom/vkontakte/android/a0;->AppBarLayout:[I
+    sget-object v2, Lcom/vtosters/lite/a0;->AppBarLayout:[I
 
     invoke-virtual {p1, p2, v2, v0, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

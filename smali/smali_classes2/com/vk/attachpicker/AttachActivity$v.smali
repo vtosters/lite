@@ -359,14 +359,14 @@
 
     .line 18
     :cond_3
-    instance-of p2, p1, Lcom/vkontakte/android/fragments/location/LocationFragment;
+    instance-of p2, p1, Lcom/vtosters/lite/fragments/location/LocationFragment;
 
     if-eqz p2, :cond_4
 
     .line 19
-    check-cast p1, Lcom/vkontakte/android/fragments/location/LocationFragment;
+    check-cast p1, Lcom/vtosters/lite/fragments/location/LocationFragment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/fragments/location/LocationFragment;->P4()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/location/LocationFragment;->P4()V
 
     goto :goto_0
 

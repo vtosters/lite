@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/a<",
-        "Lcom/vkontakte/android/audio/player/a0;",
+        "Lcom/vtosters/lite/audio/player/a0;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vkontakte/android/audio/player/a0;
+.method public final invoke()Lcom/vtosters/lite/audio/player/a0;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/audio/player/a0;
+    new-instance v0, Lcom/vtosters/lite/audio/player/a0;
 
-    new-instance v1, Lcom/vkontakte/android/audio/player/l;
+    new-instance v1, Lcom/vtosters/lite/audio/player/l;
 
     iget-object v2, p0, Lcom/vk/music/model/DefaultPlayerModelFactory$trackInfoAdapter$2;->this$0:Lcom/vk/music/model/DefaultPlayerModelFactory;
 
@@ -59,9 +59,9 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vkontakte/android/audio/player/l;-><init>(Lcom/vk/audioipc/core/d;)V
+    invoke-direct {v1, v2}, Lcom/vtosters/lite/audio/player/l;-><init>(Lcom/vk/audioipc/core/d;)V
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/audio/player/a0;-><init>(Lcom/vk/music/player/e$a;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/audio/player/a0;-><init>(Lcom/vk/music/player/e$a;)V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory$trackInfoAdapter$2;->invoke()Lcom/vkontakte/android/audio/player/a0;
+    invoke-virtual {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory$trackInfoAdapter$2;->invoke()Lcom/vtosters/lite/audio/player/a0;
 
     move-result-object v0
 

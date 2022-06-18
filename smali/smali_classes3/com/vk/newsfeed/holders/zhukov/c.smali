@@ -198,16 +198,16 @@
     .locals 7
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     if-eqz v0, :cond_1
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/c;->f:Landroid/widget/TextView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget-object v1, v1, Lcom/vk/dto/common/GoodAlbum;->c:Ljava/lang/String;
 
@@ -228,7 +228,7 @@
 
     const v2, 0x7f100034
 
-    iget-object v3, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object v3, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget v3, v3, Lcom/vk/dto/common/GoodAlbum;->e:I
 
@@ -265,7 +265,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/c;->B:Lcom/vk/newsfeed/FrescoImageView;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;->e:Lcom/vk/dto/common/GoodAlbum;
 
     iget-object p1, p1, Lcom/vk/dto/common/GoodAlbum;->d:Lcom/vk/dto/photo/Photo;
 

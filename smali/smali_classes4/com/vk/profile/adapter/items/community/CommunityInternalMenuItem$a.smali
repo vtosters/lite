@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 2
     invoke-virtual {p1, p2}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->p(I)V

@@ -116,9 +116,9 @@
     if-eqz v0, :cond_3
 
     .line 6
-    new-instance p1, Lcom/vkontakte/android/fragments/photos/PhotoListFragment$j;
+    new-instance p1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$j;
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/photos/PhotoListFragment$j;-><init>(Lcom/vk/dto/photo/PhotoAlbum;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$j;-><init>(Lcom/vk/dto/photo/PhotoAlbum;)V
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$n0;->a:Landroid/content/Context;
 

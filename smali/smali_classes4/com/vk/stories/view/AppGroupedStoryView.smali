@@ -1415,7 +1415,7 @@
             "Lcom/vk/dto/stories/model/StoryViewAction;",
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/data/n$l;",
+            "Lcom/vtosters/lite/data/n$l;",
             "Lkotlin/m;",
             ">;)V"
         }

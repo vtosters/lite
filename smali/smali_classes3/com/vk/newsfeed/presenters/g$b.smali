@@ -67,11 +67,11 @@
     move-result-object v0
 
     .line 2
-    new-instance v1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     iget-object p1, p1, Lcom/vk/music/g/k;->a:Lcom/vk/dto/music/Playlist;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;-><init>(Lcom/vk/dto/music/Playlist;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;-><init>(Lcom/vk/dto/music/Playlist;)V
 
     const/16 p1, 0x79
 

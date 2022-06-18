@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/EventHolder;->b(Lcom/vkontakte/android/attachments/EventAttachment;)V
+    value = Lcom/vk/newsfeed/holders/attachments/EventHolder;->b(Lcom/vtosters/lite/attachments/EventAttachment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final synthetic $attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+.field final synthetic $attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
 .field final synthetic $event:Lcom/vk/dto/newsfeed/Owner;
 
@@ -42,14 +42,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/EventHolder;Lcom/vk/dto/newsfeed/Owner;Lcom/vkontakte/android/attachments/EventAttachment;ILcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/EventHolder;Lcom/vk/dto/newsfeed/Owner;Lcom/vtosters/lite/attachments/EventAttachment;ILcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->this$0:Lcom/vk/newsfeed/holders/attachments/EventHolder;
 
     iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$event:Lcom/vk/dto/newsfeed/Owner;
 
-    iput-object p3, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+    iput-object p3, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
     iput p4, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$memberStatus:I
 
@@ -77,7 +77,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/dto/newsfeed/Owner;->p(Z)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
     iget v2, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$memberStatus:I
 
@@ -90,7 +90,7 @@
     const/4 v1, 0x2
 
     :cond_0
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/attachments/EventAttachment;->i(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/attachments/EventAttachment;->i(I)V
 
     .line 3
     iget v0, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$memberStatus:I
@@ -114,18 +114,18 @@
 
     move-result-object v0
 
-    instance-of v3, v0, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v3, v0, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-nez v3, :cond_2
 
     move-object v0, v1
 
     :cond_2
-    check-cast v0, Lcom/vkontakte/android/attachments/EventAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -167,7 +167,7 @@
 
     const/16 v0, 0x78
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleSubscription$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
     invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 

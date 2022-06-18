@@ -25,7 +25,7 @@
         "<T::",
         "Lcom/vk/core/serialize/Serializer$StreamParcelable;",
         "VH:",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "TT;>;>",
         "Lcom/vk/core/fragments/b;",
         "Lcom/vk/attachpicker/base/g<",
@@ -52,7 +52,7 @@
 
 .field private G:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-.field private H:Lcom/vkontakte/android/ui/x;
+.field private H:Lcom/vtosters/lite/ui/x;
 
 .field private I:Lcom/vk/attachpicker/widget/AttachCounterView;
 
@@ -239,7 +239,7 @@
     invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -613,11 +613,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/attachpicker/base/BaseAttachPickerFragment;)Lcom/vkontakte/android/ui/x;
+.method public static final synthetic c(Lcom/vk/attachpicker/base/BaseAttachPickerFragment;)Lcom/vtosters/lite/ui/x;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object p0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     return-object p0
 .end method
@@ -1151,15 +1151,15 @@
     return-void
 .end method
 
-.method protected final a(Lcom/vkontakte/android/ui/x$j;)V
+.method protected final a(Lcom/vtosters/lite/ui/x$j;)V
     .locals 1
 
     .line 20
-    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/x;->a(Lcom/vkontakte/android/ui/x$j;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/x;->a(Lcom/vtosters/lite/ui/x$j;)V
 
     :cond_0
     return-void
@@ -1622,11 +1622,11 @@
     if-nez p2, :cond_2
 
     .line 4
-    iget-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2, p1}, Lcom/vkontakte/android/ui/x;->b(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/x;->b(Ljava/lang/String;)V
 
     .line 5
     :cond_1
@@ -1853,7 +1853,7 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz p1, :cond_2
 
@@ -1871,17 +1871,17 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p1, v0, p2}, Lcom/vkontakte/android/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 3
     :cond_2
-    iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz p1, :cond_3
 
     iget-boolean p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->Q:Z
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/x;->e(Z)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/x;->e(Z)V
 
     :cond_3
     return-void
@@ -1969,7 +1969,7 @@
     iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->M:Lcom/vk/lists/RecyclerPaginatedView;
 
     .line 6
-    iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     .line 7
     iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->K:Landroidx/appcompat/widget/Toolbar;
@@ -2021,7 +2021,7 @@
     invoke-virtual {p0, p2}, Landroidx/fragment/app/Fragment;->setHasOptionsMenu(Z)V
 
     .line 3
-    new-instance v0, Lcom/vkontakte/android/ui/x;
+    new-instance v0, Lcom/vtosters/lite/ui/x;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -2029,9 +2029,9 @@
 
     iget-object v2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->Z:Lcom/vk/attachpicker/base/BaseAttachPickerFragment$e;
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/ui/x;-><init>(Landroid/app/Activity;Lcom/vkontakte/android/ui/x$i;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
 
-    iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iput-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->K:Landroidx/appcompat/widget/Toolbar;
@@ -2396,11 +2396,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vkontakte/android/ui/x;
+    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->H:Lcom/vtosters/lite/ui/x;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/x;->e(Z)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/x;->e(Z)V
 
     :cond_0
     return-void

@@ -26,7 +26,7 @@
         value = {
             "Lkotlin/jvm/b/b<",
             "Ljava/lang/String;",
-            "Lcom/vkontakte/android/data/n$l;",
+            "Lcom/vtosters/lite/data/n$l;",
             ">;"
         }
     .end annotation
@@ -57,7 +57,7 @@
             "-",
             "Ljava/lang/String;",
             "+",
-            "Lcom/vkontakte/android/data/n$l;",
+            "Lcom/vtosters/lite/data/n$l;",
             ">;)V"
         }
     .end annotation
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/music/stats/i/a;Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+.method private final a(Lcom/vk/music/stats/i/a;Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
     .locals 4
 
     .line 16
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/data/n$l;
+    check-cast v0, Lcom/vtosters/lite/data/n$l;
 
     .line 17
     invoke-virtual {p1}, Lcom/vk/music/stats/i/a;->c()Ljava/lang/String;
@@ -89,7 +89,7 @@
 
     const-string v2, "audio_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 18
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
@@ -106,7 +106,7 @@
 
     const-string v2, "uuid"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 19
     invoke-virtual {p1}, Lcom/vk/music/stats/i/a;->l()Z
@@ -119,7 +119,7 @@
 
     const-string v2, "shuffle"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 20
     invoke-direct {p0, p1}, Lcom/vk/music/stats/g;->e(Lcom/vk/music/stats/i/a;)Ljava/lang/String;
@@ -128,7 +128,7 @@
 
     const-string v2, "reason"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 21
     invoke-virtual {p1}, Lcom/vk/music/stats/i/a;->i()J
@@ -141,7 +141,7 @@
 
     const-string v2, "start_time"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 22
     invoke-virtual {p1}, Lcom/vk/music/stats/i/a;->d()J
@@ -154,7 +154,7 @@
 
     const-string v2, "playback_started_at"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 23
     invoke-virtual {p1}, Lcom/vk/music/stats/i/a;->j()Ljava/lang/String;
@@ -163,7 +163,7 @@
 
     const-string v2, "track_code"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v1, "music_start_playback"
 
@@ -189,7 +189,7 @@
 
     const-string v2, "duration"
 
-    invoke-virtual {v0, v2, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 26
     :cond_0
@@ -219,7 +219,7 @@
     const-string p2, "all"
 
     .line 27
-    invoke-virtual {v0, v2, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     goto :goto_0
 
@@ -227,7 +227,7 @@
     const-string p2, "one"
 
     .line 28
-    invoke-virtual {v0, v2, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 29
     :goto_0
@@ -237,7 +237,7 @@
 
     const-string v1, "state"
 
-    invoke-virtual {v0, v1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 30
     invoke-virtual {p1}, Lcom/vk/music/stats/i/a;->h()Lcom/vk/music/common/MusicPlaybackLaunchContext;
@@ -251,7 +251,7 @@
 
     const-string v2, "source"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 32
     invoke-virtual {p2}, Lcom/vk/music/common/MusicPlaybackLaunchContext;->v1()Z
@@ -267,7 +267,7 @@
 
     const-string v2, "playlist_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_3
     const/4 v1, 0x4
@@ -299,7 +299,7 @@
 
     const-string v1, "expanded"
 
-    invoke-virtual {v0, v1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 36
     :cond_5
@@ -320,7 +320,7 @@
 
     const-string v1, "prev_audio_id"
 
-    invoke-virtual {v0, v1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 38
     :cond_6
@@ -341,7 +341,7 @@
 
     const-string p2, "prev_playlist_id"
 
-    invoke-virtual {v0, p2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_7
     return-object v0
@@ -388,28 +388,28 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "popup"
 
     const-string v3, "background_v2"
 
     .line 47
-    invoke-virtual {v1, v2, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "action"
 
     const-string v3, "link"
 
     .line 48
-    invoke-virtual {v1, v2, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "newEventBuilder.invoke(T\u2026ION_POPUP_ACTION, \"link\")"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 49
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -446,7 +446,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     .line 9
     invoke-virtual {p1}, Lcom/vk/music/stats/f;->a()Ljava/lang/String;
@@ -455,7 +455,7 @@
 
     const-string v3, "state"
 
-    invoke-virtual {v1, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 10
     invoke-virtual {p1}, Lcom/vk/music/stats/f;->c()Ljava/lang/String;
@@ -464,7 +464,7 @@
 
     const-string v3, "prev_state"
 
-    invoke-virtual {v1, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 11
     invoke-virtual {p1}, Lcom/vk/music/stats/f;->b()J
@@ -477,14 +477,14 @@
 
     const-string v2, "duration"
 
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "newEventBuilder.invoke(T\u2026TION, params.durationSec)"
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -497,11 +497,11 @@
 
     const-string v1, "music_stop_playback"
 
-    invoke-direct {p0, p1, v1}, Lcom/vk/music/stats/g;->a(Lcom/vk/music/stats/i/a;Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-direct {p0, p1, v1}, Lcom/vk/music/stats/g;->a(Lcom/vk/music/stats/i/a;Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -520,19 +520,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "type"
 
     .line 14
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "newEventBuilder.invoke(T\u2026ING_STARTED_TYPE, source)"
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -551,19 +551,19 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/data/n$l;
+    check-cast v0, Lcom/vtosters/lite/data/n$l;
 
     const-string v1, "popup"
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "newEventBuilder.invoke(T\u2026ION_POPUP_SOURCE, source)"
 
     invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p2, v0}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {p2, v0}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -587,12 +587,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/data/n$l;
+    check-cast v2, Lcom/vtosters/lite/data/n$l;
 
     const-string v3, "popup"
 
     .line 42
-    invoke-virtual {v2, v3, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v2, v3, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     if-eqz v1, :cond_0
 
@@ -605,14 +605,14 @@
     const-string p1, "status"
 
     .line 43
-    invoke-virtual {v2, p1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v2, p1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     if-nez v1, :cond_1
 
     const-string p1, "reason"
 
     .line 44
-    invoke-virtual {v2, p1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v2, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 45
     :cond_1
@@ -622,7 +622,7 @@
 
     invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {p1, v2}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -650,21 +650,21 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "action"
 
     const-string v3, "send"
 
     .line 7
-    invoke-virtual {v1, v2, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "newEventBuilder.invoke(T\u2026ION_POPUP_ACTION, \"send\")"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -677,11 +677,11 @@
 
     const-string v1, "music_start_playback"
 
-    invoke-direct {p0, p1, v1}, Lcom/vk/music/stats/g;->a(Lcom/vk/music/stats/i/a;Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-direct {p0, p1, v1}, Lcom/vk/music/stats/g;->a(Lcom/vk/music/stats/i/a;Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -700,19 +700,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "popup"
 
     .line 10
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "newEventBuilder.invoke(T\u2026ION_POPUP_SOURCE, source)"
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -731,24 +731,24 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "popup"
 
     .line 3
-    invoke-virtual {v1, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "action"
 
     .line 4
-    invoke-virtual {v1, p1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "newEventBuilder.invoke(T\u2026ION_POPUP_ACTION, action)"
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method
@@ -773,21 +773,21 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vkontakte/android/data/n$l;
+    check-cast v1, Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "action"
 
     const-string v3, "open"
 
     .line 4
-    invoke-virtual {v1, v2, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "newEventBuilder.invoke(T\u2026ION_POPUP_ACTION, \"open\")"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/stats/g$a;->a(Lcom/vtosters/lite/data/n$l;)V
 
     return-void
 .end method

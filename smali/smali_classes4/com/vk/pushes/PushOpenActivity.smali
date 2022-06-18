@@ -289,7 +289,7 @@
 
     .line 4
     :cond_3
-    invoke-static {p0, v3, v4, v5, v2}, Lcom/vkontakte/android/NotificationActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {p0, v3, v4, v5, v2}, Lcom/vtosters/lite/NotificationActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -333,7 +333,7 @@
     move-result-object v1
 
     .line 3
-    invoke-static {p0, v0, v1}, Lcom/vkontakte/android/ConfirmActionActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/vtosters/lite/ConfirmActionActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/pushes/PushOpenActivity;->d()V
@@ -347,7 +347,7 @@
     .line 1
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/vkontakte/android/ValidationActivity;
+    const-class v1, Lcom/vtosters/lite/ValidationActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

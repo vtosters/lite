@@ -623,7 +623,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 174
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -869,7 +869,7 @@
     :pswitch_4
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/y2/x;
+    const-class v5, Lcom/vtosters/lite/fragments/y2/x;
 
     const-string v1, "videos"
 
@@ -935,7 +935,7 @@
     .line 80
     sget-object v1, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/stickers/StickersCatalogFragment;
+    const-class v5, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;
 
     invoke-direct {v1, p1, p2, v5}, Lcom/vk/menu/c;->a(ILjava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
 
@@ -950,7 +950,7 @@
     .line 82
     sget-object v1, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/stickers/c;
+    const-class v5, Lcom/vtosters/lite/fragments/stickers/c;
 
     invoke-direct {v1, p1, p2, v5}, Lcom/vk/menu/c;->a(ILjava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
 
@@ -1011,7 +1011,7 @@
     :pswitch_a
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/SettingsListFragment;
+    const-class v5, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
     const-string v1, "settings"
 
@@ -1037,7 +1037,7 @@
 
     .line 93
     :pswitch_c
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p2
 
@@ -1052,7 +1052,7 @@
     .line 94
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/ProfileFragment;
+    const-class v5, Lcom/vtosters/lite/fragments/ProfileFragment;
 
     const-string v1, "profile"
 
@@ -1099,7 +1099,7 @@
     invoke-virtual {v0, p2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p2
 
@@ -1136,7 +1136,7 @@
     .line 103
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/money/o;
+    const-class v5, Lcom/vtosters/lite/fragments/money/o;
 
     const-string v1, "payments"
 
@@ -1164,7 +1164,7 @@
     :pswitch_11
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class v5, Lcom/vtosters/lite/fragments/t2/c/b;
 
     const-string v1, "messages"
 
@@ -1197,9 +1197,9 @@
     invoke-static {p1, p2}, Lcom/vk/common/links/e;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 109
-    sget-object p1, Lcom/vkontakte/android/MenuCounterUpdater;->e:Lcom/vkontakte/android/MenuCounterUpdater;
+    sget-object p1, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/MenuCounterUpdater;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a()V
 
     goto/16 :goto_2
 
@@ -1219,7 +1219,7 @@
     :pswitch_14
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/lives/LivesTabsFragment;
+    const-class v5, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
     const-string v1, "lives"
 
@@ -1250,7 +1250,7 @@
     :cond_2
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/s2/f;
+    const-class v5, Lcom/vtosters/lite/fragments/s2/f;
 
     invoke-direct {p2, p1, v1, v5}, Lcom/vk/menu/c;->a(ILjava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
 
@@ -1267,7 +1267,7 @@
     .line 116
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/h1;
+    const-class v5, Lcom/vtosters/lite/fragments/h1;
 
     const-string v1, "games"
 
@@ -1298,7 +1298,7 @@
     :cond_3
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/friends/FriendsFragment;
+    const-class v5, Lcom/vtosters/lite/fragments/friends/FriendsFragment;
 
     invoke-direct {p2, p1, v1, v5}, Lcom/vk/menu/c;->a(ILjava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
 
@@ -1354,9 +1354,9 @@
 
     .line 125
     :cond_4
-    sget-object p2, Lcom/vkontakte/android/MenuCounterUpdater;->e:Lcom/vkontakte/android/MenuCounterUpdater;
+    sget-object p2, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/MenuCounterUpdater;->a()V
+    invoke-virtual {p2}, Lcom/vtosters/lite/MenuCounterUpdater;->a()V
 
     .line 126
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
@@ -1422,7 +1422,7 @@
     :pswitch_1d
     sget-object p2, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
 
-    const-class v5, Lcom/vkontakte/android/fragments/p2/f;
+    const-class v5, Lcom/vtosters/lite/fragments/p2/f;
 
     const-string v1, "documents"
 
@@ -1459,7 +1459,7 @@
 
     .line 136
     :pswitch_20
-    const-class v5, Lcom/vkontakte/android/fragments/gifts/d;
+    const-class v5, Lcom/vtosters/lite/fragments/gifts/d;
 
     goto :goto_2
 
@@ -1599,7 +1599,7 @@
     .end annotation
 
     .line 166
-    const-class v0, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class v0, Lcom/vtosters/lite/fragments/t2/c/b;
 
     invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1640,7 +1640,7 @@
 
     .line 168
     :cond_0
-    const-class v0, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class v0, Lcom/vtosters/lite/fragments/t2/c/b;
 
     invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -1718,7 +1718,7 @@
     const-string v0, "user_action"
 
     .line 27
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -1727,12 +1727,12 @@
     const-string v2, "menu_click"
 
     .line 28
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v1, "action_param"
 
     .line 29
-    invoke-virtual {v0, v1, p0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const/4 p0, -0x1
 
@@ -1745,11 +1745,11 @@
 
     const-string p1, "position"
 
-    invoke-virtual {v0, p1, p0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 31
     :cond_0
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -2081,7 +2081,7 @@
     if-ne p0, v1, :cond_4
 
     .line 36
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -2137,7 +2137,7 @@
     if-ne p0, p1, :cond_7
 
     .line 39
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -2187,7 +2187,7 @@
 
     if-eqz v1, :cond_9
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -2280,7 +2280,7 @@
     if-ne p0, p1, :cond_f
 
     .line 46
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -2296,7 +2296,7 @@
     if-ne p0, p1, :cond_10
 
     .line 47
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -2312,7 +2312,7 @@
     if-ne p0, p1, :cond_11
 
     .line 48
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -2328,7 +2328,7 @@
     if-ne p0, p1, :cond_12
 
     .line 49
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -2387,7 +2387,7 @@
 
     .line 1
     :sswitch_0
-    invoke-static {}, Lcom/vkontakte/android/w;->o()I
+    invoke-static {}, Lcom/vtosters/lite/w;->o()I
 
     move-result p0
 
@@ -2395,7 +2395,7 @@
 
     .line 2
     :sswitch_1
-    invoke-static {}, Lcom/vkontakte/android/w;->n()I
+    invoke-static {}, Lcom/vtosters/lite/w;->n()I
 
     move-result p0
 
@@ -2403,7 +2403,7 @@
 
     .line 3
     :sswitch_2
-    invoke-static {}, Lcom/vkontakte/android/w;->m()I
+    invoke-static {}, Lcom/vtosters/lite/w;->m()I
 
     move-result p0
 
@@ -2411,7 +2411,7 @@
 
     .line 4
     :sswitch_3
-    invoke-static {}, Lcom/vkontakte/android/w;->l()I
+    invoke-static {}, Lcom/vtosters/lite/w;->l()I
 
     move-result p0
 
@@ -2419,7 +2419,7 @@
 
     .line 5
     :sswitch_4
-    invoke-static {}, Lcom/vkontakte/android/w;->j()I
+    invoke-static {}, Lcom/vtosters/lite/w;->j()I
 
     move-result p0
 
@@ -2427,7 +2427,7 @@
 
     .line 6
     :sswitch_5
-    invoke-static {}, Lcom/vkontakte/android/w;->h()I
+    invoke-static {}, Lcom/vtosters/lite/w;->h()I
 
     move-result p0
 
@@ -2435,7 +2435,7 @@
 
     .line 7
     :sswitch_6
-    invoke-static {}, Lcom/vkontakte/android/w;->a()I
+    invoke-static {}, Lcom/vtosters/lite/w;->a()I
 
     move-result p0
 
@@ -2449,14 +2449,14 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lcom/vkontakte/android/w;->g()I
+    invoke-static {}, Lcom/vtosters/lite/w;->g()I
 
     move-result p0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vkontakte/android/w;->e()I
+    invoke-static {}, Lcom/vtosters/lite/w;->e()I
 
     move-result p0
 
@@ -2464,7 +2464,7 @@
 
     .line 9
     :sswitch_8
-    invoke-static {}, Lcom/vkontakte/android/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/w;->k()I
 
     move-result p0
 
@@ -2472,7 +2472,7 @@
 
     .line 10
     :sswitch_9
-    invoke-static {}, Lcom/vkontakte/android/w;->c()I
+    invoke-static {}, Lcom/vtosters/lite/w;->c()I
 
     move-result p0
 
@@ -2747,7 +2747,7 @@
     move-result-wide v3
 
     .line 158
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v5
 
@@ -2812,7 +2812,7 @@
     if-nez v0, :cond_0
 
     .line 12
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -2833,7 +2833,7 @@
     move-result v2
 
     .line 15
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

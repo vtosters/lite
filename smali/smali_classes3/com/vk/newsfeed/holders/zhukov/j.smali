@@ -171,7 +171,7 @@
     .locals 3
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_0
 
@@ -185,9 +185,9 @@
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/j;->e:Lcom/vk/newsfeed/FrescoImageView;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-object v1, v1, Lcom/vk/dto/photo/Photo;->Q:Lcom/vk/dto/common/Image;
 
@@ -202,7 +202,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/FrescoImageView;->setRemoteImage(Ljava/util/List;)V
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/zhukov/j;->a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/zhukov/j;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     :cond_0
     return-void
@@ -217,7 +217,7 @@
     return-void
 .end method
 
-.method protected final a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+.method protected final a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
     .locals 1
 
     .line 7
@@ -225,7 +225,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-boolean p1, p1, Lcom/vk/dto/photo/Photo;->I:Z
 

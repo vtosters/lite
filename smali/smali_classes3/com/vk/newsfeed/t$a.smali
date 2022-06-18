@@ -34,9 +34,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
 
-    new-instance v1, Lcom/vkontakte/android/NewsfeedList;
+    new-instance v1, Lcom/vtosters/lite/NewsfeedList;
 
-    invoke-direct {v1, p1, p2}, Lcom/vkontakte/android/NewsfeedList;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p2}, Lcom/vtosters/lite/NewsfeedList;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "promo_feed"
 

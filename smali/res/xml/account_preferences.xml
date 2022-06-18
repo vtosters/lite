@@ -2,6 +2,6 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
     <Preference android:title="@string/sett_sync">
-        <intent android:action="com.vkontakte.android.SYNC_SETTINGS" />
+        <intent android:action="com.vtosters.lite.SYNC_SETTINGS" />
     </Preference>
 </PreferenceScreen>

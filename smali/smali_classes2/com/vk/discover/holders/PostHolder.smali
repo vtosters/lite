@@ -374,7 +374,7 @@
     .line 24
     new-instance p1, Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
@@ -383,7 +383,7 @@
     iput-object p1, p0, Lcom/vk/discover/holders/PostHolder;->F:Lcom/vk/imageloader/view/VKImageView;
 
     .line 25
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -862,7 +862,7 @@
     const/4 v1, 0x1
 
     :goto_9
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
@@ -1164,7 +1164,7 @@
     .line 37
     iget-object v9, v0, Lcom/vk/discover/holders/PostHolder;->K:Landroid/widget/TextView;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v10
 
@@ -1196,7 +1196,7 @@
     move-result-object v10
 
     .line 39
-    invoke-static {v9, v10}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v9, v10}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     goto :goto_13
 
@@ -1208,7 +1208,7 @@
 
     move-result-object v10
 
-    invoke-static {v9, v10}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v9, v10}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 41
     :goto_13
@@ -1325,7 +1325,7 @@
     move-result-object v3
 
     .line 52
-    instance-of v13, v3, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v13, v3, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     const/high16 v14, 0x3f100000    # 0.5625f
 
@@ -1355,18 +1355,18 @@
 
     .line 55
     :cond_29
-    instance-of v13, v10, Lcom/vkontakte/android/ui/holder/video/BaseAutoPlayHolder;
+    instance-of v13, v10, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;
 
     if-nez v13, :cond_2a
 
     move-object v10, v2
 
     :cond_2a
-    check-cast v10, Lcom/vkontakte/android/ui/holder/video/BaseAutoPlayHolder;
+    check-cast v10, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;
 
     if-eqz v10, :cond_2b
 
-    invoke-virtual {v10, v14}, Lcom/vkontakte/android/ui/holder/video/BaseAutoPlayHolder;->c(F)V
+    invoke-virtual {v10, v14}, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;->c(F)V
 
     sget-object v10, Lkotlin/m;->a:Lkotlin/m;
 
@@ -1495,7 +1495,7 @@
     .line 64
     new-instance v15, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1544,7 +1544,7 @@
 
     .line 70
     :cond_33
-    instance-of v2, v3, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v2, v3, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v2, :cond_35
 
@@ -1558,9 +1558,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {v10, v2, v14}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->a(Lcom/vkontakte/android/attachments/DocumentAttachment;F)V
+    invoke-virtual {v10, v2, v14}, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->a(Lcom/vtosters/lite/attachments/DocumentAttachment;F)V
 
     goto :goto_19
 
@@ -1606,7 +1606,7 @@
     .line 74
     sget-object v2, Lcom/vk/discover/DiscoverLayoutParams;->e:Lcom/vk/discover/DiscoverLayoutParams$b;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -2129,7 +2129,7 @@
     if-eqz v0, :cond_3
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -2227,7 +2227,7 @@
     .locals 13
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -2326,7 +2326,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/i0/d;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/vtosters/lite/i0/d;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -2429,7 +2429,7 @@
     invoke-direct {v8, p0}, Lcom/vk/discover/holders/PostHolder$onClick$1;-><init>(Lcom/vk/discover/holders/PostHolder;)V
 
     .line 15
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/discover/DiscoverItem;
 

@@ -250,7 +250,7 @@
     if-eqz p2, :cond_0
 
     .line 22
-    sget-object v0, Lcom/vkontakte/android/a0;->TargetImageView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->TargetImageView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

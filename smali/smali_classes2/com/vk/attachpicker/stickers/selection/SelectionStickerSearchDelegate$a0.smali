@@ -92,18 +92,18 @@
 
     move-result-object p1
 
-    instance-of p2, p1, Lcom/vkontakte/android/VKActivity;
+    instance-of p2, p1, Lcom/vtosters/lite/VKActivity;
 
     if-nez p2, :cond_1
 
     const/4 p1, 0x0
 
     :cond_1
-    check-cast p1, Lcom/vkontakte/android/VKActivity;
+    check-cast p1, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, p0}, Lcom/vkontakte/android/VKActivity;->a(Lcom/vk/navigation/c;)V
+    invoke-virtual {p1, p0}, Lcom/vtosters/lite/VKActivity;->a(Lcom/vk/navigation/c;)V
 
     :cond_2
     return-void

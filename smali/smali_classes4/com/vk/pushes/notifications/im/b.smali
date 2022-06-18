@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final O:Lcom/vkontakte/android/NotificationUtils$Type;
+.field private final O:Lcom/vtosters/lite/NotificationUtils$Type;
 
 .field private final P:Landroid/graphics/Bitmap;
 
@@ -33,20 +33,20 @@
     iput-object p6, p0, Lcom/vk/pushes/notifications/im/b;->P:Landroid/graphics/Bitmap;
 
     .line 2
-    sget-object p1, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object p1, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    iput-object p1, p0, Lcom/vk/pushes/notifications/im/b;->O:Lcom/vkontakte/android/NotificationUtils$Type;
+    iput-object p1, p0, Lcom/vk/pushes/notifications/im/b;->O:Lcom/vtosters/lite/NotificationUtils$Type;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected s()Lcom/vkontakte/android/NotificationUtils$Type;
+.method protected s()Lcom/vtosters/lite/NotificationUtils$Type;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/pushes/notifications/im/b;->O:Lcom/vkontakte/android/NotificationUtils$Type;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/im/b;->O:Lcom/vtosters/lite/NotificationUtils$Type;
 
     return-object v0
 .end method

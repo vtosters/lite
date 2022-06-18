@@ -113,7 +113,7 @@
     if-eqz v0, :cond_2
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/NewsfeedList;->v1()V
+    invoke-static {}, Lcom/vtosters/lite/NewsfeedList;->v1()V
 
     .line 5
     new-instance p1, Lcom/vk/newsfeed/t$a;

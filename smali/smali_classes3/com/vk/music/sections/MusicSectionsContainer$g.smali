@@ -138,11 +138,11 @@
     .line 10
     iget-object p1, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vkontakte/android/ui/v;
+    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vtosters/lite/ui/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object v0
 
@@ -155,11 +155,11 @@
     .line 11
     iget-object p1, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vkontakte/android/ui/v;
+    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vtosters/lite/ui/v;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_1
     return-void

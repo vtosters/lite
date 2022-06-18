@@ -160,7 +160,7 @@
 
     move-result-object p1
 
-    const-string v0, "com.vkontakte.android"
+    const-string v0, "com.vtosters.lite"
 
     .line 21
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z

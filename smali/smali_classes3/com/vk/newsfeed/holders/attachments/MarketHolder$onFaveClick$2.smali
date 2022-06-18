@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     const/4 v2, 0x0
 
@@ -65,11 +65,11 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     goto :goto_0
 
@@ -98,18 +98,18 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-nez v1, :cond_2
 
     move-object v0, v2
 
     :cond_2
-    check-cast v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     if-eqz v0, :cond_3
 

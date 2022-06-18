@@ -16,7 +16,7 @@
 
 .field private final C:Lcom/vk/music/view/v/f;
 
-.field private final D:Lcom/vkontakte/android/ui/v;
+.field private final D:Lcom/vtosters/lite/ui/v;
 
 .field private final E:Lcom/vk/core/ui/TabletUiHelper;
 
@@ -227,7 +227,7 @@
     iput-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer;->e:Landroid/view/View;
 
     .line 14
-    new-instance p1, Lcom/vkontakte/android/ui/v$b;
+    new-instance p1, Lcom/vtosters/lite/ui/v$b;
 
     const p2, 0x7f0a03c1
 
@@ -235,9 +235,9 @@
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/vkontakte/android/ui/v$b;-><init>(Landroid/view/View;)V
+    invoke-direct {p1, p2}, Lcom/vtosters/lite/ui/v$b;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/v$b;->a()Lcom/vkontakte/android/ui/v;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/v$b;->a()Lcom/vtosters/lite/ui/v;
 
     move-result-object p1
 
@@ -246,14 +246,14 @@
 
     invoke-direct {p2, p0}, Lcom/vk/music/playlist/PlaylistsContainer$a;-><init>(Lcom/vk/music/playlist/PlaylistsContainer;)V
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/v;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Landroid/view/View$OnClickListener;)V
 
     const-string p2, "MusicErrorViewHelper.Bui\u2026rRetryClick() }\n        }"
 
     .line 16
     invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer;->D:Lcom/vkontakte/android/ui/v;
+    iput-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer;->D:Lcom/vtosters/lite/ui/v;
 
     .line 17
     iget-object p1, p0, Lcom/vk/music/playlist/PlaylistsContainer;->c:Landroid/view/LayoutInflater;
@@ -860,11 +860,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vkontakte/android/ui/v;
+.method public static final synthetic e(Lcom/vk/music/playlist/PlaylistsContainer;)Lcom/vtosters/lite/ui/v;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/PlaylistsContainer;->D:Lcom/vkontakte/android/ui/v;
+    iget-object p0, p0, Lcom/vk/music/playlist/PlaylistsContainer;->D:Lcom/vtosters/lite/ui/v;
 
     return-object p0
 .end method
@@ -1155,9 +1155,9 @@
     .line 3
     iget-object v0, p0, Lcom/vk/music/playlist/PlaylistsContainer;->d:Landroid/widget/ViewAnimator;
 
-    iget-object v1, p0, Lcom/vk/music/playlist/PlaylistsContainer;->D:Lcom/vkontakte/android/ui/v;
+    iget-object v1, p0, Lcom/vk/music/playlist/PlaylistsContainer;->D:Lcom/vtosters/lite/ui/v;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object v1
 

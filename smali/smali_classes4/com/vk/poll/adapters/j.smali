@@ -280,7 +280,7 @@
 
     iget-object p2, p0, Lcom/vk/poll/adapters/j;->d:Lcom/vk/dto/polls/Poll;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -311,7 +311,7 @@
     move-result-object v1
 
     :cond_3
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_4
     :goto_0

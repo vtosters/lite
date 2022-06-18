@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/dto/common/data/c<",
-        "Lcom/vkontakte/android/api/c;",
+        "Lcom/vtosters/lite/api/c;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lorg/json/JSONObject;)Lcom/vkontakte/android/api/c;
+.method public a(Lorg/json/JSONObject;)Lcom/vtosters/lite/api/c;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -49,9 +49,9 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/api/c;
+    new-instance v0, Lcom/vtosters/lite/api/c;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/api/c;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/api/c;-><init>(Lorg/json/JSONObject;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/api/board/g$a;->b:Landroid/util/SparseArray;
@@ -68,7 +68,7 @@
 
     check-cast p1, Lcom/vk/dto/user/UserProfile;
 
-    iput-object p1, v0, Lcom/vkontakte/android/api/c;->i:Lcom/vk/dto/user/UserProfile;
+    iput-object p1, v0, Lcom/vtosters/lite/api/c;->i:Lcom/vk/dto/user/UserProfile;
 
     return-object v0
 .end method
@@ -82,7 +82,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/api/board/g$a;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/api/c;
+    invoke-virtual {p0, p1}, Lcom/vk/api/board/g$a;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/api/c;
 
     move-result-object p1
 

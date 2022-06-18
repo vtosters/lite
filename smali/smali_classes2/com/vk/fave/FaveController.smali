@@ -96,13 +96,13 @@
 
     .line 12
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
@@ -215,23 +215,23 @@
 
     .line 32
     :cond_3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_4
 
     new-instance v1, Lcom/vk/api/fave/h;
 
     .line 33
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
     iget v0, v0, Lcom/vk/dto/common/VideoFile;->b:I
 
     .line 34
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -254,23 +254,23 @@
 
     .line 38
     :cond_4
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v0, :cond_5
 
     new-instance v1, Lcom/vk/api/fave/e;
 
     .line 39
-    check-cast p1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
     iget v0, v0, Lcom/vk/dto/music/MusicTrack;->e:I
 
     .line 40
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 
@@ -309,16 +309,16 @@
 
     .line 47
     :cond_6
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v0, :cond_7
 
     new-instance v1, Lcom/vk/api/fave/d;
 
     .line 48
-    check-cast p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object p1
 
@@ -1231,13 +1231,13 @@
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/fave/entities/e;)V
+.method public static final a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/fave/entities/e;)V
     .locals 9
 
     .line 94
     sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/fave/entities/FavePage;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/fave/entities/FavePage;
 
     move-result-object v2
 
@@ -1418,19 +1418,19 @@
     move-object p2, v0
 
     :goto_0
-    instance-of v1, p2, Lcom/vkontakte/android/VKActivity;
+    instance-of v1, p2, Lcom/vtosters/lite/VKActivity;
 
     if-nez v1, :cond_1
 
     move-object p2, v0
 
     :cond_1
-    check-cast p2, Lcom/vkontakte/android/VKActivity;
+    check-cast p2, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p2, :cond_2
 
     .line 185
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     :cond_2
     return-void
@@ -1483,16 +1483,16 @@
 
     .line 8
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_1
 
     new-instance v1, Lcom/vk/api/fave/r;
 
     .line 9
-    check-cast p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object v0
 
@@ -1501,7 +1501,7 @@
     move-result v0
 
     .line 10
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
@@ -1553,13 +1553,13 @@
 
     .line 18
     :cond_2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/AwayLink;->u1()Ljava/lang/String;
 
@@ -1610,23 +1610,23 @@
 
     .line 27
     :cond_4
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_5
 
     new-instance v1, Lcom/vk/api/fave/y;
 
     .line 28
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v0
 
     iget v0, v0, Lcom/vk/dto/common/VideoFile;->b:I
 
     .line 29
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -1644,23 +1644,23 @@
 
     .line 32
     :cond_5
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v0, :cond_6
 
     new-instance v1, Lcom/vk/api/fave/v;
 
     .line 33
-    check-cast p1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
     iget v0, v0, Lcom/vk/dto/music/MusicTrack;->e:I
 
     .line 34
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PodcastAttachment;->x1()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 
@@ -1699,16 +1699,16 @@
 
     .line 41
     :cond_7
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v0, :cond_8
 
     new-instance v1, Lcom/vk/api/fave/u;
 
     .line 42
-    check-cast p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/EventAttachment;->z1()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object p1
 
@@ -1762,7 +1762,7 @@
 
     .line 47
     :cond_1
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v1, :cond_3
 
@@ -1828,7 +1828,7 @@
 
     .line 50
     :cond_7
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_9
 
@@ -1850,7 +1850,7 @@
 
     .line 51
     :cond_9
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     if-eqz v1, :cond_b
 

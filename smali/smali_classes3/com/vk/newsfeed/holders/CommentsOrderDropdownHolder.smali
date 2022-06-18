@@ -242,11 +242,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 2
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     instance-of v1, v0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;
 
@@ -260,7 +260,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->H:Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -298,7 +298,7 @@
     .line 6
     iget-object v3, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->F:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -321,7 +321,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->F:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 

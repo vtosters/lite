@@ -103,71 +103,71 @@
     .end packed-switch
 .end method
 
-.method public final a(Landroid/content/Context;I)Lcom/vkontakte/android/ui/widget/v;
+.method public final a(Landroid/content/Context;I)Lcom/vtosters/lite/ui/widget/v;
     .locals 0
 
     packed-switch p2, :pswitch_data_0
 
     .line 1
-    new-instance p2, Lcom/vkontakte/android/ui/widget/r;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/r;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/r;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/r;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 2
     :pswitch_0
-    new-instance p2, Lcom/vkontakte/android/ui/widget/j;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/j;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/j;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 3
     :pswitch_1
-    new-instance p2, Lcom/vkontakte/android/ui/widget/p;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/p;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/p;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/p;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 4
     :pswitch_2
-    new-instance p2, Lcom/vkontakte/android/ui/widget/n;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/n;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/n;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/n;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 5
     :pswitch_3
-    new-instance p2, Lcom/vkontakte/android/ui/widget/i;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/i;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/i;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/i;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 6
     :pswitch_4
-    new-instance p2, Lcom/vkontakte/android/ui/widget/t;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/t;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/t;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/t;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 7
     :pswitch_5
-    new-instance p2, Lcom/vkontakte/android/ui/widget/q;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/q;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/q;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/q;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 8
     :pswitch_6
-    new-instance p2, Lcom/vkontakte/android/ui/widget/m;
+    new-instance p2, Lcom/vtosters/lite/ui/widget/m;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/widget/m;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/widget/m;-><init>(Landroid/content/Context;)V
 
     :goto_0
     return-object p2

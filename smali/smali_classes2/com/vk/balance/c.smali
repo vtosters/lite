@@ -122,20 +122,20 @@
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
-    new-instance v1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance v1, Lcom/vtosters/lite/fragments/j2$g;
 
-    invoke-direct {v1, p2}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p2}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 17
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 18
     sget-object p2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->BALANCE_VOTES_ADD:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {v1, p2}, Lcom/vkontakte/android/fragments/j2$g;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v1, p2}, Lcom/vtosters/lite/fragments/j2$g;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 19
-    invoke-virtual {v1}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     const/16 p2, 0xe4
 

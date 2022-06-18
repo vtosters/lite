@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/holders/ButtonsFeedbackHolder$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ButtonsFeedbackHolder.kt"
 
 
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/newsfeed/entries/Post$Feedback$Answer;",
         ">;"
     }
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 2
     check-cast p1, Landroid/widget/TextView;

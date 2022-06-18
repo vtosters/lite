@@ -82,11 +82,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/poll/fragments/PollEditorFragment$a;Lcom/vkontakte/android/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+.method public static final synthetic a(Lcom/vk/poll/fragments/PollEditorFragment$a;Lcom/vtosters/lite/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/poll/fragments/PollEditorFragment$a;->a(Lcom/vkontakte/android/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+    invoke-direct {p0, p1}, Lcom/vk/poll/fragments/PollEditorFragment$a;->a(Lcom/vtosters/lite/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
 
     return-object p0
 .end method
@@ -100,7 +100,7 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+.method private final a(Lcom/vtosters/lite/attachments/PollAttachment;)Lcom/vk/poll/fragments/PollEditorFragment$a;
     .locals 2
 
     .line 4

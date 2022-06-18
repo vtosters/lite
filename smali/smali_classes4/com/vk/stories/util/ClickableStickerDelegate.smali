@@ -698,11 +698,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vkontakte/android/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+.method public static final synthetic a(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vkontakte/android/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
 
     return-void
 .end method
@@ -878,7 +878,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+.method private final a(Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
     .locals 1
 
     if-eqz p2, :cond_0
@@ -894,7 +894,7 @@
 
     const-string v0, "clickable_sticker"
 
-    invoke-virtual {p1, v0, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :cond_0
     return-void

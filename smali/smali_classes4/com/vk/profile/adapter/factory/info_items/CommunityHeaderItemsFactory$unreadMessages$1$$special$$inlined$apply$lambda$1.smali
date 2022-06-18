@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/community/a;
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field final synthetic $community$inlined:Lcom/vkontakte/android/api/i;
+.field final synthetic $community$inlined:Lcom/vtosters/lite/api/i;
 
 .field final synthetic this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vkontakte/android/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vtosters/lite/api/i;
 
     const/4 p1, 0x0
 
@@ -64,7 +64,7 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/j2$g;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -74,9 +74,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vkontakte/android/api/i;
+    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vtosters/lite/api/i;
 
-    iget-object v2, v2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -88,27 +88,27 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vkontakte/android/api/i;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vtosters/lite/api/i;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v1, v1, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 4
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->COMMUNITY_MESSAGES:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/j2$g;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/j2$g;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Lcom/vtosters/lite/fragments/j2$g;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->j()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->j()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 7
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;
@@ -130,9 +130,9 @@
     .line 8
     new-instance v0, Lcom/vk/profile/e/b;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vkontakte/android/api/i;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;->$community$inlined:Lcom/vtosters/lite/api/i;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 

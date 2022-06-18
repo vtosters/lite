@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/adapters/c;
-.super Lcom/vkontakte/android/ui/adapters/a;
+.super Lcom/vtosters/lite/ui/adapters/a;
 .source "NewsCardMergeAdapter.kt"
 
 # interfaces
@@ -22,7 +22,7 @@
     new-array v0, v0, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     iput-boolean p1, p0, Lcom/vk/newsfeed/adapters/c;->g:Z
 
@@ -56,7 +56,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/ui/adapters/a;->i(I)I
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/a;->i(I)I
 
     move-result v0
 
@@ -73,7 +73,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v1, v2, v0, p1}, Lcom/vkontakte/android/ui/adapters/c;->a(ZZII)I
+    invoke-static {v1, v2, v0, p1}, Lcom/vtosters/lite/ui/adapters/c;->a(ZZII)I
 
     move-result p1
 

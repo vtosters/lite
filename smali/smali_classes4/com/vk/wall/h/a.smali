@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public abstract M2()Lcom/vkontakte/android/NewsComment;
+.method public abstract M2()Lcom/vtosters/lite/NewsComment;
 .end method
 
 .method public abstract N2()V
@@ -44,14 +44,14 @@
 .method public abstract a(Lcom/vk/sharing/target/Target;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/NewsComment;ZZ)V
+.method public abstract a(Lcom/vtosters/lite/NewsComment;ZZ)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/b;)V
+.method public abstract a(Lcom/vtosters/lite/attachments/b;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/attachments/b<",
+            "Lcom/vtosters/lite/attachments/b<",
             "*>;)V"
         }
     .end annotation
@@ -69,7 +69,7 @@
 .method public abstract b(Lcom/vk/dto/common/Attachment;)V
 .end method
 
-.method public abstract b(Lcom/vkontakte/android/NewsComment;)V
+.method public abstract b(Lcom/vtosters/lite/NewsComment;)V
 .end method
 
 .method public abstract b(ZZ)V

@@ -20,9 +20,9 @@
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_topic" style="@style/CardsSectionHeader" />
             <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/group_category" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/group_category" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight" />
                 <View android:id="@id/group_categoty_divider" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <com.vkontakte.android.ui.OverlaySpinner android:id="@id/group_subcategory" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight" />
+                <com.vtosters.lite.ui.OverlaySpinner android:id="@id/group_subcategory" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" vk:overlay="@drawable/highlight" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@id/group_website_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
@@ -31,25 +31,25 @@
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@id/group_access_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:id="@id/group_access_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_access" style="@style/CardsSectionHeader" />
-            <com.vkontakte.android.ui.CompoundRadioGroup android:orientation="vertical" android:id="@id/group_access_radiogroup" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vkontakte.android.ui.CheckableRelativeLayout android:id="@id/access_open" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.vtosters.lite.ui.CompoundRadioGroup android:orientation="vertical" android:id="@id/group_access_radiogroup" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/access_open" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
                     <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
                     <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_open" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_open" android:layout_toRightOf="@android:id/checkbox" />
                     <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_open" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_open_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_open" />
-                </com.vkontakte.android.ui.CheckableRelativeLayout>
+                </com.vtosters.lite.ui.CheckableRelativeLayout>
                 <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <com.vkontakte.android.ui.CheckableRelativeLayout android:id="@id/access_closed" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/access_closed" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
                     <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
                     <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_closed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_closed" android:layout_toRightOf="@android:id/checkbox" />
                     <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_closed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_closed_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_closed" />
-                </com.vkontakte.android.ui.CheckableRelativeLayout>
+                </com.vtosters.lite.ui.CheckableRelativeLayout>
                 <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <com.vkontakte.android.ui.CheckableRelativeLayout android:id="@id/access_private" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/access_private" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
                     <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
                     <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_private" android:layout_toRightOf="@android:id/checkbox" />
                     <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_private_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title" />
-                </com.vkontakte.android.ui.CheckableRelativeLayout>
-            </com.vkontakte.android.ui.CompoundRadioGroup>
+                </com.vtosters.lite.ui.CheckableRelativeLayout>
+            </com.vtosters.lite.ui.CompoundRadioGroup>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@id/group_time_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_event_time" style="@style/CardsSectionHeader" />

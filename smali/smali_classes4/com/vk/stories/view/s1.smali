@@ -540,7 +540,7 @@
     .line 43
     iget-object p3, p0, Lcom/vk/stories/view/s1;->s0:Landroid/content/BroadcastReceiver;
 
-    const-string p4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string p4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     const/4 p5, 0x0
 
@@ -1801,7 +1801,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/view/s1$r;-><init>(Lcom/vk/stories/view/s1;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/stories/view/s1;->V:Lcom/vk/stories/view/StoriesViewPager;
@@ -2515,7 +2515,7 @@
     return-object p1
 .end method
 
-.method public synthetic a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vkontakte/android/data/n$l;)Lkotlin/m;
+.method public synthetic a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vtosters/lite/data/n$l;)Lkotlin/m;
     .locals 4
 
     .line 107
@@ -2570,7 +2570,7 @@
     const-string v0, "group_feed"
 
     .line 110
-    invoke-static {p2, v0, p1}, Lcom/vk/stories/util/m;->a(Lcom/vkontakte/android/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p2, v0, p1}, Lcom/vk/stories/util/m;->a(Lcom/vtosters/lite/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vtosters/lite/data/n$l;
 
     .line 111
     :cond_2
@@ -3844,7 +3844,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3882,7 +3882,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 

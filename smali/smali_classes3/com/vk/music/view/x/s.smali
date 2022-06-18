@@ -1,5 +1,5 @@
 .class public Lcom/vk/music/view/x/s;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PlaylistHolder.java"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/music/dto/a;",
         ">;",
         "Lcom/vk/music/fragment/AudioPlayerFragment$i;"
@@ -73,7 +73,7 @@
     const v0, 0x7f0d037d
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     const/4 p1, 0x0
 
@@ -136,7 +136,7 @@
     const p1, 0x7f0a0b45
 
     .line 10
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
 
     new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object p4
 
@@ -178,7 +178,7 @@
     const p1, 0x7f0a00ba
 
     .line 14
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -440,7 +440,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/utils/l;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/vtosters/lite/utils/l;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -463,7 +463,7 @@
 
     const p1, 0x7f1207bf
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -523,7 +523,7 @@
 
     const v0, 0x7f12089a
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -572,7 +572,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/vkontakte/android/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 

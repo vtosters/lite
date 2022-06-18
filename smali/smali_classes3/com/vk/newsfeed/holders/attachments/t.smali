@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private final F:Lcom/vkontakte/android/ui/u;
+.field private final F:Lcom/vtosters/lite/ui/u;
 
 .field private G:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -51,13 +51,13 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/ui/u;
+    new-instance v0, Lcom/vtosters/lite/ui/u;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/ui/u;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/u;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f0a00c4
 
@@ -80,14 +80,14 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/ui/u;
+    check-cast p1, Lcom/vtosters/lite/ui/u;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vkontakte/android/ui/u;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vtosters/lite/ui/u;
 
     .line 3
     new-instance p1, Lcom/vk/newsfeed/holders/attachments/t$a;
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vkontakte/android/ui/u;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vtosters/lite/ui/u;
 
     invoke-direct {p1, v0}, Lcom/vk/newsfeed/holders/attachments/t$a;-><init>(Landroid/view/ViewGroup;)V
 
@@ -103,7 +103,7 @@
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->I:Ljava/util/ArrayList;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -114,7 +114,7 @@
     move-result p1
 
     .line 6
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
     move-result v0
 
     .line 7
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -142,12 +142,12 @@
     move-result v1
 
     .line 8
-    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vkontakte/android/ui/u;
+    iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vtosters/lite/ui/u;
 
     invoke-virtual {v2, p1, v0, p1, v1}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vkontakte/android/ui/u;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vtosters/lite/ui/u;
 
     const/4 v0, 0x0
 
@@ -158,7 +158,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 1
 
     .line 1
@@ -179,7 +179,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -188,7 +188,7 @@
     .locals 9
 
     .line 2
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vkontakte/android/ui/u;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vtosters/lite/ui/u;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
 
@@ -232,7 +232,7 @@
     if-eqz p1, :cond_2
 
     .line 8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
     move-result v0
 
     .line 9
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -260,7 +260,7 @@
     move-result v2
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -298,18 +298,18 @@
     if-eqz v5, :cond_1
 
     .line 13
-    new-instance v6, Lcom/vkontakte/android/ui/u$a;
+    new-instance v6, Lcom/vtosters/lite/ui/u$a;
 
-    invoke-direct {v6, v0, v0}, Lcom/vkontakte/android/ui/u$a;-><init>(II)V
+    invoke-direct {v6, v0, v0}, Lcom/vtosters/lite/ui/u$a;-><init>(II)V
 
     .line 14
-    iput v2, v6, Lcom/vkontakte/android/ui/u$a;->f:I
+    iput v2, v6, Lcom/vtosters/lite/ui/u$a;->f:I
 
     .line 15
-    iput v1, v6, Lcom/vkontakte/android/ui/u$a;->g:I
+    iput v1, v6, Lcom/vtosters/lite/ui/u$a;->g:I
 
     .line 16
-    iget-object v7, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vkontakte/android/ui/u;
+    iget-object v7, p0, Lcom/vk/newsfeed/holders/attachments/t;->F:Lcom/vtosters/lite/ui/u;
 
     iget-object v8, v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 

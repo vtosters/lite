@@ -59,7 +59,7 @@
 
 .field final J:Lcom/vk/music/view/r$c;
 
-.field final K:Lcom/vkontakte/android/ui/v;
+.field final K:Lcom/vtosters/lite/ui/v;
 
 .field private final L:Lcom/vk/core/ui/TabletUiHelper;
 
@@ -198,7 +198,7 @@
     iput-object v0, p0, Lcom/vk/music/view/r;->N:Landroid/view/View;
 
     .line 13
-    new-instance v0, Lcom/vkontakte/android/ui/v$b;
+    new-instance v0, Lcom/vtosters/lite/ui/v$b;
 
     const v1, 0x7f0a03c1
 
@@ -206,22 +206,22 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/ui/v$b;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/v$b;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/v$b;->a()Lcom/vkontakte/android/ui/v;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/v$b;->a()Lcom/vtosters/lite/ui/v;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/view/r;->K:Lcom/vkontakte/android/ui/v;
+    iput-object v0, p0, Lcom/vk/music/view/r;->K:Lcom/vtosters/lite/ui/v;
 
     .line 14
-    iget-object v0, p0, Lcom/vk/music/view/r;->K:Lcom/vkontakte/android/ui/v;
+    iget-object v0, p0, Lcom/vk/music/view/r;->K:Lcom/vtosters/lite/ui/v;
 
     new-instance v1, Lcom/vk/music/view/d;
 
     invoke-direct {v1, p0}, Lcom/vk/music/view/d;-><init>(Lcom/vk/music/view/r;)V
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/v;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/v;->a(Landroid/view/View$OnClickListener;)V
 
     const v0, 0x7f0a0b4c
 
@@ -596,9 +596,9 @@
     if-eqz v0, :cond_0
 
     .line 7
-    iget-object v0, p0, Lcom/vk/music/view/r;->K:Lcom/vkontakte/android/ui/v;
+    iget-object v0, p0, Lcom/vk/music/view/r;->K:Lcom/vtosters/lite/ui/v;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object v0
 
@@ -1293,9 +1293,9 @@
     if-nez p1, :cond_2
 
     .line 18
-    iget-object p1, p0, Lcom/vk/music/view/r;->K:Lcom/vkontakte/android/ui/v;
+    iget-object p1, p0, Lcom/vk/music/view/r;->K:Lcom/vtosters/lite/ui/v;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/v;->a()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object p1
 
@@ -1306,9 +1306,9 @@
     invoke-virtual {p0, p1}, Landroid/widget/ViewAnimator;->setDisplayedChild(I)V
 
     .line 19
-    iget-object p1, p0, Lcom/vk/music/view/r;->K:Lcom/vkontakte/android/ui/v;
+    iget-object p1, p0, Lcom/vk/music/view/r;->K:Lcom/vtosters/lite/ui/v;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     goto :goto_0
 

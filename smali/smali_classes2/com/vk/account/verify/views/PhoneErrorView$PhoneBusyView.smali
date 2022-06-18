@@ -164,7 +164,7 @@
     if-ltz p1, :cond_0
 
     .line 5
-    new-instance v0, Lcom/vkontakte/android/utils/k;
+    new-instance v0, Lcom/vtosters/lite/utils/k;
 
     sget-object v2, Lcom/vk/core/ui/Font;->Companion:Lcom/vk/core/ui/Font$a;
 
@@ -172,7 +172,7 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/vkontakte/android/utils/k;-><init>(Landroid/graphics/Typeface;)V
+    invoke-direct {v0, v2}, Lcom/vtosters/lite/utils/k;-><init>(Landroid/graphics/Typeface;)V
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 

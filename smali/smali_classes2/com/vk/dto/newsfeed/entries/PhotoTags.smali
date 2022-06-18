@@ -421,7 +421,7 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v1, :cond_0
 
@@ -434,9 +434,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget v2, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->f:I
+    iget v2, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -444,7 +444,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->e:I
+    iget v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->e:I
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -486,7 +486,7 @@
     check-cast v0, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v1, :cond_0
 
@@ -495,9 +495,9 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget v2, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->f:I
+    iget v2, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -505,7 +505,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->e:I
+    iget v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->e:I
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

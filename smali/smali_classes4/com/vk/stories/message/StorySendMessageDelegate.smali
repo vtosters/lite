@@ -18,7 +18,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/vkontakte/android/attachments/StoryAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/StoryAttachment;
 
     invoke-virtual {p1}, Lcom/vk/stories/message/b;->b()Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -57,19 +57,19 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v2, v1, v2}, Lcom/vkontakte/android/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p1, v2, v1, v2}, Lcom/vtosters/lite/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILkotlin/jvm/internal/i;)V
 
     goto :goto_0
 
     .line 27
     :cond_0
-    new-instance v0, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
     invoke-virtual {p1}, Lcom/vk/stories/message/b;->c()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
     .line 28
     :goto_0
@@ -158,13 +158,13 @@
     move-result-object v12
 
     .line 23
-    sget-object v3, Lcom/vkontakte/android/im/a;->a:Lcom/vkontakte/android/im/a;
+    sget-object v3, Lcom/vtosters/lite/im/a;->a:Lcom/vtosters/lite/im/a;
 
     move-object/from16 v4, p2
 
     move-object/from16 v5, p3
 
-    invoke-virtual {v3, v1, v4, v5}, Lcom/vkontakte/android/im/a;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/AttachSticker;
+    invoke-virtual {v3, v1, v4, v5}, Lcom/vtosters/lite/im/a;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/AttachSticker;
 
     move-result-object v1
 
@@ -267,7 +267,7 @@
     invoke-interface {v4, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 16
-    sget-object v1, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     invoke-virtual {p2}, Lcom/vk/stories/message/b;->f()I
 
@@ -287,7 +287,7 @@
 
     move-object v2, p0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vkontakte/android/im/i;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -310,7 +310,7 @@
 
     .line 2
     :cond_0
-    sget-object v1, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/message/b;->f()I
 
@@ -334,7 +334,7 @@
 
     move-object/from16 v4, p1
 
-    invoke-static/range {v1 .. v8}, Lcom/vkontakte/android/im/i;->a(Lcom/vkontakte/android/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v8}, Lcom/vtosters/lite/im/i;->a(Lcom/vtosters/lite/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
 
     .line 3
     sget-object v1, Lcom/vk/dto/stories/model/StoryViewAction;->COMMENT_SEND:Lcom/vk/dto/stories/model/StoryViewAction;

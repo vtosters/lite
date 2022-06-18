@@ -105,7 +105,7 @@
     .end annotation
 
     .line 15
-    new-instance v0, Lcom/vkontakte/android/api/podcasts/c;
+    new-instance v0, Lcom/vtosters/lite/api/podcasts/c;
 
     invoke-virtual {p0}, Lcom/vk/music/podcasts/list/b;->b()I
 
@@ -119,7 +119,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v1, v2, p1, p2}, Lcom/vkontakte/android/api/podcasts/c;-><init>(ILjava/lang/String;II)V
+    invoke-direct {v0, v1, v2, p1, p2}, Lcom/vtosters/lite/api/podcasts/c;-><init>(ILjava/lang/String;II)V
 
     const/4 p1, 0x0
 
@@ -152,7 +152,7 @@
     invoke-virtual {p1, p2}, Lcom/vk/lists/t;->b(Z)V
 
     .line 8
-    new-instance v0, Lcom/vkontakte/android/api/podcasts/a;
+    new-instance v0, Lcom/vtosters/lite/api/podcasts/a;
 
     invoke-virtual {p0}, Lcom/vk/music/podcasts/list/b;->b()I
 
@@ -166,7 +166,7 @@
 
     move-result p1
 
-    invoke-direct {v0, v1, v2, p1}, Lcom/vkontakte/android/api/podcasts/a;-><init>(ILjava/lang/String;I)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vtosters/lite/api/podcasts/a;-><init>(ILjava/lang/String;I)V
 
     const/4 p1, 0x0
 

@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/NewsListsAdapter$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "NewsListsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/newsfeed/r;",
         ">;"
     }
@@ -37,7 +37,7 @@
     const v0, 0x7f0d03f8
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -99,11 +99,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$b;->d:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vkontakte/android/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/NewsfeedList;->getTitle()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vtosters/lite/NewsfeedList;->getTitle()Ljava/lang/String;
 
     move-result-object v1
 
@@ -125,7 +125,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/NewsListsAdapter$b;->e:Landroid/view/View;

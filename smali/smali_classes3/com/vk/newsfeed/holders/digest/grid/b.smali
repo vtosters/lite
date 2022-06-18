@@ -191,7 +191,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/ArticleAttachment;)V
+.method private final a(Lcom/vtosters/lite/attachments/ArticleAttachment;)V
     .locals 2
 
     .line 23
@@ -204,7 +204,7 @@
     .line 24
     iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/b;->e:Lcom/vk/newsfeed/FrescoImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;->x1()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
@@ -242,7 +242,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+.method private final a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
     .locals 2
 
     .line 8
@@ -255,7 +255,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/b;->e:Lcom/vk/newsfeed/FrescoImageView;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-object p1, p1, Lcom/vk/dto/photo/Photo;->Q:Lcom/vk/dto/common/Image;
 
@@ -335,25 +335,25 @@
     check-cast p1, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vkontakte/android/attachments/VideoAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
 
     goto :goto_0
 
@@ -371,13 +371,13 @@
 
     .line 6
     :cond_2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vkontakte/android/attachments/ArticleAttachment;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/holders/digest/grid/b;->a(Lcom/vtosters/lite/attachments/ArticleAttachment;)V
 
     goto :goto_0
 
@@ -389,7 +389,7 @@
     return-void
 .end method
 
-.method protected a(Lcom/vkontakte/android/attachments/VideoAttachment;)V
+.method protected a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
     .locals 3
 
     .line 12
@@ -402,7 +402,7 @@
     .line 13
     iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/b;->e:Lcom/vk/newsfeed/FrescoImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v1
 
@@ -419,7 +419,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/FrescoImageView;->setRemoteImage(Ljava/util/List;)V
 
     .line 14
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 

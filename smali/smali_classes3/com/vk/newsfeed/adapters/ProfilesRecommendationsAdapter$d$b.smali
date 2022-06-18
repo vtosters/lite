@@ -71,7 +71,7 @@
 
     iget-object p1, p1, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;->a:Lcom/vk/newsfeed/holders/k;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     return-void
 .end method

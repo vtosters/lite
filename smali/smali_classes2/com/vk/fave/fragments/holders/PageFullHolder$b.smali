@@ -97,7 +97,7 @@
     .line 4
     iget-object p2, p0, Lcom/vk/fave/fragments/holders/PageFullHolder$b;->a:Lcom/vk/fave/fragments/holders/PageFullHolder;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p2
 

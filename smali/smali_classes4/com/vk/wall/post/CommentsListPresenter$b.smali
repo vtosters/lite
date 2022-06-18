@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vkontakte/android/q;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vtosters/lite/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

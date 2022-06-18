@@ -1,5 +1,5 @@
 .class public final Lcom/vk/search/holder/j;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "SearchSuggestHolder.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/discover/b/h;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/core/view/links/LinkedTextView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     .line 2
     new-instance p1, Landroid/text/SpannableStringBuilder;

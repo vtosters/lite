@@ -22,7 +22,7 @@
             "<T::",
             "Lcom/vk/core/serialize/Serializer$StreamParcelable;",
             "VH:",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "TT;>;>(",
             "Lcom/vk/attachpicker/base/g<",
             "TT;+TVH;>;",
@@ -44,7 +44,7 @@
             "<T::",
             "Lcom/vk/core/serialize/Serializer$StreamParcelable;",
             "VH:",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "TT;>;>(",
             "Lcom/vk/attachpicker/base/g<",
             "TT;+TVH;>;)Z"

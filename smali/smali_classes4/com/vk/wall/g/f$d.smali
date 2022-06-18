@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/a;)Lcom/vkontakte/android/api/wall/a;
+.method public final a(Lcom/vtosters/lite/api/wall/a;)Lcom/vtosters/lite/api/wall/a;
     .locals 2
 
     .line 1
@@ -60,7 +60,7 @@
 
     iget-object v1, p0, Lcom/vk/wall/g/f$d;->b:Ljava/util/List;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/wall/g/f;->a(Lcom/vk/wall/g/f;Ljava/util/List;Lcom/vkontakte/android/api/wall/a;)Lcom/vkontakte/android/api/wall/a;
+    invoke-static {v0, v1, p1}, Lcom/vk/wall/g/f;->a(Lcom/vk/wall/g/f;Ljava/util/List;Lcom/vtosters/lite/api/wall/a;)Lcom/vtosters/lite/api/wall/a;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -84,9 +84,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/g/f$d;->a(Lcom/vkontakte/android/api/wall/a;)Lcom/vkontakte/android/api/wall/a;
+    invoke-virtual {p0, p1}, Lcom/vk/wall/g/f$d;->a(Lcom/vtosters/lite/api/wall/a;)Lcom/vtosters/lite/api/wall/a;
 
     move-result-object p1
 

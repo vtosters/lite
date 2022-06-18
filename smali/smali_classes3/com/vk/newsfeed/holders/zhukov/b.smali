@@ -149,13 +149,13 @@
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->A1()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->A1()Z
 
     move-result p1
 

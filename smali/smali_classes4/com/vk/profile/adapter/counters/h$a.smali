@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/counters/h;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+    value = Lcom/vk/profile/adapter/counters/h;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

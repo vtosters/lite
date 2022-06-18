@@ -56,9 +56,9 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$removeAttachment$1;->$attachment:Lcom/vk/dto/common/Attachment;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/b;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v0}, Lcom/vkontakte/android/attachments/b;->V()I
+    invoke-interface {v0}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v0
 

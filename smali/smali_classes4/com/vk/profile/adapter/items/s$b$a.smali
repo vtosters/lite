@@ -99,13 +99,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     const-string v2, "profile_button"
 
-    invoke-virtual {p1, v1, v0, v2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0, v2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -127,11 +127,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/presenter/UserPresenter;->c(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/presenter/UserPresenter;->c(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     goto :goto_0
 
@@ -151,11 +151,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/presenter/UserPresenter;->b(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/presenter/UserPresenter;->b(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     goto :goto_0
 
@@ -193,11 +193,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     goto :goto_0
 
@@ -219,11 +219,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/presenter/UserPresenter;->d(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/presenter/UserPresenter;->d(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     goto :goto_0
 

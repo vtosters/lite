@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/upload/UploadNotification$b;",
+        "Lcom/vtosters/lite/upload/UploadNotification$b;",
         "Lkotlin/m;",
         ">;"
     }
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/upload/UploadNotification$b;)V
+.method public a(Lcom/vtosters/lite/upload/UploadNotification$b;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->e()Lcom/vkontakte/android/upload/UploadNotification$State;
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->e()Lcom/vtosters/lite/upload/UploadNotification$State;
 
     move-result-object v0
 
@@ -79,15 +79,15 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->b()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->b()I
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->c()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->c()I
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->f()I
 
     move-result p1
 
@@ -101,7 +101,7 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->b()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->b()I
 
     move-result p1
 
@@ -115,11 +115,11 @@
 
     iget-object v0, v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->b()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->b()I
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/upload/UploadNotification$b;->d()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadNotification$b;->d()Landroid/os/Parcelable;
 
     move-result-object p1
 
@@ -133,9 +133,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/upload/UploadNotification$b;
+    check-cast p1, Lcom/vtosters/lite/upload/UploadNotification$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2$a;->a(Lcom/vkontakte/android/upload/UploadNotification$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController$uploadProgressListener$2$a;->a(Lcom/vtosters/lite/upload/UploadNotification$b;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

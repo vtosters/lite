@@ -42,14 +42,14 @@
     .end annotation
 
     .line 2
-    invoke-static {p1, p0}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z
+    invoke-static {p1, p0}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
     .line 3
-    invoke-static {p0, p2}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p0, p2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 4
     new-instance p1, Lcom/vk/extensions/n;

@@ -102,7 +102,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$a;->a:Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-virtual {p1}, Lcom/vtosters/lite/VKActivity;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object p1
 

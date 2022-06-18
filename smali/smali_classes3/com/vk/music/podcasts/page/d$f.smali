@@ -57,7 +57,7 @@
             "Ljava/lang/Boolean;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/podcasts/e$a;",
+            "Lcom/vtosters/lite/api/podcasts/e$a;",
             ">;"
         }
     .end annotation

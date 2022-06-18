@@ -30,13 +30,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vkontakte/android/api/i;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/api/i;)V
     .locals 2
 
     .line 1
     sget-object v0, Lcom/vk/profile/adapter/items/c0/a;->D:Lcom/vk/profile/adapter/items/c0/a$a;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/profile/adapter/items/c0/a$a;->a(Landroid/content/Context;Lcom/vkontakte/android/api/i;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/profile/adapter/items/c0/a$a;->a(Landroid/content/Context;Lcom/vtosters/lite/api/i;)Ljava/lang/CharSequence;
 
     move-result-object p1
 

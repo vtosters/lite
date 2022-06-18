@@ -31,7 +31,7 @@
 
 .field private i:Ljava/util/Date;
 
-.field private j:Lcom/vkontakte/android/attachments/GeoAttachment;
+.field private j:Lcom/vtosters/lite/attachments/GeoAttachment;
 
 .field private k:Z
 
@@ -61,7 +61,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Lcom/vk/sharing/target/Target;ZZZZZLjava/util/Date;Lcom/vkontakte/android/attachments/GeoAttachment;ZIZZLcom/vk/newsfeed/posting/dto/a;Ljava/lang/Integer;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZZLcom/vk/dto/group/Group;Ljava/lang/String;Ljava/lang/String;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Lcom/vk/sharing/target/Target;ZZZZZLjava/util/Date;Lcom/vtosters/lite/attachments/GeoAttachment;ZIZZLcom/vk/newsfeed/posting/dto/a;Ljava/lang/Integer;Lcom/vk/dto/newsfeed/entries/NewsEntry;ZZLcom/vk/dto/group/Group;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -74,7 +74,7 @@
             "Lcom/vk/sharing/target/Target;",
             "ZZZZZ",
             "Ljava/util/Date;",
-            "Lcom/vkontakte/android/attachments/GeoAttachment;",
+            "Lcom/vtosters/lite/attachments/GeoAttachment;",
             "ZIZZ",
             "Lcom/vk/newsfeed/posting/dto/a;",
             "Ljava/lang/Integer;",
@@ -130,7 +130,7 @@
 
     move-object v1, p10
 
-    iput-object v1, v0, Lcom/vk/newsfeed/posting/dto/d;->j:Lcom/vkontakte/android/attachments/GeoAttachment;
+    iput-object v1, v0, Lcom/vk/newsfeed/posting/dto/d;->j:Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move v1, p11
 
@@ -233,11 +233,11 @@
     return-object v0
 .end method
 
-.method public final e()Lcom/vkontakte/android/attachments/GeoAttachment;
+.method public final e()Lcom/vtosters/lite/attachments/GeoAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/d;->j:Lcom/vkontakte/android/attachments/GeoAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/d;->j:Lcom/vtosters/lite/attachments/GeoAttachment;
 
     return-object v0
 .end method

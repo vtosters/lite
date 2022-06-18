@@ -49,7 +49,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment$g;->a:Lcom/vk/wall/post/PostViewFragment;
 
-    invoke-static {p1}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p1}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     :cond_0
     return-void

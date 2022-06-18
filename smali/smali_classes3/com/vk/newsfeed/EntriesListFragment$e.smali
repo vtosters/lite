@@ -129,7 +129,7 @@
     return-void
 .end method
 
-.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 5
@@ -138,7 +138,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    iget-object v0, p2, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v0, v0, Lcom/vk/dto/newsfeed/entries/Html5Entry;
 
@@ -155,7 +155,7 @@
 
     check-cast p1, Lcom/vk/newsfeed/holders/y;
 
-    iget-object p2, p2, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p2, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v1, "item.entry"
 

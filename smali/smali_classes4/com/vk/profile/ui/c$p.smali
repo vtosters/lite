@@ -1,5 +1,5 @@
 .class Lcom/vk/profile/ui/c$p;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "BaseProfileFragment.java"
 
 
@@ -29,7 +29,7 @@
 
     iput-object p3, p0, Lcom/vk/profile/ui/c$p;->c:Landroid/app/Activity;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/k;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -42,13 +42,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/c$p;->d:Lcom/vk/profile/ui/c;
 
-    iget-object v1, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v2, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->W0:Z
+    iget-boolean v2, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->W0:Z
 
     xor-int/lit8 v2, v2, 0x1
 
-    iput-boolean v2, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->W0:Z
+    iput-boolean v2, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->W0:Z
 
     .line 2
     iget-object v1, p0, Lcom/vk/profile/ui/c$p;->c:Landroid/app/Activity;
@@ -61,9 +61,9 @@
     .line 4
     iget-object v0, p0, Lcom/vk/profile/ui/c$p;->d:Lcom/vk/profile/ui/c;
 
-    iget-object v1, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-boolean v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->W0:Z
+    iget-boolean v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->W0:Z
 
     if-eqz v1, :cond_0
 

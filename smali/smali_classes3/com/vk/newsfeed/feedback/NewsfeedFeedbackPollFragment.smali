@@ -265,7 +265,7 @@
     .end annotation
 
     .line 26
-    invoke-static {p2, p1}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z
+    invoke-static {p2, p1}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z
 
     move-result p2
 
@@ -274,7 +274,7 @@
     const p2, 0x7f0803ad
 
     .line 27
-    invoke-static {p1, p2}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     if-eqz p3, :cond_0
 

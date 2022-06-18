@@ -94,9 +94,9 @@
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 5
-    new-instance p1, Lcom/vkontakte/android/fragments/m1;
+    new-instance p1, Lcom/vtosters/lite/fragments/m1;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/fragments/m1;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/fragments/m1;-><init>()V
 
     .line 6
     invoke-virtual {p1, v0}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lcom/vkontakte/android/fragments/m1;->c:Lcom/vkontakte/android/fragments/m1$f;
+    iput-object v0, p1, Lcom/vtosters/lite/fragments/m1;->c:Lcom/vtosters/lite/fragments/m1$f;
 
     .line 8
     iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$l;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;

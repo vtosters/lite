@@ -79,14 +79,14 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v0, :cond_1
 
@@ -97,7 +97,7 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     const-string v2, "it.photo"
 

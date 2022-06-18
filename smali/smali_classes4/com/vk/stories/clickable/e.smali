@@ -302,7 +302,7 @@
 
     .line 3
     :pswitch_1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p0
 
@@ -319,7 +319,7 @@
 
     .line 4
     :pswitch_3
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p0
 
@@ -341,7 +341,7 @@
 
     .line 5
     :pswitch_6
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p0
 
@@ -353,7 +353,7 @@
 
     .line 6
     :pswitch_7
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p0
 
@@ -1130,7 +1130,7 @@
     invoke-direct/range {v1 .. v8}, Lcom/vk/dto/stories/model/StoryAnswer;-><init>(IIILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/user/UserProfile;I)V
 
     .line 55
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p3
 
@@ -1139,7 +1139,7 @@
     move-result p3
 
     .line 56
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p4
 

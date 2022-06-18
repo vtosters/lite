@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/r$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "GridInfoItemsListItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/r;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p2, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p2, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/r$a;->d:Lcom/vk/profile/ui/header/a;
 

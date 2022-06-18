@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/view/View;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/view/View;)V
     .locals 2
 
     .line 1
@@ -149,7 +149,7 @@
 
     new-instance v0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;-><init>(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;-><init>(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
 

@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lkotlin/jvm/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation
@@ -22,7 +22,7 @@
         value = {
             "(",
             "Lkotlin/jvm/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;)V"
         }
     .end annotation
@@ -47,11 +47,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     if-eqz v0, :cond_0
 

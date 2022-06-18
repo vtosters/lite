@@ -63,9 +63,9 @@
     .locals 2
 
     .line 2
-    new-instance p2, Lcom/vkontakte/android/ui/BadooTextView;
+    new-instance p2, Lcom/vtosters/lite/ui/BadooTextView;
 
-    invoke-direct {p2, p1}, Lcom/vkontakte/android/ui/BadooTextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/ui/BadooTextView;-><init>(Landroid/content/Context;)V
 
     const-wide v0, 0xff71757aL
 

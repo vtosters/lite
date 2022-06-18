@@ -54,7 +54,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsfeedList;",
+            "Lcom/vtosters/lite/NewsfeedList;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/vk/newsfeed/r;",

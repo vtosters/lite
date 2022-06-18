@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,9 +47,9 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     const-string v2, "user"
 
@@ -68,9 +68,9 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v3, v3, Lcom/vkontakte/android/api/ExtendedUserProfile;->b:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vtosters/lite/api/ExtendedUserProfile;->b:Ljava/lang/String;
 
     const/4 v4, 0x0
 
@@ -89,7 +89,7 @@
     .line 4
     new-instance v1, Lcom/vk/navigation/o;
 
-    const-class v2, Lcom/vkontakte/android/fragments/gifts/j;
+    const-class v2, Lcom/vtosters/lite/fragments/gifts/j;
 
     invoke-direct {v1, v2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 

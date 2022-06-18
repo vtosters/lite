@@ -44,7 +44,7 @@
 .method public abstract a(Landroid/os/ResultReceiver;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/NewsComment;)V
+.method public abstract a(Lcom/vtosters/lite/NewsComment;)V
 .end method
 
 .method public abstract b(Ljava/lang/String;)V

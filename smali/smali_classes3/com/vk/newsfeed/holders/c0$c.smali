@@ -78,11 +78,11 @@
 
     iget-object p3, p0, Lcom/vk/newsfeed/holders/c0$c;->a:Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {p3}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {p3}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lcom/vkontakte/android/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
+    invoke-virtual {p3}, Lcom/vtosters/lite/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
 
     move-result-object p3
 

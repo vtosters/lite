@@ -3,7 +3,7 @@
 .source "UserNotificationHolder.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/utils/g$c;
+.implements Lcom/vtosters/lite/utils/g$c;
 
 
 # annotations
@@ -54,7 +54,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$a;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v1
 

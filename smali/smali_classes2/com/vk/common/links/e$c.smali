@@ -88,12 +88,12 @@
     .line 4
     iget-object p2, p0, Lcom/vk/common/links/e$c;->d:Lb/h/g/k/a;
 
-    invoke-static {p2}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p2}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 5
     iget-object p2, p0, Lcom/vk/common/links/e$c;->c:Landroid/content/Context;
 
-    invoke-static {p2}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {p2}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object p2
 

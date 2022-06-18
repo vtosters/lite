@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/zhukov/l;-><init>(Lcom/vkontakte/android/ui/holder/video/j;IZ)V
+    value = Lcom/vk/newsfeed/holders/zhukov/l;-><init>(Lcom/vtosters/lite/ui/holder/video/j;IZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

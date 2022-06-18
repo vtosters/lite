@@ -170,7 +170,7 @@
     invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(I)V
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

@@ -86,7 +86,7 @@
 
     iget p0, p0, Lcom/vk/dto/photo/PhotoAlbum;->b:I
 
-    invoke-static {p0}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {p0}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result p0
 

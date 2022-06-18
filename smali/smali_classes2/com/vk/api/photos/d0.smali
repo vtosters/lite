@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/api/base/d<",
-        "Lcom/vkontakte/android/attachments/PhotoAttachment;",
+        "Lcom/vtosters/lite/attachments/PhotoAttachment;",
         ">;"
     }
 .end annotation
@@ -57,14 +57,14 @@
 
 
 # virtual methods
-.method public a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PhotoAttachment;
+.method public a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PhotoAttachment;
     .locals 4
 
     const/4 v0, 0x0
 
     .line 2
     :try_start_0
-    new-instance v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     new-instance v2, Lcom/vk/dto/photo/Photo;
 
@@ -80,7 +80,7 @@
 
     invoke-direct {v2, p1}, Lcom/vk/dto/photo/Photo;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-direct {v1, v2}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v1, v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -118,7 +118,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/api/photos/d0;->a(Lorg/json/JSONObject;)Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/api/photos/d0;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(Lcom/vkontakte/android/api/d;Lcom/vk/core/fragments/b;Lcom/vkontakte/android/api/i;Ljava/lang/String;)V
+    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(Lcom/vtosters/lite/api/d;Lcom/vk/core/fragments/b;Lcom/vtosters/lite/api/i;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

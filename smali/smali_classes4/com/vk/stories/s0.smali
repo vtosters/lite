@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/s0;
-.super Lcom/vkontakte/android/fragments/d1;
+.super Lcom/vtosters/lite/fragments/d1;
 .source "StoriesFilterListFragment.java"
 
 # interfaces
@@ -22,7 +22,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/d1;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/d1;-><init>()V
 
     return-void
 .end method
@@ -31,7 +31,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/fragments/d1;->b(Lcom/vk/dto/user/UserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/d1;->b(Lcom/vk/dto/user/UserProfile;)V
 
     return-void
 .end method
@@ -118,7 +118,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vkontakte/android/fragments/m2/b;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/m2/b;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     const/4 p2, 0x1
 

@@ -68,12 +68,12 @@
 
     const-string v1, "article_analytics_event"
 
-    invoke-static {v1, v0}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v1, v0}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

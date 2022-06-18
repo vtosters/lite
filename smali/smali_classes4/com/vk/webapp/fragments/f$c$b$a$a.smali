@@ -42,7 +42,7 @@
 
     iget-object v0, v0, Lcom/vk/webapp/fragments/f$c$b$a;->b:Lb/h/g/k/a;
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/fragments/f$c$b$a$a;->a:Lcom/vk/webapp/fragments/f$c$b$a;

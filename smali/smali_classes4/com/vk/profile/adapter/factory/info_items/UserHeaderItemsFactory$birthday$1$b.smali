@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;
 
-.field final synthetic b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field final synthetic c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;Lcom/vkontakte/android/api/ExtendedUserProfile;Z)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput-boolean p3, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;->c:Z
 
@@ -48,9 +48,9 @@
     .line 1
     new-instance v0, Lcom/vk/webapp/fragments/WishlistFragment$a;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;->b:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 

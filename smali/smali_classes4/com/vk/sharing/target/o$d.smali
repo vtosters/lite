@@ -3,7 +3,7 @@
 .source "TargetsLoader.java"
 
 # interfaces
-.implements Lcom/vkontakte/android/data/Groups$f;
+.implements Lcom/vtosters/lite/data/Groups$f;
 
 
 # annotations

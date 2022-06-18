@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/h0/b;
-.super Lcom/vkontakte/android/ui/f0/b;
+.super Lcom/vtosters/lite/ui/f0/b;
 .source "AttachmentsPostDisplayItem.kt"
 
 
@@ -31,7 +31,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vkontakte/android/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/f0/b;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 
     iput-object p4, p0, Lcom/vk/newsfeed/h0/b;->n:Ljava/util/List;
 

@@ -216,7 +216,7 @@
     const/4 v1, 0x2
 
     .line 61
-    invoke-static {v0, v1}, Lcom/vkontakte/android/data/Groups;->a(Ljava/util/ArrayList;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/data/Groups;->a(Ljava/util/ArrayList;I)V
 
     .line 62
     sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
@@ -1029,9 +1029,9 @@
 
     iget-object p2, p0, Lcom/vk/music/bottomsheets/track/a;->e:Landroid/app/Activity;
 
-    new-instance v2, Lcom/vkontakte/android/attachments/AudioAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    invoke-direct {v2, v0}, Lcom/vkontakte/android/attachments/AudioAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-direct {v2, v0}, Lcom/vtosters/lite/attachments/AudioAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
     invoke-interface {p1, p2, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
 

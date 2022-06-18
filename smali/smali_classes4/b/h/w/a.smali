@@ -194,7 +194,7 @@
     .line 5
     iget-object p2, p0, Lb/h/w/a;->f:Landroid/widget/TextView;
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/PrivacyRules;->a(Lcom/vk/dto/common/data/PrivacySetting;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vtosters/lite/data/PrivacyRules;->a(Lcom/vk/dto/common/data/PrivacySetting;)Ljava/lang/String;
 
     move-result-object p1
 

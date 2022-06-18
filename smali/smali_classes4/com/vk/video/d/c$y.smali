@@ -64,14 +64,14 @@
     .line 3
     check-cast p3, Lcom/vk/dto/newsfeed/entries/Videos;
 
-    invoke-virtual {p3}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p3}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 

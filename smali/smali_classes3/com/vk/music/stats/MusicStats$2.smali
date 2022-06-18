@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
-        "Lcom/vkontakte/android/data/n$l;",
+        "Lcom/vtosters/lite/data/n$l;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+.method public final a(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
@@ -77,7 +77,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/stats/MusicStats$2;->a(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p0, p1}, Lcom/vk/music/stats/MusicStats$2;->a(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 

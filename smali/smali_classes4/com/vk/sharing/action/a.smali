@@ -123,7 +123,7 @@
     iget v1, p0, Lcom/vk/dto/common/Good;->b:I
 
     .line 30
-    invoke-static {v1}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v1}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v1
 
@@ -391,7 +391,7 @@
     move-result v2
 
     .line 5
-    invoke-static {v2}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v2}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v3
 

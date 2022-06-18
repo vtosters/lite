@@ -56,7 +56,7 @@
 
     const-string v1, "menu"
 
-    invoke-static {p1, v1, v1, v0}, Lcom/vkontakte/android/GameCardActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-static {p1, v1, v1, v0}, Lcom/vtosters/lite/GameCardActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/data/ApiApplication;)V
 
     return-void
 .end method

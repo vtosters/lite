@@ -62,7 +62,7 @@
     .line 2
     new-instance v0, Lcom/vk/api/groups/f;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

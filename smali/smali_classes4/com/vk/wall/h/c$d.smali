@@ -50,11 +50,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v1}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/wall/h/b;->a(Lcom/vkontakte/android/NewsComment;)V
+    invoke-interface {v0, v1}, Lcom/vk/wall/h/b;->a(Lcom/vtosters/lite/NewsComment;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/wall/h/c$d;->a:Lcom/vk/wall/h/c;

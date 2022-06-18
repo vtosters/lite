@@ -646,13 +646,13 @@
     check-cast v1, Ljava/lang/String;
 
     .line 5
-    new-instance v3, Lcom/vkontakte/android/api/wall/f;
+    new-instance v3, Lcom/vtosters/lite/api/wall/f;
 
     new-array v4, v8, [Ljava/lang/String;
 
     aput-object v1, v4, v7
 
-    invoke-direct {v3, v4}, Lcom/vkontakte/android/api/wall/f;-><init>([Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Lcom/vtosters/lite/api/wall/f;-><init>([Ljava/lang/String;)V
 
     .line 6
     invoke-static {v3, v2, v8, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
@@ -1341,11 +1341,11 @@
     invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 65
-    new-instance v1, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     check-cast p1, Lcom/vk/dto/articles/Article;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     .line 66
     invoke-virtual {p1}, Lcom/vk/dto/articles/Article;->t1()Ljava/lang/String;

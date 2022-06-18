@@ -1,5 +1,5 @@
 .class Lcom/vk/video/d/c$a;
-.super Lcom/vkontakte/android/api/l;
+.super Lcom/vtosters/lite/api/l;
 .source "VideoYoutubeFragment.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/api/l<",
+        "Lcom/vtosters/lite/api/l<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/video/d/c$a;->c:Lcom/vk/video/d/c;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/l;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/l;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     .locals 1
 
     .line 8
-    invoke-super {p0, p1}, Lcom/vkontakte/android/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/video/d/c$a;->c:Lcom/vk/video/d/c;

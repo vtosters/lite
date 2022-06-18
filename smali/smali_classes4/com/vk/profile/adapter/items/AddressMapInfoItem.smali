@@ -16,19 +16,19 @@
 
 .field private final C:Lcom/vk/profile/ui/StaticMapWrapper;
 
-.field private final D:Lcom/vkontakte/android/api/i;
+.field private final D:Lcom/vtosters/lite/api/i;
 
 .field private final E:Lcom/vk/profile/presenter/f/b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/f/b;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/f/b;)V
     .locals 6
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vkontakte/android/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vtosters/lite/api/i;
 
     iput-object p3, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->E:Lcom/vk/profile/presenter/f/b;
 
@@ -40,9 +40,9 @@
     .line 3
     new-instance p2, Lcom/vk/profile/ui/StaticMapWrapper;
 
-    iget-object p3, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vkontakte/android/api/i;
+    iget-object p3, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p3}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p3}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object p3
 
@@ -52,9 +52,9 @@
 
     iget-wide v2, p3, Lcom/vk/dto/profile/PlainAddress;->b:D
 
-    iget-object p3, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vkontakte/android/api/i;
+    iget-object p3, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p3}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p3}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object p3
 
@@ -112,11 +112,11 @@
     return-object v0
 .end method
 
-.method public final Q()Lcom/vkontakte/android/api/i;
+.method public final Q()Lcom/vtosters/lite/api/i;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->D:Lcom/vtosters/lite/api/i;
 
     return-object v0
 .end method
@@ -141,7 +141,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 2

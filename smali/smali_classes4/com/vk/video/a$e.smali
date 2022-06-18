@@ -86,7 +86,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/video/a$e;->d:Landroid/content/Context;
 
-    const-string v1, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v0, p1, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

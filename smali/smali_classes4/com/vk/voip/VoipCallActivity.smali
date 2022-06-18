@@ -1,5 +1,5 @@
 .class public final Lcom/vk/voip/VoipCallActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "VoipCallActivity.kt"
 
 
@@ -28,7 +28,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     const/16 v0, 0x155d
 
@@ -110,7 +110,7 @@
     invoke-static {v0, v2, v1, v3}, Lcom/vk/voip/AudioMessageRecordingViewModel;->a(Lcom/vk/voip/AudioMessageRecordingViewModel;ZILjava/lang/Object;)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :goto_0
     return-void
@@ -483,7 +483,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/voip/VoipViewModel;->a(J)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     const/4 v0, 0x0
 
@@ -511,7 +511,7 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vkontakte/android/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
     iget p2, p0, Lcom/vk/voip/VoipCallActivity;->G:I
@@ -686,7 +686,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -851,7 +851,7 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     .line 21
     sget-object p1, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -863,7 +863,7 @@
     if-eqz p1, :cond_0
 
     .line 22
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :cond_0
     return-void
@@ -903,7 +903,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     const/4 v0, 0x2
 
@@ -981,7 +981,7 @@
     invoke-static {v0}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 3
     iput-boolean v1, p0, Lcom/vk/voip/VoipCallActivity;->I:Z
@@ -1025,7 +1025,7 @@
     invoke-static {v0}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 3
     iput-boolean v1, p0, Lcom/vk/voip/VoipCallActivity;->I:Z
@@ -1069,7 +1069,7 @@
     invoke-static {v0}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStart()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 3
     sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
@@ -1123,7 +1123,7 @@
     invoke-static {v0}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStop()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 3
     sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;

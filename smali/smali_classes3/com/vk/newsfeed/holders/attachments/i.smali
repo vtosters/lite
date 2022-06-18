@@ -134,14 +134,14 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-eqz v0, :cond_2
 
     .line 4
-    check-cast p1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -152,7 +152,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/i;->I:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -166,7 +166,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/i;->I:Lcom/vk/music/view/ThumbsImageView;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -176,7 +176,7 @@
 
     .line 7
     :goto_0
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
@@ -201,7 +201,7 @@
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v4
 
@@ -245,7 +245,7 @@
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object p1
 
@@ -293,7 +293,7 @@
     move-result-object v0
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     if-eqz v1, :cond_1
 
@@ -302,9 +302,9 @@
     .line 4
     new-instance p1, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$a;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 

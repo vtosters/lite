@@ -100,22 +100,22 @@
     check-cast p6, Lcom/vk/dto/common/Attachment;
 
     .line 7
-    instance-of v1, p6, Lcom/vkontakte/android/attachments/StickerAttachment;
+    instance-of v1, p6, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     if-eqz v1, :cond_3
 
     .line 8
-    check-cast p6, Lcom/vkontakte/android/attachments/StickerAttachment;
+    check-cast p6, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     .line 9
-    iget v1, p6, Lcom/vkontakte/android/attachments/StickerAttachment;->e:I
+    iget v1, p6, Lcom/vtosters/lite/attachments/StickerAttachment;->e:I
 
     const-string v2, "sticker_id"
 
     invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
 
     .line 10
-    iget-object v1, p6, Lcom/vkontakte/android/attachments/StickerAttachment;->D:Ljava/lang/String;
+    iget-object v1, p6, Lcom/vtosters/lite/attachments/StickerAttachment;->D:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -124,7 +124,7 @@
     if-nez v1, :cond_2
 
     .line 11
-    iget-object p6, p6, Lcom/vkontakte/android/attachments/StickerAttachment;->D:Ljava/lang/String;
+    iget-object p6, p6, Lcom/vtosters/lite/attachments/StickerAttachment;->D:Ljava/lang/String;
 
     const-string v1, "sticker_referrer"
 

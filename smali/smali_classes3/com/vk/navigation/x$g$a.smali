@@ -372,7 +372,7 @@
     const-string v3, "media_event_show_popup"
 
     .line 32
-    invoke-static {v3}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v3}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v3
 
@@ -385,7 +385,7 @@
 
     const-string v5, "event_id"
 
-    invoke-virtual {v3, v5, v4}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v3, v5, v4}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 34
     invoke-virtual {v0}, Lcom/vk/dto/stickers/SpecialEvent$Popup$Text;->w()I
@@ -398,7 +398,7 @@
 
     const-string v5, "text_user_id"
 
-    invoke-virtual {v3, v5, v4}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v3, v5, v4}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 35
     invoke-virtual {v0}, Lcom/vk/dto/stickers/SpecialEvent$Popup$Text;->v()I
@@ -411,10 +411,10 @@
 
     const-string v4, "text_id"
 
-    invoke-virtual {v3, v4, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v3, v4, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 36
-    invoke-virtual {v3}, Lcom/vkontakte/android/data/n$l;->c()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v3}, Lcom/vtosters/lite/data/n$l;->c()Lcom/vtosters/lite/data/n$l;
 
     const v0, 0x7f0a051d
 

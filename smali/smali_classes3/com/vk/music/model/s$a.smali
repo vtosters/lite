@@ -64,7 +64,7 @@
     check-cast p1, Lcom/vk/music/g/e;
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->q()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->q()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
     :cond_0
     sget-object p1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->p0:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/model/s$a;->a:Lcom/vk/music/model/s;

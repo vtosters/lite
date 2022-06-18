@@ -563,14 +563,14 @@
 
 
 # virtual methods
-.method public final a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/newsfeed/posting/l;
+.method public final a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/newsfeed/posting/l;
     .locals 6
 
     .line 13
     invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/l;->c(I)Lcom/vk/newsfeed/posting/l;
 
     .line 14
-    iget-object p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -582,7 +582,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v1, v1, Lcom/vk/dto/user/UserProfile;->f:Ljava/lang/String;
 
@@ -602,7 +602,7 @@
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/l;->r()Lcom/vk/newsfeed/posting/l;
 
     .line 18
-    iget p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->R:I
+    iget p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->R:I
 
     const/4 v0, 0x2
 
@@ -621,7 +621,7 @@
 
     .line 19
     :goto_0
-    iget v3, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->T:I
+    iget v3, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->T:I
 
     if-ne v3, v2, :cond_1
 
@@ -634,7 +634,7 @@
 
     .line 20
     :goto_1
-    iget v4, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->T:I
+    iget v4, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->T:I
 
     if-ne v4, v0, :cond_2
 
@@ -647,11 +647,11 @@
 
     .line 21
     :goto_2
-    iget v5, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget v5, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     if-eq v5, v0, :cond_8
 
-    iget-boolean v0, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->V:Z
+    iget-boolean v0, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->V:Z
 
     if-nez v0, :cond_3
 
@@ -687,7 +687,7 @@
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/l;->B()Lcom/vk/newsfeed/posting/l;
 
     .line 27
-    iget-boolean p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->X:Z
+    iget-boolean p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->X:Z
 
     if-eqz p1, :cond_7
 
@@ -732,7 +732,7 @@
     .line 35
     :cond_b
     :goto_4
-    iget-boolean p1, p2, Lcom/vkontakte/android/api/ExtendedUserProfile;->X:Z
+    iget-boolean p1, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->X:Z
 
     if-nez p1, :cond_c
 
@@ -1279,7 +1279,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1416,7 +1416,7 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

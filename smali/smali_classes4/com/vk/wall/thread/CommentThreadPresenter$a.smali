@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->b(Lcom/vkontakte/android/q;)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->b(Lcom/vtosters/lite/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,16 +33,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-.field final synthetic b:Lcom/vkontakte/android/q;
+.field final synthetic b:Lcom/vtosters/lite/q;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vkontakte/android/q;)V
+.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vtosters/lite/q;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vkontakte/android/q;
+    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,27 +68,27 @@
     invoke-direct {v0}, Lcom/vk/dto/user/UserProfile;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vkontakte/android/q;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
 
-    invoke-interface {v1}, Lcom/vkontakte/android/q;->getUid()I
+    invoke-interface {v1}, Lcom/vtosters/lite/q;->getUid()I
 
     move-result v1
 
     iput v1, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
     .line 3
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vkontakte/android/q;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
 
-    invoke-interface {v1}, Lcom/vkontakte/android/q;->U0()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vtosters/lite/q;->U0()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vkontakte/android/q;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
 
-    invoke-interface {v1}, Lcom/vkontakte/android/q;->l1()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vtosters/lite/q;->l1()Ljava/lang/String;
 
     move-result-object v1
 

@@ -52,7 +52,7 @@
     .line 1
     iget p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$j;->a:I
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->f(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->f(I)V
 
     return-void
 .end method

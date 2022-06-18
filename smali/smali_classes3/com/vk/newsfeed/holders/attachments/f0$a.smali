@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vkontakte/android/attachments/PollAttachment;
+.field private final a:Lcom/vtosters/lite/attachments/PollAttachment;
 
 
 # direct methods
@@ -51,22 +51,22 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public constructor <init>(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vkontakte/android/attachments/PollAttachment;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vtosters/lite/attachments/PollAttachment;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/f0$a;)Lcom/vkontakte/android/attachments/PollAttachment;
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/f0$a;)Lcom/vtosters/lite/attachments/PollAttachment;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vtosters/lite/attachments/PollAttachment;
 
     return-object p0
 .end method
@@ -77,9 +77,9 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PollAttachment;->y1()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PollAttachment;->y1()I
 
     move-result v0
 
@@ -89,9 +89,9 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PollAttachment;->b()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PollAttachment;->b()I
 
     move-result v0
 
@@ -102,9 +102,9 @@
     if-ne v0, v1, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/f0$a;->a:Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/attachments/PollAttachment;->a(Lcom/vk/dto/polls/Poll;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/attachments/PollAttachment;->a(Lcom/vk/dto/polls/Poll;)V
 
     .line 4
     sget-object v0, Lb/h/t/k/b;->a:Lb/h/t/k/b;

@@ -672,11 +672,11 @@
     return-object v0
 .end method
 
-.method public static final a(Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Z
+.method public static final a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Z
     .locals 0
 
     .line 4
-    iget-object p0, p0, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object p0, p0, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Lcom/vk/profile/data/CountersWrapper;->h()Ljava/lang/String;
 

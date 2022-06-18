@@ -49,11 +49,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vkontakte/android/api/execute/i$a;)V
+.method public static final synthetic a(Lcom/vk/auth/VkAuthModel;Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vkontakte/android/api/execute/i$a;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
     invoke-direct {v0, v1, v2, p1}, Lcom/vk/im/engine/models/credentials/UserCredentials;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 36
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->a()Lcom/vk/im/engine/ImConfig;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->a()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
@@ -106,7 +106,7 @@
     move-result-object p1
 
     .line 38
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object v0
 
@@ -118,21 +118,21 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/im/bridge/c;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vtosters/lite/im/bridge/c;->a(Landroid/content/Context;)V
 
     .line 41
-    sget-object p1, Lcom/vkontakte/android/sync/online/h;->b:Lcom/vkontakte/android/sync/online/h;
+    sget-object p1, Lcom/vtosters/lite/sync/online/h;->b:Lcom/vtosters/lite/sync/online/h;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/sync/online/h;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/sync/online/h;->a()V
 
     :cond_0
     const/4 p1, 0x0
 
     .line 42
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->c(Z)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->c(Z)V
 
     .line 43
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->b(Z)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->b(Z)V
 
     .line 44
     sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
@@ -140,12 +140,12 @@
     invoke-virtual {p1}, Lcom/vk/stickers/t;->a()V
 
     .line 45
-    invoke-static {}, Lcom/vkontakte/android/MenuCounterUpdater;->d()V
+    invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->d()V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/auth/api/models/AuthResult;Lcom/vkontakte/android/api/execute/i$a;)V
+.method private final a(Lcom/vk/auth/api/models/AuthResult;Lcom/vtosters/lite/api/execute/i$a;)V
     .locals 5
 
     .line 18
@@ -210,15 +210,15 @@
     invoke-virtual {p1, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(I)V
 
     .line 29
-    invoke-static {v3, p2}, Lcom/vkontakte/android/i0/c;->a(Lb/h/h/d/c;Lcom/vkontakte/android/api/execute/i$a;)V
+    invoke-static {v3, p2}, Lcom/vtosters/lite/i0/c;->a(Lb/h/h/d/c;Lcom/vtosters/lite/api/execute/i$a;)V
 
     .line 30
-    sget-object p1, Lcom/vkontakte/android/api/ApiWrapper;->a:Lcom/vkontakte/android/api/ApiWrapper;
+    sget-object p1, Lcom/vtosters/lite/api/ApiWrapper;->a:Lcom/vtosters/lite/api/ApiWrapper;
 
-    invoke-virtual {p1, v1, v2}, Lcom/vkontakte/android/api/ApiWrapper;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Lcom/vtosters/lite/api/ApiWrapper;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    invoke-static {}, Lcom/vkontakte/android/c0;->c()Lcom/vkontakte/android/c0;
+    invoke-static {}, Lcom/vtosters/lite/c0;->c()Lcom/vtosters/lite/c0;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/c0;->b(Landroid/content/Context;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/c0;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -450,11 +450,11 @@
     .end annotation
 
     .line 5
-    new-instance p2, Lcom/vkontakte/android/api/execute/i;
+    new-instance p2, Lcom/vtosters/lite/api/execute/i;
 
     const/4 v0, 0x1
 
-    invoke-direct {p2, v0}, Lcom/vkontakte/android/api/execute/i;-><init>(Z)V
+    invoke-direct {p2, v0}, Lcom/vtosters/lite/api/execute/i;-><init>(Z)V
 
     .line 6
     invoke-virtual {p1}, Lcom/vk/auth/api/models/AuthResult;->F()Ljava/lang/String;

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/geo/GeoLocation;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -68,7 +68,7 @@
     const v0, 0x7f0d0453
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p2, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->h:Ljava/lang/String;
 
@@ -298,7 +298,7 @@
 
     const v3, 0x7f1206b4
 
-    invoke-virtual {p0, v3}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -403,7 +403,7 @@
     const v3, 0x7f1200b9
 
     .line 17
-    invoke-virtual {p0, v3}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -458,7 +458,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;->B:Lcom/vk/core/util/k0;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 

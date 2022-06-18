@@ -40,7 +40,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/j2$g;
 
     iget-object v1, p0, Lcom/vk/common/links/d$c;->e:Landroid/net/Uri;
 
@@ -56,15 +56,15 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->j()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->j()Lcom/vtosters/lite/fragments/j2$g;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     move-result-object v0
 

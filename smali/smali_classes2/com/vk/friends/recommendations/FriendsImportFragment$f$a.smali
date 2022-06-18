@@ -51,7 +51,7 @@
     .line 2
     sget-object p1, Lcom/vk/friends/recommendations/FriendsImportFragment$f$a$a;->a:Lcom/vk/friends/recommendations/FriendsImportFragment$f$a$a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
 
     goto :goto_1
 

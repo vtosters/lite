@@ -24,7 +24,7 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/NoteAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/NoteAttachment;
 
     if-eqz v0, :cond_0
 
@@ -44,9 +44,9 @@
 
     move-result-object v0
 
-    check-cast p1, Lcom/vkontakte/android/attachments/NoteAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/NoteAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/NoteAttachment;->e:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/NoteAttachment;->e:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -83,34 +83,34 @@
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/NoteAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/NoteAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vkontakte/android/fragments/k2$c;
+    new-instance v0, Lcom/vtosters/lite/fragments/k2$c;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/k2$c;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/k2$c;-><init>()V
 
     .line 4
-    check-cast p1, Lcom/vkontakte/android/attachments/NoteAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/NoteAttachment;
 
-    iget v1, p1, Lcom/vkontakte/android/attachments/NoteAttachment;->f:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/NoteAttachment;->f:I
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/k2$c;->d(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/k2$c;->d(I)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 5
-    iget v1, p1, Lcom/vkontakte/android/attachments/NoteAttachment;->g:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/NoteAttachment;->g:I
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/k2$c;->c(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/k2$c;->c(I)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 6
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/NoteAttachment;->e:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/NoteAttachment;->e:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/k2$c;->c(Ljava/lang/String;)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/k2$c;->c(Ljava/lang/String;)Lcom/vtosters/lite/fragments/k2$c;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

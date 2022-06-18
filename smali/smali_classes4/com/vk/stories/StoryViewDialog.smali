@@ -3851,7 +3851,7 @@
     return-object p0
 .end method
 
-.method public synthetic a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vkontakte/android/data/n$l;)Lkotlin/m;
+.method public synthetic a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vtosters/lite/data/n$l;)Lkotlin/m;
     .locals 4
 
     .line 178
@@ -3908,7 +3908,7 @@
     const-string v0, "group_feed"
 
     .line 181
-    invoke-static {p2, v0, p1}, Lcom/vk/stories/util/m;->a(Lcom/vkontakte/android/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p2, v0, p1}, Lcom/vk/stories/util/m;->a(Lcom/vtosters/lite/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vtosters/lite/data/n$l;
 
     .line 182
     :cond_2

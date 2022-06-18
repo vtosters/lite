@@ -127,7 +127,7 @@
 
     .line 24
     :cond_3
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->c()Lcom/vk/auth/l;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
 
     move-result-object v0
 

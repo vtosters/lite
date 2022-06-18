@@ -239,7 +239,7 @@
     .line 4
     check-cast p1, Lcom/vk/stories/holders/StoriesDialogHolder2;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -292,7 +292,7 @@
     :cond_4
     check-cast p2, Ljava/util/List;
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :goto_1
     return-void

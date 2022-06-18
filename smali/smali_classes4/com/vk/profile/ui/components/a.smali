@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 6
 
     .line 1

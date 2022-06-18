@@ -994,7 +994,7 @@
     throw p3
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/i;Landroid/view/View$OnClickListener;)V
+.method public final a(Lcom/vtosters/lite/api/i;Landroid/view/View$OnClickListener;)V
     .locals 7
 
     .line 25
@@ -1003,7 +1003,7 @@
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->r:I
 
     .line 26
-    iget v2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v3, 0x1
 
@@ -1034,7 +1034,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v3, v4, v1, v2}, Lcom/vk/profile/utils/b;->a(Lcom/vkontakte/android/api/i;ZZILjava/lang/Object;)Ljava/util/List;
+    invoke-static {p1, v3, v4, v1, v2}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;ZZILjava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1071,7 +1071,7 @@
 
     .line 33
     :cond_1
-    iget p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     if-eqz p1, :cond_2
 

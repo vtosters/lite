@@ -56,7 +56,7 @@
     iput-object p1, p0, Lcom/vk/newsfeed/k0/b/b/i;->G:Lcom/vk/newsfeed/contracts/f;
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -1125,7 +1125,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1136,7 +1136,7 @@
     iput v0, p0, Lcom/vk/newsfeed/k0/b/b/i;->C:I
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1358,7 +1358,7 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
 
     const/4 v4, 0x0
 

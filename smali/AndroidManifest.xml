@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.vkontakte.android" platformBuildVersionCode="29" platformBuildVersionName="10">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.vtosters.lite" platformBuildVersionCode="29" platformBuildVersionName="10">
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -21,9 +21,9 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="com.vkontakte.android.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.vtosters.lite.permission.MAPS_RECEIVE"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="com.vkontakte.android.permission.ACCESS_DATA"/>
+    <uses-permission android:name="com.vtosters.lite.permission.ACCESS_DATA"/>
     <uses-permission android:name="android.permission.NFC"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -31,16 +31,16 @@
     <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
     <uses-permission android:name="com.vk.usersstore.permission.SAVE"/>
     <uses-permission android:name="com.vk.usersstore.permission.LOAD"/>
-    <uses-permission android:name="com.vkontakte.android.usersstore.permission.SAVE"/>
-    <uses-permission android:name="com.vkontakte.android.usersstore.permission.LOAD"/>
+    <uses-permission android:name="com.vtosters.lite.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vtosters.lite.usersstore.permission.LOAD"/>
     <uses-permission android:name="com.vk.im.usersstore.permission.SAVE"/>
     <uses-permission android:name="com.vk.im.usersstore.permission.LOAD"/>
-    <uses-permission android:name="com.vkontakte.android.usersstore.permission.SAVE"/>
-    <uses-permission android:name="com.vkontakte.android.usersstore.permission.LOAD"/>
+    <uses-permission android:name="com.vtosters.lite.usersstore.permission.SAVE"/>
+    <uses-permission android:name="com.vtosters.lite.usersstore.permission.LOAD"/>
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
-    <permission android:name="com.vkontakte.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
-    <permission android:name="com.vkontakte.android.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
-    <permission android:name="com.vkontakte.android.permission.ACCESS_DATA" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.permission.ACCESS_DATA" android:protectionLevel="signature"/>
     <uses-permission android:name="com.vk.audioipc.communication.AUDIO_SERVICE_PERMISSION"/>
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
     <uses-feature android:name="android.hardware.location" android:required="false"/>
@@ -52,7 +52,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
     <uses-feature android:name="android.hardware.microphone" android:required="false"/>
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
-    <permission android:name="com.vk.audioipc.communication.AUDIO_SERVICE_PERMISSION" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.audioipc.communication.AUDIO_SERVICE_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="com.example.libaudioipc_sensitive_data_provider.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION"/>
     <permission android:name="com.audioipc.player.libaudioipc_sensitive_data_provider.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -60,8 +60,8 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.QUICKBOOT_POWERON"/>
-    <permission android:name="com.vkontakte.android.usersstore.permission.SAVE" android:protectionLevel="signature"/>
-    <permission android:name="com.vkontakte.android.usersstore.permission.LOAD" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.usersstore.permission.SAVE" android:protectionLevel="signature"/>
+    <permission android:name="com.vtosters.lite.usersstore.permission.LOAD" android:protectionLevel="signature"/>
     <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED"/>
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
@@ -81,7 +81,7 @@
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@mipmap/mp_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.vkontakte.android.VKApplication" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/VkLightStyle">
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:hardwareAccelerated="true" android:icon="@mipmap/mp_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.vtosters.lite.VKApplication" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/VkLightStyle">
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAvrvAACdzmgDYFM9hvJS88KdSlQsafID0"/>
         <meta-data android:name="com.google.android.geo.API_SECRET" android:value="yu6ZAA0OWO3kmr4es7fGtSmiyfk="/>
         <meta-data android:name="com.vk.safetynet.API_SECRET" android:value="AIzaSyBf_eM-cgRbg1gOkyEc2Il5gHqgsnFyVug"/>
@@ -93,24 +93,24 @@
         <meta-data android:name="com.vk.bugtracker.android.appIdentifier" android:value="426"/>
         <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/cornflower_blue"/>
         <activity android:name="com.vk.core.util.AppRecreate$ProcessPhoenix" android:process=":phoenix" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:finishOnTaskLaunch="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.vkontakte.android.MainActivity" android:theme="@style/SplashTheme" android:windowSoftInputMode="adjustResize">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:finishOnTaskLaunch="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.vtosters.lite.MainActivity" android:theme="@style/SplashTheme" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.FragmentWrapperActivity" android:windowSoftInputMode="adjustResize"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:launchMode="singleTask" android:name="com.vkontakte.android.fragments.messages.chat.ChatActivity" android:windowSoftInputMode="adjustResize"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/attach_photo" android:name="com.vkontakte.android.ImagePickerActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.FragmentWrapperActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:launchMode="singleTask" android:name="com.vtosters.lite.fragments.messages.chat.ChatActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/attach_photo" android:name="com.vtosters.lite.ImagePickerActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/auth" android:name="com.vk.auth.main.AuthActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.RepostActivity" android:theme="@style/TransparentTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.RepostActivity" android:theme="@style/TransparentTheme"/>
         <activity android:label="" android:name="com.vk.sharing.PortraitSharingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.App.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:configChanges="keyboardHidden|screenSize" android:label="" android:name="com.vk.sharing.SharingActivity" android:theme="@style/Theme.App.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.GameCardActivity" android:theme="@style/VkLightStyle.NoActionBar"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.TabletDialogActivity" android:theme="@style/BaseStyle.PopupIfTablet"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.FragmentDialogActivity" android:theme="@style/BaseStyle.Dialog"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.vkontakte.android.LinkRedirActivity" android:theme="@style/TranslucentStyle">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.GameCardActivity" android:theme="@style/VkLightStyle.NoActionBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.TabletDialogActivity" android:theme="@style/BaseStyle.PopupIfTablet"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.FragmentDialogActivity" android:theme="@style/BaseStyle.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.vtosters.lite.LinkRedirActivity" android:theme="@style/TranslucentStyle">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -195,17 +195,17 @@
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.com.vkontakte.android.sendmsg"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.sendmsg"/>
             </intent-filter>
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.com.vkontakte.android.profile"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.profile"/>
             </intent-filter>
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.com.vkontakte.android.voipcall"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.voipcall"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
@@ -229,19 +229,19 @@
                 <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.PostPhotoActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/message" android:name="com.vkontakte.android.ValidationActivity" android:theme="@style/VkLightStyle.Validation"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/live" android:name="com.vkontakte.android.live.LivePlayerActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.PostPhotoActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/message" android:name="com.vtosters.lite.ValidationActivity" android:theme="@style/VkLightStyle.Validation"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/live" android:name="com.vtosters.lite.live.LivePlayerActivity" android:windowSoftInputMode="stateHidden"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/video" android:name="com.vk.video.VideoActivity"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/video" android:name="com.vk.libvideo.VideoWrapperActivity" android:theme="@style/VideoPlayerTranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.vkontakte.android.SendActivity" android:theme="@style/TranslucentStyle">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.vtosters.lite.SendActivity" android:theme="@style/TranslucentStyle">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.SEND"/>
                 <action android:name="android.intent.action.SEND_MULTIPLE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="*/*"/>
             </intent-filter>
-            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="com.vkontakte.android.directshare.ImDirectShareService"/>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="com.vtosters.lite.directshare.ImDirectShareService"/>
         </activity>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.vk.stories.StoryShareActivity" android:theme="@style/TranslucentStyle">
             <intent-filter android:label="@string/stories">
@@ -257,32 +257,32 @@
                 <data android:mimeType="video/*"/>
             </intent-filter>
         </activity>
-        <activity android:label="" android:name="com.vkontakte.android.VideoUploadDialog" android:theme="@style/Theme.App.Transparent.DialogHolder"/>
+        <activity android:label="" android:name="com.vtosters.lite.VideoUploadDialog" android:theme="@style/Theme.App.Transparent.DialogHolder"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vk.contacts.ContactsSyncAcitvity" android:theme="@style/TransparentTheme">
             <intent-filter>
-                <action android:name="com.vkontakte.android.SYNC_SETTINGS"/>
+                <action android:name="com.vtosters.lite.SYNC_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.CaptchaActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.ConfirmationActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/suggest_friends" android:name="com.vkontakte.android.SuggestionsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.CaptchaActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.ConfirmationActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/suggest_friends" android:name="com.vtosters.lite.SuggestionsActivity"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/suggest_friends" android:name="com.vk.socialgraph.SocialGraphActivity"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/report_content" android:name="com.vkontakte.android.ReportContentActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.NotificationActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/auth" android:name="com.vkontakte.android.SDKAuthActivity">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/report_content" android:name="com.vtosters.lite.ReportContentActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.NotificationActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/auth" android:name="com.vtosters.lite.SDKAuthActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="com.vkontakte.android.action.SDK_AUTH"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.vkontakte.android.sdk.SDKInviteActivity"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/friends" android:name="com.vkontakte.android.sdk.SDKFriendPickerActivity" android:windowSoftInputMode="adjustResize"/>
-        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.vk.voip.VoipCallActivity" android:screenOrientation="portrait" android:taskAffinity="com.vkontakte.android.voip"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.vtosters.lite.sdk.SDKInviteActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/friends" android:name="com.vtosters.lite.sdk.SDKFriendPickerActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.vk.voip.VoipCallActivity" android:screenOrientation="portrait" android:taskAffinity="com.vtosters.lite.voip"/>
         <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.vk.music.AudioPlayerActivity" android:theme="@style/BaseStyle.PopupIfTablet"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/change_password" android:name="com.vkontakte.android.ChangePasswordActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.BillingActivity" android:theme="@style/TranslucentStyle"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/wall" android:name="com.vkontakte.android.TestActivity">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/change_password" android:name="com.vtosters.lite.ChangePasswordActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.BillingActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/wall" android:name="com.vtosters.lite.TestActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -290,7 +290,7 @@
                 <data android:host="test" android:scheme="vkontakte"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="confirmation" android:name="com.vkontakte.android.ConfirmActionActivity" android:theme="@style/TranslucentStyle"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="confirmation" android:name="com.vtosters.lite.ConfirmActionActivity" android:theme="@style/TranslucentStyle"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.AttachActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.PhotoVideoAttachActivity" android:theme="@style/PickerPhotoVideoActivity"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.attachpicker.PhotoEditorActivity" android:theme="@style/PickerImageEditorActivity"/>
@@ -302,7 +302,7 @@
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stories.StorySettingsActivity" android:screenOrientation="portrait" android:theme="@style/StoryActivityTheme"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stories.StoryPrivacySettingsActivity" android:screenOrientation="portrait" android:theme="@style/StoryActivityTheme"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vk.music.attach.AttachMusicActivity" android:theme="@style/BaseStyle.StatusBar" android:windowSoftInputMode="adjustResize"/>
-        <activity android:configChanges="orientation" android:excludeFromRecents="true" android:label="" android:name="com.vkontakte.android.fragments.messages.chat_invite.accept.ChatInviteActivity" android:theme="@style/VkIm.Theme.ChatInvite" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="orientation" android:excludeFromRecents="true" android:label="" android:name="com.vtosters.lite.fragments.messages.chat_invite.accept.ChatInviteActivity" android:theme="@style/VkIm.Theme.ChatInvite" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:name="com.vk.pushes.PushOpenActivity" android:theme="@style/PushOpenTheme"/>
         <activity android:name="ru.ok.android.sdk.OkAuthActivity">
             <intent-filter>
@@ -314,18 +314,18 @@
         </activity>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vk.newsfeed.posting.attachments.PostingAttachActivity" android:theme="@style/PostingAttachScreenTheme" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.profile.ui.details.ProfileDetailsActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vkontakte.android.InstallVKMeActivity" android:theme="@style/TransparentTheme" android:windowSoftInputMode="adjustResize"/>
-        <activity android:exported="true" android:name="com.vkontakte.android.activities.AssistantSendMsgActivity">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.InstallVKMeActivity" android:theme="@style/TransparentTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="true" android:name="com.vtosters.lite.activities.AssistantSendMsgActivity">
             <intent-filter>
                 <action android:name="com.google.android.voicesearch.SEND_MESSAGE_TO_CONTACTS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
         </activity>
-        <service android:name="com.vkontakte.android.AssistantVerificationService"/>
-        <service android:exported="false" android:name="com.vkontakte.android.sync.online.VkOnlineService"/>
-        <service android:name="com.vkontakte.android.audio.player.PlayerService"/>
-        <service android:exported="true" android:name="com.vkontakte.android.AccountAuthenticatorService">
+        <service android:name="com.vtosters.lite.AssistantVerificationService"/>
+        <service android:exported="false" android:name="com.vtosters.lite.sync.online.VkOnlineService"/>
+        <service android:name="com.vtosters.lite.audio.player.PlayerService"/>
+        <service android:exported="true" android:name="com.vtosters.lite.AccountAuthenticatorService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator"/>
             </intent-filter>
@@ -345,7 +345,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-        <service android:exported="true" android:name="com.vkontakte.android.directshare.ImDirectShareService" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+        <service android:exported="true" android:name="com.vtosters.lite.directshare.ImDirectShareService" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
             <intent-filter>
                 <action android:name="android.service.chooser.ChooserTargetService"/>
             </intent-filter>
@@ -358,32 +358,32 @@
                 <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
             </intent-filter>
         </receiver>
-        <receiver android:label="@string/widget_player" android:name="com.vkontakte.android.audio.widgets.PlayerSmallWidget">
+        <receiver android:label="@string/widget_player" android:name="com.vtosters.lite.audio.widgets.PlayerSmallWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_player_provider"/>
         </receiver>
-        <receiver android:label="@string/widget_player_big" android:name="com.vkontakte.android.audio.widgets.PlayerBigWidget">
+        <receiver android:label="@string/widget_player_big" android:name="com.vtosters.lite.audio.widgets.PlayerBigWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_player_big_provider"/>
         </receiver>
-        <receiver android:name="com.vkontakte.android.LoadingBroadcastReceiver">
+        <receiver android:name="com.vtosters.lite.LoadingBroadcastReceiver">
             <intent-filter>
                 <action android:enabled="true" android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
-                <action android:enabled="true" android:name="com.vkontakte.android.UPLOAD_RETRY"/>
+                <action android:enabled="true" android:name="com.vtosters.lite.UPLOAD_RETRY"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="com.vkontakte.android.BirthdayBroadcastReceiver"/>
-        <receiver android:name="com.vkontakte.android.DebugBroadcastReceiver">
+        <receiver android:name="com.vtosters.lite.BirthdayBroadcastReceiver"/>
+        <receiver android:name="com.vtosters.lite.DebugBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE"/>
                 <data android:host="\ 856682583" android:scheme="android_secret_code"/>
             </intent-filter>
         </receiver>
-        <receiver android:enabled="false" android:exported="true" android:name="com.vkontakte.android.PackageAddedReceiver">
+        <receiver android:enabled="false" android:exported="true" android:name="com.vtosters.lite.PackageAddedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
                 <data android:scheme="package"/>
@@ -397,10 +397,10 @@
         <receiver android:name="com.vk.pushes.receivers.NotificationActionsReceiver"/>
         <receiver android:name="com.vk.pushes.receivers.NotificationDeleteReceiver"/>
         <receiver android:name="com.vk.voip.VoipActionsReceiver"/>
-        <receiver android:exported="true" android:name="com.vkontakte.android.im.bridge.broadcasts.ImBroadcastReceiver" android:permission="com.vkontakte.android.permission.ACCESS_DATA"/>
-        <provider android:authorities="com.vkontakte.android.providers.audio" android:exported="true" android:name="com.vkontakte.android.audio.contentprovider.AudioContentProvider"/>
-        <provider android:authorities="com.vkontakte.android.providers.im" android:exported="true" android:name="com.vkontakte.android.im.bridge.contentprovider.ImContentProvider" android:permission="com.vkontakte.android.permission.ACCESS_DATA"/>
-        <provider android:authorities="@string/vk_file_provider_authority" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+        <receiver android:exported="true" android:name="com.vtosters.lite.im.bridge.broadcasts.ImBroadcastReceiver" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
+        <provider android:authorities="com.vtosters.lite.providers.audio" android:exported="true" android:name="com.vtosters.lite.audio.contentprovider.AudioContentProvider"/>
+        <provider android:authorities="com.vtosters.lite.providers.im" android:exported="true" android:name="com.vtosters.lite.im.bridge.contentprovider.ImContentProvider" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
+        <provider android:authorities="com.vtosters.lite.common.VKFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
         <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
@@ -451,18 +451,18 @@
                 <action android:name="com.vk.instantjobs.receivers.ACTION_CANCEL"/>
             </intent-filter>
         </receiver>
-        <provider android:authorities="com.vkontakte.android.UsersContentProvider" android:exported="true" android:name="com.vk.usersstore.contentprovider.UsersContentProvider" android:readPermission="com.vkontakte.android.usersstore.permission.LOAD" android:writePermission="com.vkontakte.android.usersstore.permission.SAVE"/>
+        <provider android:authorities="com.vtosters.lite.UsersContentProvider" android:exported="true" android:name="com.vk.usersstore.contentprovider.UsersContentProvider" android:readPermission="com.vtosters.lite.usersstore.permission.LOAD" android:writePermission="com.vtosters.lite.usersstore.permission.SAVE"/>
         <activity android:name="com.vk.api.sdk.ui.VKWebViewAuthActivity" android:theme="@style/VK.Transparent"/>
         <activity android:name="com.vk.api.sdk.ui.VKCaptchaActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity android:name="com.vk.api.sdk.ui.VKConfirmationActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <provider android:authorities="com.vkontakte.android.VKInitProvider" android:exported="false" android:name="com.vk.api.sdk.internal.VKInitProvider"/>
+        <provider android:authorities="com.vtosters.lite.VKInitProvider" android:exported="false" android:name="com.vk.api.sdk.internal.VKInitProvider"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
         <activity android:name="com.facebook.CustomTabMainActivity"/>
         <activity android:name="com.facebook.CustomTabActivity"/>
         <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
-        <provider android:authorities="com.vkontakte.android.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider"/>
+        <provider android:authorities="com.vtosters.lite.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider"/>
         <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
             <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
             <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
@@ -587,7 +587,7 @@
             </intent-filter>
         </receiver>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <provider android:authorities="com.vkontakte.android.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.vtosters.lite.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
         <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
             <intent-filter>
@@ -596,7 +596,7 @@
         </receiver>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <provider android:authorities="com.vkontakte.android.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <provider android:authorities="com.vtosters.lite.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
         <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
@@ -607,7 +607,7 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER"/>
             </intent-filter>
         </receiver>
-        <provider android:authorities="com.vkontakte.android.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+        <provider android:authorities="com.vtosters.lite.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
         <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:process=":playcore_dialog_wrapper_activity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
         <activity android:name="vigo.sdk.FeedbackActivity" android:screenOrientation="portrait" android:theme="@style/MyAppCompatDialogTheme" android:windowSoftInputMode="adjustResize"/>

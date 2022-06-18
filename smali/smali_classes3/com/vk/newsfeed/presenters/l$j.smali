@@ -25,7 +25,7 @@
         "Lc/a/z/g<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vkontakte/android/NewsfeedList;",
+        "Lcom/vtosters/lite/NewsfeedList;",
         ">;>;"
     }
 .end annotation
@@ -55,7 +55,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/NewsfeedList;",
+            "Lcom/vtosters/lite/NewsfeedList;",
             ">;)V"
         }
     .end annotation
@@ -72,7 +72,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/l$j;->a:Lcom/vk/newsfeed/presenters/l;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/presenters/l;->i(Lcom/vk/newsfeed/presenters/l;)Lcom/vkontakte/android/NewsfeedList;
+    invoke-static {v0}, Lcom/vk/newsfeed/presenters/l;->i(Lcom/vk/newsfeed/presenters/l;)Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v0
 
@@ -100,19 +100,19 @@
 
     move-object v5, v2
 
-    check-cast v5, Lcom/vkontakte/android/NewsfeedList;
+    check-cast v5, Lcom/vtosters/lite/NewsfeedList;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/NewsfeedList;->u1()Z
+    invoke-virtual {v5}, Lcom/vtosters/lite/NewsfeedList;->u1()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/NewsfeedList;->t1()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vtosters/lite/NewsfeedList;->t1()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsfeedList;->t1()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsfeedList;->t1()Ljava/lang/String;
 
     move-result-object v6
 
@@ -138,7 +138,7 @@
     move-object v2, v4
 
     :goto_1
-    check-cast v2, Lcom/vkontakte/android/NewsfeedList;
+    check-cast v2, Lcom/vtosters/lite/NewsfeedList;
 
     if-nez v2, :cond_3
 
@@ -155,7 +155,7 @@
 
     move-result v1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsfeedList;->getId()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result v0
 
@@ -164,7 +164,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/l$j;->a:Lcom/vk/newsfeed/presenters/l;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/NewsfeedList;->getId()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/NewsfeedList;->getId()I
 
     move-result v1
 
@@ -175,7 +175,7 @@
     :goto_2
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/l$j;->a:Lcom/vk/newsfeed/presenters/l;
 
-    invoke-static {v0, v4}, Lcom/vk/newsfeed/presenters/l;->a(Lcom/vk/newsfeed/presenters/l;Lcom/vkontakte/android/NewsfeedList;)V
+    invoke-static {v0, v4}, Lcom/vk/newsfeed/presenters/l;->a(Lcom/vk/newsfeed/presenters/l;Lcom/vtosters/lite/NewsfeedList;)V
 
     .line 8
     :cond_5

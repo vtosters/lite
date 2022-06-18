@@ -147,7 +147,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     goto :goto_0
 

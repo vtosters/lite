@@ -58,11 +58,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/video/d/c$l;->a:Lcom/vk/video/d/c;
 
-    invoke-static {p1}, Lcom/vk/video/d/c;->h(Lcom/vk/video/d/c;)Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;
+    invoke-static {p1}, Lcom/vk/video/d/c;->h(Lcom/vk/video/d/c;)Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->d()Landroid/view/View;
 
     move-result-object p1
 

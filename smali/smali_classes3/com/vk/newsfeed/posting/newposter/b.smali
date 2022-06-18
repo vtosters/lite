@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 3
     iget v0, p0, Lcom/vk/newsfeed/posting/newposter/b;->c:I

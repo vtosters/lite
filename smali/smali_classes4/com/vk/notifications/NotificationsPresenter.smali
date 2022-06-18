@@ -256,13 +256,13 @@
 
     move-result v4
 
-    const-class v6, Lcom/vkontakte/android/t;
+    const-class v6, Lcom/vtosters/lite/t;
 
     invoke-interface {v5, v1, v4, v6}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, [Lcom/vkontakte/android/t;
+    check-cast v4, [Lcom/vtosters/lite/t;
 
     const-string v5, "spans"
 
@@ -294,7 +294,7 @@
 
     invoke-direct {v5, p0, v3}, Lcom/vk/notifications/NotificationsPresenter$b;-><init>(Lcom/vk/notifications/NotificationsPresenter;Lcom/vk/dto/notifications/NotificationItem;)V
 
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -320,7 +320,7 @@
     move-result v0
 
     .line 31
-    invoke-static {v0}, Lcom/vkontakte/android/w;->k(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/w;->k(I)V
 
     .line 32
     :cond_0
@@ -335,7 +335,7 @@
     move-result v0
 
     .line 33
-    invoke-static {v0}, Lcom/vkontakte/android/w;->e(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/w;->e(I)V
 
     .line 34
     :cond_1
@@ -546,7 +546,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v2, v0, v4, v3}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

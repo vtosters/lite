@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field private final C:Lcom/vkontakte/android/api/i;
+.field private final C:Lcom/vtosters/lite/api/i;
 
 .field private final D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -53,13 +53,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Landroid/view/View$OnClickListener;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Landroid/view/View$OnClickListener;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->C:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->C:Lcom/vtosters/lite/api/i;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -79,11 +79,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/profile/adapter/items/CommunityHeaderItem;)Lcom/vkontakte/android/api/i;
+.method public static final synthetic b(Lcom/vk/profile/adapter/items/CommunityHeaderItem;)Lcom/vtosters/lite/api/i;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->C:Lcom/vkontakte/android/api/i;
+    iget-object p0, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->C:Lcom/vtosters/lite/api/i;
 
     return-object p0
 .end method
@@ -123,14 +123,14 @@
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/profile/adapter/items/CommunityHeaderItem;",
             ">;"
         }

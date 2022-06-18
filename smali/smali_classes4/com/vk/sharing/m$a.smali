@@ -314,9 +314,9 @@
 
     invoke-direct {v0, v1}, Lcom/vk/sharing/attachment/AttachmentInfo$b;-><init>(I)V
 
-    new-instance v1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
 
     const-string v2, "attachments"
 

@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/attachments/PollAttachment;",
+        "Lcom/vtosters/lite/attachments/PollAttachment;",
         "Lkotlin/m;",
         ">;"
     }
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -48,7 +48,7 @@
     check-cast v0, Lcom/vk/poll/fragments/PollViewerFragment;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/poll/fragments/PollViewerFragment;->a(Lcom/vk/poll/fragments/PollViewerFragment;Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-static {v0, p1}, Lcom/vk/poll/fragments/PollViewerFragment;->a(Lcom/vk/poll/fragments/PollViewerFragment;Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     return-void
 .end method
@@ -76,7 +76,7 @@
 .method public final h()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "setupPoll(Lcom/vkontakte/android/attachments/PollAttachment;)V"
+    const-string v0, "setupPoll(Lcom/vtosters/lite/attachments/PollAttachment;)V"
 
     return-object v0
 .end method
@@ -85,9 +85,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/poll/fragments/PollViewerFragment$paginationListener$1$onNewData$1;->a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/poll/fragments/PollViewerFragment$paginationListener$1$onNewData$1;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

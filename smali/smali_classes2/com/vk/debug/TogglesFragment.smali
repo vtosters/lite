@@ -547,7 +547,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/debug/TogglesFragment;->G:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, v1}, Lcom/vkontakte/android/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     new-instance v1, Lcom/vk/debug/TogglesFragment$f;
@@ -600,14 +600,14 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v2, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_2
 
@@ -624,7 +624,7 @@
     .line 4
     iget-object v1, p0, Lcom/vk/debug/TogglesFragment;->K:Lcom/vk/debug/TogglesFragment$h;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
 
     goto :goto_1
 

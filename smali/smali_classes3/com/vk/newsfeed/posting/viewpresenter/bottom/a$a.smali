@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PosterPreviewAdapter.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/newsfeed/posting/dto/b;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -45,7 +45,7 @@
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$a;->d:Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$b;
 
@@ -106,7 +106,7 @@
 
     const p2, 0x7f120035
 
-    invoke-virtual {p0, p2}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object p2
 

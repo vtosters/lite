@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private final F:Lcom/vkontakte/android/ui/widget/v;
+.field private final F:Lcom/vtosters/lite/ui/widget/v;
 
 
 # direct methods
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Lcom/vkontakte/android/ui/widget/v;Landroid/view/ViewGroup;)V
+.method private constructor <init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;)V
     .locals 0
 
     .line 2
@@ -61,12 +61,12 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vkontakte/android/ui/widget/v;
+    check-cast p1, Lcom/vtosters/lite/ui/widget/v;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vkontakte/android/ui/widget/v;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vkontakte/android/ui/widget/v;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
     new-instance p2, Lcom/vk/newsfeed/holders/WidgetHolder$1;
 
@@ -77,20 +77,20 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vkontakte/android/ui/widget/v;Landroid/view/ViewGroup;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;Lkotlin/jvm/internal/i;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vkontakte/android/ui/widget/v;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vkontakte/android/ui/widget/v;
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vtosters/lite/ui/widget/v;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vkontakte/android/ui/widget/v;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
     return-object p0
 .end method
@@ -101,9 +101,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vkontakte/android/ui/widget/v;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/WidgetHolder;->F:Lcom/vtosters/lite/ui/widget/v;
 
-    invoke-interface {v0, p1}, Lcom/vkontakte/android/ui/widget/g;->a(Lcom/vk/dto/newsfeed/entries/widget/Widget;)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/ui/widget/g;->a(Lcom/vk/dto/newsfeed/entries/widget/Widget;)V
 
     return-void
 .end method

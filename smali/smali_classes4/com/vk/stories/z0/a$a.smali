@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/z0/a$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoryQuestionsAdapter.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/stories/model/StoryQuestionEntry;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -90,7 +90,7 @@
     move-result-object p1
 
     .line 7
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput p3, p0, Lcom/vk/stories/z0/a$a;->d:I
 
@@ -157,7 +157,7 @@
     move-result-object v3
 
     .line 5
-    iget-object v4, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v4, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v5, "item"
 
@@ -214,7 +214,7 @@
     move-result-object v3
 
     .line 5
-    iget-object v4, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v4, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v5, "item"
 

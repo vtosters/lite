@@ -406,9 +406,9 @@
     if-lez v4, :cond_3
 
     .line 12
-    new-instance v4, Lcom/vkontakte/android/k0/b;
+    new-instance v4, Lcom/vtosters/lite/k0/b;
 
-    invoke-direct {v4, v1, v6}, Lcom/vkontakte/android/k0/b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v4, v1, v6}, Lcom/vtosters/lite/k0/b;-><init>(Landroid/content/Context;I)V
 
     .line 13
     new-instance v6, Lcom/vk/stories/StoryRepliesAndViewersView;
@@ -436,7 +436,7 @@
     invoke-virtual {v6, v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->setMinHeight(I)V
 
     .line 16
-    invoke-virtual {v4, v0}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {v4, v0}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 17
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
@@ -445,7 +445,7 @@
 
     invoke-direct {v0, v7, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v4, v6, v0}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v6, v0}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 18
     invoke-virtual {v4}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -474,9 +474,9 @@
 
     .line 22
     :cond_3
-    new-instance v4, Lcom/vkontakte/android/k0/b;
+    new-instance v4, Lcom/vtosters/lite/k0/b;
 
-    invoke-direct {v4, v1, v6}, Lcom/vkontakte/android/k0/b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v4, v1, v6}, Lcom/vtosters/lite/k0/b;-><init>(Landroid/content/Context;I)V
 
     .line 23
     sget-object v6, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_REPLIES_LIST:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
@@ -523,7 +523,7 @@
     invoke-virtual {v6, v3}, Lcom/vk/stories/StoryRepliesAndViewersView;->setMinHeight(I)V
 
     .line 29
-    invoke-virtual {v4, v3}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 30
     invoke-virtual {v2}, Lcom/vk/dto/stories/model/StoriesContainer;->M1()Z
@@ -555,7 +555,7 @@
     invoke-virtual {v6, v3}, Lcom/vk/stories/StoryRepliesAndViewersView;->setMinHeight(I)V
 
     .line 33
-    invoke-virtual {v4, v3}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 34
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
@@ -574,7 +574,7 @@
 
     invoke-direct {v2, v7, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v4, v6, v2}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v6, v2}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_1
 
@@ -593,14 +593,14 @@
     invoke-virtual {v6, v2}, Lcom/vk/stories/StoryRepliesAndViewersView;->setMinHeight(I)V
 
     .line 38
-    invoke-virtual {v4, v2}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {v4, v2}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 39
     new-instance v3, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v3, v7, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v4, v6, v3}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v6, v3}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     :goto_1
     if-eqz v0, :cond_6
@@ -608,7 +608,7 @@
     .line 40
     new-instance v0, Lcom/vk/stories/view/v1$b;
 
-    invoke-direct {v0, p0, v4}, Lcom/vk/stories/view/v1$b;-><init>(Lcom/vk/stories/view/v1;Lcom/vkontakte/android/k0/b;)V
+    invoke-direct {v0, p0, v4}, Lcom/vk/stories/view/v1$b;-><init>(Lcom/vk/stories/view/v1;Lcom/vtosters/lite/k0/b;)V
 
     .line 41
     new-instance v2, Lcom/vk/common/view/f;
@@ -638,7 +638,7 @@
     invoke-virtual {v6, v8, v8, v8, v0}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 44
-    invoke-virtual {v4, v2}, Lcom/vkontakte/android/k0/b;->a(Landroid/view/View;)V
+    invoke-virtual {v4, v2}, Lcom/vtosters/lite/k0/b;->a(Landroid/view/View;)V
 
     .line 45
     :cond_6

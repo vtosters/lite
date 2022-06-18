@@ -62,14 +62,14 @@
     invoke-static {v1}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 3
-    instance-of v1, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v1, v0, Lcom/vtosters/lite/VKActivity;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_1
 
@@ -99,7 +99,7 @@
     .line 7
     new-instance v12, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;
 
-    invoke-direct {v12, v0, p0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vkontakte/android/VKActivity;Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;)V
+    invoke-direct {v12, v0, p0}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vtosters/lite/VKActivity;Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1;)V
 
     .line 8
     new-instance v13, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$showBuyMusicSubscription$runnable$1$a;

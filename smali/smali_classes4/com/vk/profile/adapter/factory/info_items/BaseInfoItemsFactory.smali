@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
         "Lcom/vk/profile/adapter/b/a<",
         "TT;>;"
@@ -161,7 +161,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/z;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/z;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -171,7 +171,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -189,7 +189,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;->k:Lcom/vk/newsfeed/k0/b/b/i;
 
-    iget-object v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     const-string v2, "profile.profile"
 
@@ -198,7 +198,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/b/b/i;->a(Lcom/vk/dto/user/UserProfile;)V
 
     .line 3
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -209,7 +209,7 @@
     if-nez v0, :cond_4
 
     .line 4
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R:I
 
     const/4 v3, 0x2
 
@@ -224,7 +224,7 @@
 
     .line 5
     :goto_0
-    iget v4, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->T:I
+    iget v4, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->T:I
 
     if-ne v4, v1, :cond_2
 
@@ -237,11 +237,11 @@
 
     .line 6
     :goto_1
-    iget v5, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget v5, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     if-eq v5, v3, :cond_5
 
-    iget-boolean v3, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->V:Z
+    iget-boolean v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->V:Z
 
     if-nez v3, :cond_3
 
@@ -269,7 +269,7 @@
     move-result-object v3
 
     .line 8
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v4
 
@@ -280,7 +280,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;->k:Lcom/vk/newsfeed/k0/b/b/i;
 
-    iget-object v4, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v4, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v5, v4, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -302,7 +302,7 @@
 
     .line 11
     :goto_3
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -341,13 +341,13 @@
 
     .line 13
     :cond_8
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
     if-nez v0, :cond_a
 
-    iget-boolean v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->x1:Z
+    iget-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->x1:Z
 
     if-eqz v0, :cond_9
 
@@ -364,19 +364,19 @@
 
     .line 14
     :goto_6
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v4
 
     if-nez v4, :cond_c
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v4
 
     if-nez v4, :cond_b
 
-    iget p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R:I
+    iget p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R:I
 
     const/4 v4, 0x3
 

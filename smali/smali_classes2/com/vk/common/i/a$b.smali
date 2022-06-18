@@ -1,5 +1,5 @@
 .class final Lcom/vk/common/i/a$b;
-.super Lcom/vkontakte/android/fragments/friends/f;
+.super Lcom/vtosters/lite/fragments/friends/f;
 .source "GlobalSearchSectionHeader.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/fragments/friends/f;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/friends/f;-><init>(Landroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;>;"
     }
@@ -47,19 +47,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;)V
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;->suggestedQuery:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;->suggestedQuery:Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -108,7 +108,7 @@
 
     move-result-object v3
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;->suggestedQuery:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;->suggestedQuery:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3, p1}, Lcom/vk/search/holder/j$a;->a(Landroid/content/Context;Landroid/text/SpannableStringBuilder;Ljava/lang/String;)Landroid/text/SpannableString;
 
@@ -179,9 +179,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/e$a;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/e$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;)V
 
     return-void
 .end method

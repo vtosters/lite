@@ -125,7 +125,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/newsfeed/holders/a1$a;->a:Lcom/vk/newsfeed/holders/a1;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     const p1, 0x7f120369
 

@@ -40,7 +40,7 @@
     .line 1
     new-instance p1, Lcom/vk/navigation/o;
 
-    const-class v0, Lcom/vkontakte/android/fragments/a2;
+    const-class v0, Lcom/vtosters/lite/fragments/a2;
 
     invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
 

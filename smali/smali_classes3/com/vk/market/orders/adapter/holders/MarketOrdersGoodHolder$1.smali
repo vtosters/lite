@@ -59,9 +59,9 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance p1, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance p1, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    sget-object v0, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;->orders:Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    sget-object v0, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->orders:Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     iget-object v1, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder$1;->this$0:Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;
 
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    invoke-direct {p1, v0, v1}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;Lcom/vk/dto/common/Good;)V
+    invoke-direct {p1, v0, v1}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;Lcom/vk/dto/common/Good;)V
 
     iget-object v0, p0, Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder$1;->this$0:Lcom/vk/market/orders/adapter/holders/MarketOrdersGoodHolder;
 

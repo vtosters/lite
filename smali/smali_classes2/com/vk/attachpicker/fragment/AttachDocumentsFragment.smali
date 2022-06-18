@@ -5,7 +5,7 @@
 # interfaces
 .implements Lcom/vk/core/util/k0;
 .implements Lcom/vk/attachpicker/base/d;
-.implements Lcom/vkontakte/android/ui/x$j;
+.implements Lcom/vtosters/lite/ui/x$j;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -30,7 +30,7 @@
         "Lcom/vk/attachpicker/base/d<",
         "Lcom/vk/api/base/Document;",
         ">;",
-        "Lcom/vkontakte/android/ui/x$j;",
+        "Lcom/vtosters/lite/ui/x$j;",
         "Landroid/view/View$OnClickListener;"
     }
 .end annotation
@@ -137,18 +137,18 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+.method public static final synthetic a(Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    invoke-direct {p0, p1}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->a(Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+.method private final a(Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;)Lcom/vk/stat/scheme/SchemeStat$EventScreen;
     .locals 1
 
     .line 11
@@ -332,9 +332,9 @@
     invoke-direct {p0, v0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->q0(I)V
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/api/execute/DocsGetTypes;
+    new-instance v0, Lcom/vtosters/lite/api/execute/DocsGetTypes;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -342,7 +342,7 @@
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/api/execute/DocsGetTypes;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes;-><init>(I)V
 
     const/4 v1, 0x0
 
@@ -587,7 +587,7 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vkontakte/android/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 6
@@ -983,7 +983,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     const/4 v3, 0x0
 
@@ -1269,7 +1269,7 @@
 
     .line 17
     :cond_4
-    invoke-virtual {p0, p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a(Lcom/vkontakte/android/ui/x$j;)V
+    invoke-virtual {p0, p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a(Lcom/vtosters/lite/ui/x$j;)V
 
     .line 18
     invoke-direct {p0}, Lcom/vk/attachpicker/fragment/AttachDocumentsFragment;->j5()V

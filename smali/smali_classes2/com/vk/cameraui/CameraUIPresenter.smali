@@ -3252,7 +3252,7 @@
     if-eqz v6, :cond_7
 
     .line 342
-    sget-object v2, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object v2, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     const/4 v7, 0x0
 
@@ -3266,7 +3266,7 @@
 
     move v4, p3
 
-    invoke-static/range {v2 .. v9}, Lcom/vkontakte/android/im/i;->a(Lcom/vkontakte/android/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v2 .. v9}, Lcom/vtosters/lite/im/i;->a(Lcom/vtosters/lite/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;ILjava/lang/Object;)Z
 
     goto :goto_5
 
@@ -5580,7 +5580,7 @@
     const-string v0, "stories_camera_screen"
 
     .line 3
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -5593,7 +5593,7 @@
 
     const-string v2, "action"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 5
     new-instance v1, Lorg/json/JSONArray;
@@ -5648,10 +5648,10 @@
     const-string v2, "action_facts"
 
     .line 12
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 13
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->e()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -5727,7 +5727,7 @@
     const-string v0, "stories_open_camera"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -5749,7 +5749,7 @@
     const-string v1, "other"
 
     .line 3
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     goto :goto_0
 
@@ -5761,11 +5761,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 5
     :goto_0
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->e()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -11451,7 +11451,7 @@
     invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    sget-object v4, Lcom/vkontakte/android/actionlinks/b/b;->a:Lcom/vkontakte/android/actionlinks/b/b;
+    sget-object v4, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
 
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIPresenter;->f()I
 
@@ -11459,7 +11459,7 @@
 
     const-string v6, "live"
 
-    invoke-virtual {v4, v5, v6}, Lcom/vkontakte/android/actionlinks/b/b;->a(ILjava/lang/String;)Lc/a/m;
+    invoke-virtual {v4, v5, v6}, Lcom/vtosters/lite/actionlinks/b/b;->a(ILjava/lang/String;)Lc/a/m;
 
     move-result-object v4
 
@@ -12465,7 +12465,7 @@
     .locals 13
 
     .line 2
-    sget-object v0, Lcom/vkontakte/android/actionlinks/AL;->a:Lcom/vkontakte/android/actionlinks/AL$Companion;
+    sget-object v0, Lcom/vtosters/lite/actionlinks/AL;->a:Lcom/vtosters/lite/actionlinks/AL$Companion;
 
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIPresenter;->getView()Lcom/vk/cameraui/CameraUI$e;
 
@@ -12598,7 +12598,7 @@
     move-object v11, v12
 
     .line 8
-    invoke-static/range {v0 .. v11}, Lcom/vkontakte/android/actionlinks/AL$Companion;->a(Lcom/vkontakte/android/actionlinks/AL$Companion;Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;ILjava/lang/Object;)Lcom/vkontakte/android/actionlinks/views/fragments/show/a;
+    invoke-static/range {v0 .. v11}, Lcom/vtosters/lite/actionlinks/AL$Companion;->a(Lcom/vtosters/lite/actionlinks/AL$Companion;Landroid/content/Context;ILjava/lang/String;ZZZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnDismissListener;ILjava/lang/Object;)Lcom/vtosters/lite/actionlinks/views/fragments/show/a;
 
     return-void
 .end method
@@ -14112,7 +14112,7 @@
     .locals 5
 
     .line 2
-    sget-object v0, Lcom/vkontakte/android/actionlinks/AL;->a:Lcom/vkontakte/android/actionlinks/AL$Companion;
+    sget-object v0, Lcom/vtosters/lite/actionlinks/AL;->a:Lcom/vtosters/lite/actionlinks/AL$Companion;
 
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIPresenter;->getView()Lcom/vk/cameraui/CameraUI$e;
 
@@ -14152,7 +14152,7 @@
     move-result-object v4
 
     .line 6
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vkontakte/android/actionlinks/AL$Companion;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;ILcom/vk/cameraui/utils/CameraTracker;)Lcom/vkontakte/android/actionlinks/views/fragments/onboard/a;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vtosters/lite/actionlinks/AL$Companion;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;ILcom/vk/cameraui/utils/CameraTracker;)Lcom/vtosters/lite/actionlinks/views/fragments/onboard/a;
 
     return-void
 .end method

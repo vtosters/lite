@@ -61,13 +61,13 @@
     .line 3
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
 
-    invoke-static {p1}, Lcom/vk/music/view/x/q;->a(Lcom/vk/music/view/x/q;)Lcom/vkontakte/android/ui/v;
+    invoke-static {p1}, Lcom/vk/music/view/x/q;->a(Lcom/vk/music/view/x/q;)Lcom/vtosters/lite/ui/v;
 
     move-result-object p1
 
     const/16 v0, 0x8
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/v;->b(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/v;->b(I)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
@@ -76,7 +76,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;I)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
@@ -87,12 +87,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;I)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     .line 7
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
@@ -123,20 +123,20 @@
     .line 9
     iget-object v0, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
 
-    invoke-static {v0}, Lcom/vk/music/view/x/q;->a(Lcom/vk/music/view/x/q;)Lcom/vkontakte/android/ui/v;
+    invoke-static {v0}, Lcom/vk/music/view/x/q;->a(Lcom/vk/music/view/x/q;)Lcom/vtosters/lite/ui/v;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
 
-    invoke-static {p1}, Lcom/vk/music/view/x/q;->a(Lcom/vk/music/view/x/q;)Lcom/vkontakte/android/ui/v;
+    invoke-static {p1}, Lcom/vk/music/view/x/q;->a(Lcom/vk/music/view/x/q;)Lcom/vtosters/lite/ui/v;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/ui/v;->b(I)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/v;->b(I)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
@@ -147,7 +147,7 @@
 
     const/16 v0, 0x8
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;I)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/music/view/x/q$b;->b:Lcom/vk/music/view/x/q;
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;I)V
 
     return-void
 .end method

@@ -1332,7 +1332,7 @@
     const v0, 0x7f080376
 
     .line 7
-    invoke-static {p2, v0}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 8
     invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z

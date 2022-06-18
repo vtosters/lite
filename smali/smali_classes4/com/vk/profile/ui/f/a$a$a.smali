@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/f/a$a;-><init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;Lcom/vkontakte/android/k0/b;)V
+    value = Lcom/vk/profile/ui/f/a$a;-><init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;Lcom/vtosters/lite/k0/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

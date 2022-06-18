@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/NewsEntryActionsAdapter$onCreateViewHolder$1;->$holder:Lcom/vk/newsfeed/a;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 

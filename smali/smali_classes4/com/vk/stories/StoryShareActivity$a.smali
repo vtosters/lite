@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/StoryShareActivity$a;
-.super Lcom/vkontakte/android/SendActivity$d;
+.super Lcom/vtosters/lite/SendActivity$d;
 .source "StoryShareActivity.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/SendActivity$d<",
+        "Lcom/vtosters/lite/SendActivity$d<",
         "Lcom/vk/stat/scheme/SchemeStat$EventScreen;",
         ">;"
     }
@@ -37,12 +37,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stories/StoryShareActivity;Lcom/vkontakte/android/SendActivity$SharedItems;)V
+.method public constructor <init>(Lcom/vk/stories/StoryShareActivity;Lcom/vtosters/lite/SendActivity$SharedItems;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/SendActivity$SharedItems;",
+            "Lcom/vtosters/lite/SendActivity$SharedItems;",
             ")V"
         }
     .end annotation
@@ -52,7 +52,7 @@
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_EDITOR:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-direct {p0, p1, v0}, Lcom/vkontakte/android/SendActivity$d;-><init>(Lcom/vkontakte/android/SendActivity;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/SendActivity$d;-><init>(Lcom/vtosters/lite/SendActivity;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -77,14 +77,14 @@
     move-result-object v0
 
     .line 4
-    check-cast v0, Lcom/vkontakte/android/SendActivity$j;
+    check-cast v0, Lcom/vtosters/lite/SendActivity$j;
 
     const-string v1, "it"
 
     .line 5
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/SendActivity$j;->a()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity$j;->a()I
 
     move-result v1
 
@@ -98,7 +98,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/SendActivity$j;->b()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity$j;->b()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     .line 6
     :cond_1
-    invoke-virtual {v0}, Lcom/vkontakte/android/SendActivity$j;->a()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity$j;->a()I
 
     move-result v1
 
@@ -122,7 +122,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/SendActivity$j;->b()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity$j;->b()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -193,10 +193,10 @@
     .line 4
     iget-object v0, p0, Lcom/vk/stories/StoryShareActivity$a;->d:Lcom/vk/stories/StoryShareActivity;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/SendActivity;->finish()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity;->finish()V
 
     .line 5
-    iget-object v0, p0, Lcom/vkontakte/android/SendActivity$d;->a:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
+    iget-object v0, p0, Lcom/vtosters/lite/SendActivity$d;->a:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     const-string v1, "destinationScreen"
 

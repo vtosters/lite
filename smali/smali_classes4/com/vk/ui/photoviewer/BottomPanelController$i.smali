@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/h$a;",
+        "Lcom/vtosters/lite/api/wall/h$a;",
         ">;"
     }
 .end annotation
@@ -58,13 +58,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/h$a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/h$a;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController$i;->b:Lcom/vk/dto/photo/Photo;
 
-    iget p1, p1, Lcom/vkontakte/android/api/wall/h$a;->a:I
+    iget p1, p1, Lcom/vtosters/lite/api/wall/h$a;->a:I
 
     iput p1, v0, Lcom/vk/dto/photo/Photo;->f:I
 
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/h$a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/h$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/BottomPanelController$i;->a(Lcom/vkontakte/android/api/wall/h$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/BottomPanelController$i;->a(Lcom/vtosters/lite/api/wall/h$a;)V
 
     return-void
 .end method

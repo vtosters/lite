@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->b:Ljava/lang/String;
 
-    iput-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->m:Ljava/lang/String;
+    iput-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->m:Ljava/lang/String;
 
     .line 2
     :cond_0
@@ -93,14 +93,14 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {p1}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->c()Lcom/vk/auth/l;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
 
     move-result-object p1
 

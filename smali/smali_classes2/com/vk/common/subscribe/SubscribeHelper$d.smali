@@ -76,12 +76,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/Friends;->a(II)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Friends;->a(II)V
 
     .line 3
     iget p1, p0, Lcom/vk/common/subscribe/SubscribeHelper$d;->b:I
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->f(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->f(I)V
 
     return-void
 .end method

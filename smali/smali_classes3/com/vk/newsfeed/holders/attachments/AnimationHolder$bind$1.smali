@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->a(Lcom/vkontakte/android/attachments/DocumentAttachment;F)V
+    value = Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->a(Lcom/vtosters/lite/attachments/DocumentAttachment;F)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

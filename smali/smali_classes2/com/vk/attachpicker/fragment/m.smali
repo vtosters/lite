@@ -10,7 +10,7 @@
 .method static synthetic constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->values()[Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    invoke-static {}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->values()[Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     move-result-object v0
 
@@ -22,7 +22,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ALL:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ALL:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -34,7 +34,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->TEXTS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->TEXTS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -46,7 +46,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ARCHIVES:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ARCHIVES:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -58,7 +58,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->GIFS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->GIFS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -70,7 +70,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->IMAGES:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->IMAGES:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -82,7 +82,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->MUSIC:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->MUSIC:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -94,7 +94,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->VIDEOS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->VIDEOS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -106,7 +106,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->EBOOKS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->EBOOKS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -118,7 +118,7 @@
 
     sget-object v0, Lcom/vk/attachpicker/fragment/m;->$EnumSwitchMapping$0:[I
 
-    sget-object v1, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->OTHERS:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v1, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->OTHERS:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

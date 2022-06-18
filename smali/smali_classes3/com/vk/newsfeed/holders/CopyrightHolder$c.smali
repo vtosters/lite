@@ -247,7 +247,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$c;->a:Lcom/vk/newsfeed/holders/CopyrightHolder;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v3
 

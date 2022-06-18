@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/common/VideoFile;",
-        "Lcom/vkontakte/android/attachments/VideoAttachment;",
+        "Lcom/vtosters/lite/attachments/VideoAttachment;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/VideoFile;)Lcom/vkontakte/android/attachments/VideoAttachment;
+.method public final a(Lcom/vk/dto/common/VideoFile;)Lcom/vtosters/lite/attachments/VideoAttachment;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/common/VideoFile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachVideos$filtered$2;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachVideos$filtered$2;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object p1
 

@@ -64,14 +64,14 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/data/c$g;->a:Lcom/vk/profile/data/c;
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/c;->a()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/profile/data/c;->a()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
     .line 4
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_8
 
@@ -100,7 +100,7 @@
 
     neg-int p2, p2
 
-    invoke-static {p2}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {p2}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object p2
 
@@ -123,7 +123,7 @@
     :cond_1
     new-instance p2, Lcom/vk/dto/stories/model/SimpleStoriesContainer;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -219,7 +219,7 @@
 
     iget v3, v3, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v3}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {v3}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result v3
 

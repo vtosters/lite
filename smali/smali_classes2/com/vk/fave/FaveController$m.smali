@@ -112,9 +112,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/a;)V
 
     .line 6
-    sget-object p1, Lcom/vkontakte/android/MenuCounterUpdater;->e:Lcom/vkontakte/android/MenuCounterUpdater;
+    sget-object p1, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/MenuCounterUpdater;->a()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/MenuCounterUpdater;->a()V
 
     goto :goto_0
 

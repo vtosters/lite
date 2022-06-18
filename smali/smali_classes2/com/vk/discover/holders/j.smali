@@ -1,5 +1,5 @@
 .class public final Lcom/vk/discover/holders/j;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "HashTagsHolder.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/discover/HashTag;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -30,7 +30,7 @@
     const v0, 0x7f0d018f
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -133,7 +133,7 @@
     :cond_1
     const/4 p1, 0x1
 
-    invoke-static {v0, v1, p1}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, p1}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     return-void
 .end method
@@ -155,14 +155,14 @@
     .line 1
     sget-object v0, Lcom/vk/discover/holders/d;->d:Lcom/vk/discover/holders/d$a;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/discover/HashTag;
 
     invoke-virtual {v0, v1}, Lcom/vk/discover/holders/d$a;->a(Lcom/vk/dto/discover/HashTag;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/HashTag;
 

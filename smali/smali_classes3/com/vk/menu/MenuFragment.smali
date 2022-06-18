@@ -1072,7 +1072,7 @@
     sub-int/2addr v1, v3
 
     .line 6
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
@@ -1315,7 +1315,7 @@
     invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->b5()V
 
     .line 6
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -1722,7 +1722,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v2, v0, v4, v3}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

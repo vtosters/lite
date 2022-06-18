@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Lcom/vk/dto/common/AttachmentWithMedia;",
-        "Lcom/vkontakte/android/attachments/PhotoAttachment;",
+        "Lcom/vtosters/lite/attachments/PhotoAttachment;",
         ">;"
     }
 .end annotation
@@ -56,18 +56,18 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/AttachmentWithMedia;)Lcom/vkontakte/android/attachments/PhotoAttachment;
+.method public final a(Lcom/vk/dto/common/AttachmentWithMedia;)Lcom/vtosters/lite/attachments/PhotoAttachment;
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     return-object p1
 .end method
@@ -78,7 +78,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/common/AttachmentWithMedia;
 
-    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$1;->a(Lcom/vk/dto/common/AttachmentWithMedia;)Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$1;->a(Lcom/vk/dto/common/AttachmentWithMedia;)Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object p1
 

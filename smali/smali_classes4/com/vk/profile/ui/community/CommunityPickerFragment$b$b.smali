@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

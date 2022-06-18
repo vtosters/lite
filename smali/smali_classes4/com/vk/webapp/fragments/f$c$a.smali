@@ -46,7 +46,7 @@
 
     move-result-object v1
 
-    const-class v2, Lcom/vkontakte/android/ChangePasswordActivity;
+    const-class v2, Lcom/vtosters/lite/ChangePasswordActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

@@ -175,17 +175,17 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 2
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/profile/ui/header/BaseHeaderView;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-super {p0, p1}, Lcom/vk/profile/ui/header/BaseHeaderView;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 3
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -195,19 +195,19 @@
 
     if-eqz v0, :cond_1
 
-    iget v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vtosters/lite/api/i;)Z
 
     move-result v0
 
@@ -232,7 +232,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {p1, v1, v0}, Lcom/vk/profile/utils/b;->a(Lcom/vkontakte/android/api/i;ZZ)Ljava/util/List;
+    invoke-static {p1, v1, v0}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;ZZ)Ljava/util/List;
 
     move-result-object p1
 
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+.method public final a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
     .locals 3
 
     .line 8
@@ -342,7 +342,7 @@
 
     .line 18
     :cond_3
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a()Z
 
     move-result p2
 
@@ -374,7 +374,7 @@
 
     if-eqz p2, :cond_6
 
-    iget-object p2, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->z:Lcom/vk/dto/photo/Photo;
+    iget-object p2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->z:Lcom/vk/dto/photo/Photo;
 
     if-eqz p2, :cond_6
 
@@ -387,7 +387,7 @@
 
     new-instance v0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;-><init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;-><init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vtosters/lite/api/i;)V
 
     invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
 

@@ -18,7 +18,7 @@
 .method public static a(Lcom/vk/wall/e;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/vkontakte/android/ui/b0/m/e$a;->a(Lcom/vkontakte/android/ui/b0/m/e;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p0, p1}, Lcom/vtosters/lite/ui/b0/m/e$a;->a(Lcom/vtosters/lite/ui/b0/m/e;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     return-object p1
 .end method
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/wall/e;Lcom/vkontakte/android/q;)V
+.method public static a(Lcom/vk/wall/e;Lcom/vtosters/lite/q;)V
     .locals 0
 
     return-void
@@ -76,7 +76,7 @@
 .method public static a(Lcom/vk/wall/e;Lcom/vk/wall/b;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/vkontakte/android/ui/b0/m/e$a;->a(Lcom/vkontakte/android/ui/b0/m/e;Lcom/vk/wall/b;)Z
+    invoke-static {p0, p1}, Lcom/vtosters/lite/ui/b0/m/e$a;->a(Lcom/vtosters/lite/ui/b0/m/e;Lcom/vk/wall/b;)Z
 
     move-result p0
 

@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/ui/b0/i;
+.field final synthetic a:Lcom/vtosters/lite/ui/b0/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/ui/b0/i;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/b0/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/ui/header/a$a;->a:Lcom/vkontakte/android/ui/b0/i;
+    iput-object p1, p0, Lcom/vk/profile/ui/header/a$a;->a:Lcom/vtosters/lite/ui/b0/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/profile/ui/header/a$a;->a:Lcom/vkontakte/android/ui/b0/i;
+    iget-object p1, p0, Lcom/vk/profile/ui/header/a$a;->a:Lcom/vtosters/lite/ui/b0/i;
 
     check-cast p1, Lme/grishka/appkit/views/UsableRecyclerView$g;
 

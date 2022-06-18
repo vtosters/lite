@@ -24,16 +24,16 @@
 
 .field final synthetic c:Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;
 
-.field final synthetic d:Lcom/vkontakte/android/attachments/DocumentAttachment;
+.field final synthetic d:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;Lcom/vkontakte/android/attachments/DocumentAttachment;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;Lcom/vtosters/lite/attachments/DocumentAttachment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->c:Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->d:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->d:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,9 +47,9 @@
 
     if-eqz p1, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->z1()Lcom/vk/libvideo/autoplay/a;
 
     move-result-object p1
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->d:Lcom/vkontakte/android/attachments/DocumentAttachment;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->d:Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;->e:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->e:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -159,7 +159,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$b;->c:Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 

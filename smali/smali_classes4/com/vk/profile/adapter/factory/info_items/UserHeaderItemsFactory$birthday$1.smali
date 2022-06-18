@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;"
     }
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
     .locals 17
 
     move-object/from16 v0, p0
@@ -58,7 +58,7 @@
     move-object/from16 v1, p1
 
     .line 1
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -77,9 +77,9 @@
     move-result v2
 
     .line 3
-    iget v4, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->s:I
+    iget v4, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->s:I
 
-    iget v5, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->t:I
+    iget v5, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->t:I
 
     invoke-static {v4, v5}, Lcom/vk/core/util/i1;->a(II)I
 
@@ -90,7 +90,7 @@
     .line 4
     iget-object v2, v0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v2, v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->c(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/lang/CharSequence;
+    invoke-static {v2, v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->c(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -101,7 +101,7 @@
 
     new-instance v6, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$a;
 
-    invoke-direct {v6, v0, v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v6, v0, v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     const/4 v7, 0x0
 
@@ -138,7 +138,7 @@
     const-string v2, "wishes"
 
     .line 6
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v2
 
@@ -153,7 +153,7 @@
     :goto_0
     iget-object v2, v0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v2, v1, v6}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Z)Ljava/lang/CharSequence;
+    invoke-static {v2, v1, v6}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)Ljava/lang/CharSequence;
 
     move-result-object v9
 
@@ -164,7 +164,7 @@
 
     new-instance v10, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;
 
-    invoke-direct {v10, v0, v1, v6}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;Lcom/vkontakte/android/api/ExtendedUserProfile;Z)V
+    invoke-direct {v10, v0, v1, v6}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1$b;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
 
     const/4 v11, 0x0
 
@@ -196,9 +196,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$birthday$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/BaseInfoItem;
 
     move-result-object p1
 

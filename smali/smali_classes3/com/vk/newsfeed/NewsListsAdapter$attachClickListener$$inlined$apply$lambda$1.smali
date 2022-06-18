@@ -73,18 +73,18 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$attachClickListener$$inlined$apply$lambda$1;->this$0:Lcom/vk/newsfeed/NewsListsAdapter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/NewsListsAdapter;->c(Lcom/vk/newsfeed/NewsListsAdapter;)Lcom/vkontakte/android/NewsfeedList;
+    invoke-static {v0}, Lcom/vk/newsfeed/NewsListsAdapter;->c(Lcom/vk/newsfeed/NewsListsAdapter;)Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$attachClickListener$$inlined$apply$lambda$1;->this$0:Lcom/vk/newsfeed/NewsListsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vkontakte/android/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/newsfeed/NewsListsAdapter;->a(Lcom/vk/newsfeed/NewsListsAdapter;Lcom/vkontakte/android/NewsfeedList;)V
+    invoke-static {v1, v2}, Lcom/vk/newsfeed/NewsListsAdapter;->a(Lcom/vk/newsfeed/NewsListsAdapter;Lcom/vtosters/lite/NewsfeedList;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$attachClickListener$$inlined$apply$lambda$1;->this$0:Lcom/vk/newsfeed/NewsListsAdapter;
@@ -95,13 +95,13 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vkontakte/android/NewsfeedList;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/r;->b()Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object p1
 
     iget-object v2, p0, Lcom/vk/newsfeed/NewsListsAdapter$attachClickListener$$inlined$apply$lambda$1;->this$0:Lcom/vk/newsfeed/NewsListsAdapter;
 
-    invoke-static {v2}, Lcom/vk/newsfeed/NewsListsAdapter;->c(Lcom/vk/newsfeed/NewsListsAdapter;)Lcom/vkontakte/android/NewsfeedList;
+    invoke-static {v2}, Lcom/vk/newsfeed/NewsListsAdapter;->c(Lcom/vk/newsfeed/NewsListsAdapter;)Lcom/vtosters/lite/NewsfeedList;
 
     move-result-object v2
 
@@ -111,7 +111,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-interface {v1, p1, v0}, Lcom/vk/newsfeed/NewsListsAdapter$d;->a(Lcom/vkontakte/android/NewsfeedList;Z)V
+    invoke-interface {v1, p1, v0}, Lcom/vk/newsfeed/NewsListsAdapter$d;->a(Lcom/vtosters/lite/NewsfeedList;Z)V
 
     :cond_0
     return-void

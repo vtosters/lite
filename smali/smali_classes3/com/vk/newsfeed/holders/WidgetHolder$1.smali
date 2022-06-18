@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vkontakte/android/ui/widget/v;Landroid/view/ViewGroup;)V
+    value = Lcom/vk/newsfeed/holders/WidgetHolder;-><init>(Lcom/vtosters/lite/ui/widget/v;Landroid/view/ViewGroup;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/WidgetHolder$1;->this$0:Lcom/vk/newsfeed/holders/WidgetHolder;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/holders/WidgetHolder;->a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vkontakte/android/ui/widget/v;
+    invoke-static {v0}, Lcom/vk/newsfeed/holders/WidgetHolder;->a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vtosters/lite/ui/widget/v;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/WidgetHolder$1;->this$0:Lcom/vk/newsfeed/holders/WidgetHolder;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/holders/WidgetHolder;->a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vkontakte/android/ui/widget/v;
+    invoke-static {v0}, Lcom/vk/newsfeed/holders/WidgetHolder;->a(Lcom/vk/newsfeed/holders/WidgetHolder;)Lcom/vtosters/lite/ui/widget/v;
 
     move-result-object v0
 

@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)V
+.method public final a(Lcom/vtosters/lite/api/i;)V
     .locals 2
 
     .line 1
@@ -62,7 +62,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->b:Landroid/location/Location;
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/location/Location;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/location/Location;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->a:Lcom/vk/profile/presenter/CommunityPresenter;
@@ -71,7 +71,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->b(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vkontakte/android/api/i;)V
+    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->b(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/i;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->a:Lcom/vk/profile/presenter/CommunityPresenter;
@@ -97,9 +97,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$k;->a(Lcom/vkontakte/android/api/i;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$k;->a(Lcom/vtosters/lite/api/i;)V
 
     return-void
 .end method

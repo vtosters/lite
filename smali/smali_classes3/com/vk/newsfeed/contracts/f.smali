@@ -101,7 +101,7 @@
 .method public abstract d(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 .end method
 
-.method public abstract e()Lcom/vkontakte/android/ui/f0/a;
+.method public abstract e()Lcom/vtosters/lite/ui/f0/a;
 .end method
 
 .method public abstract e(I)V

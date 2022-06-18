@@ -1,5 +1,5 @@
 .class final Lcom/vk/profile/adapter/items/f$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CommunityAppButtonItem.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/f;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$f;"
@@ -48,7 +48,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/items/f$a;->e:Lcom/vk/profile/adapter/items/f;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     const p1, 0x1020014
 
@@ -159,7 +159,7 @@
     .line 3
     sget-object v2, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -175,7 +175,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/profile/adapter/items/f;
 

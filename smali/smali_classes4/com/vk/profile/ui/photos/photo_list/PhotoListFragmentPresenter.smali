@@ -255,7 +255,7 @@
 
     iget-object v2, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->d:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter$receiver$1;
 
-    const-string v3, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v3, "com.vtosters.lite.permission.ACCESS_DATA"
 
     const/4 v4, 0x0
 

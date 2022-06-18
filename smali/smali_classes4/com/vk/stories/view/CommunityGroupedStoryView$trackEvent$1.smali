@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/data/n$l;",
+        "Lcom/vtosters/lite/data/n$l;",
         "Lkotlin/m;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/n$l;)V
     .locals 2
 
     .line 1
@@ -54,7 +54,7 @@
 
     const-string v1, "group_feed"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/stories/util/m;->a(Lcom/vkontakte/android/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p1, v1, v0}, Lcom/vk/stories/util/m;->a(Lcom/vtosters/lite/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -63,9 +63,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$1;->a(Lcom/vkontakte/android/data/n$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$1;->a(Lcom/vtosters/lite/data/n$l;)V
 
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
 

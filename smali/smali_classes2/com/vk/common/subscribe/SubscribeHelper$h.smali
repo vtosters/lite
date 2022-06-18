@@ -66,7 +66,7 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/data/Friends;->a(II)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/data/Friends;->a(II)V
 
     return-void
 .end method

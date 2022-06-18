@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/geo/d/b;
-.super Lcom/vkontakte/android/ui/adapters/a;
+.super Lcom/vtosters/lite/ui/adapters/a;
 .source "GeoNewsMergeAdapter.kt"
 
 
@@ -12,7 +12,7 @@
     new-array v0, v0, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
 .end method

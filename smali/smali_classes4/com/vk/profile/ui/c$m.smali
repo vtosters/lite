@@ -1,5 +1,5 @@
 .class Lcom/vk/profile/ui/c$m;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "BaseProfileFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/c$m;->c:Lcom/vk/profile/ui/c;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -54,9 +54,9 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v4, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v4, v4, Lcom/vkontakte/android/api/ExtendedUserProfile;->b:Ljava/lang/String;
+    iget-object v4, v4, Lcom/vtosters/lite/api/ExtendedUserProfile;->b:Ljava/lang/String;
 
     aput-object v4, v3, v1
 
@@ -84,9 +84,9 @@
     .line 5
     iget-object v0, p0, Lcom/vk/profile/ui/c$m;->c:Lcom/vk/profile/ui/c;
 
-    iget-object v0, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, v0, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iput-boolean v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->d0:Z
+    iput-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->d0:Z
 
     return-void
 .end method

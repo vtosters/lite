@@ -31,7 +31,7 @@
 
 .field private final h:Landroid/app/PendingIntent;
 
-.field private final i:Lcom/vkontakte/android/NotificationUtils$Type;
+.field private final i:Lcom/vtosters/lite/NotificationUtils$Type;
 
 .field private final j:Ljava/lang/String;
 
@@ -200,9 +200,9 @@
     iput-object p2, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->g:Ljava/lang/CharSequence;
 
     .line 8
-    sget-object p2, Lcom/vkontakte/android/NotificationUtils$Type;->Default:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object p2, Lcom/vtosters/lite/NotificationUtils$Type;->Default:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    iput-object p2, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->i:Lcom/vkontakte/android/NotificationUtils$Type;
+    iput-object p2, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->i:Lcom/vtosters/lite/NotificationUtils$Type;
 
     .line 9
     iget-object p2, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->r:Lcom/vk/pushes/notifications/base/SimpleNotification$b;
@@ -1364,11 +1364,11 @@
     .line 52
     iget-object v0, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->q:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/SimpleNotification;->s()Lcom/vkontakte/android/NotificationUtils$Type;
+    invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/SimpleNotification;->s()Lcom/vtosters/lite/NotificationUtils$Type;
 
     move-result-object v3
 
-    invoke-static {v0, v4, v3, v2, v1}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Landroidx/core/app/NotificationCompat$Builder;Lcom/vkontakte/android/NotificationUtils$Type;ZZ)V
+    invoke-static {v0, v4, v3, v2, v1}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Landroidx/core/app/NotificationCompat$Builder;Lcom/vtosters/lite/NotificationUtils$Type;ZZ)V
 
     goto :goto_c
 
@@ -1376,7 +1376,7 @@
     :cond_16
     iget-object v0, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->q:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/SimpleNotification;->s()Lcom/vkontakte/android/NotificationUtils$Type;
+    invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/SimpleNotification;->s()Lcom/vtosters/lite/NotificationUtils$Type;
 
     move-result-object v1
 
@@ -1388,7 +1388,7 @@
 
     move-result v3
 
-    invoke-static {v0, v4, v1, v2, v3}, Lcom/vkontakte/android/NotificationUtils;->a(Landroid/content/Context;Landroidx/core/app/NotificationCompat$Builder;Lcom/vkontakte/android/NotificationUtils$Type;ZZ)V
+    invoke-static {v0, v4, v1, v2, v3}, Lcom/vtosters/lite/NotificationUtils;->a(Landroid/content/Context;Landroidx/core/app/NotificationCompat$Builder;Lcom/vtosters/lite/NotificationUtils$Type;ZZ)V
 
     .line 54
     :goto_c
@@ -1722,11 +1722,11 @@
     return v0
 .end method
 
-.method protected s()Lcom/vkontakte/android/NotificationUtils$Type;
+.method protected s()Lcom/vtosters/lite/NotificationUtils$Type;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->i:Lcom/vkontakte/android/NotificationUtils$Type;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/base/SimpleNotification;->i:Lcom/vtosters/lite/NotificationUtils$Type;
 
     return-object v0
 .end method

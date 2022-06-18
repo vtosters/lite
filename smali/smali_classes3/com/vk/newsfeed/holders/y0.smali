@@ -150,17 +150,17 @@
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 19
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->e:I
+    iget v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->e:I
 
     const-string v2, "pid"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const-string v0, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v0, "com.vtosters.lite.permission.ACCESS_DATA"
 
     .line 20
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
@@ -198,17 +198,17 @@
     .line 2
     new-instance v1, Lcom/vk/api/photos/b;
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/vkontakte/android/attachments/PhotoAttachment;->f:I
+    iget v2, v2, Lcom/vtosters/lite/attachments/PhotoAttachment;->f:I
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v3
 
-    iget v3, v3, Lcom/vkontakte/android/attachments/PhotoAttachment;->e:I
+    iget v3, v3, Lcom/vtosters/lite/attachments/PhotoAttachment;->e:I
 
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->v1()I
 
@@ -226,7 +226,7 @@
     move-result-object v3
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -275,13 +275,13 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/w;->l()I
+    invoke-static {}, Lcom/vtosters/lite/w;->l()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-static {v0}, Lcom/vkontakte/android/w;->l(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/w;->l(I)V
 
     return-void
 .end method
@@ -297,17 +297,17 @@
     .line 2
     new-instance v1, Lcom/vk/api/photos/z;
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/vkontakte/android/attachments/PhotoAttachment;->f:I
+    iget v2, v2, Lcom/vtosters/lite/attachments/PhotoAttachment;->f:I
 
-    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->t1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v3
 
-    iget v3, v3, Lcom/vkontakte/android/attachments/PhotoAttachment;->e:I
+    iget v3, v3, Lcom/vtosters/lite/attachments/PhotoAttachment;->e:I
 
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/TagConfirmation;->v1()I
 
@@ -325,7 +325,7 @@
     move-result-object v3
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -441,7 +441,7 @@
 
     aput-object v3, v4, v5
 
-    invoke-virtual {p0, v2, v4}, Lcom/vkontakte/android/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v4}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -458,13 +458,13 @@
 
     move-result v3
 
-    const-class v4, Lcom/vkontakte/android/v;
+    const-class v4, Lcom/vtosters/lite/v;
 
     invoke-interface {v2, v5, v3, v4}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, [Lcom/vkontakte/android/v;
+    check-cast v3, [Lcom/vtosters/lite/v;
 
     .line 11
     new-instance v4, Lcom/vk/core/ui/Font$b;
@@ -529,11 +529,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 4
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/TagConfirmation;
 
@@ -547,7 +547,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/holders/y0;->K:Lcom/vk/dto/newsfeed/TagConfirmation;
 
     .line 5
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method

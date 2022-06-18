@@ -85,7 +85,7 @@
         value = {
             "Lkotlin/jvm/b/c<",
             "-",
-            "Lcom/vkontakte/android/attachments/PollAttachment;",
+            "Lcom/vtosters/lite/attachments/PollAttachment;",
             "-",
             "Ljava/lang/String;",
             "Lkotlin/m;",
@@ -158,7 +158,7 @@
 
 .field private e:I
 
-.field private final e0:Lcom/vkontakte/android/attachments/PollAttachment;
+.field private final e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
 .field private f:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -614,7 +614,7 @@
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Lcom/vkontakte/android/attachments/PollAttachment;IZJ)V
+.method public constructor <init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJ)V
     .locals 0
 
     .line 1
@@ -624,7 +624,7 @@
 
     iput-object p2, p0, Lcom/vk/poll/fragments/PollEditorScreen;->d0:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iput-object p3, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     iput p4, p0, Lcom/vk/poll/fragments/PollEditorScreen;->f0:I
 
@@ -863,7 +863,7 @@
     iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->P:Lkotlin/e;
 
     .line 24
-    iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz p1, :cond_0
 
@@ -919,7 +919,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vkontakte/android/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x4
@@ -985,7 +985,7 @@
     move-object v3, p2
 
     .line 30
-    invoke-direct/range {v1 .. v8}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vkontakte/android/attachments/PollAttachment;IZJ)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJ)V
 
     return-void
 .end method
@@ -1377,13 +1377,13 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v0
 
@@ -1704,11 +1704,11 @@
     .locals 15
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v0
 
@@ -2348,16 +2348,16 @@
     move-result v0
 
     .line 162
-    new-instance v1, Lcom/vkontakte/android/upload/l/n;
+    new-instance v1, Lcom/vtosters/lite/upload/l/n;
 
     iget v2, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c0:I
 
-    invoke-direct {v1, p1, v2}, Lcom/vkontakte/android/upload/l/n;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, p1, v2}, Lcom/vtosters/lite/upload/l/n;-><init>(Ljava/lang/String;I)V
 
     .line 163
     new-instance v2, Lb/h/s/a/a;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/upload/j;->m()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/upload/j;->m()I
 
     move-result v3
 
@@ -2457,7 +2457,7 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
     .line 170
-    invoke-static {v1}, Lcom/vkontakte/android/upload/Upload;->c(Lcom/vkontakte/android/upload/j;)I
+    invoke-static {v1}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     return-void
 .end method
@@ -2838,7 +2838,7 @@
     move-result v1
 
     .line 4
-    invoke-static {v1}, Lcom/vkontakte/android/upload/Upload;->a(I)V
+    invoke-static {v1}, Lcom/vtosters/lite/upload/Upload;->a(I)V
 
     goto :goto_0
 
@@ -2996,11 +2996,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic n(Lcom/vk/poll/fragments/PollEditorScreen;)Lcom/vkontakte/android/attachments/PollAttachment;
+.method public static final synthetic n(Lcom/vk/poll/fragments/PollEditorScreen;)Lcom/vtosters/lite/attachments/PollAttachment;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object p0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     return-object p0
 .end method
@@ -3161,7 +3161,7 @@
     .locals 7
 
     .line 2
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v0, :cond_4
 
@@ -3176,7 +3176,7 @@
     invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 5
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v0
 
@@ -4517,7 +4517,7 @@
     move-result-object v6
 
     .line 83
-    iget-object v8, v0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vkontakte/android/attachments/PollAttachment;
+    iget-object v8, v0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
 
     .line 84
     invoke-direct/range {p0 .. p0}, Lcom/vk/poll/fragments/PollEditorScreen;->u()Ljava/lang/Long;
@@ -4567,7 +4567,7 @@
     if-eqz v8, :cond_3
 
     .line 86
-    invoke-virtual {v8}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v8}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v9
 
@@ -4607,12 +4607,12 @@
     .line 88
     new-instance v18, Lb/h/c/v/d;
 
-    invoke-virtual {v8}, Lcom/vkontakte/android/attachments/PollAttachment;->b()I
+    invoke-virtual {v8}, Lcom/vtosters/lite/attachments/PollAttachment;->b()I
 
     move-result v9
 
     .line 89
-    invoke-virtual {v8}, Lcom/vkontakte/android/attachments/PollAttachment;->y1()I
+    invoke-virtual {v8}, Lcom/vtosters/lite/attachments/PollAttachment;->y1()I
 
     move-result v10
 
@@ -4658,7 +4658,7 @@
 
     .line 93
     :goto_5
-    invoke-virtual {v8}, Lcom/vkontakte/android/attachments/PollAttachment;->z1()Z
+    invoke-virtual {v8}, Lcom/vtosters/lite/attachments/PollAttachment;->z1()Z
 
     move-result v14
 
@@ -4772,7 +4772,7 @@
     iget-object v13, v0, Lcom/vk/poll/fragments/PollEditorScreen;->d0:Ljava/lang/String;
 
     .line 106
-    new-instance v15, Lcom/vkontakte/android/api/n/a;
+    new-instance v15, Lcom/vtosters/lite/api/n/a;
 
     move-object v4, v15
 
@@ -4788,7 +4788,7 @@
 
     move-object/from16 v12, v16
 
-    invoke-direct/range {v4 .. v13}, Lcom/vkontakte/android/api/n/a;-><init>(Ljava/lang/String;Ljava/util/List;IZZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
+    invoke-direct/range {v4 .. v13}, Lcom/vtosters/lite/api/n/a;-><init>(Ljava/lang/String;Ljava/util/List;IZZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
 
     :goto_7
     const/4 v1, 0x1
@@ -4895,7 +4895,7 @@
             "(",
             "Lkotlin/jvm/b/c<",
             "-",
-            "Lcom/vkontakte/android/attachments/PollAttachment;",
+            "Lcom/vtosters/lite/attachments/PollAttachment;",
             "-",
             "Ljava/lang/String;",
             "Lkotlin/m;",
@@ -4915,7 +4915,7 @@
         value = {
             "()",
             "Lkotlin/jvm/b/c<",
-            "Lcom/vkontakte/android/attachments/PollAttachment;",
+            "Lcom/vtosters/lite/attachments/PollAttachment;",
             "Ljava/lang/String;",
             "Lkotlin/m;",
             ">;"
@@ -5101,7 +5101,7 @@
 
     iget-object v3, p0, Lcom/vk/poll/fragments/PollEditorScreen;->b0:Lcom/vk/poll/fragments/PollEditorScreen$receiver$1;
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v3, v0, v4, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 

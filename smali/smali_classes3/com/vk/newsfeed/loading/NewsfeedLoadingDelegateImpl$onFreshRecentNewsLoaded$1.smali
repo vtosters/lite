@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+    value = Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -139,10 +139,10 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v3, Lcom/vtosters/lite/ui/f0/b;
 
     .line 8
-    iget-object v3, v3, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v3, v3, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     iget-object v5, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl$onFreshRecentNewsLoaded$1;->$firstCommonEntry:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 

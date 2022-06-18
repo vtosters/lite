@@ -147,7 +147,7 @@
     :cond_0
     new-instance v0, Lcom/vk/newsfeed/n$a;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Digest;
 
@@ -162,7 +162,7 @@
     invoke-direct {v0, v1, v3, v2, v3}, Lcom/vk/newsfeed/n$a;-><init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Digest;
 
@@ -227,7 +227,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/n$a;->b(Ljava/lang/String;)Lcom/vk/newsfeed/n$a;
 
     .line 11
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Digest;
 
@@ -238,7 +238,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/n$a;->c(Ljava/lang/String;)Lcom/vk/newsfeed/n$a;
 
     .line 12
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -255,7 +255,7 @@
     .line 13
     sget-object v0, Lcom/vk/newsfeed/holders/b1/b;->I:Lcom/vk/newsfeed/holders/b1/b$a;
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v2, "item"
 

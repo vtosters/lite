@@ -44,7 +44,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$i;->b:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
@@ -52,13 +52,13 @@
     :try_start_0
     iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$i;->a:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vkontakte/android/ui/adapters/g;
+    invoke-static {v1}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/g;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/adapters/g;->getItemCount()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/adapters/g;->getItemCount()I
 
     move-result v1
 

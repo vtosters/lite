@@ -20,7 +20,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/i;II)V
+.method public constructor <init>(Lcom/vtosters/lite/api/i;II)V
     .locals 7
 
     .line 1
@@ -39,7 +39,7 @@
     iput-object v0, p0, Lcom/vk/profile/adapter/items/community/f;->R:Ljava/util/ArrayList;
 
     .line 4
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->n(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->n(Lcom/vtosters/lite/api/i;)Z
 
     move-result p1
 
@@ -225,7 +225,7 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 0
 
     .line 1

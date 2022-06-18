@@ -134,7 +134,7 @@
 
     .line 2
     :cond_1
-    sget p0, Lcom/vkontakte/android/api/j;->error:I
+    sget p0, Lcom/vtosters/lite/api/j;->error:I
 
     const/4 v0, 0x0
 

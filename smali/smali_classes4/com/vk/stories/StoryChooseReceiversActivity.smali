@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/StoryChooseReceiversActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "StoryChooseReceiversActivity.java"
 
 # interfaces
@@ -17,7 +17,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/VKActivity;",
+        "Lcom/vtosters/lite/VKActivity;",
         "Lcom/vk/lists/t$o<",
         "Ljava/util/List<",
         "Lcom/vk/stories/d1/a;",
@@ -97,7 +97,7 @@
 
 .field private g0:Lcom/vk/stories/a1/c;
 
-.field private h0:Lcom/vkontakte/android/ui/x;
+.field private h0:Lcom/vtosters/lite/ui/x;
 
 .field private i0:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -161,7 +161,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     const/4 v0, 0x0
 
@@ -288,7 +288,7 @@
     invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -725,7 +725,7 @@
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :cond_2
     return-void
@@ -874,7 +874,7 @@
     .line 16
     :cond_3
     :goto_1
-    sget-object v1, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     iget-object v5, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->q0:Ljava/util/Set;
 
@@ -884,7 +884,7 @@
 
     const-string v6, "camera"
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vkontakte/android/im/i;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -892,7 +892,7 @@
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
 
     .line 18
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -2098,7 +2098,7 @@
     const-string v0, "stories_send_screen"
 
     .line 2
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -2109,7 +2109,7 @@
     const-string p1, "go_back"
 
     .line 3
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     goto :goto_0
 
@@ -2117,7 +2117,7 @@
     const-string p1, "send"
 
     .line 4
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 5
     :goto_0
@@ -2161,7 +2161,7 @@
     const-string v1, "photo"
 
     .line 11
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     goto :goto_1
 
@@ -2169,13 +2169,13 @@
     const-string v1, "video"
 
     .line 12
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     :goto_1
     const-string v1, "action_facts"
 
     .line 13
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 14
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->q0:Ljava/util/Set;
@@ -2190,10 +2190,10 @@
 
     const-string v1, "recipients_count"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 15
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->e()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -2461,9 +2461,9 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->H:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vkontakte/android/ui/x;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/x;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/x;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2785,7 +2785,7 @@
     invoke-direct {p0, v0}, Lcom/vk/stories/StoryChooseReceiversActivity;->k(Z)V
 
     .line 9
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onBackPressed()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onBackPressed()V
 
     :goto_0
     return-void
@@ -2812,7 +2812,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -2942,7 +2942,7 @@
     neg-int v1, v2
 
     .line 17
-    invoke-static {v1}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v1
 
@@ -2963,7 +2963,7 @@
     if-eqz v1, :cond_3
 
     .line 19
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -2988,7 +2988,7 @@
     invoke-direct {p0}, Lcom/vk/stories/StoryChooseReceiversActivity;->J1()V
 
     .line 22
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     :cond_4
     const p1, 0x7f0d002e
@@ -3004,7 +3004,7 @@
     invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/Window;)V
 
     .line 25
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object p1
 
@@ -3148,15 +3148,15 @@
     iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->k0:Lio/reactivex/subjects/PublishSubject;
 
     .line 43
-    new-instance p1, Lcom/vkontakte/android/ui/x;
+    new-instance p1, Lcom/vtosters/lite/ui/x;
 
     new-instance v2, Lcom/vk/stories/StoryChooseReceiversActivity$k;
 
     invoke-direct {v2, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$k;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
-    invoke-direct {p1, p0, v2}, Lcom/vkontakte/android/ui/x;-><init>(Landroid/app/Activity;Lcom/vkontakte/android/ui/x$i;)V
+    invoke-direct {p1, p0, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vkontakte/android/ui/x;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
 
     .line 44
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->k0:Lio/reactivex/subjects/PublishSubject;
@@ -3200,21 +3200,21 @@
     move-result-object p1
 
     .line 49
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vkontakte/android/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v4
 
-    invoke-virtual {v2, p1, v4}, Lcom/vkontakte/android/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v2, p1, v4}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 50
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vkontakte/android/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
 
-    invoke-virtual {v2, v0}, Lcom/vkontakte/android/ui/x;->g(Z)V
+    invoke-virtual {v2, v0}, Lcom/vtosters/lite/ui/x;->g(Z)V
 
     .line 51
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vkontakte/android/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
 
     iget v4, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->o0:I
 
@@ -3228,16 +3228,16 @@
     const/4 v4, 0x0
 
     :goto_2
-    invoke-virtual {v2, v4}, Lcom/vkontakte/android/ui/x;->e(Z)V
+    invoke-virtual {v2, v4}, Lcom/vtosters/lite/ui/x;->e(Z)V
 
     .line 52
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vkontakte/android/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
 
     new-instance v4, Lcom/vk/stories/StoryChooseReceiversActivity$n;
 
     invoke-direct {v4, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$n;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
-    invoke-virtual {v2, v4}, Lcom/vkontakte/android/ui/x;->a(Lcom/vkontakte/android/ui/x$j;)V
+    invoke-virtual {v2, v4}, Lcom/vtosters/lite/ui/x;->a(Lcom/vtosters/lite/ui/x$j;)V
 
     const v2, 0x7f0a0baa
 
@@ -3486,7 +3486,7 @@
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
 
     .line 81
-    iput-boolean v0, p0, Lcom/vkontakte/android/VKActivity;->C:Z
+    iput-boolean v0, p0, Lcom/vtosters/lite/VKActivity;->C:Z
 
     return-void
 .end method
@@ -3510,7 +3510,7 @@
     invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
 
     .line 4
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     return-void
 .end method

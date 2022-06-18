@@ -53,34 +53,34 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/k0/b;
+    new-instance v0, Lcom/vtosters/lite/k0/b;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/k0/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/k0/b;-><init>(Landroid/content/Context;)V
 
     .line 2
     new-instance v1, Lcom/vk/profile/ui/f/a$a;
 
-    invoke-direct {v1, p1, p2, p3, v0}, Lcom/vk/profile/ui/f/a$a;-><init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;Lcom/vkontakte/android/k0/b;)V
+    invoke-direct {v1, p1, p2, p3, v0}, Lcom/vk/profile/ui/f/a$a;-><init>(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;Lcom/vtosters/lite/k0/b;)V
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;)V
 
     const/4 p1, 0x1
 
     .line 3
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/k0/b;->setCancelable(Z)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/k0/b;->setCancelable(Z)V
 
     const/4 p1, 0x3
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/k0/b;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/k0/b;->a(I)V
 
     const/4 p1, 0x4
 
     .line 5
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/k0/b;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/k0/b;->b(I)V
 
     .line 6
-    invoke-virtual {v0}, Lcom/vkontakte/android/k0/b;->show()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/k0/b;->show()V
 
     return-void
 .end method

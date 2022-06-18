@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/g0;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PrettyCardHolder.kt"
 
 # interfaces
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
-        "Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;",
+        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;",
         ">;",
         "Landroid/view/View$OnClickListener;"
     }
@@ -56,7 +56,7 @@
     const v0, 0x7f0d008e
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -195,15 +195,15 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->D:Lcom/vkontakte/android/data/PostInteract;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->D:Lcom/vtosters/lite/data/PostInteract;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/data/PostInteract;->f:Ljava/lang/String;
+    iget-object v0, v0, Lcom/vtosters/lite/data/PostInteract;->f:Ljava/lang/String;
 
     goto :goto_0
 
@@ -212,11 +212,11 @@
 
     .line 2
     :goto_0
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->b:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->b:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
@@ -257,22 +257,22 @@
     const-string v2, "ads/click_pretty_card"
 
     .line 4
-    invoke-static {v2}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v2}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v2
 
     const-string v3, "ad_data"
 
     .line 5
-    invoke-virtual {v2, v3, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v2, v3, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string v0, "card_data"
 
     .line 6
-    invoke-virtual {v2, v0, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v2, v0, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 7
-    invoke-virtual {v2}, Lcom/vkontakte/android/data/n$l;->e()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v2}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
 
     :cond_3
     return-void
@@ -282,38 +282,38 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->D:Lcom/vkontakte/android/data/PostInteract;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->D:Lcom/vtosters/lite/data/PostInteract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/data/PostInteract;->f(Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/data/PostInteract;->f(Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/data/PostInteract;->d(Ljava/lang/String;)Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/data/PostInteract;->d(Ljava/lang/String;)Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vkontakte/android/data/PostInteract$Type;->click_pretty_card:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v0, Lcom/vtosters/lite/data/PostInteract$Type;->click_pretty_card:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     :cond_0
     return-void
@@ -321,7 +321,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;)V
+.method public a(Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;)V
     .locals 3
 
     .line 1
@@ -334,7 +334,7 @@
     iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 2
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->g:Lcom/vk/dto/common/Image;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->g:Lcom/vk/dto/common/Image;
 
     invoke-virtual {v1, v0}, Lcom/vk/dto/common/Image;->h(I)Lcom/vk/dto/common/ImageSize;
 
@@ -355,28 +355,28 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/g0;->d:Landroid/widget/TextView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->e:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/g0;->e:Landroid/widget/TextView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->h:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->h:Ljava/lang/String;
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/g0;->f:Landroid/widget/TextView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->B:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->B:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 7
-    iget-object v0, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->f:Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;
+    iget-object v0, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->f:Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;
 
     if-eqz v0, :cond_1
 
@@ -390,9 +390,9 @@
     .line 9
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/g0;->g:Landroid/widget/TextView;
 
-    iget-object v1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->f:Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;
+    iget-object v1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->f:Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -408,7 +408,7 @@
 
     .line 11
     :goto_0
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->C:Lcom/vk/statistic/StatisticPrettyCard;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->C:Lcom/vk/statistic/StatisticPrettyCard;
 
     if-eqz p1, :cond_2
 
@@ -424,7 +424,7 @@
     if-eqz v0, :cond_2
 
     .line 13
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/StatisticPrettyCard;)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticPrettyCard;)V
 
     :cond_2
     return-void
@@ -434,9 +434,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/g0;->a(Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/g0;->a(Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;)V
 
     return-void
 .end method
@@ -463,11 +463,11 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->d:Lcom/vk/dto/newsfeed/AwayLink;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->d:Lcom/vk/dto/newsfeed/AwayLink;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/AwayLink;->u1()Ljava/lang/String;
 
@@ -479,7 +479,7 @@
     invoke-direct {p0}, Lcom/vk/newsfeed/holders/attachments/g0;->g0()V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -489,23 +489,23 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/b;->a(Landroid/content/Context;Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/b;->a(Landroid/content/Context;Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;)V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->f:Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->f:Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;
 
     if-nez v0, :cond_2
 
@@ -513,11 +513,11 @@
 
     .line 6
     :cond_2
-    check-cast p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->f:Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->f:Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;->b:Lcom/vk/dto/newsfeed/ButtonAction;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;->b:Lcom/vk/dto/newsfeed/ButtonAction;
 
     iget-object p1, p1, Lcom/vk/dto/newsfeed/ButtonAction;->d:Lcom/vk/dto/newsfeed/AwayLink;
 
@@ -531,7 +531,7 @@
     invoke-direct {p0}, Lcom/vk/newsfeed/holders/attachments/g0;->g0()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -541,21 +541,21 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     move-object v1, v0
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->f:Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->f:Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Button;->b:Lcom/vk/dto/newsfeed/ButtonAction;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Button;->b:Lcom/vk/dto/newsfeed/ButtonAction;
 
-    check-cast v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;
+    check-cast v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PrettyCardAttachment$Card;->D:Lcom/vkontakte/android/data/PostInteract;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PrettyCardAttachment$Card;->D:Lcom/vtosters/lite/data/PostInteract;
 
-    invoke-static {p1, v1, v0}, Lcom/vkontakte/android/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vkontakte/android/data/PostInteract;)V
+    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;)V
 
     :goto_0
     return-void

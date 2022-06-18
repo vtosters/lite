@@ -236,7 +236,7 @@
 
     .line 117
     :cond_5
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -547,17 +547,17 @@
     const-string v0, "poster_fallback_fail"
 
     .line 4
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     const-string v1, "message"
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -637,7 +637,7 @@
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    new-instance v9, Lcom/vkontakte/android/upload/l/o;
+    new-instance v9, Lcom/vtosters/lite/upload/l/o;
 
     .line 8
     invoke-virtual {v0}, Lcom/vk/newsfeed/posting/dto/a;->d()I
@@ -658,14 +658,14 @@
     move-object v2, v9
 
     .line 10
-    invoke-direct/range {v2 .. v8}, Lcom/vkontakte/android/upload/l/o;-><init>(Ljava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vtosters/lite/upload/l/o;-><init>(Ljava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
 
     .line 11
     new-instance v2, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;
 
     invoke-direct {v2, v1, v0, p1, p2}, Lcom/vk/newsfeed/posting/PostingInteractor$wrapPosterUpload$1;-><init>(Lio/reactivex/subjects/PublishSubject;Lcom/vk/newsfeed/posting/dto/a;Lb/h/c/w/f;Lcom/vk/newsfeed/posting/dto/d;)V
 
-    invoke-static {v9, v2}, Lcom/vkontakte/android/upload/Upload;->a(Lcom/vkontakte/android/upload/j;Lkotlin/jvm/b/b;)I
+    invoke-static {v9, v2}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lkotlin/jvm/b/b;)I
 
     return-object v1
 
@@ -768,11 +768,11 @@
     const-string v0, "poster_fallback_timeout"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -825,7 +825,7 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 66
-    instance-of v1, v1, Lcom/vkontakte/android/attachments/b;
+    instance-of v1, v1, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v1, :cond_2
 
@@ -844,7 +844,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/attachments/a;->d(Ljava/util/List;)V
+    invoke-static {v0}, Lcom/vtosters/lite/attachments/a;->d(Ljava/util/List;)V
 
     .line 68
     invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/e;->b()Lcom/vk/api/board/BoardComment;
@@ -1061,7 +1061,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/attachments/a;->e(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v1}, Lcom/vtosters/lite/attachments/a;->e(Ljava/util/List;)Ljava/util/List;
 
     const-string v2, "sortedAttachments"
 
@@ -1118,14 +1118,14 @@
 
     .line 21
     :cond_3
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v4, :cond_2
 
     .line 22
-    check-cast v3, Lcom/vkontakte/android/attachments/EventAttachment;
+    check-cast v3, Lcom/vtosters/lite/attachments/EventAttachment;
 
-    invoke-virtual {v3}, Lcom/vkontakte/android/attachments/EventAttachment;->A1()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/vtosters/lite/attachments/EventAttachment;->A1()Ljava/util/List;
 
     move-result-object v3
 
@@ -1189,7 +1189,7 @@
 
     move-result-object v3
 
-    instance-of v3, v3, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v3, v3, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v3, :cond_6
 
@@ -1329,20 +1329,20 @@
 
     .line 43
     :cond_10
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/d;->e()Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/d;->e()Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_12
 
     .line 44
-    iget v1, v0, Lcom/vkontakte/android/attachments/GeoAttachment;->C:I
+    iget v1, v0, Lcom/vtosters/lite/attachments/GeoAttachment;->C:I
 
     if-gtz v1, :cond_11
 
-    iget-wide v3, v0, Lcom/vkontakte/android/attachments/GeoAttachment;->e:D
+    iget-wide v3, v0, Lcom/vtosters/lite/attachments/GeoAttachment;->e:D
 
-    iget-wide v0, v0, Lcom/vkontakte/android/attachments/GeoAttachment;->f:D
+    iget-wide v0, v0, Lcom/vtosters/lite/attachments/GeoAttachment;->f:D
 
     invoke-virtual {v2, v3, v4, v0, v1}, Lb/h/c/w/f;->a(DD)Lb/h/c/w/f;
 
@@ -1383,13 +1383,13 @@
     if-eqz v0, :cond_1b
 
     .line 49
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->C1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v1
 
     if-eqz v1, :cond_14
 
-    iget v3, v1, Lcom/vkontakte/android/NewsComment;->g:I
+    iget v3, v1, Lcom/vtosters/lite/NewsComment;->g:I
 
     :cond_14
     invoke-virtual {v0}, Lcom/vk/newsfeed/posting/dto/PostCommentNewsEntry;->B1()Ljava/lang/String;
@@ -1452,7 +1452,7 @@
     move-result v3
 
     :cond_17
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -1692,7 +1692,7 @@
     .end annotation
 
     .line 89
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -1747,17 +1747,17 @@
     const-string v0, "poster_background_selected"
 
     .line 99
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     const-string v1, "background_id"
 
     .line 100
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 101
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1768,22 +1768,22 @@
     const-string v0, "poster_mode_change"
 
     .line 102
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     const-string v1, "category_id"
 
     .line 103
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     const-string p1, "background_id"
 
     .line 104
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 105
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1802,12 +1802,12 @@
 
     .line 106
     :goto_0
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
     .line 107
-    invoke-virtual {p1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1876,11 +1876,11 @@
     const-string v0, "poster_custom_editor_open"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1891,11 +1891,11 @@
     const-string v0, "poster_custom_editor_save"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1906,11 +1906,11 @@
     const-string v0, "poster_create_author_click"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1921,11 +1921,11 @@
     const-string v0, "poster_open"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1936,11 +1936,11 @@
     const-string v0, "poster_close"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/feedlikes/d/a;
-.super Lcom/vkontakte/android/fragments/photos/PhotoListFragment;
+.super Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 .source "FavePhotoListFragment.kt"
 
 
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/photos/PhotoListFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;-><init>()V
 
     return-void
 .end method

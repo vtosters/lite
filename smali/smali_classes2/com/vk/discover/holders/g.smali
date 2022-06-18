@@ -143,7 +143,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -176,7 +176,7 @@
     const-string v0, "discover_block"
 
     .line 2
-    invoke-static {v0}, Lcom/vkontakte/android/data/p;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/vtosters/lite/data/p;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void

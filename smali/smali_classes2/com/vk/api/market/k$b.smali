@@ -195,7 +195,7 @@
     const-string v0, "wiki_title"
 
     .line 17
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/l;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/l;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -204,7 +204,7 @@
     const-string v0, "wiki_view_url"
 
     .line 18
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/l;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/l;->a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

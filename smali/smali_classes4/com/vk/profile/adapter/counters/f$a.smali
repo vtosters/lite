@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/counters/f;->b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+    value = Lcom/vk/profile/adapter/counters/f;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -122,7 +122,7 @@
 
     move-result-object p1
 
-    invoke-static {v4, v5, p1}, Lcom/vkontakte/android/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v4, v5, p1}, Lcom/vtosters/lite/ui/b0/o/a;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object p1
 

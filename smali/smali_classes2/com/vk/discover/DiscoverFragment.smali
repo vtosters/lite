@@ -2005,13 +2005,13 @@
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
@@ -2029,7 +2029,7 @@
 
     long-to-int v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vkontakte/android/data/n$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/data/n$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
 
     goto :goto_0
 
@@ -2040,13 +2040,13 @@
     if-eqz v0, :cond_1
 
     .line 64
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
@@ -2072,7 +2072,7 @@
 
     long-to-int v5, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vkontakte/android/data/n$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/data/n$q;->a(Ljava/lang/String;Ljava/lang/String;III)V
 
     :cond_1
     :goto_0
@@ -2498,7 +2498,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lcom/vk/discover/b;->H(I)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {v3, v2}, Lcom/vk/discover/b;->H(I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object v3
 
@@ -3368,7 +3368,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->Q:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vkontakte/android/w;->d()I
+    invoke-static {}, Lcom/vtosters/lite/w;->d()I
 
     move-result v1
 
@@ -3386,7 +3386,7 @@
     :goto_0
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment;->f0:Lcom/vk/newsfeed/StoriesBlocksEventController;
@@ -3610,7 +3610,7 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/data/n;->j()Lcom/vkontakte/android/data/n;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->j()Lcom/vtosters/lite/data/n;
 
     move-result-object v0
 
@@ -3618,11 +3618,11 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n;->a()Lcom/vkontakte/android/data/n$q;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n;->a()Lcom/vtosters/lite/data/n$q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$q;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$q;->a()V
 
     return-void
 .end method

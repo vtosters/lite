@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vkontakte/android/NewsComment;
+.field private final a:Lcom/vtosters/lite/NewsComment;
 
 .field private b:Landroid/os/Bundle;
 
@@ -57,25 +57,25 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;)V
+.method public constructor <init>(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;)V
     .locals 0
 
     .line 2
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iput-object p1, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     iput-object p2, p0, Lcom/vk/wall/CommentDraft;->b:Landroid/os/Bundle;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -83,9 +83,9 @@
     if-eqz p4, :cond_0
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/NewsComment;
+    new-instance p1, Lcom/vtosters/lite/NewsComment;
 
-    invoke-direct {p1}, Lcom/vkontakte/android/NewsComment;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/NewsComment;-><init>()V
 
     :cond_0
     and-int/lit8 p3, p3, 0x2
@@ -95,19 +95,19 @@
     const/4 p2, 0x0
 
     :cond_1
-    invoke-direct {p0, p1, p2}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/wall/CommentDraft;Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;ILjava/lang/Object;)Lcom/vk/wall/CommentDraft;
+.method public static synthetic a(Lcom/vk/wall/CommentDraft;Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;ILjava/lang/Object;)Lcom/vk/wall/CommentDraft;
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
 
     if-eqz p4, :cond_0
 
-    iget-object p1, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object p1, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     :cond_0
     and-int/lit8 p3, p3, 0x2
@@ -117,7 +117,7 @@
     iget-object p2, p0, Lcom/vk/wall/CommentDraft;->b:Landroid/os/Bundle;
 
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/wall/CommentDraft;->a(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;)Lcom/vk/wall/CommentDraft;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/wall/CommentDraft;->a(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;)Lcom/vk/wall/CommentDraft;
 
     move-result-object p0
 
@@ -126,12 +126,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;)Lcom/vk/wall/CommentDraft;
+.method public final a(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;)Lcom/vk/wall/CommentDraft;
     .locals 1
 
     new-instance v0, Lcom/vk/wall/CommentDraft;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vkontakte/android/NewsComment;Landroid/os/Bundle;)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/wall/CommentDraft;-><init>(Lcom/vtosters/lite/NewsComment;Landroid/os/Bundle;)V
 
     return-object v0
 .end method
@@ -149,7 +149,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
@@ -172,9 +172,9 @@
 
     check-cast p1, Lcom/vk/wall/CommentDraft;
 
-    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v1, p1, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object v1, p1, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -209,13 +209,13 @@
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NewsComment;->hashCode()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/NewsComment;->hashCode()I
 
     move-result v0
 
@@ -241,11 +241,11 @@
     return v0
 .end method
 
-.method public final t1()Lcom/vkontakte/android/NewsComment;
+.method public final t1()Lcom/vtosters/lite/NewsComment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     return-object v0
 .end method
@@ -261,7 +261,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vkontakte/android/NewsComment;
+    iget-object v1, p0, Lcom/vk/wall/CommentDraft;->a:Lcom/vtosters/lite/NewsComment;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

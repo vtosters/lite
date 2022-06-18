@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/q;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/profile/adapter/items/q;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

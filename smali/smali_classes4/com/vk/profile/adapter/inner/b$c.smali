@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/b$c;->a:Lcom/vk/profile/adapter/inner/b;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/adapters/b;->s2()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/adapters/b;->s2()V
 
     return-void
 .end method

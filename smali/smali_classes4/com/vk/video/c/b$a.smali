@@ -99,14 +99,14 @@
 
     move-result v0
 
-    invoke-virtual {p0, p1, p2, v0, p3}, Lcom/vk/video/c/b$a;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vkontakte/android/k0/b;
+    invoke-virtual {p0, p1, p2, v0, p3}, Lcom/vk/video/c/b$a;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vtosters/lite/k0/b;
 
     move-result-object p2
 
     const/4 p3, 0x0
 
     .line 4
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/video/c/b$a;->a(Landroid/app/Activity;Lcom/vkontakte/android/k0/b;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/video/c/b$a;->a(Landroid/app/Activity;Lcom/vtosters/lite/k0/b;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
 
     return-object p2
 .end method
@@ -115,16 +115,16 @@
     .locals 0
 
     .line 5
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/video/c/b$a;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vkontakte/android/k0/b;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/video/c/b$a;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vtosters/lite/k0/b;
 
     move-result-object p2
 
-    invoke-virtual {p0, p1, p2, p5}, Lcom/vk/video/c/b$a;->a(Landroid/app/Activity;Lcom/vkontakte/android/k0/b;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
+    invoke-virtual {p0, p1, p2, p5}, Lcom/vk/video/c/b$a;->a(Landroid/app/Activity;Lcom/vtosters/lite/k0/b;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
 
     return-object p2
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vkontakte/android/k0/b;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
+.method public final a(Landroid/app/Activity;Lcom/vtosters/lite/k0/b;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
     .locals 2
 
     .line 32
@@ -148,7 +148,7 @@
 
     move-result v0
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/k0/b;->c(I)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/k0/b;->c(I)V
 
     .line 33
     invoke-static {}, Lcom/vk/core/util/Screen;->e()I
@@ -159,12 +159,12 @@
 
     div-int/lit8 v0, v0, 0xa
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/k0/b;->d(I)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/k0/b;->d(I)V
 
     .line 34
     new-instance v0, Lcom/vk/video/c/b$a$e;
 
-    invoke-direct {v0, p2}, Lcom/vk/video/c/b$a$e;-><init>(Lcom/vkontakte/android/k0/b;)V
+    invoke-direct {v0, p2}, Lcom/vk/video/c/b$a$e;-><init>(Lcom/vtosters/lite/k0/b;)V
 
     .line 35
     invoke-static {p1}, Lcom/vk/core/widget/LifecycleHandler;->b(Landroid/app/Activity;)Lcom/vk/core/widget/LifecycleHandler;
@@ -193,12 +193,12 @@
     invoke-virtual {p2, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 39
-    invoke-virtual {p2}, Lcom/vkontakte/android/k0/b;->show()V
+    invoke-virtual {p2}, Lcom/vtosters/lite/k0/b;->show()V
 
     return-object p2
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vkontakte/android/k0/b;
+.method public final a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vtosters/lite/k0/b;
     .locals 8
 
     .line 6
@@ -258,9 +258,9 @@
 
     .line 11
     :goto_1
-    new-instance p3, Lcom/vkontakte/android/k0/b;
+    new-instance p3, Lcom/vtosters/lite/k0/b;
 
-    invoke-direct {p3, v0, p2}, Lcom/vkontakte/android/k0/b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p3, v0, p2}, Lcom/vtosters/lite/k0/b;-><init>(Landroid/content/Context;I)V
 
     .line 12
     new-instance p2, Lcom/vk/common/view/g;
@@ -274,21 +274,21 @@
     .line 13
     new-instance p4, Lcom/vk/video/c/b$a$a;
 
-    invoke-direct {p4, p3, v2, v0}, Lcom/vk/video/c/b$a$a;-><init>(Lcom/vkontakte/android/k0/b;Lcom/vk/video/a;Landroidx/appcompat/view/ContextThemeWrapper;)V
+    invoke-direct {p4, p3, v2, v0}, Lcom/vk/video/c/b$a$a;-><init>(Lcom/vtosters/lite/k0/b;Lcom/vk/video/a;Landroidx/appcompat/view/ContextThemeWrapper;)V
 
     invoke-virtual {p2, p4}, Lcom/vk/common/view/g;->setNegativeClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 14
     new-instance p4, Lcom/vk/video/c/b$a$b;
 
-    invoke-direct {p4, p3, v2, v0}, Lcom/vk/video/c/b$a$b;-><init>(Lcom/vkontakte/android/k0/b;Lcom/vk/video/a;Landroidx/appcompat/view/ContextThemeWrapper;)V
+    invoke-direct {p4, p3, v2, v0}, Lcom/vk/video/c/b$a$b;-><init>(Lcom/vtosters/lite/k0/b;Lcom/vk/video/a;Landroidx/appcompat/view/ContextThemeWrapper;)V
 
     invoke-virtual {p2, p4}, Lcom/vk/common/view/g;->setPositiveClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 15
-    new-instance p4, Lcom/vkontakte/android/ui/BadooTextView;
+    new-instance p4, Lcom/vtosters/lite/ui/BadooTextView;
 
-    invoke-direct {p4, v0}, Lcom/vkontakte/android/ui/BadooTextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p4, v0}, Lcom/vtosters/lite/ui/BadooTextView;-><init>(Landroid/content/Context;)V
 
     const v0, 0x7f121052
 
@@ -379,13 +379,13 @@
 
     move-result-object p1
 
-    invoke-virtual {p3, p1}, Lcom/vkontakte/android/k0/b;->a(Ljava/lang/String;)V
+    invoke-virtual {p3, p1}, Lcom/vtosters/lite/k0/b;->a(Ljava/lang/String;)V
 
     .line 27
-    invoke-virtual {p3, p2}, Lcom/vkontakte/android/k0/b;->a(Landroid/view/View;)V
+    invoke-virtual {p3, p2}, Lcom/vtosters/lite/k0/b;->a(Landroid/view/View;)V
 
     .line 28
-    invoke-virtual {p3, p4}, Lcom/vkontakte/android/k0/b;->b(Landroid/view/View;)V
+    invoke-virtual {p3, p4}, Lcom/vtosters/lite/k0/b;->b(Landroid/view/View;)V
 
     .line 29
     new-instance p1, Landroid/view/ViewGroup$MarginLayoutParams;
@@ -404,7 +404,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p3, p2, p1}, Lcom/vkontakte/android/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p3, p2, p1}, Lcom/vtosters/lite/k0/b;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-object p3
 .end method

@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;>;"
     }
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;)V
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;)V"
         }
@@ -70,9 +70,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/j$f;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/j$f;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;)V
 
     return-void
 .end method

@@ -94,18 +94,18 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/b;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/b;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/b;
+    check-cast v0, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vkontakte/android/attachments/b;->V()I
+    invoke-interface {v0}, Lcom/vtosters/lite/attachments/b;->V()I
 
     move-result v0
 

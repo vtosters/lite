@@ -21,7 +21,7 @@
 # instance fields
 .field private final A:Ljava/lang/String;
 
-.field private final B:Lcom/vkontakte/android/NotificationUtils$Type;
+.field private final B:Lcom/vtosters/lite/NotificationUtils$Type;
 
 .field private final C:Ljava/lang/String;
 
@@ -167,9 +167,9 @@
     iput-object p1, p0, Lcom/vk/pushes/notifications/im/BusinessNotifyNotification;->A:Ljava/lang/String;
 
     .line 4
-    sget-object p1, Lcom/vkontakte/android/NotificationUtils$Type;->PrivateMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object p1, Lcom/vtosters/lite/NotificationUtils$Type;->PrivateMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    iput-object p1, p0, Lcom/vk/pushes/notifications/im/BusinessNotifyNotification;->B:Lcom/vkontakte/android/NotificationUtils$Type;
+    iput-object p1, p0, Lcom/vk/pushes/notifications/im/BusinessNotifyNotification;->B:Lcom/vtosters/lite/NotificationUtils$Type;
 
     const-string p1, "business_notify_group"
 
@@ -854,11 +854,11 @@
     return v0
 .end method
 
-.method protected s()Lcom/vkontakte/android/NotificationUtils$Type;
+.method protected s()Lcom/vtosters/lite/NotificationUtils$Type;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/pushes/notifications/im/BusinessNotifyNotification;->B:Lcom/vkontakte/android/NotificationUtils$Type;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/im/BusinessNotifyNotification;->B:Lcom/vtosters/lite/NotificationUtils$Type;
 
     return-object v0
 .end method

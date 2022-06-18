@@ -51,16 +51,16 @@
     if-eqz p1, :cond_0
 
     .line 53
-    new-instance p1, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    new-instance p1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
-    invoke-direct {p1, p0}, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {p1, p0}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    new-instance p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-direct {p1, p0}, Lcom/vkontakte/android/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {p1, p0}, Lcom/vtosters/lite/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     :goto_0
     const/16 v0, 0x8
@@ -115,9 +115,9 @@
     .end annotation
 
     .line 84
-    new-instance v0, Lcom/vkontakte/android/attachments/ArticleAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/ArticleAttachment;
 
-    invoke-direct {v0, p0}, Lcom/vkontakte/android/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/attachments/ArticleAttachment;-><init>(Lcom/vk/dto/articles/Article;)V
 
     .line 85
     invoke-virtual {p0}, Lcom/vk/dto/articles/Article;->y1()I
@@ -227,9 +227,9 @@
     .end annotation
 
     .line 59
-    new-instance v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
-    invoke-direct {v0, p0}, Lcom/vkontakte/android/attachments/MarketAttachment;-><init>(Lcom/vk/dto/common/Good;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/attachments/MarketAttachment;-><init>(Lcom/vk/dto/common/Good;)V
 
     .line 60
     iget v1, p0, Lcom/vk/dto/common/Good;->b:I
@@ -283,9 +283,9 @@
     .end annotation
 
     .line 46
-    new-instance v0, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {v0, p0}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     .line 47
     iget-object v1, p0, Lcom/vk/dto/common/VideoFile;->K0:Lcom/vk/dto/common/Image;
@@ -366,9 +366,9 @@
     .end annotation
 
     .line 109
-    new-instance v0, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
 
     iget v1, p0, Lcom/vk/dto/common/data/ApiApplication;->a:I
 
@@ -461,9 +461,9 @@
 
     .line 103
     :goto_0
-    new-instance v3, Lcom/vkontakte/android/attachments/AudioArtistAttachment;
+    new-instance v3, Lcom/vtosters/lite/attachments/AudioArtistAttachment;
 
-    invoke-direct {v3, p0}, Lcom/vkontakte/android/attachments/AudioArtistAttachment;-><init>(Lcom/vk/dto/music/Artist;)V
+    invoke-direct {v3, p0}, Lcom/vtosters/lite/attachments/AudioArtistAttachment;-><init>(Lcom/vk/dto/music/Artist;)V
 
     const/16 v4, 0xd
 
@@ -542,11 +542,11 @@
     if-eqz v0, :cond_0
 
     .line 27
-    new-instance v0, Lcom/vkontakte/android/attachments/PodcastAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, p0, v4}, Lcom/vkontakte/android/attachments/PodcastAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;Lcom/vk/dto/newsfeed/Owner;)V
+    invoke-direct {v0, p0, v4}, Lcom/vtosters/lite/attachments/PodcastAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;Lcom/vk/dto/newsfeed/Owner;)V
 
     const/16 v4, 0xf
 
@@ -587,9 +587,9 @@
 
     .line 33
     :cond_0
-    new-instance v0, Lcom/vkontakte/android/attachments/AudioAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    invoke-direct {v0, p0}, Lcom/vkontakte/android/attachments/AudioAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/attachments/AudioAttachment;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
     const/4 v4, 0x4
 
@@ -681,9 +681,9 @@
 
     .line 79
     :goto_0
-    new-instance v1, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-direct {v1, p0}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;-><init>(Lcom/vk/dto/music/Playlist;)V
+    invoke-direct {v1, p0}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;-><init>(Lcom/vk/dto/music/Playlist;)V
 
     const/16 v2, 0xa
 
@@ -728,9 +728,9 @@
     .end annotation
 
     .line 91
-    new-instance v0, Lcom/vkontakte/android/attachments/NarrativeAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
-    invoke-direct {v0, p0}, Lcom/vkontakte/android/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
     .line 92
     invoke-virtual {p0}, Lcom/vk/dto/narratives/Narrative;->b()I
@@ -793,9 +793,9 @@
 
     .line 2
     :goto_0
-    new-instance v1, Lcom/vkontakte/android/attachments/PostAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PostAttachment;
 
-    invoke-direct {v1, p0}, Lcom/vkontakte/android/attachments/PostAttachment;-><init>(Lcom/vk/dto/newsfeed/entries/Post;)V
+    invoke-direct {v1, p0}, Lcom/vtosters/lite/attachments/PostAttachment;-><init>(Lcom/vk/dto/newsfeed/entries/Post;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
@@ -896,9 +896,9 @@
     move-result-object v0
 
     .line 12
-    new-instance v1, Lcom/vkontakte/android/attachments/PostAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PostAttachment;
 
-    invoke-direct {v1, p0}, Lcom/vkontakte/android/attachments/PostAttachment;-><init>(Lcom/vk/dto/newsfeed/entries/PromoPost;)V
+    invoke-direct {v1, p0}, Lcom/vtosters/lite/attachments/PostAttachment;-><init>(Lcom/vk/dto/newsfeed/entries/PromoPost;)V
 
     .line 13
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
@@ -1001,9 +1001,9 @@
     move-result-object v1
 
     .line 41
-    new-instance v2, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v2, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    invoke-direct {v2, p0}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v2, p0}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     .line 42
     iget v3, p0, Lcom/vk/dto/photo/Photo;->c:I
@@ -1046,9 +1046,9 @@
     .end annotation
 
     .line 70
-    new-instance v0, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v0, p0}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
 
     .line 71
     invoke-virtual {p0}, Lcom/vk/dto/polls/Poll;->b()I
@@ -1084,13 +1084,13 @@
     return-object p0
 .end method
 
-.method public static a(Lcom/vkontakte/android/attachments/StoryAttachment;)Lcom/vk/sharing/attachment/AttachmentInfo;
+.method public static a(Lcom/vtosters/lite/attachments/StoryAttachment;)Lcom/vk/sharing/attachment/AttachmentInfo;
     .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 65
-    invoke-virtual {p0}, Lcom/vkontakte/android/attachments/StoryAttachment;->x1()Lcom/vk/dto/stories/model/StoryEntry;
+    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/StoryAttachment;->x1()Lcom/vk/dto/stories/model/StoryEntry;
 
     move-result-object v0
 
@@ -1127,9 +1127,9 @@
     return-object p0
 .end method
 
-.method public static a(Lcom/vkontakte/android/q;IILjava/lang/String;)Lcom/vk/sharing/attachment/AttachmentInfo;
+.method public static a(Lcom/vtosters/lite/q;IILjava/lang/String;)Lcom/vk/sharing/attachment/AttachmentInfo;
     .locals 7
-    .param p0    # Lcom/vkontakte/android/q;
+    .param p0    # Lcom/vtosters/lite/q;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1137,17 +1137,17 @@
     .end annotation
 
     .line 19
-    new-instance v6, Lcom/vkontakte/android/attachments/PostAttachment;
+    new-instance v6, Lcom/vtosters/lite/attachments/PostAttachment;
 
-    invoke-interface {p0}, Lcom/vkontakte/android/q;->getId()I
+    invoke-interface {p0}, Lcom/vtosters/lite/q;->getId()I
 
     move-result v2
 
-    invoke-interface {p0}, Lcom/vkontakte/android/q;->getText()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vtosters/lite/q;->getText()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {p0}, Lcom/vkontakte/android/q;->getUid()I
+    invoke-interface {p0}, Lcom/vtosters/lite/q;->getUid()I
 
     move-result v5
 
@@ -1157,10 +1157,10 @@
 
     move v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vkontakte/android/attachments/PostAttachment;-><init>(IILjava/lang/String;ZI)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/attachments/PostAttachment;-><init>(IILjava/lang/String;ZI)V
 
     .line 20
-    invoke-interface {p0}, Lcom/vkontakte/android/q;->getId()I
+    invoke-interface {p0}, Lcom/vtosters/lite/q;->getId()I
 
     move-result v0
 
@@ -1178,7 +1178,7 @@
     invoke-virtual {p1, v0, p2}, Lcom/vk/sharing/attachment/AttachmentInfo$b;->a(Ljava/lang/String;I)Lcom/vk/sharing/attachment/AttachmentInfo$b;
 
     .line 22
-    invoke-interface {p0}, Lcom/vkontakte/android/q;->U0()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vtosters/lite/q;->U0()Ljava/lang/String;
 
     move-result-object p2
 
@@ -1187,7 +1187,7 @@
     invoke-virtual {p1, v0, p2}, Lcom/vk/sharing/attachment/AttachmentInfo$b;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/sharing/attachment/AttachmentInfo$b;
 
     .line 23
-    invoke-interface {p0}, Lcom/vkontakte/android/q;->l1()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/vtosters/lite/q;->l1()Ljava/lang/String;
 
     move-result-object p0
 
@@ -2234,12 +2234,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/attachments/LinkAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     if-eqz v0, :cond_3
 
     .line 7
-    iget-object v1, v0, Lcom/vkontakte/android/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
+    iget-object v1, v0, Lcom/vtosters/lite/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
 
     invoke-virtual {v1}, Lcom/vk/dto/newsfeed/AwayLink;->u1()Ljava/lang/String;
 
@@ -2248,7 +2248,7 @@
     if-eqz v1, :cond_3
 
     .line 8
-    iget-object p0, v0, Lcom/vkontakte/android/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
+    iget-object p0, v0, Lcom/vtosters/lite/attachments/LinkAttachment;->e:Lcom/vk/dto/newsfeed/AwayLink;
 
     invoke-virtual {p0}, Lcom/vk/dto/newsfeed/AwayLink;->u1()Ljava/lang/String;
 

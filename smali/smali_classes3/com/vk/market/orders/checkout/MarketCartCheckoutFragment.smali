@@ -466,13 +466,13 @@
     iput-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;->M:Ljava/lang/String;
 
     .line 32
-    new-instance p1, Lcom/vkontakte/android/fragments/b1$b;
+    new-instance p1, Lcom/vtosters/lite/fragments/b1$b;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
 
-    invoke-direct {p1, p2}, Lcom/vkontakte/android/fragments/b1$b;-><init>(I)V
+    invoke-direct {p1, p2}, Lcom/vtosters/lite/fragments/b1$b;-><init>(I)V
 
     .line 33
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
@@ -485,7 +485,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/fragments/b1$b;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/b1$b;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/b1$b;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/b1$b;
 
     const/16 p2, 0x2eb
 

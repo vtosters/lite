@@ -52,7 +52,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/video/d/b$g;->c:Lcom/vk/video/d/b;
 
-    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vkontakte/android/ui/CircularProgressBar;
+    invoke-static {p1}, Lcom/vk/video/d/b;->c(Lcom/vk/video/d/b;)Lcom/vtosters/lite/ui/CircularProgressBar;
 
     move-result-object v0
 

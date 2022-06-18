@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;->a(Lcom/vkontakte/android/api/i;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

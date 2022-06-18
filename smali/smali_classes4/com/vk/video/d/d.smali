@@ -1,5 +1,5 @@
 .class Lcom/vk/video/d/d;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "VideoYoutubeFragment.java"
 
 
@@ -14,7 +14,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/video/d/d;->c:Lcom/vk/video/d/c;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/feedlikes/c/b;
-.super Lcom/vkontakte/android/ui/adapters/a;
+.super Lcom/vtosters/lite/ui/adapters/a;
 .source "FeedLikesMergeAdapter.kt"
 
 # interfaces
@@ -16,7 +16,7 @@
     new-array v0, v0, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/adapters/a;-><init>([Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
 .end method
@@ -179,7 +179,7 @@
 
     .line 2
     :cond_0
-    invoke-super {p0, p1}, Lcom/vkontakte/android/ui/adapters/a;->i(I)I
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/a;->i(I)I
 
     move-result p1
 

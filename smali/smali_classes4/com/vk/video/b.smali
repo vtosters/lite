@@ -1727,7 +1727,7 @@
 
     const-wide/16 v1, 0x64
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     return-void
 .end method

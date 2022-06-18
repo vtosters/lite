@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,15 +56,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)I
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vkontakte/android/api/i;
+    instance-of v0, p1, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->p1:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->p1:Lcom/vk/dto/common/data/VKList;
 
     if-eqz p1, :cond_0
 
@@ -85,9 +85,9 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/data/ProfileCountersKt$events$1$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)I
+    invoke-virtual {p0, p1}, Lcom/vk/profile/data/ProfileCountersKt$events$1$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)I
 
     move-result p1
 

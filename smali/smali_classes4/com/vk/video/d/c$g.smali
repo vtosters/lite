@@ -75,7 +75,7 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/data/Friends;->a(II)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/data/Friends;->a(II)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/video/d/c$g;->a:Lcom/vk/video/d/c;

@@ -3,7 +3,7 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/fragments/m1$f;
+.implements Lcom/vtosters/lite/fragments/m1$f;
 
 
 # annotations

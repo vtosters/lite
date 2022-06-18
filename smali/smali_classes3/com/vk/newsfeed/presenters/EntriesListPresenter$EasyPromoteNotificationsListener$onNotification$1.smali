@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/ui/f0/b;)Z
+.method public final a(Lcom/vtosters/lite/ui/f0/b;)Z
     .locals 2
 
     const-string v0, "it"
@@ -54,7 +54,7 @@
     .line 1
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v0
 
@@ -62,7 +62,7 @@
 
     if-eq v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v0
 
@@ -71,7 +71,7 @@
     if-ne v0, v1, :cond_1
 
     :cond_0
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$1;->$entry:Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -96,9 +96,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$1;->a(Lcom/vkontakte/android/ui/f0/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$EasyPromoteNotificationsListener$onNotification$1;->a(Lcom/vtosters/lite/ui/f0/b;)Z
 
     move-result p1
 

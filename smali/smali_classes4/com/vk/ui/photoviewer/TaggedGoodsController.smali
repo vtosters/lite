@@ -599,7 +599,7 @@
 
     neg-int p1, v1
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->d(I)Z
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->d(I)Z
 
     move-result p1
 

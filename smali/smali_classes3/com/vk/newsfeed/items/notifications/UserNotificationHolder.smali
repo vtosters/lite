@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "UserNotificationHolder.kt"
 
 # interfaces
@@ -16,7 +16,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/common/data/UserNotification;",
         ">;",
         "Landroid/view/View$OnClickListener;",
@@ -50,9 +50,9 @@
 
 .field private H:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private I:Lcom/vkontakte/android/ui/adapters/g;
+.field private I:Lcom/vtosters/lite/ui/adapters/g;
 
-.field private final J:Lcom/vkontakte/android/utils/g;
+.field private final J:Lcom/vtosters/lite/utils/g;
 
 .field private K:I
 
@@ -133,7 +133,7 @@
     .locals 9
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     const/4 v0, 0x2
 
@@ -269,15 +269,15 @@
     iput v3, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->K:I
 
     .line 15
-    new-instance v3, Lcom/vkontakte/android/utils/g;
+    new-instance v3, Lcom/vtosters/lite/utils/g;
 
     new-instance v4, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$a;
 
     invoke-direct {v4, p0, p2}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$a;-><init>(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;Landroid/view/ViewGroup;)V
 
-    invoke-direct {v3, v4}, Lcom/vkontakte/android/utils/g;-><init>(Lcom/vkontakte/android/utils/g$c;)V
+    invoke-direct {v3, v4}, Lcom/vtosters/lite/utils/g;-><init>(Lcom/vtosters/lite/utils/g$c;)V
 
-    iput-object v3, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->J:Lcom/vkontakte/android/utils/g;
+    iput-object v3, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->J:Lcom/vtosters/lite/utils/g;
 
     .line 16
     iget v3, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->K:I
@@ -309,7 +309,7 @@
 
     .line 19
     :cond_1
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -324,7 +324,7 @@
     move-result p3
 
     .line 20
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -364,7 +364,7 @@
 
     .line 24
     :cond_3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -372,7 +372,7 @@
 
     move-result p3
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -727,11 +727,11 @@
 
     .line 45
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vkontakte/android/ui/adapters/g;
+    iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vtosters/lite/ui/adapters/g;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/adapters/g;->a(Lcom/vk/mediastore/system/MediaStoreEntry;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/adapters/g;->a(Lcom/vk/mediastore/system/MediaStoreEntry;)V
 
     .line 46
     :cond_1
@@ -782,11 +782,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vkontakte/android/ui/adapters/g;
+.method public static final synthetic b(Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;)Lcom/vtosters/lite/ui/adapters/g;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vkontakte/android/ui/adapters/g;
+    iget-object p0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vtosters/lite/ui/adapters/g;
 
     return-object p0
 .end method
@@ -844,22 +844,22 @@
 
     .line 11
     :cond_2
-    new-instance v1, Lcom/vkontakte/android/ui/adapters/g;
+    new-instance v1, Lcom/vtosters/lite/ui/adapters/g;
 
     iget-object v2, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->c:Lcom/vk/attachpicker/p;
 
     const/16 v3, 0x14
 
-    invoke-direct {v1, p1, v2, v3, v0}, Lcom/vkontakte/android/ui/adapters/g;-><init>(Landroid/content/Context;Lcom/vk/attachpicker/p;IZ)V
+    invoke-direct {v1, p1, v2, v3, v0}, Lcom/vtosters/lite/ui/adapters/g;-><init>(Landroid/content/Context;Lcom/vk/attachpicker/p;IZ)V
 
-    iput-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vkontakte/android/ui/adapters/g;
+    iput-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vtosters/lite/ui/adapters/g;
 
     .line 12
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->H:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v0, :cond_3
 
-    iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vkontakte/android/ui/adapters/g;
+    iget-object v1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vtosters/lite/ui/adapters/g;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -883,7 +883,7 @@
 
     .line 14
     :cond_4
-    iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vkontakte/android/ui/adapters/g;
+    iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vtosters/lite/ui/adapters/g;
 
     if-eqz v0, :cond_5
 
@@ -913,7 +913,7 @@
     .locals 4
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -926,7 +926,7 @@
 
     invoke-direct {v1, v0}, Lcom/vk/profile/ui/c$z;-><init>(I)V
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/common/data/UserNotification;
 
@@ -937,9 +937,9 @@
     invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
     .line 4
-    new-instance p1, Lcom/vkontakte/android/data/PostInteract;
+    new-instance p1, Lcom/vtosters/lite/data/PostInteract;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/common/data/UserNotification;
 
@@ -951,12 +951,12 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {p1, v1, v2, v0, v3}, Lcom/vkontakte/android/data/PostInteract;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {p1, v1, v2, v0, v3}, Lcom/vtosters/lite/data/PostInteract;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     .line 5
-    sget-object v0, Lcom/vkontakte/android/data/PostInteract$Type;->open_user:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v0, Lcom/vtosters/lite/data/PostInteract$Type;->open_user:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     return-void
 .end method
@@ -1026,17 +1026,17 @@
     const-string v0, "internal_notification_action"
 
     .line 1
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
     const-string v1, "action"
 
     .line 2
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1050,10 +1050,10 @@
 
     const-string v1, "id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method
@@ -1258,7 +1258,7 @@
     invoke-direct {p0, v2}, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->k(Z)V
 
     .line 4
-    iget-object v2, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vkontakte/android/ui/adapters/g;
+    iget-object v2, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->I:Lcom/vtosters/lite/ui/adapters/g;
 
     if-eqz v2, :cond_2
 
@@ -1276,7 +1276,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/vkontakte/android/ui/adapters/g;->m(Ljava/util/List;)V
+    invoke-virtual {v2, v0}, Lcom/vtosters/lite/ui/adapters/g;->m(Ljava/util/List;)V
 
     goto :goto_1
 
@@ -1326,7 +1326,7 @@
     .line 23
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->d:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
@@ -1334,7 +1334,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 24
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->e:Landroid/widget/TextView;
@@ -1353,7 +1353,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/common/data/UserNotification;->c:Ljava/lang/String;
 
-    invoke-static {v0, v3}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 26
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->e:Landroid/widget/TextView;
@@ -1368,7 +1368,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/common/data/UserNotification;->d:Ljava/lang/String;
 
-    invoke-static {v0, v3}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 28
     :cond_3
@@ -1377,14 +1377,14 @@
 
     iget-object v3, p1, Lcom/vk/dto/common/data/UserNotification;->g:Ljava/lang/String;
 
-    invoke-static {v0, v3}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 29
     iget-object v0, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->B:Landroid/widget/TextView;
 
     iget-object v3, p1, Lcom/vk/dto/common/data/UserNotification;->F:Ljava/lang/String;
 
-    invoke-static {v0, v3}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 30
     iget-object v0, p1, Lcom/vk/dto/common/data/UserNotification;->G:Ljava/util/ArrayList;
@@ -1490,7 +1490,7 @@
 
     .line 37
     :cond_8
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p1
 
@@ -1504,7 +1504,7 @@
 
     .line 38
     :cond_9
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1549,7 +1549,7 @@
 
     .line 41
     :cond_b
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1581,7 +1581,7 @@
 
     .line 43
     :cond_d
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1760,7 +1760,7 @@
 
     .line 2
     :sswitch_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -1780,7 +1780,7 @@
     :sswitch_1
     sget-object p1, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->O:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$c;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -1792,7 +1792,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1823,7 +1823,7 @@
 
     .line 5
     :sswitch_2
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1860,11 +1860,11 @@
     if-ne p1, v0, :cond_3
 
     .line 11
-    iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->J:Lcom/vkontakte/android/utils/g;
+    iget-object p1, p0, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->J:Lcom/vtosters/lite/utils/g;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -1899,7 +1899,7 @@
     move-result-object v2
 
     :cond_2
-    invoke-virtual {p1, v0, v1, v2}, Lcom/vkontakte/android/utils/g;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/util/ArrayList;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/vtosters/lite/utils/g;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/util/ArrayList;)V
 
     goto :goto_2
 
@@ -1907,7 +1907,7 @@
     :cond_3
     sget-object p1, Lcom/vk/newsfeed/items/notifications/UserNotificationHolder;->O:Lcom/vk/newsfeed/items/notifications/UserNotificationHolder$c;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -1919,7 +1919,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

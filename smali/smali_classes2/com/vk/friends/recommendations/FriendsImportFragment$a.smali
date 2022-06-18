@@ -85,7 +85,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    invoke-static {v0}, Lcom/vkontakte/android/data/Friends;->a(Ljava/util/ArrayList;)V
+    invoke-static {v0}, Lcom/vtosters/lite/data/Friends;->a(Ljava/util/ArrayList;)V
 
     return-object v0
 .end method

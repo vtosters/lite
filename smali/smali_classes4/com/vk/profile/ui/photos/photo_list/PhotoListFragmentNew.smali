@@ -62,7 +62,7 @@
 
 .field private S:Ld/a/a/c/b;
 
-.field private final T:Lcom/vkontakte/android/bridges/CommonImageViewer$a;
+.field private final T:Lcom/vtosters/lite/bridges/CommonImageViewer$a;
 
 
 # direct methods
@@ -129,7 +129,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;-><init>(Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->T:Lcom/vkontakte/android/bridges/CommonImageViewer$a;
+    iput-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->T:Lcom/vtosters/lite/bridges/CommonImageViewer$a;
 
     return-void
 .end method
@@ -196,7 +196,7 @@
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->T:Lcom/vkontakte/android/bridges/CommonImageViewer$a;
+    iget-object v3, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->T:Lcom/vtosters/lite/bridges/CommonImageViewer$a;
 
     .line 7
     invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
@@ -857,14 +857,14 @@
 
     const v1, 0x7f080376
 
-    invoke-static {p2, v1}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 4
     iget-object p2, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->H:Landroidx/appcompat/widget/Toolbar;
 
     if-eqz p2, :cond_d
 
-    invoke-static {p0, p2}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p2}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     iget-object p2, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->H:Landroidx/appcompat/widget/Toolbar;

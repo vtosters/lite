@@ -103,7 +103,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/Section;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/music/sections/types/a;->c:Landroid/widget/TextView;
@@ -112,7 +112,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, v1}, Lcom/vkontakte/android/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     return-void
 .end method

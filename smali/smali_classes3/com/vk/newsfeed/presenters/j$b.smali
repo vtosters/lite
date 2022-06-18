@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;>;"
     }
@@ -55,12 +55,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;)V
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;)V"
         }
@@ -114,7 +114,7 @@
 
     .line 6
     :goto_0
-    iget-object v0, p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
+    iget-object v0, p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
     const/4 v1, 0x0
 
@@ -147,7 +147,7 @@
     if-nez v0, :cond_3
 
     .line 7
-    iget-object v0, p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
+    iget-object v0, p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
     iget-object v0, v0, Lcom/vk/dto/stories/model/GetStoriesResponse;->b:Ljava/util/ArrayList;
 
@@ -270,9 +270,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/j$b;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/j$b;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List;)V
 
     return-void
 .end method

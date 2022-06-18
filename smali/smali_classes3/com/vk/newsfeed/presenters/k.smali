@@ -152,10 +152,10 @@
     move-result-object v3
 
     .line 5
-    check-cast v3, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v3, Lcom/vtosters/lite/ui/f0/b;
 
     .line 6
-    iget-object v3, v3, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v3, v3, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-virtual {v3}, Lcom/vk/dto/newsfeed/entries/NewsEntry;->w1()Ljava/lang/String;
 
@@ -388,7 +388,7 @@
 
     .line 25
     :cond_0
-    new-instance p2, Lcom/vkontakte/android/api/newsfeed/a;
+    new-instance p2, Lcom/vtosters/lite/api/newsfeed/a;
 
     iget-object v3, p0, Lcom/vk/newsfeed/presenters/k;->Q:Ljava/lang/String;
 
@@ -402,7 +402,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vkontakte/android/api/newsfeed/a;-><init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/api/newsfeed/a;-><init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -424,7 +424,7 @@
             "Ljava/lang/String;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;"
         }
     .end annotation
@@ -561,7 +561,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     .line 14
     instance-of v2, v0, Lcom/vk/newsfeed/h0/d;
@@ -934,10 +934,10 @@
     move-result-object v4
 
     .line 6
-    check-cast v4, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v4, Lcom/vtosters/lite/ui/f0/b;
 
     .line 7
-    iget-object v4, v4, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v4, v4, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 

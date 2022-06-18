@@ -19,7 +19,7 @@
         "Ljava/lang/Object;",
         "Lcom/vk/newsfeed/contracts/e;",
         "Lcom/vk/lists/t$p<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
         ">;"
     }
 .end annotation
@@ -35,7 +35,7 @@
 .method public abstract a(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+.method public abstract a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 .end method
 
 .method public abstract getState()Lcom/vk/newsfeed/contracts/o;

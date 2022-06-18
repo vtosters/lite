@@ -74,7 +74,7 @@
 
     move-result-wide v3
 
-    invoke-static {v2, v3, v4}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v2, v3, v4}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :cond_0
     if-eqz v0, :cond_1
@@ -97,7 +97,7 @@
 
     move-result-wide v2
 
-    invoke-static {v1, v2, v3}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v1, v2, v3}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     :cond_1
     return-void

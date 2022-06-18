@@ -502,7 +502,7 @@
 
     if-eqz v4, :cond_4
 
-    new-instance v6, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    new-instance v6, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     sget-object v14, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->Z:Lcom/vk/dto/newsfeed/entries/ShitAttachment$b;
 
@@ -510,7 +510,7 @@
 
     move-result-object v4
 
-    invoke-direct {v6, v4}, Lcom/vkontakte/android/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
+    invoke-direct {v6, v4}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
     move-object/from16 v30, v6
 
@@ -563,7 +563,7 @@
 
     if-eqz v5, :cond_6
 
-    sget-object v4, Lcom/vkontakte/android/attachments/VideoSnippetAttachment;->P:Lcom/vkontakte/android/attachments/VideoSnippetAttachment$b;
+    sget-object v4, Lcom/vtosters/lite/attachments/VideoSnippetAttachment;->P:Lcom/vtosters/lite/attachments/VideoSnippetAttachment$b;
 
     const-string v5, "ad"
 
@@ -573,7 +573,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v4, v1, v6, v5, v6}, Lcom/vkontakte/android/attachments/VideoSnippetAttachment$b;->a(Lcom/vkontakte/android/attachments/VideoSnippetAttachment$b;Lorg/json/JSONObject;Landroid/util/SparseArray;ILjava/lang/Object;)Lcom/vkontakte/android/attachments/VideoSnippetAttachment;
+    invoke-static {v4, v1, v6, v5, v6}, Lcom/vtosters/lite/attachments/VideoSnippetAttachment$b;->a(Lcom/vtosters/lite/attachments/VideoSnippetAttachment$b;Lorg/json/JSONObject;Landroid/util/SparseArray;ILjava/lang/Object;)Lcom/vtosters/lite/attachments/VideoSnippetAttachment;
 
     move-result-object v4
 
@@ -581,13 +581,13 @@
 
     .line 34
     :goto_4
-    new-instance v5, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v5, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-static {v4}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object v4
 
-    invoke-direct {v5, v4}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v5, v4}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     const/4 v4, 0x1
 
@@ -595,7 +595,7 @@
     invoke-virtual {v5, v4}, Lcom/vk/dto/common/Attachment;->j(Z)V
 
     .line 36
-    invoke-virtual {v5}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v5}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v14
 
@@ -791,7 +791,7 @@
 
     move-object/from16 v31, v0
 
-    invoke-direct/range {v4 .. v35}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vkontakte/android/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v35}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vtosters/lite/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
 
     .line 46
     sget-object v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->Z:Lcom/vk/dto/newsfeed/entries/ShitAttachment$b;
@@ -845,23 +845,23 @@
     invoke-virtual {v1, v0}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->b(Lcom/vk/statistic/StatisticUrl;)V
 
     .line 49
-    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_c
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/attachments/VideoAttachment;->a(Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/attachments/VideoAttachment;->a(Lcom/vk/dto/newsfeed/entries/ShitAttachment;)V
 
     .line 50
     :cond_c
-    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->X1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v0
 
     if-eqz v0, :cond_d
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/attachments/VideoAttachment;->a(Lcom/vk/statistic/Statistic;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/attachments/VideoAttachment;->a(Lcom/vk/statistic/Statistic;)V
 
     .line 51
     :cond_d

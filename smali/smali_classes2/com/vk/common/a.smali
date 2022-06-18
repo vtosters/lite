@@ -28,7 +28,7 @@
 
     sput-object v0, Lcom/vk/common/a;->b:Lcom/vk/common/a;
 
-    const-string v0, "com.vkontakte.android"
+    const-string v0, "com.vtosters.lite"
 
     const-string v1, "com.instagram.android"
 
@@ -323,7 +323,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

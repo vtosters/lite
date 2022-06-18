@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private a:Lcom/vkontakte/android/ui/refreshlayout/a;
+.field private a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
-.field private b:Lcom/vkontakte/android/ui/refreshlayout/b;
+.field private b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
 .field private c:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
@@ -86,16 +86,16 @@
     move-result v2
 
     .line 5
-    new-instance v3, Lcom/vkontakte/android/ui/refreshlayout/a;
+    new-instance v3, Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/high16 v4, 0x41800000    # 16.0f
 
-    invoke-direct {v3, v0, v1, v4}, Lcom/vkontakte/android/ui/refreshlayout/a;-><init>(Landroid/content/Context;IF)V
+    invoke-direct {v3, v0, v1, v4}, Lcom/vtosters/lite/ui/refreshlayout/a;-><init>(Landroid/content/Context;IF)V
 
-    iput-object v3, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iput-object v3, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     .line 6
-    iget-object v3, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object v3, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     const/4 v4, 0x1
 
@@ -119,22 +119,22 @@
 
     .line 9
     :cond_0
-    new-instance v3, Lcom/vkontakte/android/ui/refreshlayout/b;
+    new-instance v3, Lcom/vtosters/lite/ui/refreshlayout/b;
 
-    invoke-direct {v3, v0, p1}, Lcom/vkontakte/android/ui/refreshlayout/b;-><init>(Landroid/content/Context;Landroid/view/View;)V
+    invoke-direct {v3, v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/b;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
-    iput-object v3, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iput-object v3, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     .line 10
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1, v1}, Lcom/vkontakte/android/ui/refreshlayout/b;->a(I)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(I)V
 
     .line 11
     :cond_1
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     if-eqz p1, :cond_2
 
@@ -146,21 +146,21 @@
 
     aput v2, v0, v4
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/refreshlayout/b;->a([I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->a([I)V
 
     .line 12
     :cond_2
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 13
     :cond_3
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz p1, :cond_4
 
@@ -172,7 +172,7 @@
     if-eqz p2, :cond_5
 
     .line 14
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz p1, :cond_5
 
@@ -184,13 +184,13 @@
 
     .line 15
     :cond_5
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     if-eqz p1, :cond_6
 
     const/16 p2, 0xff
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/refreshlayout/b;->setAlpha(I)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/refreshlayout/b;->setAlpha(I)V
 
     :cond_6
     return-void
@@ -216,29 +216,29 @@
     .locals 2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/refreshlayout/b;->b(F)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/refreshlayout/b;->b(F)V
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1, v1}, Lcom/vkontakte/android/ui/refreshlayout/b;->a(FF)V
+    invoke-virtual {v0, v1, v1}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(FF)V
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/refreshlayout/b;->start()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->start()V
 
     :cond_2
     return-void
@@ -313,7 +313,7 @@
     add-int/2addr v1, p1
 
     .line 12
-    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object p1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz p1, :cond_3
 
@@ -347,11 +347,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vkontakte/android/ui/refreshlayout/b;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->b:Lcom/vtosters/lite/ui/refreshlayout/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/refreshlayout/b;->stop()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->stop()V
 
     :cond_0
     return-void
@@ -372,7 +372,7 @@
     .locals 3
 
     .line 13
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz v0, :cond_0
 
@@ -443,7 +443,7 @@
 
     .line 3
     :goto_0
-    iget-object v1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object v1, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     .line 4
     new-instance v2, Lcom/vk/feedlikes/a$c;
@@ -459,7 +459,7 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/feedlikes/a;->a:Lcom/vkontakte/android/ui/refreshlayout/a;
+    iget-object v0, p0, Lcom/vk/feedlikes/a;->a:Lcom/vtosters/lite/ui/refreshlayout/a;
 
     if-eqz v0, :cond_0
 

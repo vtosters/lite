@@ -26,7 +26,7 @@
 
 .field private final I:Landroid/view/View;
 
-.field private J:Lcom/vkontakte/android/ui/f0/b;
+.field private J:Lcom/vtosters/lite/ui/f0/b;
 
 
 # direct methods
@@ -137,11 +137,11 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vkontakte/android/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     goto :goto_0
 
@@ -152,7 +152,7 @@
     :goto_0
     new-instance v1, Lcom/vk/api/newsfeed/h;
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/FeedbackPoll;
 
@@ -202,7 +202,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/FeedbackPoll;
 
@@ -212,7 +212,7 @@
 
     invoke-direct {v1, v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$a;-><init>(Lcom/vk/dto/newsfeed/entries/FeedbackPoll;)V
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -240,7 +240,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const/16 v2, 0x64
 
@@ -337,14 +337,14 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vkontakte/android/ui/f0/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vtosters/lite/ui/f0/b;
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method

@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         "Lcom/vk/newsfeed/contracts/e;",
         "Lcom/vk/lists/t$p<",
-        "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;>;"
     }

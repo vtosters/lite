@@ -41,7 +41,7 @@
 
 .field private M:Landroidx/appcompat/widget/Toolbar;
 
-.field private N:Lcom/vkontakte/android/ui/x;
+.field private N:Lcom/vtosters/lite/ui/x;
 
 .field private O:Landroid/widget/ProgressBar;
 
@@ -83,7 +83,7 @@
 
 .field private final Z:Landroid/view/View$OnClickListener;
 
-.field private final a0:Lcom/vkontakte/android/ui/x$i;
+.field private final a0:Lcom/vtosters/lite/ui/x$i;
 
 
 # direct methods
@@ -173,7 +173,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/fave/fragments/FaveTabFragment$d;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vkontakte/android/ui/x$i;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vtosters/lite/ui/x$i;
 
     return-void
 .end method
@@ -223,20 +223,20 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/ui/x;
+    new-instance v0, Lcom/vtosters/lite/ui/x;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vkontakte/android/ui/x$i;
+    iget-object v2, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vtosters/lite/ui/x$i;
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/ui/x;-><init>(Landroid/app/Activity;Lcom/vkontakte/android/ui/x$i;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vkontakte/android/ui/x;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/x;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vkontakte/android/ui/x;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/x;
 
     if-eqz v0, :cond_0
 
@@ -248,7 +248,7 @@
 
     invoke-direct {v2, v1}, Lcom/vk/fave/fragments/b;-><init>(Lkotlin/jvm/b/b;)V
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/ui/x;->a(Lcom/vkontakte/android/ui/x$j;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/x;->a(Lcom/vtosters/lite/ui/x$j;)V
 
     .line 3
     :cond_0
@@ -299,7 +299,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->M:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, v1}, Lcom/vkontakte/android/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 8
     new-instance v1, Lcom/vk/fave/fragments/FaveTabFragment$e;
@@ -1260,11 +1260,11 @@
     instance-of v0, v0, Lcom/vk/fave/fragments/FaveSearchFragment;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vkontakte/android/ui/x;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/x;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, p1, p2}, Lcom/vkontakte/android/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v1, p1, p2}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     :cond_1
     const v1, 0x7f0e0010

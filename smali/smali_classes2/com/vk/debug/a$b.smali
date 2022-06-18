@@ -1,5 +1,5 @@
 .class final Lcom/vk/debug/a$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "HintsDebugFragment.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Ljava/lang/String;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -63,7 +63,7 @@
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/debug/a$b;->d:Lcom/vk/core/util/k0;
 
@@ -193,7 +193,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/debug/a$b;->d:Lcom/vk/core/util/k0;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 

@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/data/d/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
 .end annotation
@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 2
 
     .line 1
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/data/ProfileCountersKt;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Z
+    invoke-static {p1, v0}, Lcom/vk/profile/data/ProfileCountersKt;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Z
 
     move-result v0
 
@@ -41,7 +41,7 @@
 
     if-nez v0, :cond_0
 
-    iget-boolean p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->u1:Z
+    iget-boolean p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->u1:Z
 
     if-nez p1, :cond_0
 

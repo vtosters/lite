@@ -261,7 +261,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/f;->b([Lcom/vk/music/common/a;)V
+    invoke-static {v0}, Lcom/vtosters/lite/utils/f;->b([Lcom/vk/music/common/a;)V
 
     return-void
 .end method
@@ -295,7 +295,7 @@
 
     aput-object v0, v1, v2
 
-    invoke-static {p1, v1}, Lcom/vkontakte/android/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {p1, v1}, Lcom/vtosters/lite/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
 
     return-void
 .end method
@@ -364,7 +364,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/utils/f;->b(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/utils/f;->b(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
 
     return-object v0
 .end method
@@ -392,7 +392,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/f;->a([Lcom/vk/music/common/a;)V
+    invoke-static {v0}, Lcom/vtosters/lite/utils/f;->a([Lcom/vk/music/common/a;)V
 
     return-void
 .end method

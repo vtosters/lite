@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/d/a;->a(ILcom/vkontakte/android/api/i;)Lc/a/m;
+    value = Lcom/vk/profile/data/d/a;->a(ILcom/vtosters/lite/api/i;)Lc/a/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,14 +31,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/i;
+.field final synthetic a:Lcom/vtosters/lite/api/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vtosters/lite/api/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/data/d/a$g;->a:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/data/d/a$g;->a:Lcom/vtosters/lite/api/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,9 +59,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/d/a$g;->a:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/data/d/a$g;->a:Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/api/i;->a(Lcom/vk/dto/common/data/VKList;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/api/i;->a(Lcom/vk/dto/common/data/VKList;)V
 
     return-void
 .end method

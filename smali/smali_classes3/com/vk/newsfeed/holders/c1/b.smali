@@ -394,7 +394,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
@@ -406,7 +406,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vkontakte/android/i0/d;->a(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/vtosters/lite/i0/d;->a(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -498,15 +498,15 @@
     invoke-interface {v2, v1, p1, v0}, Lcom/vk/music/player/d;->b(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    sget-object v0, Lcom/vkontakte/android/data/PostInteract$Type;->audio_start:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v0, Lcom/vtosters/lite/data/PostInteract$Type;->audio_start:Lcom/vtosters/lite/data/PostInteract$Type;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;)V
 
     goto :goto_1
 
@@ -562,7 +562,7 @@
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 2
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -627,14 +627,14 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 6
-    instance-of v3, v2, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v3, v2, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v3, :cond_1
 
     .line 7
-    check-cast v2, Lcom/vkontakte/android/attachments/AudioAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/AudioAttachment;
 
-    iget-object v2, v2, Lcom/vkontakte/android/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
+    iget-object v2, v2, Lcom/vtosters/lite/attachments/AudioAttachment;->e:Lcom/vk/dto/music/MusicTrack;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

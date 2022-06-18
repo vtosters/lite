@@ -987,7 +987,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 19
-    new-instance v2, Lcom/vkontakte/android/upload/l/c;
+    new-instance v2, Lcom/vtosters/lite/upload/l/c;
 
     invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1001,7 +1001,7 @@
 
     move-object v4, v2
 
-    invoke-direct/range {v4 .. v9}, Lcom/vkontakte/android/upload/l/c;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
+    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/upload/l/c;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1033,7 +1033,7 @@
     move-result-object p2
 
     .line 22
-    new-instance p3, Lcom/vkontakte/android/upload/l/f;
+    new-instance p3, Lcom/vtosters/lite/upload/l/f;
 
     const v1, 0x7f121017
 
@@ -1045,17 +1045,17 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p3, v0, v1}, Lcom/vkontakte/android/upload/l/f;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {p3, v0, v1}, Lcom/vtosters/lite/upload/l/f;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     .line 23
     new-instance v0, Lcom/vk/profile/ui/photos/PhotoUploadExtraParams;
 
     invoke-direct {v0, p1}, Lcom/vk/profile/ui/photos/PhotoUploadExtraParams;-><init>(Lcom/vk/dto/photo/PhotoAlbum;)V
 
-    invoke-virtual {p3, v0}, Lcom/vkontakte/android/upload/l/f;->b(Landroid/os/Parcelable;)V
+    invoke-virtual {p3, v0}, Lcom/vtosters/lite/upload/l/f;->b(Landroid/os/Parcelable;)V
 
     .line 24
-    new-instance p1, Lcom/vkontakte/android/upload/UploadNotification$a;
+    new-instance p1, Lcom/vtosters/lite/upload/UploadNotification$a;
 
     const v0, 0x7f120a7a
 
@@ -1073,12 +1073,12 @@
 
     move-result-object v1
 
-    invoke-direct {p1, v0, v1, p2}, Lcom/vkontakte/android/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
+    invoke-direct {p1, v0, v1, p2}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {p3, p1}, Lcom/vkontakte/android/upload/Upload;->a(Lcom/vkontakte/android/upload/j;Lcom/vkontakte/android/upload/UploadNotification$a;)Lcom/vkontakte/android/upload/UploadNotification$a;
+    invoke-static {p3, p1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 25
-    invoke-static {p3}, Lcom/vkontakte/android/upload/Upload;->c(Lcom/vkontakte/android/upload/j;)I
+    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
 
     .line 26
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/e;
@@ -1265,7 +1265,7 @@
     if-eqz p2, :cond_1
 
     .line 5
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
@@ -1279,7 +1279,7 @@
 
     neg-int p2, p2
 
-    invoke-static {p2}, Lcom/vkontakte/android/data/Groups;->d(I)Z
+    invoke-static {p2}, Lcom/vtosters/lite/data/Groups;->d(I)Z
 
     move-result p2
 

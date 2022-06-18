@@ -66,13 +66,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder$onLongClick$1;->this$0:Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vkontakte/android/data/PostInteract;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/h;->i0()Lcom/vtosters/lite/data/PostInteract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vkontakte/android/data/PostInteract$Type;->link_click:Lcom/vkontakte/android/data/PostInteract$Type;
+    sget-object v1, Lcom/vtosters/lite/data/PostInteract$Type;->link_click:Lcom/vtosters/lite/data/PostInteract$Type;
 
     iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/CompactSnippetHolder$onLongClick$1;->$snippet:Lcom/vk/dto/common/Attachment;
 
@@ -84,7 +84,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vkontakte/android/data/PostInteract;->a(Lcom/vkontakte/android/data/PostInteract$Type;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/PostInteract;->a(Lcom/vtosters/lite/data/PostInteract$Type;Ljava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x0

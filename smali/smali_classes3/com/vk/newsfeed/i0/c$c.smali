@@ -57,7 +57,7 @@
     .line 2
     iget-object v0, v1, Lcom/vk/newsfeed/i0/c$c;->a:Lcom/vk/newsfeed/i0/c;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/i0/c;->a(Lcom/vk/newsfeed/i0/c;)Lcom/vkontakte/android/data/v/a;
+    invoke-static {v0}, Lcom/vk/newsfeed/i0/c;->a(Lcom/vk/newsfeed/i0/c;)Lcom/vtosters/lite/data/v/a;
 
     move-result-object v0
 
@@ -181,13 +181,13 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v4, Lcom/vkontakte/android/attachments/GeoAttachment;
+    new-instance v4, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     new-instance v11, Lorg/json/JSONObject;
 
     invoke-direct {v11, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v11}, Lcom/vkontakte/android/attachments/GeoAttachment;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v4, v11}, Lcom/vtosters/lite/attachments/GeoAttachment;-><init>(Lorg/json/JSONObject;)V
 
     move-object v11, v4
 
@@ -345,7 +345,7 @@
 
     move-object/from16 v17, v0
 
-    invoke-direct/range {v4 .. v26}, Lcom/vk/newsfeed/posting/dto/c;-><init>(JILjava/util/Date;Ljava/lang/String;Ljava/util/List;Lcom/vkontakte/android/attachments/GeoAttachment;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/sharing/target/Target;Ljava/util/Date;ZZZZZZZLjava/lang/Integer;)V
+    invoke-direct/range {v4 .. v26}, Lcom/vk/newsfeed/posting/dto/c;-><init>(JILjava/util/Date;Ljava/lang/String;Ljava/util/List;Lcom/vtosters/lite/attachments/GeoAttachment;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/sharing/target/Target;Ljava/util/Date;ZZZZZZZLjava/lang/Integer;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

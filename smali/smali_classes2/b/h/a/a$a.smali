@@ -284,7 +284,7 @@
 
     const v0, 0x7f0d001e
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
 
     move-result-object p1
 
@@ -303,7 +303,7 @@
     const v0, 0x7f0d001d
 
     .line 4
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
 
     move-result-object p1
 

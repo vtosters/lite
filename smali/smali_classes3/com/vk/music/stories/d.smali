@@ -3,7 +3,7 @@
 .source "MusicStoriesPlayer.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/audio/player/r$a;
+.implements Lcom/vtosters/lite/audio/player/r$a;
 
 
 # annotations
@@ -29,7 +29,7 @@
 
 .field private b:Lcom/vk/music/stories/d$b;
 
-.field private final c:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+.field private final c:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
 .field private d:I
 
@@ -37,11 +37,11 @@
 
 .field private final f:Lcom/vk/music/stories/d$d;
 
-.field private final g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+.field private final g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
 .field private final h:Landroid/content/Context;
 
-.field private final i:Lcom/vkontakte/android/audio/player/r;
+.field private final i:Lcom/vtosters/lite/audio/player/r;
 
 
 # direct methods
@@ -61,7 +61,7 @@
     .locals 4
 
     .line 9
-    new-instance v0, Lcom/vkontakte/android/audio/player/r;
+    new-instance v0, Lcom/vtosters/lite/audio/player/r;
 
     const/4 v1, 0x0
 
@@ -69,20 +69,20 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vkontakte/android/audio/player/r;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/audio/player/r;-><init>(IILkotlin/jvm/internal/i;)V
 
-    sget-object v1, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;->a:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;
+    sget-object v1, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;->a:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;
 
     const-string v2, "MediaPlayerHelperI.Factory.INSTANCE"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/r;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/r;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/r;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/r;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;)V
     .locals 8
 
     .line 1
@@ -90,7 +90,7 @@
 
     iput-object p1, p0, Lcom/vk/music/stories/d;->h:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/music/stories/d;->i:Lcom/vkontakte/android/audio/player/r;
+    iput-object p2, p0, Lcom/vk/music/stories/d;->i:Lcom/vtosters/lite/audio/player/r;
 
     .line 2
     invoke-static {}, Lio/reactivex/subjects/PublishSubject;->p()Lio/reactivex/subjects/PublishSubject;
@@ -104,9 +104,9 @@
     iput-object p1, p0, Lcom/vk/music/stories/d;->a:Lio/reactivex/subjects/PublishSubject;
 
     .line 3
-    sget-object p1, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+    sget-object p1, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
-    iput-object p1, p0, Lcom/vk/music/stories/d;->c:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+    iput-object p1, p0, Lcom/vk/music/stories/d;->c:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
     .line 4
     new-instance p1, Lcom/vk/music/stories/d$d;
@@ -116,7 +116,7 @@
     iput-object p1, p0, Lcom/vk/music/stories/d;->f:Lcom/vk/music/stories/d$d;
 
     .line 5
-    iget-object v1, p0, Lcom/vk/music/stories/d;->c:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+    iget-object v1, p0, Lcom/vk/music/stories/d;->c:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
     iget-object v2, p0, Lcom/vk/music/stories/d;->h:Landroid/content/Context;
 
@@ -130,7 +130,7 @@
 
     move-object v0, p3
 
-    invoke-interface/range {v0 .. v7}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;->a(Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;ILcom/vkontakte/android/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;JZ)Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    invoke-interface/range {v0 .. v7}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;->a(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;ILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;JZ)Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
     move-result-object p1
 
@@ -138,17 +138,17 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iput-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/music/stories/d;->i:Lcom/vkontakte/android/audio/player/r;
+    iget-object p1, p0, Lcom/vk/music/stories/d;->i:Lcom/vtosters/lite/audio/player/r;
 
-    invoke-virtual {p1, p0}, Lcom/vkontakte/android/audio/player/r;->a(Lcom/vkontakte/android/audio/player/r$a;)V
+    invoke-virtual {p1, p0}, Lcom/vtosters/lite/audio/player/r;->a(Lcom/vtosters/lite/audio/player/r$a;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/r;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/r;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;ILkotlin/jvm/internal/i;)V
     .locals 2
 
     and-int/lit8 p5, p4, 0x2
@@ -156,7 +156,7 @@
     if-eqz p5, :cond_0
 
     .line 7
-    new-instance p2, Lcom/vkontakte/android/audio/player/r;
+    new-instance p2, Lcom/vtosters/lite/audio/player/r;
 
     const/4 p5, 0x0
 
@@ -164,7 +164,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, p5, v0, v1}, Lcom/vkontakte/android/audio/player/r;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {p2, p5, v0, v1}, Lcom/vtosters/lite/audio/player/r;-><init>(IILkotlin/jvm/internal/i;)V
 
     :cond_0
     and-int/lit8 p4, p4, 0x4
@@ -172,14 +172,14 @@
     if-eqz p4, :cond_1
 
     .line 8
-    sget-object p3, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;->a:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;
+    sget-object p3, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;->a:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;
 
     const-string p4, "MediaPlayerHelperI.Factory.INSTANCE"
 
     invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vkontakte/android/audio/player/r;Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$c;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/stories/d;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/r;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;)V
 
     return-void
 .end method
@@ -253,9 +253,9 @@
 
     if-lez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {v0}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->getCurrentPosition()J
+    invoke-interface {v0}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->getCurrentPosition()J
 
     move-result-wide v2
 
@@ -277,13 +277,13 @@
     if-eqz v0, :cond_0
 
     .line 28
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
     invoke-virtual {p1}, Lcom/vk/music/stories/d$b;->a()I
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->b(I)Z
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->b(I)Z
 
     .line 29
     iget-object p1, p0, Lcom/vk/music/stories/d;->a:Lio/reactivex/subjects/PublishSubject;
@@ -296,9 +296,9 @@
 
     .line 30
     :cond_0
-    iget-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {p1, v1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->b(I)Z
+    invoke-interface {p1, v1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->b(I)Z
 
     .line 31
     invoke-virtual {p0}, Lcom/vk/music/stories/d;->e()V
@@ -337,7 +337,7 @@
     iput-object p1, p0, Lcom/vk/music/stories/d;->b:Lcom/vk/music/stories/d$b;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
     invoke-virtual {p1}, Lcom/vk/music/stories/d$b;->a()I
 
@@ -351,7 +351,7 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {v0, v3, v1, p1, v2}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->a(Lcom/vk/dto/music/MusicTrack;ILjava/lang/String;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {v0, v3, v1, p1, v2}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->a(Lcom/vk/dto/music/MusicTrack;ILjava/lang/String;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/music/stories/d;->a:Lio/reactivex/subjects/PublishSubject;
@@ -392,11 +392,11 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/stories/d;->i:Lcom/vkontakte/android/audio/player/r;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->i:Lcom/vtosters/lite/audio/player/r;
 
     iget-object v1, p0, Lcom/vk/music/stories/d;->h:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/audio/player/r;->b(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/r;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -424,9 +424,9 @@
     .locals 1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {v0, p1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->a(F)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->a(F)V
 
     return-void
 .end method
@@ -573,13 +573,13 @@
     iput-object v2, p0, Lcom/vk/music/stories/d;->b:Lcom/vk/music/stories/d$b;
 
     .line 22
-    iget-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
     invoke-virtual {v2}, Lcom/vk/music/stories/d$b;->a()I
 
     move-result p2
 
-    invoke-interface {p1, p2}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->b(I)Z
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->b(I)Z
 
     .line 23
     sget-object p1, Lcom/vk/music/stories/d$c$c;->a:Lcom/vk/music/stories/d$c$c;
@@ -712,9 +712,9 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/vk/music/stories/d;->c:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;
+    iget-object v2, p0, Lcom/vk/music/stories/d;->c:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
-    invoke-virtual {v2, v0, p1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI$Type;->b(Lcom/vk/dto/music/MusicTrack;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0, p1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;->b(Lcom/vk/dto/music/MusicTrack;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -759,9 +759,9 @@
     invoke-static {p1}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object p1, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {p1}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->e()Z
+    invoke-interface {p1}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->e()Z
 
     move-result p1
 
@@ -782,9 +782,9 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {v0}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->getState()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->getState()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -855,9 +855,9 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {v0}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->a()V
+    invoke-interface {v0}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->a()V
 
     return-void
 .end method
@@ -906,9 +906,9 @@
     invoke-direct {p0}, Lcom/vk/music/stories/d;->f()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {v0}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->t()Z
+    invoke-interface {v0}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->t()Z
 
     move-result v0
 
@@ -936,16 +936,16 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/stories/d;->i:Lcom/vkontakte/android/audio/player/r;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->i:Lcom/vtosters/lite/audio/player/r;
 
     iget-object v1, p0, Lcom/vk/music/stories/d;->h:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/audio/player/r;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/r;->a(Landroid/content/Context;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;
+    iget-object v0, p0, Lcom/vk/music/stories/d;->g:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
-    invoke-interface {v0}, Lcom/vkontakte/android/audio/player/MediaPlayerHelperI;->stop()V
+    invoke-interface {v0}, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;->stop()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/music/stories/d;->a:Lio/reactivex/subjects/PublishSubject;

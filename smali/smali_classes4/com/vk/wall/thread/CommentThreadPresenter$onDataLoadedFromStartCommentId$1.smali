@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/a;",
+        "Lcom/vtosters/lite/api/wall/a;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/a;)V
     .locals 8
 
     .line 1
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-static {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;)Lcom/vkontakte/android/NewsComment;
+    invoke-static {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;)Lcom/vtosters/lite/NewsComment;
 
     move-result-object v2
 
@@ -61,15 +61,15 @@
     .line 2
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-static {v0, v2}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vkontakte/android/NewsComment;)V
+    invoke-static {v0, v2}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vtosters/lite/NewsComment;)V
 
     .line 3
-    iget v0, p1, Lcom/vkontakte/android/api/wall/a;->b:I
+    iget v0, p1, Lcom/vtosters/lite/api/wall/a;->b:I
 
-    iput v0, v2, Lcom/vkontakte/android/NewsComment;->R:I
+    iput v0, v2, Lcom/vtosters/lite/NewsComment;->R:I
 
     .line 4
-    iget-object v0, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     const-string v1, "result.comments"
 
@@ -77,14 +77,14 @@
 
     new-instance v3, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1$1;
 
-    invoke-direct {v3, v2}, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1$1;-><init>(Lcom/vkontakte/android/NewsComment;)V
+    invoke-direct {v3, v2}, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1$1;-><init>(Lcom/vtosters/lite/NewsComment;)V
 
     invoke-static {v0, v3}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
 
     .line 5
-    iget-object v0, v2, Lcom/vkontakte/android/NewsComment;->S:Ljava/util/List;
+    iget-object v0, v2, Lcom/vtosters/lite/NewsComment;->S:Ljava/util/List;
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v3, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -97,16 +97,16 @@
 
     move-result-object v0
 
-    iget-object v3, p1, Lcom/vkontakte/android/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v3, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/vk/wall/c;->a(Lcom/vkontakte/android/NewsComment;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v2, v3}, Lcom/vk/wall/c;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     .line 7
-    iget p1, p1, Lcom/vkontakte/android/api/wall/a;->c:I
+    iget p1, p1, Lcom/vtosters/lite/api/wall/a;->c:I
 
     const/4 v7, 0x0
 
@@ -117,9 +117,9 @@
 
     const/4 v3, 0x0
 
-    sget-object v1, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v1, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/o0/a$a;->g()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/o0/a$a;->g()I
 
     move-result v4
 
@@ -129,7 +129,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/wall/b;-><init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;IILkotlin/jvm/internal/i;)V
 
     invoke-interface {v0, v7, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
@@ -195,9 +195,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1;->a(Lcom/vkontakte/android/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$onDataLoadedFromStartCommentId$1;->a(Lcom/vtosters/lite/api/wall/a;)V
 
     return-void
 .end method

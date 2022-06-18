@@ -444,7 +444,7 @@
 
     sget-object v3, Lcom/vk/core/utils/VerifyInfoHelper;->h:Lcom/vk/core/utils/VerifyInfoHelper;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -588,16 +588,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 1
 
     .line 2
-    iget v0, p1, Lcom/vkontakte/android/ui/f0/b;->f:I
+    iget v0, p1, Lcom/vtosters/lite/ui/f0/b;->f:I
 
     iput v0, p0, Lcom/vk/newsfeed/holders/c1/d;->N:I
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -685,7 +685,7 @@
 
     long-to-int v5, v4
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -972,11 +972,11 @@
 
     check-cast v8, Lcom/vk/newsfeed/holders/c1/d;
 
-    iget-object v8, v8, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v8, v8, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v8, Lcom/vk/dto/newsfeed/entries/Post;
 
-    iget-object v9, v0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v9, v0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v9, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -999,11 +999,11 @@
 
     check-cast v7, Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {v7}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v7}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v8
 
-    iget-object v9, v0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v9, v0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v9, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -1018,7 +1018,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v8}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v8}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v8
 
@@ -1026,10 +1026,10 @@
 
     move-result v9
 
-    iput v9, v8, Lcom/vkontakte/android/NewsComment;->B:I
+    iput v9, v8, Lcom/vtosters/lite/NewsComment;->B:I
 
     .line 12
-    invoke-virtual {v7}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v7}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v8
 
@@ -1116,11 +1116,11 @@
 
     move-result-object v11
 
-    invoke-virtual {v11}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v11}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v11
 
-    iget-object v11, v11, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iget-object v11, v11, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     if-eqz v11, :cond_6
 
@@ -1163,7 +1163,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v9}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v9
 
@@ -1181,10 +1181,10 @@
 
     move-result-object v8
 
-    iput-object v8, v9, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iput-object v8, v9, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     .line 16
-    invoke-virtual {v7}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v7}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v8
 
@@ -1192,13 +1192,13 @@
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v9}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v9
 
-    iget-object v9, v9, Lcom/vkontakte/android/NewsComment;->a:Ljava/lang/String;
+    iget-object v9, v9, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
-    invoke-virtual {v8, v9}, Lcom/vkontakte/android/ui/WriteBar;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v9}, Lcom/vtosters/lite/ui/WriteBar;->setText(Ljava/lang/CharSequence;)V
 
     .line 17
     :cond_9
@@ -1223,7 +1223,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -1258,7 +1258,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -1317,7 +1317,7 @@
 
     .line 2
     :cond_0
-    iget-object v2, v0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, v0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -1366,7 +1366,7 @@
 
     if-ne v4, v7, :cond_2
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v4
 
@@ -1386,7 +1386,7 @@
 
     .line 7
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v4
 
@@ -1485,7 +1485,7 @@
     invoke-static/range {v8 .. v15}, Lcom/vk/core/widget/b;->a(Lcom/vk/core/widget/b;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
 
     .line 12
-    new-instance v5, Lcom/vkontakte/android/api/wall/h;
+    new-instance v5, Lcom/vtosters/lite/api/wall/h;
 
     invoke-virtual {v3}, Lcom/vk/dto/newsfeed/activities/Comment;->M0()Z
 
@@ -1513,7 +1513,7 @@
 
     move-object/from16 v16, v5
 
-    invoke-direct/range {v16 .. v23}, Lcom/vkontakte/android/api/wall/h;-><init>(ZIIZIILjava/lang/String;)V
+    invoke-direct/range {v16 .. v23}, Lcom/vtosters/lite/api/wall/h;-><init>(ZIIZIILjava/lang/String;)V
 
     const-string v2, "ref"
 

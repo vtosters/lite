@@ -191,7 +191,7 @@
 
     .line 10
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->z()Z
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->z()Z
 
     move-result v2
 

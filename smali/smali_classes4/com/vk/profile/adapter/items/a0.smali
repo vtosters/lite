@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private final B:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final B:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-void
 .end method
@@ -25,9 +25,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->r1:Lcom/vk/dto/newsfeed/entries/widget/Widget;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->r1:Lcom/vk/dto/newsfeed/entries/widget/Widget;
 
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/entries/widget/Widget;->k0()I
 
@@ -40,23 +40,23 @@
     return v0
 .end method
 
-.method public final P()Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public final P()Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/profile/adapter/items/a0;",
             ">;"
         }
@@ -73,15 +73,15 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/items/a0;->B:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->r1:Lcom/vk/dto/newsfeed/entries/widget/Widget;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->r1:Lcom/vk/dto/newsfeed/entries/widget/Widget;
 
     invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/widget/Widget;->k0()I
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/common/view/h$a;->a(Landroid/content/Context;I)Lcom/vkontakte/android/ui/widget/v;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/common/view/h$a;->a(Landroid/content/Context;I)Lcom/vtosters/lite/ui/widget/v;
 
     move-result-object p1
 
@@ -104,7 +104,7 @@
     .line 4
     new-instance v0, Lcom/vk/profile/adapter/items/a0$a;
 
-    invoke-direct {v0, p0, p1, p1}, Lcom/vk/profile/adapter/items/a0$a;-><init>(Lcom/vk/profile/adapter/items/a0;Lcom/vkontakte/android/ui/widget/v;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1, p1}, Lcom/vk/profile/adapter/items/a0$a;-><init>(Lcom/vk/profile/adapter/items/a0;Lcom/vtosters/lite/ui/widget/v;Landroid/view/View;)V
 
     return-object v0
 .end method

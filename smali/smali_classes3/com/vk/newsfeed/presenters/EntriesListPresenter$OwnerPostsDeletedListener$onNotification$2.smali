@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/ui/f0/b;",
+        "Lcom/vtosters/lite/ui/f0/b;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/ui/f0/b;)Z
+.method public final a(Lcom/vtosters/lite/ui/f0/b;)Z
     .locals 4
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/d;
 
@@ -94,7 +94,7 @@
 
     .line 2
     :cond_1
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/d;
 
@@ -134,7 +134,7 @@
 
     .line 3
     :cond_3
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -164,7 +164,7 @@
     .line 4
     :cond_5
     :goto_2
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -210,7 +210,7 @@
 
     .line 5
     :cond_7
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v0, p1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -254,9 +254,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->a(Lcom/vkontakte/android/ui/f0/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->a(Lcom/vtosters/lite/ui/f0/b;)Z
 
     move-result p1
 

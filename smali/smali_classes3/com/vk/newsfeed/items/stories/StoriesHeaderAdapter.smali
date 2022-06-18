@@ -217,7 +217,7 @@
     move-object p2, v0
 
     :goto_0
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-boolean p2, p0, Lcom/vk/newsfeed/items/stories/StoriesHeaderAdapter;->d:Z
@@ -433,7 +433,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 

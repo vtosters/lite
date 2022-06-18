@@ -368,7 +368,7 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/VKActivity;
+    instance-of v1, v0, Lcom/vtosters/lite/VKActivity;
 
     const/4 v2, 0x0
 
@@ -377,7 +377,7 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/VKActivity;
+    check-cast v0, Lcom/vtosters/lite/VKActivity;
 
     if-eqz v0, :cond_1
 
@@ -394,7 +394,7 @@
     .line 5
     iget-object v1, p0, Lcom/vk/stories/clickable/l/a/e/a;->f:Lcom/vk/stories/clickable/l/a/e/a$d;
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/VKActivity;->b(Lcom/vk/navigation/c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/VKActivity;->b(Lcom/vk/navigation/c;)V
 
     goto :goto_0
 

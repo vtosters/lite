@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/EventHolder;->a(Lcom/vkontakte/android/attachments/EventAttachment;)V
+    value = Lcom/vk/newsfeed/holders/attachments/EventHolder;->a(Lcom/vtosters/lite/attachments/EventAttachment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final synthetic $attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+.field final synthetic $attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
 .field final synthetic $event:Lcom/vk/dto/newsfeed/Owner;
 
@@ -38,7 +38,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/EventHolder;Lcom/vk/dto/newsfeed/Owner;ZLcom/vkontakte/android/attachments/EventAttachment;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/attachments/EventHolder;Lcom/vk/dto/newsfeed/Owner;ZLcom/vtosters/lite/attachments/EventAttachment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->this$0:Lcom/vk/newsfeed/holders/attachments/EventHolder;
@@ -47,7 +47,7 @@
 
     iput-boolean p3, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$isFave:Z
 
-    iput-object p4, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+    iput-object p4, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
     const/4 p1, 0x1
 
@@ -80,13 +80,13 @@
     invoke-static {p1, v0}, Lcom/vk/newsfeed/holders/attachments/EventHolder;->a(Lcom/vk/newsfeed/holders/attachments/EventHolder;Z)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
     iget-boolean v0, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$isFave:Z
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/attachments/EventAttachment;->h(Z)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/attachments/EventAttachment;->h(Z)V
 
     .line 4
     sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
@@ -97,7 +97,7 @@
 
     const/16 v0, 0x78
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$attachment:Lcom/vkontakte/android/attachments/EventAttachment;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/EventHolder$toggleFave$1;->$attachment:Lcom/vtosters/lite/attachments/EventAttachment;
 
     invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
 

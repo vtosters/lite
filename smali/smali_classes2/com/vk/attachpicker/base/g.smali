@@ -15,7 +15,7 @@
         "<T::",
         "Lcom/vk/core/serialize/Serializer$StreamParcelable;",
         "VH:",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "TT;>;>",
         "Ljava/lang/Object;"
     }
@@ -26,7 +26,7 @@
 .method public abstract a(Landroid/view/ViewGroup;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 .end method
 
-.method public abstract a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vkontakte/android/ui/b0/i;
+.method public abstract a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vtosters/lite/ui/b0/i;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

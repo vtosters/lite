@@ -61,7 +61,7 @@
     const-string v0, "calendar"
 
     .line 2
-    invoke-static {p1, p2, v0}, Lcom/vkontakte/android/fragments/gifts/h;->a(Landroid/content/Context;ILjava/lang/String;)V
+    invoke-static {p1, p2, v0}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;ILjava/lang/String;)V
 
     return-void
 .end method

@@ -102,7 +102,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/notifications/settings/a$a$c;->a:Lcom/vk/notifications/settings/a$a;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
 
     .line 4
     iget-object p1, p0, Lcom/vk/notifications/settings/a$a$c;->a:Lcom/vk/notifications/settings/a$a;

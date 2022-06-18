@@ -64,9 +64,9 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/fragments/q2/c;
+    new-instance v0, Lcom/vtosters/lite/fragments/q2/c;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/q2/c;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/q2/c;-><init>()V
 
     .line 2
     new-instance v1, Landroid/os/Bundle;

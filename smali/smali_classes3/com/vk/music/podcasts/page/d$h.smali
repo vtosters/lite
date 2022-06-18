@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/podcasts/e$a;",
+        "Lcom/vtosters/lite/api/podcasts/e$a;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/podcasts/e$a;)V
+.method public final a(Lcom/vtosters/lite/api/podcasts/e$a;)V
     .locals 2
 
     .line 1
@@ -67,7 +67,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/podcasts/page/d$h;->a:Lcom/vk/music/podcasts/page/d;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/podcasts/e$a;->a()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/podcasts/e$a;->a()Z
 
     move-result v1
 
@@ -76,7 +76,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/music/podcasts/page/d$h;->a:Lcom/vk/music/podcasts/page/d;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/podcasts/e$a;->b()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/podcasts/e$a;->b()Z
 
     move-result p1
 
@@ -104,9 +104,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/podcasts/e$a;
+    check-cast p1, Lcom/vtosters/lite/api/podcasts/e$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/d$h;->a(Lcom/vkontakte/android/api/podcasts/e$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/d$h;->a(Lcom/vtosters/lite/api/podcasts/e$a;)V
 
     return-void
 .end method

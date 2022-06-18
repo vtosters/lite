@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/user/AdministratorProfileFragment;
-.super Lcom/vkontakte/android/fragments/ProfileFragment;
+.super Lcom/vtosters/lite/fragments/ProfileFragment;
 .source "AdministratorProfileFragment.kt"
 
 
@@ -20,16 +20,16 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/ProfileFragment;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/ProfileFragment;-><init>()V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public static final synthetic a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/ui/c;->r0:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p0, p0, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object p0
 .end method
@@ -267,7 +267,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vkontakte/android/fragments/ProfileFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/ProfileFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->X4()Lcom/vk/lists/RecyclerPaginatedView;

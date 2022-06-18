@@ -49,12 +49,12 @@
     const/4 p1, 0x0
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->b(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->b(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 1
@@ -82,7 +82,7 @@
 
     .line 4
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private final F:Lcom/vkontakte/android/LoadMoreCommentsView;
+.field private final F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
 .field private G:Lcom/vk/newsfeed/holders/r0$a;
 
@@ -55,36 +55,36 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/LoadMoreCommentsView;
+    check-cast p1, Lcom/vtosters/lite/LoadMoreCommentsView;
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vkontakte/android/LoadMoreCommentsView;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vkontakte/android/LoadMoreCommentsView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
     invoke-virtual {p1, p0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vkontakte/android/LoadMoreCommentsView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
     const v0, 0x7f120211
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/LoadMoreCommentsView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/LoadMoreCommentsView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->g:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->g:Ljava/lang/Object;
 
     instance-of v1, v0, Lcom/vk/newsfeed/holders/r0$a;
 
@@ -98,7 +98,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/holders/r0;->G:Lcom/vk/newsfeed/holders/r0$a;
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -120,19 +120,19 @@
     if-ne p1, v0, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vkontakte/android/LoadMoreCommentsView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/LoadMoreCommentsView;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/LoadMoreCommentsView;->a(Z)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vkontakte/android/LoadMoreCommentsView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/LoadMoreCommentsView;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/LoadMoreCommentsView;->a(Z)V
 
     :goto_0
     return-void
@@ -185,9 +185,9 @@
 
     .line 4
     :cond_2
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vkontakte/android/LoadMoreCommentsView;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->F:Lcom/vtosters/lite/LoadMoreCommentsView;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/LoadMoreCommentsView;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/LoadMoreCommentsView;->a(Z)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/newsfeed/holders/r0;->G:Lcom/vk/newsfeed/holders/r0$a;

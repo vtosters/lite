@@ -68,13 +68,13 @@
     invoke-virtual {p2, p3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 6
-    new-instance v0, Lcom/vkontakte/android/v;
+    new-instance v0, Lcom/vtosters/lite/v;
 
     new-instance v1, Lcom/vk/search/holder/j$a$a;
 
     invoke-direct {v1, p3}, Lcom/vk/search/holder/j$a$a;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     const/4 p3, 0x1
 

@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity$b;->a:Lcom/vk/attachpicker/PhotoVideoAttachActivity;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;I)Ljava/util/List;
+    value = Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;I)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic $profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field final synthetic this$0:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->this$0:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->$profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/4 p1, 0x1
 
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/i0/d;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/vtosters/lite/i0/d;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -167,9 +167,9 @@
     :goto_0
     new-instance v0, Lcom/vk/profile/e/b;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->$profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 

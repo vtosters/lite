@@ -268,7 +268,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/music/playlist/modern/h/c$b;-><init>(Lcom/vk/music/playlist/modern/h/c;)V
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method

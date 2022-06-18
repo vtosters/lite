@@ -249,13 +249,13 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$c;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/a;->getProgressCircular()Lcom/vkontakte/android/ui/CircularProgressView;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/a;->getProgressCircular()Lcom/vtosters/lite/ui/CircularProgressView;
 
     move-result-object v0
 
     iget p1, p1, Lcom/vk/core/network/RxFileDownloader$c;->b:F
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/CircularProgressView;->setProgress(F)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/CircularProgressView;->setProgress(F)V
 
     :goto_2
     return-void

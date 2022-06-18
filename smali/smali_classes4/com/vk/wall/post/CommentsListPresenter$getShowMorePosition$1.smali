@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->b(Lcom/vkontakte/android/NewsComment;)I
+    value = Lcom/vk/wall/post/CommentsListPresenter;->b(Lcom/vtosters/lite/NewsComment;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $comment:Lcom/vkontakte/android/NewsComment;
+.field final synthetic $comment:Lcom/vtosters/lite/NewsComment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/NewsComment;)V
+.method constructor <init>(Lcom/vtosters/lite/NewsComment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->$comment:Lcom/vkontakte/android/NewsComment;
+    iput-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->$comment:Lcom/vtosters/lite/NewsComment;
 
     const/4 p1, 0x1
 
@@ -54,19 +54,19 @@
 
     move-result v0
 
-    sget-object v1, Lcom/vkontakte/android/o0/a;->H:Lcom/vkontakte/android/o0/a$a;
+    sget-object v1, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/o0/a$a;->h()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/o0/a$a;->h()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/wall/b;->a()Lcom/vkontakte/android/q;
+    invoke-virtual {p1}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->$comment:Lcom/vkontakte/android/NewsComment;
+    iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->$comment:Lcom/vtosters/lite/NewsComment;
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 

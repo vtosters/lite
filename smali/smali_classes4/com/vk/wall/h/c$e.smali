@@ -3,7 +3,7 @@
 .source "ReplyBarPresenter.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/ui/z/a$h;
+.implements Lcom/vtosters/lite/ui/z/a$h;
 
 
 # annotations

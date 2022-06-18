@@ -59,7 +59,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     return-void
 .end method

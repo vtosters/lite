@@ -56,7 +56,7 @@
 
     iget-object v1, v1, Lcom/vk/search/holder/StoryElongatedViewHolder$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

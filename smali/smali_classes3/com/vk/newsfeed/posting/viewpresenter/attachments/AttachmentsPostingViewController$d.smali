@@ -83,7 +83,7 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v3, v3, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v3, v3, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v3, :cond_0
 
@@ -94,14 +94,14 @@
 
     .line 4
     :goto_0
-    instance-of v0, v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v0, v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-nez v0, :cond_2
 
     move-object v1, v2
 
     :cond_2
-    check-cast v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v1, :cond_3
 
@@ -111,7 +111,7 @@
     const-string v2, ""
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lcom/vk/poll/fragments/PollEditorFragment$a$a;->a(Lcom/vkontakte/android/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/poll/fragments/PollEditorFragment$a$a;->a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
 
     move-result-object v0
 
@@ -163,7 +163,7 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 3
-    instance-of v3, v3, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v3, v3, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v3, :cond_0
 
@@ -174,14 +174,14 @@
 
     .line 4
     :goto_0
-    instance-of v0, v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v0, v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-nez v0, :cond_2
 
     move-object v1, v2
 
     :cond_2
-    check-cast v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v1, :cond_3
 

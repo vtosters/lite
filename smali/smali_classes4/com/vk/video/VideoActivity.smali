@@ -1,5 +1,5 @@
 .class public final Lcom/vk/video/VideoActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "VideoActivity.kt"
 
 # interfaces
@@ -17,7 +17,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     const/4 v0, 0x0
 
@@ -112,7 +112,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
@@ -129,7 +129,7 @@
     .locals 12
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->n()I
@@ -175,7 +175,7 @@
     invoke-static {v2, v0, v4, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     .line 6
     :cond_1
@@ -331,7 +331,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
@@ -348,7 +348,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onPause()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
@@ -365,7 +365,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onResume()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
@@ -382,7 +382,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->v1()Z
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->v1()Z
 
     move-result v0
 

@@ -225,7 +225,7 @@
     .line 22
     iget-object v0, p0, Lcom/vk/poll/adapters/c;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v2
 

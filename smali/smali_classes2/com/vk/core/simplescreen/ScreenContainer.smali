@@ -91,7 +91,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object p1
 

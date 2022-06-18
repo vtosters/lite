@@ -5,7 +5,7 @@
 # interfaces
 .implements Lb/h/r/a;
 .implements Lcom/vk/lists/t$o;
-.implements Lcom/vkontakte/android/ui/b0/m/e;
+.implements Lcom/vtosters/lite/ui/b0/m/e;
 .implements Lb/h/g/l/e;
 .implements Lcom/vk/mentions/i;
 
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         "Lb/h/r/a;",
         "Lcom/vk/lists/t$o<",
-        "Lcom/vkontakte/android/api/wall/a;",
+        "Lcom/vtosters/lite/api/wall/a;",
         ">;",
-        "Lcom/vkontakte/android/ui/b0/m/e;",
+        "Lcom/vtosters/lite/ui/b0/m/e;",
         "Lb/h/g/l/e<",
         "Lcom/vk/wall/d;",
         ">;",
@@ -34,10 +34,10 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vkontakte/android/NewsComment;)Lcom/vk/wall/a;
+.method public abstract a(Lcom/vtosters/lite/NewsComment;)Lcom/vk/wall/a;
 .end method
 
-.method public abstract a(ILjava/lang/String;Ljava/util/ArrayList;)Lcom/vkontakte/android/q;
+.method public abstract a(ILjava/lang/String;Ljava/util/ArrayList;)Lcom/vtosters/lite/q;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -45,12 +45,12 @@
             "Ljava/util/ArrayList<",
             "Lcom/vk/dto/common/Attachment;",
             ">;)",
-            "Lcom/vkontakte/android/q;"
+            "Lcom/vtosters/lite/q;"
         }
     .end annotation
 .end method
 
-.method public abstract a(ILcom/vkontakte/android/NewsComment;Lcom/vkontakte/android/ui/b0/m/c;)V
+.method public abstract a(ILcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
 .end method
 
 .method public abstract a(Landroid/content/Context;I)V
@@ -80,7 +80,7 @@
 .method public abstract a(Lcom/vk/wall/h/a;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/q;)V
+.method public abstract a(Lcom/vtosters/lite/q;)V
 .end method
 
 .method public abstract a(Ljava/lang/String;)V
@@ -112,13 +112,13 @@
 .method public abstract b(I)V
 .end method
 
-.method public abstract b(Lcom/vkontakte/android/q;)V
+.method public abstract b(Lcom/vtosters/lite/q;)V
 .end method
 
 .method public abstract c()Lcom/vk/navigation/a;
 .end method
 
-.method public abstract c(Lcom/vkontakte/android/q;)V
+.method public abstract c(Lcom/vtosters/lite/q;)V
 .end method
 
 .method public abstract c(I)Z
@@ -130,7 +130,7 @@
 .method public abstract d(I)V
 .end method
 
-.method public abstract d(Lcom/vkontakte/android/q;)V
+.method public abstract d(Lcom/vtosters/lite/q;)V
 .end method
 
 .method public abstract f()V

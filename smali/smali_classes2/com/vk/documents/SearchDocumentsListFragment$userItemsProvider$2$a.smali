@@ -90,9 +90,9 @@
     const/16 p2, 0x32
 
     :goto_0
-    sget-object v2, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->ALL:Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;
+    sget-object v2, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->ALL:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/api/execute/DocsGetTypes$Type;->getId()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->getId()I
 
     move-result v2
 

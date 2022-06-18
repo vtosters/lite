@@ -124,16 +124,16 @@
             "Z",
             "Lkotlin/jvm/b/b<",
             "-",
-            "Lcom/vkontakte/android/attachments/PollAttachment;",
+            "Lcom/vtosters/lite/attachments/PollAttachment;",
             "Lkotlin/m;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    new-instance v0, Lcom/vkontakte/android/api/n/b;
+    new-instance v0, Lcom/vtosters/lite/api/n/b;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/api/n/b;-><init>(Lcom/vk/dto/polls/PollInfo;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/api/n/b;-><init>(Lcom/vk/dto/polls/PollInfo;)V
 
     const/4 p1, 0x0
 

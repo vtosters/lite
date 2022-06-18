@@ -1,5 +1,5 @@
 .class public final Lcom/vk/common/SpecialEventSpan;
-.super Lcom/vkontakte/android/v;
+.super Lcom/vtosters/lite/v;
 .source "SpecialEventSpan.kt"
 
 
@@ -52,7 +52,7 @@
     const-string v0, ""
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
 
     const-string v0, "event#"
 
@@ -183,7 +183,7 @@
     const-string v1, "media_event_click"
 
     .line 4
-    invoke-static {v1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v1
 
@@ -193,9 +193,9 @@
 
     const-string v3, "event_id"
 
-    invoke-virtual {v1, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     .line 5
     invoke-direct {p0, p1, v0}, Lcom/vk/common/SpecialEventSpan;->a(Landroid/content/Context;Lcom/vk/dto/stickers/SpecialEvent;)V

@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
         "Lcom/vk/profile/adapter/BaseInfoItem;"
     }
@@ -27,7 +27,7 @@
 
 .field private final D:I
 
-.field private final E:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final E:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field private final F:Lcom/vk/profile/presenter/BaseProfilePresenter;
     .annotation system Ldalvik/annotation/Signature;
@@ -40,12 +40,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Lcom/vk/profile/presenter/BaseProfilePresenter<",
             "TT;>;)V"
         }
@@ -54,7 +54,7 @@
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->E:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->E:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->F:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
@@ -94,11 +94,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+.method public static final synthetic c(Lcom/vk/profile/adapter/items/HeaderPhotosItem;)Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->E:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;->E:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object p0
 .end method
@@ -123,14 +123,14 @@
     return v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "+",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
             ">;"

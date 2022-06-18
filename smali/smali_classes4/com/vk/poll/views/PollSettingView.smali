@@ -151,7 +151,7 @@
     move-result-object p1
 
     .line 16
-    sget-object v1, Lcom/vkontakte/android/a0;->PollSettingView:[I
+    sget-object v1, Lcom/vtosters/lite/a0;->PollSettingView:[I
 
     .line 17
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;

@@ -77,7 +77,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$b;->a:Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)Lcom/vkontakte/android/ui/u;
+    invoke-static {v0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)Lcom/vtosters/lite/ui/u;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder$b;->a:Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)Lcom/vkontakte/android/ui/u;
+    invoke-static {v0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;->a(Lcom/vk/newsfeed/holders/attachments/comments/ThumbsPreviewsHolder;)Lcom/vtosters/lite/ui/u;
 
     move-result-object v0
 

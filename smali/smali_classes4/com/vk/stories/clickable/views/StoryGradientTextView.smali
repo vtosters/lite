@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vkontakte/android/a0;->StoryGradientTextView:[I
+    sget-object v1, Lcom/vtosters/lite/a0;->StoryGradientTextView:[I
 
     invoke-virtual {v0, p1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

@@ -172,13 +172,13 @@
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vkontakte/android/attachments/PollAttachment;)Landroid/view/View$OnClickListener;
+.method private final a(Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vtosters/lite/attachments/PollAttachment;)Landroid/view/View$OnClickListener;
     .locals 1
 
     .line 25
     new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter$b;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     return-object v0
 .end method
@@ -192,12 +192,12 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/ui/f0/b;)Ljava/util/List;
+.method private final a(Lcom/vtosters/lite/ui/f0/b;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/dto/common/Attachment;",
@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v0, Lcom/vtosters/lite/ui/f0/b;
 
     const/16 v1, 0x2e
 
@@ -316,7 +316,7 @@
 
     check-cast p2, Lcom/vk/newsfeed/h0/a;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result v1
 
@@ -325,13 +325,13 @@
     .line 28
     new-instance v1, Lcom/vk/newsfeed/h0/a;
 
-    iget-object v5, v0, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v5, v0, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v2, "item.entry"
 
     invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v6, v0, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v6, v0, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -369,7 +369,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p1}, Lcom/vkontakte/android/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
 
     move-result p1
 
@@ -482,14 +482,14 @@
     move-result-object v4
 
     .line 6
-    check-cast v4, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v4, Lcom/vtosters/lite/ui/f0/b;
 
     const-string v5, "it"
 
     .line 7
     invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v4}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vkontakte/android/ui/f0/b;)Ljava/util/List;
+    invoke-direct {p0, v4}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vtosters/lite/ui/f0/b;)Ljava/util/List;
 
     move-result-object v4
 
@@ -517,7 +517,7 @@
 
     .line 9
     :cond_3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/b;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/b;
 
     if-eqz v0, :cond_4
 
@@ -585,7 +585,7 @@
 
     .line 16
     :cond_0
-    invoke-static {p2}, Lcom/vkontakte/android/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {p2}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;)Z
 
     move-result v1
 
@@ -774,9 +774,9 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
 
     move-result p1
 
@@ -975,7 +975,7 @@
     .line 13
     iget-object v6, v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->M:Ljava/util/List;
 
-    invoke-static {v5, v6}, Lcom/vkontakte/android/attachments/a;->a(Lcom/vk/dto/common/Attachment;Ljava/util/List;)I
+    invoke-static {v5, v6}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;Ljava/util/List;)I
 
     move-result v6
 
@@ -1001,7 +1001,7 @@
     if-nez v1, :cond_9
 
     .line 16
-    invoke-static {v7}, Lcom/vkontakte/android/attachments/a;->e(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v7}, Lcom/vtosters/lite/attachments/a;->e(Ljava/util/List;)Ljava/util/List;
 
     .line 17
     sget-object v1, Lcom/vk/newsfeed/y;->b:Lcom/vk/newsfeed/y;
@@ -1024,7 +1024,7 @@
     move-object v2, v7
 
     .line 19
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vkontakte/android/data/PostInteract;)Ljava/util/ArrayList;
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vtosters/lite/data/PostInteract;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -1034,7 +1034,7 @@
     move-result-object v1
 
     .line 21
-    check-cast v1, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v1, Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v1, :cond_8
 
@@ -1230,7 +1230,7 @@
     .line 39
     iget-object v4, v0, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->M:Ljava/util/List;
 
-    invoke-static {v3, v4}, Lcom/vkontakte/android/attachments/a;->a(Lcom/vk/dto/common/Attachment;Ljava/util/List;)I
+    invoke-static {v3, v4}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;Ljava/util/List;)I
 
     move-result v4
 
@@ -1259,7 +1259,7 @@
     const-string v13, ""
 
     .line 44
-    invoke-virtual/range {v10 .. v15}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vkontakte/android/data/PostInteract;)Ljava/util/ArrayList;
+    invoke-virtual/range {v10 .. v15}, Lcom/vk/newsfeed/y;->a(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;ZLcom/vtosters/lite/data/PostInteract;)Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -1268,7 +1268,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/ui/f0/b;
+    check-cast v3, Lcom/vtosters/lite/ui/f0/b;
 
     if-eqz v3, :cond_11
 
@@ -1326,7 +1326,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vkontakte/android/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
 
     .line 3
     move-object v0, p1
@@ -1337,14 +1337,14 @@
 
     invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-virtual {v0, p2}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     .line 4
     instance-of v0, p1, Lcom/vk/newsfeed/holders/attachments/h;
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vkontakte/android/ui/f0/b;)Ljava/util/List;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vtosters/lite/ui/f0/b;)Ljava/util/List;
 
     move-result-object p2
 
@@ -1385,7 +1385,7 @@
     invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;->d(Z)V
 
     .line 8
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vkontakte/android/ui/f0/b;)Ljava/util/List;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vtosters/lite/ui/f0/b;)Ljava/util/List;
 
     move-result-object p2
 
@@ -1413,7 +1413,7 @@
     if-eqz v0, :cond_4
 
     .line 11
-    invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vkontakte/android/ui/f0/b;)Ljava/util/List;
+    invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vtosters/lite/ui/f0/b;)Ljava/util/List;
 
     move-result-object p2
 
@@ -1421,21 +1421,21 @@
 
     move-result-object p2
 
-    instance-of v0, p2, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v0, p2, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-nez v0, :cond_3
 
     const/4 p2, 0x0
 
     :cond_3
-    check-cast p2, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast p2, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz p2, :cond_4
 
     .line 12
     check-cast p1, Lcom/vk/newsfeed/holders/attachments/f0;
 
-    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vkontakte/android/attachments/PollAttachment;)Landroid/view/View$OnClickListener;
+    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;->a(Lcom/vk/newsfeed/holders/attachments/f0;Lcom/vtosters/lite/attachments/PollAttachment;)Landroid/view/View$OnClickListener;
 
     move-result-object p2
 

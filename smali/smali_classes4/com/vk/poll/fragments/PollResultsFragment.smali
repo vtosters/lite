@@ -312,7 +312,7 @@
     const v1, 0x7f080376
 
     .line 2
-    invoke-static {v0, v1}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 3
     new-instance v1, Lcom/vk/poll/fragments/PollResultsFragment$f;
@@ -322,7 +322,7 @@
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 4
-    invoke-static {p0, v0}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     const v1, 0x7f120b20
 
@@ -330,7 +330,7 @@
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/Toolbar;->setTitle(I)V
 
     .line 6
-    invoke-static {p0, v0}, Lcom/vkontakte/android/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 7
     new-instance v1, Lcom/vk/poll/fragments/PollResultsFragment$g;
@@ -621,7 +621,7 @@
     .line 36
     iget-object p1, p0, Lcom/vk/poll/fragments/PollResultsFragment;->I:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, p1}, Lcom/vkontakte/android/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     :cond_2
     return-void

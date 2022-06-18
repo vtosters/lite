@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vkontakte/android/api/wall/a;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vtosters/lite/api/wall/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -50,11 +50,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/wall/b;->a()Lcom/vkontakte/android/q;
+    invoke-virtual {p1}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vkontakte/android/q;->getId()I
+    invoke-interface {p1}, Lcom/vtosters/lite/q;->getId()I
 
     move-result p1
 

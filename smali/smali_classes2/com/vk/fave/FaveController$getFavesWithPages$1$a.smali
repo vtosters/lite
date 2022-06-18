@@ -62,7 +62,7 @@
     const/4 p1, 0x0
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/w;->c(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/w;->c(I)V
 
     return-void
 .end method

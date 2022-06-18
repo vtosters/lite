@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic $holder:Lcom/vkontakte/android/ui/b0/i;
+.field final synthetic $holder:Lcom/vtosters/lite/ui/b0/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/ui/b0/i;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/b0/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vkontakte/android/ui/b0/i;
+    iput-object p1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/b0/i;
 
     const/4 p1, 0x0
 
@@ -83,7 +83,7 @@
     move-result v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vkontakte/android/ui/b0/i;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/b0/i;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -101,7 +101,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vkontakte/android/ui/b0/i;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/b0/i;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 

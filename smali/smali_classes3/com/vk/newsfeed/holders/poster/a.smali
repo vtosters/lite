@@ -657,7 +657,7 @@
     if-ne v3, v2, :cond_4
 
     .line 3
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v2, v1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -735,7 +735,7 @@
     invoke-virtual {v1}, Lcom/vk/newsfeed/b0;->a()V
 
     .line 11
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     instance-of v2, v1, Lcom/vk/dto/newsfeed/entries/Post;
 

@@ -52,7 +52,7 @@
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vkontakte/android/ui/b0/i;
+    instance-of v0, p1, Lcom/vtosters/lite/ui/b0/i;
 
     const/4 v1, 0x0
 
@@ -61,11 +61,11 @@
     move-object p1, v1
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v1
 

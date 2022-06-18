@@ -264,13 +264,13 @@
     :cond_0
     iget-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/text/a;->C:Lcom/vk/newsfeed/posting/j;
 
-    new-instance v0, Lcom/vkontakte/android/attachments/LinkAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     const-string v1, ""
 
-    invoke-direct {v0, p1, v1, v1}, Lcom/vkontakte/android/attachments/LinkAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, v1}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {p2, v0}, Lcom/vk/newsfeed/posting/j;->a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+    invoke-interface {p2, v0}, Lcom/vk/newsfeed/posting/j;->a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
 
     :cond_1
     :goto_0

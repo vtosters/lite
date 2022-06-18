@@ -53,7 +53,7 @@
     iput-object p1, p0, Lcom/vk/poll/adapters/d;->g:Landroid/widget/ImageView;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 

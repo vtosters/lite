@@ -329,13 +329,13 @@
 
     .line 9
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getProgressCircular()Lcom/vkontakte/android/ui/CircularProgressView;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getProgressCircular()Lcom/vtosters/lite/ui/CircularProgressView;
 
     move-result-object v0
 
     const v1, 0x3c23d70a    # 0.01f
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/CircularProgressView;->setProgressNoAnim(F)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/CircularProgressView;->setProgressNoAnim(F)V
 
     .line 10
     invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;

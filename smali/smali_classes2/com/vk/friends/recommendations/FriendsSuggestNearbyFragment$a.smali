@@ -20,7 +20,7 @@
     value = {
         "Lcom/vk/lists/i0<",
         "Lcom/vk/dto/user/RequestUserProfile;",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/user/RequestUserProfile;",
         ">;>;",
         "Lcom/vk/core/ui/o;"
@@ -79,12 +79,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             ">;I)V"
         }
@@ -95,7 +95,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -153,9 +153,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->a(Lcom/vkontakte/android/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->a(Lcom/vtosters/lite/ui/b0/i;I)V
 
     return-void
 .end method
@@ -164,21 +164,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             ">;"
         }
@@ -187,7 +187,7 @@
     if-eqz p2, :cond_0
 
     .line 2
-    new-instance p2, Lcom/vkontakte/android/ui/b0/f;
+    new-instance p2, Lcom/vtosters/lite/ui/b0/f;
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_NEARBY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -195,16 +195,16 @@
 
     move-result-object v0
 
-    invoke-direct {p2, p1, v0}, Lcom/vkontakte/android/ui/b0/f;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/f;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->c:Lcom/vk/common/g/g;
 
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsSuggestNearbyFragment$a;->d:Lcom/vk/common/g/j;
 
-    invoke-virtual {p2, p1, v0}, Lcom/vkontakte/android/ui/b0/f;->a(Lcom/vk/common/g/g;Lcom/vk/common/g/j;)Lcom/vkontakte/android/ui/b0/f;
+    invoke-virtual {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/f;->a(Lcom/vk/common/g/g;Lcom/vk/common/g/j;)Lcom/vtosters/lite/ui/b0/f;
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/b0/f;->g0()Lcom/vkontakte/android/ui/b0/f;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/b0/f;->g0()Lcom/vtosters/lite/ui/b0/f;
 
     const-string p1, "FriendRequestHolder(pare\u2026).withoutNegativeButton()"
 

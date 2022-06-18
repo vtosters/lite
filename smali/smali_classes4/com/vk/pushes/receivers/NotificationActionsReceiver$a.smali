@@ -573,7 +573,7 @@
     .locals 4
 
     .line 12
-    invoke-static {}, Lcom/vkontakte/android/MenuCounterUpdater;->d()V
+    invoke-static {}, Lcom/vtosters/lite/MenuCounterUpdater;->d()V
 
     .line 13
     sget-object v0, Lcom/vk/notifications/NotificationsFragment;->O:Lcom/vk/notifications/NotificationsFragment$a;
@@ -1292,7 +1292,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object v1
 
@@ -1431,7 +1431,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {p1, v1, v0}, Lcom/vkontakte/android/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p1, v1, v0}, Lcom/vtosters/lite/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     .line 5
     sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
@@ -1485,7 +1485,7 @@
     move-result v4
 
     .line 4
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object v0
 
@@ -1914,7 +1914,7 @@
     invoke-direct/range {v12 .. v26}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/z;ILkotlin/jvm/internal/i;)V
 
     .line 16
-    invoke-static {}, Lcom/vkontakte/android/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
 
     move-result-object v2
 
@@ -2078,15 +2078,15 @@
     invoke-static {p2, v3, v1}, Lcom/vk/extensions/f;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 5
-    new-instance v1, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    new-instance v1, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;-><init>()V
 
     .line 6
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->c(I)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->c(I)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 7
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 8
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;->PUSH:Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;
@@ -2095,7 +2095,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->b(Ljava/lang/String;)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->b(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 

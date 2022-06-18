@@ -47,15 +47,15 @@
 
 
 # virtual methods
-.method protected a(Lcom/vkontakte/android/attachments/GraffitiAttachment;)V
+.method protected a(Lcom/vtosters/lite/attachments/GraffitiAttachment;)V
     .locals 4
 
     .line 1
-    iget v0, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;->e:I
+    iget v0, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;->e:I
 
-    iget v1, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;->f:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;->f:I
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/attachments/GraffitiAttachment;->a(II)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/vtosters/lite/attachments/GraffitiAttachment;->a(II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/w;->H:Lcom/vk/imageloader/view/VKImageView;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;->g:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;->g:Ljava/lang/String;
 
     sget-object v1, Lcom/vk/imageloader/ImageScreenSize;->MID:Lcom/vk/imageloader/ImageScreenSize;
 
@@ -82,7 +82,7 @@
 
     sget-object v2, Lcom/vk/imageloader/ImageScreenSize;->MID:Lcom/vk/imageloader/ImageScreenSize;
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;->g:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;->g:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -105,20 +105,20 @@
     move-result-object p1
 
     .line 3
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
     if-eqz v0, :cond_4
 
     .line 4
-    check-cast p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
-    iget v0, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;->h:I
+    iget v0, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;->h:I
 
     .line 5
-    iget v1, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;->B:I
+    iget v1, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;->B:I
 
     .line 6
-    sget v2, Lcom/vkontakte/android/attachments/GraffitiAttachment;->E:I
+    sget v2, Lcom/vtosters/lite/attachments/GraffitiAttachment;->E:I
 
     if-ge v0, v2, :cond_0
 
@@ -156,7 +156,7 @@
 
     .line 9
     :cond_0
-    sget v2, Lcom/vkontakte/android/attachments/GraffitiAttachment;->E:I
+    sget v2, Lcom/vtosters/lite/attachments/GraffitiAttachment;->E:I
 
     :goto_0
     if-eqz v0, :cond_1
@@ -197,7 +197,7 @@
     invoke-virtual {v3, v2}, Lcom/vk/imageloader/view/a;->setMaxHeight(I)V
 
     .line 12
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/w;->a(Lcom/vkontakte/android/attachments/GraffitiAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/w;->a(Lcom/vtosters/lite/attachments/GraffitiAttachment;)V
 
     :cond_4
     return-void

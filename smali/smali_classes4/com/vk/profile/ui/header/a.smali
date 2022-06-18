@@ -661,14 +661,14 @@
     check-cast v1, Lcom/vk/profile/adapter/BaseInfoItem;
 
     .line 4
-    invoke-virtual {v1, p0}, Lcom/vk/profile/adapter/BaseInfoItem;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    invoke-virtual {v1, p0}, Lcom/vk/profile/adapter/BaseInfoItem;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 5
-    invoke-virtual {v2, v1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v2, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 6
     iget-object v1, p0, Lcom/vk/profile/ui/header/a;->e:Ljava/util/LinkedList;
@@ -707,7 +707,7 @@
 
     new-instance v3, Lcom/vk/profile/ui/header/a$a;
 
-    invoke-direct {v3, v2}, Lcom/vk/profile/ui/header/a$a;-><init>(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-direct {v3, v2}, Lcom/vk/profile/ui/header/a$a;-><init>(Lcom/vtosters/lite/ui/b0/i;)V
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

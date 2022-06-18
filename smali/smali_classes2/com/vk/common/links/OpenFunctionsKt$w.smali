@@ -131,7 +131,7 @@
     :cond_4
     iget p1, v0, Lcom/vk/dto/photo/Photo;->d:I
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->d(I)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->d(I)Ljava/util/ArrayList;
 
     move-result-object p1
 

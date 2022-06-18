@@ -6,30 +6,30 @@
 # instance fields
 .field private a:Ljava/lang/Object;
 
-.field private final b:Lcom/vkontakte/android/q;
+.field private final b:Lcom/vtosters/lite/q;
 
-.field private c:Lcom/vkontakte/android/q;
+.field private c:Lcom/vtosters/lite/q;
 
 .field private final d:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;I)V
+.method public constructor <init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;I)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/wall/b;->b:Lcom/vkontakte/android/q;
+    iput-object p1, p0, Lcom/vk/wall/b;->b:Lcom/vtosters/lite/q;
 
-    iput-object p2, p0, Lcom/vk/wall/b;->c:Lcom/vkontakte/android/q;
+    iput-object p2, p0, Lcom/vk/wall/b;->c:Lcom/vtosters/lite/q;
 
     iput p3, p0, Lcom/vk/wall/b;->d:I
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;IILkotlin/jvm/internal/i;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x2
@@ -40,27 +40,27 @@
 
     .line 2
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/wall/b;-><init>(Lcom/vkontakte/android/q;Lcom/vkontakte/android/q;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vkontakte/android/q;
+.method public final a()Lcom/vtosters/lite/q;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/b;->b:Lcom/vkontakte/android/q;
+    iget-object v0, p0, Lcom/vk/wall/b;->b:Lcom/vtosters/lite/q;
 
     return-object v0
 .end method
 
-.method public final a(Lcom/vkontakte/android/q;)V
+.method public final a(Lcom/vtosters/lite/q;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/wall/b;->c:Lcom/vkontakte/android/q;
+    iput-object p1, p0, Lcom/vk/wall/b;->c:Lcom/vtosters/lite/q;
 
     return-void
 .end method
@@ -74,11 +74,11 @@
     return-void
 .end method
 
-.method public final b()Lcom/vkontakte/android/q;
+.method public final b()Lcom/vtosters/lite/q;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/b;->c:Lcom/vkontakte/android/q;
+    iget-object v0, p0, Lcom/vk/wall/b;->c:Lcom/vtosters/lite/q;
 
     return-object v0
 .end method

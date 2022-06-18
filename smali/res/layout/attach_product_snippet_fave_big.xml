@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vkontakte.android.ui.OverlayLinearLayout android:orientation="vertical" android:paddingBottom="12.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" app:overlay="@drawable/highlight_post" app:padOverlay="false"
+<com.vtosters.lite.ui.OverlayLinearLayout android:orientation="vertical" android:paddingBottom="12.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" app:overlay="@drawable/highlight_post" app:padOverlay="false"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
         <com.vk.newsfeed.FrescoImageView android:layout_gravity="center_horizontal" android:id="@id/snippet_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
@@ -23,4 +23,4 @@
         </LinearLayout>
         <TextView android:gravity="center" android:layout_gravity="bottom" android:id="@id/button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="6.0dip" style="@style/outline_button" />
     </com.vk.core.widget.FluidHorizontalLayout>
-</com.vkontakte.android.ui.OverlayLinearLayout>
+</com.vtosters.lite.ui.OverlayLinearLayout>

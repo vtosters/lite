@@ -1,5 +1,5 @@
 .class public Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "DetailsInfoItem.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/details/DetailsInfoItem;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$g;"
@@ -37,7 +37,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p2, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p2, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -339,24 +339,24 @@
     move-result-object v3
 
     .line 6
-    new-instance v4, Lcom/vkontakte/android/u;
+    new-instance v4, Lcom/vtosters/lite/u;
 
-    invoke-direct {v4}, Lcom/vkontakte/android/u;-><init>()V
+    invoke-direct {v4}, Lcom/vtosters/lite/u;-><init>()V
 
     const v5, 0x7f040022
 
     .line 7
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/u;->c(I)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/u;->c(I)V
 
     .line 8
     new-instance v5, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$a;
 
     invoke-direct {v5, p1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$a;-><init>(Lcom/vk/profile/adapter/items/details/DetailsInfoItem;)V
 
-    invoke-virtual {v4, v5}, Lcom/vkontakte/android/u;->a(Lcom/vk/core/view/links/a$a;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/u;->a(Lcom/vk/core/view/links/a$a;)V
 
     .line 9
-    invoke-static {v3, v4}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vkontakte/android/u;)Ljava/lang/CharSequence;
+    invoke-static {v3, v4}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -659,7 +659,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 

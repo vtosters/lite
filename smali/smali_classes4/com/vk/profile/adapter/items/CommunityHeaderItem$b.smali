@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CommunityHeaderItem.kt"
 
 # interfaces
@@ -24,7 +24,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/CommunityHeaderItem;",
         ">;",
         "Lcom/vk/libvideo/s$b;"
@@ -43,7 +43,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
@@ -63,18 +63,18 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/i;)V
+.method private final a(Lcom/vtosters/lite/api/i;)V
     .locals 2
 
     .line 51
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     const-string v1, "profile.storiesContainers"
 
@@ -91,7 +91,7 @@
     if-eqz v0, :cond_1
 
     .line 52
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
@@ -161,7 +161,7 @@
     .locals 7
 
     .line 2
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->b(Lcom/vk/profile/adapter/items/CommunityHeaderItem;)Lcom/vkontakte/android/api/i;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->b(Lcom/vk/profile/adapter/items/CommunityHeaderItem;)Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
@@ -172,7 +172,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
@@ -180,7 +180,7 @@
     invoke-virtual {v1}, Lcom/vk/profile/ui/header/BaseHeaderView;->e()V
 
     .line 5
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v1, v1, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
@@ -215,7 +215,7 @@
     invoke-virtual {v2, v1, v4, v3}, Lcom/vk/common/view/TextViewEllipsizeEnd;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
     .line 8
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v1, v1, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
@@ -231,7 +231,7 @@
     .line 10
     sget-object v2, Lcom/vk/core/utils/VerifyInfoHelper;->h:Lcom/vk/core/utils/VerifyInfoHelper;
 
-    iget-object v4, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v4, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v4, v4, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
@@ -268,7 +268,7 @@
 
     .line 12
     :cond_0
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/g;->a(Lcom/vkontakte/android/api/i;)Landroidx/core/util/Pair;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/g;->a(Lcom/vtosters/lite/api/i;)Landroidx/core/util/Pair;
 
     move-result-object v1
 
@@ -414,7 +414,7 @@
     :goto_4
     iget-object v1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
-    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 22
     iget-object v1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
@@ -453,7 +453,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;I)V
+    invoke-static {v1, v3}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;I)V
 
     goto :goto_6
 
@@ -465,7 +465,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a()Z
 
     move-result v2
 
@@ -477,11 +477,11 @@
     const/16 v3, 0x8
 
     :goto_5
-    invoke-static {v1, v3}, Lcom/vkontakte/android/f0;->a(Landroid/view/View;I)V
+    invoke-static {v1, v3}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;I)V
 
     .line 26
     :goto_6
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/ExtendedUserProfile;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
     move-result v1
 
@@ -495,7 +495,7 @@
     .line 28
     iget-object p1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->q:Lcom/vk/dto/user/deactivation/Deactivation;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->q:Lcom/vk/dto/user/deactivation/Deactivation;
 
     invoke-interface {v0}, Lcom/vk/dto/user/deactivation/Deactivation;->k()I
 
@@ -507,7 +507,7 @@
 
     .line 29
     :cond_d
-    iget-boolean v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iget-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     if-nez v1, :cond_e
 
@@ -517,7 +517,7 @@
     invoke-virtual {v1}, Lcom/vk/profile/ui/header/BaseHeaderView;->c()V
 
     .line 31
-    invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->a(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->a(Lcom/vtosters/lite/api/i;)V
 
     .line 32
     iget-object v1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
@@ -528,7 +528,7 @@
 
     new-instance v2, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b$b;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b$b;-><init>(Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;Lcom/vkontakte/android/api/i;Lcom/vk/profile/adapter/items/CommunityHeaderItem;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b$b;-><init>(Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;Lcom/vtosters/lite/api/i;Lcom/vk/profile/adapter/items/CommunityHeaderItem;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -547,12 +547,12 @@
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->j:Ljava/lang/String;
+    iget-object v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->j:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
     .line 35
-    invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->a(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->a(Lcom/vtosters/lite/api/i;)V
 
     .line 36
     iget-object v1, p0, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;->d:Lcom/vk/profile/ui/header/CommunityHeaderView;
@@ -563,7 +563,7 @@
 
     new-instance v2, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b$c;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b$c;-><init>(Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;Lcom/vkontakte/android/api/i;Lcom/vk/profile/adapter/items/CommunityHeaderItem;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vk/profile/adapter/items/CommunityHeaderItem$b$c;-><init>(Lcom/vk/profile/adapter/items/CommunityHeaderItem$b;Lcom/vtosters/lite/api/i;Lcom/vk/profile/adapter/items/CommunityHeaderItem;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -600,7 +600,7 @@
     if-eqz v0, :cond_1
 
     .line 38
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;
 
@@ -649,7 +649,7 @@
     .line 43
     sget-object v6, Lcom/vk/stories/StoriesController$SourceType;->PROFILE:Lcom/vk/stories/StoriesController$SourceType;
 
-    iget-object p2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p2, Lcom/vk/profile/adapter/items/CommunityHeaderItem;
 
@@ -681,15 +681,15 @@
     .line 47
     new-instance p2, Lcom/vk/profile/e/b;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/CommunityHeaderItem;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->b(Lcom/vk/profile/adapter/items/CommunityHeaderItem;)Lcom/vkontakte/android/api/i;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/CommunityHeaderItem;->b(Lcom/vk/profile/adapter/items/CommunityHeaderItem;)Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 

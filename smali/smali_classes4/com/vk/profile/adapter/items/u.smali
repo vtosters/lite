@@ -14,19 +14,19 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vkontakte/android/api/i;
+.field private final C:Lcom/vtosters/lite/api/i;
 
 .field private final D:Lcom/vk/profile/presenter/CommunityPresenter;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/u;->C:Lcom/vkontakte/android/api/i;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/u;->C:Lcom/vtosters/lite/api/i;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/u;->D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -66,23 +66,23 @@
     return-object v0
 .end method
 
-.method public final Q()Lcom/vkontakte/android/api/i;
+.method public final Q()Lcom/vtosters/lite/api/i;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/u;->C:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/u;->C:Lcom/vtosters/lite/api/i;
 
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "+",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
             ">;"

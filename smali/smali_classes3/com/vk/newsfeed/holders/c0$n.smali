@@ -41,16 +41,16 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/attachments/StickerAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/StickerAttachment;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/attachments/StickerAttachment;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/attachments/StickerAttachment;-><init>()V
 
     .line 2
     invoke-virtual {p2}, Lcom/vk/dto/stickers/StickerItem;->getId()I
 
     move-result v1
 
-    iput v1, v0, Lcom/vkontakte/android/attachments/StickerAttachment;->e:I
+    iput v1, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->e:I
 
     .line 3
     sget v1, Lcom/vk/stickers/v;->g:I
@@ -59,20 +59,20 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vkontakte/android/attachments/StickerAttachment;->B:Ljava/lang/String;
+    iput-object v1, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->B:Ljava/lang/String;
 
     .line 4
     invoke-virtual {p2}, Lcom/vk/dto/stickers/StickerItem;->u1()Lcom/vk/dto/stickers/StickerAnimation;
 
     move-result-object p2
 
-    iput-object p2, v0, Lcom/vkontakte/android/attachments/StickerAttachment;->C:Lcom/vk/dto/stickers/StickerAnimation;
+    iput-object p2, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->C:Lcom/vk/dto/stickers/StickerAnimation;
 
     .line 5
-    iput p1, v0, Lcom/vkontakte/android/attachments/StickerAttachment;->h:I
+    iput p1, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
     .line 6
-    iput-object p3, v0, Lcom/vkontakte/android/attachments/StickerAttachment;->D:Ljava/lang/String;
+    iput-object p3, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->D:Ljava/lang/String;
 
     .line 7
     sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
@@ -83,7 +83,7 @@
 
     xor-int/lit8 p1, p1, 0x1
 
-    iput-boolean p1, v0, Lcom/vkontakte/android/attachments/StickerAttachment;->E:Z
+    iput-boolean p1, v0, Lcom/vtosters/lite/attachments/StickerAttachment;->E:Z
 
     .line 8
     iget-object p1, p0, Lcom/vk/newsfeed/holders/c0$n;->c:Lcom/vk/newsfeed/holders/c0;

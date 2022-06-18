@@ -23,7 +23,7 @@
 
 .field private f:Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;
 
-.field private final g:Lcom/vkontakte/android/ui/holder/video/j;
+.field private final g:Lcom/vtosters/lite/ui/holder/video/j;
 
 
 # direct methods
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vkontakte/android/ui/holder/video/j;IZ)V
+.method public constructor <init>(Lcom/vtosters/lite/ui/holder/video/j;IZ)V
     .locals 2
 
     .line 1
@@ -53,7 +53,7 @@
 
     invoke-direct {p0, v0, p2}, Lcom/vk/newsfeed/holders/zhukov/a;-><init>(Landroid/view/View;I)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vkontakte/android/ui/holder/video/j;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vtosters/lite/ui/holder/video/j;
 
     .line 2
     new-instance p1, Lcom/vk/newsfeed/holders/zhukov/k;
@@ -86,9 +86,9 @@
     if-eqz p3, :cond_0
 
     .line 6
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vkontakte/android/ui/holder/video/j;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vtosters/lite/ui/holder/video/j;
 
-    invoke-virtual {p1, p0}, Lcom/vkontakte/android/ui/holder/video/j;->b(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, p0}, Lcom/vtosters/lite/ui/holder/video/j;->b(Landroid/view/View$OnClickListener;)V
 
     :cond_0
     return-void
@@ -109,19 +109,19 @@
     .locals 2
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vkontakte/android/ui/holder/video/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vtosters/lite/ui/holder/video/j;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/holder/video/j;->k(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/holder/video/j;->k(Z)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vkontakte/android/ui/holder/video/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vtosters/lite/ui/holder/video/j;
 
     invoke-virtual {v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
 
@@ -147,11 +147,11 @@
     return-object v0
 .end method
 
-.method public final c()Lcom/vkontakte/android/ui/holder/video/j;
+.method public final c()Lcom/vtosters/lite/ui/holder/video/j;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vkontakte/android/ui/holder/video/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/zhukov/l;->g:Lcom/vtosters/lite/ui/holder/video/j;
 
     return-object v0
 .end method

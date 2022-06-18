@@ -43,7 +43,7 @@
     const p1, 0x7f0d0039
 
     .line 2
-    invoke-static {p2, p1}, Lcom/vkontakte/android/f0;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
+    invoke-static {p2, p1}, Lcom/vtosters/lite/f0;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
 
     move-result-object p1
 

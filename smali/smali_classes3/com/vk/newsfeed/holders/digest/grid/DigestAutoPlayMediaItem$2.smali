@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem$2;->this$0:Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->a(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    invoke-static {v0}, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->a(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     move-result-object v0
 
@@ -104,13 +104,13 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem$2;->this$0:Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->a(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    invoke-static {v0}, Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;->a(Lcom/vk/newsfeed/holders/digest/grid/DigestAutoPlayMediaItem;)Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     move-result-object v0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;->setRatio(F)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;->setRatio(F)V
 
     return-void
 .end method

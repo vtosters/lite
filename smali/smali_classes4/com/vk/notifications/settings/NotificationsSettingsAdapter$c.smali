@@ -43,9 +43,9 @@
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vkontakte/android/NotificationUtils$Type;->ChatMessages:Lcom/vkontakte/android/NotificationUtils$Type;
+    sget-object v0, Lcom/vtosters/lite/NotificationUtils$Type;->ChatMessages:Lcom/vtosters/lite/NotificationUtils$Type;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/NotificationUtils$Type;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/NotificationUtils$Type;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
     .line 4
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/q1;
+    const-class v1, Lcom/vtosters/lite/fragments/q1;
 
     invoke-direct {v0, v1, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 

@@ -67,13 +67,13 @@
     move-result-object v0
 
     .line 2
-    new-instance v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     invoke-virtual {p1}, Lcom/vk/libvideo/y/n;->a()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     const/16 p1, 0x78
 

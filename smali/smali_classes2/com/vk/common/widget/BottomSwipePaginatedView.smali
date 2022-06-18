@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private V:Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+.field private V:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
 
 # direct methods
@@ -126,9 +126,9 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p2, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    check-cast p2, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    iput-object p2, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    iput-object p2, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     const p2, 0x7f0a0693
 
@@ -144,7 +144,7 @@
     .line 4
     new-instance p1, Lcom/vk/common/widget/BottomSwipePaginatedView$a;
 
-    iget-object p2, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    iget-object p2, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     const/4 v0, 0x0
 
@@ -152,7 +152,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-direct {p1, p2}, Lcom/vk/common/widget/BottomSwipePaginatedView$a;-><init>(Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;)V
+    invoke-direct {p1, p2}, Lcom/vk/common/widget/BottomSwipePaginatedView$a;-><init>(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)V
 
     iput-object p1, p0, Lcom/vk/lists/RecyclerPaginatedView;->I:Lcom/vk/lists/AbstractPaginatedView$e;
 
@@ -166,7 +166,7 @@
     invoke-virtual {p1, p2}, Lcom/vk/lists/AbstractPaginatedView$e;->a(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    iget-object p1, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     if-eqz p1, :cond_0
 
@@ -188,11 +188,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    iget-object v0, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->d()Z
 
     move-result v0
 
@@ -212,11 +212,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;
+    iget-object v0, p0, Lcom/vk/common/widget/BottomSwipePaginatedView;->V:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/ui/refreshlayout/BottomSwipeRefreshLayout;->setReversed(Z)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->setReversed(Z)V
 
     return-void
 

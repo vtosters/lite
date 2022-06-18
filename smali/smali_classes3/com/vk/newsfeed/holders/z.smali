@@ -36,7 +36,7 @@
 
 .field private final K:Lcom/vk/newsfeed/holders/z$a;
 
-.field private final L:Lcom/vkontakte/android/v;
+.field private final L:Lcom/vtosters/lite/v;
 
 
 # direct methods
@@ -133,11 +133,11 @@
     iput-object v0, p0, Lcom/vk/newsfeed/holders/z;->K:Lcom/vk/newsfeed/holders/z$a;
 
     .line 8
-    new-instance p1, Lcom/vkontakte/android/v;
+    new-instance p1, Lcom/vtosters/lite/v;
 
     iget-object v0, p0, Lcom/vk/newsfeed/holders/z;->K:Lcom/vk/newsfeed/holders/z$a;
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/v;-><init>(Lcom/vk/core/view/links/a$a;)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/v;-><init>(Lcom/vk/core/view/links/a$a;)V
 
     const/4 v0, 0x1
 
@@ -145,7 +145,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/view/links/a;->a(Z)V
 
     .line 10
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/z;->L:Lcom/vkontakte/android/v;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/z;->L:Lcom/vtosters/lite/v;
 
     .line 11
     iget-object p1, p0, Lcom/vk/newsfeed/holders/z;->G:Landroid/widget/TextView;
@@ -239,13 +239,13 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/f;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/f;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vkontakte/android/api/newsfeed/f;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vtosters/lite/api/newsfeed/f;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -274,7 +274,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     move-object v1, v0
 
@@ -297,7 +297,7 @@
     :cond_0
     sget-object v0, Lcom/vk/newsfeed/controllers/PostsController;->c:Lcom/vk/newsfeed/controllers/PostsController;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -344,13 +344,13 @@
     :cond_0
     const v0, 0x7f1208e5
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 3
     :goto_0
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -430,7 +430,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/newsfeed/holders/z;->J:Landroid/text/SpannableStringBuilder;
 
-    iget-object v2, p0, Lcom/vk/newsfeed/holders/z;->L:Lcom/vkontakte/android/v;
+    iget-object v2, p0, Lcom/vk/newsfeed/holders/z;->L:Lcom/vtosters/lite/v;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -478,7 +478,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 

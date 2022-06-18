@@ -42,11 +42,11 @@
     .locals 0
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$f;->b:Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$f;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 

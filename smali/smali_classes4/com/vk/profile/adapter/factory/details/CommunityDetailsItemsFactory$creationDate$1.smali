@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/details/DetailsInfoItem;",
         ">;"
     }
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
     .locals 4
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->w()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->w()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->i(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/b;->i(Lcom/vtosters/lite/api/i;)Z
 
     move-result v0
 
@@ -78,7 +78,7 @@
     invoke-direct {v0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;-><init>()V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->w()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->w()I
 
     move-result v1
 
@@ -101,7 +101,7 @@
     invoke-virtual {v0, v3}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->c(Z)V
 
     .line 6
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -129,9 +129,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$creationDate$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$creationDate$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 
     move-result-object p1
 

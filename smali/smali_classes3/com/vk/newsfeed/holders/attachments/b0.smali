@@ -118,7 +118,7 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MiniAppAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MiniAppAttachment;
 
     const/4 v1, 0x0
 
@@ -127,18 +127,18 @@
     move-object p1, v1
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/attachments/MiniAppAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MiniAppAttachment;
 
     if-eqz p1, :cond_3
 
     .line 3
-    sget-object v0, Lcom/vkontakte/android/attachments/MiniAppAttachment;->G:Lcom/vkontakte/android/attachments/MiniAppAttachment$b;
+    sget-object v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;->G:Lcom/vtosters/lite/attachments/MiniAppAttachment$b;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->A1()Lcom/vk/dto/common/NotificationImage;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->A1()Lcom/vk/dto/common/NotificationImage;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/attachments/MiniAppAttachment$b;->a(Lcom/vk/dto/common/NotificationImage;)Lcom/vk/dto/common/NotificationImage$ImageInfo;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/attachments/MiniAppAttachment$b;->a(Lcom/vk/dto/common/NotificationImage;)Lcom/vk/dto/common/NotificationImage$ImageInfo;
 
     move-result-object v0
 
@@ -176,15 +176,15 @@
     .line 8
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/b0;->I:Lcom/vk/newsfeed/holders/attachments/b0$a;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->getTitle()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->z1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->z1()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->y1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->y1()Ljava/lang/String;
 
     move-result-object p1
 
@@ -206,15 +206,15 @@
     .line 11
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/b0;->H:Lcom/vk/newsfeed/holders/attachments/b0$a;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->getTitle()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->z1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->z1()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->y1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->y1()Ljava/lang/String;
 
     move-result-object p1
 
@@ -282,14 +282,14 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vkontakte/android/attachments/MiniAppAttachment;
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vkontakte/android/attachments/MiniAppAttachment;
+    check-cast v0, Lcom/vtosters/lite/attachments/MiniAppAttachment;
 
     if-eqz v0, :cond_1
 
@@ -302,7 +302,7 @@
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/attachments/MiniAppAttachment;->x1()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual {v0}, Lcom/vtosters/lite/attachments/MiniAppAttachment;->x1()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 

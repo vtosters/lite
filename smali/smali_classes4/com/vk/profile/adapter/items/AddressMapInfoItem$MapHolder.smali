@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "AddressMapInfoItem.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/AddressMapInfoItem;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$g;"
@@ -55,7 +55,7 @@
     const v0, 0x7f0d04bb
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -210,17 +210,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;
+    check-cast v0, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;
 
     const v1, 0x3eb33333    # 0.35f
 
     .line 13
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;->setRatio(F)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;->setRatio(F)V
 
     const/4 v1, 0x0
 
     .line 14
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/widget/RatioFrameLayout;->setOrientation(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/widget/RatioFrameLayout;->setOrientation(I)V
 
     .line 15
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -429,7 +429,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -440,7 +440,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     move-object v1, v0
 
@@ -460,7 +460,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/ui/StaticMapWrapper;->a(Landroid/view/ViewGroup;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -557,7 +557,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -573,15 +573,15 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result v0
 
@@ -683,11 +683,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/vk/profile/presenter/f/b;->a(Lcom/vkontakte/android/api/i;)V
+    invoke-virtual {v0, v3}, Lcom/vk/profile/presenter/f/b;->a(Lcom/vtosters/lite/api/i;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->B:Lcom/vk/common/view/SolidColorView;
@@ -719,11 +719,11 @@
     .line 16
     iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->g:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->j:Ljava/lang/String;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->j:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
@@ -731,11 +731,11 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q0:Ljava/util/HashMap;
 
     const-string v1, "addresses"
 
@@ -817,15 +817,15 @@
     .line 9
     new-instance v0, Lcom/vk/profile/e/b;
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -852,7 +852,7 @@
     :cond_0
     new-instance v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -864,15 +864,15 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v3, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v3}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v3}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v3
 
-    iget-object v3, v3, Lcom/vkontakte/android/api/ExtendedUserProfile;->j:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vtosters/lite/api/ExtendedUserProfile;->j:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->g0()Lcom/vk/dto/profile/Address;
 
@@ -884,7 +884,7 @@
     invoke-virtual {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;->h()Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
 
     .line 15
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -903,15 +903,15 @@
     .line 16
     new-instance v0, Lcom/vk/profile/e/b;
 
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -959,7 +959,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -974,7 +974,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -990,15 +990,15 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vkontakte/android/api/i;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v0
 
@@ -1020,7 +1020,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/wall/h/d$h;
-.super Lcom/vkontakte/android/ui/WriteBar$i0;
+.super Lcom/vtosters/lite/ui/WriteBar$i0;
 .source "ReplyBarView.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/wall/h/d$h;->b:Lcom/vk/wall/h/d;
 
-    invoke-direct {p0}, Lcom/vkontakte/android/ui/WriteBar$i0;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/ui/WriteBar$i0;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/wall/h/d$h;->b:Lcom/vk/wall/h/d;
 
-    invoke-static {v0}, Lcom/vk/wall/h/d;->e(Lcom/vk/wall/h/d;)Lcom/vkontakte/android/ui/WriteBar;
+    invoke-static {v0}, Lcom/vk/wall/h/d;->e(Lcom/vk/wall/h/d;)Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v0
 
@@ -49,14 +49,14 @@
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
     .line 5
-    instance-of v2, p1, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    instance-of v2, p1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     const/4 v3, 0x1
 
@@ -95,19 +95,19 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 8
-    instance-of v4, v2, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v4, v2, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v4, :cond_2
 
-    check-cast v2, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v2, v2, Lcom/vkontakte/android/attachments/PhotoAttachment;->G:Ljava/lang/String;
+    iget-object v2, v2, Lcom/vtosters/lite/attachments/PhotoAttachment;->G:Ljava/lang/String;
 
     move-object v4, p1
 
-    check-cast v4, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    check-cast v4, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-virtual {v4}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
 
     move-result-object v4
 
@@ -134,7 +134,7 @@
 
     .line 9
     :cond_3
-    instance-of v2, p1, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    instance-of v2, p1, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     if-eqz v2, :cond_8
 
@@ -171,13 +171,13 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 12
-    instance-of v4, v2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v4, v2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v4, :cond_7
 
-    check-cast v2, Lcom/vkontakte/android/attachments/VideoAttachment;
+    check-cast v2, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v2}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v4
 
@@ -185,21 +185,21 @@
 
     move-object v5, p1
 
-    check-cast v5, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    check-cast v5, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/attachments/PendingVideoAttachment;->getId()I
+    invoke-virtual {v5}, Lcom/vtosters/lite/attachments/PendingVideoAttachment;->getId()I
 
     move-result v6
 
     if-eq v4, v6, :cond_6
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v2}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
     iget-object v2, v2, Lcom/vk/dto/common/VideoFile;->G:Ljava/lang/String;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v5}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v4
 
@@ -252,13 +252,13 @@
     .line 12
     iget-object v0, p0, Lcom/vk/wall/h/d$h;->b:Lcom/vk/wall/h/d;
 
-    invoke-static {v0}, Lcom/vk/wall/h/d;->e(Lcom/vk/wall/h/d;)Lcom/vkontakte/android/ui/WriteBar;
+    invoke-static {v0}, Lcom/vk/wall/h/d;->e(Lcom/vk/wall/h/d;)Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -350,7 +350,7 @@
     .locals 2
 
     .line 6
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PendingGraffitiAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingGraffitiAttachment;
 
     const/4 v1, 0x1
 
@@ -365,15 +365,15 @@
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lcom/vkontakte/android/attachments/b;
+    check-cast p1, Lcom/vtosters/lite/attachments/b;
 
-    invoke-interface {v0, p1}, Lcom/vk/wall/h/a;->a(Lcom/vkontakte/android/attachments/b;)V
+    invoke-interface {v0, p1}, Lcom/vk/wall/h/a;->a(Lcom/vtosters/lite/attachments/b;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
     if-eqz v0, :cond_1
 

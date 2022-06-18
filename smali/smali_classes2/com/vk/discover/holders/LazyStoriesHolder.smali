@@ -846,7 +846,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->f:Lcom/vk/stories/holders/StoriesBlockHolder;
@@ -925,7 +925,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 17
     iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder;->f:Lcom/vk/stories/holders/StoriesBlockHolder;

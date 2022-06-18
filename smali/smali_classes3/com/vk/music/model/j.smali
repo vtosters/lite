@@ -34,13 +34,13 @@
 
 .field private final h:Lcom/vk/audioipc/core/d;
 
-.field private final i:Lcom/vkontakte/android/audio/player/a0;
+.field private final i:Lcom/vtosters/lite/audio/player/a0;
 
-.field private final j:Lcom/vkontakte/android/audio/player/h;
+.field private final j:Lcom/vtosters/lite/audio/player/h;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/audioipc/core/d;Lcom/vkontakte/android/audio/player/a0;Lcom/vkontakte/android/audio/player/h;)V
+.method public constructor <init>(Lcom/vk/audioipc/core/d;Lcom/vtosters/lite/audio/player/a0;Lcom/vtosters/lite/audio/player/h;)V
     .locals 0
 
     .line 1
@@ -48,9 +48,9 @@
 
     iput-object p1, p0, Lcom/vk/music/model/j;->h:Lcom/vk/audioipc/core/d;
 
-    iput-object p2, p0, Lcom/vk/music/model/j;->i:Lcom/vkontakte/android/audio/player/a0;
+    iput-object p2, p0, Lcom/vk/music/model/j;->i:Lcom/vtosters/lite/audio/player/a0;
 
-    iput-object p3, p0, Lcom/vk/music/model/j;->j:Lcom/vkontakte/android/audio/player/h;
+    iput-object p3, p0, Lcom/vk/music/model/j;->j:Lcom/vtosters/lite/audio/player/h;
 
     .line 2
     new-instance p1, Lcom/vk/music/model/j$a;
@@ -482,9 +482,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/model/j;->i:Lcom/vkontakte/android/audio/player/a0;
+    iget-object v0, p0, Lcom/vk/music/model/j;->i:Lcom/vtosters/lite/audio/player/a0;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/audio/player/a0;->d()Lcom/vk/music/player/PlayerTrack;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/a0;->d()Lcom/vk/music/player/PlayerTrack;
 
     move-result-object v0
 
@@ -1619,9 +1619,9 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/music/model/j;->j:Lcom/vkontakte/android/audio/player/h;
+    iget-object v0, p0, Lcom/vk/music/model/j;->j:Lcom/vtosters/lite/audio/player/h;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/audio/player/h;->a(Lcom/vk/music/player/c;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/player/h;->a(Lcom/vk/music/player/c;)V
 
     return-void
 .end method
@@ -1630,9 +1630,9 @@
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/music/model/j;->j:Lcom/vkontakte/android/audio/player/h;
+    iget-object v0, p0, Lcom/vk/music/model/j;->j:Lcom/vtosters/lite/audio/player/h;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/audio/player/h;->a(Lcom/vk/music/player/c;Z)V
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/audio/player/h;->a(Lcom/vk/music/player/c;Z)V
 
     return-void
 .end method
@@ -1644,11 +1644,11 @@
     invoke-super {p0, p1}, Lcom/vk/music/common/f;->c(Ljava/lang/Object;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/music/model/j;->j:Lcom/vkontakte/android/audio/player/h;
+    iget-object p1, p0, Lcom/vk/music/model/j;->j:Lcom/vtosters/lite/audio/player/h;
 
     iget-object v0, p0, Lcom/vk/music/model/j;->d:Lcom/vk/music/model/j$a;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/audio/player/h;->a(Lcom/vk/music/player/c;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/audio/player/h;->a(Lcom/vk/music/player/c;)V
 
     return-void
 .end method
@@ -2052,13 +2052,13 @@
     invoke-direct {p0}, Lcom/vk/music/model/j;->g0()V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/music/model/j;->j:Lcom/vkontakte/android/audio/player/h;
+    iget-object p1, p0, Lcom/vk/music/model/j;->j:Lcom/vtosters/lite/audio/player/h;
 
     iget-object v0, p0, Lcom/vk/music/model/j;->d:Lcom/vk/music/model/j$a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lcom/vkontakte/android/audio/player/h;->a(Lcom/vk/music/player/c;Z)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/audio/player/h;->a(Lcom/vk/music/player/c;Z)V
 
     return-void
 .end method
@@ -2276,9 +2276,9 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/music/model/j;->i:Lcom/vkontakte/android/audio/player/a0;
+    iget-object v1, p0, Lcom/vk/music/model/j;->i:Lcom/vtosters/lite/audio/player/a0;
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/audio/player/a0;->b(I)Lcom/vk/music/player/e;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/audio/player/a0;->b(I)Lcom/vk/music/player/e;
 
     move-result-object v0
 
@@ -2297,9 +2297,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/model/j;->i:Lcom/vkontakte/android/audio/player/a0;
+    iget-object v0, p0, Lcom/vk/music/model/j;->i:Lcom/vtosters/lite/audio/player/a0;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/audio/player/a0;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/a0;->b()Ljava/util/List;
 
     move-result-object v0
 
@@ -2412,9 +2412,9 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/music/model/j;->i:Lcom/vkontakte/android/audio/player/a0;
+    iget-object v1, p0, Lcom/vk/music/model/j;->i:Lcom/vtosters/lite/audio/player/a0;
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/audio/player/a0;->b(I)Lcom/vk/music/player/e;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/audio/player/a0;->b(I)Lcom/vk/music/player/e;
 
     move-result-object v0
 

@@ -1595,7 +1595,7 @@
     .line 32
     sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    const-string v1, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -2076,7 +2076,7 @@
     .line 2
     sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -2096,7 +2096,7 @@
     .line 2
     sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -2116,7 +2116,7 @@
     .line 2
     sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
@@ -2135,7 +2135,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 

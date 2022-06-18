@@ -3,7 +3,7 @@
 .source "MusicPromoSlide2ViewController.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/data/PurchasesManager$o;
+.implements Lcom/vtosters/lite/data/PurchasesManager$o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vkontakte/android/data/PurchasesManager$o<",
+        "Lcom/vtosters/lite/data/PurchasesManager$o<",
         "Lcom/vk/dto/common/data/Subscription;",
         ">;"
     }

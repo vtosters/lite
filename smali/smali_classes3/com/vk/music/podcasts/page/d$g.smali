@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/podcasts/e$a;",
+        "Lcom/vtosters/lite/api/podcasts/e$a;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/podcasts/e$a;)V
+.method public final a(Lcom/vtosters/lite/api/podcasts/e$a;)V
     .locals 0
 
     const/4 p1, 0x1
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/data/Groups;->b(Z)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Groups;->b(Z)V
 
     return-void
 .end method
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/podcasts/e$a;
+    check-cast p1, Lcom/vtosters/lite/api/podcasts/e$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/d$g;->a(Lcom/vkontakte/android/api/podcasts/e$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/d$g;->a(Lcom/vtosters/lite/api/podcasts/e$a;)V
 
     return-void
 .end method

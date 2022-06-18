@@ -62,9 +62,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder$showDynamicModalModalBottomSheet$1;->$adapter:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    sget-object v1, Lcom/vkontakte/android/bridges/h;->a:Lcom/vkontakte/android/bridges/h;
+    sget-object v1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/bridges/h;->b()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/bridges/h;->b()I
 
     move-result v1
 

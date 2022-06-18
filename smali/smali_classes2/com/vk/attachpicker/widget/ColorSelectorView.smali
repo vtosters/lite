@@ -70,7 +70,7 @@
     iput v0, p0, Lcom/vk/attachpicker/widget/ColorSelectorView;->e:I
 
     .line 4
-    sget-object v0, Lcom/vkontakte/android/a0;->ColorSelectorView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->ColorSelectorView:[I
 
     invoke-virtual {p1, p2, v0, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/poll/fragments/c;
-.super Lcom/vkontakte/android/fragments/x0;
+.super Lcom/vtosters/lite/fragments/x0;
 .source "PollUserListFragment.kt"
 
 
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/x0;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/x0;-><init>()V
 
     return-void
 .end method
@@ -249,7 +249,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vkontakte/android/fragments/m2/a;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/m2/a;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;

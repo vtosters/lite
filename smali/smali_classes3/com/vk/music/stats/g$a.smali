@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/n$l;)V
     .locals 3
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -64,7 +64,7 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->a([Ljava/lang/Object;)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

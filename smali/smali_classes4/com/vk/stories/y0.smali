@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0, p2}, Lcom/vkontakte/android/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
+    invoke-static {v0, p2}, Lcom/vtosters/lite/data/Friends$e;->a(Lcom/vk/dto/user/UserProfile;I)Ljava/lang/String;
 
     move-result-object p1
 

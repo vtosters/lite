@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "AdministratorProfileFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;"
     }
@@ -43,7 +43,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;->d:Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;
 
-    invoke-direct {p0, p3, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p3, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p3, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;->c:Lcom/vk/profile/ui/header/BaseHeaderView;
 
@@ -64,11 +64,11 @@
 
     iget-object v0, v0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->C:Lcom/vk/profile/ui/user/AdministratorProfileFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v0, v0, Lcom/vk/dto/user/UserProfile;->c:Ljava/lang/String;
 
@@ -82,11 +82,11 @@
 
     iget-object v0, v0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->C:Lcom/vk/profile/ui/user/AdministratorProfileFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v0, v0, Lcom/vk/dto/user/UserProfile;->e:Ljava/lang/String;
 
@@ -101,11 +101,11 @@
 
     iget-object v0, v0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->C:Lcom/vk/profile/ui/user/AdministratorProfileFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v0, v0, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
@@ -151,11 +151,11 @@
 
     iget-object v6, v6, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->C:Lcom/vk/profile/ui/user/AdministratorProfileFragment;
 
-    invoke-static {v6}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v6}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v6
 
-    iget-object v6, v6, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v6, v6, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v6, v6, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
@@ -194,11 +194,11 @@
 
     iget-object v6, v6, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->C:Lcom/vk/profile/ui/user/AdministratorProfileFragment;
 
-    invoke-static {v6}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {v6}, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->a(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v6
 
-    iget-object v6, v6, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v6, v6, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget-object v6, v6, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 

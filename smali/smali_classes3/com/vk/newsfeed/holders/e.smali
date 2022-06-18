@@ -109,7 +109,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/e;->F:Lcom/vk/core/view/PhotoStripView;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -238,7 +238,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -277,12 +277,12 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Post;
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/n1$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->b()I
 
@@ -292,18 +292,18 @@
 
     move-result p1
 
-    invoke-direct {v0, v1, p1}, Lcom/vkontakte/android/fragments/n1$a;-><init>(II)V
+    invoke-direct {v0, v1, p1}, Lcom/vtosters/lite/fragments/n1$a;-><init>(II)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/newsfeed/holders/e;->H:Lcom/vk/api/likes/LikesGetList$Type;
 
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/fragments/n1$a;->b(Lcom/vk/api/likes/LikesGetList$Type;)Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/n1$a;->b(Lcom/vk/api/likes/LikesGetList$Type;)Lcom/vtosters/lite/fragments/n1$a;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/n1$a;->i()Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/n1$a;->i()Lcom/vtosters/lite/fragments/n1$a;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

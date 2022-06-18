@@ -106,7 +106,7 @@
     move-result-object v6
 
     .line 3
-    sget-object v3, Lcom/vkontakte/android/im/i;->b:Lcom/vkontakte/android/im/i;
+    sget-object v3, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
 
     iget-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->G:Lcom/vk/dto/stories/model/StoryQuestionEntry;
 
@@ -123,7 +123,7 @@
     move-result v5
 
     .line 4
-    new-instance p1, Lcom/vkontakte/android/attachments/StoryAttachment;
+    new-instance p1, Lcom/vtosters/lite/attachments/StoryAttachment;
 
     iget-object v0, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->F:Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -131,7 +131,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, v0, v2, v1, v2}, Lcom/vkontakte/android/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v0, v2, v1, v2}, Lcom/vtosters/lite/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILkotlin/jvm/internal/i;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -146,7 +146,7 @@
     move-object v4, p0
 
     .line 5
-    invoke-static/range {v3 .. v10}, Lcom/vkontakte/android/im/i;->a(Lcom/vkontakte/android/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v3 .. v10}, Lcom/vtosters/lite/im/i;->a(Lcom/vtosters/lite/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
 
     .line 6
     iget-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->H:Lkotlin/jvm/b/a;

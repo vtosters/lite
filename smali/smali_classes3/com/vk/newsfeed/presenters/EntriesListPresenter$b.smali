@@ -53,18 +53,18 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p3}, Lcom/vk/wall/d;->a()Lcom/vkontakte/android/q;
+    invoke-virtual {p3}, Lcom/vk/wall/d;->a()Lcom/vtosters/lite/q;
 
     move-result-object p1
 
-    instance-of p2, p1, Lcom/vkontakte/android/NewsComment;
+    instance-of p2, p1, Lcom/vtosters/lite/NewsComment;
 
     if-nez p2, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/NewsComment;
+    check-cast p1, Lcom/vtosters/lite/NewsComment;
 
     if-eqz p1, :cond_2
 
@@ -79,14 +79,14 @@
     move-result p3
 
     .line 5
-    iget-boolean v0, p1, Lcom/vkontakte/android/NewsComment;->K:Z
+    iget-boolean v0, p1, Lcom/vtosters/lite/NewsComment;->K:Z
 
     if-eqz v0, :cond_1
 
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$b;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-static {v0, p2, p3, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/newsfeed/presenters/EntriesListPresenter;IILcom/vkontakte/android/NewsComment;)V
+    invoke-static {v0, p2, p3, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/newsfeed/presenters/EntriesListPresenter;IILcom/vtosters/lite/NewsComment;)V
 
     goto :goto_0
 
@@ -94,7 +94,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$b;->a:Lcom/vk/newsfeed/presenters/EntriesListPresenter;
 
-    invoke-static {v0, p2, p3, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->b(Lcom/vk/newsfeed/presenters/EntriesListPresenter;IILcom/vkontakte/android/NewsComment;)V
+    invoke-static {v0, p2, p3, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->b(Lcom/vk/newsfeed/presenters/EntriesListPresenter;IILcom/vtosters/lite/NewsComment;)V
 
     :cond_2
     :goto_0

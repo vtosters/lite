@@ -1,5 +1,5 @@
 .class Lcom/vk/video/d/c$b;
-.super Lcom/vkontakte/android/api/k;
+.super Lcom/vtosters/lite/api/k;
 .source "VideoYoutubeFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/video/d/c$b;->c:Lcom/vk/video/d/c;
 
-    invoke-direct {p0, p2}, Lcom/vkontakte/android/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -106,7 +106,7 @@
     .locals 1
 
     .line 7
-    invoke-super {p0, p1}, Lcom/vkontakte/android/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/video/d/c$b;->c:Lcom/vk/video/d/c;

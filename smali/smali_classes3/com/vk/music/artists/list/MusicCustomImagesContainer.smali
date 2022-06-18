@@ -26,7 +26,7 @@
 
 .field private final c:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-.field private final d:Lcom/vkontakte/android/ui/v;
+.field private final d:Lcom/vtosters/lite/ui/v;
 
 .field private final e:Landroid/view/View;
 
@@ -211,7 +211,7 @@
     iput-object p3, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->c:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     .line 20
-    new-instance p2, Lcom/vkontakte/android/ui/v$b;
+    new-instance p2, Lcom/vtosters/lite/ui/v$b;
 
     const p3, 0x7f0a03c1
 
@@ -219,9 +219,9 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Lcom/vkontakte/android/ui/v$b;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p3}, Lcom/vtosters/lite/ui/v$b;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {p2}, Lcom/vkontakte/android/ui/v$b;->a()Lcom/vkontakte/android/ui/v;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/v$b;->a()Lcom/vtosters/lite/ui/v;
 
     move-result-object p2
 
@@ -229,16 +229,16 @@
 
     invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vkontakte/android/ui/v;
+    iput-object p2, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vtosters/lite/ui/v;
 
     .line 21
-    iget-object p2, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vkontakte/android/ui/v;
+    iget-object p2, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vtosters/lite/ui/v;
 
     new-instance p3, Lcom/vk/music/artists/list/MusicCustomImagesContainer$a;
 
     invoke-direct {p3, p0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer$a;-><init>(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)V
 
-    invoke-virtual {p2, p3}, Lcom/vkontakte/android/ui/v;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, p3}, Lcom/vtosters/lite/ui/v;->a(Landroid/view/View$OnClickListener;)V
 
     const p2, 0x7f0a0af0
 
@@ -407,11 +407,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vkontakte/android/ui/v;
+.method public static final synthetic d(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vtosters/lite/ui/v;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vkontakte/android/ui/v;
+    iget-object p0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vtosters/lite/ui/v;
 
     return-object p0
 .end method
@@ -489,9 +489,9 @@
     .line 3
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->b:Landroid/widget/ViewAnimator;
 
-    iget-object v1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vkontakte/android/ui/v;
+    iget-object v1, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->d:Lcom/vtosters/lite/ui/v;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
 
     move-result-object v1
 

@@ -151,7 +151,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/data/p;->b(Landroid/content/Context;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/p;->b(Landroid/content/Context;I)V
 
     .line 10
     :cond_2

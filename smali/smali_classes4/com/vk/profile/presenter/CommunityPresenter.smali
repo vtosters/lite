@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/presenter/BaseProfilePresenter<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
         value = {
             "(",
             "Lcom/vk/newsfeed/contracts/u<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;",
             "Lcom/vk/music/player/d;",
             ")V"
@@ -90,13 +90,13 @@
             "Landroid/location/Location;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation
 
     .line 5
-    new-instance v0, Lcom/vkontakte/android/api/execute/f;
+    new-instance v0, Lcom/vtosters/lite/api/execute/f;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
 
@@ -106,10 +106,10 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vkontakte/android/api/execute/f;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/api/execute/f;-><init>(ILjava/lang/String;)V
 
     .line 6
-    invoke-virtual {v0, p1}, Lcom/vkontakte/android/api/execute/f;->a(Landroid/location/Location;)Lcom/vkontakte/android/api/execute/f;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/api/execute/f;->a(Landroid/location/Location;)Lcom/vtosters/lite/api/execute/f;
 
     const/4 v1, 0x0
 
@@ -179,26 +179,26 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vkontakte/android/api/i;)Lc/a/m;
+.method public static final synthetic a(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/i;)Lc/a/m;
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vkontakte/android/api/i;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vtosters/lite/api/i;)Lc/a/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/i;)Lc/a/m;
+.method private final a(Lcom/vtosters/lite/api/i;)Lc/a/m;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation
@@ -208,14 +208,14 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/a;->b(Lcom/vkontakte/android/api/i;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/a;->b(Lcom/vtosters/lite/api/i;)V
 
     .line 14
     invoke-virtual {p0}, Lcom/vk/profile/presenter/CommunityPresenter;->W()Lcom/vk/profile/data/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/a;->a(Lcom/vkontakte/android/api/i;)Lc/a/m;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/a;->a(Lcom/vtosters/lite/api/i;)Lc/a/m;
 
     move-result-object p1
 
@@ -278,20 +278,20 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vkontakte/android/api/i;)V
+.method public static final synthetic b(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->b(Lcom/vkontakte/android/api/i;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->b(Lcom/vtosters/lite/api/i;)V
 
     return-void
 .end method
 
-.method private final b(Lcom/vkontakte/android/api/i;)V
+.method private final b(Lcom/vtosters/lite/api/i;)V
     .locals 3
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->t()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->t()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -439,7 +439,7 @@
 
     if-eqz v0, :cond_c
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->u()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->u()Z
 
     move-result p1
 
@@ -512,11 +512,11 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     const/4 v1, 0x0
 
@@ -526,20 +526,20 @@
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->P:I
+    iget v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->P:I
 
     if-eq v0, v3, :cond_2
 
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->o1:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->o1:Lcom/vk/dto/common/data/VKList;
 
     goto :goto_0
 
@@ -558,29 +558,29 @@
 
     .line 2
     :goto_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vkontakte/android/api/i;
+    check-cast v4, Lcom/vtosters/lite/api/i;
 
     if-eqz v4, :cond_4
 
-    invoke-virtual {v4}, Lcom/vkontakte/android/api/i;->p()Z
+    invoke-virtual {v4}, Lcom/vtosters/lite/api/i;->p()Z
 
     move-result v4
 
     if-ne v4, v3, :cond_4
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vkontakte/android/api/i;
+    check-cast v4, Lcom/vtosters/lite/api/i;
 
     if-eqz v4, :cond_3
 
-    invoke-virtual {v4}, Lcom/vkontakte/android/api/i;->m()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {v4}, Lcom/vtosters/lite/api/i;->m()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v4
 
@@ -617,15 +617,15 @@
     :goto_4
     new-instance v5, Lcom/vk/api/execute/b;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v6
 
-    check-cast v6, Lcom/vkontakte/android/api/i;
+    check-cast v6, Lcom/vtosters/lite/api/i;
 
     if-eqz v6, :cond_7
 
-    iget-object v6, v6, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v6, v6, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     if-eqz v6, :cond_7
 
@@ -731,7 +731,7 @@
     .end annotation
 
     .line 16
-    invoke-static {}, Lcom/vkontakte/android/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
 
     move-result-object v0
 
@@ -837,15 +837,15 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     if-eqz v0, :cond_0
 
@@ -1196,20 +1196,20 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/i;
 
     if-eqz v0, :cond_4
 
     .line 2
-    iget v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->Q:I
+    iget v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->Q:I
 
     if-eqz v1, :cond_3
 
-    iget v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->R0:I
+    iget v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
     const/4 v2, 0x4
 
@@ -1219,13 +1219,13 @@
 
     .line 3
     :cond_0
-    invoke-static {v0}, Lcom/vk/profile/utils/b;->h(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/b;->h(Lcom/vtosters/lite/api/i;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->z1:Lcom/vk/dto/common/e;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->z1:Lcom/vk/dto/common/e;
 
     if-eqz v1, :cond_1
 
@@ -1240,13 +1240,13 @@
 
     .line 5
     :cond_1
-    invoke-static {v0}, Lcom/vk/profile/utils/b;->m(Lcom/vkontakte/android/api/i;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/b;->m(Lcom/vtosters/lite/api/i;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->z1:Lcom/vk/dto/common/e;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->z1:Lcom/vk/dto/common/e;
 
     if-eqz v0, :cond_2
 
@@ -1335,7 +1335,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">;"
         }
     .end annotation

@@ -54,18 +54,18 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     if-eqz p1, :cond_1
 
@@ -131,34 +131,34 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz p1, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    invoke-static {}, Lcom/vkontakte/android/attachments/MarketAttachment;->x1()Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    invoke-static {}, Lcom/vtosters/lite/attachments/MarketAttachment;->x1()Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     move-result-object v1
 
-    iget-object p1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
+    iget-object p1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;->e:Lcom/vk/dto/common/Good;
 
     iget v2, p1, Lcom/vk/dto/common/Good;->b:I
 
     iget p1, p1, Lcom/vk/dto/common/Good;->a:I
 
-    invoke-direct {v0, v1, v2, p1}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;II)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;II)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

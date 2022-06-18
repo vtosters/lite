@@ -42,9 +42,9 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/location/LocationFragment;
+    new-instance v0, Lcom/vtosters/lite/fragments/location/LocationFragment;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/location/LocationFragment;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/location/LocationFragment;-><init>()V
 
     return-object v0
 .end method

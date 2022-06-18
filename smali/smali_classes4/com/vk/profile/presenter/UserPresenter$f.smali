@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    value = Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Landroid/view/View;
 
-.field final synthetic c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter$f;->a:Lcom/vk/profile/presenter/UserPresenter;
 
     iput-object p2, p0, Lcom/vk/profile/presenter/UserPresenter$f;->b:Landroid/view/View;
 
-    iput-object p3, p0, Lcom/vk/profile/presenter/UserPresenter$f;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p3, p0, Lcom/vk/profile/presenter/UserPresenter$f;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,9 +69,9 @@
 
     iget-object p2, p0, Lcom/vk/profile/presenter/UserPresenter$f;->b:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter$f;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter$f;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {p1, p2, v0}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     :goto_0
     return-void

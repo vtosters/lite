@@ -10,7 +10,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
         "Ljava/lang/Object;",
         "Lcom/vk/newsfeed/contracts/f;"
@@ -95,7 +95,7 @@
 .method public abstract a(Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public abstract a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -103,7 +103,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/location/Location;)V
+.method public abstract a(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/location/Location;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",

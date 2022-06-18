@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/video/c/b$a;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vkontakte/android/k0/b;
+    value = Lcom/vk/video/c/b$a;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;IZ)Lcom/vtosters/lite/k0/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/k0/b;
+.field final synthetic a:Lcom/vtosters/lite/k0/b;
 
 .field final synthetic b:Lcom/vk/video/a;
 
@@ -26,10 +26,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/k0/b;Lcom/vk/video/a;Landroidx/appcompat/view/ContextThemeWrapper;)V
+.method constructor <init>(Lcom/vtosters/lite/k0/b;Lcom/vk/video/a;Landroidx/appcompat/view/ContextThemeWrapper;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/video/c/b$a$b;->a:Lcom/vkontakte/android/k0/b;
+    iput-object p1, p0, Lcom/vk/video/c/b$a$b;->a:Lcom/vtosters/lite/k0/b;
 
     iput-object p2, p0, Lcom/vk/video/c/b$a$b;->b:Lcom/vk/video/a;
 
@@ -53,7 +53,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/video/a;->a(Landroid/content/Context;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/video/c/b$a$b;->a:Lcom/vkontakte/android/k0/b;
+    iget-object p1, p0, Lcom/vk/video/c/b$a$b;->a:Lcom/vtosters/lite/k0/b;
 
     invoke-virtual {p1}, Lcom/vk/core/ui/v/j/f/a;->dismiss()V
 

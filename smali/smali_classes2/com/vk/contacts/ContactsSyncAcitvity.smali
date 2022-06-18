@@ -1,5 +1,5 @@
 .class public Lcom/vk/contacts/ContactsSyncAcitvity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "ContactsSyncAcitvity.java"
 
 # interfaces
@@ -24,7 +24,7 @@
 
 .field private M:Landroid/widget/RadioButton;
 
-.field private N:Lcom/vkontakte/android/activities/LogoutReceiver;
+.field private N:Lcom/vtosters/lite/activities/LogoutReceiver;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     const/4 v0, 0x0
 
@@ -45,7 +45,7 @@
     iput v1, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->H:I
 
     .line 4
-    iput-object v0, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->N:Lcom/vkontakte/android/activities/LogoutReceiver;
+    iput-object v0, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->N:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     return-void
 .end method
@@ -225,7 +225,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/contacts/g;->a(ILjava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -545,7 +545,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/contacts/g;->a(Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     .line 3
     sget-object p1, Lkotlin/m;->a:Lkotlin/m;
@@ -611,7 +611,7 @@
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setTheme(I)V
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -627,11 +627,11 @@
     iput-object p1, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->G:Ljava/lang/String;
 
     .line 4
-    invoke-static {p0}, Lcom/vkontakte/android/activities/LogoutReceiver;->a(Landroid/app/Activity;)Lcom/vkontakte/android/activities/LogoutReceiver;
+    invoke-static {p0}, Lcom/vtosters/lite/activities/LogoutReceiver;->a(Landroid/app/Activity;)Lcom/vtosters/lite/activities/LogoutReceiver;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->N:Lcom/vkontakte/android/activities/LogoutReceiver;
+    iput-object p1, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->N:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     const/4 p1, 0x0
 
@@ -708,12 +708,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->N:Lcom/vkontakte/android/activities/LogoutReceiver;
+    iget-object v0, p0, Lcom/vk/contacts/ContactsSyncAcitvity;->N:Lcom/vtosters/lite/activities/LogoutReceiver;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/activities/LogoutReceiver;->a()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/activities/LogoutReceiver;->a()V
 
     .line 2
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     return-void
 .end method

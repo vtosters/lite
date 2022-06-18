@@ -58,7 +58,7 @@
     .end annotation
 
     .line 2
-    invoke-static {}, Lcom/vkontakte/android/data/PurchasesManager;->c()Z
+    invoke-static {}, Lcom/vtosters/lite/data/PurchasesManager;->c()Z
 
     move-result v0
 

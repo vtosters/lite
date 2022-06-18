@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CountersAdapterLikeIos.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/data/CountersWrapper;",
         ">;"
     }
@@ -47,7 +47,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1;->e:Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;
 
-    invoke-direct {p0, p4, p5}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p4, p5}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     const p1, 0x7f0a02e4
 
@@ -91,7 +91,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/data/CountersWrapper;
 
@@ -106,7 +106,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1;->e:Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->j()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->j()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->a(Ljava/lang/String;)I
 
     move-result v2
 

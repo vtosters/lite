@@ -45,7 +45,7 @@
         value = {
             "Lkotlin/jvm/b/b<",
             "Landroid/view/ViewGroup;",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;>;"
         }
     .end annotation
@@ -267,7 +267,7 @@
             "-",
             "Landroid/view/ViewGroup;",
             "+",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;>;)V"
         }
     .end annotation
@@ -319,7 +319,7 @@
             "()",
             "Lkotlin/jvm/b/b<",
             "Landroid/view/ViewGroup;",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "*>;>;"
         }
     .end annotation

@@ -254,7 +254,7 @@
     .end annotation
 
     .line 11
-    invoke-static {}, Lcom/vkontakte/android/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
 
     move-result-object v0
 
@@ -341,7 +341,7 @@
     neg-int v0, p2
 
     .line 24
-    invoke-static {v0}, Lcom/vkontakte/android/data/Groups;->b(I)Lcom/vk/dto/group/Group;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Groups;->b(I)Lcom/vk/dto/group/Group;
 
     move-result-object v0
 
@@ -981,7 +981,7 @@
     .locals 1
 
     .line 55
-    invoke-static {}, Lcom/vkontakte/android/data/n;->m()V
+    invoke-static {}, Lcom/vtosters/lite/data/n;->m()V
 
     .line 56
     new-instance v0, Lcom/vk/api/friends/a;
@@ -1329,7 +1329,7 @@
     .locals 1
 
     .line 34
-    invoke-static {}, Lcom/vkontakte/android/data/n;->m()V
+    invoke-static {}, Lcom/vtosters/lite/data/n;->m()V
 
     .line 35
     new-instance v0, Lcom/vk/api/friends/b;

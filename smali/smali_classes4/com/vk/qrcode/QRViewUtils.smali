@@ -4875,18 +4875,18 @@
     .locals 1
 
     .line 367
-    instance-of v0, p2, Lcom/vkontakte/android/VKActivity;
+    instance-of v0, p2, Lcom/vtosters/lite/VKActivity;
 
     if-nez v0, :cond_0
 
     const/4 p2, 0x0
 
     :cond_0
-    check-cast p2, Lcom/vkontakte/android/VKActivity;
+    check-cast p2, Lcom/vtosters/lite/VKActivity;
 
     if-eqz p2, :cond_1
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vkontakte/android/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
 
     :cond_1
     return-void
@@ -4977,7 +4977,7 @@
     move-result v1
 
     .line 126
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v3
 
@@ -7193,7 +7193,7 @@
 
     const-wide/16 v1, 0x12c
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     return-void
 

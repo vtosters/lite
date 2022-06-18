@@ -53,7 +53,7 @@
     const-string v1, "media_event_run"
 
     .line 2
-    invoke-static {v1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v1
 
@@ -63,9 +63,9 @@
 
     const-string v3, "event_id"
 
-    invoke-virtual {v1, v3, v2}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     .line 3
     iget-object v1, p0, Lcom/vk/navigation/x$e;->a:Lcom/vk/navigation/x;
@@ -105,7 +105,7 @@
 
     move-result-wide v2
 
-    invoke-static {v1, v2, v3}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v1, v2, v3}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     goto :goto_0
 

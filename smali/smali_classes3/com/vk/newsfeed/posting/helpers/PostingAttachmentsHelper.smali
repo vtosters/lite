@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/attachments/EventAttachment;)V
+.method private final a(Lcom/vtosters/lite/attachments/EventAttachment;)V
     .locals 3
 
     .line 59
@@ -159,11 +159,11 @@
     if-eqz v0, :cond_1
 
     .line 55
-    new-instance v0, Lcom/vkontakte/android/attachments/MarketAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     check-cast p1, Lcom/vk/dto/common/Good;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/attachments/MarketAttachment;-><init>(Lcom/vk/dto/common/Good;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/attachments/MarketAttachment;-><init>(Lcom/vk/dto/common/Good;)V
 
     .line 56
     invoke-virtual {p0, v0}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vk/dto/common/Attachment;)V
@@ -222,9 +222,9 @@
     .line 43
     iget-object v0, p0, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->c:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$a;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$a;->a(Lcom/vk/dto/common/Attachment;)V
 
@@ -246,25 +246,25 @@
 
     .line 4
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/EventAttachment;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/EventAttachment;)V
 
     goto :goto_0
 
@@ -315,9 +315,9 @@
     .line 40
     iget-object v0, p0, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->c:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$a;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$a;->a(Lcom/vk/dto/common/Attachment;)V
 
@@ -334,7 +334,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
     .locals 4
 
     .line 44
@@ -406,7 +406,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -428,7 +428,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vkontakte/android/attachments/PhotoAttachment;)Z
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vtosters/lite/attachments/PhotoAttachment;)Z
 
     move-result v0
 
@@ -449,7 +449,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -527,7 +527,7 @@
     check-cast v4, Lcom/vk/dto/common/Attachment;
 
     .line 9
-    instance-of v4, v4, Lcom/vkontakte/android/attachments/LinkAttachment;
+    instance-of v4, v4, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     if-eqz v4, :cond_1
 
@@ -542,9 +542,9 @@
     if-eqz v1, :cond_3
 
     .line 11
-    check-cast v1, Lcom/vkontakte/android/attachments/LinkAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/LinkAttachment;
 
-    invoke-virtual {p0, v1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vkontakte/android/attachments/LinkAttachment;)V
+    invoke-virtual {p0, v1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vtosters/lite/attachments/LinkAttachment;)V
 
     goto :goto_0
 
@@ -589,7 +589,7 @@
     check-cast v4, Lcom/vk/dto/common/Attachment;
 
     .line 15
-    instance-of v4, v4, Lcom/vkontakte/android/attachments/LinkAttachment;
+    instance-of v4, v4, Lcom/vtosters/lite/attachments/LinkAttachment;
 
     xor-int/2addr v4, v0
 
@@ -892,7 +892,7 @@
     .locals 1
 
     .line 7
-    instance-of p1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of p1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     const/4 v0, 0x1
 
@@ -928,7 +928,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vkontakte/android/attachments/PendingDocumentAttachment;",
+            "Lcom/vtosters/lite/attachments/PendingDocumentAttachment;",
             ">;)V"
         }
     .end annotation
@@ -1156,9 +1156,9 @@
     if-nez v3, :cond_2
 
     .line 8
-    new-instance v3, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    new-instance v3, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-direct {v3, v1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;-><init>(Ljava/lang/String;)V
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1345,7 +1345,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-interface {v3, v2}, Lcom/vk/newsfeed/posting/a;->i(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    invoke-interface {v3, v2}, Lcom/vk/newsfeed/posting/a;->i(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     move-result-object v2
 

@@ -1998,7 +1998,6 @@
         <item name="tabGravity">center</item>
         <item name="tabIndicatorHeight">2.0dip</item>
         <item name="tabMaxWidth">124.0dip</item>
-        <item name="tabMaxWidth">124.0dip</item>
         <item name="tabMinWidth">124.0dip</item>
         <item name="tabMode">fixed</item>
         <item name="tabPaddingEnd">0.0dip</item>

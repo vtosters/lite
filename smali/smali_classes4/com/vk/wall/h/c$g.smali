@@ -3,12 +3,12 @@
 .source "ReplyBarPresenter.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/upload/h$b;
+.implements Lcom/vtosters/lite/upload/h$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/h/c;->a(Lcom/vkontakte/android/attachments/b;)V
+    value = Lcom/vk/wall/h/c;->a(Lcom/vtosters/lite/attachments/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -65,7 +65,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/wall/h/c$g;->b:Lb/h/g/k/a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     const p1, 0x7f120369
 
@@ -92,7 +92,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/wall/h/c$g;->b:Lb/h/g/k/a;
 
-    invoke-static {p1}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     if-eqz p2, :cond_0
 

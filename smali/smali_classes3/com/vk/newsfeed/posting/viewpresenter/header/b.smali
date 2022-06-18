@@ -71,7 +71,7 @@
     iput-boolean p2, v0, Lcom/vk/sharing/target/Target;->e:Z
 
     .line 3
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

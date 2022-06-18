@@ -94,21 +94,21 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/fragments/j2$g;
+    new-instance v0, Lcom/vtosters/lite/fragments/j2$g;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->h()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->h()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->l()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->l()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->m()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/j2$g;->k()Lcom/vkontakte/android/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->k()Lcom/vtosters/lite/fragments/j2$g;
 
     .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;

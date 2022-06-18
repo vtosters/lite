@@ -36,7 +36,7 @@
 .method public abstract J()Z
 .end method
 
-.method public abstract a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;)Lcom/vkontakte/android/attachments/GeoAttachment;
+.method public abstract a(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;)Lcom/vtosters/lite/attachments/GeoAttachment;
 .end method
 
 .method public abstract a(Lcom/vk/dto/common/Attachment;)V
@@ -48,10 +48,10 @@
 .method public abstract a(Lcom/vk/dto/common/VideoFile;)Z
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/PendingDocumentAttachment;)Z
+.method public abstract a(Lcom/vtosters/lite/attachments/PendingDocumentAttachment;)Z
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/PhotoAttachment;)Z
+.method public abstract a(Lcom/vtosters/lite/attachments/PhotoAttachment;)Z
 .end method
 
 .method public abstract b3()Z
@@ -81,7 +81,7 @@
 .method public abstract h3()Z
 .end method
 
-.method public abstract i(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+.method public abstract i(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 .end method
 
 .method public abstract j(Ljava/lang/String;)Z

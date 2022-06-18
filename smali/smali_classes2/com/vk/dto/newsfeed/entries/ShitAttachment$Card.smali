@@ -44,7 +44,7 @@
 
 .field private final D:I
 
-.field private final E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+.field private final E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
 .field private final F:Lcom/vk/statistic/Statistic$a;
 
@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;)V
     .locals 0
 
     .line 2
@@ -114,14 +114,14 @@
 
     iput p10, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->D:I
 
-    iput-object p11, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iput-object p11, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     iput-object p12, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->F:Lcom/vk/statistic/Statistic$a;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
     .locals 15
 
     move/from16 v0, p13
@@ -191,7 +191,7 @@
 
     move-object/from16 v13, p11
 
-    invoke-direct/range {v2 .. v14}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;)V
+    invoke-direct/range {v2 .. v14}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FILcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/statistic/Statistic$a;)V
 
     return-void
 .end method
@@ -216,11 +216,11 @@
     return v0
 .end method
 
-.method public final C1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+.method public final C1()Lcom/vtosters/lite/attachments/PhotoAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     return-object v0
 .end method
@@ -341,7 +341,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(I)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
@@ -484,9 +484,9 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v1, p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v1, p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -690,11 +690,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v2, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v2, :cond_8
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/attachments/PhotoAttachment;->hashCode()I
+    invoke-virtual {v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;->hashCode()I
 
     move-result v2
 
@@ -726,13 +726,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v0, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     if-eqz v0, :cond_0
 
@@ -854,7 +854,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vkontakte/android/attachments/PhotoAttachment;
+    iget-object v1, p0, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->E:Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

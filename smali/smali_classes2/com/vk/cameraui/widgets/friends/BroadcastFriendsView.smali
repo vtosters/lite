@@ -169,7 +169,7 @@
     if-eqz p2, :cond_0
 
     .line 10
-    sget-object v0, Lcom/vkontakte/android/a0;->BroadcastFriendsView:[I
+    sget-object v0, Lcom/vtosters/lite/a0;->BroadcastFriendsView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

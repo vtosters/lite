@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/UserPresenter;->c(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    value = Lcom/vk/profile/presenter/UserPresenter;->c(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -46,7 +46,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

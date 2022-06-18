@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/i$a;->a:Lcom/vk/newsfeed/presenters/i;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->e0:Z
+    iput-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->e0:Z
 
     .line 2
     :cond_0
@@ -88,7 +88,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -96,7 +96,7 @@
 
     move-result v1
 
-    const-string v2, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v2, "com.vtosters.lite.permission.ACCESS_DATA"
 
     const-string v3, "Intent(BroadcastEvents.A\u2026     .putExtra(\"id\", uid)"
 
@@ -137,7 +137,7 @@
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 9
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->c()Lcom/vk/auth/l;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
 
     move-result-object v0
 

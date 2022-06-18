@@ -77,7 +77,7 @@
             "Lorg/json/JSONObject;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -86,7 +86,7 @@
     iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$b;->a:Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;
 
     .line 2
-    new-instance v9, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;
+    new-instance v9, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;
 
     iget v3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$b;->b:I
 
@@ -108,12 +108,12 @@
 
     move-object v8, p1
 
-    invoke-direct/range {v1 .. v8}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     const-string p1, "fresh"
 
     .line 3
-    invoke-virtual {v9, p1}, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;->d(Ljava/lang/String;)Lcom/vkontakte/android/api/newsfeed/NewsfeedGet;
+    invoke-virtual {v9, p1}, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;->d(Ljava/lang/String;)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;
 
     const-string p1, "NewsfeedGet(\"0\", pageSiz\u2026NewsfeedGet.INTENT_FRESH)"
 

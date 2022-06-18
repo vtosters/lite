@@ -322,12 +322,12 @@
     if-eqz p0, :cond_1
 
     .line 59
-    new-instance v0, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;-><init>()V
 
     .line 60
-    invoke-virtual {v0, p0}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->c(I)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->c(I)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     if-eqz v2, :cond_0
 
@@ -338,10 +338,10 @@
 
     .line 61
     :goto_0
-    invoke-virtual {v0, v2}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 62
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;->d(Z)Lcom/vkontakte/android/fragments/money/MoneyTransferPagerFragment$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->d(Z)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 63
     invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -350,24 +350,24 @@
 
     .line 64
     :cond_1
-    new-instance p0, Lcom/vkontakte/android/fragments/money/o$e;
+    new-instance p0, Lcom/vtosters/lite/fragments/money/o$e;
 
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/money/o$e;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/money/o$e;-><init>()V
 
     .line 65
-    invoke-virtual {p0}, Lcom/vkontakte/android/fragments/money/o$e;->j()Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/o$e;->j()Lcom/vtosters/lite/fragments/money/o$e;
 
     .line 66
-    invoke-virtual {p0}, Lcom/vkontakte/android/fragments/money/o$e;->i()Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/o$e;->i()Lcom/vtosters/lite/fragments/money/o$e;
 
     .line 67
-    invoke-virtual {p0, v2}, Lcom/vkontakte/android/fragments/money/o$e;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {p0, v2}, Lcom/vtosters/lite/fragments/money/o$e;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/o$e;
 
     .line 68
-    invoke-virtual {p0, v1}, Lcom/vkontakte/android/fragments/money/o$e;->d(Z)Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/money/o$e;->d(Z)Lcom/vtosters/lite/fragments/money/o$e;
 
     .line 69
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/fragments/money/o$e;->c(Z)Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/fragments/money/o$e;->c(Z)Lcom/vtosters/lite/fragments/money/o$e;
 
     .line 70
     invoke-virtual {p0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -938,7 +938,7 @@
 
     move-object v6, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vkontakte/android/data/p;->a(Ljava/lang/String;Ljava/util/Map;Landroid/os/Bundle;Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v0 .. v6}, Lcom/vtosters/lite/data/p;->a(Ljava/lang/String;Ljava/util/Map;Landroid/os/Bundle;Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_8
 
@@ -1053,7 +1053,7 @@
 
     if-eqz v1, :cond_13
 
-    const-class v1, Lcom/vkontakte/android/fragments/w2/a;
+    const-class v1, Lcom/vtosters/lite/fragments/w2/a;
 
     goto :goto_7
 
@@ -1080,7 +1080,7 @@
     goto :goto_7
 
     :cond_12
-    const-class v1, Lcom/vkontakte/android/fragments/z1;
+    const-class v1, Lcom/vtosters/lite/fragments/z1;
 
     goto :goto_7
 
@@ -1122,14 +1122,14 @@
 
     if-eqz v1, :cond_13
 
-    const-class v1, Lcom/vkontakte/android/fragments/w1;
+    const-class v1, Lcom/vtosters/lite/fragments/w1;
 
     goto :goto_7
 
     .line 40
     :cond_13
     :goto_6
-    const-class v1, Lcom/vkontakte/android/fragments/z1;
+    const-class v1, Lcom/vtosters/lite/fragments/z1;
 
     .line 41
     :goto_7
@@ -1187,7 +1187,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/vkontakte/android/fragments/SettingsListFragment;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/fragments/SettingsListFragment;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_16
     :goto_8
@@ -1375,7 +1375,7 @@
     .locals 1
 
     .line 10
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -2111,7 +2111,7 @@
 
     if-eqz v7, :cond_10
 
-    new-instance v1, Lcom/vkontakte/android/fragments/n1$a;
+    new-instance v1, Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {v0, v5}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
@@ -2121,15 +2121,15 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vkontakte/android/fragments/n1$a;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lcom/vtosters/lite/fragments/n1$a;-><init>(II)V
 
     invoke-virtual {v0, v9}, Lcom/vk/common/links/UriWrapper;->c(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/n1$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/n1$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/n1$a;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/fragments/n1$a;->h()Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v1}, Lcom/vtosters/lite/fragments/n1$a;->h()Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2174,7 +2174,7 @@
 
     if-eqz v7, :cond_11
 
-    new-instance v1, Lcom/vkontakte/android/fragments/n1$a;
+    new-instance v1, Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {v0, v5}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
@@ -2184,15 +2184,15 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vkontakte/android/fragments/n1$a;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lcom/vtosters/lite/fragments/n1$a;-><init>(II)V
 
     invoke-virtual {v0, v9}, Lcom/vk/common/links/UriWrapper;->c(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/n1$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/n1$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/n1$a;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/fragments/n1$a;->j()Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v1}, Lcom/vtosters/lite/fragments/n1$a;->j()Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2234,7 +2234,7 @@
 
     if-eqz v7, :cond_12
 
-    new-instance v1, Lcom/vkontakte/android/fragments/n1$a;
+    new-instance v1, Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {v0, v5}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
@@ -2244,15 +2244,15 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vkontakte/android/fragments/n1$a;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lcom/vtosters/lite/fragments/n1$a;-><init>(II)V
 
     invoke-virtual {v0, v9}, Lcom/vk/common/links/UriWrapper;->c(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/n1$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/n1$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/n1$a;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/fragments/n1$a;->i()Lcom/vkontakte/android/fragments/n1$a;
+    invoke-virtual {v1}, Lcom/vtosters/lite/fragments/n1$a;->i()Lcom/vtosters/lite/fragments/n1$a;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2569,9 +2569,9 @@
     if-eqz v11, :cond_1c
 
     .line 50
-    new-instance v0, Lcom/vkontakte/android/fragments/h1$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/h1$f;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/h1$f;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/h1$f;-><init>()V
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2647,9 +2647,9 @@
 
     if-eqz v0, :cond_20
 
-    new-instance v0, Lcom/vkontakte/android/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;
 
-    invoke-direct {v0, v9}, Lcom/vkontakte/android/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;-><init>(I)V
+    invoke-direct {v0, v9}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;-><init>(I)V
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2658,11 +2658,11 @@
     .line 54
     :cond_20
     :goto_7
-    new-instance v0, Lcom/vkontakte/android/fragments/money/o$e;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/o$e;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/money/o$e;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/o$e;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/money/o$e;->j()Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/money/o$e;->j()Lcom/vtosters/lite/fragments/money/o$e;
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2706,7 +2706,7 @@
     :cond_21
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/SettingsListFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
@@ -2760,9 +2760,9 @@
 
     if-eqz v1, :cond_22
 
-    new-instance v1, Lcom/vkontakte/android/fragments/w1$b;
+    new-instance v1, Lcom/vtosters/lite/fragments/w1$b;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/w1$b;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/w1$b;-><init>()V
 
     const-string v2, "highlight"
 
@@ -2770,7 +2770,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/w1$b;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/w1$b;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/w1$b;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/w1$b;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2786,9 +2786,9 @@
 
     if-eqz v0, :cond_22
 
-    new-instance v0, Lcom/vkontakte/android/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;
 
-    invoke-direct {v0, v9}, Lcom/vkontakte/android/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;-><init>(I)V
+    invoke-direct {v0, v9}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$a;-><init>(I)V
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2799,7 +2799,7 @@
     :goto_9
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/SettingsListFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
@@ -2876,7 +2876,7 @@
 
     if-eqz v1, :cond_25
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -2918,15 +2918,15 @@
 
     if-eqz v1, :cond_27
 
-    new-instance v1, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    new-instance v1, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
-    invoke-direct {v1, v8, v9, v8}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v8, v9, v8}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v14}, Lcom/vk/common/links/UriWrapper;->c(Ljava/lang/String;)I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;->c(I)Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->c(I)Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -2940,9 +2940,9 @@
 
     if-nez v0, :cond_28
 
-    new-instance v0, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
-    invoke-direct {v0, v8, v9, v8}, Lcom/vkontakte/android/fragments/friends/FriendsFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v8, v9, v8}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -3056,14 +3056,14 @@
 
     .line 82
     :cond_2e
-    new-instance v2, Lcom/vkontakte/android/fragments/s2/f$e;
+    new-instance v2, Lcom/vtosters/lite/fragments/s2/f$e;
 
-    invoke-direct {v2}, Lcom/vkontakte/android/fragments/s2/f$e;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/fragments/s2/f$e;-><init>()V
 
     if-lez v1, :cond_2f
 
     .line 83
-    invoke-virtual {v2, v1}, Lcom/vkontakte/android/fragments/s2/f$e;->c(I)Lcom/vkontakte/android/fragments/s2/f$e;
+    invoke-virtual {v2, v1}, Lcom/vtosters/lite/fragments/s2/f$e;->c(I)Lcom/vtosters/lite/fragments/s2/f$e;
 
     :cond_2f
     const-string v1, "tab"
@@ -3081,7 +3081,7 @@
 
     if-eqz v1, :cond_30
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/fragments/s2/f$e;->i()Lcom/vkontakte/android/fragments/s2/f$e;
+    invoke-virtual {v2}, Lcom/vtosters/lite/fragments/s2/f$e;->i()Lcom/vtosters/lite/fragments/s2/f$e;
 
     :cond_30
     const-string v1, "tab"
@@ -3099,7 +3099,7 @@
 
     if-eqz v0, :cond_31
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/fragments/s2/f$e;->h()Lcom/vkontakte/android/fragments/s2/f$e;
+    invoke-virtual {v2}, Lcom/vtosters/lite/fragments/s2/f$e;->h()Lcom/vtosters/lite/fragments/s2/f$e;
 
     .line 86
     :cond_31
@@ -3249,9 +3249,9 @@
 
     if-eqz v0, :cond_36
 
-    new-instance v0, Lcom/vkontakte/android/fragments/y2/b0$f;
+    new-instance v0, Lcom/vtosters/lite/fragments/y2/b0$f;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/y2/b0$f;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/y2/b0$f;-><init>()V
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -3428,7 +3428,7 @@
 
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/lives/LivesTabsFragment;
+    const-class v1, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
@@ -3579,7 +3579,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -5037,7 +5037,7 @@
 
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/z1;
+    const-class v1, Lcom/vtosters/lite/fragments/z1;
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
@@ -5520,7 +5520,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/vkontakte/android/data/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/vtosters/lite/data/p;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_d
 
@@ -5627,15 +5627,15 @@
 
     if-eqz v11, :cond_7b
 
-    new-instance v1, Lcom/vkontakte/android/fragments/k2$c;
+    new-instance v1, Lcom/vtosters/lite/fragments/k2$c;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/k2$c;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/k2$c;-><init>()V
 
     invoke-virtual {v0, v6}, Lcom/vk/common/links/UriWrapper;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/k2$c;->c(Ljava/lang/String;)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/k2$c;->c(Ljava/lang/String;)Lcom/vtosters/lite/fragments/k2$c;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -5912,11 +5912,11 @@
     if-nez v1, :cond_83
 
     .line 199
-    new-instance v0, Lcom/vkontakte/android/fragments/money/o$e;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/o$e;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/money/o$e;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/o$e;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/fragments/money/o$e;->j()Lcom/vkontakte/android/fragments/money/o$e;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/money/o$e;->j()Lcom/vtosters/lite/fragments/money/o$e;
 
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -6546,9 +6546,9 @@
 
     .line 228
     :cond_9c
-    new-instance v1, Lcom/vkontakte/android/fragments/p2/e;
+    new-instance v1, Lcom/vtosters/lite/fragments/p2/e;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/p2/e;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/p2/e;-><init>()V
 
     invoke-virtual {v0, v6}, Lcom/vk/common/links/UriWrapper;->a(I)Ljava/lang/String;
 
@@ -6558,7 +6558,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/p2/e;->c(I)Lcom/vkontakte/android/fragments/p2/e;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/p2/e;->c(I)Lcom/vtosters/lite/fragments/p2/e;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -6696,13 +6696,13 @@
 
     if-eqz v3, :cond_a0
 
-    new-instance v1, Lcom/vkontakte/android/fragments/o2/d$j;
+    new-instance v1, Lcom/vtosters/lite/fragments/o2/d$j;
 
     invoke-virtual {v0, v6}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
     move-result v0
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/fragments/o2/d$j;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/o2/d$j;-><init>(I)V
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -6778,9 +6778,9 @@
 
     if-eqz v3, :cond_a3
 
-    new-instance v1, Lcom/vkontakte/android/fragments/k2$c;
+    new-instance v1, Lcom/vtosters/lite/fragments/k2$c;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/k2$c;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/k2$c;-><init>()V
 
     const-string v2, "p"
 
@@ -6804,7 +6804,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/fragments/k2$c;->c(Ljava/lang/String;)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/fragments/k2$c;->c(Ljava/lang/String;)Lcom/vtosters/lite/fragments/k2$c;
 
     const-string v2, "oid"
 
@@ -6812,7 +6812,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/k2$c;->d(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/k2$c;->d(I)Lcom/vtosters/lite/fragments/k2$c;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -6849,15 +6849,15 @@
 
     if-eqz v3, :cond_a4
 
-    new-instance v1, Lcom/vkontakte/android/fragments/k2$c;
+    new-instance v1, Lcom/vtosters/lite/fragments/k2$c;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/k2$c;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/k2$c;-><init>()V
 
     invoke-virtual {v0, v6}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/fragments/k2$c;->d(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/fragments/k2$c;->d(I)Lcom/vtosters/lite/fragments/k2$c;
 
     const/4 v3, 0x2
 
@@ -6865,7 +6865,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/k2$c;->e(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/k2$c;->e(I)Lcom/vtosters/lite/fragments/k2$c;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -6886,16 +6886,16 @@
     if-eqz v11, :cond_a5
 
     .line 236
-    new-instance v0, Lcom/vkontakte/android/fragments/y2/x$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/y2/x$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/y2/x$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/y2/x$a;-><init>()V
 
     .line 237
     invoke-virtual/range {p3 .. p3}, Lcom/vk/common/links/c$b;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/y2/x$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/y2/x$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/y2/x$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/y2/x$a;
 
     .line 238
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -6913,16 +6913,16 @@
     if-eqz v11, :cond_a6
 
     .line 240
-    new-instance v0, Lcom/vkontakte/android/fragments/y2/x$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/y2/x$a;
 
-    invoke-direct {v0}, Lcom/vkontakte/android/fragments/y2/x$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/y2/x$a;-><init>()V
 
     .line 241
     invoke-virtual/range {p3 .. p3}, Lcom/vk/common/links/c$b;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/fragments/y2/x$a;->a(Ljava/lang/String;)Lcom/vkontakte/android/fragments/y2/x$a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/y2/x$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/y2/x$a;
 
     .line 242
     invoke-virtual {v0, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -6989,7 +6989,7 @@
     move-result-object v2
 
     .line 247
-    new-instance v3, Lcom/vkontakte/android/fragments/y2/z$a;
+    new-instance v3, Lcom/vtosters/lite/fragments/y2/z$a;
 
     invoke-virtual {v4, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -6999,7 +6999,7 @@
 
     invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v3, v0, v1, v2}, Lcom/vkontakte/android/fragments/y2/z$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v0, v1, v2}, Lcom/vtosters/lite/fragments/y2/z$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 248
     invoke-virtual {v3, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
@@ -7306,15 +7306,15 @@
 
     if-eqz v6, :cond_ad
 
-    new-instance v1, Lcom/vkontakte/android/fragments/k2$c;
+    new-instance v1, Lcom/vtosters/lite/fragments/k2$c;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/fragments/k2$c;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/k2$c;-><init>()V
 
     invoke-virtual {v0, v7}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/fragments/k2$c;->d(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/fragments/k2$c;->d(I)Lcom/vtosters/lite/fragments/k2$c;
 
     const/4 v2, 0x2
 
@@ -7322,7 +7322,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/k2$c;->c(I)Lcom/vkontakte/android/fragments/k2$c;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/k2$c;->c(I)Lcom/vtosters/lite/fragments/k2$c;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -8543,9 +8543,9 @@
 
     if-eqz v5, :cond_d0
 
-    new-instance v1, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    new-instance v1, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
-    sget-object v2, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;->link:Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;
+    sget-object v2, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;->link:Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;
 
     invoke-virtual {v0, v9}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
@@ -8557,13 +8557,13 @@
 
     move-result v6
 
-    invoke-direct {v1, v2, v5, v6}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;-><init>(Lcom/vkontakte/android/fragments/market/GoodFragment$Builder$Source;II)V
+    invoke-direct {v1, v2, v5, v6}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment$Builder$Source;II)V
 
     invoke-virtual {v0, v3}, Lcom/vk/common/links/UriWrapper;->c(Ljava/lang/String;)I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;->c(I)Lcom/vkontakte/android/fragments/market/GoodFragment$Builder;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;->c(I)Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -8618,13 +8618,13 @@
 
     .line 321
     :cond_d1
-    new-instance v1, Lcom/vkontakte/android/fragments/market/u$f;
+    new-instance v1, Lcom/vtosters/lite/fragments/market/u$f;
 
     invoke-virtual {v0, v9}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vkontakte/android/fragments/market/u$f;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vtosters/lite/fragments/market/u$f;-><init>(I)V
 
     invoke-virtual {v0}, Lcom/vk/common/links/UriWrapper;->b()Ljava/lang/String;
 
@@ -8646,7 +8646,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vkontakte/android/fragments/market/u$f;->c(I)Lcom/vkontakte/android/fragments/market/u$f;
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/market/u$f;->c(I)Lcom/vtosters/lite/fragments/market/u$f;
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -8664,13 +8664,13 @@
     .line 322
     :cond_d3
     :goto_28
-    new-instance v1, Lcom/vkontakte/android/fragments/market/u$f;
+    new-instance v1, Lcom/vtosters/lite/fragments/market/u$f;
 
     invoke-virtual {v0, v9}, Lcom/vk/common/links/UriWrapper;->b(I)I
 
     move-result v0
 
-    invoke-direct {v1, v0}, Lcom/vkontakte/android/fragments/market/u$f;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/market/u$f;-><init>(I)V
 
     invoke-virtual {v1, v4}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
 
@@ -8732,7 +8732,7 @@
 
     new-instance v0, Lcom/vk/navigation/o;
 
-    const-class v1, Lcom/vkontakte/android/fragments/gifts/d;
+    const-class v1, Lcom/vtosters/lite/fragments/gifts/d;
 
     new-instance v2, Landroid/os/Bundle;
 

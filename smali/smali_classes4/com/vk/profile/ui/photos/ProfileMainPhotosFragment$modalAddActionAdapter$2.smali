@@ -64,24 +64,24 @@
     invoke-static {v0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a(Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;Lcom/vk/dto/photo/PhotoAlbum;)V
 
     .line 3
-    invoke-static {}, Lcom/vkontakte/android/ImagePickerActivity;->b()Lcom/vkontakte/android/ImagePickerActivity$e;
+    invoke-static {}, Lcom/vtosters/lite/ImagePickerActivity;->b()Lcom/vtosters/lite/ImagePickerActivity$e;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ImagePickerActivity$e;->a(Z)Lcom/vkontakte/android/ImagePickerActivity$e;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ImagePickerActivity$e;->a(Z)Lcom/vtosters/lite/ImagePickerActivity$e;
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ImagePickerActivity$e;->b(I)Lcom/vkontakte/android/ImagePickerActivity$e;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ImagePickerActivity$e;->b(I)Lcom/vtosters/lite/ImagePickerActivity$e;
 
     .line 6
     iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$modalAddActionAdapter$2;->this$0:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;
 
     const/16 v1, 0x5fe
 
-    invoke-virtual {p1, v0, v1}, Lcom/vkontakte/android/ImagePickerActivity$e;->a(Landroidx/fragment/app/Fragment;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/ImagePickerActivity$e;->a(Landroidx/fragment/app/Fragment;I)V
 
     :cond_0
     return-void

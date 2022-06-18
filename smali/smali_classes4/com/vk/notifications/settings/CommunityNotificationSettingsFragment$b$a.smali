@@ -1,5 +1,5 @@
 .class public final Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CommunityNotificationSettingsFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;",
         ">;"
     }
@@ -62,7 +62,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/settings/SettingsSwitchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
 
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     return-void
 .end method

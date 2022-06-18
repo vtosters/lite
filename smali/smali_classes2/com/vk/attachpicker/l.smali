@@ -144,11 +144,11 @@
     check-cast v3, Lcom/vk/dto/common/Attachment;
 
     .line 16
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/AlbumAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/AlbumAttachment;
 
     if-nez v4, :cond_0
 
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/MarketAlbumAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/MarketAlbumAttachment;
 
     if-eqz v4, :cond_1
 
@@ -156,21 +156,21 @@
 
     .line 17
     :cond_1
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v4, :cond_2
 
     move-object v4, v3
 
-    check-cast v4, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v4, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v4, v4, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v4, v4, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     goto :goto_1
 
     .line 18
     :cond_2
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     if-eqz v4, :cond_4
 
@@ -179,9 +179,9 @@
 
     move-object v5, v3
 
-    check-cast v5, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    check-cast v5, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
 
     move-result-object v6
 
@@ -194,7 +194,7 @@
     .line 20
     iget-object v4, p0, Lcom/vk/attachpicker/l;->a:Landroid/util/ArrayMap;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
 
     move-result-object v5
 
@@ -210,14 +210,14 @@
     :cond_3
     sget-object v4, Lcom/vk/attachpicker/l;->e:Lcom/vk/attachpicker/l$a;
 
-    invoke-virtual {v4, v5}, Lcom/vk/attachpicker/l$a;->a(Lcom/vkontakte/android/attachments/PendingPhotoAttachment;)Lcom/vk/dto/photo/Photo;
+    invoke-virtual {v4, v5}, Lcom/vk/attachpicker/l$a;->a(Lcom/vtosters/lite/attachments/PendingPhotoAttachment;)Lcom/vk/dto/photo/Photo;
 
     move-result-object v4
 
     .line 22
     iget-object v6, p0, Lcom/vk/attachpicker/l;->a:Landroid/util/ArrayMap;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
 
     move-result-object v5
 
@@ -387,11 +387,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/attachments/DocumentAttachment;)V
+.method public a(Lcom/vtosters/lite/attachments/DocumentAttachment;)V
     .locals 7
 
     .line 7
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->B1()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->B1()Z
 
     move-result v0
 
@@ -403,7 +403,7 @@
     :cond_0
     sget-object v1, Lcom/vk/documents/list/DocumentsUtils;->a:Lcom/vk/documents/list/DocumentsUtils;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/DocumentAttachment;->D1()Lcom/vk/api/base/Document;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/DocumentAttachment;->D1()Lcom/vk/api/base/Document;
 
     move-result-object v2
 
@@ -424,7 +424,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/attachments/PendingPhotoAttachment;)V
+.method public a(Lcom/vtosters/lite/attachments/PendingPhotoAttachment;)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -436,13 +436,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/attachments/PendingVideoAttachment;)V
+.method public a(Lcom/vtosters/lite/attachments/PendingVideoAttachment;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 6
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 
@@ -454,7 +454,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+.method public a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -466,13 +466,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/attachments/VideoAttachment;)V
+.method public a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 

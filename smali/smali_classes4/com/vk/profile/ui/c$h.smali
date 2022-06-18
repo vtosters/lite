@@ -39,13 +39,13 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vkontakte/android/fragments/s1$b;
+    new-instance p1, Lcom/vtosters/lite/fragments/s1$b;
 
     iget-object v0, p0, Lcom/vk/profile/ui/c$h;->a:Lcom/vk/profile/ui/c;
 
     iget v0, v0, Lcom/vk/profile/ui/c;->q0:I
 
-    invoke-direct {p1, v0}, Lcom/vkontakte/android/fragments/s1$b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vtosters/lite/fragments/s1$b;-><init>(I)V
 
     iget-object v0, p0, Lcom/vk/profile/ui/c$h;->a:Lcom/vk/profile/ui/c;
 

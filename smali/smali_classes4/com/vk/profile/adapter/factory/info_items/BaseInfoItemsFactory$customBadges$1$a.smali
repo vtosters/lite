@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,22 +18,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vkontakte/android/api/ExtendedUserProfile$d;
+.field final synthetic a:Lcom/vtosters/lite/api/ExtendedUserProfile$d;
 
 .field final synthetic b:Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;
 
-.field final synthetic c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/api/ExtendedUserProfile$d;Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;Ljava/util/ArrayList;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vtosters/lite/api/ExtendedUserProfile$d;Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;Ljava/util/ArrayList;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->a:Lcom/vkontakte/android/api/ExtendedUserProfile$d;
+    iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile$d;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->b:Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;
 
-    iput-object p4, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p4, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,20 +46,20 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->a:Lcom/vkontakte/android/api/ExtendedUserProfile$d;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile$d;
 
-    iget-object v1, v0, Lcom/vkontakte/android/api/ExtendedUserProfile$d;->b:Lcom/vk/dto/common/Action;
+    iget-object v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->b:Lcom/vk/dto/common/Action;
 
     if-nez v1, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->c:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->c:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, v1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile$d;->d:Ljava/lang/String;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->d:Ljava/lang/String;
 
     const-string v2, "it.url"
 
@@ -74,9 +74,9 @@
 
     iget-object v4, v0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;->$context:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->a:Lcom/vkontakte/android/api/ExtendedUserProfile$d;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile$d;
 
-    iget-object v5, v0, Lcom/vkontakte/android/api/ExtendedUserProfile$d;->d:Ljava/lang/String;
+    iget-object v5, v0, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->d:Ljava/lang/String;
 
     invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

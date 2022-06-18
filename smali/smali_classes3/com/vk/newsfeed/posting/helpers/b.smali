@@ -74,7 +74,7 @@
     .line 26
     iget-object v1, v0, Lcom/vk/newsfeed/posting/helpers/b;->g:Lcom/vk/newsfeed/posting/j;
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/posting/j;->c0()Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-interface {v1}, Lcom/vk/newsfeed/posting/j;->c0()Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v8
 
@@ -264,7 +264,7 @@
     move-object/from16 v13, v25
 
     .line 42
-    invoke-direct/range {v1 .. v23}, Lcom/vk/newsfeed/posting/dto/c;-><init>(JILjava/util/Date;Ljava/lang/String;Ljava/util/List;Lcom/vkontakte/android/attachments/GeoAttachment;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/sharing/target/Target;Ljava/util/Date;ZZZZZZZLjava/lang/Integer;)V
+    invoke-direct/range {v1 .. v23}, Lcom/vk/newsfeed/posting/dto/c;-><init>(JILjava/util/Date;Ljava/lang/String;Ljava/util/List;Lcom/vtosters/lite/attachments/GeoAttachment;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/sharing/target/Target;Ljava/util/Date;ZZZZZZZLjava/lang/Integer;)V
 
     return-object v24
 .end method
@@ -425,7 +425,7 @@
     invoke-interface {v0, v1}, Lcom/vk/newsfeed/posting/j;->c(Ljava/lang/String;)V
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/c;->d()Lcom/vkontakte/android/attachments/GeoAttachment;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/c;->d()Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v0
 

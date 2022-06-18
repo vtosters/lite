@@ -49,7 +49,7 @@
     new-instance v0, Lcom/vk/dto/newsfeed/TagConfirmation;
 
     .line 3
-    const-class v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    const-class v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -61,7 +61,7 @@
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     .line 4
     const-class v2, Lcom/vk/dto/user/UserProfile;
@@ -82,7 +82,7 @@
     move-result p1
 
     .line 6
-    invoke-direct {v0, v1, v2, p1}, Lcom/vk/dto/newsfeed/TagConfirmation;-><init>(Lcom/vkontakte/android/attachments/PhotoAttachment;Lcom/vk/dto/user/UserProfile;I)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vk/dto/newsfeed/TagConfirmation;-><init>(Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vk/dto/user/UserProfile;I)V
 
     return-object v0
 

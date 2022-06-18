@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;Landroid/view/View;)V
+    value = Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field final synthetic $profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field final synthetic this$0:Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method constructor <init>(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->this$0:Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->$profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     const/4 p1, 0x1
 
@@ -87,9 +87,9 @@
     .line 2
     new-instance p1, Lcom/vk/profile/e/b;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->$profile:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 

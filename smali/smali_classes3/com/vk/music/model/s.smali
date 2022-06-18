@@ -140,7 +140,7 @@
     if-ltz v0, :cond_2
 
     .line 51
-    invoke-static {p2, v0, p4, p3}, Lcom/vkontakte/android/audio/AudioFacade;->a(Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;Z)V
+    invoke-static {p2, v0, p4, p3}, Lcom/vtosters/lite/audio/AudioFacade;->a(Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;Z)V
 
     goto :goto_1
 
@@ -148,7 +148,7 @@
     if-eqz p1, :cond_3
 
     .line 52
-    invoke-static {p1, p4, p3}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;Z)V
+    invoke-static {p1, p4, p3}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;Z)V
 
     goto :goto_1
 
@@ -165,7 +165,7 @@
     const/4 p1, 0x0
 
     .line 54
-    invoke-static {p2, p1, p4, p3}, Lcom/vkontakte/android/audio/AudioFacade;->a(Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;Z)V
+    invoke-static {p2, p1, p4, p3}, Lcom/vtosters/lite/audio/AudioFacade;->a(Ljava/util/List;ILcom/vk/music/common/MusicPlaybackLaunchContext;Z)V
 
     :cond_4
     :goto_1
@@ -250,7 +250,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -265,7 +265,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->b()I
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->b()I
 
     move-result v0
 
@@ -285,7 +285,7 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->B()V
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->B()V
 
     return-void
 .end method
@@ -312,7 +312,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->z()Z
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->z()Z
 
     move-result v0
 
@@ -323,7 +323,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->A()Z
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->A()Z
 
     move-result v0
 
@@ -402,7 +402,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->q()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->q()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -413,7 +413,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->y()Z
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->y()Z
 
     move-result v0
 
@@ -424,7 +424,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->v()F
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->v()F
 
     move-result v0
 
@@ -435,7 +435,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->w()Lcom/vk/dto/music/MusicTrack;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->w()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -446,7 +446,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -459,7 +459,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->r()Lcom/vk/dto/music/MusicTrack;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->r()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -470,7 +470,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->o()J
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->o()J
 
     move-result-wide v0
 
@@ -483,7 +483,7 @@
     .line 16
     iget-object v0, p0, Lcom/vk/music/model/s;->i:Lcom/vk/music/player/c;
 
-    invoke-static {v0}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
+    invoke-static {v0}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
 
     .line 17
     iget-object v0, p0, Lcom/vk/music/model/s;->j:Ljava/util/Set;
@@ -506,7 +506,7 @@
     check-cast v1, Lcom/vk/music/player/c;
 
     .line 18
-    invoke-static {v1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
+    invoke-static {v1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
 
     goto :goto_0
 
@@ -556,7 +556,7 @@
     .locals 0
 
     .line 77
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(I)V
 
     return-void
 .end method
@@ -578,7 +578,7 @@
     .line 14
     iget-object p1, p0, Lcom/vk/music/model/s;->i:Lcom/vk/music/player/c;
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/music/model/s;->f:Lio/reactivex/disposables/b;
@@ -589,7 +589,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;Z)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;Z)V
 
     :cond_0
     return-void
@@ -801,7 +801,7 @@
     invoke-static {v0}, Lcom/vk/music/logger/MusicLogger;->d([Ljava/lang/Object;)V
 
     .line 56
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->u()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -1009,7 +1009,7 @@
     if-eqz p1, :cond_0
 
     .line 38
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->r()Lcom/vk/dto/music/MusicTrack;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->r()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -1020,7 +1020,7 @@
     if-eqz v0, :cond_0
 
     .line 39
-    invoke-static {p4}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-static {p4}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 40
     invoke-static {}, Lcom/vk/music/c;->k()V
@@ -1142,7 +1142,7 @@
     .locals 0
 
     .line 24
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     return-void
 .end method
@@ -1205,7 +1205,7 @@
     .end param
 
     .line 78
-    invoke-static {p1, p2}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/PauseReason;Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1227,7 +1227,7 @@
     .locals 0
 
     .line 80
-    invoke-static {p1, p2}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/PlayerTrack;Lcom/vk/music/player/PlayerTrack;)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/PlayerTrack;Lcom/vk/music/player/PlayerTrack;)V
 
     return-void
 .end method
@@ -1236,7 +1236,7 @@
     .locals 1
 
     .line 11
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/music/model/s;->j:Ljava/util/Set;
@@ -1255,7 +1255,7 @@
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 10
-    invoke-static {p1, p2}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;Z)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;Z)V
 
     return-void
 .end method
@@ -1288,7 +1288,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/music/model/s;->i:Lcom/vk/music/player/c;
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/music/model/s;->f:Lio/reactivex/disposables/b;
@@ -1406,7 +1406,7 @@
     .line 76
     sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Landroid/content/Context;Ljava/util/Collection;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Landroid/content/Context;Ljava/util/Collection;)V
 
     return-void
 .end method
@@ -1415,7 +1415,7 @@
     .locals 0
 
     .line 23
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->d(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1426,7 +1426,7 @@
     .locals 0
 
     .line 12
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->b(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->b(I)V
 
     return-void
 .end method
@@ -1519,7 +1519,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/music/player/c;Z)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/music/player/c;Z)V
 
     :cond_0
     return-void
@@ -1543,7 +1543,7 @@
 
     invoke-direct {v1, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Landroid/content/Context;Ljava/util/ArrayList;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Landroid/content/Context;Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -1556,7 +1556,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->e(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->e(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1587,7 +1587,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p1}, Lcom/vkontakte/android/audio/AudioFacade;->a(Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/audio/AudioFacade;->a(Lcom/vk/dto/music/MusicTrack;)Z
 
     move-result p1
 
@@ -1607,7 +1607,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->n()I
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->n()I
 
     move-result v0
 
@@ -1618,7 +1618,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->t()Lcom/vk/music/player/LoopMode;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->t()Lcom/vk/music/player/LoopMode;
 
     move-result-object v0
 
@@ -1707,7 +1707,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->s()Lcom/vk/music/player/e;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->s()Lcom/vk/music/player/e;
 
     move-result-object v0
 
@@ -1729,7 +1729,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->m()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->m()Ljava/util/List;
 
     move-result-object v0
 
@@ -1749,7 +1749,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/audio/AudioFacade;->p()Lcom/vk/music/player/PlayerTrack;
+    invoke-static {}, Lcom/vtosters/lite/audio/AudioFacade;->p()Lcom/vk/music/player/PlayerTrack;
 
     move-result-object v0
 

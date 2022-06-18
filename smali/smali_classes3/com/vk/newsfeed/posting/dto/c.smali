@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private final f:Lcom/vkontakte/android/attachments/GeoAttachment;
+.field private final f:Lcom/vtosters/lite/attachments/GeoAttachment;
 
 .field private final g:Ljava/lang/String;
 
@@ -56,7 +56,7 @@
 
 
 # direct methods
-.method public constructor <init>(JILjava/util/Date;Ljava/lang/String;Ljava/util/List;Lcom/vkontakte/android/attachments/GeoAttachment;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/sharing/target/Target;Ljava/util/Date;ZZZZZZZLjava/lang/Integer;)V
+.method public constructor <init>(JILjava/util/Date;Ljava/lang/String;Ljava/util/List;Lcom/vtosters/lite/attachments/GeoAttachment;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/sharing/target/Target;Ljava/util/Date;ZZZZZZZLjava/lang/Integer;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -67,7 +67,7 @@
             "+",
             "Lcom/vk/dto/common/Attachment;",
             ">;",
-            "Lcom/vkontakte/android/attachments/GeoAttachment;",
+            "Lcom/vtosters/lite/attachments/GeoAttachment;",
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
@@ -108,7 +108,7 @@
 
     move-object v1, p7
 
-    iput-object v1, v0, Lcom/vk/newsfeed/posting/dto/c;->f:Lcom/vkontakte/android/attachments/GeoAttachment;
+    iput-object v1, v0, Lcom/vk/newsfeed/posting/dto/c;->f:Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-object v1, p8
 
@@ -210,11 +210,11 @@
     return-object v0
 .end method
 
-.method public final d()Lcom/vkontakte/android/attachments/GeoAttachment;
+.method public final d()Lcom/vtosters/lite/attachments/GeoAttachment;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/c;->f:Lcom/vkontakte/android/attachments/GeoAttachment;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/dto/c;->f:Lcom/vtosters/lite/attachments/GeoAttachment;
 
     return-object v0
 .end method

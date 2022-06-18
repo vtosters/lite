@@ -1,12 +1,12 @@
 .class public final Lcom/vk/search/holder/SearchHolder;
-.super Lcom/vkontakte/android/ui/b0/l;
+.super Lcom/vtosters/lite/ui/b0/l;
 .source "SearchHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/l<",
+        "Lcom/vtosters/lite/ui/b0/l<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -67,7 +67,7 @@
     move-object v2, p2
 
     .line 3
-    invoke-direct/range {v1 .. v6}, Lcom/vkontakte/android/ui/b0/l;-><init>(Landroid/view/ViewGroup;IZZZ)V
+    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/ui/b0/l;-><init>(Landroid/view/ViewGroup;IZZZ)V
 
     iput-object p1, p0, Lcom/vk/search/holder/SearchHolder;->H:Lcom/vk/search/b/a;
 
@@ -97,7 +97,7 @@
 
     invoke-direct {p1, p0, p3, p2}, Lcom/vk/search/holder/SearchHolder$a;-><init>(Lcom/vk/search/holder/SearchHolder;Lkotlin/jvm/b/b;Landroid/view/ViewGroup;)V
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vkontakte/android/ui/b0/l;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/user/UserProfile;
 
@@ -397,7 +397,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -406,19 +406,19 @@
     const-string v0, "show_user_rec"
 
     .line 4
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->a()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->f()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->f()Lcom/vtosters/lite/data/n$l;
 
     const-string v2, "user_ids"
 
-    invoke-virtual {v0, v2, p1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     .line 5
     new-instance v0, Ljava/lang/StringBuilder;
@@ -435,7 +435,7 @@
 
     const-wide/32 v0, 0x5265c00
 
-    invoke-static {p1, v0, v1}, Lcom/vkontakte/android/data/n;->a(Ljava/lang/String;J)V
+    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/data/n;->a(Ljava/lang/String;J)V
 
     :cond_1
     return-void
@@ -454,7 +454,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -463,7 +463,7 @@
     .locals 6
 
     .line 6
-    invoke-super {p0, p1}, Lcom/vkontakte/android/ui/b0/l;->a(Lcom/vk/dto/user/UserProfile;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/b0/l;->a(Lcom/vk/dto/user/UserProfile;)V
 
     .line 7
     iget-object v0, p1, Lcom/vk/dto/user/UserProfile;->L:Landroid/os/Bundle;
@@ -540,7 +540,7 @@
     const v4, 0x7f1210c0
 
     :goto_0
-    invoke-virtual {p0, v4}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -628,7 +628,7 @@
     if-eqz v0, :cond_b
 
     .line 14
-    iget-object v2, p0, Lcom/vkontakte/android/ui/b0/l;->g:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/l;->g:Landroid/widget/TextView;
 
     if-eqz v2, :cond_9
 
@@ -636,7 +636,7 @@
 
     .line 15
     :cond_9
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/l;->g:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/l;->g:Landroid/widget/TextView;
 
     if-eqz v0, :cond_a
 
@@ -656,7 +656,7 @@
 
     .line 16
     :cond_b
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/l;->g:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/l;->g:Landroid/widget/TextView;
 
     if-eqz v0, :cond_c
 
@@ -721,7 +721,7 @@
 
     const v1, 0x7f120036
 
-    invoke-virtual {p0, v1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -747,7 +747,7 @@
 
     const v1, 0x7f12004e
 
-    invoke-virtual {p0, v1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -788,7 +788,7 @@
 
     const v1, 0x7f120076
 
-    invoke-virtual {p0, v1}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -861,7 +861,7 @@
 
     const v2, 0x7f120053
 
-    invoke-virtual {p0, v2}, Lcom/vkontakte/android/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -870,7 +870,7 @@
     .line 35
     :cond_1a
     :goto_8
-    iget-object v1, p0, Lcom/vkontakte/android/ui/b0/l;->d:Lcom/vk/imageloader/view/VKImageView;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/l;->d:Lcom/vk/imageloader/view/VKImageView;
 
     const-string v2, "mImage"
 

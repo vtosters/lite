@@ -39,7 +39,7 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/data/n;->m()V
+    invoke-static {}, Lcom/vtosters/lite/data/n;->m()V
 
     .line 2
     invoke-static {p1, p2}, Lcom/vk/api/execute/f;->a(IZ)Lcom/vk/api/execute/f;

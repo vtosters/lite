@@ -200,7 +200,7 @@
     const p3, 0x7f080624
 
     .line 3
-    invoke-static {p2, p3}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, p3}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     const p3, 0x7f120564
 

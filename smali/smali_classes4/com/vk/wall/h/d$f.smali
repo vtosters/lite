@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/wall/h/d$f;->b:Lb/h/g/k/a;
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/wall/h/d$f;->a:Lcom/vk/wall/h/d;

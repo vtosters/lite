@@ -4,14 +4,14 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vkontakte/android/attachments/PendingPhotoAttachment;)V
+.method public abstract a(Lcom/vtosters/lite/attachments/PendingPhotoAttachment;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/PendingVideoAttachment;)V
+.method public abstract a(Lcom/vtosters/lite/attachments/PendingVideoAttachment;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/PhotoAttachment;)V
+.method public abstract a(Lcom/vtosters/lite/attachments/PhotoAttachment;)V
 .end method
 
-.method public abstract a(Lcom/vkontakte/android/attachments/VideoAttachment;)V
+.method public abstract a(Lcom/vtosters/lite/attachments/VideoAttachment;)V
 .end method

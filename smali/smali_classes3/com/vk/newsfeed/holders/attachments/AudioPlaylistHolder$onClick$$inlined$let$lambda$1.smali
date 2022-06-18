@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic $it:Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+.field final synthetic $it:Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
 .field final synthetic $item$inlined:Lcom/vk/dto/common/Attachment;
 
@@ -37,10 +37,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;Lcom/vk/dto/common/Attachment;Landroid/view/View;)V
+.method constructor <init>(Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;Lcom/vk/dto/common/Attachment;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->$it:Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->$it:Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
     iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->this$0:Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;
 
@@ -78,9 +78,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->$it:Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->$it:Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;->x1()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
@@ -90,9 +90,9 @@
 
     iget-object v2, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->this$0:Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;
 
-    iget-object v3, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->$it:Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;
+    iget-object v3, p0, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder$onClick$$inlined$let$lambda$1;->$it:Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;
 
-    invoke-static {v2, v3}, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;->b(Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;Lcom/vkontakte/android/attachments/AudioPlaylistAttachment;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-static {v2, v3}, Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;->b(Lcom/vk/newsfeed/holders/attachments/AudioPlaylistHolder;Lcom/vtosters/lite/attachments/AudioPlaylistAttachment;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v2
 

@@ -25,12 +25,12 @@
 
 
 # virtual methods
-.method protected b(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lc/a/m;
+.method protected b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lc/a/m;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ")",
             "Lc/a/m<",
             "Lcom/vk/profile/adapter/counters/e$c;",
@@ -39,9 +39,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vkontakte/android/api/podcasts/c;
+    new-instance v0, Lcom/vtosters/lite/api/podcasts/c;
 
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -51,7 +51,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p1, v2, v3, v1}, Lcom/vkontakte/android/api/podcasts/c;-><init>(ILjava/lang/String;II)V
+    invoke-direct {v0, p1, v2, v3, v1}, Lcom/vtosters/lite/api/podcasts/c;-><init>(ILjava/lang/String;II)V
 
     const/4 p1, 0x0
 

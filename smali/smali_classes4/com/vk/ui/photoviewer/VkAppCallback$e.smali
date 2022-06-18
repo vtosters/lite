@@ -3,7 +3,7 @@
 .source "VkAppCallback.kt"
 
 # interfaces
-.implements Lcom/vkontakte/android/data/Friends$f;
+.implements Lcom/vtosters/lite/data/Friends$f;
 
 
 # annotations
@@ -198,13 +198,13 @@
     invoke-interface {v3, v4}, Lcom/vk/dto/common/k;->a(Lcom/vk/dto/newsfeed/Owner;)V
 
     .line 15
-    instance-of v4, v3, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v4, v3, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v4, :cond_4
 
-    check-cast v3, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    check-cast v3, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    iget-object v3, v3, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v3, v3, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-object v4, v3, Lcom/vk/dto/photo/Photo;->T:Lcom/vk/dto/user/UserProfile;
 

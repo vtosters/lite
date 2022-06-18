@@ -68,7 +68,7 @@
     move-result-wide v1
 
     .line 5
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     return-void
 .end method

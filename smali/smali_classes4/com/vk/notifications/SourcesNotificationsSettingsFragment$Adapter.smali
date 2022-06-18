@@ -140,7 +140,7 @@
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vkontakte/android/ui/b0/l;
+    check-cast p1, Lcom/vtosters/lite/ui/b0/l;
 
     check-cast p2, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$d;
 
@@ -148,7 +148,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -160,7 +160,7 @@
     if-nez p2, :cond_0
 
     .line 1
-    invoke-static {p1}, Lcom/vkontakte/android/ui/b0/l;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/l;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/b0/l;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/l;
 
     move-result-object p1
 
@@ -169,14 +169,14 @@
 
     invoke-direct {p2, p0}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$a;-><init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;)V
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vkontakte/android/ui/b0/l;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
 
     .line 3
     new-instance p2, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$b;
 
     invoke-direct {p2, p0}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$b;-><init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;)V
 
-    invoke-virtual {p1, p2}, Lcom/vkontakte/android/ui/b0/l;->a(Lcom/vk/common/g/g;)Lcom/vkontakte/android/ui/b0/l;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/l;->a(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
 
     const-string p2, "UserHolder.actionable<Us\u2026                       })"
 

@@ -341,7 +341,7 @@
     const/16 v0, 0x8
 
     :goto_0
-    invoke-static {p1, v0}, Lcom/vkontakte/android/f0;->b(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     .line 7
     iget-boolean p1, p0, Lcom/vk/voip/VoipMaskButtonController;->k:Z
@@ -502,7 +502,7 @@
     const/16 v1, 0x8
 
     :goto_0
-    invoke-static {v0, v1}, Lcom/vkontakte/android/f0;->b(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -983,7 +983,7 @@
     if-ne v1, v2, :cond_10
 
     .line 27
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

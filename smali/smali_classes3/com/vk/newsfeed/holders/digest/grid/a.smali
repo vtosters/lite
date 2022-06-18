@@ -193,7 +193,7 @@
 
     move-result-object p1
 
-    instance-of p1, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of p1, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz p1, :cond_1
 

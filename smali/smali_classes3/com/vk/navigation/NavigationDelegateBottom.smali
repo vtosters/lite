@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/core/view/FitSystemWindowsFrameLayout$e;
-.implements Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView$b;
+.implements Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView$b;
 .implements Lcom/vk/cameraui/CameraUI$b;
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
 .implements Lcom/vk/core/fragments/g;
@@ -30,7 +30,7 @@
         "Lcom/vk/navigation/y<",
         "TT;>;",
         "Lcom/vk/core/view/FitSystemWindowsFrameLayout$e;",
-        "Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView$b;",
+        "Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView$b;",
         "Lcom/vk/cameraui/CameraUI$b;",
         "Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;",
         "Lcom/vk/core/fragments/g;"
@@ -69,7 +69,7 @@
 
 .field private G:Lcom/vk/music/view/audio_player/ModernSmallPlayerView;
 
-.field private H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+.field private H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
 .field private I:Landroid/view/View;
 
@@ -210,7 +210,7 @@
     aput-object v2, v1, v0
 
     .line 3
-    const-class v0, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class v0, Lcom/vtosters/lite/fragments/t2/c/b;
 
     const v2, 0x7f0a0d14
 
@@ -1265,7 +1265,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vkontakte/android/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/w;->k()I
 
     move-result p1
 
@@ -1275,7 +1275,7 @@
 
     .line 103
     :pswitch_2
-    invoke-static {}, Lcom/vkontakte/android/w;->j()I
+    invoke-static {}, Lcom/vtosters/lite/w;->j()I
 
     move-result v0
 
@@ -1295,14 +1295,14 @@
 
     if-nez p1, :cond_1
 
-    invoke-static {}, Lcom/vkontakte/android/w;->g()I
+    invoke-static {}, Lcom/vtosters/lite/w;->g()I
 
     move-result v0
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/vkontakte/android/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/w;->k()I
 
     move-result v0
 
@@ -1319,7 +1319,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lcom/vkontakte/android/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/w;->b()I
 
     move-result v0
 
@@ -1514,41 +1514,41 @@
     if-eq p1, v2, :cond_5
 
     .line 96
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz p1, :cond_4
 
     const v1, 0x7f0805a4
 
-    invoke-virtual {p1, v0, v1}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->a(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a(II)V
 
     .line 97
     :cond_4
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz p1, :cond_7
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a(I)V
 
     goto :goto_2
 
     .line 98
     :cond_5
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz p1, :cond_6
 
     const v1, 0x7f0805a8
 
-    invoke-virtual {p1, v0, v1}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->a(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a(II)V
 
     .line 99
     :cond_6
-    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object p1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz p1, :cond_7
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->c(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->c(I)V
 
     :cond_7
     :goto_2
@@ -1758,7 +1758,7 @@
 
     .line 67
     :cond_1
-    const-class p1, Lcom/vkontakte/android/fragments/t2/c/b;
+    const-class p1, Lcom/vtosters/lite/fragments/t2/c/b;
 
     :goto_0
     const-string v0, "messages"
@@ -2059,9 +2059,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    check-cast v3, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
-    iput-object v3, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iput-object v3, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     .line 11
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
@@ -2085,11 +2085,11 @@
     invoke-direct {p0, v1, v2}, Lcom/vk/navigation/NavigationDelegateBottom;->b(IZ)V
 
     .line 12
-    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, p0}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->setOnNavigationItemSelectedListener(Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView$b;)V
+    invoke-virtual {v1, p0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->setOnNavigationItemSelectedListener(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView$b;)V
 
     :cond_0
     const v1, 0x7f0a019f
@@ -2114,7 +2114,7 @@
     invoke-virtual {v1, p0}, Lcom/vk/core/view/FitSystemWindowsFrameLayout;->setOnWindowInsetsListener(Lcom/vk/core/view/FitSystemWindowsFrameLayout$e;)V
 
     .line 16
-    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz v1, :cond_1
 
@@ -2373,11 +2373,11 @@
     iput-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->K:Ljava/lang/Integer;
 
     .line 58
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->a(IZ)V
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a(IZ)V
 
     :cond_0
     return-void
@@ -3460,14 +3460,14 @@
     .locals 1
 
     .line 51
-    invoke-static {p1}, Lcom/vkontakte/android/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p1}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 52
-    instance-of v0, p1, Lcom/vkontakte/android/fragments/q2/c;
+    instance-of v0, p1, Lcom/vtosters/lite/fragments/q2/c;
 
     if-eqz v0, :cond_0
 
@@ -3490,7 +3490,7 @@
     :cond_1
     const p1, 0x7f080376
 
-    invoke-static {p2, p1}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     :cond_2
     :goto_0
@@ -3575,7 +3575,7 @@
     const p1, 0x7f080376
 
     .line 50
-    invoke-static {p2, p1}, Lcom/vkontakte/android/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     :cond_2
     return-void
@@ -4050,7 +4050,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/vkontakte/android/MainActivity;->a(Landroid/content/Context;Landroid/os/Bundle;)Landroid/content/Intent;
+    invoke-static {v1, p1}, Lcom/vtosters/lite/MainActivity;->a(Landroid/content/Context;Landroid/os/Bundle;)Landroid/content/Intent;
 
     move-result-object p1
 
@@ -4333,12 +4333,12 @@
 
     .line 12
     :cond_0
-    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz v0, :cond_1
 
     .line 13
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->getActiveMenuId()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->getActiveMenuId()I
 
     move-result v0
 
@@ -4674,9 +4674,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/c;->b(Landroid/app/Activity;)V
 
     .line 10
-    sget-object p1, Lcom/vkontakte/android/bridges/h;->a:Lcom/vkontakte/android/bridges/h;
+    sget-object p1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/bridges/h;->a()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/bridges/h;->a()Z
 
     move-result p1
 
@@ -4907,7 +4907,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "com.vkontakte.android.permission.ACCESS_DATA"
+    const-string v4, "com.vtosters.lite.permission.ACCESS_DATA"
 
     invoke-virtual {v1, v2, v0, v4, v3}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
@@ -4994,14 +4994,14 @@
     :cond_2
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->b(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->b(Ljava/lang/Runnable;)V
 
     .line 15
     sget-object v0, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
     const-wide/16 v1, 0x7d0
 
-    invoke-static {v0, v1, v2}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
 
     .line 16
     :cond_3
@@ -5384,7 +5384,7 @@
     move-result v1
 
     .line 3
-    iget-object v2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;
+    iget-object v2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     if-eqz v2, :cond_0
 
@@ -5392,7 +5392,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v1, v3}, Lcom/vkontakte/android/ui/bottomnavigation/BottomNavigationView;->a(ILjava/lang/CharSequence;)V
+    invoke-virtual {v2, v1, v3}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a(ILjava/lang/CharSequence;)V
 
     goto :goto_0
 

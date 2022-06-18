@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/items/DetailsButtonItem;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/DetailsButtonItem;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/DetailsButtonItem;
     .locals 2
 
     .line 1
@@ -84,7 +84,7 @@
     if-eqz v0, :cond_2
 
     :cond_1
-    iget-boolean v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->G1:Z
+    iget-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->G1:Z
 
     if-nez v0, :cond_2
 
@@ -96,7 +96,7 @@
     .line 3
     new-instance v1, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/DetailsButtonItem;->a(Landroid/view/View$OnClickListener;)V
 
@@ -112,9 +112,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/DetailsButtonItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$detailsInfo$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/DetailsButtonItem;
 
     move-result-object p1
 

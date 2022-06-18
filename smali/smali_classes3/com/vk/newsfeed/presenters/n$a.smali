@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Lc/a/z/g<",
-        "Lcom/vkontakte/android/api/wall/WallGet$Result;",
+        "Lcom/vtosters/lite/api/wall/WallGet$Result;",
         ">;"
     }
 .end annotation
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/wall/WallGet$Result;)V
+.method public final a(Lcom/vtosters/lite/api/wall/WallGet$Result;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/n$a;->b:Lcom/vk/lists/t;
 
-    iget v1, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->total:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->total:I
 
     invoke-virtual {v0, v1}, Lcom/vk/lists/t;->a(I)V
 
@@ -67,7 +67,7 @@
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->next_from:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->next_from:Ljava/lang/String;
 
     invoke-virtual {v0, p1, v1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Ljava/util/List;Ljava/lang/String;)V
 
@@ -88,7 +88,7 @@
 
     move-result v0
 
-    iget p1, p1, Lcom/vkontakte/android/api/wall/WallGet$Result;->total:I
+    iget p1, p1, Lcom/vtosters/lite/api/wall/WallGet$Result;->total:I
 
     if-lt v0, p1, :cond_1
 
@@ -108,9 +108,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/wall/WallGet$Result;
+    check-cast p1, Lcom/vtosters/lite/api/wall/WallGet$Result;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/n$a;->a(Lcom/vkontakte/android/api/wall/WallGet$Result;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/n$a;->a(Lcom/vtosters/lite/api/wall/WallGet$Result;)V
 
     return-void
 .end method

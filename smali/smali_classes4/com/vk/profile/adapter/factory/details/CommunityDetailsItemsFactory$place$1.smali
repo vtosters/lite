@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         "Lcom/vk/profile/adapter/items/details/DetailsInfoItem;",
         ">;"
     }
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
     .locals 13
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v0
 
@@ -76,11 +76,11 @@
     invoke-direct {v0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;-><init>()V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v6
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result v7
 
@@ -105,7 +105,7 @@
     if-eqz v6, :cond_6
 
     .line 4
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result v7
 
@@ -127,13 +127,13 @@
 
     const v10, 0x7f1000b8
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result v11
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
 
     move-result v12
 
@@ -207,14 +207,14 @@
     .line 16
     new-instance v4, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$a;
 
-    invoke-direct {v4, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$a;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v4, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$a;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {v0, v4}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Landroid/view/View$OnClickListener;)V
 
     .line 17
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v5
 
@@ -233,7 +233,7 @@
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 18
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v5
 
@@ -261,7 +261,7 @@
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 20
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v5
 
@@ -283,7 +283,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->d(Ljava/lang/String;)V
 
     .line 22
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -305,7 +305,7 @@
 
     .line 26
     :cond_7
-    iget-object v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->i0:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->i0:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
 
@@ -322,7 +322,7 @@
     invoke-virtual {v0, v5}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->h(I)V
 
     .line 29
-    iget-wide v5, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->N:D
+    iget-wide v5, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->N:D
 
     const-wide v7, -0x3f3e6c0000000000L    # -9000.0
 
@@ -331,7 +331,7 @@
     if-eqz v9, :cond_9
 
     .line 30
-    iget-object v4, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->i0:Ljava/lang/String;
+    iget-object v4, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->i0:Ljava/lang/String;
 
     if-eqz v4, :cond_8
 
@@ -350,12 +350,12 @@
     .line 31
     new-instance v1, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$b;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$b;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vkontakte/android/api/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$b;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vtosters/lite/api/i;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Landroid/view/View$OnClickListener;)V
 
     .line 32
-    iget-object v1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->i0:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->i0:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->d(Ljava/lang/String;)V
 
@@ -369,7 +369,7 @@
 
     .line 34
     :cond_9
-    iget-object v5, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->i0:Ljava/lang/String;
+    iget-object v5, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->i0:Ljava/lang/String;
 
     if-eqz v5, :cond_a
 
@@ -380,7 +380,7 @@
 
     .line 36
     :goto_4
-    iget-object p1, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
@@ -408,9 +408,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->a(Lcom/vkontakte/android/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 
     move-result-object p1
 

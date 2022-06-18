@@ -456,7 +456,7 @@
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 66
-    invoke-static {}, Lcom/vkontakte/android/data/n;->h()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->h()Ljava/lang/String;
 
     move-result-object p1
 
@@ -482,7 +482,7 @@
 
     invoke-direct {p2, p1}, Lcom/vk/statistic/StatisticUrl;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p2}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {p2}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     return-void
 .end method

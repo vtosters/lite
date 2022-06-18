@@ -420,7 +420,7 @@
             "Lcom/vk/lists/t;",
             "Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;>;"
         }
@@ -470,7 +470,7 @@
             "Lcom/vk/lists/t;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;>;"
         }
@@ -495,7 +495,7 @@
 
     if-ne v0, v3, :cond_1
 
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch;
 
     iget-object v5, p0, Lcom/vk/newsfeed/presenters/j;->Q:Ljava/lang/String;
 
@@ -521,7 +521,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v5, v4, v6, p2}, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch;-><init>(Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct {v0, v5, v4, v6, p2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch;-><init>(Ljava/lang/String;Ljava/lang/String;II)V
 
     goto :goto_2
 
@@ -539,7 +539,7 @@
 
     if-ne v0, v3, :cond_3
 
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch;
 
     iget-object v5, p0, Lcom/vk/newsfeed/presenters/j;->Q:Ljava/lang/String;
 
@@ -567,13 +567,13 @@
     move-result p2
 
     .line 18
-    invoke-direct {v0, v5, v4, v6, p2}, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, v5, v4, v6, p2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch;-><init>(Ljava/lang/String;III)V
 
     goto :goto_2
 
     .line 19
     :cond_3
-    new-instance v0, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch;
+    new-instance v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch;
 
     iget-object v4, p0, Lcom/vk/newsfeed/presenters/j;->Q:Ljava/lang/String;
 
@@ -585,7 +585,7 @@
 
     move-result p2
 
-    invoke-direct {v0, v4, v5, p2}, Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v4, v5, p2}, Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     :goto_2
     const/4 p2, 0x2
@@ -637,7 +637,7 @@
         value = {
             "(",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedSearch$List<",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedSearch$List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;>;Z",
             "Lcom/vk/lists/t;",

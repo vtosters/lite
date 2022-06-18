@@ -144,7 +144,7 @@
 
     move-result-object v1
 
-    const-class v2, Lcom/vkontakte/android/ImagePickerActivity;
+    const-class v2, Lcom/vtosters/lite/ImagePickerActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -1563,7 +1563,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcom/vkontakte/android/ImagePickerActivity;
+    const-class v1, Lcom/vtosters/lite/ImagePickerActivity;
 
     invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

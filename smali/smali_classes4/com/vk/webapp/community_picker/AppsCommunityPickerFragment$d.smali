@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$d;->a:Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment;
 
-    invoke-static {p1}, Lcom/vkontakte/android/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p1}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method

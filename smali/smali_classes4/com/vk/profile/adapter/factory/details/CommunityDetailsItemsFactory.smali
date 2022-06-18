@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/b/a<",
-        "Lcom/vkontakte/android/api/i;",
+        "Lcom/vtosters/lite/api/i;",
         ">;"
     }
 .end annotation
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -30,7 +30,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -40,7 +40,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -50,7 +50,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -60,7 +60,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -70,7 +70,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -80,7 +80,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -90,7 +90,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -100,7 +100,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -110,7 +110,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -120,7 +120,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -130,7 +130,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -140,7 +140,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -150,7 +150,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.g;"
         }
     .end annotation
@@ -160,7 +160,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -170,7 +170,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -180,7 +180,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.h;"
         }
     .end annotation
@@ -405,15 +405,15 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+.method public a(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ")[",
             "Lcom/vk/profile/adapter/b/a<",
-            "Lcom/vkontakte/android/api/i;",
+            "Lcom/vtosters/lite/api/i;",
             ">.c;"
         }
     .end annotation
@@ -846,9 +846,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;->a(Lcom/vkontakte/android/api/i;)[Lcom/vk/profile/adapter/b/a$c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;->a(Lcom/vtosters/lite/api/i;)[Lcom/vk/profile/adapter/b/a$c;
 
     move-result-object p1
 

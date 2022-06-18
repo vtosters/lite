@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/holders/b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoriesItemHolder.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -54,7 +54,7 @@
     .end param
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     iput-object p3, p0, Lcom/vk/stories/holders/b;->c:Ljava/lang/String;
 

@@ -48,7 +48,7 @@
     .line 2
     iget-object p3, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$g;->a:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;
 
-    invoke-virtual {p3}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vkontakte/android/ui/adapters/a;
+    invoke-virtual {p3}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/a;
 
     move-result-object p3
 
@@ -67,7 +67,7 @@
     .line 5
     iget-object p4, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$g;->a:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;
 
-    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vkontakte/android/ui/adapters/a;
+    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/a;
 
     move-result-object p4
 
@@ -84,7 +84,7 @@
     .line 6
     iget-object p4, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$g;->a:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;
 
-    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vkontakte/android/ui/adapters/a;
+    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/a;
 
     move-result-object p4
 

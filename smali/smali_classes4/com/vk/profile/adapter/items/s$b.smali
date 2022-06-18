@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/adapter/items/s$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "HeaderActionsItem.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/s;->a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+    value = Lcom/vk/profile/adapter/items/s;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/s;",
         ">;"
     }
@@ -41,7 +41,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/items/s$b;->c:Lcom/vk/profile/adapter/items/s;
 
-    invoke-direct {p0, p3}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p3}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     .line 2
     new-instance p2, Lcom/vk/profile/adapter/items/s$b$a;
@@ -49,7 +49,7 @@
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/s$b$a;-><init>(Lcom/vk/profile/adapter/items/s$b;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -122,14 +122,14 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/s;
 
     return-object p0
 .end method
 
-.method private final a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+.method private final a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
     .locals 19
 
     packed-switch p1, :pswitch_data_0
@@ -147,7 +147,7 @@
     move-object/from16 v0, p2
 
     .line 14
-    iget-boolean v5, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->X0:Z
+    iget-boolean v5, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->X0:Z
 
     if-eqz v5, :cond_0
 
@@ -438,11 +438,11 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 3
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -457,44 +457,44 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-direct {p0, v5, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v5, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v0
 
     invoke-direct {p0, v1, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vk/profile/ui/community/StatusButtonView$a;)V
 
     .line 5
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-direct {p0, v4, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v4, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v0
 
     invoke-direct {p0, v5, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vk/profile/ui/community/StatusButtonView$a;)V
 
     .line 6
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    invoke-direct {p0, v3, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v3, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v0
 
     invoke-direct {p0, v4, v0}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vk/profile/ui/community/StatusButtonView$a;)V
 
     .line 7
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    invoke-direct {p0, v2, p1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v2, p1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object p1
 
@@ -506,11 +506,11 @@
     const/4 v0, 0x5
 
     .line 8
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v6
 
-    invoke-direct {p0, v0, v6}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v0, v6}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v0
 
@@ -519,11 +519,11 @@
     const/4 v0, 0x6
 
     .line 9
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v0, v1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v0
 
@@ -532,11 +532,11 @@
     const/4 v0, 0x7
 
     .line 10
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v0, v1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v0
 
@@ -553,11 +553,11 @@
 
     const/16 v0, 0x8
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/s;->c(Lcom/vk/profile/adapter/items/s;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-direct {p0, v0, p1}, Lcom/vk/profile/adapter/items/s$b;->a(ILcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object p1
 

@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/stories/settings/f;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "StoriesGroupedSettingsRecyclerHolder.kt"
 
 
@@ -9,7 +9,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "TT;>;"
     }
 .end annotation
@@ -24,7 +24,7 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void

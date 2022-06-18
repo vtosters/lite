@@ -25,7 +25,7 @@
 
 .field private D:Landroid/widget/FrameLayout;
 
-.field private E:Lcom/vkontakte/android/ui/CircularProgressView;
+.field private E:Lcom/vtosters/lite/ui/CircularProgressView;
 
 .field private F:Lcom/vk/core/util/j1;
 
@@ -321,9 +321,9 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vkontakte/android/ui/CircularProgressView;
+    check-cast p1, Lcom/vtosters/lite/ui/CircularProgressView;
 
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vkontakte/android/ui/CircularProgressView;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vtosters/lite/ui/CircularProgressView;
 
     .line 17
     iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/a;->C:Landroid/widget/FrameLayout;
@@ -1290,11 +1290,11 @@
     return-object v0
 .end method
 
-.method protected final getProgressCircular()Lcom/vkontakte/android/ui/CircularProgressView;
+.method protected final getProgressCircular()Lcom/vtosters/lite/ui/CircularProgressView;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vkontakte/android/ui/CircularProgressView;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vtosters/lite/ui/CircularProgressView;
 
     return-object v0
 .end method
@@ -1478,11 +1478,11 @@
     invoke-virtual {p0, v0}, Lcom/vk/cameraui/widgets/masks/a;->b(Z)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vkontakte/android/ui/CircularProgressView;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vtosters/lite/ui/CircularProgressView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/CircularProgressView;->setProgressNoAnim(F)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/CircularProgressView;->setProgressNoAnim(F)V
 
     return-void
 .end method
@@ -1667,11 +1667,11 @@
     return-void
 .end method
 
-.method protected final setProgressCircular(Lcom/vkontakte/android/ui/CircularProgressView;)V
+.method protected final setProgressCircular(Lcom/vtosters/lite/ui/CircularProgressView;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vkontakte/android/ui/CircularProgressView;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/a;->E:Lcom/vtosters/lite/ui/CircularProgressView;
 
     return-void
 .end method

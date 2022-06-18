@@ -115,7 +115,7 @@
     goto :goto_0
 
     :pswitch_4
-    const-string p1, "android.resource://com.vkontakte.android/raw/call_incoming_new"
+    const-string p1, "android.resource://com.vtosters.lite/raw/call_incoming_new"
 
     :goto_0
     return-object p1

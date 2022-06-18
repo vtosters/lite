@@ -103,7 +103,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vkontakte/android/i0/c;->a(I)Z
+    invoke-static {p1}, Lcom/vtosters/lite/i0/c;->a(I)Z
 
     move-result p1
 

@@ -103,7 +103,7 @@
     .line 2
     new-instance p1, Lcom/vk/sharing/target/Target;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object p2
 

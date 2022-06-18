@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/attachments/PendingDocumentAttachment;",
+        "Lcom/vtosters/lite/attachments/PendingDocumentAttachment;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PendingDocumentAttachment;)Z
+.method public final a(Lcom/vtosters/lite/attachments/PendingDocumentAttachment;)Z
     .locals 2
 
     .line 1
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vkontakte/android/attachments/PendingDocumentAttachment;)Z
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->a(Lcom/vtosters/lite/attachments/PendingDocumentAttachment;)Z
 
     move-result p1
 
@@ -80,9 +80,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    check-cast p1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachDocumentsFromDevice$filtered$1;->a(Lcom/vkontakte/android/attachments/PendingDocumentAttachment;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachDocumentsFromDevice$filtered$1;->a(Lcom/vtosters/lite/attachments/PendingDocumentAttachment;)Z
 
     move-result p1
 

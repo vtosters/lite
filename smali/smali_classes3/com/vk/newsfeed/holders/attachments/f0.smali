@@ -100,9 +100,9 @@
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/f0$a;-><init>(Lcom/vkontakte/android/attachments/PollAttachment;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/f0$a;-><init>(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
     return-object v0
 
@@ -120,7 +120,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v0
 
@@ -137,11 +137,11 @@
     .line 3
     sget-object v0, Lcom/vk/poll/fragments/PollEditorFragment$a;->S0:Lcom/vk/poll/fragments/PollEditorFragment$a$a;
 
-    new-instance v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v1, p1}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lcom/vk/dto/polls/Poll;)V
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/poll/fragments/PollEditorFragment$a$a;->a(Lcom/vkontakte/android/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/poll/fragments/PollEditorFragment$a$a;->a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)Lcom/vk/poll/fragments/PollEditorFragment$a;
 
     move-result-object p1
 
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vkontakte/android/attachments/PollAttachment;)V
+.method public final a(Lcom/vtosters/lite/attachments/PollAttachment;)V
     .locals 0
 
     .line 1
@@ -196,14 +196,14 @@
     move-result-object v1
 
     .line 3
-    instance-of v2, v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v2, v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v2, :cond_c
 
     .line 4
-    check-cast v1, Lcom/vkontakte/android/attachments/PollAttachment;
+    check-cast v1, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
     move-result-object v2
 
@@ -536,7 +536,7 @@
     .line 28
     iget-object v1, v0, Lcom/vk/newsfeed/holders/attachments/f0;->H:Lcom/vk/polls/ui/views/AbstractPollView;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v2
 

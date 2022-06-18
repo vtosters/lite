@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/StorySettingsActivity;
-.super Lcom/vkontakte/android/VKActivity;
+.super Lcom/vtosters/lite/VKActivity;
 .source "StorySettingsActivity.java"
 
 # interfaces
@@ -49,7 +49,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/VKActivity;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
     invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
@@ -539,7 +539,7 @@
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     goto :goto_0
 
@@ -557,7 +557,7 @@
     .locals 0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vkontakte/android/VKActivity;->finish()V
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     return-void
 .end method
@@ -592,7 +592,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vkontakte/android/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/VKActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     const/16 p2, 0x2703
 
@@ -620,7 +620,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vkontakte/android/VKActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -839,7 +839,7 @@
     move-result-object p1
 
     .line 26
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 
@@ -1176,7 +1176,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStart()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 2
     iget-boolean v0, p0, Lcom/vk/stories/StorySettingsActivity;->Q:Z
@@ -1194,7 +1194,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vkontakte/android/VKActivity;->onStop()V
+    invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/b;

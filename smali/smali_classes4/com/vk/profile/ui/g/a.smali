@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/g/a;
-.super Lcom/vkontakte/android/fragments/y2/z;
+.super Lcom/vtosters/lite/fragments/y2/z;
 .source "CommunityVideoCatalogFragment.kt"
 
 
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vkontakte/android/fragments/y2/z;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/y2/z;-><init>()V
 
     return-void
 .end method

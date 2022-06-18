@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->f(Lcom/vkontakte/android/q;)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->f(Lcom/vtosters/lite/q;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,18 +34,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lcom/vkontakte/android/q;
+.field final synthetic c:Lcom/vtosters/lite/q;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;ILcom/vkontakte/android/q;)V
+.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;ILcom/vtosters/lite/q;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
     iput p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->b:I
 
-    iput-object p3, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vkontakte/android/q;
+    iput-object p3, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vtosters/lite/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,16 +89,16 @@
     if-eqz v1, :cond_1
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/wall/b;->a()Lcom/vkontakte/android/q;
+    invoke-virtual {v1}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vkontakte/android/NewsComment;
+    check-cast v1, Lcom/vtosters/lite/NewsComment;
 
     .line 4
-    iget v2, v1, Lcom/vkontakte/android/NewsComment;->g:I
+    iget v2, v1, Lcom/vtosters/lite/NewsComment;->g:I
 
     iget v3, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->b:I
 
@@ -107,7 +107,7 @@
     const/4 p1, 0x1
 
     .line 5
-    iput-boolean p1, v1, Lcom/vkontakte/android/NewsComment;->K:Z
+    iput-boolean p1, v1, Lcom/vtosters/lite/NewsComment;->K:Z
 
     goto :goto_1
 
@@ -142,9 +142,9 @@
     .line 8
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vkontakte/android/q;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vtosters/lite/q;
 
-    invoke-virtual {p1, v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->j(Lcom/vkontakte/android/q;)V
+    invoke-virtual {p1, v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->j(Lcom/vtosters/lite/q;)V
 
     return-void
 

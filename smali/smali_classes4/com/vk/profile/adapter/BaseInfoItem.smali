@@ -124,13 +124,13 @@
 .method public abstract O()I
 .end method
 
-.method public abstract a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public abstract a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "+",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
             ">;"

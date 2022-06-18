@@ -153,7 +153,7 @@
     const-string v0, "call_product_stat"
 
     .line 16
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     const-string v4, "call_event_type"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 18
     invoke-virtual {p1}, Lcom/vk/voip/q$a;->b()J
@@ -177,7 +177,7 @@
 
     const-string v4, "event_client_microsec"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 19
     invoke-virtual {p1}, Lcom/vk/voip/q$a;->h()Ljava/lang/String;
@@ -186,7 +186,7 @@
 
     const-string v4, "session_id"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 20
     invoke-virtual {p1}, Lcom/vk/voip/q$a;->e()Ljava/lang/Integer;
@@ -195,7 +195,7 @@
 
     const-string v4, "peer_id"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 21
     invoke-virtual {p1}, Lcom/vk/voip/q$a;->d()Ljava/lang/String;
@@ -204,7 +204,7 @@
 
     const-string v4, "lib_version"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 22
     invoke-virtual {p1}, Lcom/vk/voip/q$a;->i()Ljava/lang/String;
@@ -240,7 +240,7 @@
 
     const-string v4, "source"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 24
     :cond_9
@@ -277,7 +277,7 @@
 
     const-string v4, "reason"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 26
     :cond_c
@@ -294,7 +294,7 @@
 
     const-string v4, "error"
 
-    invoke-virtual {v0, v4, v3}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v4, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 28
     :cond_d
@@ -323,7 +323,7 @@
 
     const-string v2, "relay_ip"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 30
     :cond_10
@@ -346,7 +346,7 @@
     invoke-static {v1, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    invoke-virtual {v0}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     return-void
 .end method

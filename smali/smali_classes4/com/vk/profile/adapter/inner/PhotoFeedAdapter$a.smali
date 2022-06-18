@@ -26,20 +26,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+.method public constructor <init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/profile/presenter/BaseProfilePresenter<",
             "*>;",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {p0, p2}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->B:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
@@ -50,7 +50,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vkontakte/android/ui/adapters/b;->a:Ld/a/a/c/c;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/b;->a:Ld/a/a/c/c;
 
     return-object p0
 .end method
@@ -59,7 +59,7 @@
     .locals 0
 
     .line 2
-    iput-boolean p1, p0, Lcom/vkontakte/android/ui/adapters/b;->c:Z
+    iput-boolean p1, p0, Lcom/vtosters/lite/ui/adapters/b;->c:Z
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, Lcom/vkontakte/android/ui/adapters/b;->c:Z
+    iput-boolean v0, p0, Lcom/vtosters/lite/ui/adapters/b;->c:Z
 
     .line 2
     new-instance v0, Lcom/vk/api/photos/k;

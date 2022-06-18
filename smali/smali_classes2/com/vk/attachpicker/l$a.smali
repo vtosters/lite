@@ -35,15 +35,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/attachments/PendingPhotoAttachment;)Lcom/vk/dto/photo/Photo;
+.method public final a(Lcom/vtosters/lite/attachments/PendingPhotoAttachment;)Lcom/vk/dto/photo/Photo;
     .locals 4
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getWidth()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getHeight()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getHeight()I
 
     move-result v1
 
@@ -54,15 +54,15 @@
     .line 2
     new-instance v1, Lcom/vk/dto/common/ImageSize;
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->x1()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getWidth()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getWidth()I
 
     move-result v3
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;->getHeight()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->getHeight()I
 
     move-result p1
 

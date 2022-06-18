@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vkontakte/android/ui/f0/b;I)Ljava/lang/String;
+.method public a(Lcom/vtosters/lite/ui/f0/b;I)Ljava/lang/String;
     .locals 3
 
     const/16 v0, 0x30
@@ -25,7 +25,7 @@
     if-nez p2, :cond_2
 
     .line 1
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of p2, p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -63,7 +63,7 @@
 
     .line 2
     :cond_2
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v2, p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 
@@ -101,13 +101,13 @@
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->C1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->C1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/attachments/PhotoAttachment;->m1()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PhotoAttachment;->m1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -142,11 +142,11 @@
     return-object v1
 .end method
 
-.method public b(Lcom/vkontakte/android/ui/f0/b;)I
+.method public b(Lcom/vtosters/lite/ui/f0/b;)I
     .locals 2
 
     .line 1
-    iget-object p1, p1, Lcom/vkontakte/android/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v0, p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;
 

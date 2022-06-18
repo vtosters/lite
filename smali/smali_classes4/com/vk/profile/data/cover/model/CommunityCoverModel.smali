@@ -105,17 +105,17 @@
     .line 4
     iget-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->s:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vkontakte/android/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vkontakte/android/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/i;
 
     const/4 v0, 0x1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/i;->u()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->u()Z
 
     move-result p1
 
@@ -722,7 +722,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v2
 
@@ -738,7 +738,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lcom/vkontakte/android/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object p1
 
@@ -1089,7 +1089,7 @@
     iput-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->g:Landroid/media/AudioFocusRequest;
 
     .line 20
-    invoke-static {p1}, Lcom/vkontakte/android/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object p1
 
@@ -1116,7 +1116,7 @@
 
     .line 22
     :cond_3
-    invoke-static {p1}, Lcom/vkontakte/android/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object p1
 

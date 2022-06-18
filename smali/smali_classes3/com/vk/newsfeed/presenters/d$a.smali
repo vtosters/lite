@@ -61,11 +61,11 @@
     .line 1
     sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vkontakte/android/data/v/a;->a(Landroid/content/Context;)Lcom/vkontakte/android/data/v/a;
+    invoke-static {v0}, Lcom/vtosters/lite/data/v/a;->a(Landroid/content/Context;)Lcom/vtosters/lite/data/v/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vkontakte/android/data/v/a;->a(ILandroid/util/SparseArray;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/v/a;->a(ILandroid/util/SparseArray;)Ljava/util/ArrayList;
 
     move-result-object p1
 

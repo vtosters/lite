@@ -213,7 +213,7 @@
 
     .line 15
     :pswitch_1
-    sget-object v2, Lcom/vkontakte/android/attachments/PodcastAttachment;->g:Lcom/vkontakte/android/attachments/PodcastAttachment$b;
+    sget-object v2, Lcom/vtosters/lite/attachments/PodcastAttachment;->g:Lcom/vtosters/lite/attachments/PodcastAttachment$b;
 
     sget-object v3, Lcom/vk/fave/entities/FaveType;->PODCAST:Lcom/vk/fave/entities/FaveType;
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v2, v1, v0}, Lcom/vkontakte/android/attachments/PodcastAttachment$b;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vkontakte/android/attachments/PodcastAttachment;
+    invoke-virtual {v2, v1, v0}, Lcom/vtosters/lite/attachments/PodcastAttachment$b;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vtosters/lite/attachments/PodcastAttachment;
 
     move-result-object v0
 
@@ -375,13 +375,13 @@
     check-cast v0, Lcom/vk/dto/newsfeed/Owner;
 
     .line 27
-    sget-object v2, Lcom/vkontakte/android/attachments/ArticleAttachment;->g:Lcom/vkontakte/android/attachments/ArticleAttachment$b;
+    sget-object v2, Lcom/vtosters/lite/attachments/ArticleAttachment;->g:Lcom/vtosters/lite/attachments/ArticleAttachment$b;
 
     const-string v3, "articleJson"
 
     invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1, v0}, Lcom/vkontakte/android/attachments/ArticleAttachment$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/newsfeed/Owner;)Lcom/vkontakte/android/attachments/ArticleAttachment;
+    invoke-virtual {v2, v1, v0}, Lcom/vtosters/lite/attachments/ArticleAttachment$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/newsfeed/Owner;)Lcom/vtosters/lite/attachments/ArticleAttachment;
 
     move-result-object v0
 
@@ -389,7 +389,7 @@
 
     .line 28
     :pswitch_5
-    invoke-static/range {p1 .. p2}, Lcom/vkontakte/android/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static/range {p1 .. p2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 

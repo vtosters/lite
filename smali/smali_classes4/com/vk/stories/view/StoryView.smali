@@ -1743,7 +1743,7 @@
     const-string p1, "narrative_open_stories"
 
     .line 16
-    invoke-static {p1}, Lcom/vkontakte/android/data/n;->c(Ljava/lang/String;)Lcom/vkontakte/android/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
 
     move-result-object p1
 
@@ -1758,7 +1758,7 @@
 
     const-string v1, "owner_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -1771,10 +1771,10 @@
 
     const-string v1, "narrative_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vkontakte/android/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
 
     .line 19
-    invoke-virtual {p1}, Lcom/vkontakte/android/data/n$l;->b()Lcom/vkontakte/android/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
 
     goto/16 :goto_2
 
@@ -4437,14 +4437,14 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/vkontakte/android/ui/h0/a;
+    new-instance v2, Lcom/vtosters/lite/ui/h0/a;
 
-    invoke-direct {v2}, Lcom/vkontakte/android/ui/h0/a;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/ui/h0/a;-><init>()V
 
     const/4 v3, 0x2
 
     .line 5
-    invoke-virtual {v2, v3}, Lcom/vkontakte/android/ui/h0/a;->a(I)Lcom/vkontakte/android/ui/h0/a;
+    invoke-virtual {v2, v3}, Lcom/vtosters/lite/ui/h0/a;->a(I)Lcom/vtosters/lite/ui/h0/a;
 
     invoke-virtual {v1, v2}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
@@ -4456,9 +4456,9 @@
     invoke-virtual {v1, v2, v3}, Landroid/transition/TransitionSet;->setDuration(J)Landroid/transition/TransitionSet;
 
     .line 7
-    new-instance v1, Lcom/vkontakte/android/ui/h0/b;
+    new-instance v1, Lcom/vtosters/lite/ui/h0/b;
 
-    invoke-direct {v1}, Lcom/vkontakte/android/ui/h0/b;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/h0/b;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
@@ -6176,7 +6176,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/view/StoryView$z;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-static {v0}, Lcom/vkontakte/android/f0;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -7996,7 +7996,7 @@
     neg-int p1, p2
 
     .line 262
-    invoke-static {p1, p4}, Lcom/vkontakte/android/data/Groups;->a(II)V
+    invoke-static {p1, p4}, Lcom/vtosters/lite/data/Groups;->a(II)V
 
     .line 263
     invoke-interface {p3}, Lcom/vk/common/g/a;->f()Ljava/lang/Object;
@@ -8143,7 +8143,7 @@
     if-eqz v2, :cond_7
 
     .line 245
-    invoke-static {}, Lcom/vkontakte/android/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
 
     move-result-object v1
 
@@ -8644,7 +8644,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {p1, v1, v2, v3}, Lcom/vkontakte/android/f0;->a(ZII[Landroid/view/View;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v1, v2, v3}, Lcom/vtosters/lite/f0;->a(ZII[Landroid/view/View;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 

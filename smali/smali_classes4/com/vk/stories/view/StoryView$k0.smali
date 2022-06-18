@@ -87,7 +87,7 @@
     .line 2
     iget p1, p0, Lcom/vk/stories/view/StoryView$k0;->a:I
 
-    invoke-static {p1}, Lcom/vkontakte/android/data/Friends;->f(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/data/Friends;->f(I)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$k0;->e:Lcom/vk/stories/view/StoryView;

@@ -25,13 +25,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final E:Lcom/vkontakte/android/api/ExtendedUserProfile;
+.field private final E:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
 .field private final F:Lcom/vk/profile/presenter/BaseProfilePresenter;
     .annotation system Ldalvik/annotation/Signature;
@@ -58,15 +58,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+.method public constructor <init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory<",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Lcom/vk/profile/presenter/BaseProfilePresenter<",
             "*>;)V"
         }
@@ -77,7 +77,7 @@
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/j;->D:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/items/j;->E:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iput-object p2, p0, Lcom/vk/profile/adapter/items/j;->E:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iput-object p3, p0, Lcom/vk/profile/adapter/items/j;->F:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
@@ -91,11 +91,11 @@
 
     iget-object p2, p0, Lcom/vk/profile/adapter/items/j;->D:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;
 
-    iget-object p3, p0, Lcom/vk/profile/adapter/items/j;->E:Lcom/vkontakte/android/api/ExtendedUserProfile;
+    iget-object p3, p0, Lcom/vk/profile/adapter/items/j;->E:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iget-object v0, p0, Lcom/vk/profile/adapter/items/j;->F:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-direct {p1, p2, p3, v0}, Lcom/vk/profile/adapter/counters/CountersAdapter;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+    invoke-direct {p1, p2, p3, v0}, Lcom/vk/profile/adapter/counters/CountersAdapter;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/j;->C:Lcom/vk/profile/adapter/counters/CountersAdapter;
 
@@ -122,14 +122,14 @@
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vkontakte/android/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "+",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
             ">;"

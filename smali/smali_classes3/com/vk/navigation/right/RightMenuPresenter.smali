@@ -245,7 +245,7 @@
     invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Landroid/app/Activity;[F)V
 
     .line 7
-    invoke-static {}, Lcom/vkontakte/android/data/s;->a()V
+    invoke-static {}, Lcom/vtosters/lite/data/s;->a()V
 
     .line 8
     invoke-static {}, Lcom/vk/articles/preload/a;->e()V
@@ -273,7 +273,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
 
-    invoke-static {}, Lcom/vkontakte/android/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
 
     move-result-object v1
 

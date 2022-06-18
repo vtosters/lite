@@ -52,7 +52,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 2
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/GeoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/GeoAttachment;
 
     if-eqz v1, :cond_0
 
@@ -62,7 +62,7 @@
 
     .line 3
     :cond_0
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PendingPhotoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
     if-eqz v1, :cond_1
 
@@ -72,7 +72,7 @@
 
     .line 4
     :cond_1
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PhotoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     if-eqz v1, :cond_2
 
@@ -82,7 +82,7 @@
 
     .line 5
     :cond_2
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/AudioAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/AudioAttachment;
 
     if-eqz v1, :cond_3
 
@@ -92,7 +92,7 @@
 
     .line 6
     :cond_3
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     if-eqz v1, :cond_4
 
@@ -102,7 +102,7 @@
 
     .line 7
     :cond_4
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/VideoAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/VideoAttachment;
 
     if-eqz v1, :cond_5
 
@@ -112,7 +112,7 @@
 
     .line 8
     :cond_5
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PendingDocumentAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
 
     if-eqz v1, :cond_6
 
@@ -122,7 +122,7 @@
 
     .line 9
     :cond_6
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/DocumentAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;
 
     if-eqz v1, :cond_7
 
@@ -132,7 +132,7 @@
 
     .line 10
     :cond_7
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/PollAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/PollAttachment;
 
     if-eqz v1, :cond_8
 
@@ -142,7 +142,7 @@
 
     .line 11
     :cond_8
-    instance-of v1, p1, Lcom/vkontakte/android/attachments/EventAttachment;
+    instance-of v1, p1, Lcom/vtosters/lite/attachments/EventAttachment;
 
     if-eqz v1, :cond_9
 
@@ -152,7 +152,7 @@
 
     .line 12
     :cond_9
-    instance-of p1, p1, Lcom/vkontakte/android/attachments/MarketAttachment;
+    instance-of p1, p1, Lcom/vtosters/lite/attachments/MarketAttachment;
 
     if-eqz p1, :cond_a
 

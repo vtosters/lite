@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/ShittyCardViewHolder;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ShittyCardViewHolder.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -50,7 +50,7 @@
     const v0, 0x7f0d03cd
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/content/Context;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/content/Context;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -253,7 +253,7 @@
     check-cast v0, Lcom/vk/statistic/StatisticUrl;
 
     .line 3
-    invoke-static {v0}, Lcom/vkontakte/android/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v0}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_0
 
@@ -294,7 +294,7 @@
     iput-object p2, p0, Lcom/vk/newsfeed/holders/ShittyCardViewHolder;->D:Lcom/vk/newsfeed/holders/ShittyCardViewHolder$a;
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -407,7 +407,7 @@
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->C1()Lcom/vkontakte/android/attachments/PhotoAttachment;
+    invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$Card;->C1()Lcom/vtosters/lite/attachments/PhotoAttachment;
 
     move-result-object v1
 
@@ -420,12 +420,12 @@
 
     int-to-float v2, v2
 
-    invoke-virtual {v1, v3, v2}, Lcom/vkontakte/android/attachments/PhotoAttachment;->a(FF)V
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;->a(FF)V
 
     .line 13
     iget-object v2, p0, Lcom/vk/newsfeed/holders/ShittyCardViewHolder;->h:Lcom/vk/imageloader/view/VKSnippetImageView;
 
-    iget-object v1, v1, Lcom/vkontakte/android/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
+    iget-object v1, v1, Lcom/vtosters/lite/attachments/PhotoAttachment;->D:Lcom/vk/dto/photo/Photo;
 
     iget-object v1, v1, Lcom/vk/dto/photo/Photo;->Q:Lcom/vk/dto/common/Image;
 
@@ -528,7 +528,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 

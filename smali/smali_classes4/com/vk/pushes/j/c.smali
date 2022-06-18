@@ -618,13 +618,13 @@
     if-eqz v1, :cond_8
 
     .line 39
-    sget-object v1, Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;
+    sget-object v1, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;
 
     invoke-virtual/range {v16 .. v16}, Lcom/vk/pushes/dto/MessageNotificationInfo;->t1()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v17
 
@@ -1078,9 +1078,9 @@
     if-eqz v1, :cond_8
 
     .line 74
-    sget-object v3, Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;
+    sget-object v3, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->e:Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;
 
-    invoke-virtual {v3, v1}, Lcom/vkontakte/android/im/notifications/NotificationFileLoaderHelper;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v3, v1}, Lcom/vtosters/lite/im/notifications/NotificationFileLoaderHelper;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v17
 

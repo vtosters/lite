@@ -79,12 +79,12 @@
     return-void
 .end method
 
-.method public static final a(Lb/h/h/d/c;Lcom/vkontakte/android/api/execute/i$a;)V
+.method public static final a(Lb/h/h/d/c;Lcom/vtosters/lite/api/execute/i$a;)V
     .locals 1
 
     sget-object v0, Lcom/vk/auth/n;->a:Lcom/vk/auth/n$a;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/auth/n$a;->a(Lb/h/h/d/c;Lcom/vkontakte/android/api/execute/i$a;)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/auth/n$a;->a(Lb/h/h/d/c;Lcom/vtosters/lite/api/execute/i$a;)V
 
     return-void
 .end method

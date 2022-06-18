@@ -34,9 +34,9 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/t0;->b:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    check-cast p1, Lcom/vkontakte/android/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/n$l;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/stories/view/s1;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vkontakte/android/data/n$l;)Lkotlin/m;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/stories/view/s1;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vtosters/lite/data/n$l;)Lkotlin/m;
 
     move-result-object p1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "PosterPreviewAdapter.kt"
 
 # interfaces
@@ -24,7 +24,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/newsfeed/posting/dto/b;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -72,7 +72,7 @@
 
 .field private final f:Landroid/widget/FrameLayout;
 
-.field private final g:Lcom/vkontakte/android/ui/r;
+.field private final g:Lcom/vtosters/lite/ui/r;
 
 .field private final h:Landroid/graphics/drawable/Drawable;
 
@@ -156,7 +156,7 @@
 
     invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->B:Lcom/vk/core/util/k0;
 
@@ -221,16 +221,16 @@
     iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->f:Landroid/widget/FrameLayout;
 
     .line 6
-    new-instance p1, Lcom/vkontakte/android/ui/r;
+    new-instance p1, Lcom/vtosters/lite/ui/r;
 
     const/4 p2, -0x1
 
-    invoke-direct {p1, p2}, Lcom/vkontakte/android/ui/r;-><init>(I)V
+    invoke-direct {p1, p2}, Lcom/vtosters/lite/ui/r;-><init>(I)V
 
     const/high16 p3, 0x1e000000
 
     .line 7
-    invoke-virtual {p1, p3}, Lcom/vkontakte/android/ui/r;->a(I)V
+    invoke-virtual {p1, p3}, Lcom/vtosters/lite/ui/r;->a(I)V
 
     const/4 p3, 0x1
 
@@ -239,13 +239,13 @@
 
     move-result p4
 
-    invoke-virtual {p1, p4}, Lcom/vkontakte/android/ui/r;->b(I)V
+    invoke-virtual {p1, p4}, Lcom/vtosters/lite/ui/r;->b(I)V
 
     .line 9
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vkontakte/android/ui/r;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vtosters/lite/ui/r;
 
     .line 10
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -269,7 +269,7 @@
     .line 12
     new-instance p4, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -352,7 +352,7 @@
     .line 19
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->c:Lcom/vk/newsfeed/FrescoImageView;
 
-    iget-object p4, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vkontakte/android/ui/r;
+    iget-object p4, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vtosters/lite/ui/r;
 
     invoke-virtual {p1, p4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -520,7 +520,7 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->c:Lcom/vk/newsfeed/FrescoImageView;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vkontakte/android/ui/r;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vtosters/lite/ui/r;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -533,13 +533,13 @@
 
     if-eqz v0, :cond_b
 
-    check-cast v0, Lcom/vkontakte/android/ui/r;
+    check-cast v0, Lcom/vtosters/lite/ui/r;
 
     invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/b;->c()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vkontakte/android/ui/r;->setColor(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/r;->setColor(I)V
 
     .line 6
     :goto_1
@@ -648,7 +648,7 @@
 
     .line 12
     :cond_8
-    iget-object v4, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vkontakte/android/ui/r;
+    iget-object v4, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->g:Lcom/vtosters/lite/ui/r;
 
     .line 13
     :goto_7
@@ -743,7 +743,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->C:Lcom/vk/attachpicker/base/e;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
@@ -758,7 +758,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/bottom/a$e;->B:Lcom/vk/core/util/k0;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/newsfeed/posting/dto/b;
 

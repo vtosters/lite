@@ -20,7 +20,7 @@
     value = {
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
-        "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+        "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/items/b0/c;",
         ">;"
     }
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/c;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/c;
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vkontakte/android/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p1, Lcom/vkontakte/android/api/ExtendedUserProfile;->B1:Z
+    iget-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->B1:Z
 
     if-eqz v0, :cond_0
 
@@ -79,7 +79,7 @@
     .line 2
     new-instance v0, Lcom/vk/profile/adapter/items/b0/c;
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/b0/c;-><init>(Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/b0/c;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-object v0
 
@@ -93,9 +93,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/ExtendedUserProfile;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$ifIsCurrentUserPrivacyButton$1;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$ifIsCurrentUserPrivacyButton$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/b0/c;
 
     move-result-object p1
 

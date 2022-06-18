@@ -546,7 +546,7 @@
             "Ljava/lang/String;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;"
         }
     .end annotation
@@ -556,7 +556,7 @@
 
     iget-object p2, p0, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->W:Lcom/vk/fave/fragments/contracts/b;
 
-    invoke-interface {p2}, Lcom/vk/newsfeed/contracts/f;->e()Lcom/vkontakte/android/ui/f0/a;
+    invoke-interface {p2}, Lcom/vk/newsfeed/contracts/f;->e()Lcom/vtosters/lite/ui/f0/a;
 
     move-result-object v2
 
@@ -576,7 +576,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/e;->a(Lcom/vk/fave/e;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vkontakte/android/ui/f0/a;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/e;->a(Lcom/vk/fave/e;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vtosters/lite/ui/f0/a;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -749,13 +749,13 @@
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Videos;
 
-    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object v2
 
     if-eqz v2, :cond_9
 
-    invoke-virtual {v2}, Lcom/vkontakte/android/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
+    invoke-virtual {v2}, Lcom/vtosters/lite/attachments/VideoAttachment;->D1()Lcom/vk/dto/common/VideoFile;
 
     move-result-object v2
 
@@ -766,7 +766,7 @@
     if-ne v2, v0, :cond_9
 
     .line 26
-    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vkontakte/android/attachments/VideoAttachment;
+    invoke-virtual {v1}, Lcom/vk/dto/newsfeed/entries/Videos;->y1()Lcom/vtosters/lite/attachments/VideoAttachment;
 
     move-result-object p1
 

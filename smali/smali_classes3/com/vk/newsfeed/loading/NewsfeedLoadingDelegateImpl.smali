@@ -11,7 +11,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -99,7 +99,7 @@
         value = {
             "()",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -122,10 +122,10 @@
         value = {
             "(I",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;Z)",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -153,7 +153,7 @@
             "Ljava/lang/String;",
             ")",
             "Lc/a/m<",
-            "Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;",
+            "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
@@ -193,7 +193,7 @@
     return p1
 .end method
 
-.method public a(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)Z
+.method public a(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Z
     .locals 3
 
     if-nez p1, :cond_1
@@ -201,12 +201,12 @@
     .line 6
     sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
 
-    iget-object v1, p2, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->isSmartNews:Ljava/lang/Boolean;
+    iget-object v1, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->isSmartNews:Ljava/lang/Boolean;
 
     invoke-virtual {v0, v1}, Lcom/vk/newsfeed/controllers/a;->a(Ljava/lang/Boolean;)V
 
     .line 7
-    iget-object v0, p2, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->notifications:Ljava/util/List;
+    iget-object v0, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->notifications:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
@@ -218,7 +218,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->c:Lcom/vk/newsfeed/contracts/n;
 
-    iget-object v1, p2, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
+    iget-object v1, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
     invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/n;->a(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
 
@@ -233,11 +233,11 @@
     if-eqz v0, :cond_4
 
     .line 10
-    iget-object p1, p2, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->notifications:Ljava/util/List;
+    iget-object p1, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->notifications:Ljava/util/List;
 
     if-nez p1, :cond_2
 
-    iget-object p1, p2, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
+    iget-object p1, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->stories:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
     if-eqz p1, :cond_3
 
@@ -268,7 +268,7 @@
     invoke-interface {v0, v2}, Lcom/vk/newsfeed/contracts/p;->q(I)V
 
     .line 14
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->c(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->c(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->b:Lcom/vk/newsfeed/contracts/p;
@@ -283,7 +283,7 @@
     return p1
 .end method
 
-.method public b(I)Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+.method public b(I)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
     .locals 2
 
     .line 2
@@ -293,7 +293,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;
+    check-cast v0, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
     .line 3
     iget-object v1, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->a:Landroid/util/SparseArray;
@@ -303,7 +303,7 @@
     return-object v0
 .end method
 
-.method public b(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+.method public b(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
     .locals 9
 
     .line 4
@@ -565,7 +565,7 @@
     invoke-interface {v0}, Lcom/vk/newsfeed/contracts/p;->x1()V
 
     .line 24
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->c(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->c(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 
     goto :goto_6
 
@@ -605,7 +605,7 @@
     .line 28
     iget-object p1, p0, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;->c:Lcom/vk/newsfeed/contracts/n;
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/contracts/n;->a(Lcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/contracts/n;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 
     goto :goto_6
 
@@ -630,7 +630,7 @@
     return-void
 .end method
 
-.method public c(ILcom/vkontakte/android/api/newsfeed/NewsfeedGet$Response;)V
+.method public c(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
     .locals 1
 
     .line 1

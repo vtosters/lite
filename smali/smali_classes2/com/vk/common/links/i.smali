@@ -127,7 +127,7 @@
 
     .line 8
     :cond_3
-    instance-of v9, v5, Lcom/vkontakte/android/v;
+    instance-of v9, v5, Lcom/vtosters/lite/v;
 
     if-eqz v9, :cond_4
 

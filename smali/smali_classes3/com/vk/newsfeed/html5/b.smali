@@ -549,7 +549,7 @@
     if-eqz v1, :cond_0
 
     .line 14
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v2
 

@@ -99,24 +99,24 @@
 
     .line 12
     :cond_3
-    invoke-virtual {p4}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vkontakte/android/Relation;
+    invoke-virtual {p4}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vtosters/lite/Relation;
 
     move-result-object p1
 
     sget-object p2, Lcom/vk/search/PeopleSearchParams;->N:Lcom/vk/search/PeopleSearchParams$a;
 
-    invoke-virtual {p2}, Lcom/vk/search/PeopleSearchParams$a;->e()Lcom/vkontakte/android/Relation;
+    invoke-virtual {p2}, Lcom/vk/search/PeopleSearchParams$a;->e()Lcom/vtosters/lite/Relation;
 
     move-result-object p2
 
     if-eq p1, p2, :cond_4
 
     .line 13
-    invoke-virtual {p4}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vkontakte/android/Relation;
+    invoke-virtual {p4}, Lcom/vk/search/PeopleSearchParams;->E1()Lcom/vtosters/lite/Relation;
 
     move-result-object p1
 
-    iget p1, p1, Lcom/vkontakte/android/Relation;->id:I
+    iget p1, p1, Lcom/vtosters/lite/Relation;->id:I
 
     const-string p2, "status"
 

@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/CharSequence;
+.method private final a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/CharSequence;
     .locals 0
 
     .line 15
@@ -77,13 +77,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/profile/data/CountersWrapper;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+.method public final a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/profile/data/CountersWrapper;",
-            "Lcom/vkontakte/android/api/ExtendedUserProfile;",
+            "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Lcom/vk/profile/presenter/BaseProfilePresenter<",
             "*>;)",
             "Lcom/vk/profile/adapter/items/h;"
@@ -99,7 +99,7 @@
 
     new-instance v0, Lcom/vk/profile/ui/d/a$a$d;
 
-    invoke-direct {v0, p3, p1, p2}, Lcom/vk/profile/ui/d/a$a$d;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/profile/data/CountersWrapper;Lcom/vkontakte/android/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p3, p1, p2}, Lcom/vk/profile/ui/d/a$a$d;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     goto :goto_0
 
@@ -117,12 +117,12 @@
     .line 3
     invoke-static {v2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v2, p2, p1}, Lcom/vk/profile/ui/d/a$a;->a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/String;
+    invoke-virtual {p0, v2, p2, p1}, Lcom/vk/profile/ui/d/a$a;->a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 4
-    invoke-direct {p0, p2, p1}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/CharSequence;
+    invoke-direct {p0, p2, p1}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -142,7 +142,7 @@
     return-object p2
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vkontakte/android/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/String;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/CountersWrapper;)Ljava/lang/String;
     .locals 0
 
     .line 14

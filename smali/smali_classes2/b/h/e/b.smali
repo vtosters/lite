@@ -122,7 +122,7 @@
 
     .line 3
     :cond_0
-    const-class v2, Lcom/vkontakte/android/fragments/y2/w;
+    const-class v2, Lcom/vtosters/lite/fragments/y2/w;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -134,9 +134,9 @@
 
     if-eqz v2, :cond_1
 
-    new-instance v0, Lcom/vkontakte/android/fragments/y2/w;
+    new-instance v0, Lcom/vtosters/lite/fragments/y2/w;
 
-    invoke-direct {v0, p1}, Lcom/vkontakte/android/fragments/y2/w;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v0, p1}, Lcom/vtosters/lite/fragments/y2/w;-><init>(Landroid/os/Bundle;)V
 
     goto/16 :goto_0
 

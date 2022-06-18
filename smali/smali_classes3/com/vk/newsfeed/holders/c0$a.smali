@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/c0$a;
-.super Lcom/vkontakte/android/ui/WriteBar$i0;
+.super Lcom/vtosters/lite/ui/WriteBar$i0;
 .source "InlineWriteBarHolder.kt"
 
 
@@ -36,7 +36,7 @@
 
     iput-object p2, p0, Lcom/vk/newsfeed/holders/c0$a;->c:Landroid/view/ViewGroup;
 
-    invoke-direct {p0}, Lcom/vkontakte/android/ui/WriteBar$i0;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/ui/WriteBar$i0;-><init>()V
 
     return-void
 .end method
@@ -62,21 +62,21 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vkontakte/android/NewsComment;
+    invoke-virtual {v0}, Lcom/vk/wall/CommentDraft;->t1()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/c0$a;->b:Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/WriteBar;->getAttachments()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vkontakte/android/NewsComment;->Q:Ljava/util/ArrayList;
+    iput-object v1, v0, Lcom/vtosters/lite/NewsComment;->Q:Ljava/util/ArrayList;
 
     .line 13
     iget-object v0, p0, Lcom/vk/newsfeed/holders/c0$a;->b:Lcom/vk/newsfeed/holders/c0;
@@ -132,7 +132,7 @@
     .locals 3
 
     .line 2
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/PendingGraffitiAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/PendingGraffitiAttachment;
 
     const/4 v1, 0x0
 
@@ -143,15 +143,15 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/c0$a;->b:Lcom/vk/newsfeed/holders/c0;
 
-    check-cast p1, Lcom/vkontakte/android/attachments/b;
+    check-cast p1, Lcom/vtosters/lite/attachments/b;
 
-    invoke-static {v0, p1}, Lcom/vk/newsfeed/holders/c0;->a(Lcom/vk/newsfeed/holders/c0;Lcom/vkontakte/android/attachments/b;)V
+    invoke-static {v0, p1}, Lcom/vk/newsfeed/holders/c0;->a(Lcom/vk/newsfeed/holders/c0;Lcom/vtosters/lite/attachments/b;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    instance-of v0, p1, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    instance-of v0, p1, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
     if-eqz v0, :cond_1
 
@@ -216,11 +216,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/holders/c0$a;->b:Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vkontakte/android/ui/WriteBar;->k()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/WriteBar;->k()Z
 
     move-result p1
 
@@ -274,11 +274,11 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/c0$a;->b:Lcom/vk/newsfeed/holders/c0;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vkontakte/android/ui/WriteBar;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/holders/c0;->p0()Lcom/vtosters/lite/ui/WriteBar;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vkontakte/android/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/WriteBar;->getEmojiAnchor()Landroid/view/View;
 
     move-result-object v1
 

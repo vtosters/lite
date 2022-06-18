@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/j$b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "CountersInfoItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/profile/adapter/items/j;",
         ">;"
     }
@@ -31,7 +31,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/j$b;->c:Landroidx/recyclerview/widget/RecyclerView;
 

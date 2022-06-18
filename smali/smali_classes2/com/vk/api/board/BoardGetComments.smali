@@ -300,11 +300,11 @@
     move-result-object p1
 
     .line 22
-    new-instance v0, Lcom/vkontakte/android/attachments/PollAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/PollAttachment;
 
-    invoke-direct {v0, p1, v9}, Lcom/vkontakte/android/attachments/PollAttachment;-><init>(Lorg/json/JSONObject;Landroid/util/SparseArray;)V
+    invoke-direct {v0, p1, v9}, Lcom/vtosters/lite/attachments/PollAttachment;-><init>(Lorg/json/JSONObject;Landroid/util/SparseArray;)V
 
-    iput-object v0, v3, Lcom/vk/api/board/BoardGetComments$b;->c:Lcom/vkontakte/android/attachments/PollAttachment;
+    iput-object v0, v3, Lcom/vk/api/board/BoardGetComments$b;->c:Lcom/vtosters/lite/attachments/PollAttachment;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

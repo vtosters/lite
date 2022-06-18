@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vkontakte/android/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+    value = Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vkontakte/android/api/i;
+.field final synthetic $profile:Lcom/vtosters/lite/api/i;
 
 .field final synthetic this$0:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vkontakte/android/api/i;)V
+.method constructor <init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vtosters/lite/api/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->this$0:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
-    iput-object p2, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vkontakte/android/api/i;
+    iput-object p2, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vtosters/lite/api/i;
 
     const/4 p1, 0x1
 
@@ -54,9 +54,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vkontakte/android/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vtosters/lite/api/i;
 
-    iget-object v0, v0, Lcom/vkontakte/android/api/ExtendedUserProfile;->z:Lcom/vk/dto/photo/Photo;
+    iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->z:Lcom/vk/dto/photo/Photo;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 

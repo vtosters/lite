@@ -242,11 +242,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/b;)V
     .locals 2
 
     .line 1
-    iget-object v0, p1, Lcom/vkontakte/android/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/entries/PromoButton;
 
@@ -260,12 +260,12 @@
     move-result-object v0
 
     .line 3
-    iget v1, p1, Lcom/vkontakte/android/ui/f0/b;->h:I
+    iget v1, p1, Lcom/vtosters/lite/ui/f0/b;->h:I
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/newsfeed/entries/PromoButton$TrackData;->h(I)V
 
     .line 4
-    iget-object v1, p1, Lcom/vkontakte/android/ui/f0/b;->i:Ljava/lang/String;
+    iget-object v1, p1, Lcom/vtosters/lite/ui/f0/b;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/newsfeed/entries/PromoButton$TrackData;->d(Ljava/lang/String;)V
 
@@ -278,7 +278,7 @@
 
     .line 6
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vkontakte/android/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
 
     return-void
 .end method
@@ -300,7 +300,7 @@
     .line 1
     sget-object p1, Lcom/vk/newsfeed/holders/j0;->I:Lcom/vk/newsfeed/holders/j0$a;
 
-    iget-object v0, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
@@ -311,7 +311,7 @@
     invoke-static {p1, v0}, Lcom/vk/newsfeed/holders/j0$a;->a(Lcom/vk/newsfeed/holders/j0$a;Lcom/vk/dto/newsfeed/entries/PromoButton;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/PromoButton;
 
@@ -319,7 +319,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 

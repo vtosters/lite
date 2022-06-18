@@ -21,7 +21,7 @@
         "Lkotlin/jvm/internal/Lambda;",
         "Lkotlin/jvm/b/b<",
         "Ljava/lang/String;",
-        "Lcom/vkontakte/android/attachments/PendingVideoAttachment;",
+        "Lcom/vtosters/lite/attachments/PendingVideoAttachment;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+.method public final a(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
     .locals 1
 
     .line 1
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->i(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->i(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     move-result-object p1
 
@@ -77,7 +77,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachPhotosAndVideosFromDevice$3;->a(Ljava/lang/String;)Lcom/vkontakte/android/attachments/PendingVideoAttachment;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachPhotosAndVideosFromDevice$3;->a(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     move-result-object p1
 

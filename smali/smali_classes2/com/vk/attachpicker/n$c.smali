@@ -48,11 +48,11 @@
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vkontakte/android/attachments/GraffitiAttachment;
+    new-instance v0, Lcom/vtosters/lite/attachments/GraffitiAttachment;
 
     iget-object v1, p0, Lcom/vk/attachpicker/n$c;->a:Lcom/vk/api/base/Document;
 
-    invoke-direct {v0, v1}, Lcom/vkontakte/android/attachments/GraffitiAttachment;-><init>(Lcom/vk/api/base/Document;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/GraffitiAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
     const-string v1, "result_graffiti"
 

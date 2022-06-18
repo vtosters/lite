@@ -173,31 +173,31 @@
     .line 3
     iget-object v0, p0, Lcom/vk/music/view/v/a;->C:Lcom/vk/music/view/x/q;
 
-    invoke-virtual {p0, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p0, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
 
-    invoke-virtual {p0, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p0, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
 
-    invoke-virtual {p0, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vkontakte/android/ui/b0/i;)V
+    invoke-virtual {p0, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vkontakte/android/ui/b0/i;)V
+.method public a(Lcom/vtosters/lite/ui/b0/i;)V
     .locals 1
-    .param p1    # Lcom/vkontakte/android/ui/b0/i;
+    .param p1    # Lcom/vtosters/lite/ui/b0/i;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vkontakte/android/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/b0/i<",
             "Lcom/vk/music/dto/a;",
             ">;)V"
         }
@@ -208,7 +208,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/view/v/a;->g:Lcom/vk/music/dto/a;
 
-    invoke-virtual {p1, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -341,7 +341,7 @@
     .locals 0
 
     .line 1
-    check-cast p3, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p3, Lcom/vtosters/lite/ui/b0/i;
 
     iget-object p2, p3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -405,7 +405,7 @@
 
     iget-object v0, p0, Lcom/vk/music/view/v/a;->g:Lcom/vk/music/dto/a;
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 5
     iget-object p2, p0, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
@@ -456,7 +456,7 @@
 
     iget-object v0, p0, Lcom/vk/music/view/v/a;->g:Lcom/vk/music/dto/a;
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/music/view/v/a;->D:Lcom/vk/music/view/x/p;
@@ -491,7 +491,7 @@
 
     iget-object v0, p0, Lcom/vk/music/view/v/a;->g:Lcom/vk/music/dto/a;
 
-    invoke-virtual {p2, v0}, Lcom/vkontakte/android/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
 
     .line 15
     iget-object p2, p0, Lcom/vk/music/view/v/a;->C:Lcom/vk/music/view/x/q;
@@ -510,7 +510,7 @@
     .locals 0
 
     .line 1
-    check-cast p2, Lcom/vkontakte/android/ui/b0/i;
+    check-cast p2, Lcom/vtosters/lite/ui/b0/i;
 
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 

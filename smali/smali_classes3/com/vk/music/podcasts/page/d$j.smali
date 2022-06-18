@@ -47,11 +47,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;
+.method public final a(Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->a()Lcom/vk/dto/podcast/PodcastInfo;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;->a()Lcom/vk/dto/podcast/PodcastInfo;
 
     move-result-object v0
 
@@ -113,9 +113,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;
+    check-cast p1, Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/d$j;->a(Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Lcom/vkontakte/android/api/podcasts/PodcastsGetEpisodesWithInfo$Result;
+    invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/d$j;->a(Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;)Lcom/vtosters/lite/api/podcasts/PodcastsGetEpisodesWithInfo$Result;
 
     return-object p1
 .end method

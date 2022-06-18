@@ -38,7 +38,7 @@
 
     const-string v4, "trackInfoAdapter"
 
-    const-string v5, "getTrackInfoAdapter()Lcom/vkontakte/android/audio/player/TrackInfoAdapter;"
+    const-string v5, "getTrackInfoAdapter()Lcom/vtosters/lite/audio/player/TrackInfoAdapter;"
 
     invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -56,7 +56,7 @@
 
     const-string v3, "audioPlayerListenerAdapter"
 
-    const-string v4, "getAudioPlayerListenerAdapter()Lcom/vkontakte/android/audio/player/AudioPlayerListenerAdapter;"
+    const-string v4, "getAudioPlayerListenerAdapter()Lcom/vtosters/lite/audio/player/AudioPlayerListenerAdapter;"
 
     invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -124,7 +124,7 @@
     return-object p0
 .end method
 
-.method private final b()Lcom/vkontakte/android/audio/player/h;
+.method private final b()Lcom/vtosters/lite/audio/player/h;
     .locals 3
 
     iget-object v0, p0, Lcom/vk/music/model/DefaultPlayerModelFactory;->b:Lkotlin/e;
@@ -139,12 +139,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/audio/player/h;
+    check-cast v0, Lcom/vtosters/lite/audio/player/h;
 
     return-object v0
 .end method
 
-.method private final c()Lcom/vkontakte/android/audio/player/a0;
+.method private final c()Lcom/vtosters/lite/audio/player/a0;
     .locals 3
 
     iget-object v0, p0, Lcom/vk/music/model/DefaultPlayerModelFactory;->a:Lkotlin/e;
@@ -159,16 +159,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vkontakte/android/audio/player/a0;
+    check-cast v0, Lcom/vtosters/lite/audio/player/a0;
 
     return-object v0
 .end method
 
-.method public static final synthetic c(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vkontakte/android/audio/player/a0;
+.method public static final synthetic c(Lcom/vk/music/model/DefaultPlayerModelFactory;)Lcom/vtosters/lite/audio/player/a0;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c()Lcom/vkontakte/android/audio/player/a0;
+    invoke-direct {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c()Lcom/vtosters/lite/audio/player/a0;
 
     move-result-object p0
 
@@ -194,15 +194,15 @@
 
     iget-object v1, p0, Lcom/vk/music/model/DefaultPlayerModelFactory;->c:Lcom/vk/audioipc/core/d;
 
-    invoke-direct {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c()Lcom/vkontakte/android/audio/player/a0;
+    invoke-direct {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory;->c()Lcom/vtosters/lite/audio/player/a0;
 
     move-result-object v2
 
-    invoke-direct {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory;->b()Lcom/vkontakte/android/audio/player/h;
+    invoke-direct {p0}, Lcom/vk/music/model/DefaultPlayerModelFactory;->b()Lcom/vtosters/lite/audio/player/h;
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/music/model/j;-><init>(Lcom/vk/audioipc/core/d;Lcom/vkontakte/android/audio/player/a0;Lcom/vkontakte/android/audio/player/h;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/music/model/j;-><init>(Lcom/vk/audioipc/core/d;Lcom/vtosters/lite/audio/player/a0;Lcom/vtosters/lite/audio/player/h;)V
 
     goto :goto_0
 

@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+.method public final a(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
     .locals 4
 
     .line 1
@@ -62,7 +62,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    new-instance v1, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    new-instance v1, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     invoke-interface {p1}, Lcom/vk/im/engine/models/j;->f0()I
 
@@ -87,7 +87,7 @@
     move-result-object v0
 
     :cond_0
-    invoke-direct {v1, v2, v3, v0}, Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v0}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
@@ -104,7 +104,7 @@
     .line 1
     check-cast p1, Lcom/vk/im/engine/models/ProfilesInfo;
 
-    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkMeCallback$a;->a(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vkontakte/android/media/vc/MediaViewerControlsVc$c;
+    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkMeCallback$a;->a(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
     move-result-object p1
 

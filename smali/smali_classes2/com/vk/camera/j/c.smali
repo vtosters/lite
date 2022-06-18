@@ -235,7 +235,7 @@
 
     .line 10
     :cond_4
-    invoke-static {p0}, Lcom/vkontakte/android/f0;->a(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/vtosters/lite/f0;->a(Landroid/content/Context;)I
 
     move-result p0
 

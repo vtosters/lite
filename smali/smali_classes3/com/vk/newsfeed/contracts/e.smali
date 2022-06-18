@@ -31,7 +31,7 @@
         value = {
             "()",
             "Lcom/vk/lists/o<",
-            "Lcom/vkontakte/android/ui/f0/b;",
+            "Lcom/vtosters/lite/ui/f0/b;",
             ">;"
         }
     .end annotation

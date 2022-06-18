@@ -190,7 +190,7 @@
     if-eq p1, v0, :cond_3
 
     .line 15
-    sget p1, Lcom/vkontakte/android/api/j;->error:I
+    sget p1, Lcom/vtosters/lite/api/j;->error:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -200,7 +200,7 @@
 
     .line 16
     :cond_1
-    sget p1, Lcom/vkontakte/android/api/j;->video_already_added:I
+    sget p1, Lcom/vtosters/lite/api/j;->video_already_added:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -210,7 +210,7 @@
 
     .line 17
     :cond_2
-    sget p1, Lcom/vkontakte/android/api/j;->err_album_full:I
+    sget p1, Lcom/vtosters/lite/api/j;->err_album_full:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -220,7 +220,7 @@
 
     .line 18
     :cond_3
-    sget p1, Lcom/vkontakte/android/api/j;->err_access:I
+    sget p1, Lcom/vtosters/lite/api/j;->err_access:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -230,7 +230,7 @@
 
     .line 19
     :cond_4
-    sget p1, Lcom/vkontakte/android/api/j;->err_text:I
+    sget p1, Lcom/vtosters/lite/api/j;->err_text:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -240,7 +240,7 @@
 
     .line 20
     :cond_5
-    sget p1, Lcom/vkontakte/android/api/j;->err_internal:I
+    sget p1, Lcom/vtosters/lite/api/j;->err_internal:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -272,7 +272,7 @@
     invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
 
     .line 10
-    sget p1, Lcom/vkontakte/android/api/j;->error:I
+    sget p1, Lcom/vtosters/lite/api/j;->error:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -396,7 +396,7 @@
     invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
 
     .line 12
-    sget p1, Lcom/vkontakte/android/api/j;->error:I
+    sget p1, Lcom/vtosters/lite/api/j;->error:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

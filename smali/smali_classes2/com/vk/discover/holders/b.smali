@@ -1,5 +1,5 @@
 .class public final Lcom/vk/discover/holders/b;
-.super Lcom/vkontakte/android/ui/b0/i;
+.super Lcom/vtosters/lite/ui/b0/i;
 .source "ArticlesHolder.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vkontakte/android/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/b0/i<",
         "Lcom/vk/dto/newsfeed/entries/LatestNewsItem;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -32,7 +32,7 @@
     const v0, 0x7f0d0187
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vkontakte/android/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -99,7 +99,7 @@
 
     const v0, 0x7f080349
 
-    invoke-virtual {p0, v0}, Lcom/vkontakte/android/ui/b0/i;->l(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->l(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -250,14 +250,14 @@
 
     .line 2
     :cond_0
-    iget-object p1, p0, Lcom/vkontakte/android/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/newsfeed/entries/LatestNewsItem;
 
     .line 3
     sget-object v0, Lcom/vk/common/links/h;->a:Lcom/vk/common/links/h$a;
 
-    invoke-virtual {p0}, Lcom/vkontakte/android/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

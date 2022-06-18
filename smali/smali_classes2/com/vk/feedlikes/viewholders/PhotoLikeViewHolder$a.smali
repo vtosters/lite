@@ -77,7 +77,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$a;->a:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
     .line 7
     check-cast v5, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v5}, Lcom/vkontakte/android/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v5}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
 
     move-result-object v6
 
@@ -167,7 +167,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder$a;->a:Lcom/vk/feedlikes/viewholders/PhotoLikeViewHolder;
 
-    invoke-virtual {v0}, Lcom/vkontakte/android/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 

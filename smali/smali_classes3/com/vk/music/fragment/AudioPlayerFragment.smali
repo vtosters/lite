@@ -867,7 +867,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/f;->a(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
 
     .line 11
     iput-boolean v2, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->M:Z
@@ -1224,7 +1224,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lcom/vkontakte/android/utils/f;->b([Lcom/vk/music/common/a;)V
+    invoke-static {v0}, Lcom/vtosters/lite/utils/f;->b([Lcom/vk/music/common/a;)V
 
     .line 4
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
@@ -1298,7 +1298,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
 
-    invoke-static {v0}, Lcom/vkontakte/android/audio/player/y;->a(Lcom/vk/music/player/d;)V
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/y;->a(Lcom/vk/music/player/d;)V
 
     return-void
 .end method
@@ -1349,7 +1349,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment;->O:Lcom/vk/music/player/d;
 
-    invoke-static {v0}, Lcom/vkontakte/android/audio/player/y;->b(Lcom/vk/music/player/d;)V
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/y;->b(Lcom/vk/music/player/d;)V
 
     .line 7
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->b()V
@@ -1408,7 +1408,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {p1, v0}, Lcom/vkontakte/android/utils/f;->b(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/utils/f;->b(Landroid/os/Bundle;[Lcom/vk/music/common/a;)V
 
     return-void
 .end method
