@@ -1534,6 +1534,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->hasMusicSubscription()Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -2382,6 +2386,10 @@
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/core/bundle/a;->a(Lcom/vk/core/bundle/d;Z)Z
+
+    move-result v0
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->isMusicRestricted()Z
 
     move-result v0
 

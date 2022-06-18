@@ -241,7 +241,7 @@ public class Preferences {
     }
 
     public static boolean isMusicRestricted() {
-        return getBoolValue("isMusicRestricted", true);
+        return getBoolValue("isMusicRestricted", false);
     }
 
     public static boolean msgflat() {
