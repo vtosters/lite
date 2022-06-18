@@ -49,9 +49,9 @@ if "%ERRORLEVEL%" == "0" (
 )
 
 echo.
-echo %ESC%[1;4mMove dex8 to source dir...%ESC%[0m
+echo %ESC%[1;4mMove dex7 to source dir...%ESC%[0m
 echo.
-move app\classes8.dex smali\
+move app\classes7.dex smali\
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
