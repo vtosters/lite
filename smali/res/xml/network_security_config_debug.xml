@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <debug-overrides>
+        <trust-anchors>
+            <!-- Trust user added CAs while debuggable only -->
+            <certificates src="user" />
+            <certificates src="system" />
+        </trust-anchors>
+    </debug-overrides>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config>
+        <!-- Make sure your URL Server here -->
+        <domain includeSubdomains="true">vk.com</domain>
+        <trust-anchors>
+            <certificates src="user"/>
+            <certificates src="system"/>
+        </trust-anchors>
+    </domain-config>
+    <domain-config>
+        <!-- Make sure your URL Server here -->
+        <domain includeSubdomains="true">api.vk.com</domain>
+        <trust-anchors>
+            <certificates src="user"/>
+            <certificates src="system"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
