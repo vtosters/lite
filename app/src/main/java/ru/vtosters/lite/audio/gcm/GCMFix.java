@@ -41,14 +41,18 @@ public class GCMFix {
         genNewKey();
     }
 
-    public static String requestTokenV2(){
-        return FixToken2();
+    public static String requestTokenV2(String orig){
+        if(musicFixNew()) return FixToken2();
+        return orig;
+    }
+
+    public static String requestToken(String orig){
+        if(musicFixNew()) return FixToken();
+        if(orig.equals("")) return requestToken();
+        return orig;
     }
 
     public static String requestToken() {
-        if(musicFixNew()){
-            return FixToken();
-        }
         String xappide;
         try {
             String[] aidarr = {"3974055026275073921", "4418584909973341826", "4585634953328772978"};
