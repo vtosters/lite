@@ -403,9 +403,19 @@
 .end method
 
 .method public final c()Z
-    .locals 1
+    .locals 2
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
     iget-object v0, p0, Lcom/vk/core/network/proxy/b;->a:Ljava/security/PublicKey;
 
     if-eqz v0, :cond_0

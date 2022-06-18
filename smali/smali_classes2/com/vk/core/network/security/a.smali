@@ -351,7 +351,7 @@
 .end method
 
 .method public checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/cert/CertificateException;
@@ -360,14 +360,13 @@
 
     invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
     return-void
 
     :cond_7
-    .line 1
     iget-object v0, p0, Lcom/vk/core/network/security/a;->a:Ljavax/net/ssl/X509TrustManager;
 
     if-eqz v0, :cond_0
@@ -379,7 +378,7 @@
 .end method
 
 .method public checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/cert/CertificateException;
@@ -388,9 +387,9 @@
 
     invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
     return-void
 
@@ -406,13 +405,13 @@
 .end method
 
 .method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
-    .locals 1
+    .locals 2
 
     invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
     const/4 v0, 0x0
 

@@ -967,22 +967,6 @@
     :goto_0
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->addPreferencesFromResource(I)V
 
-    const-string p1, "mytrackerLocationCrapEnabled"
-
-    .line 3
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/preference/SwitchPreference;
-
-    .line 4
-    new-instance v0, Lcom/vtosters/lite/fragments/l0;
-
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/l0;-><init>(Lcom/vtosters/lite/fragments/z1;)V
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
-
     const-string p1, "trackInstalledApps"
 
     .line 5
@@ -992,28 +976,8 @@
 
     check-cast p1, Landroidx/preference/SwitchPreference;
 
-    .line 6
-    sget-object v0, Lcom/vk/common/a;->b:Lcom/vk/common/a;
-
-    invoke-virtual {v0}, Lcom/vk/common/a;->c()Z
-
-    move-result v0
-
     const-string v1, "app"
 
-    if-eqz v0, :cond_1
-
-    .line 7
-    new-instance v0, Lcom/vtosters/lite/fragments/z1$a;
-
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/z1$a;-><init>(Lcom/vtosters/lite/fragments/z1;)V
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
-
-    goto :goto_1
-
-    .line 8
-    :cond_1
     invoke-virtual {p0, v1}, Lcom/vtosters/lite/fragments/u2/b;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -1022,7 +986,6 @@
 
     invoke-virtual {v0, p1}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    :goto_1
     const-string p1, "useProxyServer"
 
     .line 9
