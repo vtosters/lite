@@ -188,7 +188,7 @@ public class Preferences {
     }
 
     public static boolean dev() {
-        return getBoolValue("dev", false);
+        return true; // getBoolValue("dev", false);
     }
 
     public static boolean devmenu() {
@@ -244,7 +244,7 @@ public class Preferences {
     }
 
     public static boolean isMusicRestricted() {
-        return getBoolValue("isMusicRestricted", false);
+        return getBoolValue("isMusicRestricted", true);
     }
 
     public static boolean msgflat() {

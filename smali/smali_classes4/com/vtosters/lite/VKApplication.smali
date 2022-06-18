@@ -865,19 +865,6 @@
 .method private final b(Landroid/app/Application;)V
     .locals 2
 
-    .line 15
-    sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
-
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->h()Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/vtosters/lite/VKApplication$g;
-
-    invoke-direct {v1, p1}, Lcom/vtosters/lite/VKApplication$g;-><init>(Landroid/app/Application;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
     return-void
 .end method
 

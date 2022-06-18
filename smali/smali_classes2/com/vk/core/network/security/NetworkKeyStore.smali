@@ -84,9 +84,9 @@
 
     invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
     return-void
 
