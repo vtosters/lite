@@ -4,7 +4,8 @@ import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 
 import android.content.res.Resources;
-import android.support.v4.app.FragmentTransaction;
+
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragAnimationKit {
     // Q

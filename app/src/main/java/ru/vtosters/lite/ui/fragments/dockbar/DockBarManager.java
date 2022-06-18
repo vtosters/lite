@@ -11,24 +11,21 @@ import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
-import com.vk.feedlikes.fragments.FeedLikesFragment;
+import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.menu.MenuFragment;
-import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
-import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.GamesFragment;
 import com.vtosters.lite.fragments.PhotosFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
-import com.vtosters.lite.fragments.d.DocumentsViewFragment;
-import com.vtosters.lite.fragments.f.FriendsFragment;
-import com.vtosters.lite.fragments.g.BirthdaysFragment;
-import com.vtosters.lite.fragments.h.GroupsFragment;
+import com.vtosters.lite.fragments.friends.FriendsFragment;
+import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesPostListFragment;
-import com.vtosters.lite.fragments.m.VideosFragment;
-import com.vtosters.lite.fragments.messages.dialogs.DialogsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
+import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
+import com.vtosters.lite.fragments.t2.c.DialogsFragment;
+import com.vtosters.lite.fragments.y2.VideosFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,6 +42,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import ru.vtosters.lite.R;
 
 public class DockBarManager {
     public static final int MIN_SELECTED_TABS_LIMIT = 3;

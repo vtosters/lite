@@ -3,8 +3,6 @@ package ru.vtosters.lite.ui.fragments;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.SettBackup.backupSettings;
@@ -16,11 +14,10 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
 
 import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
-import com.vk.core.f.FileUtils;
+import com.vk.core.preference.Preference;
 import com.vk.core.util.AppContextHolder;
 import com.vk.core.util.ToastUtils;
 import com.vk.imageloader.VKImageLoader;
@@ -29,6 +26,9 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
+
+import b.h.g.m.FileUtils;
+import ru.vtosters.lite.ui.fragments.OtherFragment.a;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
 

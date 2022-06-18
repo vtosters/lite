@@ -3,8 +3,8 @@ package ru.vtosters.lite.ui.fragments;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
 
+import com.vk.core.preference.Preference;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
