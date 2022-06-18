@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@anim/linear_out_slow_in"
-    android:shareInterpolator="true">
-    <translate
-        android:duration="300"
-        android:fromYDelta="-100.0%p"
-        android:toYDelta="0.0" />
-</set>

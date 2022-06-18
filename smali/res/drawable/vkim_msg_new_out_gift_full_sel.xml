@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<nine-patch android:src="@drawable/vkim_bg_msg_out_def_full"
-    android:tint="?im_history_outgoing_background_gift_selected"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
