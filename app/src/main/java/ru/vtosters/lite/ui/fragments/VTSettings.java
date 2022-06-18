@@ -63,8 +63,8 @@ import ru.vtosters.lite.utils.SSFS;
 public class VTSettings extends MaterialPreferenceToolbarFragment {
 
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
 
         String keyVKAccount = getCurrentAccount().getString("key_vk_account", "");
         String avatarUrl = withRegex(keyVKAccount, ".*\"photo\":\\{.*?:\"(.*?)\"\\}.*", "https://vk.com/images/camera_200.png").replace("\\/", "/");
@@ -86,7 +86,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         String about = "Commit: " + getBuildNumber();
 
         int vtosterXml = getIdentifier("empty", "xml");
-        this.a(vtosterXml);
+        this.addPreferencesFromResource(vtosterXml);
 
         if (vkme()) {
             PreferencesUtil.addPreferenceDrawable(this, "", name, id, drawableFromUrl(avatarUrl), preference -> {
