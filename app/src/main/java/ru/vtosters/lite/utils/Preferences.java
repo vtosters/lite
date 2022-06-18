@@ -26,6 +26,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Debug;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
@@ -48,6 +49,8 @@ public class Preferences {
 
     public static Integer VKBUILD = 12116; // 3439 orig
     public static String VKVER = "7.24"; // 5.29 orig
+
+    static final boolean isDebug = Debug.isDebuggerConnected();
 
     public static void init(Application application) {
         setupFilters();
@@ -185,11 +188,11 @@ public class Preferences {
     }
 
     public static boolean dev() {
-        return getBoolValue("dev", false);
+        return getBoolValue("dev", false) || isDebug;
     }
 
     public static boolean devmenu() {
-        return getBoolValue("devmenu", false);
+        return getBoolValue("devmenu", false) || isDebug;
     }
 
     public static boolean dnr() {
@@ -305,7 +308,7 @@ public class Preferences {
     }
 
     public static boolean ssl() {
-        return getBoolValue("ssl", true);
+        return !isDebug; // getBoolValue("ssl", true) ||
     }
 
     public static boolean stories() {

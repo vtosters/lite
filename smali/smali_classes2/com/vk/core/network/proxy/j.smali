@@ -696,7 +696,9 @@
     return v0
 
     :cond_1
-    const/4 v0, 0x1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+
+    move-result v0
 
     return v0
 .end method
