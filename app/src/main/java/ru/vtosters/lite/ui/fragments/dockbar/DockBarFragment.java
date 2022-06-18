@@ -1,13 +1,9 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.a.ItemTouchHelper;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +11,12 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.vk.core.fragments.FragmentImpl.a;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
 
