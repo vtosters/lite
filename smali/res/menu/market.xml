@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_market_outline_24" android:id="@id/menu_cart" android:title="@string/market_cart" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_search_outline_28" android:id="@id/search" android:title="@string/search" android:showAsAction="always" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
+</menu>

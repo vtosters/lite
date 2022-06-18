@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/map_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:foreground="@drawable/story_geo_map_foreground" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <com.vk.core.view.StaticMapView android:id="@id/map_view" android:layout_width="fill_parent" android:layout_height="110.0dip" app:smv_cornerRadius="4.0dip" />
+        <com.vk.core.view.TintTextView android:textSize="14.0dip" android:textColor="@color/gray_800" android:gravity="start|center" android:layout_gravity="center|top" android:id="@id/distance" android:paddingTop="16.0dip" android:paddingBottom="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:singleLine="true" android:drawablePadding="3.0dip" android:drawableStart="@drawable/ic_directions_walk_24" android:paddingStart="20.0dip" android:paddingEnd="28.0dip" app:drawableTint="@color/gray_800" app:fontFamily="@font/roboto_medium" />
+    </FrameLayout>
+    <com.vk.core.view.TintTextView android:gravity="start|center" android:id="@id/address" android:background="@drawable/rounded_list_selector" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:singleLine="true" android:drawablePadding="12.0dip" android:drawableStart="@drawable/ic_place_outline_20" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:drawableTint="?icon_outline_secondary" style="@style/VKUIText.Text" />
+</LinearLayout>

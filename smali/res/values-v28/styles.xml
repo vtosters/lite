@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V28.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V28.Theme.AppCompat.Light" />
+    <style name="PickerFullScreenNoStatusDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+    </style>
+    <style name="StorySettingsRed">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:lineSpacingExtra">4.0sp</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineHeight">20.0sp</item>
+    </style>
+    <style name="StorySettingsSubtitle">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">?text_secondary</item>
+        <item name="android:lineSpacingExtra">3.0sp</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineHeight">16.0sp</item>
+    </style>
+    <style name="StorySettingsTitle">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:lineSpacingExtra">4.0sp</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineHeight">16.0sp</item>
+    </style>
+    <style name="StorySettingsTitle2">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">?text_primary</item>
+        <item name="android:lineSpacingExtra">4.0sp</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineHeight">20.0sp</item>
+    </style>
+    <style name="TooltipDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="TooltipFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="VideoFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorAccent">#ffffffff</item>
+    </style>
+    <style name="VideoPlayerTranslucentStyle" parent="@style/TranslucentStyle">
+        <item name="android:textColorSecondary">#ccffffff</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="Vk.Theme.VkApp" parent="@style/Vk.Theme">
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
+        <item name="im_avatars_combine">true</item>
+        <item name="im_bg_chat">?background_content</item>
+        <item name="im_bg_install_vkme_btn_bg">@drawable/bg_install_vkme_vkapp</item>
+        <item name="im_bg_modal_dialog">@drawable/list_dialog_bg</item>
+        <item name="im_bg_sticky_date">@drawable/bg_sticky_date</item>
+        <item name="im_button_all_caps">true</item>
+        <item name="im_contact_name_font_family">@string/font_family_regular</item>
+        <item name="im_dialogs_divider">?separator_alpha</item>
+        <item name="im_dialogs_item_style">@style/Vk.Theme.DialogItem.VkApp</item>
+        <item name="im_dialogs_state_style">@style/Vk.Theme.DialogsStateProgress.VkApp</item>
+        <item name="im_dropdown_arrow_tint">#ffdce5f0</item>
+        <item name="im_dropdown_icon_color">?icon_secondary</item>
+        <item name="im_history_banner_bg_color">?background_light</item>
+        <item name="im_ic_add_members">@drawable/ic_user_add_24</item>
+        <item name="im_ic_annul">@drawable/vkim_ic_do_not_disturb_24</item>
+        <item name="im_ic_attach">@drawable/ic_attachment_outline_28</item>
+        <item name="im_ic_back">@drawable/ic_back_outline_28</item>
+        <item name="im_ic_back_toolbar">@drawable/vkim_ic_back_toolbar</item>
+        <item name="im_ic_bot_keyboard">@drawable/ic_keyboard_bots_outline_28</item>
+        <item name="im_ic_cancel">@drawable/ic_cancel_24</item>
+        <item name="im_ic_chat_settings">?im_ic_info</item>
+        <item name="im_ic_clear_history">@drawable/vkim_ic_delete_24</item>
+        <item name="im_ic_copy">@drawable/vkim_ic_msg_copy</item>
+        <item name="im_ic_delete">@drawable/vkim_ic_msg_delete</item>
+        <item name="im_ic_done">@drawable/ic_check_circle_28</item>
+        <item name="im_ic_edit_msg">@drawable/ic_edit_28</item>
+        <item name="im_ic_emoji">@drawable/ic_smile_outline_28</item>
+        <item name="im_ic_forward">@drawable/vkim_ic_msg_forward</item>
+        <item name="im_ic_group_profile">?im_ic_info</item>
+        <item name="im_ic_info">@drawable/vkim_ic_about_24</item>
+        <item name="im_ic_invite_link">@drawable/ic_link_circle_24</item>
+        <item name="im_ic_keyboard">@drawable/ic_keyboard_24</item>
+        <item name="im_ic_leave_dialog">@drawable/vkim_ic_cancel_24</item>
+        <item name="im_ic_microphone">@drawable/ic_voice_outline_28</item>
+        <item name="im_ic_more_vertical">@drawable/vkim_ic_more_vertical_24</item>
+        <item name="im_ic_notifications_off">@drawable/vkim_ic_mute_24</item>
+        <item name="im_ic_notifications_on">@drawable/vkim_ic_volume_24</item>
+        <item name="im_ic_pin">@drawable/ic_pin_24</item>
+        <item name="im_ic_pinned_msg_detach">@drawable/ic_unpin_24</item>
+        <item name="im_ic_pinned_msg_hide">@drawable/ic_hide_24</item>
+        <item name="im_ic_pinned_msg_show">@drawable/ic_view_24</item>
+        <item name="im_ic_qr">@drawable/ic_qr_24</item>
+        <item name="im_ic_receive_msgs_disable">@drawable/vkim_ic_do_not_disturb_24</item>
+        <item name="im_ic_receive_msgs_enable">@drawable/vkim_ic_check_circle_on_24</item>
+        <item name="im_ic_reply">@drawable/vkim_ic_msg_reply</item>
+        <item name="im_ic_report">@drawable/vkim_ic_msg_spam_24dp</item>
+        <item name="im_ic_return_to_dialog">@drawable/vkim_ic_enter_24</item>
+        <item name="im_ic_search">@drawable/ic_search_24</item>
+        <item name="im_ic_send_bomb">@drawable/vkim_ic_bomb_outline_28</item>
+        <item name="im_ic_send_msg">@drawable/ic_send_28</item>
+        <item name="im_ic_share">@drawable/ic_share_24</item>
+        <item name="im_ic_show_attaches">@drawable/vkim_ic_attachments_24</item>
+        <item name="im_ic_user_profile">@drawable/ic_user_24</item>
+        <item name="im_ic_voip_call_audio">@drawable/vkui_ic_voip_call_24</item>
+        <item name="im_ic_voip_call_video">@drawable/vkui_ic_voip_call_video_24</item>
+        <item name="im_ic_write_msg">@drawable/ic_add_24</item>
+        <item name="im_msg_avatar_margin_top">1.0dip</item>
+        <item name="im_msg_box_margin_start_no_avatar">6.0dip</item>
+        <item name="im_msg_box_margin_start_with_avatar">6.0dip</item>
+        <item name="im_msg_part_button_bg">@drawable/vkim_msg_part_btn_bg</item>
+        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_old</item>
+        <item name="im_msg_part_story_padding">0.5dip</item>
+        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_old</item>
+        <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_old</item>
+        <item name="im_new_theme">false</item>
+        <item name="im_toolbar_addition_top_margin">0.0dip</item>
+        <item name="im_toolbar_search_style">@style/Vk.Theme.Search.VkApp</item>
+        <item name="im_toolbar_shadow_style_line">@style/Vk.Theme.ToolbarShadow.Line</item>
+        <item name="im_toolbar_shadow_style_thick">@style/Vk.Theme.ToolbarShadow.Thick.VkApp</item>
+        <item name="im_toolbar_shadow_style_thin">@style/Vk.Theme.ToolbarShadow.Thin</item>
+        <item name="im_unread_line_divider">?im_service_message_text</item>
+    </style>
+    <style name="Vk.Theme.VkMe" parent="@style/Vk.Theme">
+        <item name="android:windowLayoutInDisplayCutoutMode">default</item>
+        <item name="im_avatars_combine">false</item>
+        <item name="im_bg_sticky_date">@drawable/bg_sticky_date</item>
+        <item name="im_button_all_caps">false</item>
+        <item name="im_contact_name_font_family">@string/font_family_medium</item>
+        <item name="im_dialogs_divider">@null</item>
+        <item name="im_dialogs_item_style">@style/Vk.Theme.DialogItem.VkMe</item>
+        <item name="im_dialogs_state_style">@style/Vk.Theme.DialogsStateProgress.VkMe</item>
+        <item name="im_dropdown_arrow_tint">?icon_tertiary</item>
+        <item name="im_dropdown_icon_color">?accent</item>
+        <item name="im_history_banner_bg_color">?header_background</item>
+        <item name="im_ic_annul">@drawable/ic_do_not_disturb_outline_28</item>
+        <item name="im_ic_attach">@drawable/ic_attach_outline_28</item>
+        <item name="im_ic_back">@drawable/ic_back_outline_28</item>
+        <item name="im_ic_back_toolbar">@drawable/vkim_ic_back_toolbar</item>
+        <item name="im_ic_bot_keyboard">@drawable/ic_keyboard_bots_outline_28</item>
+        <item name="im_ic_cancel">@drawable/ic_cancel_outline_28</item>
+        <item name="im_ic_chat_settings">?im_ic_info</item>
+        <item name="im_ic_clear_history">@drawable/ic_delete_outline_28</item>
+        <item name="im_ic_copy">@drawable/ic_copy_outline_28</item>
+        <item name="im_ic_delete">@drawable/ic_delete_outline_28</item>
+        <item name="im_ic_done">@drawable/ic_check_circle_outline_28</item>
+        <item name="im_ic_edit_msg">@drawable/ic_edit_28</item>
+        <item name="im_ic_emoji">@drawable/ic_smile_outline_28</item>
+        <item name="im_ic_forward">@drawable/ic_forward_outline_28</item>
+        <item name="im_ic_group_profile">?im_ic_info</item>
+        <item name="im_ic_info">@drawable/ic_info_outline_28</item>
+        <item name="im_ic_invite_link">@drawable/ic_link_circle_outline_28</item>
+        <item name="im_ic_keyboard">@drawable/ic_keyboard_outline_28</item>
+        <item name="im_ic_leave_dialog">@drawable/ic_cancel_circle_outline_28</item>
+        <item name="im_ic_microphone">@drawable/ic_voice_outline_28</item>
+        <item name="im_ic_more_vertical">@drawable/ic_more_vertical_28</item>
+        <item name="im_ic_notifications_off">@drawable/ic_mute_outline_28</item>
+        <item name="im_ic_notifications_on">@drawable/ic_volume_outline_28</item>
+        <item name="im_ic_pin">@drawable/ic_pin_outline_28</item>
+        <item name="im_ic_pinned_msg_detach">@drawable/ic_unpin_outline_28</item>
+        <item name="im_ic_pinned_msg_hide">@drawable/ic_hide_outline_28</item>
+        <item name="im_ic_pinned_msg_show">@drawable/ic_view_outline_28</item>
+        <item name="im_ic_qr">@drawable/ic_qr_outline_28</item>
+        <item name="im_ic_receive_msgs_disable">@drawable/ic_do_not_disturb_outline_28</item>
+        <item name="im_ic_receive_msgs_enable">@drawable/ic_check_circle_outline_28</item>
+        <item name="im_ic_reply">@drawable/ic_reply_outline_28</item>
+        <item name="im_ic_report">@drawable/ic_report_outline_28</item>
+        <item name="im_ic_return_to_dialog">@drawable/ic_return_outline_28</item>
+        <item name="im_ic_search">@drawable/ic_search_24</item>
+        <item name="im_ic_send_bomb">@drawable/vkim_ic_bomb_outline_28</item>
+        <item name="im_ic_send_msg">@drawable/ic_message_send_28</item>
+        <item name="im_ic_share">@drawable/ic_share_outline_28</item>
+        <item name="im_ic_show_attaches">@drawable/ic_media_outline_28</item>
+        <item name="im_ic_user_profile">@drawable/user_outline_28</item>
+        <item name="im_ic_voip_call_audio">@drawable/ic_phone_outline_28</item>
+        <item name="im_ic_voip_call_video">@drawable/ic_videocam_28_outline</item>
+        <item name="im_ic_write_msg">@drawable/ic_add_24</item>
+        <item name="im_msg_avatar_margin_top">3.0dip</item>
+        <item name="im_msg_box_margin_start_no_avatar">0.0dip</item>
+        <item name="im_msg_box_margin_start_with_avatar">8.0dip</item>
+        <item name="im_msg_part_button_bg">@drawable/vkim_msg_part_oval_btn_bg</item>
+        <item name="im_msg_part_label_contrast_bg">@drawable/vkim_msg_part_label_contrast_bg_new</item>
+        <item name="im_msg_part_time_contrast_bg">@drawable/vkim_msg_part_time_contrast_bg_new</item>
+        <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_new</item>
+        <item name="im_new_theme">true</item>
+        <item name="im_toolbar_addition_top_margin">12.0dip</item>
+        <item name="im_toolbar_search_style">@style/Vk.Theme.Search.VkMe</item>
+        <item name="im_toolbar_shadow_style_line">@style/Vk.Theme.ToolbarShadow.Line</item>
+        <item name="im_toolbar_shadow_style_thick">@style/Vk.Theme.ToolbarShadow.Thick.VkMe</item>
+        <item name="im_toolbar_shadow_style_thin">@style/Vk.Theme.ToolbarShadow.Thin</item>
+        <item name="im_unread_line_divider">?separator_alpha</item>
+        <item name="tabBarIndicator">@drawable/tab_indicator_milkshake</item>
+        <item name="tabBarTextAllCaps">false</item>
+        <item name="tabBarTextSize">16.0sp</item>
+        <item name="tabBarTheme">@style/TabBarThemeVkMe</item>
+        <item name="toolbar_separator">@drawable/bg_toolbar_separator</item>
+        <item name="toolbar_shadow">@drawable/bg_toolbar_shadow_light</item>
+        <item name="toolbar_title_textColor">?header_tint</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
+        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
+        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+    </style>
+</resources>

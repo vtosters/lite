@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/im_appbar" android:layout_width="fill_parent" android:layout_height="72.0dip" style="@style/Vk.Theme.Appbar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/im_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/VkIm.Toolbar.Style.LargeWithBack">
+            <TextView android:textAppearance="@style/VkIm.Toolbar.AppIm.Title" android:id="@id/vkim_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/im_accessibility_contacts_tab" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/vkim_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+    <ViewStub android:id="@id/im_contacts_search_stub" android:inflatedId="@id/im_contacts_search_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

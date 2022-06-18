@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sync-adapter android:accountType="com.vkontakte.account" android:contentAuthority="com.android.contacts" android:userVisible="true" android:supportsUploading="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

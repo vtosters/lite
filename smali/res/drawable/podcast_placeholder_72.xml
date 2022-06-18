@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center|clip_horizontal|clip_vertical" android:left="24.0dip" android:top="24.0dip" android:right="24.0dip" android:bottom="24.0dip">
+        <bitmap android:gravity="center" android:src="@drawable/ic_podcast_24" android:tint="?placeholder_icon_foreground_primary" />
+    </item>
+</layer-list>

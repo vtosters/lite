@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_search_24" android:tint="?accent" android:contentDescription="@null" android:layout_marginStart="4.0dip" />
+    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="?accent" android:layout_gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_search_in_msgs" android:lines="1" android:lineSpacingExtra="3.0sp" android:fontFamily="sans-serif" android:layout_marginStart="52.0dip" android:layout_marginEnd="16.0dip" />
+</FrameLayout>

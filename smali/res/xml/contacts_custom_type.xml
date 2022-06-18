@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContactsSource
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ContactsDataKind android:icon="@drawable/ic_launcher" android:mimeType="vnd.android.cursor.item/vnd.com.vkontakte.android.profile" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true" />
+    <ContactsDataKind android:icon="@drawable/ic_launcher" android:mimeType="vnd.android.cursor.item/vnd.com.vkontakte.android.sendmsg" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true" />
+    <ContactsDataKind android:icon="@drawable/ic_launcher" android:mimeType="vnd.android.cursor.item/vnd.com.vkontakte.android.voipcall" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true" />
+</ContactsSource>

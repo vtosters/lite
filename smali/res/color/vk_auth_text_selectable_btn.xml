@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="?vk_button_primary_foreground" />
+    <item android:color="?vk_content_tint_foreground" />
+</selector>

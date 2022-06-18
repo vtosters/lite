@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="accessibility_comments">
+        <item quantity="other">%s пікір</item>
+        <item quantity="one">%s пікір</item>
+    </plurals>
+    <plurals name="accessibility_likes">
+        <item quantity="other">%,d адам ұнатты</item>
+        <item quantity="one">%,d адам ұнатты</item>
+    </plurals>
+    <plurals name="accessibility_reposts">
+        <item quantity="other">%d адам бөлісті</item>
+        <item quantity="one">%d адам бөлісті</item>
+    </plurals>
+    <plurals name="accessibility_views">
+        <item quantity="other">%,d рет көрілді</item>
+        <item quantity="one">%,d рет көрілді</item>
+    </plurals>
+    <plurals name="address_plurals">
+        <item quantity="other">/m%d/e мекенжай</item>
+        <item quantity="one">/m%d/e мекенжай</item>
+    </plurals>
+    <plurals name="album_numphotos">
+        <item quantity="other">%,d фото</item>
+        <item quantity="one">%,d фото</item>
+    </plurals>
+    <plurals name="album_video_count">
+        <item quantity="other">%,d бейнежазба</item>
+        <item quantity="one">%,d бейнежазба</item>
+    </plurals>
+    <plurals name="albums">
+        <item quantity="other">%,d альбом</item>
+        <item quantity="one">%,d альбом</item>
+    </plurals>
+    <plurals name="article_friends">
+        <item quantity="other">%s дос</item>
+        <item quantity="one">%s дос</item>
+    </plurals>
+    <plurals name="article_subscribers">
+        <item quantity="other">%s жазылушы</item>
+        <item quantity="one">%s жазылушы</item>
+    </plurals>
+    <plurals name="article_view_count">
+        <item quantity="other">%s рет көрілді</item>
+        <item quantity="one">%s рет көрілді</item>
+    </plurals>
+    <plurals name="balance_votes">
+        <item quantity="other">%,d дауыс</item>
+        <item quantity="one">%,d дауыс</item>
+    </plurals>
+    <plurals name="balance_votes_simple">
+        <item quantity="other"> дауыс</item>
+        <item quantity="one"> дауыс</item>
+    </plurals>
+    <plurals name="birthday_age">
+        <item quantity="other">%,d жас</item>
+        <item quantity="one">%,d жас</item>
+    </plurals>
+    <plurals name="birthday_today">
+        <item quantity="other">%,d жасқа толды</item>
+        <item quantity="one">%,d жасқа толды</item>
+    </plurals>
+    <plurals name="catalog_video_total_title">
+        <item quantity="other">%,d бейнежазба</item>
+        <item quantity="one">%,d бейнежазба</item>
+    </plurals>
+    <plurals name="chat_members">
+        <item quantity="other">%,d әңгімелесуші</item>
+        <item quantity="one">%,d әңгімелесуші</item>
+    </plurals>
+    <plurals name="comment_likes">
+        <item quantity="other">%,d адам ұнатты</item>
+        <item quantity="one">%,d адам ұнатты</item>
+    </plurals>
+    <plurals name="comments">
+        <item quantity="other">%s пікір</item>
+        <item quantity="one">%s пікір</item>
+    </plurals>
+    <plurals name="communities">
+        <item quantity="other">%1$d бірлестік</item>
+        <item quantity="one">%1$d бірлестік</item>
+    </plurals>
+    <plurals name="community_friends">
+        <item quantity="other">%s дос</item>
+        <item quantity="one">%s дос</item>
+    </plurals>
+    <plurals name="community_members">
+        <item quantity="other">%s қатысушы</item>
+        <item quantity="one">%s қатысушы</item>
+    </plurals>
+    <plurals name="community_subscribers">
+        <item quantity="other">%s жазылушы</item>
+        <item quantity="one">%s жазылушы</item>
+    </plurals>
+    <plurals name="date_ago_mins">
+        <item quantity="other">%,d минут бұрын</item>
+        <item quantity="one">%,d минут бұрын</item>
+    </plurals>
+    <plurals name="date_ago_secs">
+        <item quantity="other">%,d секунд бұрын</item>
+        <item quantity="one">%,d секунд бұрын</item>
+    </plurals>
+    <plurals name="discover_comments">
+        <item quantity="other">%s пікір</item>
+        <item quantity="one">%s пікір</item>
+    </plurals>
+    <plurals name="duration_accessibility_hours">
+        <item quantity="other">%s сағат</item>
+        <item quantity="one">%s сағат</item>
+    </plurals>
+    <plurals name="duration_accessibility_minutes">
+        <item quantity="other">%s минут</item>
+        <item quantity="one">%s минут</item>
+    </plurals>
+    <plurals name="duration_accessibility_seconds">
+        <item quantity="other">%s секунд</item>
+        <item quantity="one">%s секунд</item>
+    </plurals>
+    <plurals name="events">
+        <item quantity="other">%,d шара</item>
+        <item quantity="one">%,d шара</item>
+    </plurals>
+    <plurals name="fave_tags_add_successful">
+        <item quantity="other">Белгі қосылды</item>
+        <item quantity="one">Белгі қосылды</item>
+    </plurals>
+    <plurals name="followers_count">
+        <item quantity="other">%s жазылушы</item>
+        <item quantity="one">%s жазылушы</item>
+    </plurals>
+    <plurals name="friend_requests_new">
+        <item quantity="other">%s жаңа өтінім</item>
+        <item quantity="one">%s жаңа өтінім</item>
+    </plurals>
+    <plurals name="friends_catalog_and_more_people">
+        <item quantity="other">%1$s және тағы %2$s адам</item>
+        <item quantity="one">%1$s және тағы %2$s адам</item>
+    </plurals>
+    <plurals name="friends_catalog_mutual_friends">
+        <item quantity="other">%,d ортақ дос</item>
+        <item quantity="one">%,d ортақ дос</item>
+    </plurals>
+    <plurals name="friends_mutual">
+        <item quantity="other">%,d ортақ</item>
+        <item quantity="one">%,d ортақ</item>
+    </plurals>
+    <plurals name="friends_tab_all">
+        <item quantity="other">%,d дос</item>
+        <item quantity="one">%,d дос</item>
+    </plurals>
+    <plurals name="friends_tab_online">
+        <item quantity="other">%,d желіде</item>
+        <item quantity="one">%,d желіде</item>
+    </plurals>
+    <plurals name="friends_tab_requests">
+        <item quantity="other">%,d өтінім</item>
+        <item quantity="one">%,d өтінім</item>
+    </plurals>
+    <plurals name="friends_tab_requests_in">
+        <item quantity="other">%,d кіріс</item>
+        <item quantity="one">%,d кіріс</item>
+    </plurals>
+    <plurals name="friends_tab_requests_out">
+        <item quantity="other">%,d шығыс</item>
+        <item quantity="one">%,d шығыс</item>
+    </plurals>
+    <plurals name="friends_tab_suggestions">
+        <item quantity="other">%,d ұсыныс</item>
+        <item quantity="one">%,d ұсыныс</item>
+    </plurals>
+    <plurals name="games_friends">
+        <item quantity="other">%,d дос ойнайды</item>
+        <item quantity="one">%,d дос ойнайды</item>
+    </plurals>
+    <plurals name="games_friends_played">
+        <item quantity="other">%,d досыңыз ойнайды</item>
+        <item quantity="one">%,d досыңыз ойнайды</item>
+    </plurals>
+    <plurals name="games_invites">
+        <item quantity="other">%,d шақыру</item>
+        <item quantity="one">%,d шақыру</item>
+    </plurals>
+    <plurals name="games_level">
+        <item quantity="other">%,d деңгей</item>
+        <item quantity="one">%,d деңгей</item>
+    </plurals>
+    <plurals name="games_points">
+        <item quantity="other">%,d ұпай</item>
+        <item quantity="one">%,d ұпай</item>
+    </plurals>
+    <plurals name="games_requests">
+        <item quantity="other">%,d жаңа өтінім</item>
+        <item quantity="one">%,d жаңа өтінім</item>
+    </plurals>
+    <plurals name="games_show_more_reqs">
+        <item quantity="other">Тағы %,d өтінім көрсету</item>
+        <item quantity="one">Тағы %,d өтінім көрсету</item>
+    </plurals>
+    <plurals name="gifts">
+        <item quantity="other">%,d сыйлық</item>
+        <item quantity="one">%,d сыйлық</item>
+    </plurals>
+    <plurals name="gifts_remains">
+        <item quantity="other">%,d тегін</item>
+        <item quantity="one">%,d тегін</item>
+    </plurals>
+    <plurals name="good_comments">
+        <item quantity="other">%,d пікір</item>
+        <item quantity="one">%,d пікір</item>
+    </plurals>
+    <plurals name="goods_count">
+        <item quantity="other">%,d тауар</item>
+        <item quantity="one">%,d тауар</item>
+    </plurals>
+    <plurals name="group_chats">
+        <item quantity="other">%d әңгіме</item>
+        <item quantity="one">%d әңгіме</item>
+    </plurals>
+    <plurals name="group_chats_members">
+        <item quantity="other">%d қатысушы</item>
+        <item quantity="one">%d қатысушы</item>
+    </plurals>
+    <plurals name="group_chats_members_active">
+        <item quantity="other">%d қатысушы араласуда</item>
+        <item quantity="one">%d қатысушы араласуда</item>
+    </plurals>
+    <plurals name="group_invites">
+        <item quantity="other">%,d шақыру</item>
+        <item quantity="one">%,d шақыру</item>
+    </plurals>
+    <plurals name="group_members">
+        <item quantity="other">%,d қатысушы</item>
+        <item quantity="one">%,d қатысушы</item>
+    </plurals>
+    <plurals name="groups">
+        <item quantity="other">%,d бірлестік</item>
+        <item quantity="one">%,d бірлестік</item>
+    </plurals>
+    <plurals name="groups_followers">
+        <item quantity="other">%s жазылушы</item>
+        <item quantity="one">%s жазылушы</item>
+    </plurals>
+    <plurals name="hours_end_date">
+        <item quantity="other">%1$d сағат қалды</item>
+        <item quantity="one">%1$d сағат қалды</item>
+    </plurals>
+    <plurals name="hours_end_date_short">
+        <item quantity="other">%1$d сағат</item>
+        <item quantity="one">%1$d сағат</item>
+    </plurals>
+    <plurals name="htmlgame_leaderboard_you_earned_points">
+        <item quantity="other">Сіз %1$s ұпай алдыңыз</item>
+        <item quantity="one">Сіз %1$s ұпай алдыңыз</item>
+    </plurals>
+    <plurals name="htmlgame_leaderboard_you_earned_points_and_rated">
+        <item quantity="other">Сіз %1$s ұпай алдыңыз, енді достардың арасында %2$s орындасыз</item>
+        <item quantity="one">Сіз %1$s ұпай алдыңыз, енді достардың арасында %2$s орындасыз</item>
+    </plurals>
+    <plurals name="htmlgame_leaderboard_you_got_points">
+        <item quantity="other">Сіз &lt;b>%1$s ұпай&lt;/b> алдыңыз</item>
+        <item quantity="one">Сіз &lt;b>%1$s ұпай&lt;/b> алдыңыз;</item>
+    </plurals>
+    <plurals name="last_seen_female_minutes_ago">
+        <item quantity="other">желіде %d минут бұрын болды</item>
+        <item quantity="one">желіде %d минут бұрын болды</item>
+    </plurals>
+    <plurals name="last_seen_male_minutes_ago">
+        <item quantity="other">желіде %d минут бұрын болды</item>
+        <item quantity="one">желіде %d минут бұрын болды</item>
+    </plurals>
+    <plurals name="like_notification_multiple">
+        <item quantity="other">%,d адам</item>
+        <item quantity="one">%,d адам</item>
+    </plurals>
+    <plurals name="like_notification_stacked">
+        <item quantity="other">%,d жаңа мәлімдеме</item>
+        <item quantity="one">%,d жаңа мәлімдеме</item>
+    </plurals>
+    <plurals name="live_balance_votes">
+        <item quantity="other">%,d дауыс</item>
+        <item quantity="one">%,d дауыс</item>
+    </plurals>
+    <plurals name="live_balance_votes_simple">
+        <item quantity="other"> дауыс</item>
+        <item quantity="one"> дауыс</item>
+    </plurals>
+    <plurals name="live_broadcast_end_text_more">
+        <item quantity="other">" және тағы %d адам трансляцияңызды көрді"</item>
+        <item quantity="one">" және тағы %d адам трансляцияңызды көрді"</item>
+    </plurals>
+    <plurals name="live_broadcast_end_text_more_no_friends">
+        <item quantity="other">%d адам трансляцияңызды көрді</item>
+        <item quantity="one">%d адам трансляцияңызды көрді</item>
+    </plurals>
+    <plurals name="live_broadcast_friends_more">
+        <item quantity="other">" және тағы %s дос қазір желіде"</item>
+        <item quantity="one">" және тағы %s дос қазір желіде"</item>
+    </plurals>
+    <plurals name="live_broadcast_friends_text_more_no_friends">
+        <item quantity="other">%s дос қазір желіде</item>
+        <item quantity="one">%s дос қазір желіде</item>
+    </plurals>
+    <plurals name="live_broadcast_group_members_more">
+        <item quantity="other">" және тағы %s қатысушы"</item>
+        <item quantity="one">" және тағы %s қатысушы"</item>
+    </plurals>
+    <plurals name="live_broadcast_group_members_text_more_no_friends">
+        <item quantity="other">%s бірлестік қатысушысы</item>
+        <item quantity="one">%s бірлестік қатысушысы</item>
+    </plurals>
+    <plurals name="live_da_comments_left">
+        <item quantity="other">%d белгі қалды</item>
+        <item quantity="one">%d белгі қалды</item>
+    </plurals>
+    <plurals name="live_gifts_remains">
+        <item quantity="other">%,d сыйлық қалды</item>
+        <item quantity="one">%,d сыйлық қалды</item>
+    </plurals>
+    <plurals name="live_viewers_more_users">
+        <item quantity="other">және тағы %d пайдаланушы</item>
+        <item quantity="one">және тағы %d пайдаланушы</item>
+    </plurals>
+    <plurals name="market_cart_full_description">
+        <item quantity="other">Сіз бір тауардың %1$d данадан көп қоса алмайсыз.</item>
+        <item quantity="one">Сіз бір тауардың %1$d данадан көп қоса алмайсыз.</item>
+    </plurals>
+    <plurals name="market_cart_total_quantity">
+        <item quantity="other">жеткізусіз %1$d тауар</item>
+        <item quantity="one">жеткізусіз %1$d тауар</item>
+    </plurals>
+    <plurals name="members_count">
+        <item quantity="other">%s қатысушы</item>
+        <item quantity="one">%s қатысушы</item>
+    </plurals>
+    <plurals name="messages">
+        <item quantity="other">хабарлама</item>
+        <item quantity="one">хабарлама</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d минут</item>
+        <item quantity="one">%d минут</item>
+    </plurals>
+    <plurals name="minutes_end_date">
+        <item quantity="other">%1$d минут қалды</item>
+        <item quantity="one">%1$d минут қалды</item>
+    </plurals>
+    <plurals name="minutes_end_date_short">
+        <item quantity="other">%1$d минут</item>
+        <item quantity="one">%1$d минут</item>
+    </plurals>
+    <plurals name="money_transfer_backers">
+        <item quantity="other">%s адам жәрдем етті</item>
+        <item quantity="one">%s адам жәрдем етті</item>
+    </plurals>
+    <plurals name="money_transfer_friends_used">
+        <item quantity="other">%d досыңыз ақша аударымдар мүмкіндігін пайдаланып үлгерді</item>
+        <item quantity="one">%d досыңыз ақша аударымдары мүмкіндігін пайдаланып үлгерді</item>
+    </plurals>
+    <plurals name="music_hours">
+        <item quantity="other">%d сағат</item>
+        <item quantity="one">%d сағат</item>
+    </plurals>
+    <plurals name="music_minutes">
+        <item quantity="other">%d минут</item>
+        <item quantity="one">%d минут</item>
+    </plurals>
+    <plurals name="music_playlist_show_all_playlist">
+        <item quantity="other">Барлық %d аудиожазбаны көрсету</item>
+        <item quantity="one">%d аудиожазба көрсету</item>
+    </plurals>
+    <plurals name="music_seconds">
+        <item quantity="other">%d секунд</item>
+        <item quantity="one">%d секунд</item>
+    </plurals>
+    <plurals name="music_snippet_listenings">
+        <item quantity="other">%s рет тыңдалды</item>
+        <item quantity="one">%s рет тыңдалған</item>
+    </plurals>
+    <plurals name="music_snippet_uptime_day">
+        <item quantity="other">%d күн бұрын жаңартылды</item>
+        <item quantity="one">%d күн бұрын жаңартылды</item>
+    </plurals>
+    <plurals name="music_snippet_uptime_hour">
+        <item quantity="other">%d сағат бұрын жаңартылды</item>
+        <item quantity="one">%d сағат бұрын жаңартылды</item>
+    </plurals>
+    <plurals name="music_snippet_uptime_minute">
+        <item quantity="other">%d минут бұрын жаңартылды</item>
+        <item quantity="one">%d минут бұрын жаңартылды</item>
+    </plurals>
+    <plurals name="music_snippet_uptime_month">
+        <item quantity="other">%d ай бұрын жаңартылды</item>
+        <item quantity="one">%d ай бұрын жаңартылды</item>
+    </plurals>
+    <plurals name="music_snippet_uptime_week">
+        <item quantity="other">%d апта бұрын жаңартылды</item>
+        <item quantity="one">%d апта бұрын жаңартылды</item>
+    </plurals>
+    <plurals name="music_snippet_uptime_year">
+        <item quantity="other">%d жыл бұрын жаңартылды</item>
+        <item quantity="one">%d жыл бұрын жаңартылды</item>
+    </plurals>
+    <plurals name="music_songs">
+        <item quantity="other">%d ән</item>
+        <item quantity="one">%d аудиожазба</item>
+    </plurals>
+    <plurals name="music_subscriptipn_also_boght_by">
+        <item quantity="other">және тағы %d дос</item>
+        <item quantity="one">және тағы %d дос</item>
+    </plurals>
+    <plurals name="music_toast_playlist_attaching_done">
+        <item quantity="other">Аудиожазбалар қосылды</item>
+        <item quantity="one">Аудиожазбалар қосылды</item>
+    </plurals>
+    <plurals name="music_toast_playlist_attaching_failed">
+        <item quantity="other">Аудиожазбаларды қоса алмадық</item>
+        <item quantity="one">Аудиожазбалар қосылған жоқ</item>
+    </plurals>
+    <plurals name="narrative_views">
+        <item quantity="other">%d рет көрілді</item>
+        <item quantity="one">%d рет көрілді</item>
+    </plurals>
+    <plurals name="narrative_views_and_info">
+        <item quantity="other">%1$s · %2$d рет көрілді</item>
+        <item quantity="one">%1$s · %2$d рет көрілді</item>
+    </plurals>
+    <plurals name="ncomments_last">
+        <item quantity="other">%,d ішіндегі соңғы пікір</item>
+        <item quantity="one">%,d пікір</item>
+    </plurals>
+    <plurals name="new_posts">
+        <item quantity="other">Жаңа %,d жазба көрсету</item>
+        <item quantity="one">Жаңа %,d жазба көрсету</item>
+    </plurals>
+    <plurals name="news_added_photo_f">
+        <item quantity="other">%,d фото қосты</item>
+        <item quantity="one">%,d фото қосты</item>
+    </plurals>
+    <plurals name="news_added_photo_m">
+        <item quantity="other">%,d фото қосты</item>
+        <item quantity="one">%,d фото қосты</item>
+    </plurals>
+    <plurals name="news_tagged_photo_f">
+        <item quantity="other">%,d фотода белгіленді</item>
+        <item quantity="one">%,d фотода белгіленді</item>
+    </plurals>
+    <plurals name="news_tagged_photo_m">
+        <item quantity="other">%,d фотода белгіленді</item>
+        <item quantity="one">%,d фотода белгіленді</item>
+    </plurals>
+    <plurals name="not_n_new_notifications">
+        <item quantity="other">%s жаңа мәлімдеме</item>
+        <item quantity="one">%s жаңа мәлімдеме</item>
+    </plurals>
+    <plurals name="not_name_and_n_more_people">
+        <item quantity="other">%1$s және тағы %2$d адам</item>
+        <item quantity="one">%1$s және тағы %2$d адам</item>
+    </plurals>
+    <plurals name="not_sources">
+        <item quantity="other">%s дереккөз</item>
+        <item quantity="one">%s дереккөз</item>
+    </plurals>
+    <plurals name="notification_business_notify_unread">
+        <item quantity="other">%d бизнес-мәлімдеме</item>
+        <item quantity="one">%d бизнес-мәлімдеме</item>
+    </plurals>
+    <plurals name="notification_dialogs_unread">
+        <item quantity="other">%d оқылмаған диалог</item>
+        <item quantity="one">%d оқылмаған диалог</item>
+    </plurals>
+    <plurals name="notification_msg_unread">
+        <item quantity="other">%d оқылмаған хабарлама</item>
+        <item quantity="one">%d оқылмаған хабарлама</item>
+    </plurals>
+    <plurals name="ntf_x_more_users">
+        <item quantity="other">және тағы &lt;b>%,d&lt;/b> адам</item>
+        <item quantity="one">және тағы &lt;b>%,d&lt;/b> адам</item>
+    </plurals>
+    <plurals name="num_attach_article_short">
+        <item quantity="other">мақала</item>
+        <item quantity="one">мақала</item>
+    </plurals>
+    <plurals name="num_attach_artist_short">
+        <item quantity="other">орындаушы</item>
+        <item quantity="one">орындаушы</item>
+    </plurals>
+    <plurals name="num_attach_audio">
+        <item quantity="other">%,d аудиожазба</item>
+        <item quantity="one">Аудиожазба</item>
+    </plurals>
+    <plurals name="num_attach_audio_short">
+        <item quantity="other">аудио</item>
+        <item quantity="one">аудио</item>
+    </plurals>
+    <plurals name="num_attach_doc_short">
+        <item quantity="other">құжат</item>
+        <item quantity="one">құжат</item>
+    </plurals>
+    <plurals name="num_attach_document">
+        <item quantity="other">%,d құжат</item>
+        <item quantity="one">Құжат</item>
+    </plurals>
+    <plurals name="num_attach_event_short">
+        <item quantity="other">шақыру</item>
+        <item quantity="one">шақыру</item>
+    </plurals>
+    <plurals name="num_attach_fwd_message">
+        <item quantity="other">%,d қайта жіберілген хабарлама</item>
+        <item quantity="one">%,d қайта жіберілген хабарлама</item>
+    </plurals>
+    <plurals name="num_attach_graffiti_short">
+        <item quantity="other">граффити</item>
+        <item quantity="one">граффити</item>
+    </plurals>
+    <plurals name="num_attach_link_short">
+        <item quantity="other">сілтеме</item>
+        <item quantity="one">сілтеме</item>
+    </plurals>
+    <plurals name="num_attach_market_short">
+        <item quantity="other">тауар</item>
+        <item quantity="one">тауар</item>
+    </plurals>
+    <plurals name="num_attach_narrative_short">
+        <item quantity="other">сюжет</item>
+        <item quantity="one">сюжет</item>
+    </plurals>
+    <plurals name="num_attach_photo">
+        <item quantity="other">%,d фото</item>
+        <item quantity="one">Фото</item>
+    </plurals>
+    <plurals name="num_attach_photo_album_short">
+        <item quantity="other">альбом</item>
+        <item quantity="one">альбом</item>
+    </plurals>
+    <plurals name="num_attach_photo_short">
+        <item quantity="other">фото</item>
+        <item quantity="one">фото</item>
+    </plurals>
+    <plurals name="num_attach_playlist_short">
+        <item quantity="other">әнтізім</item>
+        <item quantity="one">әнтізім</item>
+    </plurals>
+    <plurals name="num_attach_podcast_short">
+        <item quantity="other">подкаст</item>
+        <item quantity="one">подкаст</item>
+    </plurals>
+    <plurals name="num_attach_poll">
+        <item quantity="other">%d сауалнама</item>
+        <item quantity="one">Сауалнама</item>
+    </plurals>
+    <plurals name="num_attach_poll_short">
+        <item quantity="other">сауалнама</item>
+        <item quantity="one">сауалнама</item>
+    </plurals>
+    <plurals name="num_attach_short">
+        <item quantity="other">бекітілген файл</item>
+        <item quantity="one">бекітілген файл</item>
+    </plurals>
+    <plurals name="num_attach_video">
+        <item quantity="other">%,d бейнежазба</item>
+        <item quantity="one">Бейнежазба</item>
+    </plurals>
+    <plurals name="num_attach_video_short">
+        <item quantity="other">бейнежазба</item>
+        <item quantity="one">бейнежазба</item>
+    </plurals>
+    <plurals name="num_mutual_contacts">
+        <item quantity="other">%,d ортақ контакт</item>
+        <item quantity="one">%,d ортақ контакт</item>
+    </plurals>
+    <plurals name="num_mutual_friends_req">
+        <item quantity="other">%,d ортақ дос</item>
+        <item quantity="one">%,d ортақ дос</item>
+    </plurals>
+    <plurals name="num_new_messages">
+        <item quantity="other">%,d жаңа хабарлама.</item>
+        <item quantity="one">%,d жаңа хабарлама.</item>
+    </plurals>
+    <plurals name="num_poll_votes">
+        <item quantity="other">%,d дауыс</item>
+        <item quantity="one">%,d дауыс</item>
+    </plurals>
+    <plurals name="orders">
+        <item quantity="other">%s тапсырыс</item>
+        <item quantity="one">%s тапсырыс</item>
+    </plurals>
+    <plurals name="people_found">
+        <item quantity="other">%,d адам табылды</item>
+        <item quantity="one">%,d адам табылды</item>
+    </plurals>
+    <plurals name="photos">
+        <item quantity="other">%,d фото</item>
+        <item quantity="one">%,d фото</item>
+    </plurals>
+    <plurals name="photos_tagged_short_f">
+        <item quantity="other">%,d фотода белгіленді</item>
+        <item quantity="one">%,d фотода белгіленді</item>
+    </plurals>
+    <plurals name="photos_tagged_short_m">
+        <item quantity="other">%,d фотода белгіленді</item>
+        <item quantity="one">%,d фотода белгіленді</item>
+    </plurals>
+    <plurals name="picker_share_photo_plural">
+        <item quantity="other">Фотомен бөлісу</item>
+        <item quantity="one">Фотомен бөлісу</item>
+    </plurals>
+    <plurals name="picker_trim_video_length_multi_minutes">
+        <item quantity="other">Ұзақтығы көп дегенде %d минут бейнежазбаларды таңдауға болады</item>
+        <item quantity="one">Ұзақтығы көп дегенде %d минут бейнежазбаларды таңдауға болады</item>
+    </plurals>
+    <plurals name="picker_trim_video_length_multi_seconds">
+        <item quantity="other">Ұзақтығы көп дегенде %d секунд бейнежазбаларды таңдауға болады</item>
+        <item quantity="one">Ұзақтығы көп дегенде %d секунд бейнежазбаларды таңдауға болады</item>
+    </plurals>
+    <plurals name="poll_friends">
+        <item quantity="other">%d дос</item>
+        <item quantity="one">%d дос</item>
+    </plurals>
+    <plurals name="poll_voters">
+        <item quantity="other">%d адам дауыс берді</item>
+        <item quantity="one">%d адам дауыс берді</item>
+    </plurals>
+    <plurals name="poll_votes">
+        <item quantity="other">%d дауыс</item>
+        <item quantity="one">%d дауыс</item>
+    </plurals>
+    <plurals name="post_people_dat">
+        <item quantity="other">%d адам</item>
+        <item quantity="one">%d адам</item>
+    </plurals>
+    <plurals name="post_reposted_community">
+        <item quantity="other">%d бірлестік бөлісті</item>
+        <item quantity="one">%d бірлестік бөлісті</item>
+    </plurals>
+    <plurals name="post_reposted_people">
+        <item quantity="other">%d адам бөлісті</item>
+        <item quantity="one">%d адам бөлісті</item>
+    </plurals>
+    <plurals name="postponed_posts">
+        <item quantity="other">/m%,d/e кейінге қалдырылған жазба</item>
+        <item quantity="one">/m%,d/e кейінге қалдырылған жазба</item>
+    </plurals>
+    <plurals name="posts">
+        <item quantity="other">%,d жазба</item>
+        <item quantity="one">%,d жазба</item>
+    </plurals>
+    <plurals name="product_number_of_items_in_cart">
+        <item quantity="other">Себетте %,d д.</item>
+        <item quantity="one">Себетте %,d д.</item>
+    </plurals>
+    <plurals name="profile_age_years">
+        <item quantity="other">%,d жас</item>
+        <item quantity="one">%,d жас</item>
+    </plurals>
+    <plurals name="profile_audios">
+        <item quantity="other">Аудио</item>
+        <item quantity="one">Аудиожазба</item>
+    </plurals>
+    <plurals name="profile_counter_articles">
+        <item quantity="other">Мақала</item>
+        <item quantity="one">Мақала</item>
+    </plurals>
+    <plurals name="profile_counter_audios">
+        <item quantity="other">Аудио</item>
+        <item quantity="one">Аудио</item>
+    </plurals>
+    <plurals name="profile_counter_docs">
+        <item quantity="other">Құжат</item>
+        <item quantity="one">Құжат</item>
+    </plurals>
+    <plurals name="profile_counter_goods">
+        <item quantity="other">Тауар</item>
+        <item quantity="one">Тауар</item>
+    </plurals>
+    <plurals name="profile_counter_photos">
+        <item quantity="other">Фото</item>
+        <item quantity="one">Фото</item>
+    </plurals>
+    <plurals name="profile_counter_podcasts">
+        <item quantity="other">Подкаст</item>
+        <item quantity="one">Подкаст</item>
+    </plurals>
+    <plurals name="profile_counter_topics">
+        <item quantity="other">Талқылау</item>
+        <item quantity="one">Талқылау</item>
+    </plurals>
+    <plurals name="profile_counter_videos">
+        <item quantity="other">Бейнежазба</item>
+        <item quantity="one">Бейнежазба</item>
+    </plurals>
+    <plurals name="profile_docs">
+        <item quantity="other">құжат</item>
+        <item quantity="one">құжат</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">/m%,d/e жазылушы</item>
+        <item quantity="one">/m%,d/e жазылушы</item>
+    </plurals>
+    <plurals name="profile_friends">
+        <item quantity="other">/m%,d/e дос</item>
+        <item quantity="one">/m%,d/e дос</item>
+    </plurals>
+    <plurals name="profile_friends_members">
+        <item quantity="other">Бірлестікке /m%,d/e досыңыз қатысады</item>
+        <item quantity="one">Бірлестікке /m%,d/e досыңыз қатысады</item>
+    </plurals>
+    <plurals name="profile_groups">
+        <item quantity="other">Топ</item>
+        <item quantity="one">Топ</item>
+    </plurals>
+    <plurals name="profile_members">
+        <item quantity="other">%s жазылушы</item>
+        <item quantity="one">%s жазылушы</item>
+    </plurals>
+    <plurals name="profile_mutual_friends">
+        <item quantity="other">/m%,d/e ортақ</item>
+        <item quantity="one">/m%,d/e ортақ</item>
+    </plurals>
+    <plurals name="profile_photos">
+        <item quantity="other">Фото</item>
+        <item quantity="one">Фото</item>
+    </plurals>
+    <plurals name="profile_topics">
+        <item quantity="other">талқылау</item>
+        <item quantity="one">талқылау</item>
+    </plurals>
+    <plurals name="profile_videos">
+        <item quantity="other">Бейнежазбалар</item>
+        <item quantity="one">Бейнежазба</item>
+    </plurals>
+    <plurals name="push_sync_msg_send_text_normal">
+        <item quantity="other">%d хабарлама жіберу</item>
+        <item quantity="one">%d хабарлама жіберу</item>
+    </plurals>
+    <plurals name="qty_msgs">
+        <item quantity="other">%,d хабарлама</item>
+        <item quantity="one">%,d хабарлама</item>
+    </plurals>
+    <plurals name="show_all_addresses">
+        <item quantity="other">%d мекенжай көрсету</item>
+        <item quantity="one">%d мекенжай көрсету</item>
+    </plurals>
+    <plurals name="show_more_notifications">
+        <item quantity="other">Показать ещё %,d уведомлений</item>
+        <item quantity="one">Тағы %,d мәлімдеме көрсету</item>
+    </plurals>
+    <plurals name="stories_replies_from_n_authors">
+        <item quantity="other">%1$s автордан</item>
+        <item quantity="one">%1$s автордан</item>
+    </plurals>
+    <plurals name="stories_replies_replies_count">
+        <item quantity="other">%1$s жауап</item>
+        <item quantity="one">%1$s жауап</item>
+    </plurals>
+    <plurals name="stories_replies_replies_last_count">
+        <item quantity="other">%1$s соңғы жауап</item>
+        <item quantity="one">%1$s соңғы жауап</item>
+    </plurals>
+    <plurals name="stories_replies_views_count">
+        <item quantity="other">%1$s рет көрілген</item>
+        <item quantity="one">%1$s рет көрілген</item>
+    </plurals>
+    <plurals name="stories_share_n_friend">
+        <item quantity="other">дос</item>
+        <item quantity="one">дос</item>
+    </plurals>
+    <plurals name="story_geo_friends_count">
+        <item quantity="other">%s дос жазылған</item>
+        <item quantity="one">%s дос жазылған</item>
+    </plurals>
+    <plurals name="story_new">
+        <item quantity="other">%1$s жаңа</item>
+        <item quantity="one">%1$s жаңа</item>
+    </plurals>
+    <plurals name="story_questions_quantity">
+        <item quantity="other">%1$d пікір</item>
+        <item quantity="one">%1$d пікір</item>
+    </plurals>
+    <plurals name="suggested_posts">
+        <item quantity="other">/m%,d/e ұсынылған жаңалық</item>
+        <item quantity="one">/m%,d/e ұсынылған жаңалық</item>
+    </plurals>
+    <plurals name="suggested_posts_by_me">
+        <item quantity="other">/m%,d/e Сіз ұсынған жаңалық</item>
+        <item quantity="one">/m%,d/e Сіз ұсынған жаңалық</item>
+    </plurals>
+    <plurals name="time_ago_day">
+        <item quantity="other">%dк</item>
+        <item quantity="one">%dк</item>
+    </plurals>
+    <plurals name="time_ago_hour">
+        <item quantity="other">%dс</item>
+        <item quantity="one">%dс</item>
+    </plurals>
+    <plurals name="time_ago_minute">
+        <item quantity="other">%dм</item>
+        <item quantity="one">%dм</item>
+    </plurals>
+    <plurals name="time_ago_month">
+        <item quantity="other">%dай</item>
+        <item quantity="one">%dай</item>
+    </plurals>
+    <plurals name="time_ago_week">
+        <item quantity="other">%dап</item>
+        <item quantity="one">%dап</item>
+    </plurals>
+    <plurals name="time_ago_year">
+        <item quantity="other">%dж</item>
+        <item quantity="one">%dж</item>
+    </plurals>
+    <plurals name="time_seconds">
+        <item quantity="other">%dс</item>
+        <item quantity="one">%dс</item>
+    </plurals>
+    <plurals name="topic_posts">
+        <item quantity="other">%,d хабарлама</item>
+        <item quantity="one">%,d хабарлама</item>
+    </plurals>
+    <plurals name="typing_more">
+        <item quantity="other">%1$s және тағы %2$d адам</item>
+        <item quantity="one">%1$s және тағы %2$d адам</item>
+    </plurals>
+    <plurals name="video_views">
+        <item quantity="other">%,d қаралым</item>
+        <item quantity="one">%,d қаралым</item>
+    </plurals>
+    <plurals name="views_counted">
+        <item quantity="other">рет көрілген</item>
+        <item quantity="one">рет көрілген</item>
+    </plurals>
+    <plurals name="vkim_accessibility_msg_list_scroll_to_bottom_has_unread">
+        <item quantity="other">астындағы %d жаңа хабарлама</item>
+        <item quantity="one">астындағы %d жаңа хабарлама</item>
+    </plurals>
+    <plurals name="vkim_accessibility_msg_list_scroll_to_mention_has_unread">
+        <item quantity="other">%d төмендегі жаңа еске алу</item>
+        <item quantity="one">%d төмендегі жаңа еске алу</item>
+    </plurals>
+    <plurals name="vkim_attached_fwd">
+        <item quantity="other">%s хабарлама</item>
+        <item quantity="one">%s хабарлама</item>
+    </plurals>
+    <plurals name="vkim_business_notify_count_many">
+        <item quantity="other">%d бизнес-мәлімдеме</item>
+        <item quantity="one">%d бизнес-мәлімдеме</item>
+    </plurals>
+    <plurals name="vkim_chat_invite_members_count">
+        <item quantity="other">%1$s және тағы %2$d адам</item>
+        <item quantity="one">%1$s және тағы %2$d адам</item>
+    </plurals>
+    <plurals name="vkim_chat_settings_invites_count">
+        <item quantity="other">%d шақырау</item>
+        <item quantity="one">%d шақыру</item>
+    </plurals>
+    <plurals name="vkim_chat_settings_members_count">
+        <item quantity="other">%d қатысушы</item>
+        <item quantity="one">%d қатысушы</item>
+    </plurals>
+    <plurals name="vkim_contact_replies_delayed">
+        <item quantity="other">Жауап уақыты — %d минут</item>
+        <item quantity="one">Жауап уақыты — %d минут</item>
+    </plurals>
+    <plurals name="vkim_contacts_label">
+        <item quantity="other">Контактілер тізімнен %s адам VK-да бар. Оларға жазыңыз!</item>
+        <item quantity="one">Контактілер тізімнен %s адам VK-да бар. Оған жазыңыз!</item>
+    </plurals>
+    <plurals name="vkim_contacts_show_new_users">
+        <item quantity="other">%s контакт қарап шығу</item>
+        <item quantity="one">%s контакт қарап шығу</item>
+    </plurals>
+    <plurals name="vkim_history_attaches_video_views">
+        <item quantity="other">%,d просмотров</item>
+        <item quantity="one">%,d просмотр</item>
+    </plurals>
+    <plurals name="vkim_messages">
+        <item quantity="other">%s хабарлама</item>
+        <item quantity="one">%s хабарлама</item>
+    </plurals>
+    <plurals name="vkim_money_request_members_info">
+        <item quantity="other">%1$s және тағы %2$s адам</item>
+        <item quantity="one">%1$s және тағы %2$s адам</item>
+    </plurals>
+    <plurals name="vkim_money_request_members_info_when_has_transfers_from_myself">
+        <item quantity="other">Сіз және тағы %s адам</item>
+        <item quantity="one">Сіз және тағы %s адам</item>
+    </plurals>
+    <plurals name="vkim_msg_album_multiple">
+        <item quantity="other">%d альбом</item>
+        <item quantity="one">%d альбом</item>
+    </plurals>
+    <plurals name="vkim_msg_article_multiple">
+        <item quantity="other">%d мақала</item>
+        <item quantity="one">%d мақала</item>
+    </plurals>
+    <plurals name="vkim_msg_artist_multiple">
+        <item quantity="other">%d музыкант</item>
+        <item quantity="one">%d музыкант</item>
+    </plurals>
+    <plurals name="vkim_msg_attach_multiple">
+        <item quantity="other">%d бекітілген файл</item>
+        <item quantity="one">%d бекітілген файл</item>
+    </plurals>
+    <plurals name="vkim_msg_audio_multiple">
+        <item quantity="other">%d аудиожазба</item>
+        <item quantity="one">%d аудиожазба</item>
+    </plurals>
+    <plurals name="vkim_msg_audiomsg_multiple">
+        <item quantity="other">%d дыбысхабарлама</item>
+        <item quantity="one">%d дыбысхабарлама</item>
+    </plurals>
+    <plurals name="vkim_msg_call_multiple">
+        <item quantity="other">%d қоңырау</item>
+        <item quantity="one">%d қоңырау</item>
+    </plurals>
+    <plurals name="vkim_msg_doc_multiple">
+        <item quantity="other">%d құжат</item>
+        <item quantity="one">%d құжат</item>
+    </plurals>
+    <plurals name="vkim_msg_expired">
+        <item quantity="other">%d хабарлама жоқ болып кетті</item>
+        <item quantity="one">Хабарлама жоқ болып кетті</item>
+    </plurals>
+    <plurals name="vkim_msg_fwd_multiple">
+        <item quantity="other">%d қайта жіберілген хабарлама</item>
+        <item quantity="one">%d қайта жіберілген хабарлама</item>
+    </plurals>
+    <plurals name="vkim_msg_gif_multiple">
+        <item quantity="other">%d GIF суреті</item>
+        <item quantity="one">%d GIF суреті</item>
+    </plurals>
+    <plurals name="vkim_msg_gift_simple_multiple">
+        <item quantity="other">%d сыйлық</item>
+        <item quantity="one">%d сыйлық</item>
+    </plurals>
+    <plurals name="vkim_msg_gift_stickers_multiple">
+        <item quantity="other">%d сыйлық</item>
+        <item quantity="one">%d сыйлық</item>
+    </plurals>
+    <plurals name="vkim_msg_graffiti_multiple">
+        <item quantity="other">%d граффити</item>
+        <item quantity="one">%d граффити</item>
+    </plurals>
+    <plurals name="vkim_msg_header_channel_count">
+        <item quantity="other">%d жазылушы</item>
+        <item quantity="one">%d жазылушы</item>
+    </plurals>
+    <plurals name="vkim_msg_header_chat_count">
+        <item quantity="other">%d қатысушы</item>
+        <item quantity="one">%d қатысушы</item>
+    </plurals>
+    <plurals name="vkim_msg_header_selection_count">
+        <item quantity="other">%d</item>
+        <item quantity="one">%d</item>
+    </plurals>
+    <plurals name="vkim_msg_history_multiple">
+        <item quantity="other">%d оқиға</item>
+        <item quantity="one">%d әнтізім</item>
+    </plurals>
+    <plurals name="vkim_msg_link_multiple">
+        <item quantity="other">%d сілтеме</item>
+        <item quantity="one">%d сілтеме</item>
+    </plurals>
+    <plurals name="vkim_msg_map_multiple">
+        <item quantity="other">%d орналасқан жер</item>
+        <item quantity="one">%d орналасқан жер</item>
+    </plurals>
+    <plurals name="vkim_msg_market_multiple">
+        <item quantity="other">%d тауар</item>
+        <item quantity="one">%d тауар</item>
+    </plurals>
+    <plurals name="vkim_msg_mini_app_multiple">
+        <item quantity="other">%d мини-қосымша</item>
+        <item quantity="one">%d мини-қосымша</item>
+    </plurals>
+    <plurals name="vkim_msg_money_request_multiple">
+        <item quantity="other">%d ақша аударымына сұратым</item>
+        <item quantity="one">%d ақша аударымына сұратым</item>
+    </plurals>
+    <plurals name="vkim_msg_money_transfer_multiple">
+        <item quantity="other">%d ақша аударымы</item>
+        <item quantity="one">%d ақша аударымы</item>
+    </plurals>
+    <plurals name="vkim_msg_narrative_multiple">
+        <item quantity="other">%d сюжет</item>
+        <item quantity="one">%d сюжет</item>
+    </plurals>
+    <plurals name="vkim_msg_photo_multiple">
+        <item quantity="other">%d сурет</item>
+        <item quantity="one">%d фото</item>
+    </plurals>
+    <plurals name="vkim_msg_playlist_multiple">
+        <item quantity="other">%d әнтізім</item>
+        <item quantity="one">%d әнтізім</item>
+    </plurals>
+    <plurals name="vkim_msg_podcast_episode_multiple">
+        <item quantity="other">%d подкаст</item>
+        <item quantity="one">%d подкаст</item>
+    </plurals>
+    <plurals name="vkim_msg_poll_multiple">
+        <item quantity="other">%d сауалнама</item>
+        <item quantity="one">%d сауалнама</item>
+    </plurals>
+    <plurals name="vkim_msg_product_orders">
+        <item quantity="other">%s тапсырыс</item>
+        <item quantity="one">%s тапсырыс</item>
+    </plurals>
+    <plurals name="vkim_msg_reply_multiple">
+        <item quantity="other">%d жауап</item>
+        <item quantity="one">%d жауап</item>
+    </plurals>
+    <plurals name="vkim_msg_request_label">
+        <item quantity="other">%s өтінім</item>
+        <item quantity="one">%s өтінім</item>
+    </plurals>
+    <plurals name="vkim_msg_sticker_multiple">
+        <item quantity="other">%d стикер</item>
+        <item quantity="one">%d стикер</item>
+    </plurals>
+    <plurals name="vkim_msg_story_multiple">
+        <item quantity="other">%d оқиға</item>
+        <item quantity="one">%d оқиға</item>
+    </plurals>
+    <plurals name="vkim_msg_video_multiple">
+        <item quantity="other">%d бейнежазба</item>
+        <item quantity="one">%d бейнежазба</item>
+    </plurals>
+    <plurals name="vkim_msg_wall_multiple">
+        <item quantity="other">%d қабырғадағы жазба</item>
+        <item quantity="one">%d қабырғадағы жазба</item>
+    </plurals>
+    <plurals name="vkim_msg_wall_reply_multiple">
+        <item quantity="other">%d қабырғадағы пікір</item>
+        <item quantity="one">%d қабырғадағы пікір</item>
+    </plurals>
+    <plurals name="vkim_password_too_short">
+        <item quantity="other">Құпиясөз кемінде %s белгіден тұру керек</item>
+        <item quantity="one">Құпиясөз кемінде %s белгіден тұру керек</item>
+    </plurals>
+    <plurals name="vkim_popup_msg_delete_submit_desc">
+        <item quantity="other">%d хабарлама жойғыңыз келе ме?</item>
+        <item quantity="one">%d хабарлама жойғыңыз келе ме?</item>
+    </plurals>
+    <plurals name="vkim_popup_msg_spam_submit_desc">
+        <item quantity="other">%d хабарлама спам ретінде белгілегіңіз келе ме?</item>
+        <item quantity="one">%d хабарлама спам ретінде белгілегіңіз келе ме?</item>
+    </plurals>
+    <plurals name="vkim_screen_name_status_too_short">
+        <item quantity="other">Кемінде %s белгі</item>
+        <item quantity="one">Кемінде %s белгі</item>
+    </plurals>
+    <plurals name="vkim_typing_many">
+        <item quantity="other">%1$s және тағы %2$d адам</item>
+        <item quantity="one">%1$s және тағы %2$d адам</item>
+    </plurals>
+    <plurals name="vkim_typing_many_new">
+        <item quantity="other">%1$s және %2$d адам жазып жатыр…</item>
+        <item quantity="one">%1$s және %2$d адам жазып жатыр…</item>
+    </plurals>
+    <plurals name="vkim_wall_post_see_more">
+        <item quantity="other">тағы %d бекітілген файл</item>
+        <item quantity="one">тағы %d бекітілген файл</item>
+    </plurals>
+    <plurals name="wall_comment_replies">
+        <item quantity="other">%,d жауап көрсету</item>
+        <item quantity="one">%,d жауап көрсету</item>
+    </plurals>
+    <plurals name="wallview_comments">
+        <item quantity="other">Тағы %,d пікір көрсету</item>
+        <item quantity="one">Тағы %,d адам көрсету</item>
+    </plurals>
+    <plurals name="wallview_likes">
+        <item quantity="other">%,d адам ұнатты</item>
+        <item quantity="one">%,d адам ұнатты</item>
+    </plurals>
+    <plurals name="wallview_likes_me">
+        <item quantity="other">Сіз және тағы %,d адам ұнатты</item>
+        <item quantity="one">Сіз және %,d адам ұнатты</item>
+    </plurals>
+    <plurals name="x_stickers">
+        <item quantity="other">%,d стикер</item>
+        <item quantity="one">%,d стикер</item>
+    </plurals>
+</resources>

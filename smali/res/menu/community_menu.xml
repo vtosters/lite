@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_settings_24" android:id="@id/edit_group" android:title="@string/edit_group" android:showAsAction="always" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
+    <item android:id="@id/subscribe_podcasts" android:visible="false" android:title="@string/subscribe_to_podcasts" app:menuTint="?toolbarIconsColor" />
+    <item android:id="@id/subscribe_live" android:visible="false" android:title="@string/group_video_live_notify_on" app:menuTint="?toolbarIconsColor" />
+    <item android:id="@id/edit_community_avatar" android:visible="false" android:title="@string/edit_community_avatar" app:menuTint="?toolbarIconsColor" />
+</menu>

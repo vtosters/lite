@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_add_24" android:id="@id/add" android:title="@string/add_photo" app:menuTint="?header_tint" app:showAsAction="always" />
+    <item android:id="@id/edit" android:title="@string/edit" />
+    <item android:id="@id/delete" android:title="@string/delete" />
+    <item android:id="@id/copy_link" android:title="@string/copy_link" />
+</menu>

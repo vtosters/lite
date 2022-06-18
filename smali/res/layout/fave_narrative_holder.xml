@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="84.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.narratives.views.NarrativeCoverView android:layout_gravity="start|center" android:id="@id/cover" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginStart="16.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="100.0dip" android:layout_marginEnd="40.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:singleLine="true" android:includeFontPadding="false" style="@style/VKUIText.Headline" />
+        <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/owner_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" android:includeFontPadding="false" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/tag_icon" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/ic_tag_12" android:tint="@color/gray_300" />
+            <com.vk.fave.views.FaveTagViewGroup android:id="@id/ft_tag_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginStart="2.0dip" app:horizontalSpacing="0.0dip" app:separatorTextColor="?text_secondary" app:singleLineMode="true" app:tagFontFamily="@string/font_family_regular" app:tagHorizontalPadding="2.0dip" app:tagLineSpacingExtra="5.0dip" app:tagTextColor="?text_secondary" app:tagTextSize="13.0dip" app:tagVerticalPadding="1.0dip" app:verticalSpacing="0.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|center" android:id="@id/iv_actions" android:background="@drawable/highlight_unlimited" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_16" android:scaleType="center" android:tint="@color/fave_action_gray" android:layout_marginEnd="4.0dip" />
+</FrameLayout>

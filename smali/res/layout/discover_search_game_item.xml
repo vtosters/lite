@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/rounded_list_selector" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/standard_list_item_padding" android:paddingEnd="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" app:emptyImagePlaceholder="@drawable/placeholder_game_rounded" app:placeholderImage="@drawable/default_placeholder_10" app:roundedCornerRadius="10.0dip" app:roundingBorderColor="?separator_alpha" app:roundingBorderWidth="0.5dip" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="4.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sans-serif" />
+        <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxLines="1" android:fontFamily="sans-serif" />
+    </LinearLayout>
+    <ImageButton android:id="@id/action_button" android:background="@drawable/highlight_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_chevron_outline_28" android:tint="?icon_outline_secondary" />
+</LinearLayout>

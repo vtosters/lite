@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:drawable="@drawable/btn_my_story_circle" android:insetLeft="4.0dip" android:insetRight="4.0dip" android:insetTop="4.0dip" android:insetBottom="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

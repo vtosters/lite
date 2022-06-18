@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:paddingTop="4.0dip" android:paddingBottom="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0dip" android:ellipsize="end" android:id="@id/profile_btn1" android:layout_width="0.0dip" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" style="@style/outline_button" />
+    <TextView android:textSize="15.0dip" android:ellipsize="end" android:id="@id/profile_btn2" android:layout_width="0.0dip" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" style="@style/VKUIButton.White" />
+    <TextView android:textSize="15.0dip" android:ellipsize="end" android:id="@id/profile_btn3" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" style="@style/secondary_button" />
+</merge>

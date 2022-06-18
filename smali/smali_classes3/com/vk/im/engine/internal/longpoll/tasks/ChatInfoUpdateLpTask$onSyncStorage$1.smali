@@ -1,0 +1,160 @@
+.class final Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;
+.super Lkotlin/jvm/internal/Lambda;
+.source "ChatInfoUpdateLpTask.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/b/b<",
+        "Lcom/vk/im/engine/internal/storage/StorageManager;",
+        "Lcom/vk/im/engine/models/ProfilesSimpleInfo;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $chatInfo:Lcom/vk/im/engine/models/conversations/d;
+
+.field final synthetic this$0:Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;
+
+
+# direct methods
+.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;Lcom/vk/im/engine/models/conversations/d;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;
+
+    iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->$chatInfo:Lcom/vk/im/engine/models/conversations/d;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    .locals 9
+
+    .line 1
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;
+
+    invoke-static {v2}, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;)I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->$chatInfo:Lcom/vk/im/engine/models/conversations/d;
+
+    invoke-virtual {v3}, Lcom/vk/im/engine/models/conversations/d;->b()Lcom/vk/im/engine/models/dialogs/d;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(ILcom/vk/im/engine/models/dialogs/d;)V
+
+    .line 3
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;
+
+    invoke-static {v1}, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;)I
+
+    move-result v1
+
+    invoke-virtual {p1, v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->i(II)V
+
+    .line 4
+    new-instance p1, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;
+
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->$chatInfo:Lcom/vk/im/engine/models/conversations/d;
+
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/conversations/d;->a()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+
+    move-result-object v3
+
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;
+
+    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;)Lcom/vk/im/engine/d;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/vk/im/engine/d;->r0()J
+
+    move-result-wide v4
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x4
+
+    const/4 v8, 0x0
+
+    move-object v2, p1
+
+    invoke-direct/range {v2 .. v8}, Lcom/vk/im/engine/internal/merge/etc/ProfilesMergeTask;-><init>(Lcom/vk/im/engine/models/ProfilesSimpleInfo;JZILkotlin/jvm/internal/i;)V
+
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;
+
+    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask;)Lcom/vk/im/engine/d;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    check-cast p1, Lcom/vk/im/engine/internal/storage/StorageManager;
+
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/longpoll/tasks/ChatInfoUpdateLpTask$onSyncStorage$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method

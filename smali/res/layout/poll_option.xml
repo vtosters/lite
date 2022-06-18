@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingTop="7.0dip" android:paddingRight="10.0dip" android:paddingBottom="9.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/poll_option_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Answer" android:layout_weight="1.0" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:gravity="right" android:id="@id/poll_option_percent" android:layout_width="68.0dip" android:layout_height="wrap_content" android:text="146 %" />
+    <ProgressBar android:id="@id/poll_option_progress" android:visibility="gone" android:layout_width="21.0dip" android:layout_height="21.0dip" android:layout_marginLeft="-21.0dip" android:layout_marginTop="-1.0dip" android:layout_marginBottom="-1.0dip" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.vk.imageloader.view.VKImageView android:layout_gravity="start" android:id="@id/team_icon_a" android:layout_width="56.0dip" android:layout_height="56.0dip" app:roundedCornerRadius="2.0dip" />
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/score_view" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="?text_muted" android:layout_gravity="center" android:id="@id/score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="–" android:maxLines="1" android:fontFamily="@string/font_family_medium" />
+            <TextView android:textColor="?text_secondary" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.vk.imageloader.view.VKImageView android:layout_gravity="end" android:id="@id/team_icon_b" android:layout_width="56.0dip" android:layout_height="56.0dip" app:roundedCornerRadius="2.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="17.0dip">
+        <TextView android:textSize="13.0sp" android:textColor="?text_muted" android:ellipsize="end" android:gravity="start" android:id="@id/team_name_a" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <Space android:id="@id/name_space" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <TextView android:textSize="13.0sp" android:textColor="?text_muted" android:ellipsize="end" android:gravity="end" android:id="@id/team_name_b" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+        <TextView android:textSize="12.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="start" android:id="@id/team_descr_a" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <Space android:id="@id/description_space" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <TextView android:textSize="12.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="end" android:id="@id/team_descr_b" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:id="@id/brandingBorder" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="12.0dip" android:layout_marginEnd="@dimen/_post_side_padding" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/branding" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:gravity="center_vertical" android:id="@id/brandingTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+        <com.vk.imageloader.view.VKImageView android:id="@id/brandingImage" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="14.0dip" android:scaleType="centerInside" android:minHeight="14.0dip" android:layout_marginStart="6.0dip" />
+    </LinearLayout>
+</LinearLayout>

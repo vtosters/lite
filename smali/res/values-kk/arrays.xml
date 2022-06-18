@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_report_reasons">
+        <item>Спам</item>
+        <item>Қорлаушылық</item>
+        <item>Ересектерге арналған материал</item>
+        <item>Алаяқтық</item>
+        <item>Басқа</item>
+    </string-array>
+    <string-array name="address_will_be_opened">
+        <item>Дүйсенбіде ашылады</item>
+        <item>Сейсенбіде ашылады</item>
+        <item>Сәрсенбіде ашылады</item>
+        <item>Бейсенбіде ашылады</item>
+        <item>Жұмада ашылады</item>
+        <item>Сенбіде ашылады</item>
+        <item>Жексенбіде ашылады</item>
+    </string-array>
+    <string-array name="album_displayable_privacy_options">
+        <item>Әркім</item>
+        <item>Достарым ғана</item>
+        <item>Достарым мен достарымның достары</item>
+        <item>Өзім ғана</item>
+    </string-array>
+    <string-array name="album_privacy_options">
+        <item>Әркім</item>
+        <item>Достарым ғана</item>
+        <item>Достарым мен достарымның достары</item>
+        <item>Өзім ғана</item>
+        <item>Қосымша баптаулар</item>
+    </string-array>
+    <string-array name="app_report_types">
+        <item>Қосымша істемейді</item>
+        <item>Зиянды қосымша</item>
+        <item>Жабысқақ жарнама</item>
+        <item>Алдау немесе адастыру</item>
+    </string-array>
+    <string-array name="community_types">
+        <item>Шаралар</item>
+        <item>Топтар</item>
+        <item>Парақшалар</item>
+    </string-array>
+    <string-array name="date_ago_hrs">
+        <item>сағат бұрын</item>
+        <item>екі сағат бұрын</item>
+        <item>үш сағат бұрын</item>
+    </string-array>
+    <string-array name="dnd_options">
+        <item>1 сағат</item>
+        <item>24 сағат</item>
+        <item>7 күн</item>
+        <item>Әрқашанға</item>
+    </string-array>
+    <string-array name="edit_bdate_visibility">
+        <item>Парақшамда көрсету</item>
+        <item>Күн мен айын ғана көрсету</item>
+        <item>Парақшамда көрсетпеу</item>
+    </string-array>
+    <string-array name="fave_tabs">
+        <item>Адамдар</item>
+        <item>Жазбалар</item>
+        <item>Сілтемелер</item>
+        <item>Мақалалар</item>
+        <item>Подкасттар</item>
+        <item>Фотолар</item>
+        <item>Бейнежазба</item>
+        <item>@string/goods</item>
+    </string-array>
+    <string-array name="group_audios_options_descriptions">
+        <item></item>
+        <item>Рұқсат ашық болса, бірлестіктің кез келген қатысушысы жаңа аудиожазба қоса алады.</item>
+        <item>Рұқсат шектелген болса, тек бірлестіктің редакторлары мен әкімшілері жаңа аудиожазба қоса алады.</item>
+    </string-array>
+    <string-array name="group_ban_duration_options">
+        <item>Біржолата</item>
+        <item>Жылға</item>
+        <item>Айға</item>
+        <item>Аптаға</item>
+        <item>Күнге</item>
+        <item>Сағатқа</item>
+    </string-array>
+    <string-array name="group_ban_reasons">
+        <item>Басқа</item>
+        <item>Спам</item>
+        <item>Тіл тигізіп қорлау</item>
+        <item>Балағат</item>
+        <item>Тақырыпқа сәйкес келмейтін хабарламалар</item>
+    </string-array>
+    <string-array name="group_board_options_descriptions">
+        <item></item>
+        <item>Рұқсат ашық болса, бірлестіктің кез келген қатысушысы жаңа тақырып аша алады.</item>
+        <item>Рұқсат шектелген болса, тек бірлестіктің редакторлары мен әкімшілері жаңа тақырып қоса алады.</item>
+    </string-array>
+    <string-array name="group_docs_options_descriptions">
+        <item></item>
+        <item>Рұқсат ашық болса, бірлестіктің кез келген қатысушысы жаңа құжат қоса алады.</item>
+        <item>Рұқсат шектелген болса, тек бірлестіктің редакторлары мен әкімшілері жаңа құжат қоса алады.</item>
+    </string-array>
+    <string-array name="group_photos_options_descriptions">
+        <item></item>
+        <item>Рұқсат ашық болса, бірлестіктің кез келген қатысушысы жаңа альбом аша алады.</item>
+        <item>Рұқсат шектелген болса, тек бірлестіктің редакторлары мен әкімшілері жаңа альбом аша алады.</item>
+    </string-array>
+    <string-array name="group_service_options">
+        <item>Өшірілген</item>
+        <item>Ашық</item>
+        <item>Шектелген</item>
+    </string-array>
+    <string-array name="group_videos_options_descriptions">
+        <item></item>
+        <item>Рұқсат ашық болса, бірлестіктің кез келген қатысушысы жаңа бейнежазба қоса алады.</item>
+        <item>Рұқсат шектелген болса, тек бірлестіктің редакторлары мен әкімшілері жаңа бейнежазба қоса алады.</item>
+    </string-array>
+    <string-array name="group_wall_options">
+        <item>Өшірілген</item>
+        <item>Ашық</item>
+        <item>Шектелген</item>
+        <item>Жабық</item>
+    </string-array>
+    <string-array name="group_wall_options_descriptions">
+        <item></item>
+        <item>Ашық қабырғада бірлестіктің кез келген қатысушысы жазба жазып, пікір қалдыра алады.</item>
+        <item>Шектелген қабырғада тек бірлестік атынан ғана жазу мүмкін, жазбаларға барлық қатысушылар пікір қалдыра алады.</item>
+        <item>Жабық қабырғада тек бірлестік атынан ғана жазу мүмкін, жазбаларға пікір қалдыруға болмайды.</item>
+    </string-array>
+    <string-array name="group_wiki_options_descriptions">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="last_seen_female_hours_ago">
+        <item>желіде бір сағат бұрын болды</item>
+        <item>желіде екі сағат бұрын болды</item>
+        <item>желіде үш сағат бұрын болды</item>
+    </string-array>
+    <string-array name="last_seen_male_hours_ago">
+        <item>желіде бір сағат бұрын болды</item>
+        <item>желіде екі сағат бұрын болды</item>
+        <item>желіде үш сағат бұрын болды</item>
+    </string-array>
+    <string-array name="like_menu">
+        <item>Ұнатпаймын</item>
+        <item>Достарыммен бөлісу</item>
+    </string-array>
+    <string-array name="months_full">
+        <item>қаңтар</item>
+        <item>ақпан</item>
+        <item>наурыз</item>
+        <item>сәуір</item>
+        <item>мамыр</item>
+        <item>маусым</item>
+        <item>шілде</item>
+        <item>тамыз</item>
+        <item>қыркүйек</item>
+        <item>қазан</item>
+        <item>қараша</item>
+        <item>желтоқсан</item>
+    </string-array>
+    <string-array name="months_full_dep">
+        <item>қаңтар</item>
+        <item>ақпан</item>
+        <item>наурыз</item>
+        <item>сәуір</item>
+        <item>мамыр</item>
+        <item>маусым</item>
+        <item>шілде</item>
+        <item>тамыз</item>
+        <item>қыркүйек</item>
+        <item>қазан</item>
+        <item>қараша</item>
+        <item>желтоқсан</item>
+    </string-array>
+    <string-array name="months_short">
+        <item>қаң</item>
+        <item>ақп</item>
+        <item>нау</item>
+        <item>сәу</item>
+        <item>мам</item>
+        <item>мау</item>
+        <item>шіл</item>
+        <item>там</item>
+        <item>қыр</item>
+        <item>қаз</item>
+        <item>қар</item>
+        <item>жел</item>
+    </string-array>
+    <string-array name="newsfeed_settings_feed_type">
+        <item>Жариялау уақыты бойынша</item>
+        <item>Әуелі қызықтылар</item>
+    </string-array>
+    <string-array name="ntf_accepted_f">
+        <item>достыққа өтініміңізді қабылдады</item>
+    </string-array>
+    <string-array name="ntf_accepted_m">
+        <item>достыққа өтініміңізді қабылдады</item>
+    </string-array>
+    <string-array name="ntf_accepted_x">
+        <item>достыққа өтініміңізді қабылдады</item>
+    </string-array>
+    <string-array name="ntf_follow_f">
+        <item>парақшаңызға жазылды</item>
+    </string-array>
+    <string-array name="ntf_follow_m">
+        <item>парақшаңызға жазылды</item>
+    </string-array>
+    <string-array name="ntf_follow_x">
+        <item>парақшаңызға жазылды</item>
+    </string-array>
+    <string-array name="ntf_like_f">
+        <item>жазбаны ұнатты</item>
+        <item>фотоны ұнатты</item>
+        <item>бейнежазбаны</item>
+        <item>пікірді ұнатты</item>
+    </string-array>
+    <string-array name="ntf_like_m">
+        <item>жазбаны ұнатты</item>
+        <item>фотоны ұнатты</item>
+        <item>бейнежазбаны</item>
+        <item>пікірді ұнатты</item>
+    </string-array>
+    <string-array name="ntf_like_x">
+        <item>жазбаны ұнатты</item>
+        <item>фотоны ұнатты</item>
+        <item>бейнежазбаны</item>
+        <item>пікірді ұнатты</item>
+    </string-array>
+    <string-array name="ntf_rt_f">
+        <item>жазбамен бөлісті</item>
+        <item>фотомен бөлісті</item>
+        <item>бейнежазбамен бөлісті</item>
+        <item>пікірмен бөлісті</item>
+    </string-array>
+    <string-array name="ntf_rt_m">
+        <item>жазбамен бөлісті</item>
+        <item>фотомен бөлісті</item>
+        <item>бейнежазбамен бөлісті</item>
+        <item>пікірмен бөлісті</item>
+    </string-array>
+    <string-array name="ntf_rt_x">
+        <item>жазбамен бөлісті</item>
+        <item>фотомен бөлісті</item>
+        <item>бейнежазбамен бөлісті</item>
+        <item>пікірмен бөлісті</item>
+    </string-array>
+    <string-array name="personal_life_options">
+        <item>Жанұя мен бала-шаға</item>
+        <item>Мансап пен ақша</item>
+        <item>Ойын-сауық пен демалыс</item>
+        <item>Ғылым және зерттеулер</item>
+        <item>Әлемді жетілдіру</item>
+        <item>Өздігінен даму</item>
+        <item>Көркемдік пен өнер</item>
+        <item>Даңқ пен ықпал</item>
+    </string-array>
+    <string-array name="personal_people_options">
+        <item>Ақыл мен жасампаздық</item>
+        <item>Мейірімділік пен адалдық</item>
+        <item>Сұлулық пен денсаулық</item>
+        <item>Билік пен байлық</item>
+        <item>Батылдық пен табандылық</item>
+        <item>Әзіл мен жарқындық</item>
+    </string-array>
+    <string-array name="personal_politics_options">
+        <item>Коммунистік</item>
+        <item>Социалистік</item>
+        <item>Бірқалыпты</item>
+        <item>Либералдық</item>
+        <item>Кертартпа</item>
+        <item>Монархиялық</item>
+        <item>Өте кертартпа</item>
+        <item>Бейтарап</item>
+        <item>Либертариандық</item>
+    </string-array>
+    <string-array name="personal_views_options">
+        <item>Өте жағымсыз</item>
+        <item>Жағымсыз</item>
+        <item>Ымыралы</item>
+        <item>Бейтарап</item>
+        <item>Жағымды</item>
+    </string-array>
+    <string-array name="photo_tagged_goods_menu">
+        <item>Тауарды ашу</item>
+        <item>Тауарды жою</item>
+    </string-array>
+    <string-array name="poll_months_short">
+        <item>Қаң</item>
+        <item>Ақп</item>
+        <item>Нау</item>
+        <item>Сәу</item>
+        <item>Мам</item>
+        <item>Мау</item>
+        <item>Шіл</item>
+        <item>Там</item>
+        <item>Қыр</item>
+        <item>Қаз</item>
+        <item>Қар</item>
+        <item>Жел</item>
+    </string-array>
+    <string-array name="post_options">
+        <item>Тек достарым</item>
+        <item>Twitter-ге экспорттау</item>
+        <item>Facebook-қа экспорттау</item>
+    </string-array>
+    <string-array name="public_types">
+        <item>Орын немесе шағын компания</item>
+        <item>Компания, ұйым немесе веб-сайт</item>
+        <item>Танымал түлға немесе ұйым</item>
+        <item>Шығарма немесе өнім</item>
+        <item>Парақшаның түрі…</item>
+    </string-array>
+    <string-array name="replies_options">
+        <item>Ұнатамын</item>
+        <item>Жауап беру</item>
+    </string-array>
+    <string-array name="report_types">
+        <item>Спам</item>
+        <item>Қорлаушылық</item>
+        <item>Ересектерге арналған материал</item>
+        <item>Есірткіні насихаттау</item>
+        <item>Балалар порнографиясы</item>
+        <item>Экстремизм/Зорлықшылық</item>
+        <item>Өзін-өзі өлтіруге шақыру</item>
+    </string-array>
+    <string-array name="sett_dnd_options">
+        <item>1 сағат</item>
+        <item>8 сағат</item>
+        <item>24 сағат</item>
+    </string-array>
+    <string-array name="sett_font_size_options">
+        <item>Кіші</item>
+        <item>Орташа</item>
+        <item>Ірі</item>
+    </string-array>
+    <string-array name="sett_friends_order">
+        <item>Есімі бойынша</item>
+        <item>Тегі бойынша</item>
+        <item>Маңыздылық бойынша</item>
+    </string-array>
+    <string-array name="sett_gif_autoplay_entries">
+        <item>Әрқашан</item>
+        <item>Тек Wi-Fi арқылы</item>
+        <item>Ешқашан</item>
+    </string-array>
+    <string-array name="sett_img_cache_location">
+        <item>Құрылғы жады</item>
+        <item>SD картасы</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_options">
+        <item>Аты мен мәтін</item>
+        <item>Тек аты</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_options_group">
+        <item>Бірлестік атауы және мәтін</item>
+        <item>Тек бірлестік атауы</item>
+    </string-array>
+    <string-array name="sett_update_interval_items">
+        <item>30 секунд</item>
+        <item>45 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>3 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>15 минут</item>
+        <item>30 минут</item>
+        <item>1 сағат</item>
+        <item>2 сағат</item>
+        <item>Өшіру</item>
+    </string-array>
+    <string-array name="short_time">
+        <item> сек</item>
+        <item> мин</item>
+        <item> сағат</item>
+        <item> күн</item>
+        <item> апта</item>
+        <item> ай</item>
+        <item> жыл</item>
+    </string-array>
+    <string-array name="story_months_short">
+        <item>Қаң</item>
+        <item>Ақп</item>
+        <item>Нау</item>
+        <item>Сәу</item>
+        <item>Мам</item>
+        <item>Мау</item>
+        <item>Шіл</item>
+        <item>Там</item>
+        <item>Қыр</item>
+        <item>Қаз</item>
+        <item>Қар</item>
+        <item>Жел</item>
+    </string-array>
+    <string-array name="story_time_hours">
+        <item>нөл</item>
+        <item>сағат</item>
+        <item>екі</item>
+        <item>үш</item>
+        <item>төрт</item>
+        <item>бес</item>
+        <item>алты</item>
+        <item>жеті</item>
+        <item>сегіз</item>
+        <item>тоғыз</item>
+        <item>он</item>
+        <item>он бір</item>
+        <item>он екі</item>
+        <item>он үш</item>
+        <item>он төрт</item>
+        <item>он бес</item>
+        <item>он алты</item>
+        <item>он жеті</item>
+        <item>он сегіз</item>
+        <item>он тоғыз</item>
+        <item>жиырма</item>
+        <item>жиырма бір</item>
+        <item>жиырма екі</item>
+        <item>жиырма үш</item>
+    </string-array>
+    <string-array name="story_time_minutes">
+        <item>нөл нөл</item>
+        <item>нөл бір</item>
+        <item>нөл екі</item>
+        <item>нөл үш</item>
+        <item>нөл төрт</item>
+        <item>нөл бес</item>
+        <item>нөл алты</item>
+        <item>нөл жеті</item>
+        <item>нөл сегіз</item>
+        <item>нөл тоғыз</item>
+        <item>он</item>
+        <item>он бір</item>
+        <item>он екі</item>
+        <item>он үш</item>
+        <item>он төрт</item>
+        <item>он бес</item>
+        <item>он алты</item>
+        <item>он жеті</item>
+        <item>он сегіз</item>
+        <item>он тоғыз</item>
+        <item>жиырма</item>
+        <item>жиырма бір</item>
+        <item>жиырма екі</item>
+        <item>жиырма үш</item>
+        <item>жиырма төрт</item>
+        <item>жиырма бес</item>
+        <item>жиырма алты</item>
+        <item>жиырма жеті</item>
+        <item>жиырма сегіз</item>
+        <item>жиырма тоғыз</item>
+        <item>отыз</item>
+        <item>отыз бір</item>
+        <item>отыз екі</item>
+        <item>отыз үш</item>
+        <item>отыз төрт</item>
+        <item>отыз бес</item>
+        <item>отыз алты</item>
+        <item>отыз жеті</item>
+        <item>отыз сегіз</item>
+        <item>отыз тоғыз</item>
+        <item>қырық</item>
+        <item>қырық бір</item>
+        <item>қырық екі</item>
+        <item>қырық үш</item>
+        <item>қырық төрт</item>
+        <item>қырық бес</item>
+        <item>қырық алты</item>
+        <item>қырық жеті</item>
+        <item>қырық сегіз</item>
+        <item>қырық тоғыз</item>
+        <item>елу</item>
+        <item>елу бір</item>
+        <item>елу екі</item>
+        <item>елу үш</item>
+        <item>елу төрт</item>
+        <item>елу бес</item>
+        <item>елу алты</item>
+        <item>елу жеті</item>
+        <item>елу сегіз</item>
+        <item>елу тоғыз</item>
+    </string-array>
+    <string-array name="video_search_date">
+        <item>Кез келген</item>
+        <item>Тәулік ішіндегі</item>
+        <item>Апта ішіндегі</item>
+        <item>Ай ішіндегі</item>
+        <item>Жыл ішіндегі</item>
+    </string-array>
+    <string-array name="video_search_date_options">
+        <item>Кез келген уақыт</item>
+        <item>Соңғы 24 сағаттағы</item>
+        <item>Соңғы айдағы</item>
+        <item>Соңғы жылдағы</item>
+    </string-array>
+    <string-array name="video_search_duration">
+        <item>Кез келген</item>
+        <item>Қысқалар (5 минуттан кем)</item>
+        <item>Ұзақтар (20 минуттан ұзын)</item>
+    </string-array>
+    <string-array name="video_search_length">
+        <item>Кез келген ұзақтығы</item>
+        <item>Қысқалар</item>
+        <item>Ұзақтар</item>
+    </string-array>
+    <string-array name="video_search_quality">
+        <item>Кез келген сапа</item>
+        <item>Тек қана HD</item>
+    </string-array>
+    <string-array name="video_search_sort">
+        <item>Күні бойынша</item>
+        <item>Ұзақтық бойынша</item>
+        <item>Релеванттілік бойынша</item>
+    </string-array>
+    <string-array name="video_search_sort_options">
+        <item>Сәйкестік бойынша</item>
+        <item>Күні бойынша</item>
+        <item>Ұзақтығы бойынша</item>
+    </string-array>
+    <string-array name="vkim_months_full_nom">
+        <item>қаңтар</item>
+        <item>ақпан</item>
+        <item>наурыз</item>
+        <item>сәуір</item>
+        <item>мамыр</item>
+        <item>маусым</item>
+        <item>шілде</item>
+        <item>тамыз</item>
+        <item>қыркүйек</item>
+        <item>қазан</item>
+        <item>қараша</item>
+        <item>желтоқсан</item>
+    </string-array>
+    <string-array name="wall_attach_options">
+        <item>Аудиожазба</item>
+        <item>Бейнежазба</item>
+        <item>Құжат</item>
+    </string-array>
+    <string-array name="when_day_of_week">
+        <item>Дүйсенбіде</item>
+        <item>Сейсенбіде</item>
+        <item>Сәрсенбіде</item>
+        <item>Бейсенбіде</item>
+        <item>Жұмада</item>
+        <item>Сенбіде</item>
+        <item>Жексенбіде</item>
+    </string-array>
+</resources>

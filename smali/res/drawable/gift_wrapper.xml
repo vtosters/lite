@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="2.0dip" />
+    <padding android:left="@dimen/gift_wrapper_padding" android:top="@dimen/gift_wrapper_padding" android:right="@dimen/gift_wrapper_padding" android:bottom="@dimen/gift_wrapper_padding" />
+    <solid android:color="@android:color/white" />
+</shape>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="block_for_one_day_text">1 күн</string>
+    <string name="block_for_one_hour_text">1 сағат</string>
+    <string name="block_for_one_minute_text">1 минут</string>
+    <string name="block_for_text">Мені мазалама</string>
+    <string name="block_notifications_description">Верификациялық хабарламаларды алуды уақытша бұғаттау</string>
+    <string name="block_notifications_text">Мені мазалама</string>
+    <string name="general_error_description">Қате пайда болды. Амалды шамалы уақыттан кейін қайталаңыз.</string>
+    <string name="network_error_description">Өзіңіздің Интернетке қосылғандығыңызды тексеріңіз және амалды қайталаңыз.</string>
+    <string name="notification_event_cancel">Доғару</string>
+    <string name="notification_event_close">Жабу</string>
+    <string name="notification_event_confirm">OK</string>
+    <string name="notification_history_clear">Тазалау</string>
+    <string name="notification_history_delete">Өшіру</string>
+    <string name="notification_history_shortcut_name">Хабарландырулар</string>
+    <string name="notification_history_text">Хабарландыру журналы</string>
+    <string name="notification_history_text_description">Осы құрылғының хабарландырулар тізімін көрсету</string>
+    <string name="notification_settings">Баптаулар</string>
+    <string name="report_reuse_text">%1$s менікі емес</string>
+    <string name="report_reuse_text_confirmation">Сіз шынымен де %1$s үшін барлық құрылғыларыңызда верификациялық хабарламаларды алуды бұғаттағыңыз келе ме?</string>
+    <string name="report_reuse_text_description">Менің барлық құрылғыларымда верификациялық хабарламаларды алуды бұғаттау</string>
+    <string name="setting_saved_toast_text">Сіздің баптауларыңыз сақтаулы</string>
+    <string name="title_activity_settings">Хабарламаларды баптау</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_archive_outline_56" android:tint="?placeholder_icon_foreground_secondary" />
+    <TextView android:textColor="?text_placeholder" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/story_archive_empty_info" android:includeFontPadding="false" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+    <TextView android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/publish_story" android:paddingTop="6.5dip" android:paddingBottom="7.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/story_archive_publish" android:singleLine="true" android:includeFontPadding="false" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/VKUIButton.Tertiary.Rounded" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/im_appbar" android:layout_height="?actionBarSize" style="@style/Vk.Theme.Appbar">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll">
+            <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/VkIm.Toolbar.Style" />
+            <com.vk.core.view.search.MilkshakeSearchView android:id="@id/vkim_search" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?im_toolbar_search_style" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:orientation="vertical" android:id="@id/vkim_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <View app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
+    <View android:id="@id/vkim_search_shadow" android:visibility="gone" app:layout_behavior="@string/appbar_scrolling_view_behavior" style="?im_toolbar_shadow_style_thick" />
+    <com.vk.core.view.BottomConfirmButton android:id="@id/vkim_confirm_btn" android:visibility="gone" app:bcb_send_text="@string/vkim_contacts_invite_btn" style="@style/VkIm.BottomButton" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_scrollFlags="" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/content_container" android:background="?im_bg_chat" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

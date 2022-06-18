@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <bitmap android:src="@drawable/ic_like_24" android:tint="@color/nice_red" />
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_like_outline_24" android:tint="@color/likes_panel_icon_color" />
+    </item>
+</selector>

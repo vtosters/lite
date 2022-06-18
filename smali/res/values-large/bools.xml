@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="game_page_bgAll">true</bool>
+    <bool name="registrationIsFloating">true</bool>
+</resources>

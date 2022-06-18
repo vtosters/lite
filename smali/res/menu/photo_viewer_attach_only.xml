@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_market_outline_add_28_white" android:id="@id/attach_goods_item" android:title="@string/photo_attach_good" app:showAsAction="always" />
+</menu>

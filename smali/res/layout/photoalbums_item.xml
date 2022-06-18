@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/album_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:actualImageScaleType="centerCrop" />
+    <View android:id="@id/scrim" android:background="@drawable/scrim_bottom" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_alignParentBottom="true" android:alpha="0.5" />
+    <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/album_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginBottom="11.0dip" android:text="Album Title" android:singleLine="true" android:layout_toLeftOf="@id/album_qty" android:layout_alignBottom="@id/scrim" android:fontFamily="@string/font_family_medium" />
+    <TextView android:textSize="14.0dip" android:textColor="#99ffffff" android:id="@id/album_qty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="9000" android:singleLine="true" android:layout_alignBottom="@id/scrim" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/album_actions" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_actions_small_shadow_24" android:scaleType="center" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

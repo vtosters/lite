@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.vk.core.view.FixAppBarLayoutBehavior">
+        <LinearLayout android:orientation="horizontal" android:id="@id/modern_toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="4.0dip" app:layout_scrollFlags="enterAlways|scroll|snap">
+            <ImageView android:layout_gravity="center" android:id="@id/modern_left_btn" android:background="@drawable/highlight_unlimited" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_outline_28" android:scaleType="centerInside" android:tint="?header_tint_alternate" android:contentDescription="@string/music_talkback_go_back" />
+            <com.vk.core.view.search.ModernSearchView android:id="@id/modern_search" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/search_container" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-4.0dip" app:layout_scrollFlags="enterAlways|scroll|snap">
+            <include android:id="@id/search_input" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" layout="@layout/music_search_input_stub" />
+            <ImageView android:id="@id/search_left_btn" android:background="@drawable/highlight_unlimited" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_back_outline_28" android:scaleType="centerInside" android:tint="#ff909499" android:contentDescription="@string/music_talkback_go_back" android:layout_marginStart="8.0dip" style="@style/ActionButton.Gray" />
+        </FrameLayout>
+        <com.vk.core.view.VKTabLayout android:id="@id/tabs" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="48.0dip" app:tabIndicatorColor="?header_tab_active_indicator" app:tabSelectedTextColor="?header_tab_active_text" app:tabTextColor="?header_tab_inactive_text" style="@style/TabBarTheme" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow_view" style="@style/AppBarShadow" />
+    <androidx.viewpager.widget.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</merge>

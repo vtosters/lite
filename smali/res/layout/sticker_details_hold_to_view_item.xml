@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="15.0sp" android:textColor="?text_placeholder" android:gravity="center" android:layout_width="fill_parent" android:layout_height="43.0dip" android:text="@string/stickers_hold_to_view" android:fontFamily="@string/font_family_regular"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

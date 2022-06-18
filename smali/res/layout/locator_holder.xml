@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="32.0dip" android:paddingTop="32.0dip" android:paddingRight="32.0dip" android:paddingBottom="27.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/location_indicator" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="5.0dip" />
+    <TextView android:textSize="14.0dip" android:textStyle="normal" android:textColor="@color/caption_gray" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_recommendations_locator_text" android:lineSpacingExtra="2.5dip" android:fontFamily="@string/sans_serif" />
+</LinearLayout>

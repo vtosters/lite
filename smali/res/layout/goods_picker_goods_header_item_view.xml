@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="10.0dip" android:text="@string/goods_picker_button_search_aliexpress_secondary" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" style="@style/VKUIButton.Secondary"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <include layout="@layout/appkit_toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/recycler_container" android:paddingBottom="68.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/bottom_layout" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="68.0dip">
+        <TextView android:id="@id/place_order_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:minHeight="44.0dip" android:text="@string/market_cart_place_order" style="@style/VKUIButton.Primary" />
+    </FrameLayout>
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/photo_viewer_save_photo" android:title="@string/photo_viewer_save_photo" android:showAsAction="never" />
+    <item android:icon="@drawable/ic_share_28" android:id="@id/photo_viewer_share" android:title="@string/photo_viewer_share" android:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_28" android:id="@id/photo_viewer_delete" android:title="@string/delete" android:showAsAction="always" />
+    <item android:icon="@drawable/ic_copy_24" android:id="@id/photo_viewer_copy_link" android:title="@string/copy_link" android:showAsAction="always" />
+</menu>

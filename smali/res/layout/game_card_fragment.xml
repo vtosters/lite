@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="3.0dip" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/apps_header" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0" android:minHeight="80.0dip">
+            <com.vk.imageloader.view.VKImageView android:id="@android:id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" app:emptyImagePlaceholder="@drawable/placeholder_game_dark_48" app:placeholderImage="@drawable/default_placeholder_8" app:roundedCornerRadius="10.0dip" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0dip" android:textColor="?text_muted" android:id="@android:id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@android:id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:id="@id/button_play" android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/games_install_header" style="@style/VKUIButton.Primary" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <com.vk.newsfeed.UsableRecyclerPaginatedView android:id="@id/rpb_list" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

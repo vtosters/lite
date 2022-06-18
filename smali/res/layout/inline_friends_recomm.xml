@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <TextView android:textSize="13.0dip" android:textColor="@color/gray_400" android:gravity="center_vertical" android:id="@id/title" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawablePadding="2.0dip" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="15.0dip" android:textColor="?control_foreground" android:gravity="center" android:layout_gravity="end" android:id="@id/hide_button" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/hide" android:includeFontPadding="false" />
+    </FrameLayout>
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/recom_friends_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="202.0dip" />
+</LinearLayout>

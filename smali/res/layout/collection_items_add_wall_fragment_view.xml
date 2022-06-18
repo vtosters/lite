@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.lists.RecyclerPaginatedView android:id="@id/collection_items_add_wall_fragment_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vkontakte.android.actionlinks.views.holders.tip.ItemTipView android:layout_gravity="center" android:id="@id/collection_items_add_wall_fragment_tip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

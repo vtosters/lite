@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:src="@drawable/ic_stickers_new_badge_composite_background_10" android:tint="?background_content" />
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_stickers_new_badge_composite_foreground_10" android:tint="@color/nice_red" />
+    </item>
+</layer-list>

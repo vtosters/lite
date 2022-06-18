@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/title_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" style="@style/VkIm.Toolbar.Title.Large.Autosize" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/dropdown" android:layout_width="20.0dip" android:layout_height="16.0dip" android:src="@drawable/dropdown_20" android:scaleType="centerInside" android:adjustViewBounds="true" android:tint="?header_tint" android:contentDescription="@null" android:translationY="1.5dip" android:importantForAccessibility="no" android:layout_marginStart="4.0dip" />
+</LinearLayout>

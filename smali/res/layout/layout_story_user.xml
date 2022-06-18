@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/rounded_list_selector" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="start|center" android:id="@id/photo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginStart="16.0dip" app:placeholderImage="@drawable/group_placeholder" />
+    <ImageView android:layout_gravity="start|bottom|center" android:id="@id/like" android:background="@drawable/ic_like_shadow_20" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="37.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/muted_black" android:layout_gravity="start|center" android:id="@id/title" android:singleLine="true" android:layout_marginStart="68.0dip" style="@style/UserSmallTitle" />
+</FrameLayout>

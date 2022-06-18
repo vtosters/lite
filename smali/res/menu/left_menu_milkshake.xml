@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_newsfeed_outline_28" android:id="@id/menu_newsfeed" android:title="@string/newsfeed" />
+    <item android:icon="@drawable/ic_notifications_outline_28" android:id="@id/menu_feedback" android:title="@string/not_notifications" />
+    <item android:icon="@drawable/ic_message_outline_28" android:id="@id/menu_messages" android:title="@string/messages" />
+    <item android:icon="@drawable/ic_search_outline_28" android:id="@id/menu_search" android:title="@string/search" />
+    <item android:icon="@drawable/ic_users_outline_28" android:id="@id/menu_friends" android:title="@string/friends" />
+    <item android:icon="@drawable/users_3_outline_28" android:id="@id/menu_groups" android:title="@string/menu_groups" />
+    <item android:icon="@drawable/ic_camera_outline_28" android:id="@id/menu_photos" android:title="@string/photos" />
+    <item android:icon="@drawable/ic_music_outline_28" android:id="@id/menu_audios" android:title="@string/music" />
+    <item android:icon="@drawable/ic_video_outline_28" android:id="@id/menu_videos" android:title="@string/videos" />
+    <item android:icon="@drawable/ic_smile_outline_28" android:id="@id/menu_stickers" android:title="@string/stickers" />
+    <item android:icon="@drawable/ic_market_outline_28" android:id="@id/menu_shopping" android:title="@string/sc_catalog_title" />
+    <item android:icon="@drawable/ic_live_outline_28" android:id="@id/menu_lives" android:title="@string/sett_live" />
+    <item android:icon="@drawable/ic_podcast_outline_28" android:id="@id/menu_podcasts" android:title="@string/podcasts" />
+    <item android:icon="@drawable/ic_calendar_outline_28" android:id="@id/menu_events" android:title="@string/public_events" />
+    <item android:icon="@drawable/ic_game_outline_28" android:id="@id/menu_games" android:title="@string/games" />
+    <item android:icon="@drawable/ic_favorite_outline_28" android:id="@id/menu_fave" android:title="@string/fave_title" />
+    <item android:icon="@drawable/ic_like_outline_28" android:id="@id/menu_feed_likes" android:title="@string/sett_likes" />
+    <item android:icon="@drawable/ic_archive_outline_28" android:id="@id/menu_archive" android:title="@string/story_archive" />
+    <item android:icon="@drawable/ic_document_outline_28" android:id="@id/menu_documents" android:title="@string/docs" />
+    <item android:icon="@drawable/ic_money_transfer_outline_28" android:id="@id/menu_payments" android:title="@string/money_transfer_money_transfers" />
+    <item android:icon="@drawable/ic_orders_outline_28" android:id="@id/menu_market_orders" android:title="@string/menu_item_orders" />
+    <item android:icon="@drawable/ic_list_add_outline_28" android:id="@id/menu_wishlist" android:title="@string/wishlist" />
+    <item android:icon="@drawable/brain_28" android:id="@id/menu_expert_card" android:title="@string/right_menu_topic_expert" />
+    <item android:icon="@drawable/ic_help_outline_28" android:id="@id/menu_support" android:title="@string/help" />
+    <item android:icon="@drawable/ic_bug_outline_28" android:id="@id/menu_bugs" android:title="@string/menu_bugs" />
+    <item android:icon="@drawable/ic_money_circle_outline_28" android:id="@id/menu_vk_pay" android:title="@string/vk_pay" />
+    <item android:icon="@drawable/ic_services_outline_28" android:id="@id/menu_vk_apps" android:title="@string/menu_mini_apps" />
+    <item android:icon="@drawable/ic_settings_outline_28" android:id="@id/menu_settings" android:title="@string/menu_settings" />
+</menu>

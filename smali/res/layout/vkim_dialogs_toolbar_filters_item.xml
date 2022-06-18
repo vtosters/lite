@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:adjustViewBounds="false" android:tint="?accent" android:contentDescription="@null" android:importantForAccessibility="no" />
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="48.0dip" android:maxLines="1" android:layout_weight="1.0" android:contentDescription="@null" android:importantForAccessibility="no" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" style="@style/VKUIText.Headline" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/selection" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_check_fill_24" android:scaleType="centerInside" android:adjustViewBounds="false" android:tint="?accent" android:contentDescription="@null" android:importantForAccessibility="no" />
+</LinearLayout>

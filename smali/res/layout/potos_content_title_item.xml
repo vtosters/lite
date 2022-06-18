@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/text_frame" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textColor="?text_primary" android:id="@id/text" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_medium" style="@style/VKUIText.Title2" />
+        <TextView android:textColor="?text_secondary" android:id="@id/count" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:layout_marginStart="8.0dip" style="@style/VKUIText.Caption1" />
+    </LinearLayout>
+    <TextView android:textSize="14.0dip" android:textColor="?accent" android:gravity="center" android:id="@id/button" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="56.0dip" android:text="@string/all_albums" android:fontFamily="@string/font_family_medium" />
+</LinearLayout>

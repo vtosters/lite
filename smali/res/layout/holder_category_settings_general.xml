@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <TextView android:text="@string/not_show_notifications" style="@style/SettingsHeaderSection" />
+    <include android:id="@id/fl_action_0" layout="@layout/layout_notification_settings_radio_button" />
+    <include android:id="@id/fl_action_1" layout="@layout/layout_notification_settings_radio_button" />
+    <include android:id="@id/fl_action_2" layout="@layout/layout_notification_settings_radio_button" />
+    <include android:id="@id/fl_action_3" layout="@layout/layout_notification_settings_radio_button" />
+    <include android:id="@id/fl_action_4" layout="@layout/layout_notification_settings_radio_button" />
+    <include android:id="@id/fl_action_5" layout="@layout/layout_notification_settings_radio_button" />
+    <include android:id="@id/fl_action_6" layout="@layout/layout_notification_settings_radio_button" />
+    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:id="@id/tv_description" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingTop="16.0dip" android:paddingRight="@dimen/standard_list_item_padding" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

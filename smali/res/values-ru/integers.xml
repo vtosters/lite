@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="login_space1_weight">68</integer>
+    <integer name="login_space2_weight">20</integer>
+    <integer name="login_space3_weight">142</integer>
+    <integer name="login_weightSum">231</integer>
+</resources>

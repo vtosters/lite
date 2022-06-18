@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="76.0dip">
+        <com.vk.core.view.TintTextView android:textSize="16.0sp" android:layout_gravity="center" android:id="@id/fl_new_graffiti" android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_margin="16.0dip" android:layout_marginRight="8.0dip" android:text="@string/picker_new_graffiti" android:drawablePadding="16.0dip" android:drawableStart="@drawable/picker_ic_add_16" app:drawableStartTint="?button_primary_foreground" style="@style/VKUIButton.Primary" />
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:textColor="?text_secondary" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="72.0dip" android:text="@string/picker_graffiti_history_desc" />
+</LinearLayout>

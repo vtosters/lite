@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_newsfeed_card_rounded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/highlight_discovery"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.stickers.views.animation.VKAnimationView android:layout_gravity="center_horizontal" android:id="@id/lottie" android:layout_width="220.0dip" android:layout_height="90.0dip" android:layout_marginTop="24.0dip" />
+        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="32.0dip" style="@style/VKUIText.Title1" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|center|top" android:id="@id/hide" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="16.0dip" android:src="@drawable/ic_cancel_24_in_circle_bg_transparent" android:contentDescription="@string/accessibility_hide" />
+</FrameLayout>

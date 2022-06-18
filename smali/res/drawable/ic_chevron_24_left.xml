@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate android:drawable="@drawable/ic_chevron_24" android:fromDegrees="180.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

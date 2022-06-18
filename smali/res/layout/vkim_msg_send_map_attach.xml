@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.core.view.StaticMapView android:id="@id/vkim_map_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:smv_cornerRadius="4.0dip" />
+    <ImageView android:id="@id/vkim_map_pointer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="15.0dip" android:src="@drawable/ic_map_pin_small" android:scaleType="centerInside" />
+</FrameLayout>

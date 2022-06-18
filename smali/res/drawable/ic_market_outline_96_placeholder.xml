@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="?placeholder_icon_background" />
+    </item>
+    <item android:gravity="center">
+        <bitmap android:src="@drawable/ic_market_outline_96" android:tint="?placeholder_icon_foreground_primary" />
+    </item>
+</layer-list>

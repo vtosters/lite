@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="180.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vkontakte.android.ui.holder.gamepage.GameBannersViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:maxHeight="240.0dip" app:nextPeriodSec="3" app:ratio="0.5625" />
+</LinearLayout>

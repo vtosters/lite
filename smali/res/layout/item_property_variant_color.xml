@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:focusable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" style="@style/VKUIFormSelectableButtonCorner"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/color" android:padding="10.5dip" android:focusable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" style="@style/VKUIFormSelectableGridButton" />
+    <ImageView android:gravity="center" android:id="@id/bg" android:padding="10.0dip" android:focusable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/market_variant_color_outline" android:importantForAccessibility="no" />
+</FrameLayout>

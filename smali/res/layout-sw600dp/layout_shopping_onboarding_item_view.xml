@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="44.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:maxWidth="240.0dip" android:maxHeight="240.0dip" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <TextView android:textSize="24.0sp" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:layout_marginRight="48.0dip" android:maxLines="2" android:lineSpacingExtra="-2.0sp" android:fontFamily="@font/tt_commons_demi_bold" app:autoSizeMaxTextSize="24.0sp" app:autoSizeMinTextSize="20.0sp" app:autoSizeStepGranularity="1.0sp" app:autoSizeTextType="uniform" style="@style/VKUIText.Title1" />
+    <TextView android:textColor="?text_subhead" android:ellipsize="end" android:gravity="center" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="48.0dip" android:layout_marginBottom="44.0dip" android:maxLines="6" app:autoSizeMaxTextSize="16.0sp" app:autoSizeMinTextSize="12.0sp" app:autoSizeStepGranularity="1.0sp" app:autoSizeTextType="uniform" style="@style/VKUIText.Headline" />
+</LinearLayout>

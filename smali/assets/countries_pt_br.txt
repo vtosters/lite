@@ -1,0 +1,241 @@
+93,30,AF,Afeganistão
+355,21,AL,Albânia
+49,65,DE,Alemanha
+376,26,AD,Andorra
+244,25,AO,Angola
+1264,24,AI,Anguilha
+1268,27,AG,Antigua e Barbuda
+54,28,AR,Argentina
+21,22,DZ,Argélia
+213,22,DZ,Argélia
+374,6,AM,Armênia
+297,29,AW,Aruba
+966,170,SA,Arábia Saudita
+61,19,AU,Austrália
+672,19,AU,Austrália
+994,5,AZ,Azerbaijão
+1242,31,BS,Bahamas
+973,34,BH,Bahrein
+880,32,BD,Bangladesh
+1246,33,BB,Barbados
+501,35,BZ,Belize
+229,37,BJ,Benin
+1441,38,BM,Bermuda
+375,3,BY,Bielorrússia
+591,40,BO,Bolívia
+1721,235,BQ,Bonaire, Sint Eustatius e Saba
+267,42,BW,Botswana
+55,43,BR,Brasil
+673,44,BN,Brunei
+359,39,BG,Bulgária
+226,45,BF,Burkina Faso
+257,46,BI,Burundi
+975,47,BT,Butão
+32,36,BE,Bélgica
+387,41,BA,Bósnia e Herzegovina
+238,90,CV,Cabo Verde
+237,92,CM,Camarões
+855,91,KH,Camboja
+1,10,CA,Canadá
+235,214,TD,Chade
+56,216,CL,Chile
+86,97,CN,China
+357,95,CY,Chipre
+65,182,SG,Cingapura
+57,98,CO,Colômbia
+269,99,KM,Comores
+243,101,CD,Congo, República Democrática do
+242,100,CG,Congo
+850,173,KP,Coréia do Norte
+82,226,KR,Coréia do Sul
+506,102,CR,Costa Rica
+225,103,CI,Costa do Marfim
+385,212,HR,Croácia
+53,104,CU,Cuba
+5999,138,CW,Curaçao
+45,73,DK,Dinamarca
+253,231,DJ,Djibouti
+1767,74,DM,Domínica
+20,76,EG,Egito
+503,166,SV,El Salvador
+971,145,AE,Emirados Árabes Unidos
+593,221,EC,Equador
+291,223,ER,Eritréia
+421,184,SK,Eslováquia
+386,185,SI,Eslovênia
+34,87,ES,Espanha
+1,9,US,Estados Unidos
+372,14,EE,Estônia
+251,224,ET,Etiópia
+679,205,FJ,Fiji
+63,206,PH,Filipinas
+358,207,FI,Finlândia
+33,209,FR,França
+241,56,GA,Gabão
+233,60,GH,Gana
+995,7,GE,Geórgia
+350,66,GI,Gibraltar
+1473,69,GD,Grenada
+299,70,GL,Groelândia
+246,49,GB,Grã Bretanha
+44,49,GB,Grã Bretanha
+30,71,GR,Grécia
+590,61,GP,Guadalupe
+1671,72,GU,Guam
+502,62,GT,Guatemala
+594,210,GF,Guiana Francesa
+592,58,GY,Guiana
+240,222,GQ,Guinea Equatorial
+245,64,GW,Guiné-Bissau
+224,63,GN,Guiné
+220,59,GM,Gâmbia
+509,57,HT,Haiti
+31,139,NL,Holanda
+504,67,HN,Honduras
+852,68,HK,Hong Kong
+36,50,HU,Hungria
+44,147,IM,Ilha de Man
+1345,149,KY,Ilhas Cayman
+682,150,CK,Ilhas Cook
+500,208,FK,Ilhas Falklands
+298,204,FO,Ilhas Faroé
+1670,174,MP,Ilhas Mariana do Norte
+692,125,MH,Ilhas Marshall
+6723,148,NF,Ilhas Norfolk
+64,159,PN,Ilhas Pitcairn
+677,186,SB,Ilhas Salomão
+1649,151,TC,Ilhas Turks e Caicos
+1340,53,VI,Ilhas Virgens Americanas
+1284,52,VG,Ilhas Virgens Britânicas
+62,81,ID,Indonésia
+964,83,IQ,Iraque
+353,85,IE,Irlanda
+98,84,IR,Irã
+354,86,IS,Islândia
+403,86,IS,Islândia
+404,86,IS,Islândia
+972,8,IL,Israel
+39,88,IT,Itália
+967,89,YE,Iémen
+1876,228,JM,Jamaica
+81,229,JP,Japão
+962,82,JO,Jordânia
+77,4,KZ,Kazaquistão
+965,105,KW,Kuwait
+856,106,LA,Laos
+266,107,LS,Lesoto
+371,12,LV,Letônia
+231,108,LR,Libéria
+423,111,LI,Liechtenstein
+370,13,LT,Lituânia
+352,112,LU,Luxemburgo
+961,109,LB,Líbano
+218,110,LY,Líbia
+853,116,MO,Macau
+389,117,MK,Macedônia
+261,115,MG,Madagascar
+265,118,MW,Malawi
+960,121,MV,Maldivas
+223,120,ML,Mali
+356,122,MT,Malta
+60,119,MY,Malásia
+212,123,MA,Marrocos
+596,124,MQ,Martinica
+222,114,MR,Mauritânia
+230,113,MU,Maurícia
+691,127,FM,Micronésia
+373,15,MD,Moldávia
+976,130,MN,Mongólia
+382,230,ME,Montenegro
+1664,131,MS,Montserrat
+258,128,MZ,Moçambique
+95,132,MM,Myanmar
+52,126,MX,México
+377,129,MC,Mônaco
+264,133,NA,Namíbia
+674,134,NR,Nauru
+977,135,NP,Nepal
+505,140,NI,Nicarágua
+227,136,NE,Niger
+234,137,NG,Nigéria
+683,141,NU,Niue
+47,144,NO,Noruega
+687,143,NC,Nova Caledônia
+64,142,NZ,Nova Zelândia
+968,146,OM,Omã
+680,153,PW,Palau
+970,154,PS,Palestina
+507,155,PA,Panamá
+675,156,PG,Papua Nova Guiné
+92,152,PK,Paquistão
+595,157,PY,Paraguai
+51,158,PE,Peru
+689,211,PF,Polinésia Francesa
+48,160,PL,Polônia
+1787,162,PR,Porto Rico
+1939,162,PR,Porto Rico
+351,161,PT,Portugal
+974,93,QA,Qatar
+996,11,KG,Quirguistão
+686,96,KI,Quiribati
+254,94,KE,Quênia
+236,213,CF,República Africana Central
+1809,75,DO,República Dominicana
+1829,75,DO,República Dominicana
+1849,75,DO,República Dominicana
+420,215,CZ,República Tcheca
+262,163,RE,Reunião
+40,165,RO,Romênia
+250,164,RW,Ruanda
+7,1,RU,Rússia
+1869,178,KN,Saint Kitts e Nevis
+508,180,PM,Saint Pierre e Miquelon
+1684,23,AS,Samoa
+685,167,WS,Samoa
+378,168,SM,San Marino
+247,172,SH,Santa Helena
+290,172,SH,Santa Helena
+1758,179,LC,Santa Lúcia
+221,176,SN,Senegal
+232,190,SL,Serra Leoa
+248,175,SC,Seychelles
+599,234,SX,Sint Maarten
+252,187,SO,Somália
+94,220,LK,Sri Lanka
+268,171,SZ,Suaziândia
+211,232,SS,Sudão do Sul
+249,188,SD,Sudão
+597,189,SR,Suriname
+46,218,SE,Suécia
+41,217,CH,Suíça
+47,219,SJ,Svalbard and Jan Mayen
+239,169,ST,São Tomé and Príncipe
+1784,177,VC,São Vicente e Granadinas
+381,181,RS,Sérvia
+963,183,SY,Síria
+66,191,TH,Tailândia
+886,192,TW,Taiwan
+992,16,TJ,Tajiquistão
+255,193,TZ,Tanzânia
+670,54,TL,Timor Leste
+228,194,TG,Togo
+690,195,TK,Tokelau
+676,196,TO,Tonga
+1868,197,TT,Trinidad e Tobago
+216,199,TN,Tunísia
+993,17,TM,Turquemenistão
+90,200,TR,Turquia
+688,198,TV,Tuvalu
+380,2,UA,Ucrânia
+256,201,UG,Uganda
+598,203,UY,Uruguai
+998,18,UZ,Uzbequistão
+678,48,VU,Vanuatu
+58,51,VE,Venezuela
+84,55,VN,Vietnã
+681,202,WF,Wallis e Futuna
+263,79,ZW,Zimbábue
+260,77,ZM,Zâmbia
+27,227,ZA,África do Sul
+43,20,AT,Áustria
+91,80,IN,Índia

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/ripple_4dp" android:layout_width="72.0dip" android:layout_height="110.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.narratives.views.NarrativeCoverView android:layout_gravity="center_horizontal" android:id="@id/cover" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="8.0dip" />
+    <TextView android:textSize="12.0dip" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:maxLines="2" android:includeFontPadding="false" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" android:letterSpacing="0.02" app:fontFamily="@font/roboto_medium" />
+</LinearLayout>

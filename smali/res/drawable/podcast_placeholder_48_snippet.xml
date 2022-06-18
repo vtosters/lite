@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/gray_600" />
+            <corners android:topLeftRadius="6.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="6.0dip" android:bottomRightRadius="0.0dip" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/ic_podcast_48" android:tint="@color/gray_200" />
+    </item>
+</layer-list>

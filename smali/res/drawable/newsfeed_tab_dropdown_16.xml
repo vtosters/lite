@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_selected="true">
+        <bitmap android:src="@drawable/ic_dropdown_16" android:tint="?header_tint" />
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_dropdown_16" android:tint="?header_tint_disabled" />
+    </item>
+</selector>

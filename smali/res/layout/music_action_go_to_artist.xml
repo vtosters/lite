@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="16.0sp" android:textColor="?text_muted" android:ellipsize="end" android:gravity="start|center" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:singleLine="true" android:drawablePadding="20.0dip" android:drawableStart="@drawable/ic_artist_24" android:paddingStart="23.0dip" android:paddingEnd="23.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.ui.RecursiveSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vkontakte.android.ui.layout.ExpandableBarLayout android:id="@id/expandable" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar">
+        <FrameLayout android:id="@id/content_wrap" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:id="@id/empty" layout="@layout/appkit_empty" />
+        </FrameLayout>
+        <TextView android:textSize="16.0dip" android:textColor="?text_subhead" android:gravity="center" android:id="@id/balance" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    </com.vkontakte.android.ui.layout.ExpandableBarLayout>
+</com.vk.core.ui.RecursiveSwipeRefreshLayout>

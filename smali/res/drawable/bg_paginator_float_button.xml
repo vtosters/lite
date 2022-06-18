@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/bg_modern_search" android:tint="?float_button_background" android:tintMode="multiply" />
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="0.5dip" android:color="?float_button_border" />
+            <corners android:radius="8.0dip" />
+        </shape>
+    </item>
+</layer-list>

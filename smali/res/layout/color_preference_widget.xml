@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:id="@id/color_pref_widget" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="3.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.FitSystemWindowsFrameLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.NonBouncedAppBarFixedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/coordinator" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.material.appbar.NonBouncedAppBarLayout android:id="@id/music_playlist_non_bounced_app_bar_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.material.appbar.NonBouncedCollapsingToolbarLayout android:id="@id/collapsing_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="exitUntilCollapsed|scroll|snap">
+                    <include layout="@layout/music_podcast_page_header" />
+                    <View android:id="@id/muisc_playlist_layout_blue_foreground" android:background="?header_background_before_blur_alternate" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <androidx.appcompat.widget.Toolbar android:theme="?actionBarTheme" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" app:layout_scrollFlags="enterAlways|scroll" app:titleTextColor="?text_primary">
+                        <TextView android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/playlist_collapsed_title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" style="@style/ToolbarTitle" />
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.NonBouncedCollapsingToolbarLayout>
+            </com.google.android.material.appbar.NonBouncedAppBarLayout>
+            <com.google.android.material.appbar.NonBouncedAppBarShadowView android:id="@id/appbar_shadow_view" android:visibility="visible" android:translationZ="3.0dip" style="@style/AppBarShadow" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/music_playlist_content_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layout_behavior="com.google.android.material.appbar.NonBouncedAppBarLayout$ScrollingViewBehavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.google.android.material.appbar.NonBouncedAppBarFixedSwipeRefreshLayout>
+    <FrameLayout android:id="@id/error_layout" android:background="?background_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/music_ui_playlist_error" />
+    </FrameLayout>
+    <include android:id="@id/progress" layout="@layout/music_ui_progress" />
+</com.vk.core.view.FitSystemWindowsFrameLayout>

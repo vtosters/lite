@@ -1,0 +1,123 @@
+.class Lcom/vk/crop/CropImageView$a$a;
+.super Lcom/vk/crop/h;
+.source "CropImageView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/vk/crop/CropImageView$a;->onPreDraw()Z
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic d:Lcom/vk/crop/CropImageView$a;
+
+
+# direct methods
+.method constructor <init>(Lcom/vk/crop/CropImageView$a;Landroid/content/Context;Lcom/vk/crop/h$a;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    invoke-direct {p0, p2, p3}, Lcom/vk/crop/h;-><init>(Landroid/content/Context;Lcom/vk/crop/h$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lcom/vk/crop/h;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 2
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    invoke-static {v0}, Lcom/vk/crop/CropImageView;->e(Lcom/vk/crop/CropImageView;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    invoke-static {v0}, Lcom/vk/crop/CropImageView;->f(Lcom/vk/crop/CropImageView;)V
+
+    .line 4
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    .line 5
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    invoke-virtual {v0}, Lcom/vk/crop/CropImageView;->e()V
+
+    .line 6
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/vk/crop/CropImageView;->setLinesVisible(Z)V
+
+    goto :goto_0
+
+    .line 7
+    :cond_1
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    invoke-virtual {v0}, Lcom/vk/crop/CropImageView;->c()V
+
+    .line 8
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/vk/crop/CropImageView;->setLinesVisible(Z)V
+
+    .line 9
+    :goto_0
+    iget-object v0, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
+
+    iget-object v0, v0, Lcom/vk/crop/CropImageView$a;->f:Lcom/vk/crop/CropImageView;
+
+    invoke-virtual {v0}, Lcom/vk/crop/CropImageView;->g()V
+
+    .line 10
+    :cond_2
+    invoke-super {p0, p1, p2}, Lcom/vk/crop/h;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method

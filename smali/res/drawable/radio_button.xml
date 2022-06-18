@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:state_pressed="true">
+        <layer-list>
+            <item android:left="1.0dip" android:top="1.0dip" android:right="1.0dip" android:bottom="1.0dip">
+                <shape android:shape="oval">
+                    <solid android:color="?separator_alpha" />
+                </shape>
+            </item>
+            <item android:left="6.0dip" android:top="6.0dip" android:right="6.0dip" android:bottom="6.0dip">
+                <bitmap android:src="@drawable/register_radio_checked" android:tint="?accent" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:left="6.0dip" android:top="6.0dip" android:right="6.0dip" android:bottom="6.0dip">
+                <bitmap android:src="@drawable/register_radio_checked" android:tint="?accent" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:left="1.0dip" android:top="1.0dip" android:right="1.0dip" android:bottom="1.0dip">
+                <shape android:shape="oval">
+                    <solid android:color="?separator_alpha" />
+                </shape>
+            </item>
+            <item android:left="6.0dip" android:top="6.0dip" android:right="6.0dip" android:bottom="6.0dip">
+                <bitmap android:src="@drawable/register_radio_unchecked" android:tint="?selection_off_icon" />
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:left="6.0dip" android:top="6.0dip" android:right="6.0dip" android:bottom="6.0dip">
+                <bitmap android:src="@drawable/register_radio_unchecked" android:tint="?selection_off_icon" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

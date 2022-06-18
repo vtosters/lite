@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/overlay" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_recent_24" android:tint="@color/light_gray" android:contentDescription="@null" />
+    <TextView android:textSize="16.0sp" android:textStyle="normal" android:textColor="#ff909499" android:layout_gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_search_offline" android:lineSpacingExtra="3.0sp" android:fontFamily="sans-serif" android:layout_marginStart="64.0dip" android:layout_marginEnd="64.0dip" />
+    <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="#ff528bcc" android:gravity="end" android:layout_gravity="end|center" android:id="@id/vkim_try_again" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vkim_search_try_again" android:fontFamily="sans-serif-medium" android:layout_marginEnd="16.0dip" />
+</FrameLayout>

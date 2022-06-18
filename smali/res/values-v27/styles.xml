@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AttachTransparentDarkTheme" parent="@style/VkDarkStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorControlActivated">?accent</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="AttachTransparentMilkDarkTheme" parent="@style/VkMilkDarkStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorControlActivated">?accent</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_milk_text_cursor_drawable</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="FragmentDialogWrapper" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">?background_content</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">?background_content</item>
+        <item name="android:navigationBarColor">?background_content</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="PickerFullScreenNoStatusDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StickerDetailsDarkTheme" parent="@style/VkDarkTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StickerDetailsTheme" parent="@style/VkLightTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+    <style name="StoryActivityTheme" parent="@style/VkLightStyle">
+        <item name="android:colorBackground">?background_page</item>
+        <item name="android:windowBackground">?background_page</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">?background_page</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:colorPrimaryDark">?header_alternate_background</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+    </style>
+    <style name="StoryBottomSheetDialog" parent="@style/StoryFullscreenActivityTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="StoryBottomSheetWithoutFloating" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StoryDialogNoStatusBar" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+    </style>
+    <style name="StoryFullscreenActivityTheme" parent="@style/VkLightStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StoryFullscreenActivityThemeDark" parent="@style/VkDarkStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StoryViewActivityTheme" parent="@style/VkLightStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StoryViewActivityThemeDark" parent="@style/VkDarkStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StoryViewActivityThemeMilk" parent="@style/VkMilkLightStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="StoryViewActivityThemeMilkDark" parent="@style/VkMilkDarkStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="VideoBottomSheetDialogDark" parent="@style/VkDarkStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="VideoBottomSheetDialogLight" parent="@style/VkLightStyle">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="VkLightStyle" parent="@style/VkLightTheme">
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:navigationBarColor">?background_page</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_back_outline_28</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="is_messages_snippet">false</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="vkapp_common_separator_padding">0.0dip</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="VkMilkLightStyle" parent="@style/VkMilkLightTheme">
+        <item name="android:textColorSecondary">@color/prefs_subtitle</item>
+        <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
+        <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/NoPaddingListView</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/VKActionButtonOverflow</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/highlight</item>
+        <item name="android:selectableItemBackground">@drawable/highlight</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:actionMenuTextColor">@color/base_action_menu_text_color</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textAppearanceListItem">@style/MaterialMediumText</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/standard_list_item_padding</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/standard_list_item_padding</item>
+        <item name="android:actionBarTheme">@style/ActionBarTheme</item>
+        <item name="android:textAppearanceListItemSecondary">@style/MaterialSmallText</item>
+        <item name="android:navigationBarColor">?background_page</item>
+        <item name="android:actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="BuyMusicSubscriptionButtonStyle">@style/BuyMusicSubscriptionBtn</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_back_outline_28</item>
+        <item name="appkitDefaultErrorText">@string/err_text</item>
+        <item name="appkitRetryButtonText">@string/retry</item>
+        <item name="im_bg_install_vkme_btn_bg">@drawable/bg_install_vkme_milkshake</item>
+        <item name="is_messages_snippet">false</item>
+        <item name="newsfeed_action_color">?accent</item>
+        <item name="newsfeed_attach_subtitle_color">?text_secondary</item>
+        <item name="newsfeed_separator_height">@dimen/toolbar_separator_height</item>
+        <item name="newsfeed_separator_horizontal_margin">@dimen/post_side_padding</item>
+        <item name="notifications_header_padding_bottom">16.0dip</item>
+        <item name="notifications_header_padding_top">12.0dip</item>
+        <item name="preferenceTheme">@style/PreferenceThemeMilkshake</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_blue_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_blue_searchViewTextColorHint</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_blue_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbar_font">@font/tt_commons_demi_bold</item>
+        <item name="toolbar_separator">@drawable/bg_toolbar_separator</item>
+        <item name="toolbar_shadow">@drawable/bg_toolbar_shadow_light</item>
+        <item name="toolbar_subtitle_textColor">?header_text_secondary</item>
+        <item name="toolbar_title_textColor">?header_text</item>
+        <item name="toolbar_title_textSize">23.0sp</item>
+        <item name="toolbar_title_textSize_max">23.0sp</item>
+        <item name="toolbar_title_textSize_min">16.0sp</item>
+        <item name="vkapp_menu_icon_size">28.0dip</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+</resources>

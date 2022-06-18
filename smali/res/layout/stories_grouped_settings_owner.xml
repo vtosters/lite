@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip" android:paddingStart="16.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="start|center" android:id="@id/photo" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+    <com.vk.core.widget.FluidHorizontalLayout android:gravity="center_vertical" android:layout_gravity="start|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="60.0dip" android:layout_marginEnd="60.0dip">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:vk_layout_isFluid="false" style="@style/VKUIText.Headline" />
+        <View android:layout_gravity="center_vertical" android:id="@id/verified" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginStart="6.0dip" />
+    </com.vk.core.widget.FluidHorizontalLayout>
+    <ImageView android:layout_gravity="end|center" android:id="@id/action" android:background="@drawable/highlight_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:tint="?icon_outline_secondary" />
+</FrameLayout>

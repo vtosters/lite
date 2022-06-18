@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/broadcastTop"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="top" android:id="@id/broadcast_fade_up" android:background="@drawable/scrim_top" android:layout_width="fill_parent" android:layout_height="90.0dip" android:alpha="0.5" />
+    <View android:layout_gravity="bottom" android:id="@id/broadcast_fade_bottom" android:background="@drawable/bg_live_fade_bottom" android:layout_width="fill_parent" android:layout_height="1000.0dip" android:layout_marginBottom="-936.0dip" android:alpha="1.0" />
+    <FrameLayout android:id="@id/broadcast_main_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.vk.libvideo.live.views.error.ErrorView android:id="@id/broadcast_error" android:background="@color/live_error_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:layout_gravity="center" android:id="@id/broadcast_progress" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:tint="@color/white" />
+    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/broadcast_top_holder" android:layout_width="fill_parent" android:layout_height="56.0dip" android:alpha="1.0">
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/broadcast_top_holder_left" android:layout_width="wrap_content" android:layout_height="56.0dip" android:contentDescription="@string/story_accessibility_stream_stat" />
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/broadcast_top_holder_center" android:layout_width="0.0dip" android:layout_height="56.0dip" android:layout_weight="1.0" android:importantForAccessibility="no" />
+        <ImageButton android:id="@id/broadcast_close" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_live_close" android:layout_weight="0.0" android:contentDescription="@string/live_broadcast_end_title" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.core.view.VKAppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <FrameLayout android:orientation="horizontal" android:id="@id/music_toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="0.0dip" android:outlineProvider="none" style="@style/Toolbar">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/music_left_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_outline_28" android:contentDescription="@string/accessibility_back" android:layout_marginStart="4.0dip" style="@style/ActionButton.White" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/music_right_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_menu_search" android:contentDescription="@string/accessibility_search" android:layout_marginEnd="4.0dip" style="@style/ActionButton.White" />
+            <TextView android:textColor="?header_text" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/music_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="64.0dip" android:layout_marginEnd="48.0dip" style="@style/title_text" />
+            <EditText android:theme="@style/EditTextWhiteBubbleUnderline" android:textStyle="normal" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/music_search" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/music_hint_search" android:layout_marginStart="64.0dip" android:layout_marginEnd="52.0dip" app:fontFamily="@font/roboto_regular" style="@style/SearchInput" />
+        </FrameLayout>
+    </com.vk.core.view.VKAppBarLayout>
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/music_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" android:layout_marginBottom="68.0dip">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/music_recycler" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/music_attach_button" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="68.0dip">
+        <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <TextView android:layout_gravity="bottom" android:id="@id/music_attach_button_label" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/music_save_button_label" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_medium" style="@style/VKUIButton.Primary.Big" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

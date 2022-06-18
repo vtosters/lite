@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="4.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.core.view.PhotoStripView android:layout_gravity="center_vertical" android:id="@id/photos" android:layout_width="wrap_content" android:layout_height="48.0dip" app:placeholder="?placeholder_icon_background" />
+    <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="8.0dip" style="@style/VKUIText.Headline" />
+    <TextView android:textSize="15.0sp" android:textColor="?counter_secondary_text" android:gravity="center" android:id="@id/counter" android:background="@drawable/catalog_bg_counter_secondary" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="24.0dip" android:minWidth="24.0dip" android:singleLine="true" />
+</LinearLayout>

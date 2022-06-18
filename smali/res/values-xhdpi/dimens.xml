@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_separator_height">0.33000004dip</dimen>
+    <dimen name="tw__login_btn_text_size">18.0sp</dimen>
+    <dimen name="camera_target_bottom_margin">24.0dip</dimen>
+    <dimen name="camera_target_text_size">18.0sp</dimen>
+</resources>

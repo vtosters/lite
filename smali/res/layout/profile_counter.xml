@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/highlight" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="146.0dip" android:layout_height="138.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/profile_counter_title" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="friends" android:singleLine="true" android:fontFamily="@string/font_family_medium" />
+    <FrameLayout android:layout_width="130.0dip" android:layout_height="86.0dip">
+        <FrameLayout android:id="@id/stub" android:background="@drawable/profile_counter_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/stub_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/light_blue_gray" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/profile_counter_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

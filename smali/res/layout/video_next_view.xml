@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/video_next_stop" android:background="@drawable/highlight_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip">
+        <ProgressBar android:layout_gravity="center" android:id="@id/video_next_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:indeterminate="false" android:indeterminateOnly="false" />
+        <ImageView android:layout_gravity="center" android:id="@id/videoNextViewIcon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_videodiscover_timer_stop" android:scaleType="center" android:tint="#67ffffff" />
+    </FrameLayout>
+    <TextView android:textColor="#cdffffff" android:layout_gravity="center_vertical" android:id="@id/videoNextViewText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:text="@string/video_next" android:includeFontPadding="false" />
+</merge>

@@ -1,0 +1,67 @@
+.class public final Lcom/vk/im/engine/internal/longpoll/tasks/c;
+.super Lcom/vk/im/engine/internal/longpoll/g;
+.source "ComposingBeginLpTask.kt"
+
+
+# instance fields
+.field private final b:I
+
+.field private final c:Lcom/vk/im/engine/utils/collection/h;
+
+.field private final d:Lcom/vk/im/engine/models/typing/ComposingType;
+
+
+# direct methods
+.method public constructor <init>(ILcom/vk/im/engine/utils/collection/h;ILcom/vk/im/engine/models/typing/ComposingType;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/longpoll/g;-><init>()V
+
+    iput p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->b:I
+
+    iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->c:Lcom/vk/im/engine/utils/collection/h;
+
+    iput-object p4, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->d:Lcom/vk/im/engine/models/typing/ComposingType;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected b(Lcom/vk/im/engine/internal/longpoll/c;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->d:Lcom/vk/im/engine/models/typing/ComposingType;
+
+    sget-object v1, Lcom/vk/im/engine/models/typing/ComposingType;->TEXT:Lcom/vk/im/engine/models/typing/ComposingType;
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    iget v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->b:I
+
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->c:Lcom/vk/im/engine/utils/collection/h;
+
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/c;->b(ILcom/vk/im/engine/utils/collection/h;)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    sget-object v1, Lcom/vk/im/engine/models/typing/ComposingType;->AUDIO:Lcom/vk/im/engine/models/typing/ComposingType;
+
+    if-ne v0, v1, :cond_1
+
+    .line 4
+    iget v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->b:I
+
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/c;->c:Lcom/vk/im/engine/utils/collection/h;
+
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/c;->a(ILcom/vk/im/engine/utils/collection/h;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method

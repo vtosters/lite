@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:drawable="@drawable/vk_auth_bg_edittext_focused" />
+    <item android:drawable="@drawable/vk_auth_bg_edittext" />
+</selector>

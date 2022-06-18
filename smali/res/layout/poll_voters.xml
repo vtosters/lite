@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <include layout="@layout/appkit_toolbar" />
+        <com.google.android.material.tabs.TabLayout android:id="@id/tabs" android:background="?header_background" style="?tabBarTheme" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.vk.core.view.VKViewPager android:id="@id/viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

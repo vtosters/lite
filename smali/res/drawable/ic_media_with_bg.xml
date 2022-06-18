@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="@dimen/vkim_picker_documents_submenu_size" android:width="@dimen/vkim_picker_documents_submenu_size" />
+            <solid android:color="?im_picker_file_icon_bg_color" />
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <bitmap android:gravity="center" android:src="@drawable/ic_media_outline_28" android:tint="@color/azure_300" />
+    </item>
+</layer-list>

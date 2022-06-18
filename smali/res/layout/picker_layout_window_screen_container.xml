@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.core.simplescreen.ScreenContainer android:id="@id/sc_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/view_top_padding" android:fitsSystemWindows="@bool/picker_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

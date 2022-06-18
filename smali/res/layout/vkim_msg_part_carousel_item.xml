@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="248.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.im.ui.views.FrescoImageView android:id="@id/vkim_carousel_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" app:vkim_aspectRatio="1.625" app:vkim_scaleType="center_crop" />
+    <TextView android:textSize="15.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/vkim_carousel_title" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" android:fontFamily="@font/roboto_medium" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/vkim_carousel_description" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    <FrameLayout android:id="@id/vkim_carousel_kbd_container" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" />
+</LinearLayout>

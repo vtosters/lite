@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:src="@drawable/vkim_bg_button_down_shadow" />
+    </item>
+    <item>
+        <bitmap android:src="@drawable/vkim_bg_button_down_white" android:tint="?modal_card_background" android:tintMode="src_in" />
+    </item>
+    <item android:gravity="center" android:left="14.0dip" android:top="12.0dip" android:right="14.0dip" android:bottom="16.0dip">
+        <bitmap android:src="@drawable/vkim_mention_outline_28" android:tint="?icon_outline_secondary" />
+    </item>
+    <item android:drawable="@drawable/vkim_ripple_circle_highlight" android:left="3.0dip" android:top="3.0dip" android:right="3.0dip" android:bottom="7.0dip" />
+</layer-list>

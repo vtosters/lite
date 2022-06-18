@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:height="22.0dip" android:width="22.0dip">
+        <shape android:shape="oval">
+            <solid android:color="?background_keyboard" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="24.0dip" android:width="24.0dip">
+        <shape android:shape="oval">
+            <stroke android:width="2.0dip" android:color="?background_content" />
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <bitmap android:src="@drawable/ic_cancel_16" android:tint="?icon_medium" />
+    </item>
+</layer-list>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.profile.ui.components.HeaderActionButtons android:orientation="horizontal" android:id="@id/profile_buttons_wrap" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/standard_list_item_padding" android:paddingEnd="@dimen/standard_list_item_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

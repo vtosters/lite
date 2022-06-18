@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/action_button_overflow_video" android:id="@id/more" android:title="@string/menu" android:showAsAction="always" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
+    <item android:icon="@drawable/picker_ic_close_24" android:id="@android:id/home" android:title="@string/close" android:showAsAction="always" app:menuTint="?toolbarIconsColor" app:showAsAction="always" />
+</menu>

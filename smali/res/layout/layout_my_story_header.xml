@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="?text_secondary" android:gravity="start" android:id="@id/send_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="@string/story_publication" android:fontFamily="@string/font_family_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/story_upload_author_layout" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:minHeight="78.0dip">
+        <FrameLayout android:layout_gravity="top" android:layout_width="48.0dip" android:layout_height="60.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="4.0dip">
+            <CheckBox android:layout_gravity="center" android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+        </FrameLayout>
+        <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="top" android:id="@id/author_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="18.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="0.0dip" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="12.0dip">
+            <TextView android:textColor="?text_primary" android:id="@id/author_title" android:layout_marginTop="11.0dip" android:text="@string/my_story" style="@style/UserSmallTitle" />
+            <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="marquee" android:id="@id/author_subtitle" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/my_story_desc" android:lineSpacingExtra="2.0dip" android:layout_marginEnd="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_parent" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="78.0dip">
+        <FrameLayout android:layout_gravity="top" android:layout_width="48.0dip" android:layout_height="60.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="10.0dip" android:layout_marginStart="4.0dip">
+            <CheckBox android:enabled="false" android:layout_gravity="center" android:id="@id/parent_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" app:buttonTint="@color/light_gray" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+        </FrameLayout>
+        <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="top" android:id="@id/parent_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="18.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="0.0dip" app:placeholderImage="@drawable/photo_loading" style="@style/UserSmallPhoto" />
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="12.0dip">
+            <TextView android:textColor="?text_primary" android:id="@id/parent_title" android:layout_marginTop="11.0dip" android:text="@string/my_story" style="@style/UserSmallTitle" />
+            <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="marquee" android:id="@id/parent_subtitle" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/my_story_desc" android:lineSpacingExtra="2.0dip" android:layout_marginEnd="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="?text_secondary" android:gravity="start|center" android:id="@id/tv_send_with_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="10.0dip" android:text="@string/send_with_message" android:fontFamily="@string/font_family_medium" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="?text_secondary" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="72.0dip" />
+</LinearLayout>

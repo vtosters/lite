@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Menu" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Menu" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.Inverse" parent="@android:style/TextAppearance.Material.Widget.Button.Inverse" />
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light" />
+    <style name="Base.Widget.AppCompat.Button.Borderless.Colored" parent="@android:style/Widget.Material.Button.Borderless.Colored" />
+    <style name="Base.Widget.AppCompat.Button.Colored" parent="@android:style/Widget.Material.Button.Colored" />
+    <style name="Base.Widget.AppCompat.RatingBar.Indicator" parent="@android:style/Widget.Material.RatingBar.Indicator" />
+    <style name="Base.Widget.AppCompat.RatingBar.Small" parent="@android:style/Widget.Material.RatingBar.Small" />
+    <style name="Base.Widget.AppCompat.Spinner.Underlined" parent="@android:style/Widget.Material.Spinner.Underlined" />
+    <style name="CardView" parent="@style/Base.CardView">
+        <item name="cardBackgroundColor">?android:colorBackgroundFloating</item>
+    </style>
+    <style name="SplashTheme" parent="@style/VkLightStyle">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+    <style name="StoryDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">0.0dip</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowElevation">0.0px</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="VkLightStyle.WhiteToolbar" parent="@style/VkLightStyle">
+        <item name="android:actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.White</item>
+        <item name="colorPrimary">#ffffffff</item>
+        <item name="searchViewCursorDrawable">@drawable/toolbar_white_text_cursor_drawable</item>
+        <item name="searchViewTextColorHint">@color/toolbar_white_searchViewTextColorHint</item>
+        <item name="statusBarColorBack">@color/toolbar_white_statusBarColorBack</item>
+        <item name="statusBarColorFront">@color/toolbar_white_statusBarColorFront</item>
+        <item name="tabBarBorderReference">@drawable/tab_bar_white_border</item>
+        <item name="tabBarTheme">@style/TabBarTheme</item>
+        <item name="toolbarIconsColor">@color/toolbar_white_textColorSecondary</item>
+    </style>
+    <style name="VkMeDarkTheme" parent="@style/Vk.Theme.VkMe.space_gray_generated">
+        <item name="android:windowBackground">@drawable/bg_splash_screen_me</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="im_bg_modal_dialog">@drawable/bg_modal_dialog</item>
+        <item name="im_btn_accept_background">@color/azure_300_alpha10</item>
+        <item name="im_btn_accept_background_dark">@color/azure_300_alpha15</item>
+        <item name="im_btn_accept_foreground">@color/azure_A400</item>
+        <item name="im_btn_confirm_background">@color/blue_A400</item>
+        <item name="im_btn_confirm_background_dark">@color/blue_A500</item>
+        <item name="im_btn_confirm_background_disabled">@color/blue_A800</item>
+        <item name="im_btn_reject_background">@color/red_error_alpha10</item>
+        <item name="im_btn_reject_background_dark">@color/red_error_alpha15</item>
+        <item name="im_btn_reject_foreground">@color/red_error</item>
+        <item name="im_dropdown_arrow_tint">?header_tint</item>
+        <item name="im_dropdown_icon_color">?accent</item>
+        <item name="im_msg_part_time_sticker_bg">@drawable/vkim_msg_part_time_sticker_bg_new_dark</item>
+        <item name="im_picker_file_icon_bg_color">#22000000</item>
+        <item name="selectableItemBackground">@drawable/vkim_ripple_light</item>
+        <item name="selectableItemBackgroundBorderless">@drawable/vkim_ripple_light_borderless</item>
+        <item name="toolbar_separator">@drawable/bg_toolbar_separator</item>
+        <item name="toolbar_shadow">@drawable/bg_toolbar_shadow_light</item>
+    </style>
+    <style name="VkMeLightTheme" parent="@style/Vk.Theme.VkMe.bright_light_generated">
+        <item name="android:windowBackground">@drawable/bg_splash_screen_me</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="im_bg_modal_dialog">@drawable/list_dialog_bg</item>
+        <item name="im_btn_accept_background">@color/azure_300_alpha10</item>
+        <item name="im_btn_accept_background_dark">@color/azure_300_alpha15</item>
+        <item name="im_btn_accept_foreground">@color/azure_A400</item>
+        <item name="im_btn_confirm_background">@color/blue_300</item>
+        <item name="im_btn_confirm_background_dark">@color/blue_400</item>
+        <item name="im_btn_confirm_background_disabled">@color/blue_200_muted</item>
+        <item name="im_btn_reject_background">@color/red_error_alpha10</item>
+        <item name="im_btn_reject_background_dark">@color/red_error_alpha15</item>
+        <item name="im_btn_reject_foreground">@color/red_error</item>
+        <item name="im_picker_file_icon_bg_color">#fff2f3f5</item>
+        <item name="selectableItemBackground">@drawable/vkim_ripple_dark</item>
+        <item name="selectableItemBackgroundBorderless">@drawable/vkim_ripple_dark_borderless</item>
+        <item name="toolbar_separator">@drawable/bg_toolbar_separator</item>
+        <item name="toolbar_shadow">@drawable/bg_toolbar_shadow_light</item>
+    </style>
+    <style name="Base.V23.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat">
+        <item name="actionBarItemBackground">?android:actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:actionMenuTextColor</item>
+        <item name="controlBackground">@drawable/abc_control_background_material</item>
+        <item name="ratingBarStyleIndicator">?android:ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:ratingBarStyleSmall</item>
+    </style>
+    <style name="Base.V23.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light">
+        <item name="actionBarItemBackground">?android:actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:actionMenuTextColor</item>
+        <item name="controlBackground">@drawable/abc_control_background_material</item>
+        <item name="ratingBarStyleIndicator">?android:ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:ratingBarStyleSmall</item>
+    </style>
+</resources>

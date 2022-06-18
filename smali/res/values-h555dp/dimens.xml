@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="story_narrative_cover_height">363.0dip</dimen>
+    <dimen name="story_narrative_cover_width">258.0dip</dimen>
+    <dimen name="story_narrative_title_size">26.0sp</dimen>
+    <dimen name="story_narrative_views_margin_top">363.0dip</dimen>
+</resources>

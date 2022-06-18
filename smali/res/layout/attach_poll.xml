@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.polls.ui.views.SimplePollView android:id="@id/poll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:author_text_size="14.0dip" app:corner_radius="8.0dip" app:default_background="@drawable/default_poll_background" app:info_text_size="14.0dip" app:selector_no_background="@drawable/poll_view_no_background_selector" app:selector_with_background="@drawable/poll_view_with_background_selector" app:short_date_format="false" app:show_avatars="true" app:show_edit_menu="false" app:title_text_size="22.0dip" />
+</FrameLayout>

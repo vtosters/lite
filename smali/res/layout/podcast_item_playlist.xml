@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_marginStart="16.0dip">
+        <com.vk.music.view.ThumbsImageView android:layout_gravity="center_vertical" android:id="@id/audio_image" android:layout_width="72.0dip" android:layout_height="72.0dip" app:roundedCornerRadius="@dimen/music_podcasts_image_playlist_cover_corners" app:tiv_background_image="?placeholder_icon_background" app:tiv_border_width="0.5dip" />
+        <ImageView android:id="@id/audio_playing_indicator" android:background="@drawable/music_dark_round_rect" android:visibility="gone" android:layout_width="72.0dip" android:layout_height="72.0dip" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <com.vk.music.ui.track.views.PodcastPartView android:layout_gravity="center_vertical" android:id="@id/part_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip" />
+    <ImageView android:layout_gravity="end|center" android:id="@id/audio_menu" android:layout_width="32.0dip" android:layout_height="44.0dip" android:src="@drawable/ic_more_vertical_16" android:scaleType="centerInside" android:tint="?icon_secondary" android:contentDescription="@string/music_talkback_more" android:layout_marginStart="2.0dip" android:layout_marginEnd="6.0dip" style="@style/ActionButton" />
+</LinearLayout>

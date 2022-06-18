@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/avatar_button" android:background="@drawable/vkui_btn_circle_avatar" android:layout_width="96.0dip" android:layout_height="96.0dip" android:contentDescription="@string/accessibility_avatar_choose"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="34.0dip" android:layout_height="34.0dip" android:src="@drawable/ic_camera_outline_42" android:tint="@color/azure_350" />
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/avatar_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/accessibility_avatar_choose" />
+</FrameLayout>

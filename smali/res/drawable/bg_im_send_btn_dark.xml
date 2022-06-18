@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="4.0dip" android:top="4.0dip" android:right="4.0dip" android:bottom="4.0dip">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?modal_card_background" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?modal_card_border" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:drawable="?selectableItemBackgroundBorderless" />
+</layer-list>

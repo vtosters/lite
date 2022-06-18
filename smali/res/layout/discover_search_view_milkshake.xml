@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_marginEnd="8.0dip" app:layout_scrollFlags="enterAlways|scroll">
+            <com.vk.core.view.search.MilkshakeSearchView android:id="@id/search_view" android:layout_width="0.0dip" android:layout_height="?actionBarSize" android:layout_weight="1.0" app:layout_scrollFlags="enterAlways|scroll|snap" />
+            <ImageView android:id="@id/search_qr" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_scan_outline_28" android:scaleType="centerInside" android:tint="?header_tint" />
+        </LinearLayout>
+        <com.vk.core.view.VKTabLayout android:layout_gravity="center_horizontal" android:id="@id/tabs" android:layout_width="wrap_content" android:layout_height="48.0dip" app:tabIndicatorFullWidth="true" style="?tabBarTheme" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.vk.core.view.VKViewPager android:id="@id/viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" app:appbar_allowSeparator="false" style="@style/AppBarShadow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

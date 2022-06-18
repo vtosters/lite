@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:layout_marginBottom="21.0dip" android:src="@drawable/ic_write_outline_56" android:tint="?content_placeholder_icon" android:importantForAccessibility="no" />
+    <TextView android:textColor="?text_primary" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:text="@string/write_first_post" android:lineSpacingExtra="4.0sp" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" style="@style/VKUIText.Title1" />
+    <TextView android:textColor="?text_placeholder" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="23.0dip" android:text="@string/share_with_friends_important" android:lineSpacingExtra="4.0sp" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" style="@style/VKUIText.Headline" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:text="@string/new_status" android:fontFamily="@font/roboto_medium" style="@style/VKUIButton.Primary" />
+</LinearLayout>

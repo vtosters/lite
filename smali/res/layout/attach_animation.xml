@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vkontakte.android.ui.widget.RatioFrameLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" app:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.media.player.video.view.VideoTextureView android:layout_gravity="center" android:id="@id/video_display" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="250.0dip" />
+    <com.vk.newsfeed.FrescoImageView android:layout_gravity="center" android:id="@id/att_doc_thumb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="250.0dip" app:vkim_scaleType="center_crop_upscale" />
+    <ImageView android:layout_gravity="center" android:id="@id/play" android:background="@drawable/bg_gif_label" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_play_24" android:scaleType="center" />
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/error" android:background="@drawable/bg_gif_label" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_chats_error" android:tint="@color/white" />
+    <com.vk.libvideo.ui.DurationView android:layout_gravity="end|bottom|center" android:id="@id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+</com.vkontakte.android.ui.widget.RatioFrameLayout>

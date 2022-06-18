@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKImageView android:id="@id/icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginStart="@dimen/post_side_padding" />
+    <com.vk.core.view.links.LinkedTextView android:ellipsize="end" android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="@dimen/post_side_padding" style="@style/VKUIText.Text" />
+    <com.vk.imageloader.view.VKImageView android:id="@id/chevron" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="4.0dip" android:layout_marginEnd="12.0dip" />
+</LinearLayout>

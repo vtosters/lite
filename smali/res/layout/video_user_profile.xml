@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/user_photo" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="10.0dip" app:placeholderImage="@drawable/user_placeholder" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/profile" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="16.0dip" />
+        <com.vk.core.view.links.LinkedTextView android:textSize="12.0sp" android:textColor="#d7ffffff" android:ellipsize="end" android:gravity="start" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" android:fontFamily="@string/font_family_regular" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/share_btn" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_share_24" android:tint="@color/white" android:layout_marginEnd="8.0dip" />
+</LinearLayout>

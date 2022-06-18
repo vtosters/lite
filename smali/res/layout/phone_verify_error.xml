@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:layout_gravity="center_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/phone_verify_error_busy_number" android:textAlignment="center" />
+    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:gravity="center_vertical" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/phone_verify_busy_number_suggestion" android:textAlignment="center" />
+</merge>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vkontakte.android.ui.OverlayLinearLayout android:orientation="vertical" android:paddingBottom="12.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" app:overlay="@drawable/highlight_post" app:padOverlay="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <com.vk.newsfeed.FrescoImageView android:layout_gravity="center_horizontal" android:id="@id/snippet_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:layout_gravity="center" android:id="@id/iv_link_state" android:background="@drawable/ic_linked_24" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:backgroundTint="?placeholder_icon_foreground_secondary" />
+        <TextView android:layout_gravity="start|center|top" android:id="@id/tv_new_label" android:visibility="gone" android:layout_marginTop="4.0dip" android:layout_marginStart="-2.0dip" style="@style/NewLabel" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/snippet_toggle_fave" android:background="@drawable/highlight_circle_white" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="4.0dip" android:src="@drawable/fave_start_button" android:scaleType="center" android:layout_marginEnd="4.0dip" />
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/snippet_actions" android:background="@drawable/highlight_unlimited" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_shadow_24" android:scaleType="center" android:contentDescription="@string/menu" />
+    </FrameLayout>
+    <TextView android:textSize="15.0sp" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    <com.vk.core.widget.FluidHorizontalLayout android:gravity="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:vk_layout_isFluid="true">
+            <com.vk.core.widget.FluidHorizontalLayout android:id="@id/info" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.vk.core.view.TintTextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="16.0dip" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="2.5dip" android:drawableEnd="@drawable/ic_star_10" app:drawableTint="?icon_secondary" />
+                <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:gravity="center_vertical" android:id="@id/orders_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="16.0dip" android:includeFontPadding="false" app:vk_layout_isFluid="true" />
+                <com.vk.newsfeed.views.ProductBrandLogoView android:id="@id/brand_logo" android:layout_width="58.0dip" android:layout_height="16.0dip" />
+            </com.vk.core.widget.FluidHorizontalLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                <TextView android:textSize="13.0sp" android:textColor="?text_primary" android:ellipsize="end" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" />
+                <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/old_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" android:layout_marginStart="7.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:gravity="center" android:layout_gravity="bottom" android:id="@id/button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="6.0dip" style="@style/outline_button" />
+    </com.vk.core.widget.FluidHorizontalLayout>
+</com.vkontakte.android.ui.OverlayLinearLayout>

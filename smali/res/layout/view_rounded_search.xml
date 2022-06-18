@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="?colorPrimary"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_box" android:background="@drawable/bg_rounded_search" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/search_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_search_outline_16" android:scaleType="centerInside" android:tint="?icon_outline_secondary" android:layout_marginStart="12.0dip" />
+        <com.vk.core.view.NoMenuEditText android:textSize="16.0dip" android:textColor="?text_primary" android:textColorHint="?content_placeholder_text" android:gravity="center_vertical" android:id="@id/query" android:background="@null" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0px" android:layout_height="fill_parent" android:hint="@string/search" android:singleLine="true" android:maxLength="30" android:layout_weight="1.0" android:inputType="textCapSentences|textNoSuggestions" android:imeOptions="actionSearch" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/right_icon" android:background="@drawable/highlight_unlimited" android:layout_width="40.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_cancel_24" android:scaleType="centerInside" android:tint="?icon_outline_secondary" />
+    </LinearLayout>
+</merge>

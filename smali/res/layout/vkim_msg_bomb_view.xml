@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_modal_background_with_round_corner" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="26.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/bomb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bomb_outline_12" android:contentDescription="@string/accessibility_disappearing_icon" />
+    <TextView android:textAppearance="@style/VkIm.MsgPart.Time.TextContrast" android:textSize="11.0dip" android:textColor="@color/red" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:contentDescription="@string/accessibility_disappearing_timer" />
+</FrameLayout>

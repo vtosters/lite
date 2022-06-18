@@ -1,0 +1,873 @@
+.class public final Lcom/vk/video/a;
+.super Ljava/lang/Object;
+.source "VideoAlbumsController.kt"
+
+# interfaces
+.implements Lcom/vk/lists/t$o;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/vk/video/a$b;,
+        Lcom/vk/video/a$c;,
+        Lcom/vk/video/a$a;,
+        Lcom/vk/video/a$d;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/api/video/o$a;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final a:Lcom/vk/video/a$a;
+
+.field private final b:Landroid/util/SparseBooleanArray;
+
+.field private final c:Lcom/vk/lists/RecyclerPaginatedView;
+
+.field private final d:Lcom/vk/video/a$b;
+
+.field private final e:Lcom/vk/video/a$b;
+
+.field private final f:Landroid/view/View$OnClickListener;
+
+.field private final g:I
+
+.field private final h:Lcom/vk/dto/common/VideoFile;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/vk/video/a$d;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/vk/video/a$d;-><init>(Lkotlin/jvm/internal/i;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;ILcom/vk/dto/common/VideoFile;)V
+    .locals 8
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p2, p0, Lcom/vk/video/a;->g:I
+
+    iput-object p3, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    .line 2
+    new-instance v0, Lcom/vk/video/a$a;
+
+    invoke-direct {v0, p0}, Lcom/vk/video/a$a;-><init>(Lcom/vk/video/a;)V
+
+    iput-object v0, p0, Lcom/vk/video/a;->a:Lcom/vk/video/a$a;
+
+    .line 3
+    new-instance v0, Landroid/util/SparseBooleanArray;
+
+    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
+
+    iput-object v0, p0, Lcom/vk/video/a;->b:Landroid/util/SparseBooleanArray;
+
+    .line 4
+    new-instance v0, Lcom/vk/lists/RecyclerPaginatedView;
+
+    invoke-direct {v0, p1}, Lcom/vk/lists/RecyclerPaginatedView;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    .line 5
+    new-instance v0, Lcom/vk/video/a$f;
+
+    invoke-direct {v0, p0}, Lcom/vk/video/a$f;-><init>(Lcom/vk/video/a;)V
+
+    iput-object v0, p0, Lcom/vk/video/a;->f:Landroid/view/View$OnClickListener;
+
+    .line 6
+    new-instance v7, Lcom/vk/video/a$b;
+
+    const v0, 0x7f12105b
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v0, "context.getString(R.string.video_album_uploaded)"
+
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v2, -0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    move-object v0, v7
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/vk/video/a$b;-><init>(Lcom/vk/video/a;ILjava/lang/String;ZZZ)V
+
+    iput-object v7, p0, Lcom/vk/video/a;->d:Lcom/vk/video/a$b;
+
+    .line 7
+    new-instance v7, Lcom/vk/video/a$b;
+
+    const v0, 0x7f121056
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v0, "context.getString(R.string.video_album_added)"
+
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v2, -0x2
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v0, v7
+
+    invoke-direct/range {v0 .. v6}, Lcom/vk/video/a$b;-><init>(Lcom/vk/video/a;ILjava/lang/String;ZZZ)V
+
+    iput-object v7, p0, Lcom/vk/video/a;->e:Lcom/vk/video/a$b;
+
+    .line 8
+    iget-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/vk/lists/RecyclerPaginatedView;->setSwipeRefreshEnabled(Z)V
+
+    .line 9
+    iget-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    sget-object v1, Lcom/vk/lists/AbstractPaginatedView$LayoutType;->LINEAR:Lcom/vk/lists/AbstractPaginatedView$LayoutType;
+
+    invoke-virtual {v0, v1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/AbstractPaginatedView$LayoutType;)Lcom/vk/lists/AbstractPaginatedView$c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
+
+    .line 10
+    :cond_0
+    iget-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    iget-object v1, p0, Lcom/vk/video/a;->a:Lcom/vk/video/a$a;
+
+    invoke-virtual {v0, v1}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    .line 11
+    iget-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    const v1, 0x7f040095
+
+    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
+
+    .line 12
+    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+
+    move-result-object v0
+
+    const-string v1, "PaginationHelper.createWithOffset(this)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    invoke-static {v0, v1}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+
+    return-void
+.end method
+
+.method public static final synthetic a(Lcom/vk/video/a;)Lcom/vk/video/a$a;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/video/a;->a:Lcom/vk/video/a$a;
+
+    return-object p0
+.end method
+
+.method private final a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Integer;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 16
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const-string v1, "adapter.list"
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-ne v0, v4, :cond_5
+
+    .line 17
+    iget-object p3, p0, Lcom/vk/video/a;->a:Lcom/vk/video/a$a;
+
+    invoke-virtual {p3}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+
+    move-result-object p3
+
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :cond_0
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/vk/video/a$b;
+
+    invoke-virtual {v1}, Lcom/vk/video/a$b;->b()I
+
+    move-result v1
+
+    invoke-virtual {p2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Integer;
+
+    if-nez v6, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    if-ne v1, v6, :cond_2
+
+    const/4 v1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 v1, 0x0
+
+    :goto_1
+    if-eqz v1, :cond_0
+
+    goto :goto_2
+
+    :cond_3
+    move-object v0, v3
+
+    :goto_2
+    check-cast v0, Lcom/vk/video/a$b;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Lcom/vk/video/a$b;->e()Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_3
+
+    :cond_4
+    move-object p2, v3
+
+    :goto_3
+    const p3, 0x7f121054
+
+    new-array v0, v2, [Ljava/lang/Object;
+
+    .line 18
+    iget-object v1, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    iget-object v1, v1, Lcom/vk/dto/common/VideoFile;->I:Ljava/lang/String;
+
+    aput-object v1, v0, v5
+
+    aput-object p2, v0, v4
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v5, v2, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+
+    goto/16 :goto_8
+
+    .line 19
+    :cond_5
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    if-le p2, v4, :cond_6
+
+    const p2, 0x7f121055
+
+    new-array p3, v4, [Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    iget-object v0, v0, Lcom/vk/dto/common/VideoFile;->I:Ljava/lang/String;
+
+    aput-object v0, p3, v5
+
+    invoke-virtual {p1, p2, p3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v5, v2, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+
+    goto/16 :goto_8
+
+    .line 20
+    :cond_6
+    invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    if-ne p2, v4, :cond_c
+
+    .line 21
+    iget-object p2, p0, Lcom/vk/video/a;->a:Lcom/vk/video/a$a;
+
+    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_7
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/vk/video/a$b;
+
+    invoke-virtual {v1}, Lcom/vk/video/a$b;->b()I
+
+    move-result v1
+
+    invoke-virtual {p3, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Integer;
+
+    if-nez v6, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    if-ne v1, v6, :cond_9
+
+    const/4 v1, 0x1
+
+    goto :goto_5
+
+    :cond_9
+    :goto_4
+    const/4 v1, 0x0
+
+    :goto_5
+    if-eqz v1, :cond_7
+
+    goto :goto_6
+
+    :cond_a
+    move-object v0, v3
+
+    :goto_6
+    check-cast v0, Lcom/vk/video/a$b;
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {v0}, Lcom/vk/video/a$b;->e()Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_7
+
+    :cond_b
+    move-object p2, v3
+
+    :goto_7
+    const p3, 0x7f12109e
+
+    new-array v0, v2, [Ljava/lang/Object;
+
+    .line 22
+    iget-object v1, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    iget-object v1, v1, Lcom/vk/dto/common/VideoFile;->I:Ljava/lang/String;
+
+    aput-object v1, v0, v5
+
+    aput-object p2, v0, v4
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v5, v2, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+
+    goto :goto_8
+
+    .line 23
+    :cond_c
+    invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    if-le p2, v4, :cond_d
+
+    const p2, 0x7f12109f
+
+    new-array p3, v4, [Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    iget-object v0, v0, Lcom/vk/dto/common/VideoFile;->I:Ljava/lang/String;
+
+    aput-object v0, p3, v5
+
+    invoke-virtual {p1, p2, p3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v5, v2, v3}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+
+    :cond_d
+    :goto_8
+    return-void
+.end method
+
+.method public static final synthetic a(Lcom/vk/video/a;Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/video/a;->a(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public static final synthetic b(Lcom/vk/video/a;)Lcom/vk/video/a$b;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/video/a;->e:Lcom/vk/video/a$b;
+
+    return-object p0
+.end method
+
+.method public static final synthetic c(Lcom/vk/video/a;)Landroid/util/SparseBooleanArray;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/video/a;->b:Landroid/util/SparseBooleanArray;
+
+    return-object p0
+.end method
+
+.method public static final synthetic d(Lcom/vk/video/a;)Landroid/view/View$OnClickListener;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/video/a;->f:Landroid/view/View$OnClickListener;
+
+    return-object p0
+.end method
+
+.method public static final synthetic e(Lcom/vk/video/a;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/vk/video/a;->g:I
+
+    return p0
+.end method
+
+.method public static final synthetic f(Lcom/vk/video/a;)Lcom/vk/video/a$b;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/video/a;->d:Lcom/vk/video/a$b;
+
+    return-object p0
+.end method
+
+.method public static final synthetic g(Lcom/vk/video/a;)Lcom/vk/dto/common/VideoFile;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final a()Landroid/view/View;
+    .locals 1
+
+    .line 3
+    iget-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    return-object v0
+.end method
+
+.method public a(ILcom/vk/lists/t;)Lc/a/m;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Lcom/vk/lists/t;",
+            ")",
+            "Lc/a/m<",
+            "Lcom/vk/api/video/o$a;",
+            ">;"
+        }
+    .end annotation
+
+    .line 25
+    new-instance v6, Lcom/vk/api/video/o;
+
+    iget v1, p0, Lcom/vk/video/a;->g:I
+
+    iget-object v0, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    iget v2, v0, Lcom/vk/dto/common/VideoFile;->a:I
+
+    iget v3, v0, Lcom/vk/dto/common/VideoFile;->b:I
+
+    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+
+    move-result v4
+
+    move-object v0, v6
+
+    move v5, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/vk/api/video/o;-><init>(IIIII)V
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x1
+
+    .line 26
+    invoke-static {v6, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/vk/lists/t;",
+            "Z)",
+            "Lc/a/m<",
+            "Lcom/vk/api/video/o$a;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 p2, 0x0
+
+    .line 24
+    invoke-virtual {p0, p2, p1}, Lcom/vk/video/a;->a(ILcom/vk/lists/t;)Lc/a/m;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final a(Landroid/content/Context;)V
+    .locals 9
+
+    .line 4
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 5
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    .line 6
+    iget-object v0, p0, Lcom/vk/video/a;->a:Lcom/vk/video/a$a;
+
+    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+
+    move-result-object v0
+
+    const-string v1, "adapter.list"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 7
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 8
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v6, v2
+
+    check-cast v6, Lcom/vk/video/a$b;
+
+    .line 9
+    invoke-virtual {v6}, Lcom/vk/video/a$b;->d()Z
+
+    move-result v7
+
+    iget-object v8, p0, Lcom/vk/video/a;->b:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v6}, Lcom/vk/video/a$b;->b()I
+
+    move-result v6
+
+    invoke-virtual {v8, v6}, Landroid/util/SparseBooleanArray;->get(I)Z
+
+    move-result v6
+
+    if-eq v7, v6, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v5, 0x0
+
+    :goto_1
+    if-eqz v5, :cond_0
+
+    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 10
+    :cond_2
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/vk/video/a$b;
+
+    .line 11
+    iget-object v2, p0, Lcom/vk/video/a;->b:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v1}, Lcom/vk/video/a$b;->b()I
+
+    move-result v6
+
+    invoke-virtual {v2, v6}, Landroid/util/SparseBooleanArray;->get(I)Z
+
+    move-result v2
+
+    invoke-virtual {v1}, Lcom/vk/video/a$b;->b()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    .line 12
+    :cond_4
+    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    return-void
+
+    .line 13
+    :cond_5
+    new-instance v0, Lcom/vk/api/video/n0;
+
+    iget v1, p0, Lcom/vk/video/a;->g:I
+
+    iget-object v2, p0, Lcom/vk/video/a;->h:Lcom/vk/dto/common/VideoFile;
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/api/video/n0;-><init>(ILcom/vk/dto/common/VideoFile;Ljava/util/List;Ljava/util/List;)V
+
+    const/4 v1, 0x0
+
+    .line 14
+    invoke-static {v0, v1, v5, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+
+    move-result-object v6
+
+    .line 15
+    new-instance v7, Lcom/vk/video/a$e;
+
+    move-object v0, v7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v5, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/vk/video/a$e;-><init>(Lcom/vk/video/a;Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/content/Context;)V
+
+    invoke-virtual {v6, v7}, Lc/a/m;->a(Lc/a/r;)V
+
+    return-void
+.end method
+
+.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lc/a/m<",
+            "Lcom/vk/api/video/o$a;",
+            ">;Z",
+            "Lcom/vk/lists/t;",
+            ")V"
+        }
+    .end annotation
+
+    .line 27
+    new-instance v0, Lcom/vk/video/a$g;
+
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/video/a$g;-><init>(Lcom/vk/video/a;ZLcom/vk/lists/t;)V
+
+    .line 28
+    sget-object p2, Lcom/vk/video/a$h;->a:Lcom/vk/video/a$h;
+
+    .line 29
+    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lcom/vk/video/a;->c:Lcom/vk/lists/RecyclerPaginatedView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setMinimumHeight(I)V
+
+    return-void
+.end method

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <include android:elevation="0.0dip" layout="@layout/toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <View android:id="@id/widget_preview_toolbar_separator" android:background="@color/black_alpha12" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="3.5dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.vk.imageloader.view.VKCircleImageView android:id="@id/community_logo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="12.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="?text_primary" android:id="@id/community_widget_preview_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" android:lineSpacingExtra="4.0sp" android:hyphenationFrequency="none" />
+    </LinearLayout>
+    <View android:background="@color/black_alpha12" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" />
+    <FrameLayout android:id="@id/community_widget_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <View android:background="@color/black_alpha12" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <Button android:textSize="16.0sp" android:id="@id/community_widget_install_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:text="@string/community_install_widget" style="@style/primary_button" />
+</LinearLayout>

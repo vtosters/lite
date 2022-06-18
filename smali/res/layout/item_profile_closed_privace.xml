@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/profile_show_info" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_lock_24" android:maxHeight="48.0dip" android:tint="@color/light_gray" android:layout_marginStart="@dimen/post_side_padding" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/subhead_gray" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/profile_is_closed" android:singleLine="true" android:paddingStart="16.0dip" android:paddingEnd="@dimen/post_side_padding" />
+</LinearLayout>
