@@ -10,9 +10,9 @@ import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
-        a(R.xml.preferences_interface);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(R.xml.preferences_interface);
         prefs();
     }
 

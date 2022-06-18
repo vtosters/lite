@@ -15,8 +15,8 @@ import ru.vtosters.lite.ui.PreferencesUtil;
 public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
 
         int vtosterXml = getIdentifier("empty", "xml");
         this.a(vtosterXml);
