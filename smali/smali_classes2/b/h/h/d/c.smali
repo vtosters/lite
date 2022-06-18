@@ -2374,6 +2374,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -4919,6 +4923,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -6088,6 +6096,8 @@
     invoke-virtual {p0, v0, v1}, Lcom/vk/core/bundle/a;->a(Lcom/vk/core/bundle/d;Z)Z
 
     move-result v0
+
+    const v0, 0x0
 
     return v0
 .end method

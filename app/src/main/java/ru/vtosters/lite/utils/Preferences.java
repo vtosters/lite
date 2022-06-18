@@ -188,11 +188,11 @@ public class Preferences {
     }
 
     public static boolean dev() {
-        return getBoolValue("dev", false) || isDebug;
+        return getBoolValue("dev", false);
     }
 
     public static boolean devmenu() {
-        return getBoolValue("devmenu", false) || isDebug;
+        return getBoolValue("devmenu", false);
     }
 
     public static boolean dnr() {
@@ -308,7 +308,7 @@ public class Preferences {
     }
 
     public static boolean ssl() {
-        return !isDebug; // getBoolValue("ssl", true) ||
+        return true; // getBoolValue("ssl", true) ||
     }
 
     public static boolean stories() {
