@@ -34,7 +34,7 @@
 
     sput-object v0, Lb/h/g/g/b;->i:Lb/h/g/g/b;
 
-    const-string v0, "release"
+    const-string v0, "debug"
 
     .line 2
     sput-object v0, Lb/h/g/g/b;->a:Ljava/lang/String;
@@ -118,6 +118,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -148,6 +152,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -160,6 +168,10 @@
     const-string v1, "deploy"
 
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
 
     move-result v0
 
