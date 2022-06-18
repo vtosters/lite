@@ -5860,6 +5860,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->calls()Z
+
+    move-result v0
+
     return v0
 .end method
 
