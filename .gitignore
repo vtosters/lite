@@ -21,8 +21,8 @@ local.properties
 /smali/VTLite.apk.idsig
 .idea/gradle.xml
 .idea/compiler.xml
-smali/assets/version.properties
+smali2/assets/version.properties
 app/src/main/assets/version.properties
-smali/build/resources.zip
+smali2/build/resources.zip
 *.idsig
 /smali/VTLite.apk.cache/
