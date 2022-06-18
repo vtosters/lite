@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_gift_card" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="100.0dip" android:layout_height="96.0dip" android:contentDescription="@string/accessibility_gift"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKOverlayImageView android:id="@id/photo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" app:actualImageScaleType="centerInside" app:overlay="@drawable/gift_item_selector" app:viewAspectRatio="1.0" />
+</FrameLayout>

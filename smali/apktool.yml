@@ -1,0 +1,29 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: ВКонтакте_v.5.56.1(4838)(5.1-9.0)(arm7a,arm64-8a) (2).apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+- jpg
+- mp3
+- res/raw/keep_cronet_api.xml
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '22'
+  targetSdkVersion: '28'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  version.txt: '0'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.6.0
+versionInfo:
+  versionCode: '4838'
+  versionName: 5.56.1

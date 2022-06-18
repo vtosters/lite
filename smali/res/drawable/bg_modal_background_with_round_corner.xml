@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="0.5dip" android:color="?field_border" />
+    <padding android:left="6.0dip" android:top="2.2999878dip" android:right="6.0dip" android:bottom="3.0dip" />
+    <corners android:radius="10.0dip" />
+    <solid android:color="?modal_card_background" />
+</shape>

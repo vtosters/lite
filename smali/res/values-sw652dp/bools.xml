@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="music_buy_music_suscription_tabled_layout_allowed">true</bool>
+</resources>

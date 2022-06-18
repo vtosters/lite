@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.music.view.MusicActionButton android:id="@id/music_action_button" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_marginEnd="6.0dip" app:mab_icon="@drawable/ic_play_24" app:mab_icon_tint="@color/vkui_muted_button_text" app:mab_text="@string/music_playlist_controls_play_all" app:mab_textAppearance="@style/MusicActionButtonTextStyle.Muted" style="@style/VKUIButton.Muted"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

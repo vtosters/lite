@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="24.0dip" android:width="24.0dip" />
+            <solid android:color="?counter_primary_background" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/ic_mention_16" android:tint="?counter_primary_text" />
+    </item>
+</layer-list>

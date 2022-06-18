@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_allow_stacked_button_bar">false</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="cpv_default_anim_autostart">false</bool>
+    <bool name="cpv_default_is_indeterminate">false</bool>
+    <bool name="game_page_bgAll">false</bool>
+    <bool name="lenovo_tb_884f_fixed_is_tabled_resolver">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="music_buy_music_suscription_tabled_layout_allowed">false</bool>
+    <bool name="picker_transparent_status_bar">true</bool>
+    <bool name="registrationIsFloating">false</bool>
+    <bool name="spb_default_mirror_mode">false</bool>
+    <bool name="spb_default_progressiveStart_activated">false</bool>
+    <bool name="spb_default_reversed">false</bool>
+    <bool name="vk_is_tablet">false</bool>
+</resources>

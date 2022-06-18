@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/ic_suggest_added_down" />
+    <item android:state_enabled="true" android:drawable="@drawable/ic_suggest_added_up" />
+    <item android:drawable="@drawable/ic_suggest_added_disabled" />
+</selector>

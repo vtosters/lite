@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/action_link_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginStart="7.0dip" android:layout_marginEnd="7.0dip" />
+    <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="?media_overlay_button_foreground" android:ellipsize="end" android:id="@id/action_link_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lineSpacingExtra="2.0sp" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:paddingEnd="16.0dip" android:letterSpacing="0.03" />
+</merge>

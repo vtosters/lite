@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:clipToPadding="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/bg_card_elevation16" android:tint="?modal_card_background" android:tintMode="multiply" />
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12.0dip" />
+            <stroke android:width="0.5dip" android:color="?modal_card_border" />
+        </shape>
+    </item>
+</layer-list>

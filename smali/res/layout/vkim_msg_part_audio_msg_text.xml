@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="15.0sp" android:textColor="?text_primary" android:textColorLink="?link_alternate" android:id="@id/transcript_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="2.0sp" android:fontFamily="@font/roboto_regular"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

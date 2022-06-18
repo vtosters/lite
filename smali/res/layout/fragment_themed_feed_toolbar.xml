@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.NonBouncedAppBarLayout android:id="@id/appbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <FrameLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="1.0dip" app:layout_scrollFlags="enterAlways|scroll|snap">
+            <include layout="@layout/appkit_toolbar" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabLayout android:id="@id/tabs" android:background="?background_content" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="56.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="?accent" app:tabIndicatorHeight="0.0dip" app:tabMinWidth="0.0dip" app:tabMode="scrollable" app:tabPaddingEnd="0.0dip" app:tabPaddingStart="0.0dip" />
+            <LinearLayout android:id="@id/toolbar_shadow" android:background="@drawable/bg_toolbar_shadow_dark" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+        </FrameLayout>
+    </com.google.android.material.appbar.NonBouncedAppBarLayout>
+    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.google.android.material.appbar.NonBouncedAppBarLayout$ScrollingViewBehavior">
+        <com.vk.common.view.disableable.DisableableViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

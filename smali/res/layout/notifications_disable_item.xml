@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/profile_show_info" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="@color/red" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/disable_community" android:singleLine="true" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="@dimen/post_side_padding" />
+</LinearLayout>

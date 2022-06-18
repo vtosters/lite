@@ -1,0 +1,98 @@
+++Running testing module "milkshake".
+New themes loaded (2).
+New resources loaded (114).
+XMLs updated (453).
+Dependencies updated (71).
+New screens added (10).
+Issues fixed (28350).
+libui updated to v6.0
+++
+Extracting packages…
+
+#start_commits
+2475f4b3  first_wave
+  author  osm
+dbb3bac4  milkshake_core
+  author  ars
+068fabca  milkshake_explore
+  author  ars
+0c48004b  milkshake_sidebar
+  author  ars
+73995984  libui_update
+  author  ars
+3a4754bc  new_friends
+  author  ars, gerra23
+4fc16c41  new_profile
+  author  ars, mgulyaev10
+9c80dce4  communities_page
+  author  tpdr
+040c239e  music
+  author  tim
+84fa27b4  music_mini_player
+  author  themykyte
+ec4d3428  video_catalog
+  author  tim
+05af08f1  messages_update
+  author  alexoro
+dc6efe05  messages_dialogs_list
+  author  alexoro
+51872344  sharing
+  author  mgulyaev10
+d28f630e  search
+  author  kartollika
+f909ebc8  settings
+  author  veda345
+68fe2c48  find_friends
+  author  veda345
+9a0c205a  money_transfers
+  author  kartollika
+c7cd5c34  sign_up
+  author  gerra23
+8dd464f9  qr
+  author  veda345
+75cc0ac4  mini_apps_catalog
+  author  ars
+449cafbd  games_catalog
+  author  ars
+31816dac  notifications
+  author  ars, kd, zagumennov
+99619706  newsfeed
+  author  bykoff
+c9b38a76  posting
+  author  kuv deputat
+98304074  stories
+  author  kuv deputat
+2227a836  favorites
+  author  buhal
+f81d55f6  podcasts
+  author  bykoff
+305b973a  onboarding
+  author  gerra23
+#end_commits
+++
+DESIGN:
+#start_design
+ffb336a7  lihachyov
+5675c4b2  apvel
+d27ddaf1  ilyagrshn
+7995e27e  mm
+8f270363  wayshev
+d8d6b78c  astract
+#end_design
+++
+QUALITY ASSURANCE:
+#start_qa
+54e8b0ea  abv
+31193902  rv
+4d0568d3  li
+46cf8bf8  kn
+8ea541ba  mrt
+7cd018a1  nr
+81ab34ba  nv
+#end_qa
+++
+MEMES:
+#start_memes
+a78bcf13  love.android
+9ac56a14  qahard
+#end_memes

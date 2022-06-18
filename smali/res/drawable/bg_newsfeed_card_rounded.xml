@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/bg_card_elevation_no_fill16" />
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?background_content" />
+            <corners android:radius="10.0dip" />
+        </shape>
+    </item>
+</layer-list>

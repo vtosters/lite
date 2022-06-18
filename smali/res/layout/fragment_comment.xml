@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.widget.TextInputLayout android:layout_gravity="center" android:id="@id/comment_textinputlayout" android:background="@drawable/edittext_background" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:hint="@string/your_feedback" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.widget.TextInputEditText android:gravity="start|center|top" android:id="@id/user_feedback_textedit" android:background="#000000ff" android:padding="15.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLength="100" android:inputType="textCapSentences|textMultiLine" />
+</com.google.android.material.widget.TextInputLayout>

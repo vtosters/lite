@@ -1,0 +1,104 @@
+.class final Lcom/vk/avatarpicker/CropFragment$d;
+.super Ljava/lang/Object;
+.source "CropFragment.kt"
+
+# interfaces
+.implements Lc/a/z/g;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/vk/avatarpicker/CropFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lc/a/z/g<",
+        "Landroid/graphics/Bitmap;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/vk/avatarpicker/CropFragment;
+
+
+# direct methods
+.method constructor <init>(Lcom/vk/avatarpicker/CropFragment;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/vk/avatarpicker/CropFragment$d;->a:Lcom/vk/avatarpicker/CropFragment;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/graphics/Bitmap;)V
+    .locals 6
+
+    .line 1
+    new-instance v2, Lcom/vk/crop/j;
+
+    const-string v0, "bitmap"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-direct {v2, v0, v1}, Lcom/vk/crop/j;-><init>(FF)V
+
+    .line 2
+    iget-object v0, p0, Lcom/vk/avatarpicker/CropFragment$d;->a:Lcom/vk/avatarpicker/CropFragment;
+
+    invoke-static {v0}, Lcom/vk/avatarpicker/CropFragment;->a(Lcom/vk/avatarpicker/CropFragment;)Lcom/vk/crop/CropImageView;
+
+    move-result-object v0
+
+    .line 3
+    sget-object v3, Lcom/vk/crop/d;->e:Lcom/vk/crop/d;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x1
+
+    move-object v1, p1
+
+    .line 4
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/crop/CropImageView;->a(Landroid/graphics/Bitmap;Lcom/vk/crop/j;Lcom/vk/crop/d;ZZ)V
+
+    return-void
+.end method
+
+.method public bridge synthetic accept(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0, p1}, Lcom/vk/avatarpicker/CropFragment$d;->a(Landroid/graphics/Bitmap;)V
+
+    return-void
+.end method

@@ -1,0 +1,85 @@
+.class public final Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException;
+.super Lcom/vk/audioipc/core/exception/ServiceException;
+.source "ServiceExceptions.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final serialVersionUID:J = 0x4212c7c0fa4663b4L
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException$a;-><init>(Lkotlin/jvm/internal/i;)V
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-direct {p0, v0, v1, v0}, Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/exception/ServiceException;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    .locals 0
+
+    and-int/lit8 p2, p2, 0x1
+
+    if-eqz p2, :cond_0
+
+    const-string p1, "Restricted in background"
+
+    .line 2
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    const-class v0, Lcom/vk/audioipc/core/exception/RestrictedInBackgroundException;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "this::class.java.simpleName"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object v0
+.end method

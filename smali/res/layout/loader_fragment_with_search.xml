@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/appkit_toolbar" />
+    <FrameLayout android:id="@id/appkit_loader_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/loading" layout="@layout/appkit_loading" />
+        <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
+        <FrameLayout android:id="@id/content_wrap" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/search_wrap" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

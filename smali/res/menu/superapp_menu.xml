@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_communities_outline_36" android:id="@id/menu_groups" android:title="@string/groups" app:menuTint="?dynamic_orange" />
+    <item android:icon="@drawable/ic_music_outline_36" android:id="@id/menu_audios" android:title="@string/music" app:menuTint="?accent" />
+    <item android:icon="@drawable/ic_video_outline_36" android:id="@id/menu_videos" android:title="@string/videos" app:menuTint="?dynamic_violet" />
+    <item android:icon="@drawable/ic_games_outline_36" android:id="@id/menu_games" android:title="@string/games" app:menuTint="?dynamic_green" />
+    <item android:icon="@drawable/ic_events_outline_36" android:id="@id/menu_events" android:title="@string/public_events" app:menuTint="?dynamic_red" />
+    <item android:icon="@drawable/ic_smile_outline_36" android:id="@id/menu_stickers" android:title="@string/stickers" app:menuTint="?dynamic_orange" />
+    <item android:icon="@drawable/ic_live_outline_36" android:id="@id/menu_lives" android:title="@string/sett_live" app:menuTint="?dynamic_red" />
+    <item android:icon="@drawable/ic_podcasts_outline_36" android:id="@id/menu_podcasts" android:title="@string/podcasts" app:menuTint="?text_muted" />
+    <item android:icon="@drawable/ic_search_outline_28" android:id="@id/menu_discover" android:title="@string/recommendations" app:menuTint="?dynamic_blue" />
+    <item android:icon="@drawable/ic_users_outline_28" android:id="@id/menu_friends" android:title="@string/friends" app:menuTint="?dynamic_blue" />
+    <item android:icon="@drawable/ic_market_outline_36" android:id="@id/menu_shopping" android:title="@string/sc_catalog_title" app:menuTint="?dynamic_red" />
+    <item android:icon="@drawable/ic_money_circle_outline_36" android:id="@id/menu_vk_pay" android:title="@string/vk_pay" app:menuTint="?accent" />
+    <item android:icon="@drawable/ic_services_outline_36" android:id="@id/menu_vk_apps" android:title="@string/superapp_menu_mini_apps" app:menuTint="?accent" />
+    <item android:icon="@drawable/ic_dropdown_circle" android:id="@id/menu_show_more" android:title="@string/menu_more" />
+</menu>

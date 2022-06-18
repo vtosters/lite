@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="0.5dip" android:color="?field_border" />
+    <corners android:radius="?im_msg_part_story_corner_radius" />
+    <solid android:color="@color/transparent" />
+</shape>

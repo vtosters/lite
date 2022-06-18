@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/attach_location_settings_layout" android:padding="@dimen/newsfeed_newpost_permission_settings_view_top_space" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/subhead_gray" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_disabled" android:lineSpacingMultiplier="1.1" />
+    <TextView android:textSize="16.0sp" android:layout_gravity="center_horizontal" android:id="@id/attach_location_settings_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/open_settings" android:singleLine="true" style="@style/VKUIButton.Primary" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/posting_more_video" android:title="@string/picker_video" />
+    <item android:id="@id/posting_more_document" android:title="@string/attach_document" />
+    <item android:id="@id/posting_more_poll" android:title="@string/attach_poll" />
+    <item android:id="@id/posting_more_place" android:title="@string/place" />
+</menu>

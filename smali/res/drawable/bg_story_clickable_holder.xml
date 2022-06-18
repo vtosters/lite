@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?background_highlighted"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape>
+            <corners android:radius="@dimen/story_hashtag_corner_radius" />
+            <solid android:color="#ff000000" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/story_clickable_sticker_white_bg" />
+</ripple>

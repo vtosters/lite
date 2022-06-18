@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/friend_recomm_item_bg" android:layout_width="138.0dip" android:layout_height="246.0dip" android:foreground="@drawable/highlight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKSnippetImageView android:layout_gravity="center_horizontal" android:id="@id/photo" android:layout_width="138.0dip" android:layout_height="138.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="66.0dip" android:layout_marginTop="138.0dip">
+        <TextView android:textSize="13.0dip" android:textStyle="normal" android:textColor="@color/muted_black" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/title" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false" android:lineSpacingExtra="1.0dip" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/caption_gray" android:ellipsize="end" android:gravity="center_horizontal" android:id="@android:id/text1" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/caption_gray" android:ellipsize="end" android:gravity="center_horizontal" android:id="@android:id/text2" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:textSize="12.0dip" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/button" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="204.0dip" android:layout_marginRight="12.0dip" android:minHeight="30.0dip" android:fontFamily="@string/font_family_medium" style="@style/tertiary_button_rounded" />
+</FrameLayout>

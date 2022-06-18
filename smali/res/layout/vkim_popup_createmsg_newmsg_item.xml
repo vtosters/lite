@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:contentDescription="@string/vkim_new_msg" android:paddingStart="18.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_write_outline_28_new" android:scaleType="centerInside" android:adjustViewBounds="false" android:tint="?accent" android:contentDescription="@null" android:importantForAccessibility="no" />
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_new_msg" android:maxLines="1" android:contentDescription="@null" android:importantForAccessibility="no" android:layout_marginStart="18.0dip" android:layout_marginEnd="8.0dip" style="@style/VKUIText.Headline" />
+</LinearLayout>

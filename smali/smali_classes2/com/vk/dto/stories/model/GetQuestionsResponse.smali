@@ -1,0 +1,318 @@
+.class public final Lcom/vk/dto/stories/model/GetQuestionsResponse;
+.super Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;
+.source "GetQuestionsResponse.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/vk/dto/stories/model/GetQuestionsResponse$b;
+    }
+.end annotation
+
+
+# static fields
+.field public static final CREATOR:Lcom/vk/core/serialize/Serializer$c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/vk/core/serialize/Serializer$c<",
+            "Lcom/vk/dto/stories/model/GetQuestionsResponse;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final c:Lcom/vk/dto/stories/model/GetQuestionsResponse$b;
+
+
+# instance fields
+.field private final a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/vk/dto/stories/model/StoryQuestionEntry;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final b:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/vk/dto/stories/model/GetQuestionsResponse$b;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/GetQuestionsResponse$b;-><init>(Lkotlin/jvm/internal/i;)V
+
+    sput-object v0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->c:Lcom/vk/dto/stories/model/GetQuestionsResponse$b;
+
+    .line 1
+    new-instance v0, Lcom/vk/dto/stories/model/GetQuestionsResponse$a;
+
+    invoke-direct {v0}, Lcom/vk/dto/stories/model/GetQuestionsResponse$a;-><init>()V
+
+    .line 2
+    sput-object v0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->CREATOR:Lcom/vk/core/serialize/Serializer$c;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/vk/core/serialize/Serializer;)V
+    .locals 1
+
+    .line 2
+    const-class v0, Lcom/vk/dto/stories/model/StoryQuestionEntry;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    .line 4
+    :goto_0
+    invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->n()I
+
+    move-result p1
+
+    .line 5
+    invoke-direct {p0, v0, p1}, Lcom/vk/dto/stories/model/GetQuestionsResponse;-><init>(Ljava/util/List;I)V
+
+    return-void
+
+    .line 6
+    :cond_1
+    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/util/List;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/vk/dto/stories/model/StoryQuestionEntry;",
+            ">;I)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
+
+    iput-object p1, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    iput p2, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/vk/dto/stories/model/GetQuestionsResponse;Ljava/util/List;IILjava/lang/Object;)Lcom/vk/dto/stories/model/GetQuestionsResponse;
+    .locals 0
+
+    and-int/lit8 p4, p3, 0x1
+
+    if-eqz p4, :cond_0
+
+    iget-object p1, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_1
+
+    iget p2, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    :cond_1
+    invoke-virtual {p0, p1, p2}, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a(Ljava/util/List;I)Lcom/vk/dto/stories/model/GetQuestionsResponse;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;I)Lcom/vk/dto/stories/model/GetQuestionsResponse;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/vk/dto/stories/model/StoryQuestionEntry;",
+            ">;I)",
+            "Lcom/vk/dto/stories/model/GetQuestionsResponse;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/vk/dto/stories/model/GetQuestionsResponse;
+
+    invoke-direct {v0, p1, p2}, Lcom/vk/dto/stories/model/GetQuestionsResponse;-><init>(Ljava/util/List;I)V
+
+    return-object v0
+.end method
+
+.method public a(Lcom/vk/core/serialize/Serializer;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->c(Ljava/util/List;)V
+
+    .line 2
+    iget v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(I)V
+
+    return-void
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-eq p0, p1, :cond_1
+
+    instance-of v0, p1, Lcom/vk/dto/stories/model/GetQuestionsResponse;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcom/vk/dto/stories/model/GetQuestionsResponse;
+
+    iget-object v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    iget-object v1, p1, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    iget p1, p1, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final t1()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/vk/dto/stories/model/StoryQuestionEntry;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "GetQuestionsResponse(questionEntries="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", totalCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final u1()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/vk/dto/stories/model/GetQuestionsResponse;->b:I
+
+    return v0
+.end method

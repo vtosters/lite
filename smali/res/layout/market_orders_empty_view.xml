@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:layout_gravity="center_horizontal" android:id="@id/empty_title" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/orders_empty_list_title" android:fontFamily="@string/fontRobotoMedium" />
+    <TextView android:textSize="16.0sp" android:textColor="?text_placeholder" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/orders_empty_list_subtitle" android:includeFontPadding="false" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="start|bottom|center" android:id="@id/cancel" android:background="@drawable/white_ripple_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_editor_cancel_outline_shadow_48" android:layout_marginStart="8.0dip" />
+    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/done" android:background="@drawable/white_ripple_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_editor_done_outline_shadow_48" android:layout_marginEnd="8.0dip" />
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_margin="4.0dip">
+        <ImageView android:id="@id/emoji" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/bg_story_background_type_selectable" android:src="@drawable/ic_smile_outline_48" />
+        <ImageView android:id="@id/gradient" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/bg_story_background_type_selectable" android:src="@drawable/ic_gradient_48" />
+        <ImageView android:id="@id/default_background" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:foreground="@drawable/bg_story_background_type_selectable" android:src="@drawable/ic_water_outline_28" android:scaleType="center" />
+    </LinearLayout>
+    <com.vk.stories.editor.background.views.StoryBackgroundRecyclerPaginatedView android:layout_gravity="top" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="60.0dip" />
+</merge>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="@dimen/player_big_widget_width" android:minHeight="@dimen/player_big_widget_height" android:updatePeriodMillis="86400000" android:initialLayout="@layout/widget_player_big" android:previewImage="@drawable/widget_preview_player_big" android:resizeMode="none"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

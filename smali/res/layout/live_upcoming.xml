@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/liveUpcomingText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/live_upcoming" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
+</merge>

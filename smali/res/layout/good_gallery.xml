@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vkontakte.android.ui.widget.GoodGalleryContainer android:id="@id/goodGalleryContainer" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager.widget.ViewPager android:layout_gravity="center" android:id="@id/pager" android:background="?content_tint_background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="bottom" android:background="@drawable/market_gallery_gradient" android:layout_width="fill_parent" android:layout_height="72.0dip" android:alpha="0.03" />
+    <com.vk.core.widget.PageIndicator android:layout_gravity="bottom|center" android:id="@id/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" app:PIAlphaNormal="90" app:PIColorNormal="#90000000" app:PIColorSelect="@color/black" app:PIMaxCount="10" app:PIRadiusBig="3.5dip" app:PIRadiusNormal="3.5dip" app:PIStepInner="16.0dip" app:PIType="circle" />
+</com.vkontakte.android.ui.widget.GoodGalleryContainer>

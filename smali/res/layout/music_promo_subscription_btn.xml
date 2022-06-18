@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.music.ui.subscription.BuyMusicSubscriptionButton android:id="@id/music_subscription_purchase_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:BMSB_error_text_color="?button_secondary_foreground" style="@style/VKUIButton.Muted" />
+</FrameLayout>

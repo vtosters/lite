@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="awesome">Отлично</string>
+    <string name="awful">Ужасно</string>
+    <string name="send">Отправить</string>
+    <string name="your_feedback">Ваш отзыв…</string>
+</resources>

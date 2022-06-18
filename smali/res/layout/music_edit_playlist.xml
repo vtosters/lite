@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.core.view.VKAppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="0.0dip" android:outlineProvider="none" style="@style/Toolbar">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/close_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/picker_ic_close_24" android:contentDescription="@string/ui_accessibility_close" style="@style/ActionButton.White" />
+            <TextView android:textColor="?header_text" android:layout_gravity="center_vertical" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="64.0dip" android:layout_marginRight="16.0dip" android:text="@string/music_title_new_playlist" style="@style/title_text" />
+        </FrameLayout>
+    </com.vk.core.view.VKAppBarLayout>
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+    <ViewAnimator android:id="@id/content_animator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyle" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="68.0dip">
+                <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <TextView android:layout_gravity="bottom" android:id="@id/save_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/music_save_button_label" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:fontFamily="@font/roboto_medium" style="@style/VKUIButton.Primary.Big" />
+            </FrameLayout>
+        </LinearLayout>
+    </ViewAnimator>
+</merge>

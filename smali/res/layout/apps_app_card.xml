@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="?selectableItemBackground" android:layout_width="100.0dip" android:layout_height="140.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/app_image" android:layout_width="88.0dip" android:layout_height="88.0dip" android:layout_marginTop="4.0dip" app:emptyImagePlaceholder="@drawable/placeholder_game_rounded" app:placeholderImage="@drawable/default_placeholder_10" app:placeholderImageScaleType="fitXY" app:roundedCornerRadius="18.0dip" />
+    <TextView android:textSize="13.0sp" android:gravity="start" android:id="@id/app_name" android:layout_width="88.0dip" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:maxLines="2" android:lines="2" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" style="@style/GameText.Title" />
+</LinearLayout>

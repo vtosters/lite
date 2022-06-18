@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="?im_msg_part_corner_radius_small" />
+            <solid android:color="?placeholder_icon_background" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_market_outline_96" android:tint="?placeholder_icon_foreground_primary" />
+    </item>
+</layer-list>

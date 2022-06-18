@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="360.0dip" android:minHeight="640.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

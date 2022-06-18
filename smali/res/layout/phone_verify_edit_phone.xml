@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="?text_primary" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/phone_verify_apply_actual_number" android:textAlignment="center" style="@style/VKUIText.Title1" />
+    <com.vk.core.ui.edittext.PlainEditText android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/vk_auth_sign_up_phone_hint" android:lines="1" android:maxLength="14" android:inputType="phone" style="@style/VKUIEditText" />
+    <TextView android:textColor="?destructive" android:id="@id/phone_error_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/phone_verify_error_invalid_number" style="@style/VKUIText.Caption1" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons_container" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip">
+        <TextView android:textSize="15.0sp" android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="0.5" style="@style/secondary_button" />
+        <View android:id="@id/buttons_divider" android:layout_width="12.0dip" android:layout_height="0.0dip" />
+        <TextView android:textSize="15.0sp" android:id="@id/confirm_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/phone_verify_confirm" android:layout_weight="0.5" style="@style/primary_button" />
+    </LinearLayout>
+</LinearLayout>

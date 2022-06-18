@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.attachpicker.stickers.StickersRecyclerView android:id="@id/list" android:visibility="visible" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:nestedScrollingEnabled="true" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/pb_medium" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginBottom="50.0dip" android:indeterminate="true" android:indeterminateTint="?icon_outline_secondary" android:indeterminateTintMode="src_in" />
+    <com.vk.lists.DefaultEmptyView android:layout_gravity="center" android:id="@id/v_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" />
+    <com.vk.lists.DefaultErrorView android:layout_gravity="center" android:id="@id/v_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" />
+</merge>

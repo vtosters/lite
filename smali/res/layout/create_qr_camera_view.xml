@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/qr_scanner_target" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/camera_target_size" android:layout_height="@dimen/camera_target_size" android:layout_marginBottom="@dimen/camera_target_bottom_margin" android:src="@drawable/ic_qrscanner" />
+        <TextView android:textSize="@dimen/camera_target_text_size" android:textStyle="normal" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/tv_qr_scanner_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_ui_qr_scanner_info" android:lineSpacingExtra="2.0sp" android:fontFamily="@font/roboto_medium" />
+    </LinearLayout>
+    <com.vk.common.view.TopBottomAnimView android:id="@id/qr_scanner_animation" android:background="@drawable/bg_qr_scanner_anim" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="115.0dip" />
+    <FrameLayout android:id="@id/qr_scanner_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:layout_gravity="top" android:background="@drawable/scrim_top_16percent" android:layout_width="fill_parent" android:layout_height="72.0dip" />
+        <View android:layout_gravity="bottom" android:background="@drawable/scrim_bottom_16percent" android:layout_width="fill_parent" android:layout_height="340.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/qr_dynamic_corners_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/qr_my_info" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_my_qr_view" />
+    <com.vk.core.view.VKTabLayout android:layout_gravity="center_horizontal" android:id="@id/qr_scanner_tabs" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginLeft="54.0dip" android:layout_marginRight="54.0dip" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="@color/white" app:tabIndicatorHeight="2.5dip" app:tabMode="fixed" app:tabSelectedTextColor="@color/white" app:tabTextColor="@color/white_alpha60" />
+</merge>

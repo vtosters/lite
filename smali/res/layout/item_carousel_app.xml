@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight_radius_4" android:layout_width="72.0dip" android:layout_height="92.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKSnippetImageView android:layout_gravity="center_horizontal" android:id="@id/icon" android:layout_width="@dimen/app_carousel_item_image_size" android:layout_height="@dimen/app_carousel_item_image_size" android:layout_marginTop="8.0dip" />
+    <TextView android:textColor="?text_primary" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70.0dip" android:maxLines="1" android:fontFamily="@font/roboto_regular" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" style="@style/VKUIText.Caption2" />
+</FrameLayout>

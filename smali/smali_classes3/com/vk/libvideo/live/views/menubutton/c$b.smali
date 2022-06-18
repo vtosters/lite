@@ -1,0 +1,138 @@
+.class Lcom/vk/libvideo/live/views/menubutton/c$b;
+.super Lc/a/c0/a;
+.source "MenuButtonPresenter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/vk/libvideo/live/views/menubutton/c;->s0()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lc/a/c0/a<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+
+# direct methods
+.method constructor <init>(Lcom/vk/libvideo/live/views/menubutton/c;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/menubutton/c$b;->b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/Boolean;)V
+    .locals 1
+
+    .line 1
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/menubutton/c$b;->b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/menubutton/c;->a(Lcom/vk/libvideo/live/views/menubutton/c;Z)Z
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 2
+    invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
+
+    .line 3
+    sget-object v0, Lcom/vk/bridges/k;->a:Lcom/vk/bridges/j;
+
+    invoke-interface {v0, p1}, Lcom/vk/bridges/j;->b(Ljava/lang/Throwable;)V
+
+    .line 4
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/menubutton/c$b;->b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/vk/libvideo/live/views/menubutton/c;->a(Lcom/vk/libvideo/live/views/menubutton/c;Lc/a/c0/a;)Lc/a/c0/a;
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 5
+
+    .line 2
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/menubutton/c$b;->b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/menubutton/c;->b(Lcom/vk/libvideo/live/views/menubutton/c;)Lcom/vk/libvideo/live/views/menubutton/b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/b;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/vk/libvideo/j;->live_video_remove_ok:I
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-object v3, p0, Lcom/vk/libvideo/live/views/menubutton/c$b;->b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+    invoke-static {v3}, Lcom/vk/libvideo/live/views/menubutton/c;->a(Lcom/vk/libvideo/live/views/menubutton/c;)Lcom/vk/dto/common/VideoFile;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lcom/vk/dto/common/VideoFile;->I:Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/menubutton/c$b;->b:Lcom/vk/libvideo/live/views/menubutton/c;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/vk/libvideo/live/views/menubutton/c;->a(Lcom/vk/libvideo/live/views/menubutton/c;Lc/a/c0/a;)Lc/a/c0/a;
+
+    return-void
+.end method
+
+.method public bridge synthetic b(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/menubutton/c$b;->a(Ljava/lang/Boolean;)V
+
+    return-void
+.end method

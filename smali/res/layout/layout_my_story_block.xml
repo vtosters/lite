@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/v_top_separator" android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <TextView android:gravity="start|center" android:id="@id/send_text" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/story_publication" android:paddingStart="16.0dip" style="@style/VKUIText.Title2" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/story_upload_author_layout" android:background="@drawable/picker_white_ripple_bounded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip">
+        <FrameLayout android:layout_gravity="start|center" android:id="@id/fl_check_container" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginStart="3.0dip" android:layout_marginEnd="-10.0dip">
+            <CheckBox android:layout_gravity="center" android:id="@id/check" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.CompoundButton.CheckBox" />
+        </FrameLayout>
+        <FrameLayout android:layout_gravity="center" android:layout_width="64.0dip" android:layout_height="72.0dip" android:layout_marginStart="4.0dip">
+            <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center" android:id="@id/author_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" app:placeholderImage="@drawable/photo_loading" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip">
+            <TextView android:id="@id/author_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/my_story" style="@style/VKUIText.Headline" />
+            <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="marquee" android:id="@id/author_subtitle" android:duplicateParentState="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip" android:text="@string/my_story_desc" android:lineSpacingExtra="3.0sp" android:letterSpacing="0.02" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/fl_parent" android:background="@drawable/bg_story_receivers_answer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <ImageView android:layout_gravity="start|center" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/ic_viewer_reply_outline_shadow_28" android:tint="?accent" android:layout_marginStart="12.0dip" />
+        <TextView android:ellipsize="end" android:gravity="start|center" android:id="@id/tv_answer_description" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:maxLines="2" android:layout_marginStart="52.0dip" android:layout_marginEnd="12.0dip" style="@style/VKUIText.Subhead1" />
+    </FrameLayout>
+    <View android:id="@id/v_bottom_separator" android:background="?separator_common" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <TextView android:textSize="16.0sp" android:gravity="start|center" android:id="@id/tv_send_with_message" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/send_with_message" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" style="@style/VKUIText.Title2" />
+    <TextView android:textSize="16.0sp" android:textColor="?text_secondary" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="72.0dip" />
+</LinearLayout>

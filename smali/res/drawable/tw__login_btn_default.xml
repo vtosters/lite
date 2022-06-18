@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tw__blue_default" />
+    <corners android:topLeftRadius="@dimen/tw__login_btn_radius" android:topRightRadius="@dimen/tw__login_btn_radius" android:bottomLeftRadius="@dimen/tw__login_btn_radius" android:bottomRightRadius="@dimen/tw__login_btn_radius" />
+    <size android:height="@dimen/tw__login_btn_height" />
+</shape>

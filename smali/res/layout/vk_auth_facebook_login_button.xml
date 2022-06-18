@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/login_via_fb_button" android:background="@drawable/vk_auth_bg_landing_secondary_btn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="?vk_landing_secondary_button_foreground" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/vk_auth_log_in_with_facebook" style="@style/VkAuth.Button" />
+    <ImageView android:layout_gravity="center_vertical" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_margin="8.0dip" android:src="@drawable/vk_ic_logo_facebook_24" android:tint="?vk_landing_secondary_button_foreground" android:importantForAccessibility="no" />
+</FrameLayout>

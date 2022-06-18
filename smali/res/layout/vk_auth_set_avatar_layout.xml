@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/avatar_button" android:background="@drawable/vk_auth_bg_circle_avatar_btn" android:layout_width="96.0dip" android:layout_height="96.0dip" android:contentDescription="@string/vk_auth_accessibility_avatar_choose"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:layout_width="34.0dip" android:layout_height="34.0dip" android:src="@drawable/vk_ic_camera_outline_42" android:tint="#ff2975cc" />
+    <com.vk.auth.ui.AuthCircleView android:id="@id/avatar_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/vk_auth_accessibility_avatar_choose" />
+</FrameLayout>

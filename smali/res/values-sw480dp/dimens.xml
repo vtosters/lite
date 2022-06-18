@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="money_transfer_btn_width">430.0dip</dimen>
+    <dimen name="money_transfer_new_padding">16.0dip</dimen>
+    <dimen name="sticker_suggest_size">80.0dip</dimen>
+</resources>

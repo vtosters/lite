@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:scaleType="center" android:layout_marginStart="16.0dip" />
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" android:layout_marginStart="44.0dip" style="@style/VKUIText.Headline" />
+</FrameLayout>

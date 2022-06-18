@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/green" />
+            <stroke android:width="2.0dip" android:color="?snippet_background" />
+        </shape>
+    </item>
+    <item android:gravity="center|clip_horizontal|clip_vertical">
+        <bitmap android:gravity="center" android:src="@drawable/ic_place_16" />
+    </item>
+</layer-list>

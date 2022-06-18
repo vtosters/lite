@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_separator_height">0.5dip</dimen>
+    <dimen name="tw__login_btn_drawable_padding">5.0dip</dimen>
+    <dimen name="tw__login_btn_height">40.0dip</dimen>
+    <dimen name="tw__login_btn_left_padding">10.0dip</dimen>
+    <dimen name="tw__login_btn_right_padding">15.0dip</dimen>
+    <dimen name="tw__login_btn_text_size">16.0sp</dimen>
+    <dimen name="camera_target_bottom_margin">20.0dip</dimen>
+    <dimen name="camera_target_size">180.0dip</dimen>
+</resources>

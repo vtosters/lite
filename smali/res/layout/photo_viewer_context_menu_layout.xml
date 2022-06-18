@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.photoviewer.ContextMenuLayout android:orientation="vertical" android:background="@drawable/pv_context_menu_bg" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/menu_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <EditText android:id="@id/proxy_edit_text" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:inputType="textMultiLine" />
+    </LinearLayout>
+</com.vk.photoviewer.ContextMenuLayout>

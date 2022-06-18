@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <AutoCompleteTextView android:textColor="?text_primary" android:id="@id/input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:popupBackground="@drawable/bg_modal_dialog" android:imeOptions="actionDone" android:backgroundTint="?field_border" />
+</FrameLayout>

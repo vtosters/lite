@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewAnimator android:id="@id/content_animator" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <include layout="@layout/music_page" />
+    </ViewAnimator>
+    <com.vk.core.view.VKAppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="0.0dip" android:outlineProvider="none">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/back_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_outline_28" android:contentDescription="@string/music_talkback_go_back" android:layout_marginStart="4.0dip" style="@style/ActionButton.White" />
+            <Spinner android:layout_gravity="start|center" android:id="@id/spinner_nav" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:layout_marginStart="64.0dip" style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar" />
+        </FrameLayout>
+    </com.vk.core.view.VKAppBarLayout>
+    <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
+</merge>

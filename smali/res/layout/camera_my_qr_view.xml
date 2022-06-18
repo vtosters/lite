@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?background_page" android:focusable="true" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.qrcode.QRSharingView android:layout_gravity="center" android:id="@id/qr_sharing" android:paddingTop="56.0dip" android:focusable="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/qr_header_background" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+    <View android:layout_gravity="top" android:id="@id/qr_header_shadow" android:background="@drawable/bg_toolbar_shadow_light" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginTop="56.0dip" />
+</FrameLayout>

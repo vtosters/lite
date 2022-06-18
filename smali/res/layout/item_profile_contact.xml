@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:id="@id/avatar" android:layout_width="@dimen/profile_contact_avatar_size" android:layout_height="@dimen/profile_contact_avatar_size" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_marginStart="16.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/text_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="76.0dip" android:layout_marginEnd="16.0dip">
+        <TextView android:textColor="?text_primary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="1.0dip" style="@style/VKUIText.Headline" />
+        <com.vk.core.view.links.LinkedTextView android:textColor="?text_secondary" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:fontFamily="@string/font_family_regular" style="@style/VKUIText.Caption1" />
+        <com.vk.core.view.links.LinkedTextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/mail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:fontFamily="@string/font_family_regular" style="@style/VKUIText.Caption1" />
+        <com.vk.core.view.links.LinkedTextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:fontFamily="@string/font_family_regular" style="@style/VKUIText.Caption1" />
+    </LinearLayout>
+</FrameLayout>

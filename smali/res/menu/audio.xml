@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_aplayer_cache_normal" android:id="@id/audio_cache" android:title="@string/save" android:checkable="true" android:showAsAction="ifRoom" />
+    <item android:id="@id/audio_lyrics" android:title="@string/audio_lyrics" />
+    <item android:id="@id/audio_delete" android:title="@string/delete" />
+    <item android:id="@id/audio_search_artist" android:title="@string/audio_search_artist" />
+    <item android:id="@id/send_to_friend" android:title="@string/repost" />
+</menu>

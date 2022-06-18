@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="16.0sp" android:textColor="@color/themed_feed_tabs_text" android:gravity="center" android:id="@id/text" android:background="@drawable/themed_feed_tabs" android:layout_width="wrap_content" android:layout_height="48.0dip" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="4.0sp" android:fontFamily="@font/roboto_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:letterSpacing="0.01"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

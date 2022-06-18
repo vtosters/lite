@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tw__login_btn_text_size">18.0sp</dimen>
+    <dimen name="camera_target_bottom_margin">32.0dip</dimen>
+    <dimen name="camera_target_size">254.0dip</dimen>
+    <dimen name="camera_target_text_size">20.0sp</dimen>
+</resources>

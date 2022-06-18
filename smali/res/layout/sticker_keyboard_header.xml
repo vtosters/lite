@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/header_container" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/sticker_btn_wrap" android:layout_alignParentLeft="true" android:fontFamily="@string/fontRobotoMedium" />
+        <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="10.0dip" android:layout_below="@id/title" android:layout_alignRight="@id/title" android:layout_alignParentLeft="true" />
+        <FrameLayout android:id="@id/sticker_btn_wrap" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="4.0dip" android:layout_alignParentRight="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/sticker_button" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:fontFamily="@string/fontRobotoMedium" style="@style/VKUIButton.Green" />
+                <ImageButton android:id="@id/gift_button" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_gift_16" android:tint="@color/white" android:layout_marginStart="8.0dip" style="@style/VKUIButton.Green" />
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@id/sticker_progress" android:layout_width="20.0dip" android:layout_height="20.0dip" android:max="100" android:indeterminate="false" android:indeterminateOnly="false" />
+            <ImageView android:layout_gravity="center" android:id="@id/sticker_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_recommendation_added" />
+            <ImageView android:layout_gravity="center" android:id="@id/sticker_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chats_error" />
+        </FrameLayout>
+    </RelativeLayout>
+    <View android:id="@id/header_shadow" android:background="@drawable/bg_toolbar_shadow_light" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="?text_primary" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/phone_verify_sms_title" android:textAlignment="center" style="@style/VKUIText.Title1" />
+    <TextView android:textColor="?destructive" android:id="@id/subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/phone_verify_phone_subtitle" style="@style/VKUIText.Caption1" />
+    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:gravity="center" android:id="@id/next_action" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/phone_verify_sms_action" android:textAlignment="center" />
+    <com.vk.core.ui.edittext.PlainEditText android:textColor="?text_primary" android:gravity="center_vertical" android:id="@id/input_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="@string/phone_verify_sms_hint" android:lines="1" android:maxLength="8" android:inputType="number" style="@style/VKUIEditText" />
+    <TextView android:textColor="?destructive" android:id="@id/error_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/phone_verify_error_incorrect_code" style="@style/VKUIText.Caption1" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons_container" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip">
+        <TextView android:textSize="15.0sp" android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/phone_verify_back" android:layout_weight="0.5" style="@style/secondary_button" />
+        <View android:id="@id/buttons_divider" android:layout_width="12.0dip" android:layout_height="0.0dip" />
+        <TextView android:textSize="15.0sp" android:id="@id/confirm_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/phone_verify_confirm" android:layout_weight="0.5" style="@style/primary_button" />
+    </LinearLayout>
+</LinearLayout>

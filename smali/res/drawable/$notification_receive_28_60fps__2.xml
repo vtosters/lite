@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__2__0" android:duration="133" android:startOffset="0" android:valueFrom="0" android:valueTo="15" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__2__1" android:duration="133" android:startOffset="133" android:valueFrom="15" android:valueTo="-15" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__2__2" android:duration="133" android:startOffset="267" android:valueFrom="-15" android:valueTo="15" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__2__3" android:duration="133" android:startOffset="400" android:valueFrom="15" android:valueTo="-15" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__2__4" android:duration="133" android:startOffset="533" android:valueFrom="-15" android:valueTo="5" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$$notification_receive_28_60fps__2__5" android:duration="133" android:startOffset="667" android:valueFrom="5" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight_circle" android:layout_width="48.0dip" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:id="@id/close" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_clear_circle" android:contentDescription="@string/close" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="4.0dip" />
+</FrameLayout>

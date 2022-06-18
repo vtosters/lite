@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/im_appbar" android:layout_height="?actionBarSize" style="@style/Vk.Theme.Appbar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/vkim_list_container" android:paddingBottom="60.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" style="@style/AppBarShadow" />
+    <com.vk.core.view.BottomConfirmButton android:id="@id/vkim_confirm_btn" app:bcb_send_text="@string/vkim_create_chat" style="@style/VkIm.BottomButton" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

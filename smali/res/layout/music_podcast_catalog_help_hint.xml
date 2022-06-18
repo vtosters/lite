@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/music_podcast_special_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="8.0dip" android:foreground="@drawable/highlight_radius_12" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="32.0dip">
+        <TextView android:textSize="17.0sp" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/VKUIText.Title1" />
+        <TextView android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="@style/VKUIText.Subhead2" />
+    </LinearLayout>
+    <View android:layout_gravity="end|center" android:background="@drawable/ic_chevron_24" android:layout_width="16.0dip" android:layout_height="24.0dip" android:layout_marginEnd="16.0dip" android:backgroundTint="?icon_secondary" />
+</FrameLayout>

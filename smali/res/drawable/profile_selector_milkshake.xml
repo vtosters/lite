@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <layer-list>
+                    <item android:left="16.0dip" android:top="38.0dip" android:right="16.0dip" android:bottom="8.0dip">
+                        <color android:color="?accent" />
+                    </item>
+                </layer-list>
+            </item>
+            <item android:state_pressed="true">
+                <color android:color="?background_highlighted" />
+            </item>
+        </selector>
+    </item>
+</layer-list>

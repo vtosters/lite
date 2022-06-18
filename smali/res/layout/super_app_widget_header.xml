@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/highlight_radius_14_top" android:layout_width="fill_parent" android:layout_height="40.0dip" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.vk.imageloader.view.VKImageView android:id="@id/header_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="10.0dip" app:roundedCornerRadius="6.0dip" />
+    <TextView android:textSize="13.0sp" android:textColor="?header_text_secondary" android:id="@id/header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:singleLine="true" android:includeFontPadding="false" android:textAllCaps="true" android:fontFamily="@font/roboto_medium" android:layout_marginStart="34.0dip" android:layout_marginEnd="37.0dip" android:letterSpacing="0.02" />
+    <ImageView android:layout_gravity="end" android:layout_width="16.0dip" android:layout_height="24.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/ic_chevron_24" android:tint="?icon_tertiary" android:layout_marginEnd="5.0dip" />
+</FrameLayout>

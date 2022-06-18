@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_report_reasons">
+        <item>Spam</item>
+        <item>Insulto</item>
+        <item>Conteúdo adulto</item>
+        <item>Fraude</item>
+        <item>Outro</item>
+    </string-array>
+    <string-array name="address_will_be_opened">
+        <item>Abre na segunda-feira</item>
+        <item>Abre na terça-feira</item>
+        <item>Abre na quarta-feira</item>
+        <item>Abre na quinta-feira</item>
+        <item>Abre na sexta-feira</item>
+        <item>Abre no sábado</item>
+        <item>Abre no domingo</item>
+    </string-array>
+    <string-array name="album_displayable_privacy_options">
+        <item>Todos usuários</item>
+        <item>Somente amigos</item>
+        <item>Amigos e amigos de amigos</item>
+        <item>Somente eu</item>
+    </string-array>
+    <string-array name="album_privacy_options">
+        <item>Todos usuários</item>
+        <item>Somente amigos</item>
+        <item>Amigos e amigos de amigos</item>
+        <item>Somente eu</item>
+        <item>Parâmetros avançados</item>
+    </string-array>
+    <string-array name="app_report_types">
+        <item>Aplicativo não funciona</item>
+        <item>Aplicativo malicioso</item>
+        <item>Publicidade chata</item>
+        <item>Fraude</item>
+    </string-array>
+    <string-array name="community_types">
+        <item>Eventos</item>
+        <item>Grupos</item>
+        <item>Páginas</item>
+    </string-array>
+    <string-array name="date_ago_hrs">
+        <item>uma hora atrás</item>
+        <item>duas horas atrás</item>
+        <item>três horas atrás</item>
+    </string-array>
+    <string-array name="dnd_options">
+        <item>1 hora</item>
+        <item>24 horas</item>
+        <item>7 dias</item>
+        <item>Sempre</item>
+    </string-array>
+    <string-array name="edit_bdate_visibility">
+        <item>Mostrar no perfil</item>
+        <item>Mostrar somente o dia &amp; mês</item>
+        <item>Não mostrar no perfil</item>
+    </string-array>
+    <string-array name="fave_tabs">
+        <item>Pessoas</item>
+        <item>Recados</item>
+        <item>Links</item>
+        <item>Artigos</item>
+        <item>Podcasts</item>
+        <item>Fotos</item>
+        <item>Vídeos</item>
+        <item>@string/goods</item>
+    </string-array>
+    <string-array name="group_audios_options_descriptions">
+        <item></item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novos arquivos de áudio.</item>
+        <item>Acesso limitado significa que somente administradores e editores podem adicionar novos arquivos de áudio.</item>
+    </string-array>
+    <string-array name="group_ban_duration_options">
+        <item>Para sempre</item>
+        <item>Um ano</item>
+        <item>Um mês</item>
+        <item>Uma semana</item>
+        <item>Um dia</item>
+        <item>Uma hora</item>
+    </string-array>
+    <string-array name="group_ban_reasons">
+        <item>Outro</item>
+        <item>Spam</item>
+        <item>Abuso verbal</item>
+        <item>Palavreado inadequado</item>
+        <item>Mensagens irrelevantes</item>
+    </string-array>
+    <string-array name="group_board_options_descriptions">
+        <item></item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem iniciar novas discussões.</item>
+        <item>Acesso limitado significa que somente administradores e editores podem iniciar novas discussões..</item>
+    </string-array>
+    <string-array name="group_docs_options_descriptions">
+        <item></item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novos documentos.</item>
+        <item>Acesso limitado significa que somente administradores e editores podem adicionar novos documentos..</item>
+    </string-array>
+    <string-array name="group_photos_options_descriptions">
+        <item></item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem criar novos álbuns.</item>
+        <item>Acesso limitado significa que somente administradores e editores podem criar novos álbuns.</item>
+    </string-array>
+    <string-array name="group_service_options">
+        <item>Desabilitado</item>
+        <item>Aberto</item>
+        <item>Limitado</item>
+    </string-array>
+    <string-array name="group_videos_options_descriptions">
+        <item></item>
+        <item>Acesso aberto significa que todos os membros da comunidade podem adicionar novos vídeos.</item>
+        <item>Acesso limitado significa que somente administradores e editores podem adicionar novos vídeos..</item>
+    </string-array>
+    <string-array name="group_wall_options">
+        <item>Desabilitado</item>
+        <item>Aberto</item>
+        <item>Privado</item>
+        <item>Fechado</item>
+    </string-array>
+    <string-array name="group_wall_options_descriptions">
+        <item></item>
+        <item>Em um mural aberto, todos os membros da comunidade podem deixar comentários e escrever publicações.</item>
+        <item>Em um mural privado, publicações só podem ser feitas em nome da comunidade e todos os membros podem comentá-las.</item>
+        <item>Em um mural fechado, publicações só podem ser feitas em nome da comunidade e todos os comentários estão desabilitados.</item>
+    </string-array>
+    <string-array name="group_wiki_options_descriptions">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="last_seen_female_hours_ago">
+        <item>vista pela última vez uma hora atrás</item>
+        <item>vista pela última vez duas horas atrás</item>
+        <item>vista pela última vez três horas atrás</item>
+    </string-array>
+    <string-array name="last_seen_male_hours_ago">
+        <item>visto pela última vez uma hora atrás</item>
+        <item>visto pela última vez duas horas atrás</item>
+        <item>visto pela última vez três horas atrás</item>
+    </string-array>
+    <string-array name="like_menu">
+        <item>Descurtir</item>
+        <item>Compartilhar com amigos</item>
+    </string-array>
+    <string-array name="months_full">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+    <string-array name="months_full_dep">
+        <item>de janeiro</item>
+        <item>de fevereiro</item>
+        <item>de março</item>
+        <item>de abril</item>
+        <item>de maio</item>
+        <item>de junho</item>
+        <item>de julho</item>
+        <item>de agosto</item>
+        <item>de setembro</item>
+        <item>de outubro</item>
+        <item>de novembro</item>
+        <item>de dezembro</item>
+    </string-array>
+    <string-array name="months_short">
+        <item>Jan</item>
+        <item>Fev</item>
+        <item>Mar</item>
+        <item>Abr</item>
+        <item>Mai</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Ago</item>
+        <item>Set</item>
+        <item>Out</item>
+        <item>Nov</item>
+        <item>Dez</item>
+    </string-array>
+    <string-array name="newsfeed_settings_feed_type">
+        <item>Por hora de publicação</item>
+        <item>Interessantes primeiro</item>
+    </string-array>
+    <string-array name="ntf_accepted_f">
+        <item>aceitou sua solicitação de amizade</item>
+    </string-array>
+    <string-array name="ntf_accepted_m">
+        <item>aceitou sua solicitação de amizade</item>
+    </string-array>
+    <string-array name="ntf_accepted_x">
+        <item>aceitaram sua solicitação de amizade</item>
+    </string-array>
+    <string-array name="ntf_follow_f">
+        <item>começou a seguir você</item>
+    </string-array>
+    <string-array name="ntf_follow_m">
+        <item>começou a seguir você</item>
+    </string-array>
+    <string-array name="ntf_follow_x">
+        <item>começaram a seguir você</item>
+    </string-array>
+    <string-array name="ntf_like_f">
+        <item>curtiu a publicação</item>
+        <item>curtiu a foto</item>
+        <item>curtiu o vídeo</item>
+        <item>curtiu o comentário</item>
+    </string-array>
+    <string-array name="ntf_like_m">
+        <item>curtiu a publicação</item>
+        <item>curtiu a foto</item>
+        <item>curtiu o vídeo</item>
+        <item>curtiu o comentário</item>
+    </string-array>
+    <string-array name="ntf_like_x">
+        <item>curtiram o recado</item>
+        <item>curtiram a foto</item>
+        <item>curtiram o vídeo</item>
+        <item>curtiram o comentário</item>
+    </string-array>
+    <string-array name="ntf_rt_f">
+        <item>compartilhou uma publicação</item>
+        <item>compartilhou uma foto</item>
+        <item>compartilhou um vídeo</item>
+        <item>compartilhou um comentário</item>
+    </string-array>
+    <string-array name="ntf_rt_m">
+        <item>compartilhou um recado</item>
+        <item>compartilhou uma foto</item>
+        <item>compartilhou um vídeo</item>
+        <item>compartilhou um comentário</item>
+    </string-array>
+    <string-array name="ntf_rt_x">
+        <item>compartilharam uma publicação</item>
+        <item>compartilharam uma foto</item>
+        <item>compartilharam um vídeo</item>
+        <item>compartilharam um comentário</item>
+    </string-array>
+    <string-array name="personal_life_options">
+        <item>Família e filhos</item>
+        <item>Carreira e dinheiro</item>
+        <item>Entretenimento e lazer</item>
+        <item>Ciência e pesquisa</item>
+        <item>Melhorar o mundo</item>
+        <item>Desenvolvimento pessoal</item>
+        <item>Beleza e arte</item>
+        <item>Fama e influência</item>
+    </string-array>
+    <string-array name="personal_people_options">
+        <item>Intelecto e criatividade</item>
+        <item>Gentileza e honestidade</item>
+        <item>Beleza e saúde</item>
+        <item>Influência e riqueza</item>
+        <item>Coragem e persistência</item>
+        <item>Humor e amor pela vida</item>
+    </string-array>
+    <string-array name="personal_politics_options">
+        <item>Comunista</item>
+        <item>Socialista</item>
+        <item>Centrista</item>
+        <item>Liberal</item>
+        <item>Conservador</item>
+        <item>Monarquista</item>
+        <item>Ultraconservador</item>
+        <item>Apático</item>
+        <item>Liberal</item>
+    </string-array>
+    <string-array name="personal_views_options">
+        <item>Muito negativa</item>
+        <item>Negativa</item>
+        <item>Compromedor</item>
+        <item>Neutra</item>
+        <item>Positiva</item>
+    </string-array>
+    <string-array name="photo_tagged_goods_menu">
+        <item>Abrir produto</item>
+        <item>Remover produto</item>
+    </string-array>
+    <string-array name="poll_months_short">
+        <item>Jan</item>
+        <item>Fev</item>
+        <item>Mar</item>
+        <item>Abr</item>
+        <item>Mai</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Ago</item>
+        <item>Set</item>
+        <item>Out</item>
+        <item>Nov</item>
+        <item>Dez</item>
+    </string-array>
+    <string-array name="post_options">
+        <item>Somente amigos</item>
+        <item>Exportar ao Twitter</item>
+        <item>Exportar ao Facebook</item>
+    </string-array>
+    <string-array name="public_types">
+        <item>Local ou uma companhia pequena</item>
+        <item>Companhia, organização ou website</item>
+        <item>Celebridade ou grupo</item>
+        <item>Obra ou produto</item>
+        <item>Tipo de página…</item>
+    </string-array>
+    <string-array name="replies_options">
+        <item>Curtir</item>
+        <item>Responder</item>
+    </string-array>
+    <string-array name="report_types">
+        <item>Spam</item>
+        <item>Insulto</item>
+        <item>Conteúdo para adultos</item>
+        <item>Apologia às drogas</item>
+        <item>Pornografia infantil</item>
+        <item>Extremismo/Violencia</item>
+        <item>Incentivando o suicídio</item>
+    </string-array>
+    <string-array name="sett_dnd_options">
+        <item>1 hora</item>
+        <item>8 horas</item>
+        <item>24 horas</item>
+    </string-array>
+    <string-array name="sett_font_size_options">
+        <item>Pequeno</item>
+        <item>Normal</item>
+        <item>Grande</item>
+    </string-array>
+    <string-array name="sett_friends_order">
+        <item>Por nome</item>
+        <item>Por sobrenome</item>
+        <item>Por importância</item>
+    </string-array>
+    <string-array name="sett_gif_autoplay_entries">
+        <item>Sempre</item>
+        <item>Somente com Wi-Fi</item>
+        <item>Nunca</item>
+    </string-array>
+    <string-array name="sett_img_cache_location">
+        <item>Cartão SD</item>
+        <item>Cartão de memória</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_options">
+        <item>Nome e texto</item>
+        <item>Somente nome</item>
+    </string-array>
+    <string-array name="sett_notifications_no_text_options_group">
+        <item>Nome da comunidade e texto</item>
+        <item>Somente nome da comunidade</item>
+    </string-array>
+    <string-array name="sett_update_interval_items">
+        <item>30 segundos</item>
+        <item>45 segundos</item>
+        <item>Um minuto</item>
+        <item>2 minutos</item>
+        <item>3 minutos</item>
+        <item>5 minutos</item>
+        <item>10 minutos</item>
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>Uma hora</item>
+        <item>Duas horas</item>
+        <item>Desabilitar</item>
+    </string-array>
+    <string-array name="short_time">
+        <item> seg</item>
+        <item> min</item>
+        <item> h</item>
+        <item> dia</item>
+        <item> sem</item>
+        <item> mês</item>
+        <item> ano</item>
+    </string-array>
+    <string-array name="story_months_short">
+        <item>Jan</item>
+        <item>Fev</item>
+        <item>Mar</item>
+        <item>Abr</item>
+        <item>Mai</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Ago</item>
+        <item>Set</item>
+        <item>Out</item>
+        <item>Nov</item>
+        <item>Dez</item>
+    </string-array>
+    <string-array name="story_time_hours">
+        <item>zero</item>
+        <item>uma</item>
+        <item>dois</item>
+        <item>três</item>
+        <item>quatro</item>
+        <item>cinco</item>
+        <item>seis</item>
+        <item>sete</item>
+        <item>oito</item>
+        <item>nove</item>
+        <item>dez</item>
+        <item>onze</item>
+        <item>doze</item>
+        <item>treze</item>
+        <item>quatorze</item>
+        <item>quinze</item>
+        <item>dezesseis</item>
+        <item>dezessete</item>
+        <item>dezoito</item>
+        <item>dezenove</item>
+        <item>vinte</item>
+        <item>vinte e um</item>
+        <item>vinte e dois</item>
+        <item>vinte e três</item>
+    </string-array>
+    <string-array name="story_time_minutes">
+        <item>zero zero</item>
+        <item>zero e um</item>
+        <item>zero e dois</item>
+        <item>zero e três</item>
+        <item>zero e quatro</item>
+        <item>zero e cinco</item>
+        <item>zero e seis</item>
+        <item>zero e sete</item>
+        <item>zero e oito</item>
+        <item>zero e nove</item>
+        <item>dez</item>
+        <item>onze</item>
+        <item>doze</item>
+        <item>treze</item>
+        <item>quatorze</item>
+        <item>quinze</item>
+        <item>dezesseis</item>
+        <item>dezessete</item>
+        <item>dezoito</item>
+        <item>dezenove</item>
+        <item>vinte</item>
+        <item>vinte e um</item>
+        <item>vinte e dois</item>
+        <item>vinte e três</item>
+        <item>vinte e quatro</item>
+        <item>vinte e cinco</item>
+        <item>vinte e seis</item>
+        <item>vinte e sete</item>
+        <item>vinte e oito</item>
+        <item>vinte e nove</item>
+        <item>trinta</item>
+        <item>trinta e um</item>
+        <item>trinta e dois</item>
+        <item>trinta e três</item>
+        <item>trinta e quatro</item>
+        <item>trinta e cinco</item>
+        <item>trinta e seis</item>
+        <item>trinta e sete</item>
+        <item>trinta e oito</item>
+        <item>trinta e nove</item>
+        <item>quarenta</item>
+        <item>quarenta e um</item>
+        <item>quarenta e dois</item>
+        <item>quarenta e três</item>
+        <item>quarenta e quatro</item>
+        <item>quarenta e cinco</item>
+        <item>quarenta e seis</item>
+        <item>quarenta e sete</item>
+        <item>quarenta e oito</item>
+        <item>quarenta e nove</item>
+        <item>cinquenta</item>
+        <item>cinquenta e um</item>
+        <item>cinquenta e dois</item>
+        <item>cinquenta e três</item>
+        <item>cinquenta e quatro</item>
+        <item>cinquenta e cinco</item>
+        <item>cinquenta e seis</item>
+        <item>cinquenta e sete</item>
+        <item>cinquenta e oito</item>
+        <item>cinquenta e nove</item>
+    </string-array>
+    <string-array name="video_search_date">
+        <item>Qualquer</item>
+        <item>Últimas 24 horas</item>
+        <item>Últimos 7 días</item>
+        <item>Por mês</item>
+        <item>Este ano</item>
+    </string-array>
+    <string-array name="video_search_date_options">
+        <item>Qualquer periodo</item>
+        <item>Últimas 24 horas</item>
+        <item>Último mês</item>
+        <item>Último ano</item>
+    </string-array>
+    <string-array name="video_search_duration">
+        <item>Qualquer</item>
+        <item>Curtos (menos que 5 minutos)</item>
+        <item>Longos (mais que 20 minutos)</item>
+    </string-array>
+    <string-array name="video_search_length">
+        <item>Qualquer duração</item>
+        <item>Curto</item>
+        <item>Longo</item>
+    </string-array>
+    <string-array name="video_search_quality">
+        <item>Qualquer definição</item>
+        <item>Somente HD</item>
+    </string-array>
+    <string-array name="video_search_sort">
+        <item>Por data</item>
+        <item>Por duração</item>
+        <item>Por relevância</item>
+    </string-array>
+    <string-array name="video_search_sort_options">
+        <item>Por relevância</item>
+        <item>Por data</item>
+        <item>Por duração</item>
+    </string-array>
+    <string-array name="vkim_months_full_nom">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Augosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+    <string-array name="wall_attach_options">
+        <item>Música</item>
+        <item>Vídeo</item>
+        <item>Documento</item>
+    </string-array>
+    <string-array name="when_day_of_week">
+        <item>Na segunda-feira</item>
+        <item>Na terça-feira</item>
+        <item>Na quarta-feira</item>
+        <item>Na quinta-feira</item>
+        <item>Na sexta-feira</item>
+        <item>No sábado</item>
+        <item>No domingo</item>
+    </string-array>
+</resources>

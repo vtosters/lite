@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/music_check_button_bg_pressed"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape>
+            <solid android:color="#ff000000" />
+            <corners android:radius="@dimen/music_light_blue_button_corners" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="@dimen/music_light_blue_button_corners" />
+            <solid android:color="@color/music_check_button_bg_checked" />
+        </shape>
+    </item>
+</ripple>

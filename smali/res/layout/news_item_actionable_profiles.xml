@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.lists.RecyclerPaginatedView android:id="@id/recom_friends_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="258.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

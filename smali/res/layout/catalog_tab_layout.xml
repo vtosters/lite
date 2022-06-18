@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vk.core.view.VKTabLayout android:id="@id/tabs" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="48.0dip" app:layout_scrollFlags="snap" app:tabMaxWidth="0.0dip" app:tabMode="scrollable" style="@style/TabBarTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

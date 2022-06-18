@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_action_link_small" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip">
+        <com.vk.imageloader.view.VKImageView android:id="@id/collection_item_action_link_photo" android:background="@drawable/bg_action_link_image_placeholder" android:layout_width="32.0dip" android:layout_height="32.0dip" app:actualImageScaleType="centerCrop" app:roundedCornerRadius="2.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/collection_item_action_link_photo_placeholder" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="center" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="14.0dip" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/collection_item_action_link_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="12.0dip" android:textColor="@color/gray_200" android:ellipsize="marquee" android:id="@id/collection_item_action_link_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/cl_root_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/vk_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:collapseIcon="@drawable/ic_back_collapse_header" app:navigationContentDescription="@string/accessibility_toolbar_back" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme">
+            <ImageView android:layout_gravity="start" android:id="@id/iv_lock_16" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_lock_16" android:tint="?content_placeholder_icon" android:contentDescription="@string/fave_privacy_description" android:layout_marginEnd="8.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="23.0sp" android:textColor="?header_text" android:id="@id/main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="5.0sp" android:fontFamily="@font/tt_commons_demi_bold" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:id="@id/iv_lock_12" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/ic_lock_12" android:tint="?content_placeholder_icon" android:contentDescription="@string/fave_privacy_description" android:layout_marginEnd="6.0dip" />
+                    <TextView android:textSize="20.0sp" android:textColor="?header_text" android:id="@id/title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="4.0sp" android:letterSpacing="0.01" style="@style/VKUIText.Title2" />
+                </LinearLayout>
+                <TextView android:textSize="13.0sp" android:textColor="?header_text_secondary" android:ellipsize="end" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:lines="1" android:maxEms="20" android:lineSpacingExtra="3.0sp" android:fontFamily="@string/font_family_regular" android:letterSpacing="0.02" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.vk.core.view.VKTabLayout android:id="@id/tabs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/fave_tabs_height" app:tabGravity="fill" app:tabMaxWidth="0.0dip" app:tabMode="scrollable" style="?tabBarTheme" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/pb_fave_loading" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginBottom="?actionBarSize" android:indeterminateTint="?activity_indicator_tint" android:indeterminateTintMode="src_in" />
+    <com.vk.core.view.VKViewPager android:id="@id/viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toBottomOf="@id/vk_app_bar" />
+    <com.vk.core.view.AppBarShadowView app:appbar_allowSeparator="false" style="@style/AppBarShadow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

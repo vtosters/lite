@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="68.0dip" android:layout_height="68.0dip" android:foreground="@drawable/mask_round_ripple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center" android:id="@id/image" android:background="@drawable/bg_mask_round" android:padding="4.0dip" android:layout_width="52.0dip" android:layout_height="52.0dip" />
+    <View android:layout_gravity="end|center|top" android:id="@id/new_badge" android:background="@drawable/bg_masks_new_badge" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_margin="12.0dip" />
+</FrameLayout>

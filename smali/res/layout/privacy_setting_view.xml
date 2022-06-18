@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/privacy_setting_view_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/StorySettingsTitle2" />
+    <TextView android:id="@id/privacy_setting_view_values" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/StorySettingsSubtitle" />
+</merge>

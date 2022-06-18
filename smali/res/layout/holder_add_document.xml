@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/newsfeed_newpost_add_item_header_height" android:baselineAligned="false" android:divider="@drawable/posting_attach_header_divider" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/holder_add_document_from_gallery_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.vk.core.view.TintTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newsfeed_newpost_attach_documents_from_gallery" android:drawableLeft="@drawable/ic_gallery_24" android:drawableStart="@drawable/ic_gallery_24" style="@style/PostingAttachHeaderButton" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/holder_add_document_from_device_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.vk.core.view.TintTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newsfeed_newpost_attach_documents_from_device" android:drawableLeft="@drawable/ic_upload_24" android:drawableStart="@drawable/ic_upload_24" style="@style/PostingAttachHeaderButton" />
+    </FrameLayout>
+</LinearLayout>

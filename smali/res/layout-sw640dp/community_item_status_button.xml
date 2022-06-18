@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/highlight_radius_8" android:paddingTop="22.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/icon" android:layout_width="36.0dip" android:layout_height="28.0dip" android:layout_marginEnd="3.0dip" class="com.vk.profile.ui.community.StatusButtonView$NotificationImageView" />
+    <TextView android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif-medium" style="@style/VKUIText.Caption1" />
+</LinearLayout>

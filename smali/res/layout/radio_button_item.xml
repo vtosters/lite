@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vkontakte.android.ui.CheckableRelativeLayout android:id="@id/access_closed" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
+    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_closed" android:layout_toRightOf="@android:id/checkbox" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_closed_descr" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title" />
+</com.vkontakte.android.ui.CheckableRelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="106.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center|top" android:id="@id/photo" android:background="@drawable/bg_editor_new_story" android:layout_width="36.0dip" android:layout_height="48.0dip" android:layout_marginTop="52.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_add_16" android:scaleType="center" android:tint="@color/black" android:contentDescription="@string/accessibility_photo" />
+</FrameLayout>

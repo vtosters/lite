@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/empty_click_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:orientation="vertical" android:id="@id/content_container" android:background="@drawable/picker_rounded_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.vk.core.ui.VkBottomSheetBehavior">
+        <FrameLayout android:id="@id/list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/picker_top_margin">
+            <com.vk.attachpicker.stickers.StickersRecyclerView android:id="@id/rv_search" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:nestedScrollingEnabled="true" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/medium_blue_gray" android:layout_gravity="center|top" android:id="@id/v_search_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:text="@string/picker_search_empty" />
+            <androidx.viewpager.widget.ViewPager android:id="@id/vp_pager" android:paddingBottom="@dimen/picker_tabs_container_height" android:visibility="visible" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <com.vk.core.view.search.AnimStartSearchView android:id="@id/search_view" android:paddingTop="@dimen/picker_search_padding" android:paddingBottom="@dimen/picker_search_padding" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/picker_search_height" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" />
+        <View android:layout_gravity="bottom" android:id="@id/view_shadow" android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginBottom="48.0dip" />
+        <View android:layout_gravity="top" android:id="@id/view_header_separator" android:background="@color/black_alpha12" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="@dimen/picker_top_margin" android:alpha="0.0" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_tabs_container" android:background="?header_alternate_background" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/picker_tabs_container_height" />
+</merge>

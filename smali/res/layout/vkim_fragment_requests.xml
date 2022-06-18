@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_scrollFlags="" app:title="@string/vkim_msg_request" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ViewStub android:id="@id/im_dialogs_list_stub" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bg_toolbar_separator" android:contentDescription="@null" android:importantForAccessibility="no" />
+        <TextView android:id="@id/decline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/vkim_msg_request_reject_all" style="@style/VkIm.RejectButton" />
+    </LinearLayout>
+    <com.vk.core.view.AppBarShadowView app:appbar_forceMode="separator" style="@style/AppBarShadow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

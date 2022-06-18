@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar_layout" android:background="?header_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="@dimen/music_artist_logo_height" app:collapsedTitleTextAppearance="@style/ArtistNameStyle" app:contentScrim="?header_background" app:expandedTitleGravity="start|bottom|center" app:expandedTitleMarginBottom="16.0dip" app:expandedTitleMarginEnd="88.0dip" app:expandedTitleMarginStart="16.0dip" app:expandedTitleTextAppearance="@style/ArtistNameStyle.Expanded" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:statusBarScrim="@android:color/transparent" />
+</com.google.android.material.appbar.AppBarLayout>

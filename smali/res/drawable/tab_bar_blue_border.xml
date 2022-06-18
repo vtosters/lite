@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="-1.0dip" android:insetRight="-1.0dip" android:insetTop="-1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape>
+        <solid android:color="@android:color/transparent" />
+        <stroke android:width="0.5dip" android:color="@color/tab_bar_blue_border" />
+        <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.0dip" />
+    </shape>
+</inset>

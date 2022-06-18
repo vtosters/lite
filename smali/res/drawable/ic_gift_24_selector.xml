@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <bitmap android:src="@drawable/ic_gift_24" android:tint="@color/white" />
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_gift_24" android:tint="@color/light_blue_gray" />
+    </item>
+</selector>

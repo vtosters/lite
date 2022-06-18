@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="?header_text" android:gravity="center_vertical" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:text="@string/vkim_dialogs_header_title" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/VKUIText.Title1" />
+    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
+    <View android:id="@id/shadow" android:layout_marginTop="?actionBarSize" style="@style/Vk.Theme.ToolbarShadow.Thick.VkApp" />
+</FrameLayout>

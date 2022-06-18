@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.NonBouncedAppBarLayout android:id="@id/appbar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <View android:id="@id/mr_red" android:layout_width="fill_parent" android:layout_height="12.0dip" app:layout_scrollFlags="scroll|snap" />
+        <View android:id="@id/mr_blue" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_scrollFlags="enterAlways|scroll|snap" />
+        <View android:id="@id/mr_green" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+    </com.google.android.material.appbar.NonBouncedAppBarLayout>
+    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.google.android.material.appbar.NonBouncedAppBarLayout$ScrollingViewBehavior">
+        <com.vk.common.view.disableable.DisableableViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@id/tabs" android:background="?background_content" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" app:layout_behavior="com.vk.discover.DiscoverCategoriesTabsBehavior" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="?accent" app:tabIndicatorHeight="2.0dip" app:tabMinWidth="0.0dip" app:tabMode="scrollable" app:tabPaddingEnd="0.0dip" app:tabPaddingStart="0.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="1.0dip" app:layout_behavior="com.vk.discover.DiscoverCategoriesToolbarBehavior">
+        <LinearLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <include android:layout_gravity="center_vertical" android:id="@id/search_view" android:layout_width="0.0px" android:layout_height="?actionBarSize" android:layout_weight="1.0" layout="@layout/toolbar_modern_search_view" />
+            <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginEnd="4.0dip">
+                <ImageView android:id="@id/iv_friends_search" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_friend_add_24" android:scaleType="centerInside" android:tint="?header_tint" android:contentDescription="@string/accessibility_friends_search" />
+                <include android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:layout_marginTop="4.0dip" android:layout_alignParentTop="true" android:layout_marginEnd="4.0dip" android:layout_alignParentEnd="true" layout="@layout/request_counter" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:background="@drawable/bg_toolbar_shadow_dark" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

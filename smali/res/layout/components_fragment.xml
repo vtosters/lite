@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/accessibility_toolbar_back" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
+    <com.vk.core.view.AppBarShadowView android:layout_width="fill_parent" android:layout_height="0.0dip" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layoutAnimation android:delay="14.999998%" android:animation="@anim/item_animation_fall_down" android:animationOrder="normal"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

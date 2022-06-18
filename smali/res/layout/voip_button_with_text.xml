@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:layout_gravity="center" android:id="@id/btn" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_margin="2.0dip" android:elevation="2.0dip" />
+    <ImageButton android:layout_gravity="center" android:id="@id/btn_small" android:visibility="gone" android:layout_width="68.0dip" android:layout_height="68.0dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="4.0dip" android:elevation="2.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="9.0dip" android:layout_marginRight="2.0dip" android:maxLines="2" android:lineSpacingExtra="2.0sp" android:alpha="0.72" />
+</merge>

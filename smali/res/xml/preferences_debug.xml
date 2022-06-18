@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="preferences_debug"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Домены" android:key="domains">
+        <Preference android:title="Домен API" android:key="apiHost" android:defaultValue="api.vk.com" />
+        <Preference android:title="Домен OAuth" android:key="oauthHost" android:defaultValue="oauth.vk.com" />
+        <Preference android:title="VK UI host uri" android:key="vkUiHostUri" android:defaultValue="static.vk.com" />
+        <Preference android:title="VK UI SPA uri" android:key="spaUri" android:defaultValue="vk.com/spa" />
+        <Preference android:title="away.php domain" android:key="awayPhpDomain" android:defaultValue="m.vk.com" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Сеть" android:key="network">
+        <Preference android:title="Network: Executor" android:key="__dbg_network_executor" android:defaultValue="cronet_quic" />
+        <Preference android:title="Network: Clear internal state" android:key="__dbg_network_clear_internal_state" />
+        <CheckBoxPreference android:title="Network: NetLog: write" android:key="__dbg_network_netlog_write" android:defaultValue="false" />
+        <Preference android:title="Network: NetLog: clear" android:key="__dbg_network_netlog_clear" android:defaultValue="false" />
+        <Preference android:title="Network: NetLog: send" android:key="__dbg_network_netlog_send" android:summary="Compress &amp; send" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Логирование" android:key="logging">
+        <CheckBoxPreference android:title="Логирование API" android:key="__dbg_api" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Моментальная отправка статы" android:key="__dbg_force_send" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Дебаг WebView" android:key="__dbg_webview" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Визуализация view_post_time" android:key="__dbg_view_post_time_overlay" android:summary="Подсвечивать посты при регистрации события view_post_time" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Разрешить брекпоинты" android:key="__dbg_allow_requests_breakpoints" android:summary="Разрешить брекпоинты запросов через Proxy (Charles)" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Применять дырки" android:key="__dbg_apply_spaces" android:summary="Применять дырки для сообщений после long poll history." android:defaultValue="false" />
+        <CheckBoxPreference android:title="Включить MemLeak detect" android:key="__dbg_mem_leak" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Показывать ошибки API" android:key="__dbg_api_errors" android:defaultValue="false" />
+        <Preference android:title="Запись логов в файл" android:key="__dbg_log_to_file" android:summary="До полного перезапуска приложения" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Кэш" android:key="cache">
+        <Preference android:title="Очистить хэш 2ФА" android:key="clearTrustedHash" />
+        <Preference android:title="Очистить кэш WebView" android:key="clearWebViewCache" />
+        <Preference android:title="Удалить токен VkPay для оплаты по QR" android:key="clearVkPayTokenForQrPayments" />
+        <Preference android:title="Очистить кэш стикеров" android:key="clearStickersCache" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Системные" android:key="system">
+        <EditTextPreference android:title="Language override" android:key="__dbg_lang_override" />
+        <Preference android:title="Завершить процесс" android:key="__dbg_terminate" />
+        <Preference android:title="Обновить регистрацию Firebase" android:key="__dbg_re_register_firebase" />
+        <Preference android:title="Скопировать push token" android:key="__dbg_copy_firebase_token" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Истории" android:key="stories">
+        <CheckBoxPreference android:title="Зона кликабельного стикера" android:key="__dbg_clickable_sticker_border" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Зоны стикера при создании" android:key="__dbg_stories_create_sticker_border" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Тесты" android:key="tests">
+        <Preference android:title="Тест уведомления о ДР" android:key="__dbg_test_bday" />
+        <Preference android:title="Тест ошибки need_validation" android:key="__dbg_test_validation" />
+        <Preference android:title="Тест ошибки captcha" android:key="__dbg_test_captcha" />
+        <Preference android:title="Тест ошибки системы" android:key="__dbg_test_crash" />
+        <EditTextPreference android:title="Открыть VK UI Container" android:key="__dbg_spa_uri" android:defaultValue="https://static.vk.com/demo" />
+        <CheckBoxPreference android:title="Тестовый тултип" android:key="__dbg_test_tooltip" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Bugtracker" android:key="bugtracker">
+        <Preference android:title="Список версий" android:key="__dbg_app_versions_list" />
+        <Preference android:title="Сброс Bugtracker токена" android:key="__dbg_drop_bugtracker_token" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Другие" android:key="others">
+        <CheckBoxPreference android:title="Отключить рекламу" android:key="__dbg_no_ads" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Прокси" android:key="__dbg_proxy_enable" android:defaultValue="false" />
+        <CheckBoxPreference android:title="Использовать libverify для авторизации" android:key="__dbg_use_libverify_for_auth" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

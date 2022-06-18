@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/milkshake_activation_image" android:layout_width="192.0dip" android:layout_height="192.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:importantForAccessibility="no" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="bottom" android:id="@id/milkshake_activation_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:lineSpacingExtra="8.0sp" android:fontFamily="monospace" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+</LinearLayout>

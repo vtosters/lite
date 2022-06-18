@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="block_for_one_day_text">1 天</string>
+    <string name="block_for_one_hour_text">1 小时</string>
+    <string name="block_for_one_minute_text">1 分钟</string>
+    <string name="block_for_text">不要为以下事宜打扰我</string>
+    <string name="block_notifications_description">暂时屏蔽通知</string>
+    <string name="block_notifications_text">不要打扰我</string>
+    <string name="general_error_description">出错，请稍后再试</string>
+    <string name="network_error_description">检查网络连接再重试</string>
+    <string name="notification_event_cancel">取消</string>
+    <string name="notification_event_close">关闭</string>
+    <string name="notification_event_confirm">确定</string>
+    <string name="notification_history_clear">清除</string>
+    <string name="notification_history_delete">删除</string>
+    <string name="notification_history_shortcut_name">通知</string>
+    <string name="notification_history_text">通知历史</string>
+    <string name="notification_history_text_description">在此设备上显示通知</string>
+    <string name="notification_settings">设置</string>
+    <string name="report_reuse_text">%1$s 不属于我</string>
+    <string name="report_reuse_text_confirmation">您确定要在所有设备中屏蔽 %1$s 的验证通知吗？</string>
+    <string name="report_reuse_text_description">在我所有设备中屏蔽验证通知</string>
+    <string name="setting_saved_toast_text">您的喜好已经保存</string>
+    <string name="title_activity_settings">通知设置</string>
+</resources>

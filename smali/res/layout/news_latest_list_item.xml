@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/flist_item_container" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="8.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="76.0dip">
+        <TextView android:textSize="15.0sp" android:textStyle="normal" android:textColor="?text_muted" android:ellipsize="end" android:id="@id/flist_item_text" android:duplicateParentState="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingExtra="2.0dip" android:fontFamily="@string/font_family_medium" />
+        <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/flist_item_subtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:lines="1" android:lineSpacingExtra="2.0dip" android:fontFamily="@string/font_family_regular" />
+    </LinearLayout>
+    <com.vk.imageloader.view.VKImageView android:layout_gravity="end|center" android:id="@id/flist_item_photo" android:layout_width="68.0dip" android:layout_height="68.0dip" android:scaleType="centerCrop" app:actualImageScaleType="centerCrop" app:placeholderImageScaleType="centerInside" app:roundedCornerRadius="2.0dip" />
+</FrameLayout>

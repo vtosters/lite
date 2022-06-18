@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_card_elevation_16_full_white" android:paddingTop="16.0dip" android:paddingBottom="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/sticker_post_header" />
+    <com.vk.imageloader.view.VKImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" app:actualImageScaleType="centerCrop" />
+    <com.vk.common.view.TextViewEllipsizeEnd android:textSize="15.0dip" android:textColor="@color/black" android:ellipsize="end" android:layout_gravity="start" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:maxLines="2" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" android:letterSpacing="0.01" app:fontFamily="@font/roboto_regular" />
+</LinearLayout>

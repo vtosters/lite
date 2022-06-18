@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/attach_appbar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:collapseIcon="@drawable/ic_back_collapse" app:titleTextColor="?text_muted" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@id/appkit_loader_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/attach_appbar_layout">
+        <include android:id="@id/loading" layout="@layout/appkit_loading" />
+        <include android:id="@id/error" android:visibility="gone" layout="@layout/appkit_error" />
+        <View android:id="@id/content_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.vk.core.view.AppBarShadowView android:id="@id/vk_search_shadow" app:appbar_allowSeparator="false" style="@style/AppBarShadow" />
+</RelativeLayout>

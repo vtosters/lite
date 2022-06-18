@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/bg_stickers_suggestions_left_shadow" />
+    </item>
+    <item>
+        <nine-patch android:src="@drawable/bg_stickers_suggestions_left_fill" android:tint="?modal_card_background" />
+    </item>
+</layer-list>

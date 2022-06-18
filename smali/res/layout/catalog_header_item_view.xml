@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="@dimen/post_side_padding">
+        <TextView android:textSize="16.0sp" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="8.0dip" style="@style/TextStyle" />
+        <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/badge" android:background="@drawable/catalog_header_badge_prominent" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="20.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/fontRobotoRegular" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" />
+    </LinearLayout>
+    <TextView android:layout_gravity="end|center" android:id="@id/show_all_btn" android:background="@drawable/music_playlist_selectable_bg_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/catalog_button_show_all" android:fontFamily="@font/roboto_regular" style="@style/TextButton.Blue" />
+</FrameLayout>

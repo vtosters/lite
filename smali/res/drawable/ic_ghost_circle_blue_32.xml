@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="@color/azure_300" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/ic_ghost_20" android:tint="@color/white" />
+    </item>
+</layer-list>

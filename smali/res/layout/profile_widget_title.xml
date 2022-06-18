@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="?text_muted" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:background="@drawable/highlight_post" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="1" android:layout_weight="1.0" android:fontFamily="@string/font_family_medium" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/widget_post_side_padding_small" />
+    <TextView android:textSize="14.0sp" android:textColor="?control_foreground" android:ellipsize="end" android:gravity="center" android:id="@id/button_more" android:background="@drawable/highlight_post" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200.0dip" android:minHeight="48.0dip" android:maxLines="1" android:fontFamily="@string/font_family_medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+</LinearLayout>
