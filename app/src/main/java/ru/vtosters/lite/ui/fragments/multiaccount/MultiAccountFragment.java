@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.vk.core.fragments.FragmentImpl.a;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
 

@@ -4,7 +4,8 @@ import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.os.Bundle;
 
-import com.vk.core.preference.Preference;
+import androidx.preference.Preference;
+
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
@@ -17,25 +18,25 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
-        a("newfeed").a(new restart());
-        a("dateformat").a(new restart());
-        a("stories").a(new restart());
-        a("swipe").a(new restart());
-        a("dockcounter").a(new restart());
+        findPreference("newfeed").setOnPreferenceClickListener(new restart());
+        findPreference("dateformat").setOnPreferenceClickListener(new restart());
+        findPreference("stories").setOnPreferenceClickListener(new restart());
+        findPreference("swipe").setOnPreferenceClickListener(new restart());
+        findPreference("dockcounter").setOnPreferenceClickListener(new restart());
     }
 
-    public boolean restart(Preference preference, Object obj) {
+    public boolean restart(Preference preference) {
         restartApplicationWithTimer();
         return true;
     }
 
-    public class restart implements Preference.b {
+    public class restart implements Preference.OnPreferenceClickListener {
         restart() {
         }
 
-        @Override // android.support.v7.preference.Preference.b
-        public boolean a(Preference preference, Object obj) {
-            return InterfaceFragment.this.restart(preference, obj);
+        @Override
+        public boolean onPreferenceClick(Preference preference) {
+            return InterfaceFragment.this.restart(preference);
         }
     }
 }
