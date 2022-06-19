@@ -17,24 +17,26 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.core.fragments.FragmentImpl.a;
+import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
+import ru.vtosters.lite.utils.Globals;
 
-public class DockBarFragment extends ToolbarFragment {
+public class DockBarFragment extends MaterialPreferenceToolbarFragment {
 
     private RecyclerView mRecyclerView;
     private DockBarAdapter mAdapter;
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
-    public View d(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        super.b(bundle);
+    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        super.onCreate(bundle);
 
-        LinearLayout container = new LinearLayout(n());
+        LinearLayout container = new LinearLayout(getContext());
         container.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
         container.setOrientation(LinearLayout.VERTICAL);
 
-        LinearLayout buttonsContainer = new LinearLayout(n());
+        LinearLayout buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
                 convertDpToPixel(13),
                 convertDpToPixel(10),
@@ -43,8 +45,8 @@ public class DockBarFragment extends ToolbarFragment {
         );
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
-        TextView save = new TextView(new ContextThemeWrapper(n(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        save.setText(getString("dockbar_save"));
+        TextView save = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
+        save.setText(Globals.getString("dockbar_save"));
         save.setOnClickListener(v -> {
             DockBarManager.getInstance().save();
             restartApplication();
@@ -54,11 +56,11 @@ public class DockBarFragment extends ToolbarFragment {
         saveParams.weight = 1.0f;
         buttonsContainer.addView(save, saveParams);
 
-        View divider = new View(n());
+        View divider = new View(getContext());
         buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
 
-        TextView reset = new TextView(new ContextThemeWrapper(n(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        reset.setText(getString("dockbar_reset"));
+        TextView reset = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
+        reset.setText(Globals.getString("dockbar_reset"));
         reset.setOnClickListener(v -> {
             DockBarManager.getInstance().delete();
             restartApplication();
@@ -68,15 +70,15 @@ public class DockBarFragment extends ToolbarFragment {
         resetParams.weight = 1.0f;
         buttonsContainer.addView(reset, resetParams);
 
-        mRecyclerView = new RecyclerView(n());
+        mRecyclerView = new RecyclerView(getContext());
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(n()));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mAdapter = new DockBarAdapter();
         mRecyclerView.setAdapter(mAdapter);
         container.addView(mRecyclerView, new LinearLayout.LayoutParams(-1, -1));
 
         mItemTouchHelper = new ItemTouchHelper(new ItemTouchHelperCallback(mAdapter));
-        mItemTouchHelper.a(mRecyclerView);
+        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
 
         return container;
     }

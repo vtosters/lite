@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getContext;
 
+import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
 import android.view.Gravity;
@@ -18,7 +19,7 @@ import java.util.List;
 
 import ru.vtosters.lite.utils.Themes;
 
-public class DockBarAdapter extends RecyclerView.a
+public class DockBarAdapter extends RecyclerView.Adapter
         implements IItemTouchHelper {
 
     public static final int SELECTED_TAB_TYPE = 1;
@@ -29,7 +30,7 @@ public class DockBarAdapter extends RecyclerView.a
     private final DockBarManager mDockBarManager = DockBarManager.getInstance();
 
     @Override
-    public RecyclerView.a b(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == GROUP_TITLE_TYPE) {
             return new GroupViewHolder(createGroupTitle());
         } else {
@@ -38,10 +39,11 @@ public class DockBarAdapter extends RecyclerView.a
     }
 
     @Override
-    public int b(int i) {
+    public int getItemViewType(int i) {
         return getItemType(i);
     }
 
+    @SuppressLint("NewApi")
     private View createTabItem() {
         LinearLayout container = new LinearLayout(getContext());
         container.setTag("tab_item_container");
@@ -97,7 +99,7 @@ public class DockBarAdapter extends RecyclerView.a
     }
 
     @Override
-    public void a(RecyclerView.x holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof GroupViewHolder) {
             ((GroupViewHolder) holder).bind(mDockBarManager.getGroupTitle(position));
         } else {
@@ -111,7 +113,7 @@ public class DockBarAdapter extends RecyclerView.a
     }
 
     @Override
-    public int au_() {
+    public int getItemCount() {
         return mDockBarManager.getItemCount();
     }
 
@@ -156,7 +158,7 @@ public class DockBarAdapter extends RecyclerView.a
         return mDockBarManager.getItemType(position);
     }
 
-    static class DockBarEditViewHolder extends RecyclerView.x {
+    static class DockBarEditViewHolder extends RecyclerView.ViewHolder {
 
         private final ImageView mIcon;
         private final TextView mTitle;
@@ -174,7 +176,7 @@ public class DockBarAdapter extends RecyclerView.a
         }
     }
 
-    static class GroupViewHolder extends RecyclerView.x {
+    static class GroupViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView mGroupTitle;
 

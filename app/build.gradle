@@ -12,7 +12,6 @@ versionFile {
     file = new File(moduleDir.getAbsolutePath() + "/src/main/assets/version.properties")
 }
 
-
 task exportDex {
     doLast {
         try {
@@ -74,7 +73,7 @@ android {
 
     defaultConfig {
         applicationId "ru.vtosters.lite.utils.lite"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"

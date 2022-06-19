@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class ItemTouchHelperCallback extends ItemTouchHelper.a {
+public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     private final DockBarAdapter mAdapter;
 
@@ -14,33 +14,33 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.a {
         this.mAdapter = mAdapter;
     }
 
-    @Override // isLongPressDragEnabled
-    public boolean a() {
+    @Override
+    public boolean isLongPressDragEnabled() {
         return true;
     }
 
-    @Override // isItemViewSwipeEnabled
-    public boolean b() {
+    @Override
+    public boolean isItemViewSwipeEnabled() {
         return false;
     }
 
     @Override
-    public int a(RecyclerView recyclerView, RecyclerView.x viewHolder) {
-        int pos = mAdapter.getItemType(viewHolder.d());
+    public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+        int pos = mAdapter.getItemType(viewHolder.getAdapterPosition());
         int dragFlags = pos != DockBarAdapter.GROUP_TITLE_TYPE ? androidx.recyclerview.widget.ItemTouchHelper.UP | androidx.recyclerview.widget.ItemTouchHelper.DOWN : 0;
         int swipeFlags = pos == 1 ? androidx.recyclerview.widget.ItemTouchHelper.START | androidx.recyclerview.widget.ItemTouchHelper.END : 0;
         return makeMovementFlags(dragFlags, swipeFlags);
     }
 
     @Override
-    public void a(RecyclerView.x viewHolder, int direction) {
-        mAdapter.onItemDismiss(viewHolder.d());
+    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+        mAdapter.onItemDismiss(viewHolder.getItemViewType());
     }
 
     @Override
-    public boolean b(RecyclerView recyclerView, RecyclerView.x viewHolder, RecyclerView.x target) {
-        if (mAdapter.getItemType(viewHolder.d()) == DockBarAdapter.GROUP_TITLE_TYPE)
+    public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+        if (mAdapter.getItemType(viewHolder.getPosition()) == DockBarAdapter.GROUP_TITLE_TYPE)
             return false;
-        return mAdapter.onItemMove(viewHolder.d(), target.d());
+        return mAdapter.onItemMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
     }
 }
