@@ -55,7 +55,6 @@ public class Preferences {
         setupFilters();
         fixGapps();
         setProxy();
-        migrate();
         reloadMessagesList();
         registerActivities(application);
         if(dev()){
