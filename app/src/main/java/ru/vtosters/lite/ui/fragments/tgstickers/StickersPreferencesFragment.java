@@ -63,8 +63,8 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
         PreferencesUtil.addMaterialSwitchPreference(this, "tg_proxy_auth", getString("ssocksauth"), "", null, false, (preference, o) -> {
             boolean value = (boolean) o;
 
-            a("tg_proxy_login").a(value); // findPreference("tg_proxy_login").setEnabled(value);
-            a("tg_proxy_pass").a(value); // findPreference("tg_proxy_pass").setEnabled(booleanValue);
+            findPreference("tg_proxy_login").setEnabled(value); // findPreference("tg_proxy_login").setEnabled(value);
+            findPreference("tg_proxy_pass").setEnabled(value); // findPreference("tg_proxy_pass").setEnabled(booleanValue);
 
             TGPref.setTGProxyPassEnabled(value);
             return true;
