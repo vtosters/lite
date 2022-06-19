@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_window_focused="false" android:state_enabled="true" android:state_checked="true" android:drawable="@drawable/ic_tick_checked" />
-    <item android:state_window_focused="false" android:state_enabled="true" android:state_checked="false" android:drawable="@drawable/ic_tick_mark" />
-    <item android:state_enabled="true" android:state_checked="true" android:state_pressed="true" android:tint="@color/base" android:drawable="@drawable/ic_tick_mark" />
-    <item android:state_enabled="true" android:state_checked="false" android:state_pressed="true" android:drawable="@drawable/ic_tick_mark" />
-    <item android:state_focused="true" android:state_enabled="true" android:state_checked="true" android:drawable="@drawable/ic_tick_checked" />
-    <item android:state_focused="true" android:state_enabled="true" android:state_checked="false" android:drawable="@drawable/ic_tick_mark" />
-    <item android:state_enabled="true" android:state_checked="false" android:drawable="@drawable/ic_tick_mark" />
-    <item android:state_enabled="true" android:state_checked="true" android:drawable="@drawable/ic_tick_checked" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_tick_checked" android:state_checked="true" android:state_enabled="true" android:state_window_focused="false" />
+    <item android:drawable="@drawable/ic_tick_mark" android:state_checked="false" android:state_enabled="true" android:state_window_focused="false" />
+    <item android:drawable="@drawable/ic_tick_mark" android:state_checked="true" android:state_enabled="true" android:state_pressed="true" android:tint="@color/base" />
+    <item android:drawable="@drawable/ic_tick_mark" android:state_checked="false" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_tick_checked" android:state_checked="true" android:state_enabled="true" android:state_focused="true" />
+    <item android:drawable="@drawable/ic_tick_mark" android:state_checked="false" android:state_enabled="true" android:state_focused="true" />
+    <item android:drawable="@drawable/ic_tick_mark" android:state_checked="false" android:state_enabled="true" />
+    <item android:drawable="@drawable/ic_tick_checked" android:state_checked="true" android:state_enabled="true" />
 </selector>

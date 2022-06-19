@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/dialog_copyright_author_avatar_image" android:layout_width="@dimen/newsfeed_copyright_image_size" android:layout_height="@dimen/newsfeed_copyright_image_size" app:roundAsCircle="true" />
-    <TextView android:gravity="center_horizontal" android:id="@id/dialog_copyright_author_name_text" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/VKUIText.Title1" />
-    <TextView android:gravity="center_horizontal" android:id="@id/dialog_copyright_source_text" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/VKUIText.Subhead2" />
-    <TextView android:textSize="16.0sp" android:id="@id/dialog_copyright_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="24.0dip" android:text="@string/newsfeed_copyright_open" style="@style/VKUIButton.Primary" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/dialog_copyright_author_avatar_image"
+        android:layout_width="@dimen/newsfeed_copyright_image_size"
+        android:layout_height="@dimen/newsfeed_copyright_image_size"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@id/dialog_copyright_author_name_text"
+        style="@style/VKUIText.Title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:gravity="center_horizontal"
+        android:paddingLeft="24.0dip"
+        android:paddingRight="24.0dip" />
+
+    <TextView
+        android:id="@id/dialog_copyright_source_text"
+        style="@style/VKUIText.Subhead2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:gravity="center_horizontal"
+        android:paddingLeft="24.0dip"
+        android:paddingRight="24.0dip" />
+
+    <TextView
+        android:id="@id/dialog_copyright_button"
+        style="@style/VKUIButton.Primary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/newsfeed_copyright_open"
+        android:textSize="16.0sp" />
 </LinearLayout>

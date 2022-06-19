@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="62.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="62.0dip"
+        android:clipToPadding="false" />
 </FrameLayout>

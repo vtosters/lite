@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="180.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:gravity="center" android:id="@id/photos_like_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/photos_like_block_title" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toBottomOf="@id/photo_likes_show_all" app:layout_constraintEnd_toStartOf="@id/photo_likes_show_all" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/photo_likes_show_all" style="@style/VKUIText.Title2" />
-    <TextView android:textSize="15.0sp" android:textColor="@color/accent_blue" android:gravity="center" android:id="@id/photo_likes_show_all" android:background="@drawable/highlight_radius_4" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/photos_like_show_all" android:lineSpacingExtra="5.0sp" android:fontFamily="@string/font_family_regular" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginEnd="4.0dip" android:letterSpacing="0.01" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/photos_like_recycler_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/photo_likes_show_all" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="180.0dip"
+    android:background="?background_content">
+
+    <TextView
+        android:id="@id/photos_like_title"
+        style="@style/VKUIText.Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:gravity="center"
+        android:text="@string/photos_like_block_title"
+        app:layout_constraintBottom_toBottomOf="@id/photo_likes_show_all"
+        app:layout_constraintEnd_toStartOf="@id/photo_likes_show_all"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/photo_likes_show_all" />
+
+    <TextView
+        android:id="@id/photo_likes_show_all"
+        android:layout_width="wrap_content"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:background="@drawable/highlight_radius_4"
+        android:fontFamily="@string/font_family_regular"
+        android:gravity="center"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="5.0sp"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="12.0dip"
+        android:text="@string/photos_like_show_all"
+        android:textColor="@color/accent_blue"
+        android:textSize="15.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/photos_like_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_likes_show_all" />
 </androidx.constraintlayout.widget.ConstraintLayout>

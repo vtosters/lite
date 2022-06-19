@@ -1,16 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:visibility="invisible" android:scrollbars="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="true" android:overScrollMode="never" />
-    <com.vk.im.ui.views.msg.MsgStickyDateView android:textSize="13.0sp" android:textColor="?im_service_message_text" android:layout_gravity="center|top" android:id="@id/msg_list_sticky_date" android:background="?im_bg_sticky_date" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:singleLine="true" android:fontFamily="@string/fontRobotoMedium" />
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
-    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <ImageView android:layout_gravity="center" android:id="@id/empty_chat_icon" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="12.0dip" android:src="@drawable/ic_blink_ghost_outline_56" android:tint="@color/steel_gray_300" android:importantForAccessibility="no" />
-        <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:layout_gravity="center_horizontal" android:id="@id/empty_title" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_msg_list_empty" android:fontFamily="@string/fontRobotoMedium" android:textAlignment="center" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
-        <TextView android:textSize="16.0sp" android:textColor="?text_placeholder" android:layout_gravity="center_horizontal" android:id="@id/empty_subtitle" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/vkim_msg_list_empty_subtitle" android:textAlignment="center" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fadeScrollbars="true"
+        android:overScrollMode="never"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:visibility="invisible" />
+
+    <com.vk.im.ui.views.msg.MsgStickyDateView
+        android:id="@id/msg_list_sticky_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="4.0dip"
+        android:background="?im_bg_sticky_date"
+        android:fontFamily="@string/fontRobotoMedium"
+        android:maxLines="1"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="4.0dip"
+        android:singleLine="true"
+        android:textColor="?im_service_message_text"
+        android:textSize="13.0sp" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/progress"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:matProg_barColor="?accent"
+        app:matProg_progressIndeterminate="true" />
+
+    <LinearLayout
+        android:id="@id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@id/empty_chat_icon"
+            android:layout_width="56.0dip"
+            android:layout_height="56.0dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_blink_ghost_outline_56"
+            android:tint="@color/steel_gray_300"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/empty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginEnd="32.0dip"
+            android:fontFamily="@string/fontRobotoMedium"
+            android:paddingLeft="8.0dip"
+            android:paddingTop="4.0dip"
+            android:paddingRight="8.0dip"
+            android:paddingBottom="4.0dip"
+            android:text="@string/vkim_msg_list_empty"
+            android:textAlignment="center"
+            android:textColor="?text_primary"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@id/empty_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="32.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginEnd="32.0dip"
+            android:paddingLeft="8.0dip"
+            android:paddingTop="4.0dip"
+            android:paddingRight="8.0dip"
+            android:paddingBottom="4.0dip"
+            android:text="@string/vkim_msg_list_empty_subtitle"
+            android:textAlignment="center"
+            android:textColor="?text_placeholder"
+            android:textSize="16.0sp" />
     </LinearLayout>
-    <FrameLayout android:layout_gravity="end|bottom|center" android:clipChildren="false" android:layout_width="66.0dip" android:layout_height="wrap_content">
-        <com.vk.im.ui.views.ScrollToBottomView android:id="@id/scroll_to_mention" android:visibility="invisible" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="68.0dip" app:vkim_stb_icon="@drawable/vkim_scroll_to_mention" style="@style/VkIm.ScrollToBottom" />
-        <com.vk.im.ui.views.ScrollToBottomView android:layout_gravity="bottom" android:id="@id/scroll_to_bottom" android:visibility="invisible" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="6.0dip" app:vkim_stb_icon="@drawable/vkim_scroll_to_bottom" style="@style/VkIm.ScrollToBottom" />
+
+    <FrameLayout
+        android:layout_width="66.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom|center"
+        android:clipChildren="false">
+
+        <com.vk.im.ui.views.ScrollToBottomView
+            android:id="@id/scroll_to_mention"
+            style="@style/VkIm.ScrollToBottom"
+            android:layout_width="56.0dip"
+            android:layout_height="56.0dip"
+            android:layout_marginBottom="68.0dip"
+            android:visibility="invisible"
+            app:vkim_stb_icon="@drawable/vkim_scroll_to_mention" />
+
+        <com.vk.im.ui.views.ScrollToBottomView
+            android:id="@id/scroll_to_bottom"
+            style="@style/VkIm.ScrollToBottom"
+            android:layout_width="56.0dip"
+            android:layout_height="56.0dip"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="6.0dip"
+            android:visibility="invisible"
+            app:vkim_stb_icon="@drawable/vkim_scroll_to_bottom" />
     </FrameLayout>
 </FrameLayout>

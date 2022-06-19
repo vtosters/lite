@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.vk.imageloader.view.VKImageView android:id="@id/group_cover" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:orientation="horizontal" app:viewAspectRatio="3.0" />
-        <View android:id="@id/profile_scrim1" android:background="@drawable/scrim_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="112.0dip" android:alpha="0.5" />
-        <View android:id="@id/profile_photo_overlay" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/group_cover" android:layout_alignBottom="@id/group_cover" android:alpha="0.0" app:theme="?actionBarTheme" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@id/group_cover"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:orientation="horizontal"
+            app:viewAspectRatio="3.0" />
+
+        <View
+            android:id="@id/profile_scrim1"
+            android:layout_width="fill_parent"
+            android:layout_height="112.0dip"
+            android:alpha="0.5"
+            android:background="@drawable/scrim_top"
+            android:visibility="gone" />
+
+        <View
+            android:id="@id/profile_photo_overlay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@id/group_cover"
+            android:layout_alignBottom="@id/group_cover"
+            android:alpha="0.0"
+            android:background="?header_background"
+            app:theme="?actionBarTheme" />
     </RelativeLayout>
+
     <include layout="@layout/community_head_avatar" />
-    <com.vk.profile.ui.components.HeaderActionButtons android:orientation="horizontal" android:id="@id/profile_buttons_wrap" android:paddingTop="4.0dip" android:paddingBottom="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="8.0dip" />
+
+    <com.vk.profile.ui.components.HeaderActionButtons
+        android:id="@id/profile_buttons_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingStart="16.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingEnd="8.0dip"
+        android:paddingBottom="12.0dip" />
 </merge>

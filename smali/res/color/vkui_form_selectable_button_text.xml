@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true" android:state_selected="true" android:color="?button_primary_foreground" />
-    <item android:state_enabled="true" android:color="?text_secondary" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="?button_primary_foreground" android:state_enabled="true" android:state_selected="true" />
+    <item android:color="?text_secondary" android:state_enabled="true" />
     <item android:color="?text_tertiary" />
 </selector>

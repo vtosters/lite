@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler" android:layout_width="fill_parent" android:layout_height="96.0dip" />
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/send_button" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="100.0dip">
-        <ImageView android:layout_gravity="center_vertical" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_gift_outline_20" android:tint="?accent" android:layout_marginEnd="9.0dip" />
-        <TextView android:textColor="?accent" android:ellipsize="end" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send_a_gift" android:lines="1" android:lineSpacingExtra="2.0dip" style="@style/VKUIText.Title2" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recycler"
+        android:layout_width="fill_parent"
+        android:layout_height="96.0dip" />
+
+    <LinearLayout
+        android:id="@id/send_button"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="100.0dip"
+        android:background="@drawable/highlight"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="9.0dip"
+            android:src="@drawable/ic_gift_outline_20"
+            android:tint="?accent" />
+
+        <TextView
+            android:id="@id/text"
+            style="@style/VKUIText.Title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2.0dip"
+            android:lines="1"
+            android:text="@string/send_a_gift"
+            android:textColor="?accent" />
     </LinearLayout>
 </FrameLayout>

@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="76.0dip" android:layout_height="80.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.im.ui.views.avatars.AvatarView android:id="@id/vkim_avatar" android:layout_width="52.0dip" android:layout_height="52.0dip" android:layout_marginTop="8.0dip" android:contentDescription="@string/vkim_accessibility_avatar" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/VkIm.AvatarView" />
-    <ImageView android:layout_gravity="end" android:id="@id/vkim_close_btn" android:background="?selectableItemBackgroundBorderless" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/ic_cancel_24_in_circle_bg_opaque" android:contentDescription="@string/accessibility_cancel" android:layout_marginEnd="3.0dip" />
-    <TextView android:textSize="12.0sp" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/vkim_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="76.0dip"
+    android:layout_height="80.0dip">
+
+    <com.vk.im.ui.views.avatars.AvatarView
+        android:id="@id/vkim_avatar"
+        style="@style/VkIm.AvatarView"
+        android:layout_width="52.0dip"
+        android:layout_height="52.0dip"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:contentDescription="@string/vkim_accessibility_avatar" />
+
+    <ImageView
+        android:id="@id/vkim_close_btn"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end"
+        android:layout_marginTop="1.0dip"
+        android:layout_marginEnd="3.0dip"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/accessibility_cancel"
+        android:src="@drawable/ic_cancel_24_in_circle_bg_opaque" />
+
+    <TextView
+        android:id="@id/vkim_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="?text_primary"
+        android:textSize="12.0sp" />
 </FrameLayout>

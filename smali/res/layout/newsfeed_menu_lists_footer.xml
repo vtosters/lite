@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="16.0sp" android:textColor="?accent" android:gravity="start|center" android:background="@drawable/highlight" android:layout_width="@dimen/newsfeed_menu_item_width" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/newsfeed_settings_menu_item" android:singleLine="true" android:paddingStart="20.0dip" android:paddingEnd="20.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/newsfeed_menu_item_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/highlight"
+    android:gravity="start|center"
+    android:minHeight="48.0dip"
+    android:paddingStart="20.0dip"
+    android:paddingEnd="20.0dip"
+    android:singleLine="true"
+    android:text="@string/newsfeed_settings_menu_item"
+    android:textColor="?accent"
+    android:textSize="16.0sp" />

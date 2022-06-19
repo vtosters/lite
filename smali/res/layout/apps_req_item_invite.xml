@@ -1,11 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/friend_req_photo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="11.0dip" android:layout_marginStart="@dimen/standard_list_item_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/user_placeholder" />
-    <TextView android:id="@id/friend_req_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" app:layout_constraintEnd_toStartOf="@id/app_icon" app:layout_constraintStart_toEndOf="@id/friend_req_photo" app:layout_constraintTop_toTopOf="parent" style="@style/GameText.Name" />
-    <TextView android:id="@id/friend_req_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_alignStart="@id/friend_req_name" app:layout_constraintEnd_toEndOf="@id/friend_req_name" app:layout_constraintStart_toStartOf="@id/friend_req_name" app:layout_constraintTop_toBottomOf="@id/friend_req_name" style="@style/GameText.ItemTitle" />
-    <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:id="@id/friend_req_date" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@id/friend_req_name" app:layout_constraintTop_toBottomOf="@id/friend_req_info" style="@style/GameText" />
-    <com.vk.imageloader.view.VKImageView android:id="@id/app_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="12.0dip" android:layout_marginEnd="@dimen/standard_list_item_padding" app:emptyImagePlaceholder="@drawable/placeholder_game_rounded" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/default_placeholder_10" app:roundedCornerRadius="10.0dip" />
-    <TextView android:id="@id/app_ok" android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:text="@string/games_play" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="@id/friend_req_name" app:layout_constraintTop_toBottomOf="@id/friend_req_date" style="@style/VKUIButton.Primary" />
-    <TextView android:id="@id/app_cancel" android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hide" android:layout_marginStart="8.0dip" app:layout_constraintStart_toEndOf="@id/app_ok" app:layout_constraintTop_toTopOf="@id/app_ok" style="@style/VKUIButton.Secondary" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/friend_req_photo"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="@dimen/standard_list_item_padding"
+        android:layout_marginTop="11.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/user_placeholder" />
+
+    <TextView
+        android:id="@id/friend_req_name"
+        style="@style/GameText.Name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="9.0dip"
+        android:layout_marginEnd="12.0dip"
+        app:layout_constraintEnd_toStartOf="@id/app_icon"
+        app:layout_constraintStart_toEndOf="@id/friend_req_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/friend_req_info"
+        style="@style/GameText.ItemTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/friend_req_name"
+        app:layout_constraintEnd_toEndOf="@id/friend_req_name"
+        app:layout_constraintStart_toStartOf="@id/friend_req_name"
+        app:layout_constraintTop_toBottomOf="@id/friend_req_name" />
+
+    <TextView
+        android:id="@id/friend_req_date"
+        style="@style/GameText"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:textColor="?text_secondary"
+        android:textSize="13.0sp"
+        app:layout_constraintStart_toStartOf="@id/friend_req_name"
+        app:layout_constraintTop_toBottomOf="@id/friend_req_info" />
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/app_icon"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="@dimen/standard_list_item_padding"
+        app:emptyImagePlaceholder="@drawable/placeholder_game_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/default_placeholder_10"
+        app:roundedCornerRadius="10.0dip" />
+
+    <TextView
+        android:id="@id/app_ok"
+        style="@style/VKUIButton.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="6.0dip"
+        android:text="@string/games_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/friend_req_name"
+        app:layout_constraintTop_toBottomOf="@id/friend_req_date" />
+
+    <TextView
+        android:id="@id/app_cancel"
+        style="@style/VKUIButton.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="6.0dip"
+        android:text="@string/hide"
+        app:layout_constraintStart_toEndOf="@id/app_ok"
+        app:layout_constraintTop_toTopOf="@id/app_ok" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?background_content" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.core.ui.AppBarLayoutWithDrawingOrderCallback android:id="@id/vkim_search_app_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?im_toolbar_addition_top_margin" android:elevation="0.0dip" app:elevation="0.0dip">
-        <FrameLayout android:id="@id/vkim_search_box" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.vk.core.view.search.MilkshakeSearchView android:id="@id/vkim_search_view" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?im_toolbar_search_style" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content"
+    android:visibility="invisible">
+
+    <com.vk.core.ui.AppBarLayoutWithDrawingOrderCallback
+        android:id="@id/vkim_search_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?im_toolbar_addition_top_margin"
+        android:background="@null"
+        android:elevation="0.0dip"
+        app:elevation="0.0dip">
+
+        <FrameLayout
+            android:id="@id/vkim_search_box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?header_background">
+
+            <com.vk.core.view.search.MilkshakeSearchView
+                android:id="@id/vkim_search_view"
+                style="?im_toolbar_search_style"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize" />
         </FrameLayout>
-        <com.vk.core.view.VKTabLayout android:id="@id/vkim_tabs" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="48.0dip" app:tabGravity="fill" app:tabIndicator="?tabBarIndicator" app:tabIndicatorColor="?header_tint" app:tabMode="fixed" app:tabPaddingEnd="16.0dip" app:tabPaddingStart="16.0dip" app:tabSelectedTextColor="?header_tab_active_text" app:tabTextAppearance="@style/TabBarTheme.TabTextAppearance" app:tabTextColor="?header_tab_inactive_text" />
+
+        <com.vk.core.view.VKTabLayout
+            android:id="@id/vkim_tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:background="?header_background"
+            app:tabGravity="fill"
+            app:tabIndicator="?tabBarIndicator"
+            app:tabIndicatorColor="?header_tint"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="16.0dip"
+            app:tabPaddingStart="16.0dip"
+            app:tabSelectedTextColor="?header_tab_active_text"
+            app:tabTextAppearance="@style/TabBarTheme.TabTextAppearance"
+            app:tabTextColor="?header_tab_inactive_text" />
     </com.vk.core.ui.AppBarLayoutWithDrawingOrderCallback>
-    <androidx.viewpager.widget.ViewPager android:id="@id/vkim_viewpager" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" app:appbar_forceMode="separator" style="@style/AppBarShadow" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/vkim_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?background_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow"
+        app:appbar_forceMode="separator" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/text_view" android:background="@drawable/bg_hashtag_search_font" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" android:letterSpacing="-0.02" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:background="@drawable/bg_hashtag_search_font"
+        android:gravity="center"
+        android:letterSpacing="-0.02"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
 </FrameLayout>

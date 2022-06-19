@@ -1,13 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal" android:id="@id/audio_attachment_artist_container" android:background="@drawable/attach_fb_overlay_6dp_corner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxWidth="480.0dip" android:minHeight="254.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
-        <com.vk.music.view.ThumbsImageView android:id="@id/audio_attachment_image" android:layout_width="fill_parent" android:layout_height="172.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/default_placeholder" app:tiv_background_image="?placeholder_icon_background" app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
-        <View android:background="@drawable/music_scrim_bottom_16percent" android:layout_width="0.0dip" android:layout_height="82.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/audio_attachment_image" />
-        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="?text_primary" android:gravity="center" android:id="@id/audio_attachment_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:layout_marginBottom="22.0dip" android:drawablePadding="4.0dip" app:fontFamily="@font/roboto_regular" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/audio_attachment_image" />
-        <ImageView android:id="@id/chevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:scaleType="centerInside" android:layout_marginStart="4.0dip" app:layout_constraintBottom_toBottomOf="@id/audio_attachment_title" app:layout_constraintStart_toEndOf="@id/audio_attachment_title" />
-        <View android:id="@id/audio_attachment_artist_overlay" android:background="@drawable/highlight_artist_post" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-        <com.vk.music.view.MusicActionButton android:id="@id/audio_attachment_artist_listen_btn" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginTop="150.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/audio_attachment_image" app:layout_constraintStart_toStartOf="@id/audio_attachment_image" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0" app:mab_icon="@drawable/ic_play_24" app:mab_text="@string/music_artist_listen_all_btn" style="@style/MusicActionButton.White" />
-        <ImageView android:id="@id/audio_attachment_artist_remove_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_attach_36" app:layout_constraintEnd_toEndOf="@id/audio_attachment_image" app:layout_constraintTop_toTopOf="@id/audio_attachment_image" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/audio_attachment_artist_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:background="@drawable/attach_fb_overlay_6dp_corner"
+        android:maxWidth="480.0dip"
+        android:minHeight="254.0dip">
+
+        <com.vk.music.view.ThumbsImageView
+            android:id="@id/audio_attachment_image"
+            android:layout_width="fill_parent"
+            android:layout_height="172.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderImage="@drawable/default_placeholder"
+            app:tiv_background_image="?placeholder_icon_background"
+            app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="82.0dip"
+            android:background="@drawable/music_scrim_bottom_16percent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/audio_attachment_image" />
+
+        <TextView
+            android:id="@id/audio_attachment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36.0dip"
+            android:layout_marginBottom="22.0dip"
+            android:drawablePadding="4.0dip"
+            android:gravity="center"
+            android:textColor="?text_primary"
+            android:textSize="20.0dip"
+            android:textStyle="bold"
+            app:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/audio_attachment_image" />
+
+        <ImageView
+            android:id="@id/chevron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@id/audio_attachment_title"
+            app:layout_constraintStart_toEndOf="@id/audio_attachment_title" />
+
+        <View
+            android:id="@id/audio_attachment_artist_overlay"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:background="@drawable/highlight_artist_post"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.vk.music.view.MusicActionButton
+            android:id="@id/audio_attachment_artist_listen_btn"
+            style="@style/MusicActionButton.White"
+            android:layout_width="wrap_content"
+            android:layout_height="56.0dip"
+            android:layout_marginTop="150.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/audio_attachment_image"
+            app:layout_constraintStart_toStartOf="@id/audio_attachment_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:mab_icon="@drawable/ic_play_24"
+            app:mab_text="@string/music_artist_listen_all_btn" />
+
+        <ImageView
+            android:id="@id/audio_attachment_artist_remove_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_attach_36"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/audio_attachment_image"
+            app:layout_constraintTop_toTopOf="@id/audio_attachment_image" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

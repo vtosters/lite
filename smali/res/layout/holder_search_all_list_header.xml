@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="40.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="13.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|bottom|center" android:id="@id/title" android:paddingLeft="@dimen/standard_list_item_padding" android:paddingRight="@dimen/standard_list_item_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:maxLines="1" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
-    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/clear" android:visibility="visible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_clear_circle" android:contentDescription="@string/accessibility_clear" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/header_container"
+    android:layout_width="fill_parent"
+    android:layout_height="40.0dip">
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom|center"
+        android:layout_marginBottom="9.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="start|center"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/standard_list_item_padding"
+        android:paddingRight="@dimen/standard_list_item_padding"
+        android:textAllCaps="true"
+        android:textColor="?text_subhead"
+        android:textSize="13.0sp" />
+
+    <ImageView
+        android:id="@id/clear"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end|bottom|center"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:contentDescription="@string/accessibility_clear"
+        android:src="@drawable/ic_clear_circle"
+        android:visibility="visible" />
 </FrameLayout>

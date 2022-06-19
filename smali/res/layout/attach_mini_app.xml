@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/attach_mini_app_wide" layout="@layout/attach_mini_app_wide" />
-    <include android:id="@id/attach_mini_app_square" layout="@layout/attach_mini_app_square" />
-    <ImageView android:layout_gravity="end|center|top" android:id="@id/mini_app_attach_remove_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:src="@drawable/ic_close_attach_36" android:contentDescription="@string/delete" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@id/attach_mini_app_wide"
+        layout="@layout/attach_mini_app_wide" />
+
+    <include
+        android:id="@id/attach_mini_app_square"
+        layout="@layout/attach_mini_app_square" />
+
+    <ImageView
+        android:id="@id/mini_app_attach_remove_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center|top"
+        android:layout_margin="8.0dip"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/ic_close_attach_36"
+        android:visibility="gone" />
 </FrameLayout>

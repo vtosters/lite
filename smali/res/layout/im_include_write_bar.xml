@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vtosters.lite.ui.WriteBar android:id="@id/write_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:audio_msg_allowed="true" />
-    <com.vk.im.ui.views.WriteBarDisabled android:id="@id/write_bar_disabled" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" />
-    <ViewStub android:id="@id/msg_request_container" android:layout="@layout/vkim_msg_send_msg_request" android:inflatedId="@id/msg_request_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.vtosters.lite.ui.WriteBar
+        android:id="@id/write_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:audio_msg_allowed="true" />
+
+    <com.vk.im.ui.views.WriteBarDisabled
+        android:id="@id/write_bar_disabled"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:visibility="gone" />
+
+    <ViewStub
+        android:id="@id/msg_request_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inflatedId="@id/msg_request_container"
+        android:layout="@layout/vkim_msg_send_msg_request" />
 </merge>

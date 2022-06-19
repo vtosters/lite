@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <AutoCompleteTextView android:textColor="?text_primary" android:id="@id/input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:popupBackground="@drawable/bg_modal_dialog" android:imeOptions="actionDone" android:backgroundTint="?field_border" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip">
+
+    <AutoCompleteTextView
+        android:id="@id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?field_border"
+        android:imeOptions="actionDone"
+        android:popupBackground="@drawable/bg_modal_dialog"
+        android:singleLine="true"
+        android:textColor="?text_primary" />
 </FrameLayout>

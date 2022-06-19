@@ -1,34 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:id="@id/scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <FrameLayout android:id="@id/account_info" android:background="@drawable/vkim_bg_contact_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip">
-            <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/account_info_progress" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
-            <LinearLayout android:gravity="center|top" android:layout_gravity="center" android:orientation="vertical" android:id="@id/account_info_content" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <com.vk.im.ui.views.avatars.AvatarView android:id="@id/avatar" android:layout_width="80.0dip" android:layout_height="80.0dip" style="@style/VkIm.AvatarView" />
-                <com.vk.core.widget.FluidHorizontalLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
-                    <TextView android:textColor="?header_text" android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" app:vk_layout_isFluid="true" style="@style/VkIm.Account.Name" />
-                    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_24" android:tint="?header_text" android:translationY="2.0dip" android:layout_marginStart="4.0dip" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@id/account_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vkim_bg_contact_header"
+            android:minHeight="200.0dip">
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@id/account_info_progress"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="center"
+                app:matProg_barColor="?accent"
+                app:matProg_progressIndeterminate="true" />
+
+            <LinearLayout
+                android:id="@id/account_info_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:padding="16.0dip">
+
+                <com.vk.im.ui.views.avatars.AvatarView
+                    android:id="@id/avatar"
+                    style="@style/VkIm.AvatarView"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip" />
+
+                <com.vk.core.widget.FluidHorizontalLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip">
+
+                    <TextView
+                        android:id="@id/name"
+                        style="@style/VkIm.Account.Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="?header_text"
+                        app:vk_layout_isFluid="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4.0dip"
+                        android:src="@drawable/ic_chevron_24"
+                        android:tint="?header_text"
+                        android:translationY="2.0dip" />
                 </com.vk.core.widget.FluidHorizontalLayout>
-                <TextView android:textColor="?text_placeholder" android:id="@id/screen_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" style="@style/VkIm.Account.Contact" />
-                <TextView android:textColor="?text_placeholder" android:id="@id/phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" style="@style/VkIm.Account.Contact" />
+
+                <TextView
+                    android:id="@id/screen_name"
+                    style="@style/VkIm.Account.Contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1.0dip"
+                    android:textColor="?text_placeholder" />
+
+                <TextView
+                    android:id="@id/phone"
+                    style="@style/VkIm.Account.Contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.0dip"
+                    android:textColor="?text_placeholder" />
             </LinearLayout>
         </FrameLayout>
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/calls" android:visibility="gone" app:vkim_icon="@drawable/ic_phone_outline_28" app:vkim_titleText="@string/vkim_settings_calls" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.DividerSettingsView android:visibility="gone" style="@style/VkIm.Settings.Divider" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/notifications" app:vkim_icon="@drawable/ic_notifications_outline_28" app:vkim_titleText="@string/vkim_settings_notifications" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/do_not_disturb" android:visibility="gone" app:vkim_icon="@drawable/ic_do_not_disturb_outline_28" app:vkim_titleText="@string/vkim_settings_do_not_disturb" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.DividerSettingsView android:visibility="gone" style="@style/VkIm.Settings.Divider" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/appearance" android:visibility="visible" app:vkim_icon="@drawable/ic_palette_outline_28" app:vkim_titleText="@string/vkim_settings_appearance" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/data" app:vkim_icon="@drawable/ic_data_im_outline_28" app:vkim_titleText="@string/vkim_settings_data" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/confidentiality" app:vkim_icon="@drawable/ic_lock_outline_28" app:vkim_titleText="@string/vkim_settings_confidentiality" style="@style/VkIm.Settings.Label.Normal" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/calls"
+            style="@style/VkIm.Settings.Label.Normal"
+            android:visibility="gone"
+            app:vkim_icon="@drawable/ic_phone_outline_28"
+            app:vkim_titleText="@string/vkim_settings_calls" />
+
+        <com.vk.im.ui.views.settings.DividerSettingsView
+            style="@style/VkIm.Settings.Divider"
+            android:visibility="gone" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/notifications"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_notifications_outline_28"
+            app:vkim_titleText="@string/vkim_settings_notifications" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/do_not_disturb"
+            style="@style/VkIm.Settings.Label.Normal"
+            android:visibility="gone"
+            app:vkim_icon="@drawable/ic_do_not_disturb_outline_28"
+            app:vkim_titleText="@string/vkim_settings_do_not_disturb" />
+
+        <com.vk.im.ui.views.settings.DividerSettingsView
+            style="@style/VkIm.Settings.Divider"
+            android:visibility="gone" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/appearance"
+            style="@style/VkIm.Settings.Label.Normal"
+            android:visibility="visible"
+            app:vkim_icon="@drawable/ic_palette_outline_28"
+            app:vkim_titleText="@string/vkim_settings_appearance" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/data"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_data_im_outline_28"
+            app:vkim_titleText="@string/vkim_settings_data" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/confidentiality"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_lock_outline_28"
+            app:vkim_titleText="@string/vkim_settings_confidentiality" />
+
         <com.vk.im.ui.views.settings.DividerSettingsView style="@style/VkIm.Settings.Divider" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkpay" app:vkim_icon="@drawable/ic_money_circle_outline_24" app:vkim_titleText="@string/vkim_settings_vkpay" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkapps" app:vkim_icon="@drawable/ic_services_outline_28" app:vkim_titleText="@string/vkim_settings_vkapps" style="@style/VkIm.Settings.Label.Normal" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/vkpay"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_money_circle_outline_24"
+            app:vkim_titleText="@string/vkim_settings_vkpay" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/vkapps"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_services_outline_28"
+            app:vkim_titleText="@string/vkim_settings_vkapps" />
+
         <com.vk.im.ui.views.settings.DividerSettingsView style="@style/VkIm.Settings.Divider" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/debug" app:vkim_icon="@drawable/ic_bug_24" app:vkim_titleText="@string/vkim_settings_debug" style="@style/VkIm.Settings.Label.Normal" />
-        <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/about_app" app:vkim_icon="@drawable/ic_about_outline_28" app:vkim_titleText="@string/vkim_settings_about_app" style="@style/VkIm.Settings.Label.Normal" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/debug"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_bug_24"
+            app:vkim_titleText="@string/vkim_settings_debug" />
+
+        <com.vk.im.ui.views.settings.LabelSettingsView
+            android:id="@id/about_app"
+            style="@style/VkIm.Settings.Label.Normal"
+            app:vkim_icon="@drawable/ic_about_outline_28"
+            app:vkim_titleText="@string/vkim_settings_about_app" />
+
         <com.vk.im.ui.views.settings.DividerSettingsView style="@style/VkIm.Settings.Divider" />
-        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/logout" android:background="@drawable/vkim_ripple_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:minHeight="48.0dip" android:text="@string/vkim_settings_logout" android:includeFontPadding="false" style="@style/VkIm.Settings.TitleWarning" />
+
+        <TextView
+            android:id="@id/logout"
+            style="@style/VkIm.Settings.TitleWarning"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12.0dip"
+            android:background="@drawable/vkim_ripple_dark"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minHeight="48.0dip"
+            android:text="@string/vkim_settings_logout" />
     </LinearLayout>
 </ScrollView>

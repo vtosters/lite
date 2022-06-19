@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false">
-        <bitmap android:src="@drawable/ic_done_24" android:tint="?header_tint" android:alpha="0.5" />
+        <bitmap android:alpha="0.5" android:src="@drawable/ic_done_24" android:tint="?header_tint" />
     </item>
     <item android:state_enabled="true">
         <bitmap android:src="@drawable/ic_done_24" android:tint="?header_tint" />

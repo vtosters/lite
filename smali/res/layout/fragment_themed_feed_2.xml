@@ -1,22 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/appkit_loader_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.NonBouncedAppBarLayout android:id="@id/appbar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <LinearLayout android:orientation="vertical" android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="1.0dip" app:layout_scrollFlags="enterAlways|scroll|snap">
-            <LinearLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
-                <include android:layout_gravity="center_vertical" android:id="@id/search_view" android:layout_width="0.0px" android:layout_height="?actionBarSize" android:layout_weight="1.0" layout="@layout/toolbar_modern_search_view" />
-                <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginEnd="4.0dip">
-                    <ImageView android:id="@id/iv_friends_search" android:background="@drawable/picker_white_ripple_unbounded" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_friend_add_24" android:scaleType="centerInside" android:tint="?header_tint" android:contentDescription="@string/accessibility_friends_search" />
-                    <include android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:layout_marginTop="4.0dip" android:layout_alignParentTop="true" android:layout_marginEnd="4.0dip" android:layout_alignParentEnd="true" layout="@layout/request_counter" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/appkit_loader_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.NonBouncedAppBarLayout
+        android:id="@id/appbar"
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null">
+
+        <LinearLayout
+            android:id="@id/toolbar_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:elevation="1.0dip"
+            android:orientation="vertical"
+            app:layout_scrollFlags="enterAlways|scroll|snap">
+
+            <LinearLayout
+                android:id="@id/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?header_background"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@id/search_view"
+                    layout="@layout/toolbar_modern_search_view"
+                    android:layout_width="0.0px"
+                    android:layout_height="?actionBarSize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0" />
+
+                <RelativeLayout
+                    android:layout_width="48.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="4.0dip">
+
+                    <ImageView
+                        android:id="@id/iv_friends_search"
+                        android:layout_width="48.0dip"
+                        android:layout_height="48.0dip"
+                        android:background="@drawable/picker_white_ripple_unbounded"
+                        android:contentDescription="@string/accessibility_friends_search"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_friend_add_24"
+                        android:tint="?header_tint" />
+
+                    <include
+                        layout="@layout/request_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/bottom_navigation_counter_height_outer"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_marginEnd="4.0dip" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.google.android.material.tabs.TabLayout android:id="@id/tabs" android:background="?background_content" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="56.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="?accent" app:tabIndicatorHeight="0.0dip" app:tabMinWidth="0.0dip" app:tabMode="scrollable" app:tabPaddingEnd="0.0dip" app:tabPaddingStart="0.0dip" />
-            <LinearLayout android:id="@id/toolbar_shadow" android:background="@drawable/bg_toolbar_shadow_dark" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip"
+                android:background="?background_content"
+                android:clipToPadding="false"
+                android:paddingStart="4.0dip"
+                android:paddingTop="4.0dip"
+                android:paddingEnd="4.0dip"
+                android:paddingBottom="4.0dip"
+                app:tabBackground="@drawable/highlight_toolbar"
+                app:tabIndicatorColor="?accent"
+                app:tabIndicatorHeight="0.0dip"
+                app:tabMinWidth="0.0dip"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="0.0dip"
+                app:tabPaddingStart="0.0dip" />
+
+            <LinearLayout
+                android:id="@id/toolbar_shadow"
+                android:layout_width="fill_parent"
+                android:layout_height="12.0dip"
+                android:background="@drawable/bg_toolbar_shadow_dark" />
         </FrameLayout>
     </com.google.android.material.appbar.NonBouncedAppBarLayout>
-    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.google.android.material.appbar.NonBouncedAppBarLayout$ScrollingViewBehavior">
-        <com.vk.common.view.disableable.DisableableViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="com.google.android.material.appbar.NonBouncedAppBarLayout$ScrollingViewBehavior">
+
+        <com.vk.common.view.disableable.DisableableViewPager
+            android:id="@id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
     </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

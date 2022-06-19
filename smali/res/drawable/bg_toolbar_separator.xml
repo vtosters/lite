@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:left="16.0dip" android:right="16.0dip">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="16.0dip"
+        android:right="16.0dip">
         <shape>
             <size android:height="@dimen/toolbar_separator_height" />
             <solid android:color="?separator_alpha" />

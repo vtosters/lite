@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container" android:background="@drawable/highlight_radius_8" android:paddingTop="10.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="2.0dip" android:paddingEnd="2.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/icon" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="2.0dip" app:layout_constraintBottom_toTopOf="@id/title" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:roundedCornerRadius="10.0dip" />
-    <TextView android:gravity="center" android:id="@id/title" android:layout_width="88.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="2" android:includeFontPadding="false" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/icon" style="@style/VKUIText.Text" />
-    <TextView android:textSize="11.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/counter" android:background="@drawable/superapp_counter_bg" android:paddingLeft="@dimen/bottom_navigation_counter_padding" android:paddingRight="@dimen/bottom_navigation_counter_padding" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:minWidth="@dimen/bottom_navigation_counter_height_outer" android:minHeight="@dimen/bottom_navigation_counter_height_outer" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" android:layout_marginEnd="16.0dip" app:layout_constraintEnd_toEndOf="@id/title" app:layout_constraintTop_toTopOf="parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/highlight_radius_8"
+    android:paddingStart="2.0dip"
+    android:paddingTop="10.0dip"
+    android:paddingEnd="2.0dip"
+    android:paddingBottom="12.0dip">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/icon"
+        android:layout_width="44.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="2.0dip"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="10.0dip" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Text"
+        android:layout_width="88.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+    <TextView
+        android:id="@id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bottom_navigation_counter_height_outer"
+        android:layout_marginEnd="16.0dip"
+        android:background="@drawable/superapp_counter_bg"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minWidth="@dimen/bottom_navigation_counter_height_outer"
+        android:minHeight="@dimen/bottom_navigation_counter_height_outer"
+        android:paddingLeft="@dimen/bottom_navigation_counter_padding"
+        android:paddingRight="@dimen/bottom_navigation_counter_padding"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="11.0sp"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

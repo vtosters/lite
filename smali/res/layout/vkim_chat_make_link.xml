@@ -1,15 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingTop="24.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:id="@id/vkim_link_hint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" android:paddingStart="@dimen/vkim_list_padding" android:paddingEnd="@dimen/vkim_list_padding" style="@style/VKUIText.Subhead1" />
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:paddingStart="@dimen/vkim_list_padding" android:paddingEnd="@dimen/vkim_list_padding">
-        <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/vkim_chat_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" />
-        <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vkim_progress" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingTop="24.0dip">
+
+    <TextView
+        android:id="@id/vkim_link_hint"
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/vkim_list_padding"
+        android:paddingEnd="@dimen/vkim_list_padding"
+        android:textColor="?text_subhead"
+        android:textSize="14.0sp" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:paddingStart="@dimen/vkim_list_padding"
+        android:paddingEnd="@dimen/vkim_list_padding">
+
+        <TextView
+            android:id="@id/vkim_chat_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:textColor="?text_primary"
+            android:textSize="16.0sp" />
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@id/vkim_progress"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:matProg_barColor="?accent"
+            app:matProg_progressIndeterminate="true" />
     </FrameLayout>
-    <com.vk.im.ui.views.settings.DividerSettingsView android:layout_marginTop="12.0dip" style="@style/VkIm.Settings.Divider" />
-    <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_share" app:vkim_icon="@drawable/ic_share_outline_28" app:vkim_titleText="@string/vkim_share" style="@style/VkIm.Settings.Label.Normal" />
-    <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_copy" app:vkim_icon="@drawable/ic_copy_outline_28" app:vkim_titleText="@string/vkim_copy_link" style="@style/VkIm.Settings.Label.Normal" />
-    <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_share_qr" app:vkim_icon="@drawable/ic_qr_outline_28" app:vkim_titleText="@string/vkim_chat_link_share_qr" style="@style/VkIm.Settings.Label.Normal" />
+
+    <com.vk.im.ui.views.settings.DividerSettingsView
+        style="@style/VkIm.Settings.Divider"
+        android:layout_marginTop="12.0dip" />
+
+    <com.vk.im.ui.views.settings.LabelSettingsView
+        android:id="@id/vkim_share"
+        style="@style/VkIm.Settings.Label.Normal"
+        app:vkim_icon="@drawable/ic_share_outline_28"
+        app:vkim_titleText="@string/vkim_share" />
+
+    <com.vk.im.ui.views.settings.LabelSettingsView
+        android:id="@id/vkim_copy"
+        style="@style/VkIm.Settings.Label.Normal"
+        app:vkim_icon="@drawable/ic_copy_outline_28"
+        app:vkim_titleText="@string/vkim_copy_link" />
+
+    <com.vk.im.ui.views.settings.LabelSettingsView
+        android:id="@id/vkim_share_qr"
+        style="@style/VkIm.Settings.Label.Normal"
+        app:vkim_icon="@drawable/ic_qr_outline_28"
+        app:vkim_titleText="@string/vkim_chat_link_share_qr" />
+
     <com.vk.im.ui.views.settings.DividerSettingsView style="@style/VkIm.Settings.Divider" />
-    <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_link_invalidate" app:vkim_icon="@drawable/ic_do_not_disturb_outline_28" app:vkim_titleText="@string/vkim_chat_link_invalidate" style="@style/VkIm.Settings.Label.Normal" />
+
+    <com.vk.im.ui.views.settings.LabelSettingsView
+        android:id="@id/vkim_link_invalidate"
+        style="@style/VkIm.Settings.Label.Normal"
+        app:vkim_icon="@drawable/ic_do_not_disturb_outline_28"
+        app:vkim_titleText="@string/vkim_chat_link_invalidate" />
 </LinearLayout>

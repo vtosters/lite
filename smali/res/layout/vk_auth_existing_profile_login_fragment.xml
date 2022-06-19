@@ -1,10 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="?vk_landing_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.auth.ui.VkAuthToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:navigationContentDescription="@string/vk_auth_accessibility_close" app:navigationIcon="@drawable/vk_ic_cancel_24" />
-    <com.vk.auth.ui.AuthCircleView android:id="@id/avatar" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginBottom="8.0dip" app:layout_constraintBottom_toTopOf="@id/name" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
-    <TextView android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" app:layout_constraintBottom_toTopOf="@id/not_my_account" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_goneMarginBottom="40.0dip" style="@style/VkAuth.ExchangeUserNameText" />
-    <TextView android:textSize="14.0sp" android:textColor="?vk_landing_tertiary_button_foreground" android:layout_gravity="center_horizontal" android:id="@id/not_my_account" android:background="@drawable/vk_auth_bg_landing_tertiary_btn_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="40.0dip" android:text="@string/vk_auth_sign_up_login_not_my_account" android:fontFamily="@font/vk_roboto_medium" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" app:layout_constraintBottom_toTopOf="@id/password_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_goneMarginBottom="0.0dip" />
-    <com.vk.auth.ui.VkSmartPasswordTextInputLayout android:id="@id/password_container" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/continue_btn" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" app:vk_action_button_content_description="@string/vk_auth_forgot_pass" app:vk_action_button_src="@drawable/vk_ic_help_outline_24" app:vk_edit_text_background="@drawable/vk_auth_bg_landing_edittext" app:vk_edit_text_hint="@string/vk_auth_password" app:vk_edit_text_layout="@layout/vk_auth_landing_password_edittext" />
-    <com.vk.auth.ui.VkLoadingButton android:textSize="16.0sp" android:id="@id/continue_btn" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="16.0dip" android:text="@string/vk_auth_log_in" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/password_container" style="@style/VkAuth.Button.Landing.Login" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?vk_landing_background"
+    android:fitsSystemWindows="true">
+
+    <com.vk.auth.ui.VkAuthToolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationContentDescription="@string/vk_auth_accessibility_close"
+        app:navigationIcon="@drawable/vk_ic_cancel_24" />
+
+    <com.vk.auth.ui.AuthCircleView
+        android:id="@id/avatar"
+        android:layout_width="64.0dip"
+        android:layout_height="64.0dip"
+        android:layout_marginBottom="8.0dip"
+        app:layout_constraintBottom_toTopOf="@id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@id/name"
+        style="@style/VkAuth.ExchangeUserNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2.0dip"
+        app:layout_constraintBottom_toTopOf="@id/not_my_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginBottom="40.0dip" />
+
+    <TextView
+        android:id="@id/not_my_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginBottom="40.0dip"
+        android:background="@drawable/vk_auth_bg_landing_tertiary_btn_small"
+        android:fontFamily="@font/vk_roboto_medium"
+        android:paddingStart="4.0dip"
+        android:paddingEnd="4.0dip"
+        android:text="@string/vk_auth_sign_up_login_not_my_account"
+        android:textColor="?vk_landing_tertiary_button_foreground"
+        android:textSize="14.0sp"
+        app:layout_constraintBottom_toTopOf="@id/password_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginBottom="0.0dip" />
+
+    <com.vk.auth.ui.VkSmartPasswordTextInputLayout
+        android:id="@id/password_container"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toTopOf="@id/continue_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:vk_action_button_content_description="@string/vk_auth_forgot_pass"
+        app:vk_action_button_src="@drawable/vk_ic_help_outline_24"
+        app:vk_edit_text_background="@drawable/vk_auth_bg_landing_edittext"
+        app:vk_edit_text_hint="@string/vk_auth_password"
+        app:vk_edit_text_layout="@layout/vk_auth_landing_password_edittext" />
+
+    <com.vk.auth.ui.VkLoadingButton
+        android:id="@id/continue_btn"
+        style="@style/VkAuth.Button.Landing.Login"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:text="@string/vk_auth_log_in"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_container" />
 </androidx.constraintlayout.widget.ConstraintLayout>

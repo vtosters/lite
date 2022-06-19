@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
             <solid android:color="#33000000" />
-            <size android:height="32.0dip" android:width="32.0dip" />
+            <size
+                android:width="32.0dip"
+                android:height="32.0dip" />
         </shape>
     </item>
     <item>
-        <bitmap android:gravity="center" android:src="@drawable/ic_reply_16" android:tint="@color/white"
-          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+            android:gravity="center"
+            android:src="@drawable/ic_reply_16"
+            android:tint="@color/white" />
     </item>
 </layer-list>

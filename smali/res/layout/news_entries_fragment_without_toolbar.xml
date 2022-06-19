@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.newsfeed.UsableRecyclerPaginatedView android:id="@id/rpb_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/toolbar_behavior_scrolling" />
-    <FrameLayout android:id="@id/scroll_shadow" android:background="@drawable/bg_toolbar_shadow_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.vk.newsfeed.UsableRecyclerPaginatedView
+        android:id="@id/rpb_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/toolbar_behavior_scrolling" />
+
+    <FrameLayout
+        android:id="@id/scroll_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toolbar_shadow_light"
+        android:visibility="gone" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

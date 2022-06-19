@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/newsfeed_newpost_add_item_header_height" android:baselineAligned="false" android:divider="@drawable/posting_attach_header_divider" android:showDividers="middle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/holder_add_document_from_gallery_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <com.vk.core.view.TintTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newsfeed_newpost_attach_documents_from_gallery" android:drawableLeft="@drawable/ic_gallery_24" android:drawableStart="@drawable/ic_gallery_24" style="@style/PostingAttachHeaderButton" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/newsfeed_newpost_add_item_header_height"
+    android:baselineAligned="false"
+    android:divider="@drawable/posting_attach_header_divider"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <FrameLayout
+        android:id="@id/holder_add_document_from_gallery_btn"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <com.vk.core.view.TintTextView
+            style="@style/PostingAttachHeaderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_gallery_24"
+            android:drawableLeft="@drawable/ic_gallery_24"
+            android:text="@string/newsfeed_newpost_attach_documents_from_gallery" />
     </FrameLayout>
-    <FrameLayout android:id="@id/holder_add_document_from_device_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <com.vk.core.view.TintTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newsfeed_newpost_attach_documents_from_device" android:drawableLeft="@drawable/ic_upload_24" android:drawableStart="@drawable/ic_upload_24" style="@style/PostingAttachHeaderButton" />
+
+    <FrameLayout
+        android:id="@id/holder_add_document_from_device_btn"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <com.vk.core.view.TintTextView
+            style="@style/PostingAttachHeaderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_upload_24"
+            android:drawableLeft="@drawable/ic_upload_24"
+            android:text="@string/newsfeed_newpost_attach_documents_from_device" />
     </FrameLayout>
 </LinearLayout>

@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <ripple android:color="?background_highlighted">
             <item>
                 <shape android:shape="oval">
-                    <size android:height="44.0dip" android:width="44.0dip" />
+                    <size
+                        android:width="44.0dip"
+                        android:height="44.0dip" />
                     <solid android:color="?field_background" />
                 </shape>
             </item>
         </ripple>
     </item>
     <item android:gravity="center">
-        <bitmap android:gravity="center" android:src="@drawable/ic_dropdown_outline_28" android:tint="?placeholder_icon_foreground_primary" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_dropdown_outline_28"
+            android:tint="?placeholder_icon_foreground_primary" />
     </item>
 </layer-list>

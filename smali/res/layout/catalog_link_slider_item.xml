@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/music_selectable_bg" android:paddingTop="2.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/icon" android:padding="2.0dip" android:layout_width="@dimen/catalog_link_small_slider_content_item_width" android:layout_height="@dimen/catalog_link_small_slider_content_item_height" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:actualImageScaleType="centerCrop" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/user_placeholder" app:roundAsCircle="true" app:roundingBorderColor="@color/black_alpha8" app:roundingBorderWidth="@dimen/catalog_border_width" />
-    <ImageView android:id="@id/icon_meta" android:layout_width="0.0dip" android:layout_height="24.0dip" android:src="@drawable/verified_16" android:scaleType="center" android:adjustViewBounds="true" android:contentDescription="@null" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="@id/icon" app:layout_constraintEnd_toEndOf="@id/icon" />
-    <TextView android:textAppearance="@string/fontRobotoRegular" android:textSize="12.0sp" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="1" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" app:layout_constrainedWidth="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/icon" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/music_selectable_bg"
+    android:paddingTop="2.0dip"
+    android:paddingBottom="8.0dip">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/icon"
+        android:layout_width="@dimen/catalog_link_small_slider_content_item_width"
+        android:layout_height="@dimen/catalog_link_small_slider_content_item_height"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:padding="2.0dip"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/user_placeholder"
+        app:roundAsCircle="true"
+        app:roundingBorderColor="@color/black_alpha8"
+        app:roundingBorderWidth="@dimen/catalog_border_width" />
+
+    <ImageView
+        android:id="@id/icon_meta"
+        android:layout_width="0.0dip"
+        android:layout_height="24.0dip"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/verified_16"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/icon"
+        app:layout_constraintEnd_toEndOf="@id/icon" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginEnd="2.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@string/fontRobotoRegular"
+        android:textColor="?text_primary"
+        android:textSize="12.0sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

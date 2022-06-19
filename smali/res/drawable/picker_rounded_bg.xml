@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:topLeftRadius="@dimen/picker_bg_radius" android:topRightRadius="@dimen/picker_bg_radius" />
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners
+        android:topLeftRadius="@dimen/picker_bg_radius"
+        android:topRightRadius="@dimen/picker_bg_radius" />
     <solid android:color="?background_keyboard" />
 </shape>

@@ -1,54 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="Primary" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Принять" style="@style/VKUIButton.Primary" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Принять" style="@style/VKUIButton.Primary" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16.0dip">
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:text="Primary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Принять" />
+
+        <TextView
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Принять" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Primary Rounded" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Отправить" style="@style/VKUIButton.Primary.Rounded" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Отправить" style="@style/VKUIButton.Primary.Rounded" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Primary Rounded" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Primary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Отправить" />
+
+        <TextView
+            style="@style/VKUIButton.Primary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Отправить" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Secondary" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Отклонить" style="@style/VKUIButton.Secondary" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Отклонить" style="@style/VKUIButton.Secondary" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Secondary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Отклонить" />
+
+        <TextView
+            style="@style/VKUIButton.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Отклонить" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Secondary Rounded" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Убрать" style="@style/VKUIButton.Secondary.Rounded" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Убрать" style="@style/VKUIButton.Secondary.Rounded" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Secondary Rounded" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Secondary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Убрать" />
+
+        <TextView
+            style="@style/VKUIButton.Secondary.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Убрать" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Muted" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Запросить" style="@style/VKUIButton.Muted" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Запросить" style="@style/VKUIButton.Muted" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Muted" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Muted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Запросить" />
+
+        <TextView
+            style="@style/VKUIButton.Muted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Запросить" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Muted Rounded" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Удалить" style="@style/VKUIButton.Muted.Rounded" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Удалить" style="@style/VKUIButton.Muted.Rounded" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Muted Rounded" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Muted.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Удалить" />
+
+        <TextView
+            style="@style/VKUIButton.Muted.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Удалить" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Tertiary" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Подробнее" style="@style/VKUIButton.Tertiary" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Подробнее" style="@style/VKUIButton.Tertiary" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Tertiary" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Подробнее" />
+
+        <TextView
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Подробнее" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Outline" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Купить" style="@style/VKUIButton.Outline" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Купить" style="@style/VKUIButton.Outline" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Outline" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Купить" />
+
+        <TextView
+            style="@style/VKUIButton.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Купить" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Commerce" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="9 голосов" style="@style/VKUIButton.Green" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9 голосов" style="@style/VKUIButton.Green" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Commerce" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/VKUIButton.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="9 голосов" />
+
+        <TextView
+            style="@style/VKUIButton.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="9 голосов" />
     </LinearLayout>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Media Overlay" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:orientation="horizontal" android:background="@color/black" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Слушать" style="@style/VKUIButton.MediaOverlay" />
-        <TextView android:enabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Слушать" style="@style/VKUIButton.MediaOverlay" />
+
+    <TextView
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="Media Overlay" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="8.0dip">
+
+        <TextView
+            style="@style/VKUIButton.MediaOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8.0dip"
+            android:clickable="true"
+            android:text="Слушать" />
+
+        <TextView
+            style="@style/VKUIButton.MediaOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Слушать" />
     </LinearLayout>
 </LinearLayout>

@@ -1,19 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:id="@id/video_ad_background" android:background="@color/gray_900" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.vk.media.player.video.view.VideoTextureView android:layout_gravity="center" android:id="@id/video_display" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.google.android.exoplayer2.ui.VKSubtitleView android:id="@id/video_subtitles" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <com.vk.libvideo.ad.VideoAdLayout android:layout_gravity="bottom" android:id="@id/video_ad_bottom_panel_view" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.vk.media.player.video.view.PreviewImageView android:layout_gravity="center" android:id="@id/video_cover" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <view android:layout_gravity="center" android:id="@id/video_scrim_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" class="com.vk.libvideo.ui.ScrimInsetsView" />
-    <view android:layout_gravity="center" android:id="@id/video_fast_seek_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.vk.libvideo.ui.VideoFastSeekView" />
-    <com.vk.libvideo.ui.PlayButton android:layout_gravity="center" android:id="@id/play_button" android:background="@drawable/highlight_video_play" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_shadow_96" android:scaleType="center" android:contentDescription="@string/video_accessibility_play" android:alpha="0.0" />
-    <me.zhanghai.android.materialprogressbar.MaterialProgressBar android:layout_gravity="center" android:id="@id/progress_view" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" app:mpb_indeterminateTint="@color/white" app:mpb_progressStyle="circular" />
-    <com.vk.libvideo.ui.VideoSeekView android:layout_gravity="bottom" android:id="@id/video_seek_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="48.0dip" android:alpha="0.0" />
-    <com.vk.libvideo.ui.VideoEndView android:gravity="center" android:layout_gravity="center" android:id="@id/video_end_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="110.0dip" android:alpha="0.0" />
-    <com.vk.libvideo.ui.VideoErrorView android:layout_gravity="center" android:id="@id/video_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0" />
-    <com.vk.libvideo.ui.ActionLinkView android:layout_gravity="start|bottom|center" android:id="@id/video_action_link_view" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="8.0dip" style="@style/VKUIButton.MediaOverlay8" />
-    <com.vk.core.view.VideoRestrictionView android:id="@id/media_deprecated_restriction_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.vk.libvideo.ui.VideoRestrictionView android:id="@id/media_restriction_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:vrv_always_show_button="true" app:vrv_mode="dark" app:vrv_size="medium" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@id/video_ad_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/gray_900"
+        android:visibility="gone" />
+
+    <com.vk.media.player.video.view.VideoTextureView
+        android:id="@id/video_display"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+    <com.google.android.exoplayer2.ui.VKSubtitleView
+        android:id="@id/video_subtitles"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.vk.libvideo.ad.VideoAdLayout
+        android:id="@id/video_ad_bottom_panel_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:fitsSystemWindows="true"
+        android:visibility="gone" />
+
+    <com.vk.media.player.video.view.PreviewImageView
+        android:id="@id/video_cover"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <view
+        android:id="@id/video_scrim_view"
+        class="com.vk.libvideo.ui.ScrimInsetsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.0"
+        android:visibility="gone" />
+
+    <view
+        android:id="@id/video_fast_seek_view"
+        class="com.vk.libvideo.ui.VideoFastSeekView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <com.vk.libvideo.ui.PlayButton
+        android:id="@id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.0"
+        android:background="@drawable/highlight_video_play"
+        android:clickable="true"
+        android:contentDescription="@string/video_accessibility_play"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_play_shadow_96"
+        android:visibility="gone" />
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@id/progress_view"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:mpb_indeterminateTint="@color/white"
+        app:mpb_progressStyle="circular" />
+
+    <com.vk.libvideo.ui.VideoSeekView
+        android:id="@id/video_seek_view"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:layout_gravity="bottom"
+        android:alpha="0.0"
+        android:visibility="invisible" />
+
+    <com.vk.libvideo.ui.VideoEndView
+        android:id="@id/video_end_view"
+        android:layout_width="wrap_content"
+        android:layout_height="110.0dip"
+        android:layout_gravity="center"
+        android:alpha="0.0"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <com.vk.libvideo.ui.VideoErrorView
+        android:id="@id/video_error_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.0"
+        android:visibility="gone" />
+
+    <com.vk.libvideo.ui.ActionLinkView
+        android:id="@id/video_action_link_view"
+        style="@style/VKUIButton.MediaOverlay8"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:layout_gravity="start|bottom|center"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:paddingLeft="0.0dip"
+        android:paddingRight="0.0dip"
+        android:visibility="gone" />
+
+    <com.vk.core.view.VideoRestrictionView
+        android:id="@id/media_deprecated_restriction_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <com.vk.libvideo.ui.VideoRestrictionView
+        android:id="@id/media_restriction_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        app:vrv_always_show_button="true"
+        app:vrv_mode="dark"
+        app:vrv_size="medium" />
 </merge>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="?accent" />
-    <corners android:bottomLeftRadius="@dimen/music_no_more_options_radius" android:bottomRightRadius="@dimen/music_no_more_options_radius" />
+    <corners
+        android:bottomLeftRadius="@dimen/music_no_more_options_radius"
+        android:bottomRightRadius="@dimen/music_no_more_options_radius" />
 </shape>

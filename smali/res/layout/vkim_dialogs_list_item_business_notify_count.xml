@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="?accent" android:ellipsize="end" android:gravity="start|center" android:id="@id/business_notify_count" android:background="@drawable/vkim_ripple_dark" android:layout_width="fill_parent" android:layout_height="64.0dip" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="@string/fontRobotoRegular" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@id/business_notify_count"
+        android:layout_width="fill_parent"
+        android:layout_height="64.0dip"
+        android:background="@drawable/vkim_ripple_dark"
+        android:ellipsize="end"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:gravity="start|center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingStart="16.0dip"
+        android:paddingEnd="16.0dip"
+        android:textColor="?accent"
+        android:textSize="16.0sp" />
 </FrameLayout>

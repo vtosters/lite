@@ -1,11 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_gravity="center_horizontal" android:id="@id/milkshake_onboarding_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:importantForAccessibility="no" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" />
-        <com.vk.imageloader.view.VKImageView android:id="@id/milkshake_onboarding_banner" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" android:importantForAccessibility="no" app:actualImageScaleType="centerCrop" app:roundBottomLeft="false" app:roundBottomRight="false" app:roundTopLeft="true" app:roundTopRight="true" app:roundedCornerRadius="8.0dip" app:viewAspectRatio="2.0" />
-        <TextView android:textSize="24.0sp" android:textColor="?text_primary" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/milkshake_onboarding_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:fontFamily="@font/tt_commons_demi_bold" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" android:letterSpacing="0.015" style="@style/VKUIText.Title1" />
-        <TextView android:textColor="?text_subhead" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/milkshake_onboarding_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/VKUIText.Headline" />
-        <Button android:textSize="15.0dip" android:layout_gravity="center_horizontal" android:id="@id/milkshake_onboarding_btn" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="28.0dip" android:layout_marginBottom="24.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/VKUIButton.Primary.Flat" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@id/milkshake_onboarding_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginTop="24.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:importantForAccessibility="no" />
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@id/milkshake_onboarding_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:actualImageScaleType="centerCrop"
+            app:roundBottomLeft="false"
+            app:roundBottomRight="false"
+            app:roundTopLeft="true"
+            app:roundTopRight="true"
+            app:roundedCornerRadius="8.0dip"
+            app:viewAspectRatio="2.0" />
+
+        <TextView
+            android:id="@id/milkshake_onboarding_title"
+            style="@style/VKUIText.Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:fontFamily="@font/tt_commons_demi_bold"
+            android:gravity="center"
+            android:letterSpacing="0.015"
+            android:textColor="?text_primary"
+            android:textSize="24.0sp" />
+
+        <TextView
+            android:id="@id/milkshake_onboarding_description"
+            style="@style/VKUIText.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:gravity="center"
+            android:textColor="?text_subhead" />
+
+        <Button
+            android:id="@id/milkshake_onboarding_btn"
+            style="@style/VKUIButton.Primary.Flat"
+            android:layout_width="wrap_content"
+            android:layout_height="36.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="24.0dip"
+            android:layout_marginTop="28.0dip"
+            android:layout_marginEnd="24.0dip"
+            android:layout_marginBottom="24.0dip"
+            android:textSize="15.0dip" />
     </LinearLayout>
 </ScrollView>

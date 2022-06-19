@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginTop="8.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_vertical" android:id="@id/photo" android:layout_width="24.0dip" android:layout_height="24.0dip" />
-    <TextView android:textSize="14.0dip" android:textStyle="normal" android:textColor="@color/blue_600" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:drawablePadding="6.0dip" android:layout_weight="1.0" android:lineSpacingExtra="4.0sp" android:layout_marginStart="8.0dip" android:letterSpacing="0.01" app:fontFamily="@font/roboto_medium" />
-    <TextView android:textSize="13.0dip" android:textStyle="normal" android:textColor="@color/gray_400" android:layout_gravity="center_vertical" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="3.0sp" android:layout_marginStart="6.0dip" android:letterSpacing="0.01" app:fontFamily="@font/roboto_regular" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="32.0dip"
+    android:layout_marginStart="12.0dip"
+    android:layout_marginTop="8.0dip"
+    android:layout_marginEnd="12.0dip"
+    android:orientation="horizontal">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@id/name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8.0dip"
+        android:layout_weight="1.0"
+        android:drawablePadding="6.0dip"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="4.0sp"
+        android:singleLine="true"
+        android:textColor="@color/blue_600"
+        android:textSize="14.0dip"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_medium" />
+
+    <TextView
+        android:id="@id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="6.0dip"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="3.0sp"
+        android:singleLine="true"
+        android:textColor="@color/gray_400"
+        android:textSize="13.0dip"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_regular" />
 </LinearLayout>

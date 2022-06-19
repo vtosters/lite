@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vtosters.lite.ui.refreshlayout.BottomSwipeRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/content_wrap" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <me.grishka.appkit.views.UsableRecyclerView android:id="@id/list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <include android:id="@id/empty" layout="@layout/appkit_empty" />
+<com.vtosters.lite.ui.refreshlayout.BottomSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/refresh_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@id/content_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <me.grishka.appkit.views.UsableRecyclerView
+            android:id="@id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+        <include
+            android:id="@id/empty"
+            layout="@layout/appkit_empty" />
     </FrameLayout>
 </com.vtosters.lite.ui.refreshlayout.BottomSwipeRefreshLayout>

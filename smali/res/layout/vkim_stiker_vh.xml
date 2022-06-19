@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/sticker_bar_cl" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.stickers.views.VKStickerImageView android:layout_gravity="center" android:id="@id/sticker_image" android:layout_width="@dimen/sticker_suggest_size" android:layout_height="@dimen/sticker_suggest_size" />
-    <com.vk.stickers.views.animation.VKAnimationView android:layout_gravity="center" android:id="@id/animated_sticker" android:layout_width="@dimen/sticker_suggest_size" android:layout_height="@dimen/sticker_suggest_size" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/sticker_bar_cl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.vk.stickers.views.VKStickerImageView
+        android:id="@id/sticker_image"
+        android:layout_width="@dimen/sticker_suggest_size"
+        android:layout_height="@dimen/sticker_suggest_size"
+        android:layout_gravity="center" />
+
+    <com.vk.stickers.views.animation.VKAnimationView
+        android:id="@id/animated_sticker"
+        android:layout_width="@dimen/sticker_suggest_size"
+        android:layout_height="@dimen/sticker_suggest_size"
+        android:layout_gravity="center" />
 </FrameLayout>

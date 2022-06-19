@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:top="4.0dip">
-        <bitmap android:src="@drawable/ic_toolbar_spinner_arrow" android:tint="?header_tint" />
+        <bitmap
+            android:src="@drawable/ic_toolbar_spinner_arrow"
+            android:tint="?header_tint" />
     </item>
 </layer-list>

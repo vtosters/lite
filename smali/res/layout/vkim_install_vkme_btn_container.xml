@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="bottom" android:id="@id/install_vk_me_btn" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/primary_button" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="?background_content">
+
+    <TextView
+        android:id="@id/install_vk_me_btn"
+        style="@style/primary_button"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
 </FrameLayout>

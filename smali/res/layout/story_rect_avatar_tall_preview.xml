@@ -1,17 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/iv_story_image" android:layout_width="fill_parent" android:layout_height="fill_parent" app:placeholderImage="@drawable/bg_story_add_item_bordered_4dp" app:placeholderImageScaleType="fitCenter" />
-    <View android:layout_gravity="bottom" android:id="@id/gradient" android:background="@color/black" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.28" />
-    <View android:layout_gravity="bottom" android:id="@id/seen_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <FrameLayout android:layout_gravity="bottom|center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginBottom="56.0dip">
-        <com.vk.stories.view.StoryCircleImageView android:layout_gravity="bottom|center" android:id="@id/story_author_photo" android:layout_width="48.0dip" android:layout_height="48.0dip" app:vk_border="@drawable/ic_avatar_border_48" app:vk_borderTint="@color/sky_300" app:vk_failBorder="@drawable/avatar_border_error_48" app:vk_liveBorder="@drawable/ic_avatar_border_live_48" app:vk_promoBorder="stories_animation_48.json" />
-        <com.vk.stories.view.ClippedImageView android:layout_gravity="center" android:id="@id/current_user_photo" android:layout_width="40.0dip" android:layout_height="40.0dip" app:placeholderImage="@drawable/user_placeholder" app:placeholderImageScaleType="fitCenter" />
-        <View android:layout_gravity="end|bottom|center" android:id="@id/add" android:background="@drawable/bg_add_icon_22dp" android:layout_width="22.0dip" android:layout_height="22.0dip" />
-        <com.vk.libvideo.live.widgets.LiveShine android:layout_gravity="end|bottom|center" android:id="@id/fl_story_live_shine" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="14.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_badge_live_20" android:layout_marginEnd="-2.0dip" app:shine_clipRadius="5.0dip" />
-        <View android:layout_gravity="end|bottom|center" android:id="@id/live_icon" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginBottom="3.0dip" android:layout_marginEnd="3.0dip" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/iv_story_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:placeholderImage="@drawable/bg_story_add_item_bordered_4dp"
+        app:placeholderImageScaleType="fitCenter" />
+
+    <View
+        android:id="@id/gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:alpha="0.28"
+        android:background="@color/black"
+        android:visibility="visible" />
+
+    <View
+        android:id="@id/seen_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom" />
+
+    <FrameLayout
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="56.0dip">
+
+        <com.vk.stories.view.StoryCircleImageView
+            android:id="@id/story_author_photo"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_gravity="bottom|center"
+            app:vk_border="@drawable/ic_avatar_border_48"
+            app:vk_borderTint="@color/sky_300"
+            app:vk_failBorder="@drawable/avatar_border_error_48"
+            app:vk_liveBorder="@drawable/ic_avatar_border_live_48"
+            app:vk_promoBorder="stories_animation_48.json" />
+
+        <com.vk.stories.view.ClippedImageView
+            android:id="@id/current_user_photo"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center"
+            app:placeholderImage="@drawable/user_placeholder"
+            app:placeholderImageScaleType="fitCenter" />
+
+        <View
+            android:id="@id/add"
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="end|bottom|center"
+            android:background="@drawable/bg_add_icon_22dp" />
+
+        <com.vk.libvideo.live.widgets.LiveShine
+            android:id="@id/fl_story_live_shine"
+            android:layout_width="28.0dip"
+            android:layout_height="14.0dip"
+            android:layout_gravity="end|bottom|center"
+            android:layout_marginEnd="-2.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:src="@drawable/ic_badge_live_20"
+            android:visibility="gone"
+            app:shine_clipRadius="5.0dip" />
+
+        <View
+            android:id="@id/live_icon"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_gravity="end|bottom|center"
+            android:layout_marginEnd="3.0dip"
+            android:layout_marginBottom="3.0dip"
+            android:visibility="gone" />
     </FrameLayout>
-    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_first_name" android:paddingLeft="6.0dip" android:paddingTop="1.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="28.0dip" android:minHeight="18.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" android:hyphenationFrequency="none" />
-    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_second_name" android:paddingLeft="6.0dip" android:paddingTop="1.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:minHeight="18.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" android:hyphenationFrequency="none" />
-    <View android:id="@id/click_handler" android:background="@drawable/highlight_radius_4" android:layout_width="@dimen/story_tall_preview_rect_width" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@id/tv_first_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="28.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:hyphenationFrequency="none"
+        android:includeFontPadding="false"
+        android:minHeight="18.0dip"
+        android:paddingLeft="6.0dip"
+        android:paddingTop="1.0dip"
+        android:paddingRight="6.0dip"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@id/tv_second_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:hyphenationFrequency="none"
+        android:includeFontPadding="false"
+        android:minHeight="18.0dip"
+        android:paddingLeft="6.0dip"
+        android:paddingTop="1.0dip"
+        android:paddingRight="6.0dip"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="14.0sp" />
+
+    <View
+        android:id="@id/click_handler"
+        android:layout_width="@dimen/story_tall_preview_rect_width"
+        android:layout_height="fill_parent"
+        android:background="@drawable/highlight_radius_4"
+        android:importantForAccessibility="no" />
 </merge>

@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="@dimen/poll_bg_view_holder_width" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/poll_background_small_image" android:layout_width="@dimen/poll_bg_view_holder_width" android:layout_height="@dimen/poll_bg_small_height" />
-    <com.vk.im.ui.views.ColorProgressBar android:layout_gravity="center|top" android:id="@id/poll_upload_progress" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="10.0dip" android:indeterminate="false" android:indeterminateOnly="false" android:color="@color/white" />
-    <androidx.appcompat.widget.AppCompatCheckBox android:layout_gravity="bottom|center" android:id="@id/poll_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="66.0dip" android:layout_marginBottom="4.0dip" android:importantForAccessibility="no" style="@android:style/Widget.CompoundButton.RadioButton" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/poll_bg_view_holder_width"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@id/poll_background_small_image"
+        android:layout_width="@dimen/poll_bg_view_holder_width"
+        android:layout_height="@dimen/poll_bg_small_height" />
+
+    <com.vk.im.ui.views.ColorProgressBar
+        android:id="@id/poll_upload_progress"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="10.0dip"
+        android:color="@color/white"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@id/poll_checkbox"
+        style="@android:style/Widget.CompoundButton.RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="66.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:importantForAccessibility="no" />
 </FrameLayout>

@@ -220,7 +220,7 @@
     <string name="already_have_account">Already have an account?</string>
     <string name="already_logged_in">You already have a VK account on this device. If you wish to log in with another account, log out from the current one first.</string>
     <string name="already_registered">Already registered?</string>
-    <item type="string" name="ampm_circle_radius_multiplier">0.19</item>
+    <item name="ampm_circle_radius_multiplier" type="string">0.19</item>
     <string name="api_method_cant_be_empty">"Api method can't be empty or null"</string>
     <string name="app_install">Install</string>
     <string name="app_launch">Launch</string>
@@ -451,8 +451,8 @@ no results"</string>
     <string name="check_in_title">Where you are?</string>
     <string name="checked_in">Checked in</string>
     <string name="choose">Choose</string>
-    <item type="string" name="circle_radius_multiplier">0.82</item>
-    <item type="string" name="circle_radius_multiplier_24HourMode">0.85</item>
+    <item name="circle_radius_multiplier" type="string">0.82</item>
+    <item name="circle_radius_multiplier_24HourMode" type="string">0.85</item>
     <string name="clear">Clear</string>
     <string name="clear_audio_cache_confirm">Are you sure you want to delete all saved audio files?</string>
     <string name="clear_input">Clear input field</string>
@@ -2544,9 +2544,9 @@ will be stored here"</string>
     <string name="ntf_two_users_c">and</string>
     <string name="ntf_upcoming_event">Will take place %s</string>
     <string name="ntf_upcoming_event_ticker">%1$s will take place %2$s</string>
-    <item type="string" name="numbers_radius_multiplier_inner">0.6</item>
-    <item type="string" name="numbers_radius_multiplier_normal">0.81</item>
-    <item type="string" name="numbers_radius_multiplier_outer">0.83</item>
+    <item name="numbers_radius_multiplier_inner" type="string">0.6</item>
+    <item name="numbers_radius_multiplier_normal" type="string">0.81</item>
+    <item name="numbers_radius_multiplier_outer" type="string">0.83</item>
     <string name="off">Off</string>
     <string name="offline">offline</string>
     <string name="ok">OK</string>
@@ -3373,7 +3373,7 @@ the VK camera"</string>
     <string name="select_year">Select year</string>
     <string name="selected">Selected</string>
     <string name="selected_n">%,d selected</string>
-    <item type="string" name="selection_radius_multiplier">0.16</item>
+    <item name="selection_radius_multiplier" type="string">0.16</item>
     <string name="send">Send</string>
     <string name="send_a_gift">Send a gift</string>
     <string name="send_b">Send</string>
@@ -3642,7 +3642,7 @@ photo"</string>
     <string name="social_graph_pick_avatar_title">Upload a Photo</string>
     <string name="social_graph_skip">Skip</string>
     <string name="social_graph_twitter">Twitter</string>
-    <item type="string" name="spb_default_speed">1.0</item>
+    <item name="spb_default_speed" type="string">1.0</item>
     <string name="special_event_support">Sponsored by</string>
     <string name="sponsored_post">Promoted post</string>
     <string name="sponsored_post_in_group">Promoted post</string>
@@ -4125,9 +4125,9 @@ photo"</string>
     <string name="temporary_closed">Temporarily closed</string>
     <string name="text">Text</string>
     <string name="text_copied">Text copied to clipboard</string>
-    <item type="string" name="text_size_multiplier_inner">0.14</item>
-    <item type="string" name="text_size_multiplier_normal">0.17</item>
-    <item type="string" name="text_size_multiplier_outer">0.11</item>
+    <item name="text_size_multiplier_inner" type="string">0.14</item>
+    <item name="text_size_multiplier_normal" type="string">0.17</item>
+    <item name="text_size_multiplier_outer" type="string">0.11</item>
     <string name="this_profile_is_closed">This is a private profile</string>
     <string name="time_placeholder">--</string>
     <string name="time_separator">:</string>

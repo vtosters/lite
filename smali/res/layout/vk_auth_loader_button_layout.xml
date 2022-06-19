@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.auth.ui.VkAuthTextView android:textSize="16.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/vk_loading_btn_textView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/vk_roboto_medium" />
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vk_loading_btn_progress" android:visibility="invisible" android:layout_width="28.0dip" android:layout_height="28.0dip" app:matProg_barColor="?vk_landing_primary_button_foreground" app:matProg_barWidth="2.0dip" app:matProg_progressIndeterminate="true" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/vk_loading_btn_textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/vk_roboto_medium"
+        android:gravity="center"
+        android:textSize="16.0sp" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/vk_loading_btn_progress"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:matProg_barColor="?vk_landing_primary_button_foreground"
+        app:matProg_barWidth="2.0dip"
+        app:matProg_progressIndeterminate="true" />
 </merge>

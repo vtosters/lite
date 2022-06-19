@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:background="@drawable/bg_image_placeholder_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_add_outline_28" android:scaleType="center" android:tint="?accent" android:layout_marginStart="16.0dip" android:backgroundTint="?content_tint_background" />
-    <TextView android:textSize="16.0sp" android:textColor="?accent" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/community_create_chat" android:fontFamily="@font/roboto_regular" android:layout_marginStart="76.0dip" android:layout_marginEnd="16.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/highlight">
+
+    <ImageView
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="6.0dip"
+        android:background="@drawable/bg_image_placeholder_circle"
+        android:backgroundTint="?content_tint_background"
+        android:scaleType="center"
+        android:src="@drawable/ic_add_outline_28"
+        android:tint="?accent" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="76.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/community_create_chat"
+        android:textColor="?accent"
+        android:textSize="16.0sp" />
 </FrameLayout>

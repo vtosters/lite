@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout android:id="@id/vk_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.vk.core.view.FixAppBarLayoutBehavior" style="@style/VKAppBar"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:contentInsetEnd="8.0dip" app:contentInsetEndWithActions="0.0dip" app:contentInsetStart="12.0dip" app:contentInsetStartWithNavigation="12.0dip" app:layout_scrollFlags="enterAlways" app:logo="@null" app:navigationContentDescription="@string/vkim_accessibility_toolbar_back_exit" app:navigationIcon="@null" app:subtitle="@null" app:title="@null" app:titleMarginStart="0.0dip" style="@style/VkIm.Toolbar.Style">
-        <include android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/catalog_toolbar_content" />
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/vk_app_bar"
+    style="@style/VKAppBar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.vk.core.view.FixAppBarLayoutBehavior">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        style="@style/VkIm.Toolbar.Style"
+        app:contentInsetEnd="8.0dip"
+        app:contentInsetEndWithActions="0.0dip"
+        app:contentInsetStart="12.0dip"
+        app:contentInsetStartWithNavigation="12.0dip"
+        app:layout_scrollFlags="enterAlways"
+        app:logo="@null"
+        app:navigationContentDescription="@string/vkim_accessibility_toolbar_back_exit"
+        app:navigationIcon="@null"
+        app:subtitle="@null"
+        app:title="@null"
+        app:titleMarginStart="0.0dip">
+
+        <include
+            android:id="@id/content"
+            layout="@layout/catalog_toolbar_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </androidx.appcompat.widget.Toolbar>
 </com.google.android.material.appbar.AppBarLayout>

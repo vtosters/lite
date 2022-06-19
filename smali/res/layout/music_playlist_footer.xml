@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textStyle="normal" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/playlist_footer" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:maxLines="2" android:textAlignment="center" app:fontFamily="@font/roboto_regular" style="@style/MusicTextStyle"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/playlist_footer"
+    style="@style/MusicTextStyle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:minHeight="48.0dip"
+    android:padding="16.0dip"
+    android:textAlignment="center"
+    android:textColor="?text_secondary"
+    android:textStyle="normal"
+    app:fontFamily="@font/roboto_regular" />

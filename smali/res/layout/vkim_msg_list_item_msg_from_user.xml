@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.widget.BubbleFluidLayout android:id="@id/fhl" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:vk_order="normal"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.im.ui.views.avatars.AvatarView android:layout_gravity="top" android:id="@id/avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="?im_msg_avatar_margin_top" style="@style/VkIm.AvatarView" />
-    <Space android:layout_gravity="top" android:id="@id/avatar_space" android:layout_width="32.0dip" android:layout_height="0.0dip" android:layout_marginTop="?im_msg_avatar_margin_top" />
-    <com.vk.im.ui.views.msg.bubble.MsgBubbleView android:id="@id/bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" app:vk_layout_isFluid="true" app:vkim_contentFitAllWidth="false" app:vkim_contentPaddingBottom="0.0dip" app:vkim_contentPaddingLeft="0.0dip" app:vkim_contentPaddingRight="0.0dip" app:vkim_contentPaddingTop="0.0dip" app:vkim_fwdNestLevel="0" app:vkim_fwdNestLineColor="?im_forward_line_tint" app:vkim_fwdNestLineSpace="4.0dip" app:vkim_fwdNestLineWidth="2.0dip" app:vkim_fwdPaddingBottom="0.0dip" app:vkim_fwdPaddingLeft="0.0dip" app:vkim_fwdPaddingRight="0.0dip" app:vkim_fwdPaddingTop="0.0dip" />
-    <com.vk.im.ui.components.viewcontrollers.msg_list.BombView android:layout_gravity="bottom" android:id="@id/bomb" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30.0dip" app:bv_accentColor="?destructive" app:bv_normalColor="?text_secondary" app:vk_layout_isExpandable="true" />
-    <ImageView android:layout_gravity="bottom" android:id="@id/vkim_channel_share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_share_outline_24" android:contentDescription="@string/vkim_accessibility_share_msg" android:translationX="-4.0dip" android:translationY="-8.0dip" android:layout_marginStart="4.0dip" />
-    <com.vk.im.ui.views.msg.MsgStatusView android:layout_gravity="bottom" android:id="@id/status" android:layout_width="28.0dip" android:layout_height="21.0sp" android:translationY="-11.0dip" />
-    <Space android:layout_gravity="bottom" android:id="@id/status_space" android:layout_width="42.0dip" android:layout_height="0.0dip" />
+<com.vk.core.widget.BubbleFluidLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/fhl"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:vk_order="normal">
+
+    <com.vk.im.ui.views.avatars.AvatarView
+        android:id="@id/avatar"
+        style="@style/VkIm.AvatarView"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:layout_gravity="top"
+        android:layout_marginTop="?im_msg_avatar_margin_top" />
+
+    <Space
+        android:id="@id/avatar_space"
+        android:layout_width="32.0dip"
+        android:layout_height="0.0dip"
+        android:layout_gravity="top"
+        android:layout_marginTop="?im_msg_avatar_margin_top" />
+
+    <com.vk.im.ui.views.msg.bubble.MsgBubbleView
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:vk_layout_isFluid="true"
+        app:vkim_contentFitAllWidth="false"
+        app:vkim_contentPaddingBottom="0.0dip"
+        app:vkim_contentPaddingLeft="0.0dip"
+        app:vkim_contentPaddingRight="0.0dip"
+        app:vkim_contentPaddingTop="0.0dip"
+        app:vkim_fwdNestLevel="0"
+        app:vkim_fwdNestLineColor="?im_forward_line_tint"
+        app:vkim_fwdNestLineSpace="4.0dip"
+        app:vkim_fwdNestLineWidth="2.0dip"
+        app:vkim_fwdPaddingBottom="0.0dip"
+        app:vkim_fwdPaddingLeft="0.0dip"
+        app:vkim_fwdPaddingRight="0.0dip"
+        app:vkim_fwdPaddingTop="0.0dip" />
+
+    <com.vk.im.ui.components.viewcontrollers.msg_list.BombView
+        android:id="@id/bomb"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        app:bv_accentColor="?destructive"
+        app:bv_normalColor="?text_secondary"
+        app:vk_layout_isExpandable="true" />
+
+    <ImageView
+        android:id="@id/vkim_channel_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="4.0dip"
+        android:contentDescription="@string/vkim_accessibility_share_msg"
+        android:src="@drawable/ic_share_outline_24"
+        android:translationX="-4.0dip"
+        android:translationY="-8.0dip" />
+
+    <com.vk.im.ui.views.msg.MsgStatusView
+        android:id="@id/status"
+        android:layout_width="28.0dip"
+        android:layout_height="21.0sp"
+        android:layout_gravity="bottom"
+        android:translationY="-11.0dip" />
+
+    <Space
+        android:id="@id/status_space"
+        android:layout_width="42.0dip"
+        android:layout_height="0.0dip"
+        android:layout_gravity="bottom" />
 </com.vk.core.widget.BubbleFluidLayout>

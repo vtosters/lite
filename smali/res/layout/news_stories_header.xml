@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="clip_vertical" android:layout_gravity="start|center" android:id="@id/title" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="16.0dip" android:singleLine="true" android:includeFontPadding="false" android:textAllCaps="true" android:layout_marginStart="@dimen/post_side_padding" android:layout_marginEnd="60.0dip" app:fontFamily="@font/roboto_medium" />
-    <ImageView android:layout_gravity="end|center" android:id="@id/post_options_btn" android:layout_width="36.0dip" android:layout_height="44.0dip" android:src="@drawable/ic_more_vertical_24" android:scaleType="centerInside" android:tint="?icon_tertiary" android:contentDescription="@string/common_actions" android:layout_marginEnd="@dimen/post_side_padding_menu" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/header_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="44.0dip">
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:layout_marginStart="@dimen/post_side_padding"
+        android:layout_marginEnd="60.0dip"
+        android:ellipsize="end"
+        android:gravity="clip_vertical"
+        android:includeFontPadding="false"
+        android:minHeight="16.0dip"
+        android:paddingTop="1.0dip"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="?text_secondary"
+        android:textSize="13.0sp"
+        app:fontFamily="@font/roboto_medium" />
+
+    <ImageView
+        android:id="@id/post_options_btn"
+        android:layout_width="36.0dip"
+        android:layout_height="44.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="@dimen/post_side_padding_menu"
+        android:contentDescription="@string/common_actions"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_more_vertical_24"
+        android:tint="?icon_tertiary" />
 </FrameLayout>

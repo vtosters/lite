@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@drawable/left_header" android:layout_width="fill_parent" android:layout_height="56.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0dip" android:textColor="?tabbar_tablet_text_secondary" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="start" android:id="@id/title" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip" android:text="Friends" android:fontFamily="@string/font_family_medium" />
-    <TextView android:textSize="14.0dip" android:textColor="?accent" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/button" android:background="@drawable/highlight" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip" android:text="@string/show_all" android:fontFamily="@string/font_family_medium" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="56.0dip"
+    android:background="@drawable/left_header">
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="56.0dip"
+        android:layout_gravity="start"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="16.0dip"
+        android:paddingTop="8.0dip"
+        android:paddingRight="16.0dip"
+        android:text="Friends"
+        android:textColor="?tabbar_tablet_text_secondary"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="56.0dip"
+        android:layout_gravity="end"
+        android:background="@drawable/highlight"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="16.0dip"
+        android:paddingTop="8.0dip"
+        android:paddingRight="16.0dip"
+        android:text="@string/show_all"
+        android:textColor="?accent"
+        android:textSize="14.0dip" />
 </FrameLayout>

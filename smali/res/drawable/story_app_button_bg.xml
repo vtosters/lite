@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="#40ffffff"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@android:id/mask" android:left="12.0dip" android:top="12.0dip" android:right="12.0dip" android:bottom="12.0dip">
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#40ffffff">
+    <item
+        android:id="@android:id/mask"
+        android:bottom="12.0dip"
+        android:left="12.0dip"
+        android:right="12.0dip"
+        android:top="12.0dip">
         <shape android:shape="rectangle">
             <solid android:color="#ff000000" />
             <corners android:radius="24.0dip" />

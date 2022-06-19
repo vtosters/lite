@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_scrollFlags="" app:title="@string/vkim_settings_account_edit_screen_name" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            style="@style/VkIm.Toolbar.Style.LargeWithBack"
+            app:layout_scrollFlags=""
+            app:title="@string/vkim_settings_account_edit_screen_name" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
-    <com.vk.im.ui.views.ContentErrorView android:layout_gravity="center" android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" app:vkim_buttonText="@string/vkim_retry" style="@style/VkIm.ContentErrorView" />
-    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <com.vk.core.ui.edittext.PlainEditText android:id="@id/screen_name_value" android:background="@drawable/bg_settings_edittext_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:hint="@string/vkim_hint_screen_name" style="@style/VkIm.Settings.EditTextArea.SingleLine" />
-        <TextView android:id="@id/screen_name_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:includeFontPadding="false" />
-        <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:id="@id/screen_name_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/progress"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:matProg_barColor="?accent"
+        app:matProg_progressIndeterminate="true" />
+
+    <com.vk.im.ui.views.ContentErrorView
+        android:id="@id/error"
+        style="@style/VkIm.ContentErrorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:vkim_buttonText="@string/vkim_retry" />
+
+    <LinearLayout
+        android:id="@id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.vk.core.ui.edittext.PlainEditText
+            android:id="@id/screen_name_value"
+            style="@style/VkIm.Settings.EditTextArea.SingleLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_settings_edittext_normal"
+            android:hint="@string/vkim_hint_screen_name"
+            android:minHeight="44.0dip" />
+
+        <TextView
+            android:id="@id/screen_name_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:includeFontPadding="false" />
+
+        <TextView
+            android:id="@id/screen_name_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:fontFamily="@font/roboto_regular"
+            android:includeFontPadding="false"
+            android:textColor="?text_subhead"
+            android:textSize="14.0sp" />
     </LinearLayout>
+
     <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vtosters.lite.ui.FullWidthLinearLayout android:theme="?actionBarTheme" android:gravity="center" android:orientation="horizontal" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText android:textSize="16.0dip" android:textColorHint="?header_search_field_tint" android:id="@id/search_input" android:background="@null" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/search" android:singleLine="true" android:layout_weight="1.0" android:inputType="textFilter|textCapSentences|textNoSuggestions" android:imeOptions="actionSearch" android:textCursorDrawable="?searchViewCursorDrawable" />
-    <ImageView android:id="@id/search_clear" android:background="?actionBarItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_cancel_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/accessibility_clear_input" />
-    <ImageView android:id="@id/search_voice" android:background="?actionBarItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_voice_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/talkback_ic_voice" />
-    <ImageView android:id="@id/search_qr" android:background="?actionBarItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_qrscan_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/talkback_ic_qrscan" />
-    <ImageView android:id="@id/search_done" android:background="?actionBarItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_check_24" android:scaleType="center" android:tint="?icon_secondary" android:contentDescription="@string/accessibility_done" />
+<com.vtosters.lite.ui.FullWidthLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingRight="2.0dip"
+    android:theme="?actionBarTheme">
+
+    <EditText
+        android:id="@id/search_input"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="textFilter|textCapSentences|textNoSuggestions"
+        android:paddingRight="16.0dip"
+        android:singleLine="true"
+        android:textColorHint="?header_search_field_tint"
+        android:textCursorDrawable="?searchViewCursorDrawable"
+        android:textSize="16.0dip" />
+
+    <ImageView
+        android:id="@id/search_clear"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:background="?actionBarItemBackground"
+        android:contentDescription="@string/accessibility_clear_input"
+        android:scaleType="center"
+        android:src="@drawable/ic_cancel_24"
+        android:tint="?icon_secondary" />
+
+    <ImageView
+        android:id="@id/search_voice"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:background="?actionBarItemBackground"
+        android:contentDescription="@string/talkback_ic_voice"
+        android:scaleType="center"
+        android:src="@drawable/ic_voice_24"
+        android:tint="?icon_secondary" />
+
+    <ImageView
+        android:id="@id/search_qr"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:background="?actionBarItemBackground"
+        android:contentDescription="@string/talkback_ic_qrscan"
+        android:scaleType="center"
+        android:src="@drawable/ic_qrscan_24"
+        android:tint="?icon_secondary" />
+
+    <ImageView
+        android:id="@id/search_done"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:background="?actionBarItemBackground"
+        android:contentDescription="@string/accessibility_done"
+        android:scaleType="center"
+        android:src="@drawable/ic_check_24"
+        android:tint="?icon_secondary" />
 </com.vtosters.lite.ui.FullWidthLinearLayout>

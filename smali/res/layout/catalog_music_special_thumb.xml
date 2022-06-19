@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@drawable/music_recommended_album_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.music.view.ThumbsImageView android:layout_gravity="center" android:layout_width="@dimen/music_special_size" android:layout_height="@dimen/music_special_size" app:roundedCornerRadius="@dimen/music_corner_radius" app:tiv_background_image="?placeholder_icon_background" app:tiv_empty_resource="@drawable/ic_song_24" app:tiv_empty_tint="?placeholder_icon_foreground_secondary" app:tiv_placeholder_tint="?placeholder_icon_foreground_secondary" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/music_recommended_album_shadow">
+
+    <com.vk.music.view.ThumbsImageView
+        android:layout_width="@dimen/music_special_size"
+        android:layout_height="@dimen/music_special_size"
+        android:layout_gravity="center"
+        app:roundedCornerRadius="@dimen/music_corner_radius"
+        app:tiv_background_image="?placeholder_icon_background"
+        app:tiv_empty_resource="@drawable/ic_song_24"
+        app:tiv_empty_tint="?placeholder_icon_foreground_secondary"
+        app:tiv_placeholder_tint="?placeholder_icon_foreground_secondary" />
 </FrameLayout>

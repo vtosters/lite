@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_scrollFlags="" app:title="@string/vkim_msg_request" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            style="@style/VkIm.Toolbar.Style.LargeWithBack"
+            app:layout_scrollFlags=""
+            app:title="@string/vkim_msg_request" />
     </com.google.android.material.appbar.AppBarLayout>
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <ViewStub android:id="@id/im_dialogs_list_stub" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-        <ImageView android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bg_toolbar_separator" android:contentDescription="@null" android:importantForAccessibility="no" />
-        <TextView android:id="@id/decline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/vkim_msg_request_reject_all" style="@style/VkIm.RejectButton" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ViewStub
+            android:id="@id/im_dialogs_list_stub"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:src="@drawable/bg_toolbar_separator" />
+
+        <TextView
+            android:id="@id/decline"
+            style="@style/VkIm.RejectButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16.0dip"
+            android:text="@string/vkim_msg_request_reject_all" />
     </LinearLayout>
-    <com.vk.core.view.AppBarShadowView app:appbar_forceMode="separator" style="@style/AppBarShadow" />
+
+    <com.vk.core.view.AppBarShadowView
+        style="@style/AppBarShadow"
+        app:appbar_forceMode="separator" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

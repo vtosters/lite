@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@id/edit" android:title="@string/edit" android:showAsAction="never" />
-    <item android:id="@id/delete" android:title="@string/delete" android:showAsAction="never" />
-    <item android:id="@id/save" android:title="@string/save" android:showAsAction="never" />
-    <item android:id="@id/copy_link" android:title="@string/copy_link" android:showAsAction="never" />
-    <item android:id="@id/attach_goods_item" android:title="@string/photo_attach_good" android:showAsAction="never" />
-    <item android:id="@id/send_to_friend" android:title="@string/send_to_friend" android:showAsAction="never" />
-    <item android:id="@id/save_to_album" android:title="@string/save_to_album" android:showAsAction="never" />
-    <item android:id="@id/save_to_documents" android:title="@string/save_to_documents" android:showAsAction="never" />
-    <item android:id="@id/go_to_album" android:title="@string/photo_go_to_album" android:showAsAction="never" />
-    <item android:id="@id/report" android:title="@string/report_content" android:showAsAction="never" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/edit"
+        android:showAsAction="never"
+        android:title="@string/edit" />
+    <item
+        android:id="@id/delete"
+        android:showAsAction="never"
+        android:title="@string/delete" />
+    <item
+        android:id="@id/save"
+        android:showAsAction="never"
+        android:title="@string/save" />
+    <item
+        android:id="@id/copy_link"
+        android:showAsAction="never"
+        android:title="@string/copy_link" />
+    <item
+        android:id="@id/attach_goods_item"
+        android:showAsAction="never"
+        android:title="@string/photo_attach_good" />
+    <item
+        android:id="@id/send_to_friend"
+        android:showAsAction="never"
+        android:title="@string/send_to_friend" />
+    <item
+        android:id="@id/save_to_album"
+        android:showAsAction="never"
+        android:title="@string/save_to_album" />
+    <item
+        android:id="@id/save_to_documents"
+        android:showAsAction="never"
+        android:title="@string/save_to_documents" />
+    <item
+        android:id="@id/go_to_album"
+        android:showAsAction="never"
+        android:title="@string/photo_go_to_album" />
+    <item
+        android:id="@id/report"
+        android:showAsAction="never"
+        android:title="@string/report_content" />
 </menu>

@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.FitSystemWindowsFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.libvideo.ui.layout.SwipeLayout android:id="@id/swipe_layout" android:fitsSystemWindows="false" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <FrameLayout android:id="@id/drag_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <com.vk.libvideo.ui.VideoView android:layout_gravity="center" android:id="@id/video_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+<com.vk.core.view.FitSystemWindowsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.vk.libvideo.ui.layout.SwipeLayout
+        android:id="@id/swipe_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="false">
+
+        <FrameLayout
+            android:id="@id/drag_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <com.vk.libvideo.ui.VideoView
+                android:id="@id/video_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
         </FrameLayout>
-        <com.vk.libvideo.ui.VideoToolbarView android:id="@id/toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        <com.vk.libvideo.ui.VideoBottomPanelView android:layout_gravity="bottom" android:id="@id/bottom_panel" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0" />
-        <com.vk.libvideo.ui.VideoPlayerAdsPanel android:layout_gravity="bottom" android:id="@id/ads_panel" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+
+        <com.vk.libvideo.ui.VideoToolbarView
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.vk.libvideo.ui.VideoBottomPanelView
+            android:id="@id/bottom_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:alpha="0.0"
+            android:fitsSystemWindows="true" />
+
+        <com.vk.libvideo.ui.VideoPlayerAdsPanel
+            android:id="@id/ads_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fitsSystemWindows="true"
+            android:visibility="gone" />
     </com.vk.libvideo.ui.layout.SwipeLayout>
 </com.vk.core.view.FitSystemWindowsFrameLayout>

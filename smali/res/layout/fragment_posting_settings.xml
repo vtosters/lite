@@ -1,32 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
-            <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="start|center" android:id="@id/posting_settings_close_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_back_outline_28" android:scaleType="center" android:tint="?header_tint_alternate" android:contentDescription="@string/close" android:layout_marginStart="4.0dip" />
-            <TextView android:textSize="23.0sp" android:textColor="?text_muted" android:ellipsize="end" android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/posting_settings_title" android:singleLine="true" android:fontFamily="?toolbar_font" android:layout_marginStart="64.0dip" android:layout_marginEnd="64.0dip" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?header_alternate_background">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/posting_settings_close_button"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="4.0dip"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/close"
+                android:scaleType="center"
+                android:src="@drawable/ic_back_outline_28"
+                android:tint="?header_tint_alternate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="64.0dip"
+                android:layout_marginEnd="64.0dip"
+                android:ellipsize="end"
+                android:fontFamily="?toolbar_font"
+                android:singleLine="true"
+                android:text="@string/posting_settings_title"
+                android:textColor="?text_muted"
+                android:textSize="23.0sp" />
         </FrameLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <LinearLayout android:orientation="vertical" android:id="@id/posting_settings_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="beginning|end">
-            <LinearLayout android:orientation="vertical" android:id="@id/posting_settings_switch_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="beginning|end" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-                <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-                <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_facebook" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" android:layout_marginTop="8.0dip" app:titleText="@string/newpost_export_fb" />
-                <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_twitter" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/newpost_export_twitter" />
-                <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_ad" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_this_ad" />
-                <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_comments_closing" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_comments_closing" />
-                <com.vk.common.view.settings.SettingsSwitchView android:id="@id/posting_settings_disable_notifications" android:layout_width="fill_parent" android:layout_height="@dimen/settings_view_height" app:titleText="@string/posting_settings_disable_notifications" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@id/posting_settings_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="beginning|end">
+
+            <LinearLayout
+                android:id="@id/posting_settings_switch_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="beginning|end"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="16.0dip"
+                    android:background="?separator_alpha" />
+
+                <com.vk.common.view.settings.SettingsSwitchView
+                    android:id="@id/posting_settings_facebook"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_view_height"
+                    android:layout_marginTop="8.0dip"
+                    app:titleText="@string/newpost_export_fb" />
+
+                <com.vk.common.view.settings.SettingsSwitchView
+                    android:id="@id/posting_settings_twitter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_view_height"
+                    app:titleText="@string/newpost_export_twitter" />
+
+                <com.vk.common.view.settings.SettingsSwitchView
+                    android:id="@id/posting_settings_ad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_view_height"
+                    app:titleText="@string/posting_settings_this_ad" />
+
+                <com.vk.common.view.settings.SettingsSwitchView
+                    android:id="@id/posting_settings_comments_closing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_view_height"
+                    app:titleText="@string/posting_settings_comments_closing" />
+
+                <com.vk.common.view.settings.SettingsSwitchView
+                    android:id="@id/posting_settings_disable_notifications"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/settings_view_height"
+                    app:titleText="@string/posting_settings_disable_notifications" />
             </LinearLayout>
-            <LinearLayout android:orientation="vertical" android:id="@id/posting_settings_set_source_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:foreground="?selectableItemBackgroundBorderless">
-                <TextView android:textSize="16.0sp" android:textColor="?accent" android:paddingLeft="16.0dip" android:paddingTop="14.0dip" android:paddingRight="16.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/posting_settings_set_source" android:singleLine="true" />
-                <com.vk.core.view.links.LinkedTextView android:textSize="14.0sp" android:textColor="?text_tertiary" android:id="@id/postings_settings_set_source_subtitle" android:paddingLeft="16.0dip" android:paddingTop="4.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" android:importantForAccessibility="yes" android:letterSpacing="0.02" />
+
+            <LinearLayout
+                android:id="@id/posting_settings_set_source_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16.0dip"
+                    android:paddingTop="14.0dip"
+                    android:paddingRight="16.0dip"
+                    android:paddingBottom="14.0dip"
+                    android:singleLine="true"
+                    android:text="@string/posting_settings_set_source"
+                    android:textColor="?accent"
+                    android:textSize="16.0sp" />
+
+                <com.vk.core.view.links.LinkedTextView
+                    android:id="@id/postings_settings_set_source_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="yes"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="3.0sp"
+                    android:paddingLeft="16.0dip"
+                    android:paddingTop="4.0dip"
+                    android:paddingRight="16.0dip"
+                    android:paddingBottom="16.0dip"
+                    android:textColor="?text_tertiary"
+                    android:textSize="14.0sp" />
             </LinearLayout>
-            <FrameLayout android:id="@id/posting_settings_source_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
-                <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="11.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="14.0sp" android:textColor="?text_tertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/posting_settings_source" android:singleLine="true" android:includeFontPadding="false" />
-                    <TextView android:textSize="16.0sp" android:textColor="?text_primary" android:id="@id/posting_setting_source_link_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:includeFontPadding="false" />
+
+            <FrameLayout
+                android:id="@id/posting_settings_source_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16.0dip"
+                    android:paddingTop="11.0dip"
+                    android:paddingRight="16.0dip"
+                    android:paddingBottom="12.0dip">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="@string/posting_settings_source"
+                        android:textColor="?text_tertiary"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:id="@id/posting_setting_source_link_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3.0dip"
+                        android:includeFontPadding="false"
+                        android:textColor="?text_primary"
+                        android:textSize="16.0sp" />
                 </LinearLayout>
-                <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="end|center" android:id="@id/posting_settings_source_menu" android:background="?selectableItemBackgroundBorderless" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_16" android:scaleType="center" android:tint="?icon_secondary" android:layout_marginEnd="4.0dip" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/posting_settings_source_menu"
+                    android:layout_width="36.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="4.0dip"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_more_vertical_16"
+                    android:tint="?icon_secondary" />
             </FrameLayout>
         </LinearLayout>
     </ScrollView>

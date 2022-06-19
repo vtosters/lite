@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/bg_white_button_with_shadow" android:layout_width="wrap_content" android:layout_height="60.0dip" android:layout_marginTop="4.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/image" android:layout_width="24.0dip" android:layout_height="24.0dip" android:tint="?accent" />
-    <TextView android:textSize="13.0sp" android:textColor="?text_primary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" android:fontFamily="@font/roboto_regular" android:layout_marginStart="8.0dip" android:letterSpacing="0.02" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="60.0dip"
+    android:layout_marginTop="4.0dip"
+    android:background="@drawable/bg_white_button_with_shadow"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/image"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:tint="?accent" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:fontFamily="@font/roboto_regular"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="3.0sp"
+        android:textColor="?text_primary"
+        android:textSize="13.0sp" />
 </LinearLayout>

@@ -1,8 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="60.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKSnippetImageView android:id="@id/icon" android:layout_width="58.0dip" android:layout_height="@dimen/app_item_image_size" android:paddingStart="5.0dip" android:paddingEnd="5.0dip" android:layout_marginStart="16.0dip" app:emptyImagePlaceholder="@drawable/placeholder_game_rounded" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/default_placeholder_10" app:roundedCornerRadius="10.0dip" />
-    <TextView android:textSize="11.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/counter" android:background="@drawable/superapp_counter_bg" android:paddingLeft="@dimen/bottom_navigation_counter_padding" android:paddingRight="@dimen/bottom_navigation_counter_padding" android:layout_width="wrap_content" android:layout_height="@dimen/bottom_navigation_counter_height_outer" android:layout_marginTop="4.0dip" android:minWidth="@dimen/bottom_navigation_counter_height_outer" android:minHeight="@dimen/bottom_navigation_counter_height_outer" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_medium" app:layout_constraintEnd_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="@id/icon" />
-    <TextView android:ellipsize="end" android:gravity="start" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:lines="1" android:layout_marginStart="12.0dip" app:layout_constraintStart_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIText.Headline" />
-    <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:gravity="start" android:id="@id/subtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:lines="1" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" android:layout_marginEnd="44.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/title" app:layout_constraintTop_toBottomOf="@id/title" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip"
+    android:background="@drawable/highlight"
+    android:orientation="horizontal">
+
+    <com.vk.imageloader.view.VKSnippetImageView
+        android:id="@id/icon"
+        android:layout_width="58.0dip"
+        android:layout_height="@dimen/app_item_image_size"
+        android:layout_marginStart="16.0dip"
+        android:paddingStart="5.0dip"
+        android:paddingEnd="5.0dip"
+        app:emptyImagePlaceholder="@drawable/placeholder_game_rounded"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/default_placeholder_10"
+        app:roundedCornerRadius="10.0dip" />
+
+    <TextView
+        android:id="@id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bottom_navigation_counter_height_outer"
+        android:layout_marginTop="4.0dip"
+        android:background="@drawable/superapp_counter_bg"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minWidth="@dimen/bottom_navigation_counter_height_outer"
+        android:minHeight="@dimen/bottom_navigation_counter_height_outer"
+        android:paddingLeft="@dimen/bottom_navigation_counter_padding"
+        android:paddingRight="@dimen/bottom_navigation_counter_padding"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="11.0sp"
+        app:layout_constraintEnd_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="@id/icon" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="12.0dip"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:lines="1"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/subtitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.0dip"
+        android:layout_marginEnd="44.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:lines="1"
+        android:textColor="?text_secondary"
+        android:textSize="13.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

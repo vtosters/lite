@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<inset android:insetLeft="6.0dip" android:insetRight="6.0dip" android:insetTop="6.0dip" android:insetBottom="6.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="6.0dip"
+    android:insetTop="6.0dip"
+    android:insetRight="6.0dip"
+    android:insetBottom="6.0dip">
     <shape android:shape="oval">
         <solid android:color="?accent" />
-        <size android:height="24.0dip" android:width="24.0dip" />
+        <size
+            android:width="24.0dip"
+            android:height="24.0dip" />
     </shape>
 </inset>

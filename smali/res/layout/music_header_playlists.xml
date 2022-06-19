@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="horizontal" android:id="@id/music_playlists_button" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
-        <TextView android:textSize="16.0dip" android:textStyle="normal" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/music_title_playlists" app:fontFamily="@font/roboto_medium" style="@style/MusicTextStyle" />
-        <TextView android:textSize="16.0dip" android:textStyle="normal" android:textColor="@color/music_playlist_counter_text" android:layout_gravity="center_vertical" android:id="@id/music_playlists_counter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:freezesText="true" app:fontFamily="@font/roboto_regular" style="@style/MusicTextStyle" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/music_playlists_button"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/music_selectable_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/MusicTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16.0dip"
+            android:text="@string/music_title_playlists"
+            android:textSize="16.0dip"
+            android:textStyle="normal"
+            app:fontFamily="@font/roboto_medium" />
+
+        <TextView
+            android:id="@id/music_playlists_counter"
+            style="@style/MusicTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8.0dip"
+            android:freezesText="true"
+            android:textColor="@color/music_playlist_counter_text"
+            android:textSize="16.0dip"
+            android:textStyle="normal"
+            app:fontFamily="@font/roboto_regular" />
     </LinearLayout>
-    <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="7.5dip" android:layout_marginBottom="8.0dip" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="7.5dip"
+        android:layout_marginBottom="8.0dip"
+        android:background="?separator_alpha" />
 </LinearLayout>

@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="?content_tint_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:gravity="center_horizontal" android:id="@id/tv_question" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="48.0dip" android:layout_marginEnd="48.0dip" style="@style/VKUIText" />
-        <LinearLayout android:orientation="horizontal" android:id="@id/buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:showDividers="middle" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?content_tint_background">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="12.0dip"
+        android:paddingBottom="12.0dip">
+
+        <TextView
+            android:id="@id/tv_question"
+            style="@style/VKUIText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48.0dip"
+            android:layout_marginEnd="48.0dip"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@id/buttons_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/post_side_padding"
+            android:paddingEnd="@dimen/post_side_padding"
+            android:showDividers="middle" />
     </LinearLayout>
-    <ImageView android:layout_gravity="end" android:background="@drawable/white_oval" android:focusable="false" android:clickable="false" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:src="@drawable/ic_close_16" android:scaleType="centerInside" android:tint="?placeholder_icon_foreground_primary" android:importantForAccessibility="no" android:layout_marginEnd="12.0dip" android:backgroundTint="?placeholder_icon_background" />
-    <View android:layout_gravity="end" android:id="@id/hide_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@string/accessibility_hide" android:importantForAccessibility="yes" />
-    <View android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+
+    <ImageView
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:background="@drawable/white_oval"
+        android:backgroundTint="?placeholder_icon_background"
+        android:clickable="false"
+        android:focusable="false"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_close_16"
+        android:tint="?placeholder_icon_foreground_primary" />
+
+    <View
+        android:id="@id/hide_button"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="end"
+        android:contentDescription="@string/accessibility_hide"
+        android:importantForAccessibility="yes" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="?separator_alpha" />
 </FrameLayout>

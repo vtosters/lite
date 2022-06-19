@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.FitSystemWindowsFrameLayout android:id="@id/bottom_nav_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/bottom_navigation_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.vk.music.view.audio_player.ModernSmallPlayerView android:id="@id/modern_small_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-        <View android:id="@id/bottom_navigation_shadow" android:background="@drawable/bg_bottom_navigation_shadow" android:layout_width="fill_parent" android:layout_height="6.0dip" />
-        <com.vtosters.lite.ui.bottomnavigation.BottomNavigationView android:id="@id/bottom_navigation" android:background="?tabbar_background" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_navigation_height" app:menu="?vkapp_bottom_menu" />
+<com.vk.core.view.FitSystemWindowsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/bottom_nav_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@id/bottom_navigation_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <com.vk.music.view.audio_player.ModernSmallPlayerView
+            android:id="@id/modern_small_player"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <View
+            android:id="@id/bottom_navigation_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="6.0dip"
+            android:background="@drawable/bg_bottom_navigation_shadow" />
+
+        <com.vtosters.lite.ui.bottomnavigation.BottomNavigationView
+            android:id="@id/bottom_navigation"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_navigation_height"
+            android:background="?tabbar_background"
+            app:menu="?vkapp_bottom_menu" />
     </LinearLayout>
-    <View android:id="@id/bottom_nav_overlay" android:background="?background_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+    <View
+        android:id="@id/bottom_nav_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?background_page"
+        android:visibility="gone" />
 </com.vk.core.view.FitSystemWindowsFrameLayout>

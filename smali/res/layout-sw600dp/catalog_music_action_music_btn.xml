@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textStyle="normal" android:textColor="?button_muted_foreground" android:gravity="center_vertical" android:id="@id/title" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="27.0dip" app:fontFamily="@font/roboto_regular" style="@style/VKUIText.Headline"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/title"
+    style="@style/VKUIText.Headline"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:background="@drawable/music_selectable_bg"
+    android:gravity="center_vertical"
+    android:paddingStart="27.0dip"
+    android:textColor="?button_muted_foreground"
+    android:textStyle="normal"
+    app:fontFamily="@font/roboto_regular" />

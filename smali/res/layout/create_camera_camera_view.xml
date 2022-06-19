@@ -1,37 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:layout_gravity="start|center|top" android:background="@drawable/stories_vertical_blur_left" android:layout_width="90.0dip" android:layout_height="104.0dip" android:alpha="0.64" />
-    <View android:layout_gravity="end|center|top" android:background="@drawable/stories_vertical_blur_right" android:layout_width="90.0dip" android:layout_height="104.0dip" android:alpha="0.64" />
-    <View android:layout_gravity="bottom" android:id="@id/bottom_gradient" android:background="@drawable/scrim_bottom_112" android:layout_width="fill_parent" android:layout_height="112.0dip" android:alpha="0.24" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:layout_gravity="center|top" android:id="@id/live_author" android:background="@drawable/bg_live_profile_selector" android:paddingRight="22.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="56.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="56.0dip" android:text="" android:maxLines="1" android:shadowColor="@color/black_alpha16" android:shadowDy="2.0" android:shadowRadius="8.0" android:fontFamily="@string/font_family_medium" />
-    <FrameLayout android:layout_gravity="center|top" android:id="@id/live_header" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_gravity="center|top" android:id="@id/live_author_arrow" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="68.0dip" android:foreground="@drawable/white_ripple_bounded_4dp" android:src="@drawable/ic_dropdown_16" android:scaleType="center" android:alpha="0.5" android:importantForAccessibility="no" android:layout_marginEnd="-36.0dip" />
-        <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center|top" android:id="@id/live_author_photo" android:padding="8.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="60.0dip" android:foreground="@drawable/bg_camera_live_photo" android:contentDescription="@string/story_accessibility_choose_live_author" />
-        <com.vk.cameraui.widgets.BackEditText android:textSize="23.0dip" android:textColor="#ffffffff" android:textColorHint="#ccffffff" android:gravity="center|top" android:layout_gravity="center|top" android:id="@id/live_name" android:background="@android:color/transparent" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="136.0dip" android:hint="@string/camera_ui_live_tell" android:cursorVisible="true" android:singleLine="true" android:includeFontPadding="false" android:maxLength="200" android:inputType="textCapSentences" android:imeOptions="actionDone" android:fontFamily="@string/font_family_light" />
-        <View android:layout_gravity="center|top" android:id="@id/gradient_divider" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="172.0dip" android:alpha="0.28" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-        <com.vk.cameraui.widgets.friends.BroadcastFriendsView android:layout_gravity="center|top" android:id="@id/broadcast_friends_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:layout_marginTop="189.0dip" android:layout_marginRight="48.0dip" android:maxWidth="320.0dip" android:minHeight="32.0dip" app:numberNearAvatars="true" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="90.0dip"
+        android:layout_height="104.0dip"
+        android:layout_gravity="start|center|top"
+        android:alpha="0.64"
+        android:background="@drawable/stories_vertical_blur_left" />
+
+    <View
+        android:layout_width="90.0dip"
+        android:layout_height="104.0dip"
+        android:layout_gravity="end|center|top"
+        android:alpha="0.64"
+        android:background="@drawable/stories_vertical_blur_right" />
+
+    <View
+        android:id="@id/bottom_gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="112.0dip"
+        android:layout_gravity="bottom"
+        android:alpha="0.24"
+        android:background="@drawable/scrim_bottom_112" />
+
+    <TextView
+        android:id="@id/live_author"
+        android:layout_width="wrap_content"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center|top"
+        android:layout_marginLeft="56.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginRight="56.0dip"
+        android:background="@drawable/bg_live_profile_selector"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingRight="22.0dip"
+        android:shadowColor="@color/black_alpha16"
+        android:shadowDy="2.0"
+        android:shadowRadius="8.0"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16.0sp"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@id/live_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@id/live_author_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="68.0dip"
+            android:layout_marginEnd="-36.0dip"
+            android:alpha="0.5"
+            android:foreground="@drawable/white_ripple_bounded_4dp"
+            android:importantForAccessibility="no"
+            android:padding="16.0dip"
+            android:scaleType="center"
+            android:src="@drawable/ic_dropdown_16" />
+
+        <com.vk.imageloader.view.VKCircleImageView
+            android:id="@id/live_author_photo"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="60.0dip"
+            android:contentDescription="@string/story_accessibility_choose_live_author"
+            android:foreground="@drawable/bg_camera_live_photo"
+            android:padding="8.0dip" />
+
+        <com.vk.cameraui.widgets.BackEditText
+            android:id="@id/live_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="136.0dip"
+            android:background="@android:color/transparent"
+            android:cursorVisible="true"
+            android:fontFamily="@string/font_family_light"
+            android:gravity="center|top"
+            android:hint="@string/camera_ui_live_tell"
+            android:imeOptions="actionDone"
+            android:includeFontPadding="false"
+            android:inputType="textCapSentences"
+            android:maxLength="200"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:singleLine="true"
+            android:textColor="#ffffffff"
+            android:textColorHint="#ccffffff"
+            android:textSize="23.0dip" />
+
+        <View
+            android:id="@id/gradient_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_gravity="center|top"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="172.0dip"
+            android:layout_marginEnd="16.0dip"
+            android:alpha="0.28"
+            android:background="@color/white" />
+
+        <com.vk.cameraui.widgets.friends.BroadcastFriendsView
+            android:id="@id/broadcast_friends_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="48.0dip"
+            android:layout_marginTop="189.0dip"
+            android:layout_marginRight="48.0dip"
+            android:maxWidth="320.0dip"
+            android:minHeight="32.0dip"
+            app:numberNearAvatars="true" />
     </FrameLayout>
-    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/qr_scanner_target" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_width="@dimen/camera_target_size" android:layout_height="@dimen/camera_target_size" android:layout_marginBottom="@dimen/camera_target_bottom_margin" android:src="@drawable/ic_qrscanner" />
-        <TextView android:textSize="@dimen/camera_target_text_size" android:textStyle="normal" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/tv_qr_scanner_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_ui_qr_scanner_info" android:lineSpacingExtra="2.0sp" android:fontFamily="@font/roboto_medium" />
+
+    <LinearLayout
+        android:id="@id/qr_scanner_target"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="@dimen/camera_target_size"
+            android:layout_height="@dimen/camera_target_size"
+            android:layout_marginBottom="@dimen/camera_target_bottom_margin"
+            android:src="@drawable/ic_qrscanner" />
+
+        <TextView
+            android:id="@id/tv_qr_scanner_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="2.0sp"
+            android:text="@string/camera_ui_qr_scanner_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/camera_target_text_size"
+            android:textStyle="normal" />
     </LinearLayout>
-    <com.vk.common.view.TopBottomAnimView android:id="@id/qr_scanner_animation" android:background="@drawable/bg_qr_scanner_anim" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="115.0dip" />
-    <FrameLayout android:id="@id/qr_scanner_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <View android:layout_gravity="top" android:background="@drawable/scrim_top_16percent" android:layout_width="fill_parent" android:layout_height="72.0dip" />
-        <View android:layout_gravity="bottom" android:background="@drawable/scrim_bottom_16percent" android:layout_width="fill_parent" android:layout_height="340.0dip" />
+
+    <com.vk.common.view.TopBottomAnimView
+        android:id="@id/qr_scanner_animation"
+        android:layout_width="fill_parent"
+        android:layout_height="115.0dip"
+        android:background="@drawable/bg_qr_scanner_anim"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@id/qr_scanner_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="72.0dip"
+            android:layout_gravity="top"
+            android:background="@drawable/scrim_top_16percent" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="340.0dip"
+            android:layout_gravity="bottom"
+            android:background="@drawable/scrim_bottom_16percent" />
     </FrameLayout>
-    <FrameLayout android:id="@id/qr_dynamic_corners_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <ViewStub android:id="@id/qr_my_info_stub" android:layout="@layout/camera_my_qr_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.vk.core.view.VKTabLayout android:layout_gravity="center_horizontal" android:id="@id/qr_scanner_tabs" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginLeft="54.0dip" android:layout_marginRight="54.0dip" app:tabBackground="@drawable/highlight_toolbar" app:tabIndicatorColor="@color/white" app:tabIndicatorHeight="2.5dip" app:tabMode="fixed" app:tabSelectedTextColor="@color/white" app:tabTextColor="@color/white_alpha60" />
-    <com.vk.cameraui.widgets.masks.MasksWrap android:id="@id/masks_wrap" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.vk.attachpicker.stickers.StickersDrawingViewGroup android:id="@id/story_camera_stickers_view_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <com.vk.attachpicker.drawing.DrawingView android:id="@id/story_camera_drawing_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@id/qr_dynamic_corners_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ViewStub
+        android:id="@id/qr_my_info_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout="@layout/camera_my_qr_view" />
+
+    <com.vk.core.view.VKTabLayout
+        android:id="@id/qr_scanner_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="56.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="54.0dip"
+        android:layout_marginRight="54.0dip"
+        android:background="@android:color/transparent"
+        app:tabBackground="@drawable/highlight_toolbar"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="2.5dip"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white_alpha60" />
+
+    <com.vk.cameraui.widgets.masks.MasksWrap
+        android:id="@id/masks_wrap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.vk.attachpicker.stickers.StickersDrawingViewGroup
+            android:id="@id/story_camera_stickers_view_group"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.vk.attachpicker.drawing.DrawingView
+                android:id="@id/story_camera_drawing_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
         </com.vk.attachpicker.stickers.StickersDrawingViewGroup>
-        <com.vk.stories.masks.MasksView android:layout_gravity="bottom" android:id="@id/masks_wrap_masks_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="260.0dip" />
-        <com.vk.cameraui.CameraGridView android:id="@id/story_camera_grid_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+        <com.vk.stories.masks.MasksView
+            android:id="@id/masks_wrap_masks_view"
+            android:layout_width="fill_parent"
+            android:layout_height="260.0dip"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+
+        <com.vk.cameraui.CameraGridView
+            android:id="@id/story_camera_grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
     </com.vk.cameraui.widgets.masks.MasksWrap>
-    <FrameLayout android:id="@id/live_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <FrameLayout android:id="@id/editor_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@id/live_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:id="@id/editor_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
     <include layout="@layout/create_camera_camera_view_rotation" />
 </merge>

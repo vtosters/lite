@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.imageloader.view.VKImageView android:layout_gravity="start|center|top" android:id="@id/icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="12.0dip" />
-    <LinearLayout android:orientation="vertical" android:id="@id/text_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="64.0dip" android:layout_marginEnd="40.0dip">
-        <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="@font/roboto_medium" style="@style/VKUIText.Text" />
-        <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/roboto_regular" style="@style/VKUIText.Subhead1" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/icon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="start|center|top"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginBottom="12.0dip" />
+
+    <LinearLayout
+        android:id="@id/text_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginEnd="40.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/title"
+            style="@style/VKUIText.Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="2"
+            android:textColor="?text_primary" />
+
+        <TextView
+            android:id="@id/subtitle"
+            style="@style/VKUIText.Subhead1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:textColor="?text_primary" />
     </LinearLayout>
-    <TextView android:textColor="?text_primary" android:gravity="end" android:layout_gravity="end|center|top" android:id="@id/timerView" android:layout_width="46.0dip" android:layout_height="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/ic_arrow_24" android:layout_marginEnd="52.0dip" />
-    <ImageView android:layout_gravity="end|center" android:id="@id/arrow" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/ic_arrow_24" android:layout_marginEnd="8.0dip" />
+
+    <TextView
+        android:id="@id/timerView"
+        android:layout_width="46.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end|center|top"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="52.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:gravity="end"
+        android:src="@drawable/ic_arrow_24"
+        android:textColor="?text_primary" />
+
+    <ImageView
+        android:id="@id/arrow"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:src="@drawable/ic_arrow_24" />
 </merge>

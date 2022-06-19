@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:ellipsize="end" android:gravity="center" android:id="@id/post_open_button" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/vkim_msg_list_wall_post_open" android:singleLine="true" android:includeFontPadding="false" style="@style/VkIm.MsgPart.WallPost.Button"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/post_open_button"
+    style="@style/VkIm.MsgPart.WallPost.Button"
+    android:layout_width="fill_parent"
+    android:layout_height="32.0dip"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:singleLine="true"
+    android:text="@string/vkim_msg_list_wall_post_open" />

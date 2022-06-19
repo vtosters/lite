@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/attach" android:paddingTop="@dimen/newsfeed_single_photo_top_space" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.newsfeed.FrescoImageView android:layout_gravity="center" android:id="@id/photo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_photo" />
-    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/attached_goods_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:src="@drawable/ic_market_12_white_with_bg" android:importantForAccessibility="no" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/attach"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/newsfeed_single_photo_top_space">
+
+    <com.vk.newsfeed.FrescoImageView
+        android:id="@id/photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="@string/accessibility_photo" />
+
+    <ImageView
+        android:id="@id/attached_goods_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom|center"
+        android:layout_margin="8.0dip"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_market_12_white_with_bg"
+        android:visibility="gone" />
 </FrameLayout>

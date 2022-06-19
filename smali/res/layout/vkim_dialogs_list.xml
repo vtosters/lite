@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/im_dialogs_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/dialogs_list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:overScrollMode="never" android:requiresFadingEdge="none" />
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress_view" android:visibility="invisible" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="?accent" app:matProg_progressIndeterminate="true" />
-    <ViewStub android:id="@id/dialogs_empty_all" android:layout="@layout/vkim_dialogs_list_empty_main" android:inflatedId="@id/dialogs_empty_all" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <ViewStub android:layout_gravity="center" android:id="@id/dialogs_empty_unread" android:layout="@layout/vkim_dialogs_list_empty_unread" android:inflatedId="@id/dialogs_empty_unread" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <ViewStub android:layout_gravity="center" android:id="@id/dialogs_empty_requests" android:layout="@layout/vkim_dialogs_list_empty_requests" android:inflatedId="@id/dialogs_empty_requests" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vkim_toolbar_height_half_inverse" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/im_dialogs_list_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/dialogs_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/progress_view"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:matProg_barColor="?accent"
+        app:matProg_progressIndeterminate="true" />
+
+    <ViewStub
+        android:id="@id/dialogs_empty_all"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inflatedId="@id/dialogs_empty_all"
+        android:layout="@layout/vkim_dialogs_list_empty_main" />
+
+    <ViewStub
+        android:id="@id/dialogs_empty_unread"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:inflatedId="@id/dialogs_empty_unread"
+        android:layout="@layout/vkim_dialogs_list_empty_unread" />
+
+    <ViewStub
+        android:id="@id/dialogs_empty_requests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/vkim_toolbar_height_half_inverse"
+        android:inflatedId="@id/dialogs_empty_requests"
+        android:layout="@layout/vkim_dialogs_list_empty_requests" />
 </FrameLayout>

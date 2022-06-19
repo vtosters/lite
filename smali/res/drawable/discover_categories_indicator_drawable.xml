@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<inset android:insetLeft="8.0dip" android:insetRight="8.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="8.0dip"
+    android:insetRight="8.0dip">
     <shape>
         <corners android:radius="1.0dip" />
         <solid android:color="?accent" />

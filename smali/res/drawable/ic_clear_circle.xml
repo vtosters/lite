@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:gravity="fill">
         <shape android:shape="oval">
             <solid android:color="#1e99a2ad" />
         </shape>
     </item>
-    <item android:gravity="center" android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
-        <bitmap android:gravity="center" android:src="@drawable/ic_close_16" android:tint="?icon_outline_medium" />
+    <item
+        android:bottom="2.0dip"
+        android:gravity="center"
+        android:left="2.0dip"
+        android:right="2.0dip"
+        android:top="2.0dip">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_close_16"
+            android:tint="?icon_outline_medium" />
     </item>
     <item>
         <ripple android:color="?background_highlighted">

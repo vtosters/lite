@@ -1,15 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/content" android:background="?content_tint_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.media.player.video.view.VideoTextureView android:id="@id/video_display" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.vk.imageloader.view.VKImageView android:id="@id/preview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:actualImageScaleType="centerCrop" app:layout_constraintDimensionRatio="16:9" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImageScaleType="fitXY" />
-    <com.vk.libvideo.ui.VideoRestrictionView android:id="@id/catalog_video_large_item_restriction" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:vrv_corner_radius="8.0dip" app:vrv_size="medium" />
-    <LinearLayout android:layout_gravity="end|center|top" android:id="@id/duration_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent">
-        <com.vk.libvideo.ui.DurationView android:id="@id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-        <com.vk.libvideo.live.views.spectators.SpectatorsInlineView android:id="@id/spectators" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?content_tint_background">
+
+    <com.vk.media.player.video.view.VideoTextureView
+        android:id="@id/video_display"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImageScaleType="fitXY" />
+
+    <com.vk.libvideo.ui.VideoRestrictionView
+        android:id="@id/catalog_video_large_item_restriction"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:vrv_corner_radius="8.0dip"
+        app:vrv_size="medium" />
+
+    <LinearLayout
+        android:id="@id/duration_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center|top"
+        android:layout_margin="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.vk.libvideo.ui.DurationView
+            android:id="@id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.vk.libvideo.live.views.spectators.SpectatorsInlineView
+            android:id="@id/spectators"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
     </LinearLayout>
-    <View android:id="@id/sound_control" android:background="@drawable/ic_sound_off_shadow_48" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@id/play" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_button_48" android:contentDescription="@string/catalog_product_video_play" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.vk.libvideo.ui.PlayButton android:id="@id/replay" android:background="@drawable/highlight_video_play" android:visibility="gone" android:layout_width="72.0dip" android:layout_height="72.0dip" android:src="@drawable/ic_replay_36" android:scaleType="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.vk.libvideo.ui.VideoErrorView android:id="@id/error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@id/sound_control"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:background="@drawable/ic_sound_off_shadow_48"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/catalog_product_video_play"
+        android:src="@drawable/ic_play_button_48"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.libvideo.ui.PlayButton
+        android:id="@id/replay"
+        android:layout_width="72.0dip"
+        android:layout_height="72.0dip"
+        android:background="@drawable/highlight_video_play"
+        android:scaleType="center"
+        android:src="@drawable/ic_replay_36"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.libvideo.ui.VideoErrorView
+        android:id="@id/error_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

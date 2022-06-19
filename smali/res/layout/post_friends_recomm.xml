@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip">
-        <TextView android:textSize="13.0dip" android:textColor="?text_subhead" android:gravity="center_vertical" android:id="@id/title" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" />
-        <TextView android:textSize="14.0dip" android:textColor="?control_foreground" android:gravity="center" android:layout_gravity="end" android:id="@id/recom_friends_btn" android:background="@drawable/highlight" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/show_all_friends" android:includeFontPadding="false" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:fontFamily="@string/font_family_medium"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/post_side_padding"
+            android:paddingRight="@dimen/post_side_padding"
+            android:textAllCaps="true"
+            android:textColor="?text_subhead"
+            android:textSize="13.0dip" />
+
+        <TextView
+            android:id="@id/recom_friends_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/highlight"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/post_side_padding"
+            android:paddingRight="@dimen/post_side_padding"
+            android:text="@string/show_all_friends"
+            android:textColor="?control_foreground"
+            android:textSize="14.0dip" />
     </FrameLayout>
-    <com.vk.lists.RecyclerPaginatedView android:id="@id/recom_friends_list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="258.0dip" />
+
+    <com.vk.lists.RecyclerPaginatedView
+        android:id="@id/recom_friends_list"
+        android:layout_width="fill_parent"
+        android:layout_height="258.0dip"
+        android:clipToPadding="false" />
 </LinearLayout>

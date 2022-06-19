@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:id="@id/attach_appbar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_alternate_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:collapseIcon="@drawable/ic_back_collapse" app:titleTextColor="?text_muted" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/attach_appbar_layout"
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:background="?header_alternate_background"
+            app:collapseIcon="@drawable/ic_back_collapse"
+            app:titleTextColor="?text_muted" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.vk.lists.RecyclerPaginatedView android:id="@id/attach_recycler_view" android:background="?background_content" android:paddingBottom="20.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    <FrameLayout android:layout_gravity="bottom" android:id="@id/attach_counter_view_wrapper" android:background="?background_content" android:paddingTop="@dimen/picker_attach_btn_top_bot_space" android:paddingBottom="@dimen/picker_attach_btn_top_bot_space" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/picker_attach_btn_height" android:paddingStart="@dimen/picker_attach_btn_left_right_space" android:paddingEnd="@dimen/picker_attach_btn_left_right_space">
-        <com.vk.attachpicker.widget.AttachCounterView android:layout_gravity="bottom" android:id="@id/attach_counter_view" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/VKUIButton.Primary.Big" />
+
+    <com.vk.lists.RecyclerPaginatedView
+        android:id="@id/attach_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8.0dip"
+        android:background="?background_content"
+        android:paddingBottom="20.0dip"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:id="@id/attach_counter_view_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/picker_attach_btn_height"
+        android:layout_gravity="bottom"
+        android:background="?background_content"
+        android:paddingStart="@dimen/picker_attach_btn_left_right_space"
+        android:paddingTop="@dimen/picker_attach_btn_top_bot_space"
+        android:paddingEnd="@dimen/picker_attach_btn_left_right_space"
+        android:paddingBottom="@dimen/picker_attach_btn_top_bot_space"
+        android:visibility="gone">
+
+        <com.vk.attachpicker.widget.AttachCounterView
+            android:id="@id/attach_counter_view"
+            style="@style/VKUIButton.Primary.Big"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom" />
     </FrameLayout>
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow" android:visibility="gone" style="@style/AppBarShadow" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow"
+        style="@style/AppBarShadow"
+        android:visibility="gone" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

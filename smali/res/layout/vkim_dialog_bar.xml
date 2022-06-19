@@ -1,14 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="horizontal" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:paddingStart="16.0dip" android:paddingEnd="0.0dip">
-        <com.vk.im.ui.views.FrescoImageView android:layout_gravity="top" android:id="@id/content_icon" android:layout_width="@dimen/vkim_cnv_bar_icon_size" android:layout_height="@dimen/vkim_cnv_bar_icon_size" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:contentDescription="@null" android:layout_marginEnd="12.0dip" app:vkim_isCircle="true" app:vkim_scaleType="fit_xy" />
-        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="12.0dip" android:layout_weight="1.0" android:layout_marginEnd="4.0dip">
-            <com.vk.im.ui.views.span.SpanPressableTextView android:textSize="14.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/content_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="6" android:fontFamily="@string/fontRobotoRegular" />
-            <com.vk.im.ui.views.ConversationBarButtonsView android:id="@id/content_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" app:vkim_divider_size="8.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48.0dip"
+        android:orientation="horizontal"
+        android:paddingStart="16.0dip"
+        android:paddingEnd="0.0dip">
+
+        <com.vk.im.ui.views.FrescoImageView
+            android:id="@id/content_icon"
+            android:layout_width="@dimen/vkim_cnv_bar_icon_size"
+            android:layout_height="@dimen/vkim_cnv_bar_icon_size"
+            android:layout_gravity="top"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginEnd="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:contentDescription="@null"
+            app:vkim_isCircle="true"
+            app:vkim_scaleType="fit_xy" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.0dip"
+            android:layout_marginEnd="4.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <com.vk.im.ui.views.span.SpanPressableTextView
+                android:id="@id/content_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:ellipsize="end"
+                android:fontFamily="@string/fontRobotoRegular"
+                android:gravity="start|center"
+                android:maxLines="6"
+                android:textColor="?text_subhead"
+                android:textSize="14.0sp" />
+
+            <com.vk.im.ui.views.ConversationBarButtonsView
+                android:id="@id/content_buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                app:vkim_divider_size="8.0dip" />
         </LinearLayout>
-        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="top" android:id="@id/content_hide" android:background="@drawable/vkim_ripple_dark_borderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="4.0dip" android:src="@drawable/ic_cancel_24" android:scaleType="centerInside" android:tint="?icon_secondary" android:contentDescription="@null" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/content_hide"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_gravity="top"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/vkim_ripple_dark_borderless"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_cancel_24"
+            android:tint="?icon_secondary" />
     </LinearLayout>
-    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:text="@string/vkim_loading" android:singleLine="true" android:fontFamily="@string/fontRobotoRegular" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
-    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:singleLine="true" android:fontFamily="@string/fontRobotoRegular" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+
+    <TextView
+        android:id="@id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:ellipsize="end"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:gravity="start|center"
+        android:minHeight="48.0dip"
+        android:paddingStart="16.0dip"
+        android:paddingEnd="16.0dip"
+        android:singleLine="true"
+        android:text="@string/vkim_loading"
+        android:textColor="?text_subhead"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:ellipsize="end"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:gravity="start|center"
+        android:minHeight="48.0dip"
+        android:paddingStart="16.0dip"
+        android:paddingEnd="16.0dip"
+        android:singleLine="true"
+        android:textColor="?text_subhead"
+        android:textSize="14.0sp" />
 </FrameLayout>

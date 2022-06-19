@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CardsSectionHeader"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/title"
+    style="@style/CardsSectionHeader"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" />

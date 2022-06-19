@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:scaleType="centerCrop" />
-    <TextView android:gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:maxLines="3" style="@style/VKUIText.Title1" />
-    <TextView android:textSize="14.0sp" android:textColor="?text_secondary" android:gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/game_add_to_menu_subtitle" android:maxLines="3" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/fontRobotoRegular" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        android:layout_width="72.0dip"
+        android:layout_height="72.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:gravity="center_horizontal"
+        android:maxLines="3" />
+
+    <TextView
+        android:id="@id/subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/fontRobotoRegular"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4.0sp"
+        android:maxLines="3"
+        android:text="@string/game_add_to_menu_subtitle"
+        android:textColor="?text_secondary"
+        android:textSize="14.0sp" />
 </LinearLayout>

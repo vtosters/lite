@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout style="@style/UserSmallRoot"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" app:placeholderImage="@drawable/user_placeholder" style="@style/UserSmallPhoto" />
-    <TextView android:textColor="?text_muted" android:id="@id/title" style="@style/UserSmallTitle" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UserSmallRoot">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        style="@style/UserSmallPhoto"
+        app:placeholderImage="@drawable/user_placeholder" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/UserSmallTitle"
+        android:textColor="?text_muted" />
+
     <ImageView style="@style/Online.Small" />
 </RelativeLayout>

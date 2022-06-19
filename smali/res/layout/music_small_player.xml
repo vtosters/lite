@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="@drawable/highlight" android:weightSum="1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ProgressBar android:id="@id/player_view_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/drawer_player_progress" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
-    <com.vk.music.view.ThumbsImageView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" app:roundedCornerRadius="@dimen/music_image_rounding_corners" app:tiv_background_image="?placeholder_icon_background" app:tiv_border_width="0.5dip" app:tiv_empty_resource="@drawable/ic_song_24" app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
-    <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:ellipsize="end" android:gravity="center|left" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginStart="80.0dip" android:layout_marginEnd="100.0dip" />
-    <ImageButton android:layout_gravity="center|right" android:id="@id/play_pause" android:background="@drawable/highlight_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@string/music_talkback_play" android:layout_marginEnd="52.0dip" />
-    <ImageButton android:layout_gravity="center|right" android:id="@id/next" android:background="@drawable/highlight_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@string/music_talkback_next" android:layout_marginEnd="4.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/highlight"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="1.0">
+
+    <ProgressBar
+        android:id="@id/player_view_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressDrawable="@drawable/drawer_player_progress" />
+
+    <com.vk.music.view.ThumbsImageView
+        android:id="@id/image"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        app:roundedCornerRadius="@dimen/music_image_rounding_corners"
+        app:tiv_background_image="?placeholder_icon_background"
+        app:tiv_border_width="0.5dip"
+        app:tiv_empty_resource="@drawable/ic_song_24"
+        app:tiv_empty_tint="?placeholder_icon_foreground_secondary" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="80.0dip"
+        android:layout_marginEnd="100.0dip"
+        android:layout_weight="1.0"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="?text_primary"
+        android:textSize="16.0dip" />
+
+    <ImageButton
+        android:id="@id/play_pause"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center|right"
+        android:layout_marginEnd="52.0dip"
+        android:background="@drawable/highlight_circle"
+        android:contentDescription="@string/music_talkback_play" />
+
+    <ImageButton
+        android:id="@id/next"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center|right"
+        android:layout_marginEnd="4.0dip"
+        android:background="@drawable/highlight_circle"
+        android:contentDescription="@string/music_talkback_next" />
 </FrameLayout>

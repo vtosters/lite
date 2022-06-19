@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
             <solid android:color="@color/white" />
         </shape>
     </item>
     <item>
-        <bitmap android:src="@drawable/ic_badge_record_view_16" android:tint="@color/steel_gray_400" />
+        <bitmap
+            android:src="@drawable/ic_badge_record_view_16"
+            android:tint="@color/steel_gray_400" />
     </item>
 </layer-list>

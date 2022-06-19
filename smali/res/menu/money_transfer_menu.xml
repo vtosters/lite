@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_money_send_outline_28" android:id="@id/money_transfer_send" android:title="@string/money_transfer_send_money" app:menuTint="?accent" />
-    <item android:icon="@drawable/ic_money_request_outline_28" android:id="@id/money_transfer_request" android:title="@string/money_transfer_send_request" app:menuTint="?accent" />
-    <item android:icon="@drawable/ic_link_circle_outline_28" android:id="@id/money_transfer_link" android:title="@string/money_transfer_link" app:menuTint="?accent" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/money_transfer_send"
+        android:icon="@drawable/ic_money_send_outline_28"
+        android:title="@string/money_transfer_send_money"
+        app:menuTint="?accent" />
+    <item
+        android:id="@id/money_transfer_request"
+        android:icon="@drawable/ic_money_request_outline_28"
+        android:title="@string/money_transfer_send_request"
+        app:menuTint="?accent" />
+    <item
+        android:id="@id/money_transfer_link"
+        android:icon="@drawable/ic_link_circle_outline_28"
+        android:title="@string/money_transfer_link"
+        app:menuTint="?accent" />
 </menu>

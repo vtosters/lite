@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="64.0dip" android:foreground="@drawable/rounded_list_selector"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/image" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="12.0dip" app:actualImageScaleType="centerCrop" app:placeholderImage="@drawable/user_placeholder" app:roundedCornerRadius="24.0dip" />
-    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
-        <TextView android:textSize="16.0dip" android:textColor="?text_primary" android:id="@id/text_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
-        <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/text_points" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="64.0dip"
+    android:background="?background_content"
+    android:foreground="@drawable/rounded_list_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/image"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="12.0dip"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/user_placeholder"
+        app:roundedCornerRadius="24.0dip" />
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/text_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="?text_primary"
+            android:textSize="16.0dip" />
+
+        <TextView
+            android:id="@id/text_points"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="14.0dip" />
     </LinearLayout>
-    <ImageView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/image_place" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" />
+
+    <ImageView
+        android:id="@id/image_place"
+        android:layout_width="22.0dip"
+        android:layout_height="22.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:gravity="center" />
 </LinearLayout>

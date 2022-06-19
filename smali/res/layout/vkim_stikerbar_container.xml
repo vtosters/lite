@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/sticker_bar_cl" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:layout_gravity="top" android:id="@id/separator" android:background="?separator_alpha" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
-    <com.vk.stickers.LongtapRecyclerView android:id="@id/stickers_recycler_view" android:background="?modal_card_background" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/sticker_bar_cl"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_gravity="top"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:background="?separator_alpha" />
+
+    <com.vk.stickers.LongtapRecyclerView
+        android:id="@id/stickers_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.0dip"
+        android:background="?modal_card_background"
+        android:clipToPadding="false"
+        android:paddingTop="16.0dip"
+        android:paddingBottom="16.0dip" />
 </FrameLayout>

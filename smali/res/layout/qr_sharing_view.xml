@@ -1,18 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ImageView android:id="@id/qr_image" android:background="@drawable/bg_white_rounded20" android:padding="16.0dip" android:layout_width="254.0dip" android:layout_height="254.0dip" android:layout_marginTop="16.0dip" />
-        <com.vk.core.view.TintTextView android:textSize="14.0sp" android:textColor="?text_secondary" android:id="@id/my_qr_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:text="@string/qr_share_explain" android:lines="2" android:includeFontPadding="false" android:drawablePadding="14.0dip" android:lineSpacingExtra="3.0sp" android:drawableStart="@drawable/ic_qrscan_24" app:drawableTint="?icon_outline_secondary" />
-        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="26.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
-            <FrameLayout android:id="@id/share" android:background="@drawable/vkui_bg_button_white_modal" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/space_between" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
-                <com.vk.core.view.TintTextView android:textSize="13.0sp" android:textColor="?button_tertiary_foreground" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/qr_share_text" android:paddingTop="0.5dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/share" android:includeFontPadding="false" android:drawablePadding="8.0dip" android:textAllCaps="true" android:drawableStart="@drawable/ic_share_24" android:fontFamily="@font/roboto_medium" app:drawableTint="?button_tertiary_foreground" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@id/qr_image"
+            android:layout_width="254.0dip"
+            android:layout_height="254.0dip"
+            android:layout_marginTop="16.0dip"
+            android:background="@drawable/bg_white_rounded20"
+            android:padding="16.0dip" />
+
+        <com.vk.core.view.TintTextView
+            android:id="@id/my_qr_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26.0dip"
+            android:drawableStart="@drawable/ic_qrscan_24"
+            android:drawablePadding="14.0dip"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="3.0sp"
+            android:lines="2"
+            android:text="@string/qr_share_explain"
+            android:textColor="?text_secondary"
+            android:textSize="14.0sp"
+            app:drawableTint="?icon_outline_secondary" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="26.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginBottom="16.0dip">
+
+            <FrameLayout
+                android:id="@id/share"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/vkui_bg_button_white_modal"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/space_between"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.vk.core.view.TintTextView
+                    android:id="@id/qr_share_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableStart="@drawable/ic_share_24"
+                    android:drawablePadding="8.0dip"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingTop="0.5dip"
+                    android:text="@string/share"
+                    android:textAllCaps="true"
+                    android:textColor="?button_tertiary_foreground"
+                    android:textSize="13.0sp"
+                    app:drawableTint="?button_tertiary_foreground" />
             </FrameLayout>
-            <Space android:id="@id/space_between" android:layout_width="8.0dip" android:layout_height="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
-            <FrameLayout android:id="@id/save" android:background="@drawable/vkui_bg_button_white_modal" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/space_between" app:layout_constraintTop_toTopOf="parent">
-                <com.vk.core.view.TintTextView android:textSize="13.0sp" android:textColor="?button_tertiary_foreground" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/qr_save_text" android:paddingTop="0.5dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/save" android:includeFontPadding="false" android:drawablePadding="8.0dip" android:textAllCaps="true" android:drawableStart="@drawable/ic_download_24" android:fontFamily="@font/roboto_medium" app:drawableTint="?button_tertiary_foreground" />
+
+            <Space
+                android:id="@id/space_between"
+                android:layout_width="8.0dip"
+                android:layout_height="0.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@id/save"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/vkui_bg_button_white_modal"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/space_between"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.vk.core.view.TintTextView
+                    android:id="@id/qr_save_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableStart="@drawable/ic_download_24"
+                    android:drawablePadding="8.0dip"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingTop="0.5dip"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textColor="?button_tertiary_foreground"
+                    android:textSize="13.0sp"
+                    app:drawableTint="?button_tertiary_foreground" />
             </FrameLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <TextView android:id="@id/show_qr_promo" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="@string/qr_what_is_it" style="@style/VKUIButton.Tertiary" />
+
+        <TextView
+            android:id="@id/show_qr_promo"
+            style="@style/VKUIButton.Tertiary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/qr_what_is_it" />
     </LinearLayout>
 </merge>

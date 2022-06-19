@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView android:id="@id/recycle" android:padding="16.0dip" android:paddingTop="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="126.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/recycle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:minHeight="126.0dip"
+    android:padding="16.0dip"
+    android:paddingTop="8.0dip" />

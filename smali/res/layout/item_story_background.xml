@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip" android:foreground="@drawable/bg_story_background_selectable"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.imageloader.view.VKImageView android:layout_gravity="center" android:id="@id/preview" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40.0dip"
+    android:layout_height="40.0dip"
+    android:foreground="@drawable/bg_story_background_selectable">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/preview"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center" />
 </FrameLayout>

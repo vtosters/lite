@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/vkim_swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/vkim_recycler_view" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/vkim_swipe_refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/vkim_recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:scrollbars="vertical" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/vkim_progress" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" app:matProg_barColor="@color/accent_blue" app:matProg_progressIndeterminate="true" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/subhead_gray" android:gravity="center" android:id="@id/vkim_empty_list_view" android:padding="24.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:lineSpacingExtra="1.0sp" android:fontFamily="@font/roboto_regular" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@id/vkim_progress"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:matProg_barColor="@color/accent_blue"
+        app:matProg_progressIndeterminate="true" />
+
+    <TextView
+        android:id="@id/vkim_empty_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:lineSpacingExtra="1.0sp"
+        android:padding="24.0dip"
+        android:textColor="@color/subhead_gray"
+        android:textSize="16.0sp"
+        android:visibility="invisible" />
 </FrameLayout>

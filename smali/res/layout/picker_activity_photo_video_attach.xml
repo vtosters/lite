@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.attachpicker.widget.TopShadowLinearLayout android:orientation="vertical" android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.attachpicker.widget.ToolbarContainer android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
-        <FrameLayout android:id="@id/fl_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <FrameLayout android:layout_gravity="bottom" android:id="@id/fl_bottom_button" android:layout_width="fill_parent" android:layout_height="76.0dip">
-            <View android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" android:layout_width="fill_parent" android:layout_height="8.0dip" />
-            <FrameLayout android:layout_gravity="bottom" android:background="?background_content" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="68.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
-                <com.vk.attachpicker.widget.AttachCounterView android:id="@id/acv_bottom_panel_counter" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/VKUIButton.Primary.Big" />
-                <TextView android:gravity="center" android:id="@id/tv_bottom_panel_cancel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/picker_cancel" android:maxLines="1" android:includeFontPadding="false" style="@style/VKUIButton.Secondary.Big" />
+<com.vk.attachpicker.widget.TopShadowLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content"
+    android:orientation="vertical">
+
+    <com.vk.attachpicker.widget.ToolbarContainer
+        android:id="@id/toolbar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0px"
+        android:layout_weight="1.0">
+
+        <FrameLayout
+            android:id="@id/fl_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <FrameLayout
+            android:id="@id/fl_bottom_button"
+            android:layout_width="fill_parent"
+            android:layout_height="76.0dip"
+            android:layout_gravity="bottom">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="8.0dip"
+                android:background="@drawable/picker_bg_attach_bottom_toolbar_shadow" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="68.0dip"
+                android:layout_gravity="bottom"
+                android:background="?background_content"
+                android:paddingStart="16.0dip"
+                android:paddingTop="12.0dip"
+                android:paddingEnd="16.0dip"
+                android:paddingBottom="12.0dip">
+
+                <com.vk.attachpicker.widget.AttachCounterView
+                    android:id="@id/acv_bottom_panel_counter"
+                    style="@style/VKUIButton.Primary.Big"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@id/tv_bottom_panel_cancel"
+                    style="@style/VKUIButton.Secondary.Big"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/picker_cancel" />
             </FrameLayout>
         </FrameLayout>
     </FrameLayout>

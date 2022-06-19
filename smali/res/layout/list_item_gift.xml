@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginTop="14.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="14.0dip" android:layout_alignParentLeft="true" app:placeholderImage="@drawable/user_placeholder" />
-    <com.vtosters.lite.ui.BadooTextView android:textSize="15.0dip" android:textColor="?accent" android:ellipsize="marquee" android:id="@id/username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.5dip" android:layout_marginRight="7.0dip" android:singleLine="true" android:layout_toLeftOf="@id/actions" android:layout_toRightOf="@id/photo" app:typeface="Medium" />
-    <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:id="@id/date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:singleLine="true" android:layout_toLeftOf="@id/actions" android:layout_below="@id/username" android:layout_alignLeft="@id/username" />
-    <ImageView android:id="@id/actions" android:layout_marginLeft="@dimen/post_side_padding_menu" android:layout_marginTop="4.0dip" android:layout_marginRight="@dimen/post_side_padding_btn" android:src="@drawable/ic_more_vertical_24" android:tint="?icon_tertiary" android:layout_alignParentTop="true" android:contentDescription="@string/accessibility_actions" style="@style/UserMediumAction" />
-    <FrameLayout android:id="@id/photo_wrap" android:background="@drawable/bg_gift_card" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:layout_below="@id/photo" android:layout_centerHorizontal="true">
-        <com.vk.imageloader.view.VKImageView android:id="@id/gift" android:layout_width="176.0dip" android:layout_height="176.0dip" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12.0dip">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/post_side_padding"
+        android:layout_marginTop="14.0dip"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginBottom="14.0dip"
+        app:placeholderImage="@drawable/user_placeholder" />
+
+    <com.vtosters.lite.ui.BadooTextView
+        android:id="@id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.5dip"
+        android:layout_marginRight="7.0dip"
+        android:layout_toLeftOf="@id/actions"
+        android:layout_toRightOf="@id/photo"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textColor="?accent"
+        android:textSize="15.0dip"
+        app:typeface="Medium" />
+
+    <TextView
+        android:id="@id/date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_alignLeft="@id/username"
+        android:layout_marginTop="1.0dip"
+        android:layout_toLeftOf="@id/actions"
+        android:singleLine="true"
+        android:textColor="?text_secondary"
+        android:textSize="14.0dip" />
+
+    <ImageView
+        android:id="@id/actions"
+        style="@style/UserMediumAction"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/post_side_padding_menu"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginRight="@dimen/post_side_padding_btn"
+        android:contentDescription="@string/accessibility_actions"
+        android:src="@drawable/ic_more_vertical_24"
+        android:tint="?icon_tertiary" />
+
+    <FrameLayout
+        android:id="@id/photo_wrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4.0dip"
+        android:background="@drawable/bg_gift_card"
+        android:padding="8.0dip">
+
+        <com.vk.imageloader.view.VKImageView
+            android:id="@id/gift"
+            android:layout_width="176.0dip"
+            android:layout_height="176.0dip" />
     </FrameLayout>
-    <TextView android:textSize="15.0dip" android:textColor="?text_muted" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/post_side_padding" android:layout_marginBottom="5.0dip" android:layout_below="@id/photo_wrap" android:lineSpacingExtra="4.299988dip" />
-    <TextView android:textSize="14.0dip" android:textColor="?text_secondary" android:gravity="center" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginTop="-2.3299866dip" android:layout_marginRight="@dimen/post_side_padding" android:layout_marginBottom="5.0dip" android:text="@string/gifts_owner_privacy" android:layout_below="@id/title" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo_wrap"
+        android:layout_marginLeft="@dimen/post_side_padding"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginRight="@dimen/post_side_padding"
+        android:layout_marginBottom="5.0dip"
+        android:gravity="center"
+        android:lineSpacingExtra="4.299988dip"
+        android:textColor="?text_muted"
+        android:textSize="15.0dip" />
+
+    <TextView
+        android:id="@id/subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="@dimen/post_side_padding"
+        android:layout_marginTop="-2.3299866dip"
+        android:layout_marginRight="@dimen/post_side_padding"
+        android:layout_marginBottom="5.0dip"
+        android:gravity="center"
+        android:text="@string/gifts_owner_privacy"
+        android:textColor="?text_secondary"
+        android:textSize="14.0dip" />
 </RelativeLayout>

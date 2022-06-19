@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_add_24" android:id="@id/documents_add" android:visible="false" android:title="@string/add" android:showAsAction="always" app:menuTint="?header_tint" app:showAsAction="always" />
-    <item android:icon="@drawable/ic_search_24" android:id="@id/documents_search" android:visible="false" android:title="@string/search" android:showAsAction="always" app:menuTint="?header_tint" app:showAsAction="always" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/documents_add"
+        android:icon="@drawable/ic_add_24"
+        android:showAsAction="always"
+        android:title="@string/add"
+        android:visible="false"
+        app:menuTint="?header_tint"
+        app:showAsAction="always" />
+    <item
+        android:id="@id/documents_search"
+        android:icon="@drawable/ic_search_24"
+        android:showAsAction="always"
+        android:title="@string/search"
+        android:visible="false"
+        app:menuTint="?header_tint"
+        app:showAsAction="always" />
 </menu>

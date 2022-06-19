@@ -1,12 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.widget.FluidHorizontalLayout android:paddingTop="2.0dip" android:paddingBottom="8.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/post_side_padding" android:paddingEnd="@dimen/post_side_padding_menu"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:layout_gravity="start" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" app:vk_layout_isFluid="true">
-        <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="start" android:id="@id/photo" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="2.0dip" app:placeholderImage="@drawable/user_placeholder" app:placeholderImageScaleType="fitXY" />
-        <com.vtosters.lite.ui.OverlayLinearLayout android:gravity="center_vertical" android:layout_gravity="start" android:orientation="vertical" android:id="@id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="48.0dip" android:paddingEnd="16.0dip" app:overlay="@drawable/highlight_post_header">
-            <TextView android:textSize="16.0sp" android:textColor="?newsfeed_post_title_color" android:ellipsize="end" android:layout_gravity="start|center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/font_family_medium" android:letterSpacing="0.0105" style="@style/VKUIText.Title2" />
-            <TextView android:textSize="13.0sp" android:textColor="?newsfeed_post_date_color" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:minHeight="16.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@font/roboto_regular" android:letterSpacing="0.01916" />
+<com.vk.core.widget.FluidHorizontalLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/post_side_padding"
+    android:paddingTop="2.0dip"
+    android:paddingEnd="@dimen/post_side_padding_menu"
+    android:paddingBottom="8.0dip">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="12.0dip"
+        android:clipChildren="false"
+        app:vk_layout_isFluid="true">
+
+        <com.vk.imageloader.view.VKCircleImageView
+            android:id="@id/photo"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_gravity="start"
+            android:layout_marginTop="2.0dip"
+            app:placeholderImage="@drawable/user_placeholder"
+            app:placeholderImageScaleType="fitXY" />
+
+        <com.vtosters.lite.ui.OverlayLinearLayout
+            android:id="@id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="48.0dip"
+            android:paddingEnd="16.0dip"
+            app:overlay="@drawable/highlight_post_header">
+
+            <TextView
+                android:id="@id/title"
+                style="@style/VKUIText.Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:ellipsize="end"
+                android:fontFamily="@string/font_family_medium"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.0105"
+                android:singleLine="true"
+                android:textColor="?newsfeed_post_title_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="1.0dip"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start|center"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.01916"
+                android:minHeight="16.0dip"
+                android:singleLine="true"
+                android:textColor="?newsfeed_post_date_color"
+                android:textSize="13.0sp" />
         </com.vtosters.lite.ui.OverlayLinearLayout>
     </FrameLayout>
-    <ImageView android:layout_gravity="start" android:id="@id/menu" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_more_vertical_24" android:scaleType="centerInside" android:tint="?icon_tertiary" android:contentDescription="@string/common_actions" />
+
+    <ImageView
+        android:id="@id/menu"
+        android:layout_width="36.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="start"
+        android:contentDescription="@string/common_actions"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_more_vertical_24"
+        android:tint="?icon_tertiary" />
 </com.vk.core.widget.FluidHorizontalLayout>

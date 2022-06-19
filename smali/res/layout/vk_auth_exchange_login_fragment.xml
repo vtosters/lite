@@ -1,12 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="?vk_landing_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/logo" android:layout_width="@dimen/vk_auth_logo_size_mini" android:layout_height="@dimen/vk_auth_logo_size_mini" android:layout_marginTop="56.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.44" layout="@layout/vk_auth_logo" />
-    <androidx.recyclerview.widget.RecyclerView android:gravity="center_horizontal" android:id="@id/recycler" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:layout_constraintBottom_toTopOf="@id/continue_btn" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
-    <com.vk.auth.ui.VkLoadingButton android:id="@id/continue_btn" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginTop="8.0dip" android:layout_marginStart="16.0dip" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/settings" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/recycler" app:layout_constraintVertical_chainStyle="packed" style="@style/VkAuth.Button.Landing.Exchange.Primary" />
-    <ImageButton android:id="@id/settings" android:layout_width="48.0dip" android:layout_height="44.0dip" android:src="@drawable/vk_ic_settings_24" android:tint="?vk_landing_secondary_button_foreground" android:contentDescription="@string/vk_auth_exchange_settings" android:layout_marginStart="12.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="@id/continue_btn" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/continue_btn" app:layout_constraintTop_toTopOf="@id/continue_btn" style="@style/VkAuth.Button.Landing.Secondary" />
-    <com.vk.auth.ui.VkAuthTextView android:id="@id/use_another_account" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="4.0dip" android:text="@string/vk_auth_use_another_account" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/register" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/VkAuth.Button.Landing.Tertiary" />
-    <com.vk.auth.ui.VkAuthTextView android:id="@id/register" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="8.0dip" android:text="@string/vk_auth_register" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/VkAuth.Button.Landing.Tertiary" />
-    <androidx.constraintlayout.widget.Group android:id="@id/disabled_settings_buttons" android:layout_width="0.0dip" android:layout_height="0.0dip" app:constraint_referenced_ids="use_another_account,register,continue_btn,settings" />
-    <com.vk.auth.ui.VkAuthTextView android:id="@id/settings_done" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="8.0dip" android:text="@string/vk_auth_exchange_users_done" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/VkAuth.Button.Landing.Tertiary" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?vk_landing_background">
+
+    <include
+        android:id="@id/logo"
+        layout="@layout/vk_auth_logo"
+        android:layout_width="@dimen/vk_auth_logo_size_mini"
+        android:layout_height="@dimen/vk_auth_logo_size_mini"
+        android:layout_marginTop="56.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/continue_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.vk.auth.ui.VkLoadingButton
+        android:id="@id/continue_btn"
+        style="@style/VkAuth.Button.Landing.Exchange.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="8.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/settings"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageButton
+        android:id="@id/settings"
+        style="@style/VkAuth.Button.Landing.Secondary"
+        android:layout_width="48.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:contentDescription="@string/vk_auth_exchange_settings"
+        android:src="@drawable/vk_ic_settings_24"
+        android:tint="?vk_landing_secondary_button_foreground"
+        app:layout_constraintBottom_toBottomOf="@id/continue_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/continue_btn"
+        app:layout_constraintTop_toTopOf="@id/continue_btn" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/use_another_account"
+        style="@style/VkAuth.Button.Landing.Tertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:text="@string/vk_auth_use_another_account"
+        app:layout_constraintBottom_toTopOf="@id/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/register"
+        style="@style/VkAuth.Button.Landing.Tertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="@string/vk_auth_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/disabled_settings_buttons"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:constraint_referenced_ids="use_another_account,register,continue_btn,settings" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/settings_done"
+        style="@style/VkAuth.Button.Landing.Tertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="@string/vk_auth_exchange_users_done"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

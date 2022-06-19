@@ -1,12 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="?text_primary" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/VKUIText.Title1" />
-    <TextView android:textColor="?text_subhead" android:gravity="center_horizontal" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/VKUIText.Subhead2" />
-    <EditText android:textColor="?text_primary" android:id="@id/input_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="16.0dip" android:maxLines="3" android:minLines="2" style="@style/VKUIEditText" />
-    <TextView android:textSize="16.0sp" android:id="@id/ok_button" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="44.0dip" android:includeFontPadding="false" style="@style/primary_button" />
-    <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="15.0sp" android:textStyle="normal" android:textColor="?accent" android:id="@id/tv_negative_btn" android:background="@drawable/highlight_radius_4" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="5.0sp" android:fontFamily="sans-serif-medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:letterSpacing="0.01" />
-        <TextView android:textSize="15.0sp" android:textStyle="normal" android:textColor="@drawable/selector_text_color_blue_disable" android:id="@id/tv_positive_btn" android:background="@drawable/highlight_radius_4" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="5.0sp" android:fontFamily="sans-serif-medium" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:letterSpacing="0.01" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="?text_primary" />
+
+    <TextView
+        android:id="@id/message"
+        style="@style/VKUIText.Subhead2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:gravity="center_horizontal"
+        android:textColor="?text_subhead" />
+
+    <EditText
+        android:id="@id/input_text"
+        style="@style/VKUIEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:maxLines="3"
+        android:minLines="2"
+        android:textColor="?text_primary" />
+
+    <TextView
+        android:id="@id/ok_button"
+        style="@style/primary_button"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:includeFontPadding="false"
+        android:textSize="16.0sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/tv_negative_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_radius_4"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="5.0sp"
+            android:paddingStart="16.0dip"
+            android:paddingTop="8.0dip"
+            android:paddingEnd="16.0dip"
+            android:paddingBottom="8.0dip"
+            android:textColor="?accent"
+            android:textSize="15.0sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/tv_positive_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_radius_4"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="5.0sp"
+            android:paddingStart="16.0dip"
+            android:paddingTop="8.0dip"
+            android:paddingEnd="16.0dip"
+            android:paddingBottom="8.0dip"
+            android:textColor="@drawable/selector_text_color_blue_disable"
+            android:textSize="15.0sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
     </LinearLayout>
 </LinearLayout>

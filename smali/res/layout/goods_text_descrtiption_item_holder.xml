@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="@dimen/good_description_padding_bottom" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="@dimen/good_description_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="?text_muted" android:layout_gravity="center_vertical" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:lineSpacingExtra="1.0sp" />
-    <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:layout_gravity="center_vertical" android:id="@android:id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="1.0sp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/post_side_padding"
+    android:paddingTop="@dimen/good_description_padding_bottom"
+    android:paddingRight="@dimen/post_side_padding"
+    android:paddingBottom="@dimen/good_description_padding_bottom">
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="1.0sp"
+        android:singleLine="true"
+        android:textColor="?text_muted"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@android:id/text2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="1.0sp"
+        android:textColor="?text_secondary"
+        android:textSize="13.0sp" />
 </LinearLayout>

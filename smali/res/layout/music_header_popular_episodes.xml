@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.widget.FluidHorizontalLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:gravity="center_vertical" android:paddingTop="5.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip" android:text="@string/music_podcast_popular_episodes" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:vk_layout_isFluid="true" style="@style/VKUIText.Title2" />
-    <TextView android:textSize="15.0sp" android:textColor="?control_foreground" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/music_show_all_btn" android:background="@drawable/highlight" android:paddingTop="1.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44.0dip" android:text="@string/music_podcast_show_all" android:includeFontPadding="false" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/VKUIText" />
+<com.vk.core.widget.FluidHorizontalLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <TextView
+        style="@style/VKUIText.Title2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="44.0dip"
+        android:paddingStart="16.0dip"
+        android:paddingTop="5.5dip"
+        android:paddingEnd="16.0dip"
+        android:text="@string/music_podcast_popular_episodes"
+        app:vk_layout_isFluid="true" />
+
+    <TextView
+        android:id="@id/music_show_all_btn"
+        style="@style/VKUIText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/highlight"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minHeight="44.0dip"
+        android:paddingStart="16.0dip"
+        android:paddingTop="1.5dip"
+        android:paddingEnd="16.0dip"
+        android:text="@string/music_podcast_show_all"
+        android:textColor="?control_foreground"
+        android:textSize="15.0sp" />
 </com.vk.core.widget.FluidHorizontalLayout>

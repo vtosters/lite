@@ -1,26 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:layout_scrollFlags="" app:title="@string/vkim_settings_appearance" style="@style/VkIm.Toolbar.Style.LargeWithBack" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            style="@style/VkIm.Toolbar.Style.LargeWithBack"
+            app:layout_scrollFlags=""
+            app:title="@string/vkim_settings_appearance" />
     </com.google.android.material.appbar.AppBarLayout>
-    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <FrameLayout android:id="@id/vkim_chat_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="220.0dip">
-                <com.vk.im.ui.views.FrescoImageView android:id="@id/dialog_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:vkim_scaleType="center_crop" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@id/vkim_chat_preview_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="220.0dip">
+
+                <com.vk.im.ui.views.FrescoImageView
+                    android:id="@id/dialog_background"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone"
+                    app:vkim_scaleType="center_crop" />
             </FrameLayout>
-            <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_chats_background_item" android:layout_marginTop="12.0dip" app:vkim_titleText="@string/vkim_settings_appearance_backgrounds" style="@style/VkIm.Settings.Label.Normal" />
+
+            <com.vk.im.ui.views.settings.LabelSettingsView
+                android:id="@id/vkim_chats_background_item"
+                style="@style/VkIm.Settings.Label.Normal"
+                android:layout_marginTop="12.0dip"
+                app:vkim_titleText="@string/vkim_settings_appearance_backgrounds" />
+
             <com.vk.im.ui.views.settings.DividerSettingsView style="@style/VkIm.Settings.Divider" />
-            <TextView android:textColor="?text_secondary" android:text="@string/vkim_settings_appearance_theme_title" style="@style/SettingsHeaderSection" />
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_light_theme_item_view" app:vkim_titleText="@string/vkim_settings_appearance_theme_light" style="@style/VkIm.Settings.Label.Normal" />
-                <ImageView android:layout_gravity="end|center" android:id="@id/vkim_light_theme_check_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?colorAccent" android:contentDescription="@null" android:layout_marginEnd="16.0dip" app:srcCompat="@drawable/ic_check_24" />
+
+            <TextView
+                style="@style/SettingsHeaderSection"
+                android:text="@string/vkim_settings_appearance_theme_title"
+                android:textColor="?text_secondary" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.vk.im.ui.views.settings.LabelSettingsView
+                    android:id="@id/vkim_light_theme_item_view"
+                    style="@style/VkIm.Settings.Label.Normal"
+                    app:vkim_titleText="@string/vkim_settings_appearance_theme_light" />
+
+                <ImageView
+                    android:id="@id/vkim_light_theme_check_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="16.0dip"
+                    android:contentDescription="@null"
+                    android:tint="?colorAccent"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_check_24" />
             </FrameLayout>
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vk.im.ui.views.settings.LabelSettingsView android:id="@id/vkim_dark_theme_item_view" app:vkim_titleText="@string/vkim_settings_appearance_theme_dark" style="@style/VkIm.Settings.Label.Normal" />
-                <ImageView android:layout_gravity="end|center" android:id="@id/vkim_dark_theme_check_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?colorAccent" android:contentDescription="@null" android:layout_marginEnd="16.0dip" app:srcCompat="@drawable/ic_check_24" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.vk.im.ui.views.settings.LabelSettingsView
+                    android:id="@id/vkim_dark_theme_item_view"
+                    style="@style/VkIm.Settings.Label.Normal"
+                    app:vkim_titleText="@string/vkim_settings_appearance_theme_dark" />
+
+                <ImageView
+                    android:id="@id/vkim_dark_theme_check_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="16.0dip"
+                    android:contentDescription="@null"
+                    android:tint="?colorAccent"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_check_24" />
             </FrameLayout>
         </LinearLayout>
     </ScrollView>
-    <com.vk.core.view.AppBarShadowView app:appbar_forceMode="shadow" style="@style/AppBarShadow" />
+
+    <com.vk.core.view.AppBarShadowView
+        style="@style/AppBarShadow"
+        app:appbar_forceMode="shadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

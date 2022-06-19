@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:layout_gravity="start|center|top" android:id="@id/iv_close" android:background="?selectableItemBackgroundBorderless" android:padding="12.0dip" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_cancel_24" android:tint="?icon_secondary" android:contentDescription="@string/close" />
-    <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="start|center" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:text="@string/story_question_header" android:lines="1" android:fontFamily="@string/font_family_medium" android:layout_marginStart="64.0dip" />
-    <com.vk.newsfeed.UsableRecyclerPaginatedView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" />
-    <View android:layout_gravity="top" android:id="@id/header_shadow" android:background="@drawable/bg_toolbar_shadow_light" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_marginTop="?actionBarSize" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@id/iv_close"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="start|center|top"
+        android:layout_margin="4.0dip"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/close"
+        android:padding="12.0dip"
+        android:src="@drawable/ic_cancel_24"
+        android:tint="?icon_secondary"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48.0dip"
+        android:layout_marginStart="64.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:gravity="start|center"
+        android:lines="1"
+        android:text="@string/story_question_header"
+        android:textColor="?text_primary"
+        android:textSize="20.0sp" />
+
+    <com.vk.newsfeed.UsableRecyclerPaginatedView
+        android:id="@id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize" />
+
+    <View
+        android:id="@id/header_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:layout_gravity="top"
+        android:layout_marginTop="?actionBarSize"
+        android:background="@drawable/bg_toolbar_shadow_light"
+        android:visibility="visible" />
 </merge>

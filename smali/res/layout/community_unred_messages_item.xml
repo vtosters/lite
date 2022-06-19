@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="48.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginTop="10.0dip" android:layout_marginStart="16.0dip" />
-    <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="60.0dip" style="@style/VKUIText.Headline" />
-    <TextView android:textSize="15.0dip" android:gravity="center" android:layout_gravity="end" android:id="@id/count" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="13.0dip" android:minWidth="24.0dip" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" android:layout_marginEnd="16.0dip" android:font="@font/roboto_medium" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip">
+
+    <ImageView
+        android:id="@id/icon"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginTop="10.0dip" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60.0dip"
+        android:layout_marginTop="15.0dip" />
+
+    <TextView
+        android:id="@id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="24.0dip"
+        android:layout_gravity="end"
+        android:layout_marginTop="13.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:font="@font/roboto_medium"
+        android:gravity="center"
+        android:minWidth="24.0dip"
+        android:paddingStart="6.0dip"
+        android:paddingEnd="6.0dip"
+        android:textSize="15.0dip" />
 </FrameLayout>

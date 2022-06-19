@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/coordinator" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/touch_outside" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:importantForAccessibility="no" />
-    <FrameLayout android:layout_gravity="bottom|center" android:id="@id/designed_bottom_sheet" android:background="@drawable/bg_card_elevation16_top" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/coordinator"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@id/touch_outside"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:importantForAccessibility="no"
+        android:soundEffectsEnabled="false" />
+
+    <FrameLayout
+        android:id="@id/designed_bottom_sheet"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/bg_card_elevation16_top"
+        android:clickable="true"
+        android:fitsSystemWindows="true" />
 </FrameLayout>

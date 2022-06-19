@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheckedTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?textColorAlertDialogListItem" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="@dimen/abc_select_dialog_padding_start_material" android:paddingRight="?dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeightSmall" android:drawableLeft="?android:listChoiceIndicatorSingle" android:drawablePadding="20.0dip" android:drawableStart="?android:listChoiceIndicatorSingle" android:paddingStart="@dimen/abc_select_dialog_padding_start_material" android:paddingEnd="?dialogPreferredPadding"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:drawableStart="?android:listChoiceIndicatorSingle"
+    android:drawableLeft="?android:listChoiceIndicatorSingle"
+    android:drawablePadding="20.0dip"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:minHeight="?listPreferredItemHeightSmall"
+    android:paddingStart="@dimen/abc_select_dialog_padding_start_material"
+    android:paddingLeft="@dimen/abc_select_dialog_padding_start_material"
+    android:paddingEnd="?dialogPreferredPadding"
+    android:paddingRight="?dialogPreferredPadding"
+    android:textAppearance="?android:textAppearanceMedium"
+    android:textColor="?textColorAlertDialogListItem" />

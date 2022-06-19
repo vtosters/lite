@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@id/collection_items_dialog_wrapper_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    <com.google.android.material.appbar.AppBarLayout android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
-        <androidx.appcompat.widget.Toolbar android:id="@id/collection_items_dialog_wrapper_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:outlineProvider="bounds" app:contentInsetStartWithNavigation="4.0dip" app:layout_scrollFlags="enterAlways" app:navigationContentDescription="@string/accessibility_toolbar_back" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" app:titleTextAppearance="@style/ToolbarTitle" app:titleTextColor="?text_primary" style="?actionBarTheme">
-            <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="end|center" android:id="@id/collection_items_dialog_wrapper_action" android:background="@drawable/vkim_ripple_circle_highlight" android:padding="10.0dip" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@string/accessibility_done" android:layout_marginEnd="4.0dip" />
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@id/collection_items_dialog_wrapper_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/collection_items_dialog_wrapper_toolbar"
+            style="?actionBarTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:outlineProvider="bounds"
+            app:contentInsetStartWithNavigation="4.0dip"
+            app:layout_scrollFlags="enterAlways"
+            app:navigationContentDescription="@string/accessibility_toolbar_back"
+            app:popupTheme="?actionBarPopupTheme"
+            app:theme="?actionBarTheme"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            app:titleTextColor="?text_primary">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/collection_items_dialog_wrapper_action"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="end|center"
+                android:layout_marginEnd="4.0dip"
+                android:background="@drawable/vkim_ripple_circle_highlight"
+                android:contentDescription="@string/accessibility_done"
+                android:padding="10.0dip"
+                android:visibility="gone" />
         </androidx.appcompat.widget.Toolbar>
-        <FrameLayout android:id="@id/collection_items_dialog_wrapper_subholder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@id/collection_items_dialog_wrapper_subholder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
+
     <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

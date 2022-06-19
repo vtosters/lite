@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@color/gray_100" android:paddingBottom="96.0dip" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:id="@id/milkshake_loading_logo" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/ic_logo_80" android:tint="@color/gray_200" android:importantForAccessibility="no" />
-    <ProgressBar android:layout_gravity="center" android:id="@id/milkshake_loading_progress" android:visibility="gone" android:layout_width="128.0dip" android:layout_height="4.0dip" android:layout_marginTop="76.0dip" android:progressTint="@color/gray_200" android:progressBackgroundTint="#47c4c8cc" android:indeterminateTint="?activity_indicator_tint" android:indeterminateTintMode="src_in" style="@android:style/Widget.ProgressBar.Horizontal" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_100"
+    android:fitsSystemWindows="false"
+    android:paddingBottom="96.0dip">
+
+    <ImageView
+        android:id="@id/milkshake_loading_logo"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_logo_80"
+        android:tint="@color/gray_200"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@id/milkshake_loading_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="128.0dip"
+        android:layout_height="4.0dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="76.0dip"
+        android:indeterminateTint="?activity_indicator_tint"
+        android:indeterminateTintMode="src_in"
+        android:progressBackgroundTint="#47c4c8cc"
+        android:progressTint="@color/gray_200"
+        android:visibility="gone" />
 </FrameLayout>

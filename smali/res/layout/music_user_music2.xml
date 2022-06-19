@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.core.view.VKAppBarLayout android:id="@id/app_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <FrameLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize">
-            <ImageView android:layout_gravity="center_vertical" android:id="@id/back_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/ic_back_outline_28" android:contentDescription="@string/music_talkback_go_back" style="@style/ActionButton.White" />
-            <ImageView android:layout_gravity="end|center" android:id="@id/search_btn" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_menu_search" android:layout_marginEnd="4.0dip" style="@style/ActionButton.White" />
-            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="64.0dip" android:layout_marginEnd="48.0dip">
-                <TextView android:textSize="16.0sp" android:textColor="?header_text" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:fontFamily="@font/roboto_medium" />
-                <TextView android:textSize="14.0sp" android:textColor="?header_text_secondary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:fontFamily="@font/roboto_medium" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.vk.core.view.VKAppBarLayout
+        android:id="@id/app_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?header_background"
+            android:minHeight="?actionBarSize"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@id/back_btn"
+                style="@style/ActionButton.White"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4.0dip"
+                android:contentDescription="@string/music_talkback_go_back"
+                android:src="@drawable/ic_back_outline_28" />
+
+            <ImageView
+                android:id="@id/search_btn"
+                style="@style/ActionButton.White"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="end|center"
+                android:layout_marginEnd="4.0dip"
+                android:src="@drawable/ic_menu_search"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@id/ll_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="64.0dip"
+                android:layout_marginEnd="48.0dip"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?header_text"
+                    android:textSize="16.0sp"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <TextView
+                    android:id="@id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?header_text_secondary"
+                    android:textSize="14.0sp"
+                    app:fontFamily="@font/roboto_medium" />
             </LinearLayout>
         </FrameLayout>
     </com.vk.core.view.VKAppBarLayout>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="?background_highlighted"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?background_highlighted">
     <item android:id="@android:id/mask">
         <shape>
             <solid android:color="?text_primary" />
         </shape>
     </item>
     <item>
-        <shape
-          xmlns:android="http://schemas.android.com/apk/res/android">
-            <gradient android:startColor="?content_tint_background" android:endColor="?background_content" android:angle="90.0" />
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient
+                android:angle="90.0"
+                android:endColor="?background_content"
+                android:startColor="?content_tint_background" />
         </shape>
     </item>
 </ripple>

@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@id/vkim_background_recycler_view" android:padding="2.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="84.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-    <TextView android:id="@id/vkim_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="@string/vkim_cancel" android:layout_below="@id/vkim_background_recycler_view" android:layout_marginStart="8.0dip" android:layout_alignParentStart="true" style="@style/PositiveButtonStyle" />
-    <TextView android:id="@id/vkim_set_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="@string/vkim_setup" android:layout_below="@id/vkim_background_recycler_view" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true" style="@style/PositiveButtonStyle" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/vkim_background_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:minHeight="84.0dip"
+        android:orientation="horizontal"
+        android:padding="2.0dip"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@id/vkim_cancel_button"
+        style="@style/PositiveButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vkim_background_recycler_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8.0dip"
+        android:minHeight="56.0dip"
+        android:text="@string/vkim_cancel" />
+
+    <TextView
+        android:id="@id/vkim_set_button"
+        style="@style/PositiveButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vkim_background_recycler_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8.0dip"
+        android:minHeight="56.0dip"
+        android:text="@string/vkim_setup" />
 </RelativeLayout>

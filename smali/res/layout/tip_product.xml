@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/iv_tip_image" android:background="@drawable/tip_image_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="8.0dip" app:roundedCornerRadius="4.0dip" />
-    <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:drawablePadding="4.0dip" android:lineSpacingExtra="4.0sp" android:fontFamily="@string/font_family_medium" android:layout_marginEnd="12.0dip" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/iv_tip_image"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:background="@drawable/tip_image_bg"
+        app:roundedCornerRadius="4.0dip" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12.0dip"
+        android:layout_marginBottom="1.0dip"
+        android:drawablePadding="4.0dip"
+        android:fontFamily="@string/font_family_medium"
+        android:lineSpacingExtra="4.0sp"
+        android:textColor="@color/white"
+        android:textSize="14.0sp"
+        android:textStyle="normal" />
 </LinearLayout>

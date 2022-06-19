@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="?background_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/big_icon" android:layout_width="96.0dip" android:layout_height="96.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/circle_avatar_layout" />
-    <TextView android:textSize="28.0sp" android:textColor="?header_text_alternate" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/social_graph_pick_avatar_title" android:fontFamily="@font/tt_commons_demi_bold" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/big_icon" />
-    <TextView android:textColor="?text_subhead" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/social_graph_pick_avatar_description" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title" style="@style/VKUIText.Headline" />
-    <FrameLayout android:id="@id/pick_avatar_button" android:background="@drawable/vkui_bg_button_primary" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
-        <TextView android:textSize="16.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/social_graph_pick_avatar_button" style="@style/VKUIButton.Primary.Flat" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_content">
+
+    <include
+        android:id="@id/big_icon"
+        layout="@layout/circle_avatar_layout"
+        android:layout_width="96.0dip"
+        android:layout_height="96.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="24.0dip"
+        android:fontFamily="@font/tt_commons_demi_bold"
+        android:gravity="center"
+        android:text="@string/social_graph_pick_avatar_title"
+        android:textColor="?header_text_alternate"
+        android:textSize="28.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/big_icon" />
+
+    <TextView
+        android:id="@id/subtitle"
+        style="@style/VKUIText.Headline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="11.0dip"
+        android:layout_marginEnd="24.0dip"
+        android:gravity="center"
+        android:text="@string/social_graph_pick_avatar_description"
+        android:textColor="?text_subhead"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <FrameLayout
+        android:id="@id/pick_avatar_button"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:background="@drawable/vkui_bg_button_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/VKUIButton.Primary.Flat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/social_graph_pick_avatar_button"
+            android:textSize="16.0sp" />
     </FrameLayout>
-    <TextView android:textColor="?accent" android:layout_gravity="center_horizontal" android:id="@id/skip" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="10.0dip" android:text="@string/social_graph_skip" android:layout_marginEnd="4.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/VKUIButton.Transparent" />
+
+    <TextView
+        android:id="@id/skip"
+        style="@style/VKUIButton.Transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="36.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:text="@string/social_graph_skip"
+        android:textColor="?accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

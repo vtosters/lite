@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VKAppBar">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/app_bar_layout"
+        style="@style/VKAppBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
         <include layout="@layout/appkit_toolbar" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.vk.core.view.AppBarShadowView android:id="@id/shadow_money_transfer" android:visibility="gone" style="@style/AppBarShadow" />
-    <com.vk.core.view.VKTabLayout android:id="@id/money_transfer_tabs" android:layout_width="fill_parent" android:layout_height="48.0dip" style="?tabBarTheme" />
-    <com.vk.core.view.VKViewPager android:id="@id/money_transfer_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+
+    <com.vk.core.view.AppBarShadowView
+        android:id="@id/shadow_money_transfer"
+        style="@style/AppBarShadow"
+        android:visibility="gone" />
+
+    <com.vk.core.view.VKTabLayout
+        android:id="@id/money_transfer_tabs"
+        style="?tabBarTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip" />
+
+    <com.vk.core.view.VKViewPager
+        android:id="@id/money_transfer_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:importantForAccessibility="no" />
 </LinearLayout>

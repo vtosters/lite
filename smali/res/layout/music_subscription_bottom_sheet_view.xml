@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/coordinator" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:id="@id/touch_outside" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:importantForAccessibility="no" />
-    <com.vk.core.view.ConstrainedFrameLayout android:layout_gravity="bottom|center" android:id="@id/designed_bottom_sheet" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cfl_maxHeight="732.0dip" app:cfl_maxWidth="412.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/coordinator"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@id/touch_outside"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:importantForAccessibility="no"
+        android:soundEffectsEnabled="false" />
+
+    <com.vk.core.view.ConstrainedFrameLayout
+        android:id="@id/designed_bottom_sheet"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom|center"
+        android:clickable="true"
+        android:fitsSystemWindows="true"
+        app:cfl_maxHeight="732.0dip"
+        app:cfl_maxWidth="412.0dip" />
 </FrameLayout>

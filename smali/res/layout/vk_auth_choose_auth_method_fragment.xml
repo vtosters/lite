@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="?vk_landing_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/logo" android:layout_width="@dimen/vk_auth_logo_size" android:layout_height="@dimen/vk_auth_logo_size" app:layout_constraintBottom_toTopOf="@id/sign_up_button" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/vk_auth_logo" />
-    <com.vk.auth.ui.VkAuthTextView android:id="@id/sign_up_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="16.0dip" android:text="@string/vk_auth_register" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/login_via_fb_button" style="@style/VkAuth.Button.Landing.SignUp" />
-    <include android:id="@id/login_via_fb_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/already_have_account" layout="@layout/vk_auth_facebook_login_button" />
-    <com.vk.auth.ui.VkAuthTextView android:id="@id/already_have_account" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="8.0dip" android:text="@string/vk_auth_already_have_account" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/login_button" app:layout_constraintVertical_bias="1.0" style="@style/VkAuth.Button.Landing.Tertiary" />
-    <com.vk.auth.ui.VkAuthTextView android:id="@id/login_button" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="16.0dip" android:text="@string/vk_auth_log_in" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" style="@style/VkAuth.Button.Landing.Login" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?vk_landing_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/logo"
+        layout="@layout/vk_auth_logo"
+        android:layout_width="@dimen/vk_auth_logo_size"
+        android:layout_height="@dimen/vk_auth_logo_size"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/sign_up_button"
+        style="@style/VkAuth.Button.Landing.SignUp"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:text="@string/vk_auth_register"
+        app:layout_constraintBottom_toTopOf="@id/login_via_fb_button" />
+
+    <include
+        android:id="@id/login_via_fb_button"
+        layout="@layout/vk_auth_facebook_login_button"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        app:layout_constraintBottom_toTopOf="@id/already_have_account" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/already_have_account"
+        style="@style/VkAuth.Button.Landing.Tertiary"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:text="@string/vk_auth_already_have_account"
+        app:layout_constraintBottom_toTopOf="@id/login_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.vk.auth.ui.VkAuthTextView
+        android:id="@id/login_button"
+        style="@style/VkAuth.Button.Landing.Login"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:text="@string/vk_auth_log_in"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

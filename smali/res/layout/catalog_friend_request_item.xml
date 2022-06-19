@@ -1,21 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/background_ripple" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_width="72.0dip" android:layout_height="72.0dip" android:scaleType="centerCrop" android:contentDescription="@string/accessibility_photo" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholderImage="@drawable/user_placeholder" />
-    <com.vk.imageloader.view.VKImageView android:id="@id/online" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:layout_marginEnd="4.0dip" app:layout_constraintBottom_toBottomOf="@id/photo" app:layout_constraintRight_toRightOf="@id/photo" />
-    <TextView android:textColor="?text_primary" android:ellipsize="end" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:drawablePadding="6.0dip" android:fontFamily="@font/roboto_medium" android:layout_marginStart="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/photo" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" app:layout_constraintWidth_default="wrap" style="@style/VKUIText.Text" />
-    <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:lines="1" android:layout_marginStart="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/photo" app:layout_constraintTop_toBottomOf="@id/title" app:layout_constraintVertical_chainStyle="packed" style="@style/VKUIText.Text" />
-    <LinearLayout android:gravity="start" android:orientation="horizontal" android:id="@id/common_friends_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/photo" app:layout_constraintTop_toBottomOf="@id/subtitle" app:layout_constraintVertical_chainStyle="packed">
-        <com.vk.core.view.PhotoStripView android:layout_gravity="center_vertical" android:id="@id/common_friends" android:layout_width="wrap_content" android:layout_height="24.0dip" app:placeholder="@drawable/user_placeholder" />
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:layout_gravity="center_vertical" android:id="@id/common_friends_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="8.0dip" style="@style/VKUIText.Text" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_ripple"
+    android:clickable="true"
+    android:paddingStart="16.0dip"
+    android:paddingTop="8.0dip"
+    android:paddingEnd="16.0dip"
+    android:paddingBottom="8.0dip">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        android:layout_width="72.0dip"
+        android:layout_height="72.0dip"
+        android:contentDescription="@string/accessibility_photo"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/user_placeholder" />
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginBottom="4.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/photo"
+        app:layout_constraintRight_toRightOf="@id/photo" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:drawablePadding="6.0dip"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium"
+        android:lines="1"
+        android:textColor="?text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/photo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_default="wrap" />
+
+    <TextView
+        android:id="@id/subtitle"
+        style="@style/VKUIText.Text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="1.0dip"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="?text_secondary"
+        android:textSize="13.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/photo"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@id/common_friends_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="5.0dip"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/photo"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.vk.core.view.PhotoStripView
+            android:id="@id/common_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="24.0dip"
+            android:layout_gravity="center_vertical"
+            app:placeholder="@drawable/user_placeholder" />
+
+        <TextView
+            android:id="@id/common_friends_title"
+            style="@style/VKUIText.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8.0dip"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp" />
     </LinearLayout>
-    <TextView android:ellipsize="end" android:id="@id/message" android:background="@drawable/vkui_bg_label_gray_10dp" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/photo" app:layout_constraintTop_toBottomOf="@id/common_friends_container" app:layout_constraintVertical_chainStyle="packed" style="@style/VKUIText.Subhead1" />
-    <LinearLayout android:gravity="start" android:orientation="horizontal" android:id="@id/buttons_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/photo" app:layout_constraintTop_toBottomOf="@id/message" app:layout_constraintVertical_chainStyle="packed">
-        <TextView android:id="@id/positive_button" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" style="@style/VKUIButton.Primary" />
-        <TextView android:id="@id/negative_button" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/VKUIButton.Secondary" />
+
+    <TextView
+        android:id="@id/message"
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="4.0dip"
+        android:background="@drawable/vkui_bg_label_gray_10dp"
+        android:ellipsize="end"
+        android:paddingStart="12.0dip"
+        android:paddingTop="7.0dip"
+        android:paddingEnd="12.0dip"
+        android:paddingBottom="7.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/photo"
+        app:layout_constraintTop_toBottomOf="@id/common_friends_container"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@id/buttons_container"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="8.0dip"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/photo"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            android:id="@id/positive_button"
+            style="@style/VKUIButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8.0dip"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@id/negative_button"
+            style="@style/VKUIButton.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true" />
     </LinearLayout>
-    <LinearLayout android:gravity="start" android:orientation="horizontal" android:id="@id/actions_container" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginTop="14.0dip" android:layout_marginStart="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/photo" app:layout_constraintTop_toBottomOf="@id/message" app:layout_constraintVertical_chainStyle="packed">
-        <TextView android:textSize="13.0sp" android:textColor="?text_secondary" android:layout_gravity="center_vertical" android:id="@id/actions_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/VKUIText.Text" />
-        <TextView android:textSize="13.0sp" android:textColor="?accent" android:layout_gravity="center_vertical" android:id="@id/actions_button" android:background="@drawable/highlight" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" android:layout_marginStart="-4.0dip" android:layout_marginEnd="-4.0dip" style="@style/VKUIText.Text" />
+
+    <LinearLayout
+        android:id="@id/actions_container"
+        android:layout_width="0.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/photo"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            android:id="@id/actions_message"
+            style="@style/VKUIText.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@id/actions_button"
+            style="@style/VKUIText.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="-4.0dip"
+            android:layout_marginEnd="-4.0dip"
+            android:background="@drawable/highlight"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="4.0dip"
+            android:paddingEnd="4.0dip"
+            android:singleLine="true"
+            android:textColor="?accent"
+            android:textSize="13.0sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,43 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:background="@color/cards_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vk="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <RelativeLayout android:paddingLeft="@dimen/post_side_padding" android:paddingTop="16.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginRight="12.0dip" app:placeholderImage="@drawable/user_placeholder" />
-                <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:ellipsize="end" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="User Name" android:singleLine="true" android:layout_toRightOf="@id/photo" android:layout_alignTop="@id/photo" />
-                <TextView android:textSize="13.0dip" android:textColor="#ff8c8d8f" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Qwe qwe qwe description" android:layout_toRightOf="@id/photo" android:layout_below="@id/name" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:vk="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/cards_bg">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8.0dip">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/post_side_padding"
+                android:paddingTop="16.0dip"
+                android:paddingRight="@dimen/post_side_padding"
+                android:paddingBottom="16.0dip">
+
+                <com.vk.imageloader.view.VKCircleImageView
+                    android:id="@id/photo"
+                    android:layout_width="64.0dip"
+                    android:layout_height="64.0dip"
+                    android:layout_marginRight="12.0dip"
+                    app:placeholderImage="@drawable/user_placeholder" />
+
+                <TextView
+                    android:id="@id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/photo"
+                    android:layout_toRightOf="@id/photo"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="User Name"
+                    android:textColor="#ff212121"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@id/description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_toRightOf="@id/photo"
+                    android:text="Qwe qwe qwe description"
+                    android:textColor="#ff8c8d8f"
+                    android:textSize="13.0dip" />
             </RelativeLayout>
         </FrameLayout>
-        <LinearLayout android:orientation="vertical" android:id="@id/group_access_block" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:id="@id/group_access_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_access_level" style="@style/CardsSectionHeader" />
-            <com.vtosters.lite.ui.CompoundRadioGroup android:orientation="vertical" android:id="@id/group_access_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/moder" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
-                    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_moder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_level_moderator" android:layout_toRightOf="@android:id/checkbox" />
-                    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_moder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_moder_desc" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_moder" />
+
+        <LinearLayout
+            android:id="@id/group_access_block"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/group_access_title"
+                style="@style/CardsSectionHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/group_access_level" />
+
+            <com.vtosters.lite.ui.CompoundRadioGroup
+                android:id="@id/group_access_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.vtosters.lite.ui.CheckableRelativeLayout
+                    android:id="@id/moder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/post_side_padding"
+                    android:paddingTop="17.0dip"
+                    android:paddingRight="@dimen/post_side_padding"
+                    android:paddingBottom="17.0dip">
+
+                    <RadioButton
+                        android:id="@android:id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4.0dip"
+                        android:layout_marginRight="16.0dip" />
+
+                    <TextView
+                        android:id="@id/title_moder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@android:id/checkbox"
+                        android:text="@string/group_level_moderator"
+                        android:textColor="#ff212121"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@id/description_moder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_moder"
+                        android:layout_marginTop="2.0dip"
+                        android:layout_toRightOf="@android:id/checkbox"
+                        android:text="@string/group_moder_desc"
+                        android:textColor="#ff78797a"
+                        android:textSize="14.0dip" />
                 </com.vtosters.lite.ui.CheckableRelativeLayout>
-                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/editor" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
-                    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_editor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_level_editor" android:layout_toRightOf="@android:id/checkbox" />
-                    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_editor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_editor_desc" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_editor" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="#26000000" />
+
+                <com.vtosters.lite.ui.CheckableRelativeLayout
+                    android:id="@id/editor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/post_side_padding"
+                    android:paddingTop="17.0dip"
+                    android:paddingRight="@dimen/post_side_padding"
+                    android:paddingBottom="17.0dip">
+
+                    <RadioButton
+                        android:id="@android:id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4.0dip"
+                        android:layout_marginRight="16.0dip" />
+
+                    <TextView
+                        android:id="@id/title_editor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@android:id/checkbox"
+                        android:text="@string/group_level_editor"
+                        android:textColor="#ff212121"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@id/description_editor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_editor"
+                        android:layout_marginTop="2.0dip"
+                        android:layout_toRightOf="@android:id/checkbox"
+                        android:text="@string/group_editor_desc"
+                        android:textColor="#ff78797a"
+                        android:textSize="14.0dip" />
                 </com.vtosters.lite.ui.CheckableRelativeLayout>
-                <View android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-                <com.vtosters.lite.ui.CheckableRelativeLayout android:id="@id/admin" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="17.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="17.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <RadioButton android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_marginRight="16.0dip" />
-                    <TextView android:textSize="16.0dip" android:textColor="#ff212121" android:id="@id/title_admin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/group_level_admin" android:layout_toRightOf="@android:id/checkbox" />
-                    <TextView android:textSize="14.0dip" android:textColor="#ff78797a" android:id="@id/description_admin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/group_admin_desc" android:layout_toRightOf="@android:id/checkbox" android:layout_below="@id/title_admin" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="#26000000" />
+
+                <com.vtosters.lite.ui.CheckableRelativeLayout
+                    android:id="@id/admin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/post_side_padding"
+                    android:paddingTop="17.0dip"
+                    android:paddingRight="@dimen/post_side_padding"
+                    android:paddingBottom="17.0dip">
+
+                    <RadioButton
+                        android:id="@android:id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-4.0dip"
+                        android:layout_marginRight="16.0dip" />
+
+                    <TextView
+                        android:id="@id/title_admin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@android:id/checkbox"
+                        android:text="@string/group_level_admin"
+                        android:textColor="#ff212121"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@id/description_admin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_admin"
+                        android:layout_marginTop="2.0dip"
+                        android:layout_toRightOf="@android:id/checkbox"
+                        android:text="@string/group_admin_desc"
+                        android:textColor="#ff78797a"
+                        android:textSize="14.0dip" />
                 </com.vtosters.lite.ui.CheckableRelativeLayout>
             </com.vtosters.lite.ui.CompoundRadioGroup>
         </LinearLayout>
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <CheckBox android:textSize="16.0dip" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/show_in_contacts" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/post_side_padding" android:layout_marginRight="@dimen/post_side_padding" android:minHeight="56.0dip" android:text="@string/show_in_contacts" android:drawableLeft="@android:color/transparent" android:drawablePadding="16.0dip" />
-            <View android:id="@id/group_admin_contact_title_divider" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-            <EditText android:gravity="center_vertical" android:id="@id/group_admin_contact_title" android:background="@null" android:paddingLeft="@dimen/post_side_padding" android:paddingTop="12.0dip" android:paddingRight="@dimen/post_side_padding" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:hint="@string/group_contacts_label" style="@style/CardTextEdit" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@id/show_in_contacts"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/post_side_padding"
+                android:layout_marginRight="@dimen/post_side_padding"
+                android:drawableLeft="@android:color/transparent"
+                android:drawablePadding="16.0dip"
+                android:gravity="center_vertical"
+                android:minHeight="56.0dip"
+                android:paddingTop="7.0dip"
+                android:paddingBottom="7.0dip"
+                android:text="@string/show_in_contacts"
+                android:textColor="#ff000000"
+                android:textSize="16.0dip" />
+
+            <View
+                android:id="@id/group_admin_contact_title_divider"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="#26000000" />
+
+            <EditText
+                android:id="@id/group_admin_contact_title"
+                style="@style/CardTextEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/group_contacts_label"
+                android:minHeight="56.0dip"
+                android:paddingLeft="@dimen/post_side_padding"
+                android:paddingTop="12.0dip"
+                android:paddingRight="@dimen/post_side_padding"
+                android:paddingBottom="12.0dip" />
         </LinearLayout>
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.vk.core.view.OverlayTextView android:textSize="14.0dip" android:textColor="#ff5181b8" android:gravity="center_vertical" android:id="@id/button_remove" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/group_remove_manager" android:textAllCaps="true" android:fontFamily="@string/font_family_medium" app:overlay="@drawable/highlight_post" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.vk.core.view.OverlayTextView
+                android:id="@id/button_remove"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip"
+                android:clickable="true"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/post_side_padding"
+                android:paddingRight="@dimen/post_side_padding"
+                android:text="@string/group_remove_manager"
+                android:textAllCaps="true"
+                android:textColor="#ff5181b8"
+                android:textSize="14.0dip"
+                app:overlay="@drawable/highlight_post" />
         </FrameLayout>
     </LinearLayout>
 </ScrollView>

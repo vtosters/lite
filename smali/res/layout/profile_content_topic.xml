@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/post_side_padding" android:paddingRight="@dimen/post_side_padding" android:layout_width="fill_parent" android:layout_height="60.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:text="Topic Title" android:singleLine="true" style="@style/VKUIText.Headline" />
-    <TextView android:textSize="13.0dip" android:textColor="?text_secondary" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Topic Subtitle" android:singleLine="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/post_side_padding"
+    android:paddingRight="@dimen/post_side_padding">
+
+    <TextView
+        android:id="@id/title"
+        style="@style/VKUIText.Headline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3.0dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Topic Title" />
+
+    <TextView
+        android:id="@id/subtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Topic Subtitle"
+        android:textColor="?text_secondary"
+        android:textSize="13.0dip" />
 </LinearLayout>

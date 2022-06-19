@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:scaleType="centerInside" android:adjustViewBounds="false" android:contentDescription="@null" android:importantForAccessibility="no" />
-    <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/icon"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_gravity="center_vertical"
+        android:adjustViewBounds="false"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textSize="16.0sp" />
 </LinearLayout>

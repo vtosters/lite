@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:gravity="center_vertical" android:layout_gravity="center_vertical"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center_horizontal" android:id="@id/phone_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_phone_outline_56" android:tint="?accent" />
-    <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/phone_verify_question" android:textAlignment="center" />
-    <TextView android:textSize="20.0sp" android:textColor="?text_primary" android:gravity="center" android:id="@id/phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:textAlignment="center" />
-    <TextView android:textSize="14.0sp" android:textColor="?accent" android:gravity="center" android:id="@id/change_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:text="@string/phone_verify_change_phone_number" android:textAlignment="center" />
-    <TextView android:textSize="14.0sp" android:textColor="?text_subhead" android:gravity="center" android:id="@id/attention" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/phone_verify_attention" android:textAlignment="center" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@id/phone_image"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16.0dip"
+        android:src="@drawable/ic_phone_outline_56"
+        android:tint="?accent" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:gravity="center"
+        android:text="@string/phone_verify_question"
+        android:textAlignment="center"
+        android:textColor="?text_primary"
+        android:textSize="20.0sp" />
+
+    <TextView
+        android:id="@id/phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="?text_primary"
+        android:textSize="20.0sp" />
+
+    <TextView
+        android:id="@id/change_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14.0dip"
+        android:gravity="center"
+        android:text="@string/phone_verify_change_phone_number"
+        android:textAlignment="center"
+        android:textColor="?accent"
+        android:textSize="14.0sp" />
+
+    <TextView
+        android:id="@id/attention"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/phone_verify_attention"
+        android:textAlignment="center"
+        android:textColor="?text_subhead"
+        android:textSize="14.0sp" />
 </merge>

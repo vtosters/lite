@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.VKTabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="48.0dip" style="?tabBarTheme"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<com.vk.core.view.VKTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/tabs"
+    style="?tabBarTheme"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip" />

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
             <solid android:color="?background_content" />
         </shape>
     </item>
-    <item android:left="@dimen/post_side_padding" android:top="47.5dip" android:right="@dimen/post_side_padding">
+    <item
+        android:left="@dimen/post_side_padding"
+        android:right="@dimen/post_side_padding"
+        android:top="47.5dip">
         <shape>
             <solid android:color="?separator_alpha" />
         </shape>

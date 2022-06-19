@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.core.view.VKTabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="48.0dip" app:tabGravity="fill" app:tabIndicatorColor="?header_alternate_tab_active_indicator" app:tabMode="fixed" app:tabSelectedTextColor="?header_alternate_tab_active_text" app:tabTextColor="?header_alternate_tab_inactive_text" style="@style/CatalogTabLayout" />
-    <androidx.viewpager.widget.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.vk.core.view.VKTabLayout
+        android:id="@id/tabs"
+        style="@style/CatalogTabLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="?header_alternate_tab_active_indicator"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="?header_alternate_tab_active_text"
+        app:tabTextColor="?header_alternate_tab_inactive_text" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 </merge>

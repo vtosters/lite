@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.vk.common.view.disableable.DisableableFrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.vk.common.view.disableable.DisableableFrameLayout
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false" />
     </com.vk.common.view.disableable.DisableableFrameLayout>
 </androidx.core.widget.NestedScrollView>

@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:background="@drawable/rounded_list_selector" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/collection_item_link_photo" android:src="@drawable/ic_att_link_48dp" android:tint="@color/accent_blue" style="@style/UserSmallPhoto" />
-    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toEndOf="@id/photo">
-        <TextView android:id="@id/collection_item_link_title" android:text="@string/add_link" style="@style/UserSmallTitle" />
-        <TextView android:textColor="?text_secondary" android:id="@id/collection_item_link_subtitle" style="@style/UserMediumSubtitle" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_list_selector"
+    android:clipToPadding="false"
+    android:paddingLeft="16.0dip"
+    android:paddingTop="8.0dip"
+    android:paddingRight="16.0dip"
+    android:paddingBottom="8.0dip">
+
+    <ImageView
+        android:id="@id/collection_item_link_photo"
+        style="@style/UserSmallPhoto"
+        android:src="@drawable/ic_att_link_48dp"
+        android:tint="@color/accent_blue" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/photo"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/collection_item_link_title"
+            style="@style/UserSmallTitle"
+            android:text="@string/add_link" />
+
+        <TextView
+            android:id="@id/collection_item_link_subtitle"
+            style="@style/UserMediumSubtitle"
+            android:textColor="?text_secondary" />
     </LinearLayout>
 </LinearLayout>

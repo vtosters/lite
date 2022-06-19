@@ -1,11 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/music_selectable_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textStyle="normal" android:gravity="center_vertical" android:id="@id/audio_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="24.0dip" android:textAlignment="center" app:fontFamily="@font/roboto_regular" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Music.SubTitle" />
-    <ImageView android:id="@id/audio_playing_indicator" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/guideline" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@id/iv_focus_track" android:background="@drawable/ic_strar_12" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginBottom="2.0dip" android:layout_marginEnd="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/audio_number" app:layout_constraintTop_toTopOf="parent" />
-    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="54.0dip" />
-    <TextView android:textStyle="normal" android:id="@id/audio_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="20.0dip" android:layout_weight="1.0" app:fontFamily="@font/roboto_regular" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/audio_duration" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toTopOf="parent" style="@style/Music.Title" />
-    <TextView android:textSize="13.0sp" android:textStyle="normal" android:gravity="center_vertical" android:id="@id/audio_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="16.0dip" android:includeFontPadding="false" android:drawablePadding="2.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="4.0dip" app:fontFamily="@font/roboto_regular" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/audio_menu" app:layout_constraintStart_toEndOf="@id/audio_title" app:layout_constraintTop_toTopOf="parent" style="@style/Music.SubTitle" />
-    <ImageView android:layout_gravity="end|center" android:id="@id/audio_menu" android:layout_width="36.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_actions_small_24" android:layout_marginEnd="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/audio_duration" app:layout_constraintTop_toTopOf="parent" style="@style/ActionButton.More" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/music_selectable_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@id/audio_number"
+        style="@style/Music.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="24.0dip"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/audio_playing_indicator"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/iv_focus_track"
+        android:layout_width="10.0dip"
+        android:layout_height="10.0dip"
+        android:layout_marginEnd="2.0dip"
+        android:layout_marginBottom="2.0dip"
+        android:background="@drawable/ic_strar_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/audio_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="54.0dip" />
+
+    <TextView
+        android:id="@id/audio_title"
+        style="@style/Music.Title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:minHeight="20.0dip"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/audio_duration"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/audio_duration"
+        style="@style/Music.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:drawablePadding="2.0dip"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:minHeight="16.0dip"
+        android:textSize="13.0sp"
+        android:textStyle="normal"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/audio_menu"
+        app:layout_constraintStart_toEndOf="@id/audio_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@id/audio_menu"
+        style="@style/ActionButton.More"
+        android:layout_width="36.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="4.0dip"
+        android:src="@drawable/ic_actions_small_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/audio_duration"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

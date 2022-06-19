@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.tips.TipAnchorView android:id="@id/anchor" android:fitsSystemWindows="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <RelativeLayout android:id="@id/text_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ImageView android:id="@id/chevron" android:layout_width="12.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_chevron_16_black" android:layout_centerVertical="true" android:layout_marginStart="8.0dip" android:layout_alignParentEnd="true" />
-            <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="@color/gray_900" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentTop="true" android:lineSpacingExtra="2.0sp" android:fontFamily="sans-serif-medium" android:layout_toStartOf="@id/chevron" android:layout_alignParentStart="true" />
-            <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="@color/gray_400" android:ellipsize="end" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/title" android:lineSpacingExtra="2.0sp" android:fontFamily="sans-serif" android:layout_toStartOf="@id/chevron" android:layout_alignParentStart="true" />
+<com.vk.core.tips.TipAnchorView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/anchor"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@id/text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@id/chevron"
+                android:layout_width="12.0dip"
+                android:layout_height="16.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8.0dip"
+                android:src="@drawable/ic_chevron_16_black" />
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/chevron"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="2.0sp"
+                android:maxLines="1"
+                android:textColor="@color/gray_900"
+                android:textSize="14.0sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/chevron"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="2.0sp"
+                android:maxLines="1"
+                android:textColor="@color/gray_400"
+                android:textSize="12.0sp"
+                android:textStyle="normal" />
         </RelativeLayout>
     </FrameLayout>
 </com.vk.core.tips.TipAnchorView>

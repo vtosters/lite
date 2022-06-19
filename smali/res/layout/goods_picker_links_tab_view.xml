@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.lists.RecyclerPaginatedView android:id="@id/goods_recycler" android:visibility="gone" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:enableItemAnimations="true" />
-    <TextView android:textColor="?text_primary" android:gravity="center" android:id="@id/tagged_goods_empty_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/goods_picker_title_no_goods" style="@style/VKUIText.Title1" />
-    <TextView android:textColor="?text_placeholder" android:gravity="center" android:id="@id/tagged_goods_empty_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/goods_picker_text_no_goods" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" style="@style/VKUIText.Headline" />
-    <TextView android:id="@id/tagged_goods_open_miniapp_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/goods_picker_button_search_aliexpress" style="@style/VKUIButton.Primary" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.vk.lists.RecyclerPaginatedView
+        android:id="@id/goods_recycler"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginEnd="10.0dip"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="gone"
+        app:enableItemAnimations="true" />
+
+    <TextView
+        android:id="@id/tagged_goods_empty_title"
+        style="@style/VKUIText.Title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/goods_picker_title_no_goods"
+        android:textColor="?text_primary" />
+
+    <TextView
+        android:id="@id/tagged_goods_empty_subtitle"
+        style="@style/VKUIText.Headline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="32.0dip"
+        android:gravity="center"
+        android:text="@string/goods_picker_text_no_goods"
+        android:textColor="?text_placeholder" />
+
+    <TextView
+        android:id="@id/tagged_goods_open_miniapp_button"
+        style="@style/VKUIButton.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/goods_picker_button_search_aliexpress" />
 </LinearLayout>

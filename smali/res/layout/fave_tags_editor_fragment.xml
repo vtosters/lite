@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:id="@id/tags_editor_constraint_layout" android:background="@color/background_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.lists.RecyclerPaginatedView android:id="@id/tags_editor_list" android:background="?background_content" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:enableItemAnimations="true" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/tags_editor_constraint_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_blue">
+
+    <com.vk.lists.RecyclerPaginatedView
+        android:id="@id/tags_editor_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?background_content"
+        android:scrollbars="vertical"
+        app:enableItemAnimations="true" />
 </merge>

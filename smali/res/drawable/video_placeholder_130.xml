@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
             <solid android:color="?placeholder_icon_background" />
@@ -8,6 +7,9 @@
         </shape>
     </item>
     <item>
-        <bitmap android:gravity="center" android:src="@drawable/ic_videos_48" android:tint="?placeholder_icon_foreground_secondary" />
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_videos_48"
+            android:tint="?placeholder_icon_foreground_secondary" />
     </item>
 </layer-list>

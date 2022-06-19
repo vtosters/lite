@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="102.0dip" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="102.0dip"
+    android:clipToPadding="false"
+    android:paddingStart="8.0dip"
+    android:paddingEnd="8.0dip" />

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?header_background" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_scrollFlags="enterAlwaysCollapsed|scroll" app:navigationContentDescription="@string/accessibility_toolbar_back" app:popupTheme="?actionBarPopupTheme" app:theme="?actionBarTheme" style="?actionBarTheme"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/catalog_toolbar_content" />
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/toolbar"
+    style="?actionBarTheme"
+    android:layout_width="fill_parent"
+    android:layout_height="?actionBarSize"
+    android:background="?header_background"
+    app:layout_scrollFlags="enterAlwaysCollapsed|scroll"
+    app:navigationContentDescription="@string/accessibility_toolbar_back"
+    app:popupTheme="?actionBarPopupTheme"
+    app:theme="?actionBarTheme">
+
+    <include
+        android:id="@id/content"
+        layout="@layout/catalog_toolbar_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 </androidx.appcompat.widget.Toolbar>

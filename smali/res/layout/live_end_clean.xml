@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKImageView android:id="@id/liveEndViewBack" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" app:actualImageScaleType="centerCrop" />
-    <LinearLayout android:orientation="vertical" android:id="@id/liveEndViewLinear" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <FrameLayout android:id="@id/liveEndViewContainer1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.6">
-            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/liveEndViewTopLinearHolder" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <com.vk.imageloader.view.VKCircleImageView android:layout_gravity="center_horizontal" android:id="@id/liveEndUserImage" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginBottom="8.0dip" />
-                <com.vk.core.view.links.LinkedTextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/liveEndUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="2" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
-                <TextView android:textSize="16.0sp" android:textColor="#b7ffffff" android:ellipsize="end" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/liveEndText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/live_video_ended" android:maxLines="1" android:shadowColor="#52000000" android:shadowDy="2.0" android:shadowRadius="12.0" />
-                <com.vk.libvideo.live.views.addbutton.AddButtonView android:layout_gravity="center_horizontal" android:id="@id/liveEndAddButton" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.Button.Colored" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.vk.imageloader.view.VKImageView
+        android:id="@id/liveEndViewBack"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.0"
+        app:actualImageScaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@id/liveEndViewLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@id/liveEndViewContainer1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.6">
+
+            <LinearLayout
+                android:id="@id/liveEndViewTopLinearHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.vk.imageloader.view.VKCircleImageView
+                    android:id="@id/liveEndUserImage"
+                    android:layout_width="64.0dip"
+                    android:layout_height="64.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8.0dip" />
+
+                <com.vk.core.view.links.LinkedTextView
+                    android:id="@id/liveEndUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:shadowColor="#52000000"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="12.0"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@id/liveEndText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16.0dip"
+                    android:layout_marginBottom="16.0dip"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:shadowColor="#52000000"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="12.0"
+                    android:text="@string/live_video_ended"
+                    android:textColor="#b7ffffff"
+                    android:textSize="16.0sp" />
+
+                <com.vk.libvideo.live.views.addbutton.AddButtonView
+                    android:id="@id/liveEndAddButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>

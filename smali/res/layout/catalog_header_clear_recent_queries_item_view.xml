@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="44.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="@dimen/post_side_padding">
-        <TextView android:textSize="13.0sp" android:textStyle="normal" android:textColor="?text_secondary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" android:layout_marginEnd="8.0dip" app:fontFamily="@font/roboto_medium" />
-        <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/badge" android:background="@drawable/catalog_header_badge_prominent" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="20.0dip" android:singleLine="true" android:includeFontPadding="false" android:fontFamily="@string/fontRobotoRegular" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="44.0dip">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="@dimen/post_side_padding"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8.0dip"
+            android:textAllCaps="true"
+            android:textColor="?text_secondary"
+            android:textSize="13.0sp"
+            android:textStyle="normal"
+            app:fontFamily="@font/roboto_medium" />
+
+        <TextView
+            android:id="@id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="20.0dip"
+            android:background="@drawable/catalog_header_badge_prominent"
+            android:fontFamily="@string/fontRobotoRegular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minWidth="20.0dip"
+            android:paddingStart="6.0dip"
+            android:paddingTop="2.0dip"
+            android:paddingEnd="6.0dip"
+            android:paddingBottom="2.0dip"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
     </LinearLayout>
-    <TextView android:layout_gravity="end|center" android:id="@id/clear_container" android:background="@drawable/music_playlist_selectable_bg_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_button_clear" android:fontFamily="@font/roboto_medium" style="@style/TextButton.Blue" />
+
+    <TextView
+        android:id="@id/clear_container"
+        style="@style/TextButton.Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:background="@drawable/music_playlist_selectable_bg_6"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/music_button_clear" />
 </FrameLayout>

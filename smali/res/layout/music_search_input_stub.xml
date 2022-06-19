@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:textColorHint="?search_bar_field_tint" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="56.0dip" android:hint="@string/music_hint_search" android:paddingStart="60.0dip" android:paddingEnd="56.0dip" app:fontFamily="@font/roboto_regular" style="@style/MusicSearch"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MusicSearch"
+    android:layout_width="fill_parent"
+    android:layout_height="56.0dip"
+    android:gravity="center_vertical"
+    android:hint="@string/music_hint_search"
+    android:paddingStart="60.0dip"
+    android:paddingEnd="56.0dip"
+    android:textColorHint="?search_bar_field_tint"
+    app:fontFamily="@font/roboto_regular" />

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_money_circle_outline_28" android:id="@id/menu_vk_pay" android:title="@string/vk_pay" app:menuTint="?accent" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@id/menu_vk_pay"
+        android:icon="@drawable/ic_money_circle_outline_28"
+        android:title="@string/vk_pay"
+        app:menuTint="?accent" />
 </menu>

@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_contact_root" android:background="@drawable/highlight" android:layout_width="fill_parent" android:layout_height="72.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="?text_subhead" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_regular" style="@style/VKUIText.Subhead1" />
-    <TextView android:textColor="?text_primary" android:id="@id/tv_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:fontFamily="@font/roboto_regular" style="@style/VKUIText.Title2" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/ll_contact_root"
+    android:layout_width="fill_parent"
+    android:layout_height="72.0dip"
+    android:background="@drawable/highlight"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingStart="16.0dip"
+    android:paddingEnd="16.0dip">
+
+    <TextView
+        android:id="@id/tv_title"
+        style="@style/VKUIText.Subhead1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="?text_subhead" />
+
+    <TextView
+        android:id="@id/tv_value"
+        style="@style/VKUIText.Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="?text_primary" />
 </LinearLayout>

@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="25.0dip" android:paddingEnd="25.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_vkme_96" />
-    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/vkim_install_vk_me_title" style="@style/VKUIText.Title1" />
-    <TextView android:gravity="center" android:id="@id/description_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" android:text="@string/vkim_install_vk_me_message" style="@style/VKUIText.Subhead2" />
-    <TextView android:id="@id/install_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vkim_install_vk_me_button_text" style="@style/VKUIButton.Primary.Big" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingStart="25.0dip"
+    android:paddingEnd="25.0dip">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        android:src="@drawable/ic_vkme_96" />
+
+    <TextView
+        style="@style/VKUIText.Title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:gravity="center"
+        android:text="@string/vkim_install_vk_me_title" />
+
+    <TextView
+        android:id="@id/description_view"
+        style="@style/VKUIText.Subhead2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32.0dip"
+        android:gravity="center"
+        android:text="@string/vkim_install_vk_me_message" />
+
+    <TextView
+        android:id="@id/install_view"
+        style="@style/VKUIButton.Primary.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vkim_install_vk_me_button_text" />
 </LinearLayout>

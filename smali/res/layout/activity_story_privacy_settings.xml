@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/fragment_wrapper" android:background="?background_page" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminateTint="?activity_indicator_tint" android:indeterminateTintMode="src_in" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/fragment_wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?background_page">
+
+    <ProgressBar
+        android:id="@id/progress"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_gravity="center"
+        android:indeterminateTint="?activity_indicator_tint"
+        android:indeterminateTintMode="src_in" />
 </FrameLayout>

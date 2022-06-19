@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.core.view.TintTextView android:textColor="?text_muted" android:ellipsize="end" android:gravity="center_vertical" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:drawableRight="@drawable/ic_spinner_arrow_16" android:drawablePadding="10.0dip" app:drawableRightTint="?icon_medium" app:theme="?actionBarTheme" style="@style/ToolbarTitle"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.core.view.TintTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    style="@style/ToolbarTitle"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:drawableRight="@drawable/ic_spinner_arrow_16"
+    android:drawablePadding="10.0dip"
+    android:ellipsize="end"
+    android:gravity="center_vertical"
+    android:singleLine="true"
+    android:textColor="?text_muted"
+    app:drawableRightTint="?icon_medium"
+    app:theme="?actionBarTheme" />

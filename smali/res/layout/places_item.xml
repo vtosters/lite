@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout style="@style/UserSmallRoot"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.vk.imageloader.view.VKCircleImageView android:id="@id/photo" android:layout_marginRight="12.0dip" app:placeholderImage="@drawable/ic_checkin_place_not_selected" style="@style/UserSmallPhoto" />
-    <TextView android:id="@id/title" android:layout_marginTop="4.0dip" android:includeFontPadding="false" android:layout_toLeftOf="@id/info" style="@style/UserMediumTitle" />
-    <TextView android:id="@id/subtitle" android:layout_marginTop="2.0dip" android:includeFontPadding="false" android:layout_toLeftOf="@id/info" style="@style/UserMediumSubtitle" />
-    <com.vtosters.lite.ui.BadooTextView android:textSize="12.0dip" android:textColor="?text_tertiary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:includeFontPadding="false" android:drawableRight="@drawable/ic_user_16" android:drawablePadding="2.0dip" android:layout_alignBottom="@id/subtitle" android:layout_alignParentRight="true" app:textViewTint="?icon_tertiary" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UserSmallRoot">
+
+    <com.vk.imageloader.view.VKCircleImageView
+        android:id="@id/photo"
+        style="@style/UserSmallPhoto"
+        android:layout_marginRight="12.0dip"
+        app:placeholderImage="@drawable/ic_checkin_place_not_selected" />
+
+    <TextView
+        android:id="@id/title"
+        style="@style/UserMediumTitle"
+        android:layout_marginTop="4.0dip"
+        android:layout_toLeftOf="@id/info"
+        android:includeFontPadding="false" />
+
+    <TextView
+        android:id="@id/subtitle"
+        style="@style/UserMediumSubtitle"
+        android:layout_marginTop="2.0dip"
+        android:layout_toLeftOf="@id/info"
+        android:includeFontPadding="false" />
+
+    <com.vtosters.lite.ui.BadooTextView
+        android:id="@id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/subtitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:drawableRight="@drawable/ic_user_16"
+        android:drawablePadding="2.0dip"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="?text_tertiary"
+        android:textSize="12.0dip"
+        app:textViewTint="?icon_tertiary" />
 </RelativeLayout>

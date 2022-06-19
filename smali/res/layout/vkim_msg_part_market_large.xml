@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.im.ui.views.msg.MsgPartSnippetView android:layout_width="wrap_content" android:layout_height="wrap_content" app:vkim_snippet_buttonText="@string/vkim_msg_list_market_button" style="@style/VkIm.MsgPart.Snippet"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.im.ui.views.msg.MsgPartSnippetView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/VkIm.MsgPart.Snippet"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:vkim_snippet_buttonText="@string/vkim_msg_list_market_button" />

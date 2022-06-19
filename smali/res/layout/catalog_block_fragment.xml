@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/cl_root_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/cl_root_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
     <com.vk.core.view.AppBarShadowView style="@style/AppBarShadow" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

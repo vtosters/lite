@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyle" />
-    <include android:id="@id/error" layout="@layout/music_error" />
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/refresh_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <FrameLayout android:id="@id/empty_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ProgressBar
+        android:id="@id/progress"
+        style="?android:progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <include
+        android:id="@id/error"
+        layout="@layout/music_error" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@id/empty_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="8.0dip"
+                android:scrollbars="vertical" />
         </FrameLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </merge>

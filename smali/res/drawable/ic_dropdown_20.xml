@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bitmap android:src="@drawable/dropdown_20" android:tint="?icon_secondary"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/dropdown_20"
+    android:tint="?icon_secondary" />

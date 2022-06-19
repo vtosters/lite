@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vk.im.ui.views.EmptyViewForList android:id="@id/vkim_empty" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="56.0dip" app:icon="@drawable/placeholder_not_found_56" app:icon_size="@dimen/vkim_search_empty_icon_size" app:text="@string/vkim_msg_search_empty" app:text_color="?text_subhead" app:text_size="16.0sp"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+<com.vk.im.ui.views.EmptyViewForList xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/vkim_empty"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="56.0dip"
+    android:visibility="visible"
+    app:icon="@drawable/placeholder_not_found_56"
+    app:icon_size="@dimen/vkim_search_empty_icon_size"
+    app:text="@string/vkim_msg_search_empty"
+    app:text_color="?text_subhead"
+    app:text_size="16.0sp" />

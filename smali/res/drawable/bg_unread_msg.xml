@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
             <solid android:color="?im_bg_chat" />
@@ -8,7 +7,9 @@
     </item>
     <item>
         <shape android:shape="rectangle">
-            <stroke android:width="0.5dip" android:color="?im_bubble_border_alternate" />
+            <stroke
+                android:width="0.5dip"
+                android:color="?im_bubble_border_alternate" />
         </shape>
     </item>
 </layer-list>
