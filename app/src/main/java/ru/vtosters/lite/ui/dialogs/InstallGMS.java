@@ -36,7 +36,7 @@ public class InstallGMS {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     edit().putBoolean("showAlertGms", false).apply();
                     Context context = getContext();
-                    Intent a2 = new Navigator(InstallGMSFragment.class).a(context);
+                    Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
                     context.startActivity(a2);
                 }
             });

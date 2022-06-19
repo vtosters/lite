@@ -52,8 +52,8 @@ public class Themes {
     public static void setTheme(Activity activity) {
         VKThemeHelper.b(activity, getCenterScreenCoords());
         ThemeTracker.a();
-        WebCachePreloader.e(); // apply changed theme
-    }
+        WebCachePreloader.e();
+    } // apply changed theme
 
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
@@ -88,7 +88,7 @@ public class Themes {
     } // Toolbar/Header background
 
     public static int getHeaderText() {
-        return VKThemeHelper.a(R.attr.header_text);
+        return getColorFromAttr(R.attr.header_text);
     } // Header/Toolbar color text
 
     public static int getAmoledTheme() {
@@ -390,11 +390,11 @@ public class Themes {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
             case Configuration.UI_MODE_NIGHT_NO:
                 edit().putBoolean("isdark", false).commit();
-                applyTheme(getLightTheme(), getImLightTheme());
+                applyTheme(getLightTheme());
                 break;
             case Configuration.UI_MODE_NIGHT_YES:
                 edit().putBoolean("isdark", true).commit();
-                applyTheme(getDarkTheme(), getImDarkTheme());
+                applyTheme(getDarkTheme());
                 break;
         }
     }
