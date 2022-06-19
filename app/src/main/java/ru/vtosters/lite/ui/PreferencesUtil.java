@@ -10,9 +10,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
 import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -21,7 +18,9 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
+import androidx.preference.ListPreference;
 
+import com.vk.core.preference.Preference;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
 
@@ -36,7 +35,7 @@ public class PreferencesUtil {
 
     public static void addListPreference(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, CharSequence[] entries, CharSequence[] entriesValue) {
         ListPreference preference = new ListPreference(getContext());
-        preference.a(entries);
+        preference.setEntries(entries);
         preference.b(entriesValue);
         preference.c(title); // setTitle
         preference.a(title); // setDialogTitle
@@ -47,9 +46,9 @@ public class PreferencesUtil {
 
     public static void addListPreferenceIcon(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, String icon, CharSequence summary, CharSequence[] entries, CharSequence[] entriesValue) {
         ListPreference preference = new ListPreference(getContext());
-        preference.a(entries);
-        preference.b(entriesValue);
-        preference.b(summary); // setSummary
+        preference.setEntries(entries);
+        preference.setEntries(entriesValue);
+        preference.setSummary(summary); // setSummary
         preference.c(title); // setTitle
         preference.a(title); // setDialogTitle
         preference.d(key); // setKey

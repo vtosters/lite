@@ -5,13 +5,14 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class DockBarAdapter extends RecyclerView.a
     private final DockBarManager mDockBarManager = DockBarManager.getInstance();
 
     @Override
-    public RecyclerView.x b(ViewGroup parent, int viewType) {
+    public RecyclerView.a b(ViewGroup parent, int viewType) {
         if (viewType == GROUP_TITLE_TYPE) {
             return new GroupViewHolder(createGroupTitle());
         } else {

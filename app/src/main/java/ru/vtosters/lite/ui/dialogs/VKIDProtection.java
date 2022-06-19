@@ -9,7 +9,6 @@ import android.app.AlertDialog;
 import android.content.Intent;
 
 import com.vk.navigation.Navigator;
-import com.vk.webapp.VKConnect;
 
 public class VKIDProtection {
     public static void alert(final Activity activity) {

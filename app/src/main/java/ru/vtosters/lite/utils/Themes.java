@@ -27,18 +27,16 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 
 import androidx.core.graphics.ColorUtils;
 
-import com.vk.core.d.RecoloredDrawable;
+import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.im.ui.themes.ImTheme;
-import com.vk.im.ui.themes.ImThemeHelper;
 import com.vtosters.lite.R;
 
 import java.util.Arrays;
@@ -50,8 +48,7 @@ public class Themes {
     );
 
     public static void applyTheme(VKTheme theme, ImTheme imtheme) {
-        VKThemeHelper.b.a(theme); // VKThemeHelper.b.a(VKTheme value) VK Theme apply
-        ImThemeHelper.b.a(imtheme); // ImThemeHelper.b.a(ImTheme value) VK Theme Msg apply
+        // TODO
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static void setTheme(Activity activity) {

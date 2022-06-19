@@ -10,10 +10,9 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Environment;
 
-import com.vk.core.f.FileUtils;
-
 import java.io.File;
 
+import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.APKInstallActivity;
 import ru.vtosters.lite.utils.Globals;
 

@@ -7,8 +7,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.internal.Util;
-import okhttp3.internal.b.HttpMethod;
+import okhttp3.f0.Util;
+import okhttp3.f0.f.HttpMethod;
+
 
 public final class Request {
     final HttpUrl a;

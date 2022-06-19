@@ -6,18 +6,17 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 
 import com.vk.im.engine.events.OnMsgUpdateEvent;
-import com.vk.im.engine.internal.longpoll.a.MsgDeleteLpTask;
-import com.vk.im.engine.internal.storage.CacheEnvironment;
+import com.vk.im.engine.internal.longpoll.tasks.MsgDeleteLpTask;
+import com.vk.im.engine.internal.storage.StorageManager;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.engine.models.messages.NestedMsg;
-import com.vk.libsqliteext.CustomSqliteExtensions;
-
-import org.sqlite.database.sqlite.SQLiteDatabase;
+import com.vk.libsqliteext.CustomSqliteExtensionsKt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +37,8 @@ public class DeletedMessagesHandler {
         sDeletedMessagesList = new ArrayList<>(sVTDatabase.loadAllMessages());
     }
 
-    public static void grabVKDatabase(CacheEnvironment storageEnvironment) {
-        sVKSQLiteDatabase = storageEnvironment.b();
+    public static void grabVKDatabase(StorageManager storageEnvironment) {
+        sVKSQLiteDatabase = storageEnvironment.j();
     }
 
     public static boolean hook() {
@@ -107,7 +106,7 @@ public class DeletedMessagesHandler {
 
     public static Cursor getMessageFromDatabaseById(int messageId) {
         String query = "SELECT * FROM messages WHERE vk_id = " + messageId;
-        Cursor c = CustomSqliteExtensions.a(sVKSQLiteDatabase, query);
+        Cursor c = CustomSqliteExtensionsKt.a(sVKSQLiteDatabase, query);
         if (!c.moveToFirst()) return null;
         return c;
     }
