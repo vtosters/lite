@@ -70,7 +70,7 @@ public class Preferences {
         getInstance().autoCleaningCache();
 
         if (setoffline() && !offline()) {
-            Users.b();
+            Users.a();
         }
     }
 
@@ -146,7 +146,7 @@ public class Preferences {
     }
 
     public static boolean alteremoji(Context context) {
-        return alteremojipref() ? alteremojipref() : Screen.a(context);
+        return alteremojipref() ? alteremojipref() : Screen.l(context);
     }
 
     public static boolean alteremojipref() {
