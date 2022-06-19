@@ -82,15 +82,15 @@ public class Globals {
     } // Get pref value as string
 
     public static int getUserId() {
-        return VKAccountManager.b().a();
+        return VKAccountManager.d().D0();
     } // Current UserId
 
     public static String getUserSecret() {
-        return VKAccountManager.b().c();
+        return VKAccountManager.d().l0();
     }
 
     public static String getUserToken() {
-        return VKAccountManager.b().b();
+        return VKAccountManager.d().b();
     }
 
     public static SharedPreferences.Editor edit() {
@@ -102,15 +102,15 @@ public class Globals {
     } // Delete and reload msg cache
 
     public static int getUserID(UserProfile userProfile) {
-        return userProfile.n;
+        return userProfile.b;
     } // UserId Profile via userProfile
 
     public static String getUserFirstName(UserProfile userProfile) {
-        return userProfile.p;
+        return userProfile.d;
     }
 
     public static String getUserLastName(UserProfile userProfile) {
-        return userProfile.o;
+        return userProfile.c;
     }
 
     public static int getUserID(ExtendedUserProfile extendedUserProfile) {
@@ -180,7 +180,7 @@ public class Globals {
         Context ctx = getContext();
         PackageManager pm = ctx.getPackageManager();
 
-        Intent intent = new Navigator(Class).a(ctx);
+        Intent intent = new Navigator(Class).b(ctx);
         Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
         ctx.startActivity(mainIntent);
 

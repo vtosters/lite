@@ -24,8 +24,6 @@ import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Themes.applyTheme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
-import static ru.vtosters.lite.utils.Themes.getImDarkTheme;
-import static ru.vtosters.lite.utils.Themes.getImLightTheme;
 import static ru.vtosters.lite.utils.Themes.getLightTheme;
 import static ru.vtosters.lite.utils.Themes.setTheme;
 
@@ -38,14 +36,11 @@ import android.os.Bundle;
 
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
-import com.vk.articles.preload.WebCachePreloader;
-import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.data.ThemeTracker;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.fragments.SettingsAccountFragment;
 import com.vtosters.lite.fragments.SettingsGeneralFragment;

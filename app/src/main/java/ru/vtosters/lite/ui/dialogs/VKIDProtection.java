@@ -21,7 +21,7 @@ public class VKIDProtection {
         // android.content.DialogInterface.OnClickListener
         builder.setNeutralButton(getString("vkiddisable"), (dialogInterface, i) -> {
             edit().putBoolean("showAlertVkId", false).apply();
-            Intent a2 = new Navigator(VKConnect.class).a(activity);
+            Intent a2 = new Navigator(VKConnect.class).b(activity);
             activity.startActivity(a2);
         });
         if (getBoolValue("showAlertVkId", true)) {

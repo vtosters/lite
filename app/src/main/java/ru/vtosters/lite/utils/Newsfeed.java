@@ -34,6 +34,7 @@ import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesTabsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
+import com.vtosters.lite.fragments.s2.AllGroupsFragment;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideosFragment;
 
@@ -93,12 +94,12 @@ public class Newsfeed {
     } // Get needed filter list from assets
 
     public static boolean injectFilters(JSONObject jSONObject) {
-        String optString = jSONObject.optString(NavigatorKeys.j, "");
+        String optString = jSONObject.optString(NavigatorKeys.e, "");
         if (!ads(optString) && !checkCopyright(optString) && !authors_rec(optString) && !recomm(optString) && !friendrecomm(optString)) {
             String optString2 = jSONObject.optString("post_type", "");
             if (!ads(optString2) && !authors_rec(optString2) && !recomm(optString2) && !friendrecomm(optString2)) {
                 String optString3 = jSONObject.optString("filters", "");
-                if (ads(optString3) || authors_rec(optString3) || recomm(optString3) || friendrecomm(optString3) || isBlockedByFilter(jSONObject.optString(NavigatorKeys.x, "")) || captions(jSONObject)) {
+                if (ads(optString3) || authors_rec(optString3) || recomm(optString3) || friendrecomm(optString3) || isBlockedByFilter(jSONObject.optString(NavigatorKeys.h0, "")) || captions(jSONObject)) {
                     return false;
                 }
                 return !AD(jSONObject);
@@ -117,7 +118,7 @@ public class Newsfeed {
             if (Preferences.captions()) {
                 return true;
             }
-            return (jSONObject2.getString(NavigatorKeys.j).equals("explorebait") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("shared") && postsrecomm()) || ((jSONObject.getString(NavigatorKeys.j).equals("digest") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.j).equals("commented") && postsrecomm()) || (jSONObject2.getString(NavigatorKeys.j).equals("voted") && postsrecomm()))));
+            return (jSONObject2.getString(NavigatorKeys.e).equals("explorebait") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.e).equals("shared") && postsrecomm()) || ((jSONObject.getString(NavigatorKeys.e).equals("digest") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.e).equals("commented") && postsrecomm()) || (jSONObject2.getString(NavigatorKeys.e).equals("voted") && postsrecomm()))));
         } catch (JSONException unused) {
             return false;
         }
@@ -198,7 +199,7 @@ public class Newsfeed {
             case "messenger":
                 return DialogsFragment.class;
             case "groups":
-                return GroupsFragment.class;
+                return AllGroupsFragment.class;
             case "music":
                 return MusicFragment.class;
             case "friends":

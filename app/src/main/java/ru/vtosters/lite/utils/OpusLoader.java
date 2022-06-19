@@ -38,21 +38,21 @@ public class OpusLoader {
             timetracker = System.currentTimeMillis();
             return 1;
         }
-        return MediaNative.nativeAudioStartRecord(str);
+        return MediaNative.audioStartRecord(str);
     }
 
     public static int AudioWriteFrameBridge(ByteBuffer buffer, int length) {
         if (isReadyToUse()) {
             // Init custom AudioWriteFrame
         }
-        return MediaNative.nativeAudioWriteFrame(buffer, length);
+        return MediaNative.audioWriteFrame(buffer, length);
     }
 
     public static void AudioStopRecordBridge() {
         if (isReadyToUse()) {
             // Init custom AudioStopRecord
         }
-        MediaNative.nativeAudioStopRecord();
+        MediaNative.audioStopRecord();
     }
 
     private static boolean isReadyToUse() {
