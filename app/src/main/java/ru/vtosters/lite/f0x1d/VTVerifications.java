@@ -58,7 +58,7 @@ public class VTVerifications {
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404,1337]}"))
                 .build();
 
-        client.newCall(request).a(new Callback() {
+        client.a(request).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
                 Log.d(TAG, "" + e);
@@ -67,7 +67,7 @@ public class VTVerifications {
             @Override
             public void a(Call call, Response response) throws IOException {
                 try {
-                    getVerifications(response.body().string());
+                    getVerifications(response.a().g());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -145,7 +145,7 @@ public class VTVerifications {
             return false;
         }
 
-        return isVerified((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
+        return isVerified((jSONObject.optString(NavigatorKeys.e) == null || (!jSONObject.optString(NavigatorKeys.e).equals("group") && !jSONObject.optString(NavigatorKeys.e).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
     public static boolean hasPrometheus(JSONObject jSONObject) {
@@ -157,7 +157,7 @@ public class VTVerifications {
             return false;
         }
 
-        return hasPrometheus((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
+        return hasPrometheus((jSONObject.optString(NavigatorKeys.e) == null || (!jSONObject.optString(NavigatorKeys.e).equals("group") && !jSONObject.optString(NavigatorKeys.e).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
@@ -165,7 +165,7 @@ public class VTVerifications {
             return false;
         }
 
-        return isDeveloper((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
+        return isDeveloper((jSONObject.optString(NavigatorKeys.e) == null || (!jSONObject.optString(NavigatorKeys.e).equals("group") && !jSONObject.optString(NavigatorKeys.e).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
     }
 
     public static VerifyInfo VerifyInfo(JSONObject jSONObject) {
