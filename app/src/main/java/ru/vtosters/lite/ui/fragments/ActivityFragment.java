@@ -8,8 +8,8 @@ import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 public class ActivityFragment extends MaterialPreferenceToolbarFragment {
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
-        a(R.xml.preferences_activity);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(R.xml.preferences_activity);
     }
 }

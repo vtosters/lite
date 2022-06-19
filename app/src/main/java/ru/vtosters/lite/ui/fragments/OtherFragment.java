@@ -33,9 +33,9 @@ import ru.vtosters.lite.ui.fragments.OtherFragment.a;
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
-        a(R.xml.preferences_other);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(R.xml.preferences_other);
         prefs();
     }
 

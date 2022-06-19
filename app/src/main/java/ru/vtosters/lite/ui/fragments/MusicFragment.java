@@ -7,8 +7,8 @@ import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 public class MusicFragment extends MaterialPreferenceToolbarFragment {
     @Override
-    public void b(Bundle bundle) {
-        super.b(bundle);
-        a(R.xml.preferences_music);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(R.xml.preferences_music);
     }
 }
