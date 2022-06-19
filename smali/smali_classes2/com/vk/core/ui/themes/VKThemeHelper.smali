@@ -470,7 +470,7 @@
     throw p1
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/core/ui/themes/VKTheme;[F)V
+.method public final a(Landroid/app/Activity;Lcom/vk/core/ui/themes/VKTheme;[F)V
     .locals 2
 
     .line 30
