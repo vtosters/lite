@@ -71,13 +71,13 @@ public class PreferencesUtil {
         materialPreferenceToolbarFragment.getPreferenceScreen().addPreference(materialSwitchPreference); // materialPreferenceToolbarFragment.getPreferenceScreen().addPreference(preference)
     }
 
-    public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, int icon, boolean defValue, Preference.OnPreferenceClickListener listener) {
+    public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, int icon, boolean defValue, Preference.OnPreferenceChangeListener listener) {
         MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getContext());
         materialSwitchPreference.setTitle(title); // setTitle
         materialSwitchPreference.setSummary(summary); // setSummary
         materialSwitchPreference.setKey(key); // setKey
         materialSwitchPreference.setDefaultValue(defValue); // setDefaultValue
-        materialSwitchPreference.setOnPreferenceClickListener(listener); // setOnPreferenceClickListener
+        materialSwitchPreference.setOnPreferenceChangeListener(listener); // setOnPreferenceClickListener
 
         if (icon != 1)
             materialSwitchPreference.setIcon(setTint(getContext(), Objects.requireNonNull(ContextCompat.getDrawable(getContext(), icon)))); // preference.setIcon
@@ -85,7 +85,7 @@ public class PreferencesUtil {
         fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
-    public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, String icon, boolean defValue, Preference.OnPreferenceClickListener listener) {
+    public static void addMaterialSwitchPreference(MaterialPreferenceToolbarFragment fragment, String key, CharSequence title, CharSequence summary, String icon, boolean defValue, Preference.OnPreferenceChangeListener listener) {
         MaterialSwitchPreference materialSwitchPreference = new MaterialSwitchPreference(getContext());
         materialSwitchPreference.setTitle(title); // setTitle
         materialSwitchPreference.setSummary(summary); // setSummary
@@ -95,7 +95,7 @@ public class PreferencesUtil {
 
         if (icon != null)
             materialSwitchPreference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
-        materialSwitchPreference.setOnPreferenceClickListener(listener); // setOnPreferenceClickListener(listener)
+        materialSwitchPreference.setOnPreferenceChangeListener(listener); // setOnPreferenceClickListener(listener)
 
         fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
     }

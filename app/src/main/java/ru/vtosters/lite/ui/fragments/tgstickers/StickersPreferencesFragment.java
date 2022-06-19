@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.vk.core.util.ToastUtils;
+import com.vtosters.lite.fragments.MaterialPreferenceFragment.a;
 import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.tgs.TGPref;
