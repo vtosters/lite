@@ -33,11 +33,11 @@ public class EncryptProvider {
     }
 
     public static String getBody(MsgFromUser msg) {
-        return msg.E();
+        return msg.f();
     }
 
     public static int getPeerId(Msg msg) {
-        return msg.b();
+        return msg.v1();
     }
 
     // This will run through EVERY single processor available.
